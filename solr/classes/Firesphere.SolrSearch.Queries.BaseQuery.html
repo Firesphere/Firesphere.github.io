@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \Firesphere\SolrSearch\Queries\BaseQuery
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public inherited">
+        <a href="#method_addBoostedField" title="addBoostedField :: Add a boosted field to be boosted at query time">
+            <span class="description">Add a boosted field to be boosted at query time</span><pre>addBoostedField</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_addClass" title="addClass :: $options is not used anymore, added for backward compatibility">
+            <span class="description">$options is not used anymore, added for backward compatibility</span><pre>addClass</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_addExclude" title="addExclude :: ">
+            <span class="description"></span><pre>addExclude</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_addFacetFilter" title="addFacetFilter :: ">
+            <span class="description"></span><pre>addFacetFilter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_addField" title="addField :: Add a field to be returned">
+            <span class="description">Add a field to be returned</span><pre>addField</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_addFilter" title="addFilter :: ">
+            <span class="description"></span><pre>addFilter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addHighlight" title="addHighlight :: ">
+            <span class="description"></span><pre>addHighlight</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_addTerm" title="addTerm :: Each boosted query needs a separate addition!
+e.g. $this-&gt;addTerm(&#039;test&#039;, [&#039;MyField&#039;, &#039;MyOtherField&#039;], 3)
+followed by
+$this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);">
+            <span class="description">Each boosted query needs a separate addition!
+e.g. $this-&gt;addTerm(&#039;test&#039;, [&#039;MyField&#039;, &#039;MyOtherField&#039;], 3)
+followed by
+$this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>addTerm</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getBoostedFields" title="getBoostedFields :: ">
+            <span class="description"></span><pre>getBoostedFields</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getClasses" title="getClasses :: ">
+            <span class="description"></span><pre>getClasses</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getExclude" title="getExclude :: ">
+            <span class="description"></span><pre>getExclude</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getFacetFields" title="getFacetFields :: ">
+            <span class="description"></span><pre>getFacetFields</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getFacetFilter" title="getFacetFilter :: ">
+            <span class="description"></span><pre>getFacetFilter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getFacetsMinCount" title="getFacetsMinCount :: ">
+            <span class="description"></span><pre>getFacetsMinCount</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getFields" title="getFields :: ">
+            <span class="description"></span><pre>getFields</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getFilter" title="getFilter :: ">
+            <span class="description"></span><pre>getFilter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getHighlight" title="getHighlight :: ">
+            <span class="description"></span><pre>getHighlight</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getRows" title="getRows :: ">
+            <span class="description"></span><pre>getRows</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getSort" title="getSort :: ">
+            <span class="description"></span><pre>getSort</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getStart" title="getStart :: ">
+            <span class="description"></span><pre>getStart</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getTerms" title="getTerms :: ">
+            <span class="description"></span><pre>getTerms</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_hasSpellcheck" title="hasSpellcheck :: ">
+            <span class="description"></span><pre>hasSpellcheck</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_setBoostedFields" title="setBoostedFields :: Boosted fields are used at index time, not at query time">
+            <span class="description">Boosted fields are used at index time, not at query time</span><pre>setBoostedFields</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_setClasses" title="setClasses :: ">
+            <span class="description"></span><pre>setClasses</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setExclude" title="setExclude :: ">
+            <span class="description"></span><pre>setExclude</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_setFacetFields" title="setFacetFields :: ">
+            <span class="description"></span><pre>setFacetFields</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setFacetFilter" title="setFacetFilter :: ">
+            <span class="description"></span><pre>setFacetFilter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setFacetsMinCount" title="setFacetsMinCount :: ">
+            <span class="description"></span><pre>setFacetsMinCount</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setFields" title="setFields :: Set fields to be returned">
+            <span class="description">Set fields to be returned</span><pre>setFields</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setFilter" title="setFilter :: ">
+            <span class="description"></span><pre>setFilter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setFollowSpellcheck" title="setFollowSpellcheck :: ">
+            <span class="description"></span><pre>setFollowSpellcheck</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setHighlight" title="setHighlight :: ">
+            <span class="description"></span><pre>setHighlight</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setRows" title="setRows :: ">
+            <span class="description"></span><pre>setRows</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setSort" title="setSort :: ">
+            <span class="description"></span><pre>setSort</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setSpellcheck" title="setSpellcheck :: ">
+            <span class="description"></span><pre>setSpellcheck</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setStart" title="setStart :: ">
+            <span class="description"></span><pre>setStart</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setTerms" title="setTerms :: ">
+            <span class="description"></span><pre>setTerms</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_shouldFollowSpellcheck" title="shouldFollowSpellcheck :: ">
+            <span class="description"></span><pre>shouldFollowSpellcheck</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>BaseQuery</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description">Class BaseQuery</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Firesphere\SolrSearch\Queries</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_addBoostedField"></a>
+                        <div class="element clickable method public  method_addBoostedField inherited" data-toggle="collapse" data-target=".method_addBoostedField .collapse">
+                            <h2>Add a boosted field to be boosted at query time</h2>
+                            <pre>addBoostedField(string $field, array|integer $options = array(), integer|null $boost = null) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
+                                                <code>array|integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$boost</h4>
+                                                <code>integer|null</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addClass"></a>
+                        <div class="element clickable method public  method_addClass inherited" data-toggle="collapse" data-target=".method_addClass .collapse">
+                            <h2>$options is not used anymore, added for backward compatibility</h2>
+                            <pre>addClass( $class, array $options = array()) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
+                                                <code>array</code><p><p>unused</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addExclude"></a>
+                        <div class="element clickable method public  method_addExclude inherited" data-toggle="collapse" data-target=".method_addExclude .collapse">
+                            <h2>addExclude</h2>
+                            <pre>addExclude( $field,  $value) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addFacetFilter"></a>
+                        <div class="element clickable method public  method_addFacetFilter inherited" data-toggle="collapse" data-target=".method_addFacetFilter .collapse">
+                            <h2>addFacetFilter</h2>
+                            <pre>addFacetFilter(string $field, string $value) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addField"></a>
+                        <div class="element clickable method public  method_addField inherited" data-toggle="collapse" data-target=".method_addField .collapse">
+                            <h2>Add a field to be returned</h2>
+                            <pre>addField(string $field) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p><p>fieldname</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addFilter"></a>
+                        <div class="element clickable method public  method_addFilter inherited" data-toggle="collapse" data-target=".method_addFilter .collapse">
+                            <h2>addFilter</h2>
+                            <pre>addFilter(string $field, string $value) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addHighlight"></a>
+                        <div class="element clickable method public  method_addHighlight" data-toggle="collapse" data-target=".method_addHighlight .collapse">
+                            <h2>addHighlight</h2>
+                            <pre>addHighlight( $field) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addTerm"></a>
+                        <div class="element clickable method public  method_addTerm inherited" data-toggle="collapse" data-target=".method_addTerm .collapse">
+                            <h2>Each boosted query needs a separate addition!
+e.g. $this-&gt;addTerm(&#039;test&#039;, [&#039;MyField&#039;, &#039;MyOtherField&#039;], 3)
+followed by
+$this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
+                            <pre>addTerm(string $term, array $fields = array(), integer $boost, boolean|float $fuzzy = null) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If you want a generic boost on all terms, use addTerm only once, but boost on each field</p>
+<p>The fields parameter is used to boost on</p>
+<p>For generic boosting, use @addBoostedField($field, $boost), this will add the boost at Index time</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$term</h4>
+                                                <code>string</code><p><p>Term to search for</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fields</h4>
+                                                <code>array</code><p><p>fields to boost on</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$boost</h4>
+                                                <code>integer</code><p><p>Boost value</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fuzzy</h4>
+                                                <code>boolean|float</code><p><p>True or a value to the maximum amount of iterations</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getBoostedFields"></a>
+                        <div class="element clickable method public  method_getBoostedFields inherited" data-toggle="collapse" data-target=".method_getBoostedFields .collapse">
+                            <h2>getBoostedFields</h2>
+                            <pre>getBoostedFields() : array</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getClasses"></a>
+                        <div class="element clickable method public  method_getClasses inherited" data-toggle="collapse" data-target=".method_getClasses .collapse">
+                            <h2>getClasses</h2>
+                            <pre>getClasses() : array</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getExclude"></a>
+                        <div class="element clickable method public  method_getExclude" data-toggle="collapse" data-target=".method_getExclude .collapse">
+                            <h2>getExclude</h2>
+                            <pre>getExclude() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getFacetFields"></a>
+                        <div class="element clickable method public  method_getFacetFields inherited" data-toggle="collapse" data-target=".method_getFacetFields .collapse">
+                            <h2>getFacetFields</h2>
+                            <pre>getFacetFields() : array</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getFacetFilter"></a>
+                        <div class="element clickable method public  method_getFacetFilter" data-toggle="collapse" data-target=".method_getFacetFilter .collapse">
+                            <h2>getFacetFilter</h2>
+                            <pre>getFacetFilter() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getFacetsMinCount"></a>
+                        <div class="element clickable method public  method_getFacetsMinCount" data-toggle="collapse" data-target=".method_getFacetsMinCount .collapse">
+                            <h2>getFacetsMinCount</h2>
+                            <pre>getFacetsMinCount() : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getFields"></a>
+                        <div class="element clickable method public  method_getFields" data-toggle="collapse" data-target=".method_getFields .collapse">
+                            <h2>getFields</h2>
+                            <pre>getFields() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getFilter"></a>
+                        <div class="element clickable method public  method_getFilter" data-toggle="collapse" data-target=".method_getFilter .collapse">
+                            <h2>getFilter</h2>
+                            <pre>getFilter() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getHighlight"></a>
+                        <div class="element clickable method public  method_getHighlight" data-toggle="collapse" data-target=".method_getHighlight .collapse">
+                            <h2>getHighlight</h2>
+                            <pre>getHighlight() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getRows"></a>
+                        <div class="element clickable method public  method_getRows" data-toggle="collapse" data-target=".method_getRows .collapse">
+                            <h2>getRows</h2>
+                            <pre>getRows() : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getSort"></a>
+                        <div class="element clickable method public  method_getSort" data-toggle="collapse" data-target=".method_getSort .collapse">
+                            <h2>getSort</h2>
+                            <pre>getSort() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getStart"></a>
+                        <div class="element clickable method public  method_getStart" data-toggle="collapse" data-target=".method_getStart .collapse">
+                            <h2>getStart</h2>
+                            <pre>getStart() : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getTerms"></a>
+                        <div class="element clickable method public  method_getTerms" data-toggle="collapse" data-target=".method_getTerms .collapse">
+                            <h2>getTerms</h2>
+                            <pre>getTerms() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasSpellcheck"></a>
+                        <div class="element clickable method public  method_hasSpellcheck" data-toggle="collapse" data-target=".method_hasSpellcheck .collapse">
+                            <h2>hasSpellcheck</h2>
+                            <pre>hasSpellcheck() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setBoostedFields"></a>
+                        <div class="element clickable method public  method_setBoostedFields inherited" data-toggle="collapse" data-target=".method_setBoostedFields .collapse">
+                            <h2>Boosted fields are used at index time, not at query time</h2>
+                            <pre>setBoostedFields(array $boostedFields) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$boostedFields</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setClasses"></a>
+                        <div class="element clickable method public  method_setClasses inherited" data-toggle="collapse" data-target=".method_setClasses .collapse">
+                            <h2>setClasses</h2>
+                            <pre>setClasses(array $class) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setExclude"></a>
+                        <div class="element clickable method public  method_setExclude" data-toggle="collapse" data-target=".method_setExclude .collapse">
+                            <h2>setExclude</h2>
+                            <pre>setExclude(array $exclude) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$exclude</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setFacetFields"></a>
+                        <div class="element clickable method public  method_setFacetFields inherited" data-toggle="collapse" data-target=".method_setFacetFields .collapse">
+                            <h2>setFacetFields</h2>
+                            <pre>setFacetFields(array $facetFields) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$facetFields</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setFacetFilter"></a>
+                        <div class="element clickable method public  method_setFacetFilter" data-toggle="collapse" data-target=".method_setFacetFilter .collapse">
+                            <h2>setFacetFilter</h2>
+                            <pre>setFacetFilter(array $facetFilter) : \Firesphere\SolrSearch\Queries\BaseQuery</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$facetFilter</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setFacetsMinCount"></a>
+                        <div class="element clickable method public  method_setFacetsMinCount" data-toggle="collapse" data-target=".method_setFacetsMinCount .collapse">
+                            <h2>setFacetsMinCount</h2>
+                            <pre>setFacetsMinCount(mixed $facetsMinCount) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$facetsMinCount</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setFields"></a>
+                        <div class="element clickable method public  method_setFields" data-toggle="collapse" data-target=".method_setFields .collapse">
+                            <h2>Set fields to be returned</h2>
+                            <pre>setFields(array $fields) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fields</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setFilter"></a>
+                        <div class="element clickable method public  method_setFilter" data-toggle="collapse" data-target=".method_setFilter .collapse">
+                            <h2>setFilter</h2>
+                            <pre>setFilter(array $filter) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$filter</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setFollowSpellcheck"></a>
+                        <div class="element clickable method public  method_setFollowSpellcheck" data-toggle="collapse" data-target=".method_setFollowSpellcheck .collapse">
+                            <h2>setFollowSpellcheck</h2>
+                            <pre>setFollowSpellcheck(boolean $followSpellcheck) : \Firesphere\SolrSearch\Queries\BaseQuery</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$followSpellcheck</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setHighlight"></a>
+                        <div class="element clickable method public  method_setHighlight" data-toggle="collapse" data-target=".method_setHighlight .collapse">
+                            <h2>setHighlight</h2>
+                            <pre>setHighlight(array $highlight) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$highlight</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setRows"></a>
+                        <div class="element clickable method public  method_setRows" data-toggle="collapse" data-target=".method_setRows .collapse">
+                            <h2>setRows</h2>
+                            <pre>setRows(integer $rows) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$rows</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setSort"></a>
+                        <div class="element clickable method public  method_setSort" data-toggle="collapse" data-target=".method_setSort .collapse">
+                            <h2>setSort</h2>
+                            <pre>setSort(array $sort) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$sort</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setSpellcheck"></a>
+                        <div class="element clickable method public  method_setSpellcheck" data-toggle="collapse" data-target=".method_setSpellcheck .collapse">
+                            <h2>setSpellcheck</h2>
+                            <pre>setSpellcheck(boolean $spellcheck) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$spellcheck</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setStart"></a>
+                        <div class="element clickable method public  method_setStart" data-toggle="collapse" data-target=".method_setStart .collapse">
+                            <h2>setStart</h2>
+                            <pre>setStart(integer $start) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$start</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setTerms"></a>
+                        <div class="element clickable method public  method_setTerms" data-toggle="collapse" data-target=".method_setTerms .collapse">
+                            <h2>setTerms</h2>
+                            <pre>setTerms(array $terms) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$terms</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_shouldFollowSpellcheck"></a>
+                        <div class="element clickable method public  method_shouldFollowSpellcheck" data-toggle="collapse" data-target=".method_shouldFollowSpellcheck .collapse">
+                            <h2>shouldFollowSpellcheck</h2>
+                            <pre>shouldFollowSpellcheck() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_history"> </a>
+                            <div class="element clickable property  protected property_history" data-toggle="collapse" data-target=".property_history .collapse">
+                                <h2>history</h2>
+                                <pre>history : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_filter"> </a>
+                            <div class="element clickable property  protected property_filter inherited" data-toggle="collapse" data-target=".property_filter .collapse">
+                                <h2>filter</h2>
+                                <pre>filter : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_exclude"> </a>
+                            <div class="element clickable property  protected property_exclude inherited" data-toggle="collapse" data-target=".property_exclude .collapse">
+                                <h2>exclude</h2>
+                                <pre>exclude : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_facetFilter"> </a>
+                            <div class="element clickable property  protected property_facetFilter inherited" data-toggle="collapse" data-target=".property_facetFilter .collapse">
+                                <h2>facetFilter</h2>
+                                <pre>facetFilter : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_start"> </a>
+                            <div class="element clickable property  protected property_start" data-toggle="collapse" data-target=".property_start .collapse">
+                                <h2>start</h2>
+                                <pre>start : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_rows"> </a>
+                            <div class="element clickable property  protected property_rows" data-toggle="collapse" data-target=".property_rows .collapse">
+                                <h2>rows</h2>
+                                <pre>rows : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_fields"> </a>
+                            <div class="element clickable property  protected property_fields inherited" data-toggle="collapse" data-target=".property_fields .collapse">
+                                <h2>fields</h2>
+                                <pre>fields : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_sort"> </a>
+                            <div class="element clickable property  protected property_sort" data-toggle="collapse" data-target=".property_sort .collapse">
+                                <h2>sort</h2>
+                                <pre>sort : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_spellcheck"> </a>
+                            <div class="element clickable property  protected property_spellcheck" data-toggle="collapse" data-target=".property_spellcheck .collapse">
+                                <h2>Enable spellchecking?</h2>
+                                <pre>spellcheck : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_followSpellcheck"> </a>
+                            <div class="element clickable property  protected property_followSpellcheck" data-toggle="collapse" data-target=".property_followSpellcheck .collapse">
+                                <h2>Follow spellchecking if there are no results</h2>
+                                <pre>followSpellcheck : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_facetsMinCount"> </a>
+                            <div class="element clickable property  protected property_facetsMinCount" data-toggle="collapse" data-target=".property_facetsMinCount .collapse">
+                                <h2>facetsMinCount</h2>
+                                <pre>facetsMinCount : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_terms"> </a>
+                            <div class="element clickable property  protected property_terms inherited" data-toggle="collapse" data-target=".property_terms .collapse">
+                                <h2>terms</h2>
+                                <pre>terms : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_highlight"> </a>
+                            <div class="element clickable property  protected property_highlight" data-toggle="collapse" data-target=".property_highlight .collapse">
+                                <h2>highlight</h2>
+                                <pre>highlight : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_class"> </a>
+                            <div class="element clickable property  protected property_class inherited" data-toggle="collapse" data-target=".property_class .collapse">
+                                <h2>class</h2>
+                                <pre>class : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_boostedFields"> </a>
+                            <div class="element clickable property  protected property_boostedFields inherited" data-toggle="collapse" data-target=".property_boostedFields .collapse">
+                                <h2>Sets boosting at _index_ time or _query_ time. Depending on the usage of this trait
+[
+    &#039;FieldName&#039; =&gt; 2,
+]</h2>
+                                <pre>boostedFields : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_facetFields"> </a>
+                            <div class="element clickable property  protected property_facetFields inherited" data-toggle="collapse" data-target=".property_facetFields .collapse">
+                                <h2>Format:
+SiteTree::class   =&gt; [
+     &#039;Field&#039; =&gt; &#039;SiteTree_ChannelID&#039;,
+     &#039;Title&#039; =&gt; &#039;Channel&#039;
+],</h2>
+                                <pre>facetFields : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\Firesphere\SolrSearch\Queries\BaseQuery"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Queries.html">Queries</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">BaseQuery</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Sat, 24 Aug 2019 23:38:18 +0000.<br/>
+    </footer>
+    </body>
+</html>
