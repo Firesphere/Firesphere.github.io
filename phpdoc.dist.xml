@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>SilverStripe Solr search</title>
+    <parser>
+        <target>solr</target>
+        <encoding>utf8</encoding>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+    </parser>
+    <transformer>
+        <target>solr</target>
+    </transformer>
+    <transformations>
+        <template name="responsive-twig" />
+    </transformations>
+    <files>
+        <directory>compat/src</directory>
+        <directory>search/src</directory>
+    </files>
+</phpdoc>

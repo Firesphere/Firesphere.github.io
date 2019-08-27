@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    API Documentation &raquo; \Firesphere\SolrSearch\Models\SolrLog
+    <title>    SilverStripe Solr search &raquo; \Firesphere\SolrSearch\Models\SolrLog
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -33,7 +33,7 @@
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                     <span class="icon-bar"></span> <span class="icon-bar"></span>
                     <span class="icon-bar"></span> </a>
-                <a class="brand" href="../index.html">API Documentation</a>
+                <a class="brand" href="../index.html">SilverStripe Solr search</a>
 
                 <div class="nav-collapse">
                     <ul class="nav">
@@ -44,6 +44,7 @@
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
                                                                         <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>
+                                                                        <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -144,8 +145,20 @@
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_getExtraClass" title="getExtraClass :: Get the extra classes to colour the gridfield rows">
+            <span class="description">Get the extra classes to colour the gridfield rows</span><pre>getExtraClass</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_getLastErrorLine" title="getLastErrorLine :: ">
             <span class="description"></span><pre>getLastErrorLine</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_onBeforeWrite" title="onBeforeWrite :: ">
+            <span class="description"></span><pre>onBeforeWrite</pre>
         </a>
     </li>
 
@@ -153,11 +166,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                </ul>
+                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                </ul>
+                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -305,6 +318,35 @@
                             </div>
 
                         </div>
+                                            <a id="method_getExtraClass"></a>
+                        <div class="element clickable method public  method_getExtraClass" data-toggle="collapse" data-target=".method_getExtraClass .collapse">
+                            <h2>Get the extra classes to colour the gridfield rows</h2>
+                            <pre>getExtraClass() : mixed|string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>mixed|string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_getLastErrorLine"></a>
                         <div class="element clickable method public  method_getLastErrorLine" data-toggle="collapse" data-target=".method_getLastErrorLine .collapse">
                             <h2>getLastErrorLine</h2>
@@ -330,6 +372,40 @@
                                     
                                                                             <h3>Response</h3>
                                         <code>mixed</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_onBeforeWrite"></a>
+                        <div class="element clickable method public  method_onBeforeWrite" data-toggle="collapse" data-target=".method_onBeforeWrite .collapse">
+                            <h2>onBeforeWrite</h2>
+                            <pre>onBeforeWrite() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
                                                                     </div>
                             </div>
 
@@ -459,6 +535,32 @@
 
                                                                                     <h3>Type(s)</h3>
                                             <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_row_color"> </a>
+                            <div class="element clickable property  protected property_row_color" data-toggle="collapse" data-target=".property_row_color .collapse">
+                                <h2>Used to give the Gridfield rows a corresponding colour</h2>
+                                <pre>row_color : array</pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
                                                                             </div>
                                 </div>
                             </div>
@@ -632,7 +734,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sun, 25 Aug 2019 12:44:38 +1200.<br/>
+            generated on Tue, 27 Aug 2019 19:20:20 +1200.<br/>
     </footer>
     </body>
 </html>
