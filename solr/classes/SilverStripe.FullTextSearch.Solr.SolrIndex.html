@@ -127,6 +127,18 @@
     </li>
 
                                                                                                         <li class="method public inherited">
+        <a href="#method_addAllDateFields" title="addAllDateFields :: Add all date-type fields to the given index">
+            <span class="description">Add all date-type fields to the given index</span><pre>addAllDateFields</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_addAllFulltextFields" title="addAllFulltextFields :: Add all text-type fields to the given index">
+            <span class="description">Add all text-type fields to the given index</span><pre>addAllFulltextFields</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_addBoostedField" title="addBoostedField :: Add an abstract for the add Boosted Field to keep things consistent">
             <span class="description">Add an abstract for the add Boosted Field to keep things consistent</span><pre>addBoostedField</pre>
         </a>
@@ -163,6 +175,12 @@
     </li>
 
                                                                                                         <li class="method public inherited">
+        <a href="#method_addFulltextFields" title="addFulltextFields :: ">
+            <span class="description"></span><pre>addFulltextFields</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public inherited">
         <a href="#method_addSortField" title="addSortField :: ">
             <span class="description"></span><pre>addSortField</pre>
         </a>
@@ -193,8 +211,8 @@
     </li>
 
                                                                                                         <li class="method public inherited">
-        <a href="#method_getClasses" title="getClasses :: ">
-            <span class="description"></span><pre>getClasses</pre>
+        <a href="#method_getClasses" title="getClasses :: This trait requires classes to be set, so getClasses can be called.">
+            <span class="description">This trait requires classes to be set, so getClasses can be called.</span><pre>getClasses</pre>
         </a>
     </li>
 
@@ -360,7 +378,17 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method protected inherited">
+                                                                                                                                                    <li class="method protected inherited">
+                            <a href="#method_addAllFieldsByType" title="addAllFieldsByType :: Add all database-backed text fields as fulltext searchable fields.">
+                                <span class="description">Add all database-backed text fields as fulltext searchable fields.</span><pre>addAllFieldsByType</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                <li class="method protected inherited">
+                            <a href="#method_addFulltextFieldsForClass" title="addFulltextFieldsForClass :: Add all fields of a given type to the index">
+                                <span class="description">Add all fields of a given type to the index</span><pre>addFulltextFieldsForClass</pre>
+                            </a>
+                        </li>
+                                                                                                                                                        <li class="method protected inherited">
                             <a href="#method_buildFactory" title="buildFactory :: ">
                                 <span class="description"></span><pre>buildFactory</pre>
                             </a>
@@ -384,7 +412,7 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -449,6 +477,135 @@ This class serves as a stub to make migration from Fulltext Search easier</p>
                                                                                                     </td>
                                             </tr>
                                                                                                                     </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addAllDateFields"></a>
+                        <div class="element clickable method public  method_addAllDateFields inherited" data-toggle="collapse" data-target=".method_addAllDateFields .collapse">
+                            <h2>Add all date-type fields to the given index</h2>
+                            <pre>addAllDateFields() </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ReflectionException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addAllFieldsByType"></a>
+                        <div class="element clickable method protected  method_addAllFieldsByType inherited" data-toggle="collapse" data-target=".method_addAllFieldsByType .collapse">
+                            <h2>Add all database-backed text fields as fulltext searchable fields.</h2>
+                            <pre>addAllFieldsByType(string $dbType = \SilverStripe\ORM\FieldType\DBString::class) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>For every class included in the index, examines those classes and all parent looking for &quot;DBText&quot; database
+fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable fields.</p>
+<p>Note, there is no check on boosting etc. That needs to be done manually.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ReflectionException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dbType</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addAllFulltextFields"></a>
+                        <div class="element clickable method public  method_addAllFulltextFields inherited" data-toggle="collapse" data-target=".method_addAllFulltextFields .collapse">
+                            <h2>Add all text-type fields to the given index</h2>
+                            <pre>addAllFulltextFields() </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ReflectionException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
 
                                     
                                                                     </div>
@@ -641,6 +798,101 @@ This class serves as a stub to make migration from Fulltext Search easier</p>
                                                                             
                                                                             <h3>Response</h3>
                                         <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addFulltextFields"></a>
+                        <div class="element clickable method public deprecated method_addFulltextFields inherited" data-toggle="collapse" data-target=".method_addFulltextFields .collapse">
+                            <h2>addFulltextFields</h2>
+                            <pre>addFulltextFields(boolean $includeSubclasses = true) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Please use addAllFulltextFields(). IncludeSubClasses is not used anymore</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ReflectionException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$includeSubclasses</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addFulltextFieldsForClass"></a>
+                        <div class="element clickable method protected  method_addFulltextFieldsForClass inherited" data-toggle="collapse" data-target=".method_addFulltextFieldsForClass .collapse">
+                            <h2>Add all fields of a given type to the index</h2>
+                            <pre>addFulltextFieldsForClass(array $fields, string $dbType = \SilverStripe\ORM\FieldType\DBString::class) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ReflectionException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fields</h4>
+                                                <code>array</code><p><p>The fields on the DataObject</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dbType</h4>
+                                                <code>string</code><p><p>Class type the reflection should extend</p></p>
+                                            </div>
+                                                                            
                                                                     </div>
                             </div>
 
@@ -869,10 +1121,10 @@ This class serves as a stub to make migration from Fulltext Search easier</p>
                         </div>
                                             <a id="method_getClasses"></a>
                         <div class="element clickable method public  method_getClasses inherited" data-toggle="collapse" data-target=".method_getClasses .collapse">
-                            <h2>getClasses</h2>
+                            <h2>This trait requires classes to be set, so getClasses can be called.</h2>
                             <pre>getClasses() : array</pre>
                             <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
 
                             
                             <div class="row collapse">
@@ -2152,7 +2404,7 @@ Used in init to call build methods from configuration yml</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 28 Aug 2019 17:44:11 +1200.<br/>
+            generated on Thu, 29 Aug 2019 20:28:39 +1200.<br/>
     </footer>
     </body>
 </html>
