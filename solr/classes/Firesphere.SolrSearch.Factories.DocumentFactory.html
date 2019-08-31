@@ -121,8 +121,8 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method___construct" title="__construct :: DocumentFactory constructor, sets up introspection">
-            <span class="description">DocumentFactory constructor, sets up introspection</span><pre>__construct</pre>
+        <a href="#method___construct" title="__construct :: DocumentFactory constructor, sets up the field resolver">
+            <span class="description">DocumentFactory constructor, sets up the field resolver</span><pre>__construct</pre>
         </a>
     </li>
 
@@ -141,8 +141,8 @@ So make sure you properly loop and set $class</span><pre>buildItems</pre>
     </li>
 
                                                                                                         <li class="method public inherited">
-        <a href="#method_getIntrospection" title="getIntrospection :: ">
-            <span class="description"></span><pre>getIntrospection</pre>
+        <a href="#method_getFieldResolver" title="getFieldResolver :: ">
+            <span class="description"></span><pre>getFieldResolver</pre>
         </a>
     </li>
 
@@ -264,7 +264,7 @@ Factory to create documents to be pushed to Solr</p>
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
                                                                 <a id="method___construct"></a>
                         <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
-                            <h2>DocumentFactory constructor, sets up introspection</h2>
+                            <h2>DocumentFactory constructor, sets up the field resolver</h2>
                             <pre>__construct() </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -526,7 +526,7 @@ So make sure you properly loop and set $class</h2>
                                             <a id="method_classEquals"></a>
                         <div class="element clickable method protected  method_classEquals" data-toggle="collapse" data-target=".method_classEquals .collapse">
                             <h2>Check if a base class is an instance of the expected base group</h2>
-                            <pre>classEquals( $class,  $base) : boolean</pre>
+                            <pre>classEquals(string|\SilverStripe\ORM\DataObject $class, string $base) : boolean</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -541,11 +541,11 @@ So make sure you properly loop and set $class</h2>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code></code><p></p>
+                                                <code>string|\SilverStripe\ORM\DataObject</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$base</h4>
-                                                <code></code><p></p>
+                                                <code>string</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -623,10 +623,10 @@ So make sure you properly loop and set $class</h2>
                             </div>
 
                         </div>
-                                            <a id="method_getIntrospection"></a>
-                        <div class="element clickable method public  method_getIntrospection inherited" data-toggle="collapse" data-target=".method_getIntrospection .collapse">
-                            <h2>getIntrospection</h2>
-                            <pre>getIntrospection() : \Firesphere\SolrSearch\Helpers\FieldResolver</pre>
+                                            <a id="method_getFieldResolver"></a>
+                        <div class="element clickable method public  method_getFieldResolver inherited" data-toggle="collapse" data-target=".method_getFieldResolver .collapse">
+                            <h2>getFieldResolver</h2>
+                            <pre>getFieldResolver() : \Firesphere\SolrSearch\Helpers\FieldResolver</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -907,36 +907,10 @@ So make sure you properly loop and set $class</h2>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_logger"> </a>
-                            <div class="element clickable property  protected property_logger inherited" data-toggle="collapse" data-target=".property_logger .collapse">
-                                <h2>logger</h2>
-                                <pre>logger : \Psr\Log\LoggerInterface</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>\Psr\Log\LoggerInterface</code>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                    <a id="property_introspection"> </a>
-                            <div class="element clickable property  protected property_introspection inherited" data-toggle="collapse" data-target=".property_introspection .collapse">
-                                <h2>introspection</h2>
-                                <pre>introspection : \Firesphere\SolrSearch\Helpers\FieldResolver</pre>
+                                                    <a id="property_fieldResolver"> </a>
+                            <div class="element clickable property  protected property_fieldResolver inherited" data-toggle="collapse" data-target=".property_fieldResolver .collapse">
+                                <h2>fieldResolver</h2>
+                                <pre>fieldResolver : \Firesphere\SolrSearch\Helpers\FieldResolver</pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -1011,6 +985,32 @@ So make sure you properly loop and set $class</h2>
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_logger"> </a>
+                            <div class="element clickable property  protected property_logger inherited" data-toggle="collapse" data-target=".property_logger .collapse">
+                                <h2>logger</h2>
+                                <pre>logger : \Psr\Log\LoggerInterface</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\Psr\Log\LoggerInterface</code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                             </div>
             </div>
             <a id="\Firesphere\SolrSearch\Factories\DocumentFactory"></a>
@@ -1031,7 +1031,7 @@ So make sure you properly loop and set $class</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sun, 01 Sep 2019 10:29:51 +1200.<br/>
+            generated on Sun, 01 Sep 2019 10:39:24 +1200.<br/>
     </footer>
     </body>
 </html>
