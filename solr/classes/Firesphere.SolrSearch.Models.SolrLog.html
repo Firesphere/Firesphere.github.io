@@ -121,26 +121,26 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method_canCreate" title="canCreate :: ">
-            <span class="description"></span><pre>canCreate</pre>
+        <a href="#method_canCreate" title="canCreate :: Not creatable by users">
+            <span class="description">Not creatable by users</span><pre>canCreate</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_canDelete" title="canDelete :: ">
-            <span class="description"></span><pre>canDelete</pre>
+        <a href="#method_canDelete" title="canDelete :: Only deleteable by admins or when in dev mode to clean up">
+            <span class="description">Only deleteable by admins or when in dev mode to clean up</span><pre>canDelete</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_canEdit" title="canEdit :: ">
-            <span class="description"></span><pre>canEdit</pre>
+        <a href="#method_canEdit" title="canEdit :: Not editable by users">
+            <span class="description">Not editable by users</span><pre>canEdit</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_canView" title="canView :: ">
-            <span class="description"></span><pre>canView</pre>
+        <a href="#method_canView" title="canView :: Member has view access?">
+            <span class="description">Member has view access?</span><pre>canView</pre>
         </a>
     </li>
 
@@ -151,14 +151,20 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getLastErrorLine" title="getLastErrorLine :: ">
-            <span class="description"></span><pre>getLastErrorLine</pre>
+        <a href="#method_getLastErrorLine" title="getLastErrorLine :: Return the first line of this log item error">
+            <span class="description">Return the first line of this log item error</span><pre>getLastErrorLine</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_onBeforeWrite" title="onBeforeWrite :: ">
-            <span class="description"></span><pre>onBeforeWrite</pre>
+        <a href="#method_onBeforeWrite" title="onBeforeWrite :: Convert the Timestamp to a DBDatetime for compatibility">
+            <span class="description">Convert the Timestamp to a DBDatetime for compatibility</span><pre>onBeforeWrite</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_providePermissions" title="providePermissions :: Return a map of permission codes to add to the dropdown shown in the Security section of the CMS.">
+            <span class="description">Return a map of permission codes to add to the dropdown shown in the Security section of the CMS.</span><pre>providePermissions</pre>
         </a>
     </li>
 
@@ -166,11 +172,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -187,7 +193,8 @@
                 <h1>SolrLog</h1>
                 <small style="display: block; text-align: right">
                                             Extends \SilverStripe\ORM\DataObject
-                                                        </small>
+                                                                Implements \SilverStripe\Security\PermissionProvider
+                                    </small>
                 <p class="short_description">Class \Firesphere\SolrSearch\Models\SolrError</p>
                 <div class="details">
                     <div class="long_description">
@@ -208,8 +215,8 @@
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
                                                                 <a id="method_canCreate"></a>
                         <div class="element clickable method public  method_canCreate" data-toggle="collapse" data-target=".method_canCreate .collapse">
-                            <h2>canCreate</h2>
-                            <pre>canCreate(null|\SilverStripe\Security\Member $member = null,  $context = array()) : boolean|mixed</pre>
+                            <h2>Not creatable by users</h2>
+                            <pre>canCreate(null|\SilverStripe\Security\Member $member = null, array $context = array()) : boolean|mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -228,7 +235,7 @@
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$context</h4>
-                                                <code></code><p></p>
+                                                <code>array</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -239,7 +246,7 @@
                         </div>
                                             <a id="method_canDelete"></a>
                         <div class="element clickable method public  method_canDelete" data-toggle="collapse" data-target=".method_canDelete .collapse">
-                            <h2>canDelete</h2>
+                            <h2>Only deleteable by admins or when in dev mode to clean up</h2>
                             <pre>canDelete(null|\SilverStripe\Security\Member $member = null) : boolean|mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -266,7 +273,7 @@
                         </div>
                                             <a id="method_canEdit"></a>
                         <div class="element clickable method public  method_canEdit" data-toggle="collapse" data-target=".method_canEdit .collapse">
-                            <h2>canEdit</h2>
+                            <h2>Not editable by users</h2>
                             <pre>canEdit(null|\SilverStripe\Security\Member $member = null) : boolean|mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -293,7 +300,7 @@
                         </div>
                                             <a id="method_canView"></a>
                         <div class="element clickable method public  method_canView" data-toggle="collapse" data-target=".method_canView .collapse">
-                            <h2>canView</h2>
+                            <h2>Member has view access?</h2>
                             <pre>canView(null|\SilverStripe\Security\Member $member = null) : boolean|mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -349,8 +356,8 @@
                         </div>
                                             <a id="method_getLastErrorLine"></a>
                         <div class="element clickable method public  method_getLastErrorLine" data-toggle="collapse" data-target=".method_getLastErrorLine .collapse">
-                            <h2>getLastErrorLine</h2>
-                            <pre>getLastErrorLine() : mixed</pre>
+                            <h2>Return the first line of this log item error</h2>
+                            <pre>getLastErrorLine() : string</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -371,14 +378,14 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>mixed</code><p></p>
+                                        <code>string</code><p></p>
                                                                     </div>
                             </div>
 
                         </div>
                                             <a id="method_onBeforeWrite"></a>
                         <div class="element clickable method public  method_onBeforeWrite" data-toggle="collapse" data-target=".method_onBeforeWrite .collapse">
-                            <h2>onBeforeWrite</h2>
+                            <h2>Convert the Timestamp to a DBDatetime for compatibility</h2>
                             <pre>onBeforeWrite() </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -406,6 +413,37 @@
                                                                                                                     </table>
 
                                     
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_providePermissions"></a>
+                        <div class="element clickable method public  method_providePermissions" data-toggle="collapse" data-target=".method_providePermissions .collapse">
+                            <h2>Return a map of permission codes to add to the dropdown shown in the Security section of the CMS.</h2>
+                            <pre>providePermissions() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>array(
+'VIEW_SITE' =&gt; 'View the site',
+);</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
                                                                     </div>
                             </div>
 
@@ -441,8 +479,8 @@
                             </div>
                                                     <a id="property_table_name"> </a>
                             <div class="element clickable property  private property_table_name" data-toggle="collapse" data-target=".property_table_name .collapse">
-                                <h2>table_name</h2>
-                                <pre>table_name : </pre>
+                                <h2>Database table name</h2>
+                                <pre>table_name : string</pre>
                                 <div class="labels">
                                                                         <span class="label">static</span>                                </div>
                                 <div class="row collapse">
@@ -452,22 +490,23 @@
                                         <table class="table">
                                                                                             <tr>
                                                     <th>
-                                                        
+                                                        var
                                                     </th>
                                                     <td>
+                                                                                                                    <p>Database table name</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code></code>
+                                            <code>string</code>
                                                                             </div>
                                 </div>
                             </div>
                                                     <a id="property_db"> </a>
                             <div class="element clickable property  private property_db" data-toggle="collapse" data-target=".property_db .collapse">
-                                <h2>db</h2>
-                                <pre>db : </pre>
+                                <h2>Database columns</h2>
+                                <pre>db : array</pre>
                                 <div class="labels">
                                                                         <span class="label">static</span>                                </div>
                                 <div class="row collapse">
@@ -477,22 +516,23 @@
                                         <table class="table">
                                                                                             <tr>
                                                     <th>
-                                                        
+                                                        var
                                                     </th>
                                                     <td>
+                                                                                                                    <p>Database columns</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code></code>
+                                            <code>array</code>
                                                                             </div>
                                 </div>
                             </div>
                                                     <a id="property_summary_fields"> </a>
                             <div class="element clickable property  private property_summary_fields" data-toggle="collapse" data-target=".property_summary_fields .collapse">
-                                <h2>summary_fields</h2>
-                                <pre>summary_fields : </pre>
+                                <h2>Summary fields</h2>
+                                <pre>summary_fields : array</pre>
                                 <div class="labels">
                                                                         <span class="label">static</span>                                </div>
                                 <div class="row collapse">
@@ -502,22 +542,23 @@
                                         <table class="table">
                                                                                             <tr>
                                                     <th>
-                                                        
+                                                        var
                                                     </th>
                                                     <td>
+                                                                                                                    <p>Summary fields</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code></code>
+                                            <code>array</code>
                                                                             </div>
                                 </div>
                             </div>
                                                     <a id="property_searchable_fields"> </a>
                             <div class="element clickable property  private property_searchable_fields" data-toggle="collapse" data-target=".property_searchable_fields .collapse">
-                                <h2>searchable_fields</h2>
-                                <pre>searchable_fields : </pre>
+                                <h2>Searchable fields</h2>
+                                <pre>searchable_fields : array</pre>
                                 <div class="labels">
                                                                         <span class="label">static</span>                                </div>
                                 <div class="row collapse">
@@ -527,22 +568,23 @@
                                         <table class="table">
                                                                                             <tr>
                                                     <th>
-                                                        
+                                                        var
                                                     </th>
                                                     <td>
+                                                                                                                    <p>Searchable fields</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code></code>
+                                            <code>array</code>
                                                                             </div>
                                 </div>
                             </div>
                                                     <a id="property_indexes"> </a>
                             <div class="element clickable property  private property_indexes" data-toggle="collapse" data-target=".property_indexes .collapse">
-                                <h2>indexes</h2>
-                                <pre>indexes : </pre>
+                                <h2>Timestamp is indexed</h2>
+                                <pre>indexes : array</pre>
                                 <div class="labels">
                                                                         <span class="label">static</span>                                </div>
                                 <div class="row collapse">
@@ -552,22 +594,23 @@
                                         <table class="table">
                                                                                             <tr>
                                                     <th>
-                                                        
+                                                        var
                                                     </th>
                                                     <td>
+                                                                                                                    <p>Timestamp is indexed</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code></code>
+                                            <code>array</code>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_sort"> </a>
-                            <div class="element clickable property  private property_sort" data-toggle="collapse" data-target=".property_sort .collapse">
-                                <h2>sort</h2>
-                                <pre>sort : </pre>
+                                                    <a id="property_default_sort"> </a>
+                            <div class="element clickable property  private property_default_sort" data-toggle="collapse" data-target=".property_default_sort .collapse">
+                                <h2>Default sort</h2>
+                                <pre>default_sort : string</pre>
                                 <div class="labels">
                                                                         <span class="label">static</span>                                </div>
                                 <div class="row collapse">
@@ -577,15 +620,16 @@
                                         <table class="table">
                                                                                             <tr>
                                                     <th>
-                                                        
+                                                        var
                                                     </th>
                                                     <td>
+                                                                                                                    <p>Default sort</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code></code>
+                                            <code>string</code>
                                                                             </div>
                                 </div>
                             </div>
@@ -734,7 +778,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 31 Aug 2019 12:54:15 +1200.<br/>
+            generated on Sun, 01 Sep 2019 10:09:31 +1200.<br/>
     </footer>
     </body>
 </html>
