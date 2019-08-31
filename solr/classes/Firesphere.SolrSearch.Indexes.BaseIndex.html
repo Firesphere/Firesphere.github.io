@@ -394,8 +394,18 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
                             </a>
                         </li>
                                                                                                                     <li class="method protected">
-                            <a href="#method_doRetry" title="doRetry :: Check if the query should be retried with spellchecking">
-                                <span class="description">Check if the query should be retried with spellchecking</span><pre>doRetry</pre>
+                            <a href="#method_doRetry" title="doRetry :: Check if the query should be retried with spellchecking
+Conditions are:
+It is not already a retry with spellchecking
+Spellchecking is enabled
+If spellchecking is enabled and nothing is found OR it should follow spellchecking none the less
+There is a spellcheck output">
+                                <span class="description">Check if the query should be retried with spellchecking
+Conditions are:
+It is not already a retry with spellchecking
+Spellchecking is enabled
+If spellchecking is enabled and nothing is found OR it should follow spellchecking none the less
+There is a spellcheck output</span><pre>doRetry</pre>
                             </a>
                         </li>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <li class="method protected">
@@ -404,8 +414,8 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
                             </a>
                         </li>
                                                                                                                                                                                                                                                                                                                                                                                                                                                         <li class="method protected">
-                            <a href="#method_spellcheckRetry" title="spellcheckRetry :: ">
-                                <span class="description"></span><pre>spellcheckRetry</pre>
+                            <a href="#method_spellcheckRetry" title="spellcheckRetry :: Retry the query with the first collated spellcheck found.">
+                                <span class="description">Retry the query with the first collated spellcheck found.</span><pre>spellcheckRetry</pre>
                             </a>
                         </li>
                                                                                     </ul>
@@ -1017,7 +1027,12 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                         </div>
                                             <a id="method_doRetry"></a>
                         <div class="element clickable method protected  method_doRetry" data-toggle="collapse" data-target=".method_doRetry .collapse">
-                            <h2>Check if the query should be retried with spellchecking</h2>
+                            <h2>Check if the query should be retried with spellchecking
+Conditions are:
+It is not already a retry with spellchecking
+Spellchecking is enabled
+If spellchecking is enabled and nothing is found OR it should follow spellchecking none the less
+There is a spellcheck output</h2>
                             <pre>doRetry(\Firesphere\SolrSearch\Queries\BaseQuery $query, \Solarium\QueryType\Select\Result\Result $result, \Firesphere\SolrSearch\Results\SearchResult $searchResult) : boolean</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -1891,7 +1906,7 @@ memory intensive, as updating the config for each item is not efficient</p></div
                         </div>
                                             <a id="method_spellcheckRetry"></a>
                         <div class="element clickable method protected  method_spellcheckRetry" data-toggle="collapse" data-target=".method_spellcheckRetry .collapse">
-                            <h2>spellcheckRetry</h2>
+                            <h2>Retry the query with the first collated spellcheck found.</h2>
                             <pre>spellcheckRetry(\Firesphere\SolrSearch\Queries\BaseQuery $query, \Firesphere\SolrSearch\Results\SearchResult $searchResult) : \Firesphere\SolrSearch\Results\SearchResult|mixed|\SilverStripe\View\ArrayData</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -1902,7 +1917,18 @@ memory intensive, as updating the config for each item is not efficient</p></div
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                                                    </table>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>
+                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
@@ -2382,6 +2408,33 @@ Used in init to call build methods from configuration yml</h2>
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_usedAllFields"> </a>
+                            <div class="element clickable property  protected property_usedAllFields inherited" data-toggle="collapse" data-target=".property_usedAllFields .collapse">
+                                <h2>usedAllFields is used to determine if the addAllFields method has been caled
+This is to prevent a notice if there is no yml.</h2>
+                                <pre>usedAllFields : boolean</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                             </div>
             </div>
             <a id="\Firesphere\SolrSearch\Indexes\BaseIndex"></a>
@@ -2402,7 +2455,7 @@ Used in init to call build methods from configuration yml</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 31 Aug 2019 10:04:23 +1200.<br/>
+            generated on Sat, 31 Aug 2019 12:21:39 +1200.<br/>
     </footer>
     </body>
 </html>
