@@ -127,8 +127,8 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_search" title="search :: ">
-            <span class="description"></span><pre>search</pre>
+        <a href="#method_search" title="search :: Convert the old search method to the new BaseIndex doSearch methods">
+            <span class="description">Convert the old search method to the new BaseIndex doSearch methods</span><pre>search</pre>
         </a>
     </li>
 
@@ -251,7 +251,7 @@ Backward compatibility stubs for the Full text search module</p>
                         </div>
                                             <a id="method_search"></a>
                         <div class="element clickable method public deprecated method_search" data-toggle="collapse" data-target=".method_search .collapse">
-                            <h2>search</h2>
+                            <h2>Convert the old search method to the new BaseIndex doSearch methods</h2>
                             <pre>search(\Firesphere\SolrSearch\Queries\BaseQuery $query, integer $start, integer $limit = 10, array $params = array(), boolean $spellcheck = null) : \Firesphere\SolrSearch\Results\SearchResult|\SilverStripe\View\ArrayData|mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -271,7 +271,18 @@ Backward compatibility stubs for the Full text search module</p>
                                                                                                                                                                         <p>This is used as an Fulltext Search compatibility method. Call doSearch instead with the correct Query</p>
                                                                                                     </td>
                                             </tr>
-                                                                                                                    </table>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>
+                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
@@ -381,7 +392,7 @@ Backward compatibility stubs for the Full text search module</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sun, 01 Sep 2019 10:14:50 +1200.<br/>
+            generated on Sun, 01 Sep 2019 10:29:51 +1200.<br/>
     </footer>
     </body>
 </html>
