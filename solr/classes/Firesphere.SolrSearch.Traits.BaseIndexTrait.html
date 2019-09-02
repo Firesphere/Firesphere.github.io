@@ -217,6 +217,12 @@
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_getHistory" title="getHistory :: ">
+            <span class="description"></span><pre>getHistory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_getSortFields" title="getSortFields :: ">
             <span class="description"></span><pre>getSortFields</pre>
         </a>
@@ -259,6 +265,12 @@
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_setHistory" title="setHistory :: ">
+            <span class="description"></span><pre>setHistory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_setSortFields" title="setSortFields :: ">
             <span class="description"></span><pre>setSortFields</pre>
         </a>
@@ -284,11 +296,11 @@
                                 <span class="description">Add all fields of a given type to the index</span><pre>addFulltextFieldsForClass</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -763,7 +775,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                        <code>\Firesphere\SolrSearch\Indexes\BaseIndex</code><p></p>
                                                                     </div>
                             </div>
 
@@ -917,6 +929,35 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                         <div class="element clickable method public  method_getFulltextFields" data-toggle="collapse" data-target=".method_getFulltextFields .collapse">
                             <h2>getFulltextFields</h2>
                             <pre>getFulltextFields() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getHistory"></a>
+                        <div class="element clickable method public  method_getHistory" data-toggle="collapse" data-target=".method_getHistory .collapse">
+                            <h2>getHistory</h2>
+                            <pre>getHistory() : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1135,6 +1176,33 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                             </div>
 
                         </div>
+                                            <a id="method_setHistory"></a>
+                        <div class="element clickable method public  method_setHistory" data-toggle="collapse" data-target=".method_setHistory .collapse">
+                            <h2>setHistory</h2>
+                            <pre>setHistory(array $history) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$history</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_setSortFields"></a>
                         <div class="element clickable method public  method_setSortFields" data-toggle="collapse" data-target=".method_setSortFields .collapse">
                             <h2>setSortFields</h2>
@@ -1184,7 +1252,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                        <code>\Firesphere\SolrSearch\Indexes\BaseIndex</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1402,7 +1470,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                             </div>
                                                     <a id="property_usedAllFields"> </a>
                             <div class="element clickable property  protected property_usedAllFields" data-toggle="collapse" data-target=".property_usedAllFields .collapse">
-                                <h2>usedAllFields is used to determine if the addAllFields method has been caled
+                                <h2>usedAllFields is used to determine if the addAllFields method has been called
 This is to prevent a notice if there is no yml.</h2>
                                 <pre>usedAllFields : boolean</pre>
                                 <div class="labels">
@@ -1427,6 +1495,32 @@ This is to prevent a notice if there is no yml.</h2>
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_history"> </a>
+                            <div class="element clickable property  protected property_history" data-toggle="collapse" data-target=".property_history .collapse">
+                                <h2>Search history for the current user</h2>
+                                <pre>history : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Search history for the current user</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                             </div>
             </div>
             <a id="\Firesphere\SolrSearch\Traits\BaseIndexTrait"></a>
@@ -1447,7 +1541,7 @@ This is to prevent a notice if there is no yml.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 03 Sep 2019 09:18:37 +1200.<br/>
+            generated on Tue, 03 Sep 2019 10:49:20 +1200.<br/>
     </footer>
     </body>
 </html>
