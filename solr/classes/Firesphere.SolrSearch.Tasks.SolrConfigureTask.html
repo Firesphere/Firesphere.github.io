@@ -156,13 +156,13 @@ execute via the TaskRunner</span><pre>run</pre>
                             </a>
                         </li>
                                                                                 <li class="method protected">
-                            <a href="#method_createConfigForIndex" title="createConfigForIndex :: ">
-                                <span class="description"></span><pre>createConfigForIndex</pre>
+                            <a href="#method_createConfigForIndex" title="createConfigForIndex :: Get the config and load it to Solr">
+                                <span class="description">Get the config and load it to Solr</span><pre>createConfigForIndex</pre>
                             </a>
                         </li>
                                                                                                                     <li class="method protected">
-                            <a href="#method_getStore" title="getStore :: ">
-                                <span class="description"></span><pre>getStore</pre>
+                            <a href="#method_getStore" title="getStore :: Get the store for the given config">
+                                <span class="description">Get the store for the given config</span><pre>getStore</pre>
                             </a>
                         </li>
                                                                                                                                                             </ul>
@@ -170,8 +170,8 @@ execute via the TaskRunner</span><pre>run</pre>
         <li class="nav-header private">» Private
             <ul>
                                                                                                                                                                                                                                                                 <li class="method private">
-                            <a href="#method_logException" title="logException :: ">
-                                <span class="description"></span><pre>logException</pre>
+                            <a href="#method_logException" title="logException :: Log an exception error">
+                                <span class="description">Log an exception error</span><pre>logException</pre>
                             </a>
                         </li>
                                                                                                                         </ul>
@@ -289,7 +289,7 @@ execute via the TaskRunner</span><pre>run</pre>
                         </div>
                                             <a id="method_createConfigForIndex"></a>
                         <div class="element clickable method protected  method_createConfigForIndex" data-toggle="collapse" data-target=".method_createConfigForIndex .collapse">
-                            <h2>createConfigForIndex</h2>
+                            <h2>Get the config and load it to Solr</h2>
                             <pre>createConfigForIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $instance) : \Firesphere\SolrSearch\Interfaces\ConfigStore</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -345,7 +345,7 @@ execute via the TaskRunner</span><pre>run</pre>
                         </div>
                                             <a id="method_getStore"></a>
                         <div class="element clickable method protected  method_getStore" data-toggle="collapse" data-target=".method_getStore .collapse">
-                            <h2>getStore</h2>
+                            <h2>Get the store for the given config</h2>
                             <pre>getStore( $storeConfig) : \Firesphere\SolrSearch\Interfaces\ConfigStore</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -372,7 +372,7 @@ execute via the TaskRunner</span><pre>run</pre>
                         </div>
                                             <a id="method_logException"></a>
                         <div class="element clickable method private  method_logException" data-toggle="collapse" data-target=".method_logException .collapse">
-                            <h2>logException</h2>
+                            <h2>Log an exception error</h2>
                             <pre>logException( $index, \Exception $error) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -495,7 +495,7 @@ execute via the TaskRunner</h2>
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
                                                     <a id="property_storeModes"> </a>
                             <div class="element clickable property  protected property_storeModes" data-toggle="collapse" data-target=".property_storeModes .collapse">
-                                <h2>storeModes</h2>
+                                <h2>Available stores</h2>
                                 <pre>storeModes : array</pre>
                                 <div class="labels">
                                                                         <span class="label">static</span>                                </div>
@@ -509,7 +509,7 @@ execute via the TaskRunner</h2>
                                                         var
                                                     </th>
                                                     <td>
-                                                                                                                    
+                                                                                                                    <p>Available stores</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
@@ -521,7 +521,7 @@ execute via the TaskRunner</h2>
                             </div>
                                                     <a id="property_segment"> </a>
                             <div class="element clickable property  private property_segment" data-toggle="collapse" data-target=".property_segment .collapse">
-                                <h2>segment</h2>
+                                <h2>URLSegment</h2>
                                 <pre>segment : string</pre>
                                 <div class="labels">
                                                                         <span class="label">static</span>                                </div>
@@ -535,7 +535,7 @@ execute via the TaskRunner</h2>
                                                         var
                                                     </th>
                                                     <td>
-                                                                                                                    
+                                                                                                                    <p>URLSegment</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
@@ -547,7 +547,7 @@ execute via the TaskRunner</h2>
                             </div>
                                                     <a id="property_title"> </a>
                             <div class="element clickable property  protected property_title" data-toggle="collapse" data-target=".property_title .collapse">
-                                <h2>title</h2>
+                                <h2>Title</h2>
                                 <pre>title : string</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -561,7 +561,7 @@ execute via the TaskRunner</h2>
                                                         var
                                                     </th>
                                                     <td>
-                                                                                                                    
+                                                                                                                    <p>Title</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
@@ -573,7 +573,7 @@ execute via the TaskRunner</h2>
                             </div>
                                                     <a id="property_description"> </a>
                             <div class="element clickable property  protected property_description" data-toggle="collapse" data-target=".property_description .collapse">
-                                <h2>description</h2>
+                                <h2>Description</h2>
                                 <pre>description : string</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -587,7 +587,7 @@ execute via the TaskRunner</h2>
                                                         var
                                                     </th>
                                                     <td>
-                                                                                                                    
+                                                                                                                    <p>Description</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
@@ -643,7 +643,7 @@ execute via the TaskRunner</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 04 Sep 2019 11:35:35 +1200.<br/>
+            generated on Wed, 04 Sep 2019 11:51:21 +1200.<br/>
     </footer>
     </body>
 </html>
