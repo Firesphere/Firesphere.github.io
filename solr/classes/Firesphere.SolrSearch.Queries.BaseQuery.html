@@ -381,10 +381,10 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
                 <h1>BaseQuery</h1>
                 <small style="display: block; text-align: right">
                                                         </small>
-                <p class="short_description">Class BaseQuery</p>
+                <p class="short_description">Class BaseQuery is the base of every query executed.</p>
                 <div class="details">
                     <div class="long_description">
-                        
+                        <p>Build a query to execute agains Solr. Uses as simle as possible an interface.</p>
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -1500,84 +1500,6 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
                     
                     
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_filter"> </a>
-                            <div class="element clickable property  protected property_filter inherited" data-toggle="collapse" data-target=".property_filter .collapse">
-                                <h2>Fields to filter</h2>
-                                <pre>filter : array</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    <p>Fields to filter</p>
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>array</code>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                    <a id="property_exclude"> </a>
-                            <div class="element clickable property  protected property_exclude inherited" data-toggle="collapse" data-target=".property_exclude .collapse">
-                                <h2>Fields to exclude</h2>
-                                <pre>exclude : array</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    <p>Fields to exclude</p>
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>array</code>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                    <a id="property_facetFilter"> </a>
-                            <div class="element clickable property  protected property_facetFilter inherited" data-toggle="collapse" data-target=".property_facetFilter .collapse">
-                                <h2>Faceting</h2>
-                                <pre>facetFilter : array</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    <p>Faceting</p>
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>array</code>
-                                                                            </div>
-                                </div>
-                            </div>
                                                     <a id="property_start"> </a>
                             <div class="element clickable property  protected property_start" data-toggle="collapse" data-target=".property_start .collapse">
                                 <h2>Pagination start</h2>
@@ -1897,6 +1819,87 @@ SiteTree::class   =&gt; [
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_filter"> </a>
+                            <div class="element clickable property  protected property_filter inherited" data-toggle="collapse" data-target=".property_filter .collapse">
+                                <h2>Fields to filter</h2>
+                                <pre>filter : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Fields to filter</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_facetFilter"> </a>
+                            <div class="element clickable property  protected property_facetFilter inherited" data-toggle="collapse" data-target=".property_facetFilter .collapse">
+                                <h2>Key =&gt; value pairs of facets to apply
+[
+    &#039;FacetTitle&#039; =&gt; [1, 2, 3]
+]</h2>
+                                <pre>facetFilter : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_exclude"> </a>
+                            <div class="element clickable property  protected property_exclude inherited" data-toggle="collapse" data-target=".property_exclude .collapse">
+                                <h2>Fields to exclude</h2>
+                                <pre>exclude : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Fields to exclude</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                             </div>
             </div>
             <a id="\Firesphere\SolrSearch\Queries\BaseQuery"></a>
@@ -1917,7 +1920,7 @@ SiteTree::class   =&gt; [
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 04 Sep 2019 23:57:34 +1200.<br/>
+            generated on Thu, 05 Sep 2019 00:06:24 +1200.<br/>
     </footer>
     </body>
 </html>
