@@ -121,8 +121,8 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                                                                                                                                     <li class="method public inherited">
-        <a href="#method_getFound" title="getFound :: ">
-            <span class="description"></span><pre>getFound</pre>
+        <a href="#method_getFound" title="getFound :: Get whatever is found">
+            <span class="description">Get whatever is found</span><pre>getFound</pre>
         </a>
     </li>
 
@@ -133,8 +133,8 @@
     </li>
 
                                                                                                                                                                 <li class="method public inherited">
-        <a href="#method_getIndex" title="getIndex :: ">
-            <span class="description"></span><pre>getIndex</pre>
+        <a href="#method_getIndex" title="getIndex :: Get the current index">
+            <span class="description">Get the current index</span><pre>getIndex</pre>
         </a>
     </li>
 
@@ -151,8 +151,8 @@
     </li>
 
                                                                                                                                                                 <li class="method public inherited">
-        <a href="#method_setIndex" title="setIndex :: ">
-            <span class="description"></span><pre>setIndex</pre>
+        <a href="#method_setIndex" title="setIndex :: Set the current index">
+            <span class="description">Set the current index</span><pre>setIndex</pre>
         </a>
     </li>
 
@@ -166,8 +166,8 @@
                             </a>
                         </li>
                                                                                                                                                                                             <li class="method protected">
-                            <a href="#method_getHierarchyClasses" title="getHierarchyClasses :: ">
-                                <span class="description"></span><pre>getHierarchyClasses</pre>
+                            <a href="#method_getHierarchyClasses" title="getHierarchyClasses :: Get the hierarchy for a class">
+                                <span class="description">Get the hierarchy for a class</span><pre>getHierarchyClasses</pre>
                             </a>
                         </li>
                                                                                                                     <li class="method protected">
@@ -322,7 +322,7 @@ Some additional introspection tools that are used often by the fulltext search c
                         </div>
                                             <a id="method_getFound"></a>
                         <div class="element clickable method public  method_getFound inherited" data-toggle="collapse" data-target=".method_getFound .collapse">
-                            <h2>getFound</h2>
+                            <h2>Get whatever is found</h2>
                             <pre>getFound() : array</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
@@ -459,7 +459,7 @@ Some additional introspection tools that are used often by the fulltext search c
                         </div>
                                             <a id="method_getHierarchyClasses"></a>
                         <div class="element clickable method protected  method_getHierarchyClasses" data-toggle="collapse" data-target=".method_getHierarchyClasses .collapse">
-                            <h2>getHierarchyClasses</h2>
+                            <h2>Get the hierarchy for a class</h2>
                             <pre>getHierarchyClasses( $class,  $includeSubclasses) : array</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
@@ -470,6 +470,15 @@ Some additional introspection tools that are used often by the fulltext search c
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    todo
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>clean this up to be more compatible with PHP features</p>
+                                                                                                    </td>
+                                            </tr>
                                                                                                                             <tr>
                                                 <th>Throws</th>
                                                 <td>
@@ -499,7 +508,7 @@ Some additional introspection tools that are used often by the fulltext search c
                         </div>
                                             <a id="method_getIndex"></a>
                         <div class="element clickable method public  method_getIndex inherited" data-toggle="collapse" data-target=".method_getIndex .collapse">
-                            <h2>getIndex</h2>
+                            <h2>Get the current index</h2>
                             <pre>getIndex() : \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
@@ -813,7 +822,7 @@ Should be replaced with PHP native methods</h2>
                         </div>
                                             <a id="method_setIndex"></a>
                         <div class="element clickable method public  method_setIndex inherited" data-toggle="collapse" data-target=".method_setIndex .collapse">
-                            <h2>setIndex</h2>
+                            <h2>Set the current index</h2>
                             <pre>setIndex(mixed $index) : $this</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
@@ -895,7 +904,7 @@ Should be replaced with PHP native methods</h2>
                             </div>
                                                     <a id="property_index"> </a>
                             <div class="element clickable property  protected property_index inherited" data-toggle="collapse" data-target=".property_index .collapse">
-                                <h2>index</h2>
+                                <h2>Index to use</h2>
                                 <pre>index : \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
@@ -909,7 +918,7 @@ Should be replaced with PHP native methods</h2>
                                                         var
                                                     </th>
                                                     <td>
-                                                                                                                    
+                                                                                                                    <p>Index to use</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
@@ -921,7 +930,7 @@ Should be replaced with PHP native methods</h2>
                             </div>
                                                     <a id="property_found"> </a>
                             <div class="element clickable property  protected property_found inherited" data-toggle="collapse" data-target=".property_found .collapse">
-                                <h2>found</h2>
+                                <h2>Found items</h2>
                                 <pre>found : array</pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
@@ -935,7 +944,7 @@ Should be replaced with PHP native methods</h2>
                                                         var
                                                     </th>
                                                     <td>
-                                                                                                                    
+                                                                                                                    <p>Found items</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
@@ -965,7 +974,7 @@ Should be replaced with PHP native methods</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 04 Sep 2019 23:40:51 +1200.<br/>
+            generated on Wed, 04 Sep 2019 23:44:42 +1200.<br/>
     </footer>
     </body>
 </html>
