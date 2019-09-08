@@ -120,7 +120,7 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>
-                                                                                                                                                            <li class="method public inherited">
+                                                                                                                                                                                                                    <li class="method public inherited">
         <a href="#method_getLogger" title="getLogger :: ">
             <span class="description"></span><pre>getLogger</pre>
         </a>
@@ -149,11 +149,16 @@ Uses the given class name to generate stub objects">
 Uses the given class name to generate stub objects</span><pre>createDeleteList</pre>
                             </a>
                         </li>
-                                                                                                                                                            </ul>
+                                                                                                                                                                                                </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                            </ul>
+                                                                                                                <li class="method private">
+                            <a href="#method_getDirtyClasses" title="getDirtyClasses :: ">
+                                <span class="description"></span><pre>getDirtyClasses</pre>
+                            </a>
+                        </li>
+                                                                                                                                                            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -195,7 +200,7 @@ This task takes care of doing this. It can be run directly via /dev/tasks, or vi
                         <div class="element clickable method protected  method_createDeleteList" data-toggle="collapse" data-target=".method_createDeleteList .collapse">
                             <h2>Create an ArrayList of the dirty items to be deleted from Solr
 Uses the given class name to generate stub objects</h2>
-                            <pre>createDeleteList(array $items, string $dirtyClass) : \SilverStripe\ORM\ArrayList</pre>
+                            <pre>createDeleteList(array $items, string $dirtyClass,  &$dirtyClasses) : \SilverStripe\ORM\ArrayList</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -216,9 +221,40 @@ Uses the given class name to generate stub objects</h2>
                                                 <h4>$dirtyClass</h4>
                                                 <code>string</code><p></p>
                                             </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dirtyClasses</h4>
+                                                <code></code><p></p>
+                                            </div>
                                                                             
                                                                             <h3>Response</h3>
                                         <code>\SilverStripe\ORM\ArrayList</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getDirtyClasses"></a>
+                        <div class="element clickable method private  method_getDirtyClasses" data-toggle="collapse" data-target=".method_getDirtyClasses .collapse">
+                            <h2>getDirtyClasses</h2>
+                            <pre>getDirtyClasses( $dirtyObject) : \SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dirtyObject</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</code><p></p>
                                                                     </div>
                             </div>
 
@@ -449,7 +485,7 @@ Uses the given class name to generate stub objects</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sun, 08 Sep 2019 20:20:25 +1200.<br/>
+            generated on Mon, 09 Sep 2019 09:26:28 +1200.<br/>
     </footer>
     </body>
 </html>
