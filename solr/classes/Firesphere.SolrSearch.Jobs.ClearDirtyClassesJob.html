@@ -127,8 +127,8 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_process" title="process :: Do some processing yourself!">
-            <span class="description">Do some processing yourself!</span><pre>process</pre>
+        <a href="#method_process" title="process :: Run the dirty class cleanup task from Queued Jobs">
+            <span class="description">Run the dirty class cleanup task from Queued Jobs</span><pre>process</pre>
         </a>
     </li>
 
@@ -158,10 +158,10 @@
                 <small style="display: block; text-align: right">
                                             Extends \Symbiote\QueuedJobs\Services\AbstractQueuedJob
                                                         </small>
-                <p class="short_description"></p>
+                <p class="short_description">Class ClearDirtyClassesJob is the queued job version of the ClearDirtyClassesTask</p>
                 <div class="details">
                     <div class="long_description">
-                        
+                        <p>Clean up any dirty classes in Solr due to objects not being updated properly</p>
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -170,7 +170,7 @@
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Default</p>
+                                                                                <p>Firesphere\SolrSearch\Jobs</p>
                                     </td>
                                 </tr>
                                                                                                                                                                                 </table>
@@ -200,14 +200,14 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>string</code><p></p>
+                                        <code>string</code><p><p>Title of this job</p></p>
                                                                     </div>
                             </div>
 
                         </div>
                                             <a id="method_process"></a>
                         <div class="element clickable method public  method_process" data-toggle="collapse" data-target=".method_process .collapse">
-                            <h2>Do some processing yourself!</h2>
+                            <h2>Run the dirty class cleanup task from Queued Jobs</h2>
                             <pre>process() </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -232,7 +232,20 @@
                                                 <td>
                                                                                                     </td>
                                             </tr>
-                                                                                                                    </table>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>
+                                                                                                            <dt>\ReflectionException</dt>
+                                                        <dd></dd>
+                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
 
                                     
                                                                     </div>
@@ -261,7 +274,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 07 Sep 2019 14:05:06 +1200.<br/>
+            generated on Sun, 08 Sep 2019 20:20:25 +1200.<br/>
     </footer>
     </body>
 </html>
