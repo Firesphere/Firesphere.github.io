@@ -127,38 +127,38 @@
     </li>
 
                                                                                                                                                                 <li class="method public">
-        <a href="#method_getClassToIndex" title="getClassToIndex :: ">
-            <span class="description"></span><pre>getClassToIndex</pre>
+        <a href="#method_getClassToIndex" title="getClassToIndex :: Which Indexes should I index">
+            <span class="description">Which Indexes should I index</span><pre>getClassToIndex</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getIndexes" title="getIndexes :: ">
-            <span class="description"></span><pre>getIndexes</pre>
+        <a href="#method_getIndexes" title="getIndexes :: Get the indexes">
+            <span class="description">Get the indexes</span><pre>getIndexes</pre>
         </a>
     </li>
 
                                                                                                                                                                 <li class="method public">
-        <a href="#method_getTitle" title="getTitle :: ">
-            <span class="description"></span><pre>getTitle</pre>
+        <a href="#method_getTitle" title="getTitle :: My name">
+            <span class="description">My name</span><pre>getTitle</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_process" title="process :: Do some processing yourself!">
-            <span class="description">Do some processing yourself!</span><pre>process</pre>
+        <a href="#method_process" title="process :: Process this job">
+            <span class="description">Process this job</span><pre>process</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_setClassToIndex" title="setClassToIndex :: ">
-            <span class="description"></span><pre>setClassToIndex</pre>
+        <a href="#method_setClassToIndex" title="setClassToIndex :: Which classes should I index">
+            <span class="description">Which classes should I index</span><pre>setClassToIndex</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_setIndexes" title="setIndexes :: ">
-            <span class="description"></span><pre>setIndexes</pre>
+        <a href="#method_setIndexes" title="setIndexes :: Set the indexes if needed">
+            <span class="description">Set the indexes if needed</span><pre>setIndexes</pre>
         </a>
     </li>
 
@@ -167,13 +167,13 @@
         <li class="nav-header protected">» Protected
             <ul>
                                                                                                                 <li class="method protected">
-                            <a href="#method_configureRun" title="configureRun :: ">
-                                <span class="description"></span><pre>configureRun</pre>
+                            <a href="#method_configureRun" title="configureRun :: Configure the run for the valid indexes">
+                                <span class="description">Configure the run for the valid indexes</span><pre>configureRun</pre>
                             </a>
                         </li>
                                                                                                                                                         <li class="method protected">
-                            <a href="#method_getNextSteps" title="getNextSteps :: ">
-                                <span class="description"></span><pre>getNextSteps</pre>
+                            <a href="#method_getNextSteps" title="getNextSteps :: Get the next step to execute">
+                                <span class="description">Get the next step to execute</span><pre>getNextSteps</pre>
                             </a>
                         </li>
                                                                                                                                                                                                 </ul>
@@ -198,10 +198,10 @@
                 <small style="display: block; text-align: right">
                                             Extends \Symbiote\QueuedJobs\Services\AbstractQueuedJob
                                                         </small>
-                <p class="short_description">Class SolrIndexJob</p>
+                <p class="short_description">Class SolrIndexJob is a queued job to index all existing indexes and their classes.</p>
                 <div class="details">
                     <div class="long_description">
-                        
+                        <p>It always runs on all indexes, to make sure all indexes are up to date.</p>
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -252,7 +252,7 @@
                         </div>
                                             <a id="method_configureRun"></a>
                         <div class="element clickable method protected  method_configureRun" data-toggle="collapse" data-target=".method_configureRun .collapse">
-                            <h2>configureRun</h2>
+                            <h2>Configure the run for the valid indexes</h2>
                             <pre>configureRun(\stdClass|null $data) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -293,7 +293,7 @@
                         </div>
                                             <a id="method_getClassToIndex"></a>
                         <div class="element clickable method public  method_getClassToIndex" data-toggle="collapse" data-target=".method_getClassToIndex .collapse">
-                            <h2>getClassToIndex</h2>
+                            <h2>Which Indexes should I index</h2>
                             <pre>getClassToIndex() : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -322,7 +322,7 @@
                         </div>
                                             <a id="method_getIndexes"></a>
                         <div class="element clickable method public  method_getIndexes" data-toggle="collapse" data-target=".method_getIndexes .collapse">
-                            <h2>getIndexes</h2>
+                            <h2>Get the indexes</h2>
                             <pre>getIndexes() : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -351,7 +351,7 @@
                         </div>
                                             <a id="method_getNextSteps"></a>
                         <div class="element clickable method protected  method_getNextSteps" data-toggle="collapse" data-target=".method_getNextSteps .collapse">
-                            <h2>getNextSteps</h2>
+                            <h2>Get the next step to execute</h2>
                             <pre>getNextSteps() : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -380,7 +380,7 @@
                         </div>
                                             <a id="method_getTitle"></a>
                         <div class="element clickable method public  method_getTitle" data-toggle="collapse" data-target=".method_getTitle .collapse">
-                            <h2>getTitle</h2>
+                            <h2>My name</h2>
                             <pre>getTitle() : string</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -409,7 +409,7 @@
                         </div>
                                             <a id="method_process"></a>
                         <div class="element clickable method public  method_process" data-toggle="collapse" data-target=".method_process .collapse">
-                            <h2>Do some processing yourself!</h2>
+                            <h2>Process this job</h2>
                             <pre>process() : self</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -449,7 +449,7 @@
                         </div>
                                             <a id="method_setClassToIndex"></a>
                         <div class="element clickable method public  method_setClassToIndex" data-toggle="collapse" data-target=".method_setClassToIndex .collapse">
-                            <h2>setClassToIndex</h2>
+                            <h2>Which classes should I index</h2>
                             <pre>setClassToIndex(array $classToIndex) : \Firesphere\SolrSearch\Jobs\SolrIndexJob</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -476,7 +476,7 @@
                         </div>
                                             <a id="method_setIndexes"></a>
                         <div class="element clickable method public  method_setIndexes" data-toggle="collapse" data-target=".method_setIndexes .collapse">
-                            <h2>setIndexes</h2>
+                            <h2>Set the indexes if needed</h2>
                             <pre>setIndexes(array $indexes) : \Firesphere\SolrSearch\Jobs\SolrIndexJob</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -579,7 +579,7 @@ so the next class becomes the class to index.</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 09 Sep 2019 12:55:31 +1200.<br/>
+            generated on Mon, 09 Sep 2019 13:32:22 +1200.<br/>
     </footer>
     </body>
 </html>

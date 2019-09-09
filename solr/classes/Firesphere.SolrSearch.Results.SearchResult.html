@@ -145,20 +145,20 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getHighlightByID" title="getHighlightByID :: ">
-            <span class="description"></span><pre>getHighlightByID</pre>
+        <a href="#method_getHighlightByID" title="getHighlightByID :: Get the highlight for a specific document">
+            <span class="description">Get the highlight for a specific document</span><pre>getHighlightByID</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getMatches" title="getMatches :: ">
-            <span class="description"></span><pre>getMatches</pre>
+        <a href="#method_getMatches" title="getMatches :: Get the matches as an ArrayList and add an excerpt if possible.">
+            <span class="description">Get the matches as an ArrayList and add an excerpt if possible.</span><pre>getMatches</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getPaginatedMatches" title="getPaginatedMatches :: ">
-            <span class="description"></span><pre>getPaginatedMatches</pre>
+        <a href="#method_getPaginatedMatches" title="getPaginatedMatches :: Get the matches as a Paginated List">
+            <span class="description">Get the matches as a Paginated List</span><pre>getPaginatedMatches</pre>
         </a>
     </li>
 
@@ -175,8 +175,8 @@
     </li>
 
                                                                                                                                                                 <li class="method public">
-        <a href="#method_setCollatedSpellcheck" title="setCollatedSpellcheck :: ">
-            <span class="description"></span><pre>setCollatedSpellcheck</pre>
+        <a href="#method_setCollatedSpellcheck" title="setCollatedSpellcheck :: Set the collated spellcheck string">
+            <span class="description">Set the collated spellcheck string</span><pre>setCollatedSpellcheck</pre>
         </a>
     </li>
 
@@ -193,8 +193,8 @@
     </li>
 
                                                                                                                                                                 <li class="method public">
-        <a href="#method_setSpellcheck" title="setSpellcheck :: ">
-            <span class="description"></span><pre>setSpellcheck</pre>
+        <a href="#method_setSpellcheck" title="setSpellcheck :: Set the spellcheck list as an ArrayList">
+            <span class="description">Set the spellcheck list as an ArrayList</span><pre>setSpellcheck</pre>
         </a>
     </li>
 
@@ -214,33 +214,33 @@
                             </a>
                         </li>
                                                                                 <li class="method protected">
-                            <a href="#method_createExcerpt" title="createExcerpt :: ">
-                                <span class="description"></span><pre>createExcerpt</pre>
+                            <a href="#method_createExcerpt" title="createExcerpt :: Generate an excerpt for a DataObject">
+                                <span class="description">Generate an excerpt for a DataObject</span><pre>createExcerpt</pre>
                             </a>
                         </li>
                                                                                 <li class="method protected">
-                            <a href="#method_createFacet" title="createFacet :: ">
-                                <span class="description"></span><pre>createFacet</pre>
+                            <a href="#method_createFacet" title="createFacet :: Create facets from each faceted class">
+                                <span class="description">Create facets from each faceted class</span><pre>createFacet</pre>
                             </a>
                         </li>
                                                                                 <li class="method protected">
-                            <a href="#method_getClassFacets" title="getClassFacets :: ">
-                                <span class="description"></span><pre>getClassFacets</pre>
+                            <a href="#method_getClassFacets" title="getClassFacets :: Get the facets for each class and their count">
+                                <span class="description">Get the facets for each class and their count</span><pre>getClassFacets</pre>
                             </a>
                         </li>
                                                                                                                                                                                                                                                                                                                                                                                 <li class="method protected">
-                            <a href="#method_isDataObject" title="isDataObject :: ">
-                                <span class="description"></span><pre>isDataObject</pre>
+                            <a href="#method_isDataObject" title="isDataObject :: Check if the match is a DataObject and exists">
+                                <span class="description">Check if the match is a DataObject and exists</span><pre>isDataObject</pre>
                             </a>
                         </li>
                                                                                                                                                         <li class="method protected">
-                            <a href="#method_setFacets" title="setFacets :: ">
-                                <span class="description"></span><pre>setFacets</pre>
+                            <a href="#method_setFacets" title="setFacets :: Set the facets to build">
+                                <span class="description">Set the facets to build</span><pre>setFacets</pre>
                             </a>
                         </li>
                                                                                                                     <li class="method protected">
-                            <a href="#method_setMatches" title="setMatches :: ">
-                                <span class="description"></span><pre>setMatches</pre>
+                            <a href="#method_setMatches" title="setMatches :: Set the matches from Solarium as an ArrayList">
+                                <span class="description">Set the matches from Solarium as an ArrayList</span><pre>setMatches</pre>
                             </a>
                         </li>
                                                                                                                         </ul>
@@ -264,10 +264,11 @@
                 <h1>SearchResult</h1>
                 <small style="display: block; text-align: right">
                                                         </small>
-                <p class="short_description">Class SearchResult</p>
+                <p class="short_description">Class SearchResult is the combined result in a SilverStripe readable way</p>
                 <div class="details">
                     <div class="long_description">
-                        
+                        <p>Each of the requested features of a BaseQuery are generated to be easily accessible in the controller.
+In the controller, each required item can be accessed through the resulting method in this class.</p>
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -352,7 +353,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_createExcerpt"></a>
                         <div class="element clickable method protected  method_createExcerpt" data-toggle="collapse" data-target=".method_createExcerpt .collapse">
-                            <h2>createExcerpt</h2>
+                            <h2>Generate an excerpt for a DataObject</h2>
                             <pre>createExcerpt(string $idField,  $match, \SilverStripe\ORM\DataObject $item) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -392,7 +393,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_createFacet"></a>
                         <div class="element clickable method protected  method_createFacet" data-toggle="collapse" data-target=".method_createFacet .collapse">
-                            <h2>createFacet</h2>
+                            <h2>Create facets from each faceted class</h2>
                             <pre>createFacet(\Solarium\Component\Result\FacetSet $facets, array $options, string $class, array $facetArray) : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -431,7 +432,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_getClassFacets"></a>
                         <div class="element clickable method protected  method_getClassFacets" data-toggle="collapse" data-target=".method_getClassFacets .collapse">
-                            <h2>getClassFacets</h2>
+                            <h2>Get the facets for each class and their count</h2>
                             <pre>getClassFacets( $class, array $values, \SilverStripe\ORM\ArrayList &$results) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -558,7 +559,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_getHighlightByID"></a>
                         <div class="element clickable method public  method_getHighlightByID" data-toggle="collapse" data-target=".method_getHighlightByID .collapse">
-                            <h2>getHighlightByID</h2>
+                            <h2>Get the highlight for a specific document</h2>
                             <pre>getHighlightByID( $docID) : string</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -585,7 +586,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_getMatches"></a>
                         <div class="element clickable method public  method_getMatches" data-toggle="collapse" data-target=".method_getMatches .collapse">
-                            <h2>getMatches</h2>
+                            <h2>Get the matches as an ArrayList and add an excerpt if possible.</h2>
                             <pre>getMatches() : \SilverStripe\ORM\ArrayList</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -593,7 +594,7 @@ See Solarium docs for this.</p></div>
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"></div>
+                                    <div class="long_description"><p>\static::createExcerpt()</p></div>
 
                                     <table class="table">
                                                                                     <tr>
@@ -614,7 +615,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_getPaginatedMatches"></a>
                         <div class="element clickable method public  method_getPaginatedMatches" data-toggle="collapse" data-target=".method_getPaginatedMatches .collapse">
-                            <h2>getPaginatedMatches</h2>
+                            <h2>Get the matches as a Paginated List</h2>
                             <pre>getPaginatedMatches(\SilverStripe\Control\HTTPRequest $request) : \SilverStripe\ORM\PaginatedList</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -699,7 +700,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_isDataObject"></a>
                         <div class="element clickable method protected  method_isDataObject" data-toggle="collapse" data-target=".method_isDataObject .collapse">
-                            <h2>isDataObject</h2>
+                            <h2>Check if the match is a DataObject and exists</h2>
                             <pre>isDataObject( $match, string $classIDField) : \SilverStripe\ORM\DataObject|boolean</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -730,7 +731,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_setCollatedSpellcheck"></a>
                         <div class="element clickable method public  method_setCollatedSpellcheck" data-toggle="collapse" data-target=".method_setCollatedSpellcheck .collapse">
-                            <h2>setCollatedSpellcheck</h2>
+                            <h2>Set the collated spellcheck string</h2>
                             <pre>setCollatedSpellcheck(mixed $collatedSpellcheck) : $this</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -784,7 +785,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_setFacets"></a>
                         <div class="element clickable method protected  method_setFacets" data-toggle="collapse" data-target=".method_setFacets .collapse">
-                            <h2>setFacets</h2>
+                            <h2>Set the facets to build</h2>
                             <pre>setFacets(\Solarium\Component\Result\FacetSet|null $facets) : $this</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -838,7 +839,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_setMatches"></a>
                         <div class="element clickable method protected  method_setMatches" data-toggle="collapse" data-target=".method_setMatches .collapse">
-                            <h2>setMatches</h2>
+                            <h2>Set the matches from Solarium as an ArrayList</h2>
                             <pre>setMatches(array $result) : $this</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -865,7 +866,7 @@ See Solarium docs for this.</p></div>
                         </div>
                                             <a id="method_setSpellcheck"></a>
                         <div class="element clickable method public  method_setSpellcheck" data-toggle="collapse" data-target=".method_setSpellcheck .collapse">
-                            <h2>setSpellcheck</h2>
+                            <h2>Set the spellcheck list as an ArrayList</h2>
                             <pre>setSpellcheck(\Solarium\Component\Result\Spellcheck\Result|null $spellcheck) : \Firesphere\SolrSearch\Results\SearchResult</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -922,7 +923,7 @@ See Solarium docs for this.</p></div>
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
                                                     <a id="property_query"> </a>
                             <div class="element clickable property  protected property_query" data-toggle="collapse" data-target=".property_query .collapse">
-                                <h2>query</h2>
+                                <h2>Query that has been executed</h2>
                                 <pre>query : \Firesphere\SolrSearch\Queries\BaseQuery</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -948,7 +949,7 @@ See Solarium docs for this.</p></div>
                             </div>
                                                     <a id="property_index"> </a>
                             <div class="element clickable property  protected property_index" data-toggle="collapse" data-target=".property_index .collapse">
-                                <h2>index</h2>
+                                <h2>Index the query has run on</h2>
                                 <pre>index : \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -974,7 +975,7 @@ See Solarium docs for this.</p></div>
                             </div>
                                                     <a id="property_matches"> </a>
                             <div class="element clickable property  protected property_matches" data-toggle="collapse" data-target=".property_matches .collapse">
-                                <h2>matches</h2>
+                                <h2>Resulting matches from the query on the index</h2>
                                 <pre>matches : \SilverStripe\ORM\ArrayList</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -1148,7 +1149,7 @@ See Solarium docs for this.</p></div>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 09 Sep 2019 12:55:30 +1200.<br/>
+            generated on Mon, 09 Sep 2019 13:32:22 +1200.<br/>
     </footer>
     </body>
 </html>
