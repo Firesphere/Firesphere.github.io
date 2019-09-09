@@ -195,8 +195,8 @@ $options is not used anymore, added for backward compatibility</span><pre>addCla
     </li>
 
                                                                                                                                                                 <li class="method public">
-        <a href="#method_buildSolrQuery" title="buildSolrQuery :: ">
-            <span class="description"></span><pre>buildSolrQuery</pre>
+        <a href="#method_buildSolrQuery" title="buildSolrQuery :: From the given BaseQuery, generate a Solarium ClientQuery object">
+            <span class="description">From the given BaseQuery, generate a Solarium ClientQuery object</span><pre>buildSolrQuery</pre>
         </a>
     </li>
 
@@ -251,8 +251,8 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getFieldsForIndexing" title="getFieldsForIndexing :: ">
-            <span class="description"></span><pre>getFieldsForIndexing</pre>
+        <a href="#method_getFieldsForIndexing" title="getFieldsForIndexing :: Get all fields that are required for indexing in a unique way">
+            <span class="description">Get all fields that are required for indexing in a unique way</span><pre>getFieldsForIndexing</pre>
         </a>
     </li>
 
@@ -281,14 +281,14 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getQueryFactory" title="getQueryFactory :: ">
-            <span class="description"></span><pre>getQueryFactory</pre>
+        <a href="#method_getQueryFactory" title="getQueryFactory :: Get the QueryComponentFactory. {@see QueryComponentFactory}">
+            <span class="description">Get the QueryComponentFactory. {@see QueryComponentFactory}</span><pre>getQueryFactory</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getQueryTerms" title="getQueryTerms :: ">
-            <span class="description"></span><pre>getQueryTerms</pre>
+        <a href="#method_getQueryTerms" title="getQueryTerms :: Get the final, generated terms">
+            <span class="description">Get the final, generated terms</span><pre>getQueryTerms</pre>
         </a>
     </li>
 
@@ -403,8 +403,8 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
                             </a>
                         </li>
                                                                                                                                                         <li class="method protected">
-                            <a href="#method_buildFactory" title="buildFactory :: ">
-                                <span class="description"></span><pre>buildFactory</pre>
+                            <a href="#method_buildFactory" title="buildFactory :: Build a factory to use in the SolrQuery building. {@see static::buildSolrQuery()}">
+                                <span class="description">Build a factory to use in the SolrQuery building. {@see static::buildSolrQuery()}</span><pre>buildFactory</pre>
                             </a>
                         </li>
                                                                                                                     <li class="method protected">
@@ -990,7 +990,7 @@ $options is not used anymore, added for backward compatibility</h2>
                         </div>
                                             <a id="method_buildFactory"></a>
                         <div class="element clickable method protected  method_buildFactory" data-toggle="collapse" data-target=".method_buildFactory .collapse">
-                            <h2>buildFactory</h2>
+                            <h2>Build a factory to use in the SolrQuery building. {@see static::buildSolrQuery()}</h2>
                             <pre>buildFactory(\Firesphere\SolrSearch\Queries\BaseQuery $query, \Solarium\QueryType\Select\Query\Query $clientQuery) : \Firesphere\SolrSearch\Factories\QueryComponentFactory|mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -1021,7 +1021,7 @@ $options is not used anymore, added for backward compatibility</h2>
                         </div>
                                             <a id="method_buildSolrQuery"></a>
                         <div class="element clickable method public  method_buildSolrQuery" data-toggle="collapse" data-target=".method_buildSolrQuery .collapse">
-                            <h2>buildSolrQuery</h2>
+                            <h2>From the given BaseQuery, generate a Solarium ClientQuery object</h2>
                             <pre>buildSolrQuery(\Firesphere\SolrSearch\Queries\BaseQuery $query) : \Solarium\QueryType\Select\Query\Query</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -1328,7 +1328,7 @@ This is to add the current index to e.g. an index or select</h2>
                         </div>
                                             <a id="method_getFieldsForIndexing"></a>
                         <div class="element clickable method public  method_getFieldsForIndexing" data-toggle="collapse" data-target=".method_getFieldsForIndexing .collapse">
-                            <h2>getFieldsForIndexing</h2>
+                            <h2>Get all fields that are required for indexing in a unique way</h2>
                             <pre>getFieldsForIndexing() : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -1473,7 +1473,7 @@ This is to add the current index to e.g. an index or select</h2>
                         </div>
                                             <a id="method_getQueryFactory"></a>
                         <div class="element clickable method public  method_getQueryFactory" data-toggle="collapse" data-target=".method_getQueryFactory .collapse">
-                            <h2>getQueryFactory</h2>
+                            <h2>Get the QueryComponentFactory. {@see QueryComponentFactory}</h2>
                             <pre>getQueryFactory() : \Firesphere\SolrSearch\Factories\QueryComponentFactory</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -1502,7 +1502,7 @@ This is to add the current index to e.g. an index or select</h2>
                         </div>
                                             <a id="method_getQueryTerms"></a>
                         <div class="element clickable method public  method_getQueryTerms" data-toggle="collapse" data-target=".method_getQueryTerms .collapse">
-                            <h2>getQueryTerms</h2>
+                            <h2>Get the final, generated terms</h2>
                             <pre>getQueryTerms() : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -2580,7 +2580,7 @@ This is to prevent a notice if there is no yml.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 09 Sep 2019 12:39:51 +1200.<br/>
+            generated on Mon, 09 Sep 2019 12:44:34 +1200.<br/>
     </footer>
     </body>
 </html>
