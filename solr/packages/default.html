@@ -193,6 +193,15 @@
         </ul>
     </li>
         <li>
+        <a href="../packages/Firesphere.SolrSearch.Indexes.html" title="Indexes">
+            <i class="icon-th"></i> Indexes
+        </a>
+        <ul class="nav nav-list nav-packages">
+                
+    
+        </ul>
+    </li>
+        <li>
         <a href="../packages/Firesphere.SolrSearch.Interfaces.html" title="Interfaces">
             <i class="icon-th"></i> Interfaces
         </a>
@@ -229,8 +238,26 @@
         </ul>
     </li>
         <li>
+        <a href="../packages/Firesphere.SolrSearch.Results.html" title="Results">
+            <i class="icon-th"></i> Results
+        </a>
+        <ul class="nav nav-list nav-packages">
+                
+    
+        </ul>
+    </li>
+        <li>
         <a href="../packages/Firesphere.SolrSearch.Services.html" title="Services">
             <i class="icon-th"></i> Services
+        </a>
+        <ul class="nav nav-list nav-packages">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../packages/Firesphere.SolrSearch.States.html" title="States">
+            <i class="icon-th"></i> States
         </a>
         <ul class="nav nav-list nav-packages">
                 
@@ -442,6 +469,47 @@ Add support for subsites</p>
 
     
     <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Indexes.html">Indexes</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="BaseIndex" class="element ajax clickable class">
+        <h1>BaseIndex<a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">¶</a></h1>
+        <p class="short_description">Base for creating a new Solr core.</p>
+        <div class="details collapse">Base index settings and methods. Should be extended with at least a name for the index.
+This is an abstract class that can not be instantiated on it&#039;s own</div>
+        <a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
         <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Traits.html">Traits</a>
     </li>
 
@@ -528,6 +596,13 @@ so it&#039;s cleaner to read the code</div>
         <p class="short_description">Trait QueryComponentFilterTrait</p>
         <div class="details collapse"></div>
         <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="SearchResultGetTrait" class="element ajax clickable trait">
+        <h1>SearchResultGetTrait<a href="../classes/Firesphere.SolrSearch.Traits.SearchResultGetTrait.html">¶</a></h1>
+        <p class="short_description">Trait SearchResultGetTrait</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Traits.SearchResultGetTrait.html" class="more">« More »</a>
     </div>
 
                                         <div id="SearchResultSetTrait" class="element ajax clickable trait">
@@ -707,6 +782,13 @@ This task takes care of doing this. It can be run directly via /dev/tasks, or vi
         <a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html" class="more">« More »</a>
     </div>
 
+                                        <div id="SolrIndexTask" class="element ajax clickable class">
+        <h1>SolrIndexTask<a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html">¶</a></h1>
+        <p class="short_description">Class SolrIndexTask</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html" class="more">« More »</a>
+    </div>
+
                             </div>
             
     
@@ -753,6 +835,55 @@ Store the config in a file storage on the local file system.</p>
         <p class="short_description">Class PostConfigStore</p>
         <div class="details collapse"></div>
         <a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.States.html">States</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="SiteState" class="element ajax clickable class">
+        <h1>SiteState<a href="../classes/Firesphere.SolrSearch.States.SiteState.html">¶</a></h1>
+        <p class="short_description">Class SiteState</p>
+        <div class="details collapse">Determine and apply the state of the site currently. This is used at index-time to figure out what state to index.
+An example of this is the FluentSearchVariant extension from Fluent.
+
+Fluent uses the old SearchVariant method, which is actually not that bad a concept. These &quot;Variants&quot;, now called
+&quot;States&quot; set the state of the site to a required setting for each available state.
+
+States SHOULD add their own states through an extension, otherwise it won&#039;t be called.
+\Firesphere\SolrSearch\States\FluentExtension::onBeforeInit()
+
+States, options, etc. are simplified for a more streamlined approach</div>
+        <a href="../classes/Firesphere.SolrSearch.States.SiteState.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -837,6 +968,13 @@ Factory to create documents to be pushed to Solr</p>
         <a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html" class="more">« More »</a>
     </div>
 
+                                        <div id="QueryComponentFactory" class="element ajax clickable class">
+        <h1>QueryComponentFactory<a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">¶</a></h1>
+        <p class="short_description">Class QueryComponentFactory</p>
+        <div class="details collapse">Build a query component for each available build part</div>
+        <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html" class="more">« More »</a>
+    </div>
+
                             </div>
             
     
@@ -882,6 +1020,13 @@ Factory to create documents to be pushed to Solr</p>
         <p class="short_description">Class SolrConfigureJob</p>
         <div class="details collapse"></div>
         <a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="SolrIndexJob" class="element ajax clickable class">
+        <h1>SolrIndexJob<a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html">¶</a></h1>
+        <p class="short_description">Class SolrIndexJob</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -980,6 +1125,46 @@ Manage or see the Solr configuration. Default implementation of SilverStripe Mod
 Nothing to see here</p>
         <div class="details collapse"></div>
         <a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Results.html">Results</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="SearchResult" class="element ajax clickable class">
+        <h1>SearchResult<a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html">¶</a></h1>
+        <p class="short_description">Class SearchResult</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -1250,7 +1435,8 @@ Cover any changes between the SilverStripe FulltextSearch module and the upgrade
         <h1>SolrIndex<a href="../classes/SilverStripe.FullTextSearch.Solr.SolrIndex.html">¶</a></h1>
         <p class="short_description">Class SolrIndex
 This class serves as a stub to make migration from Fulltext Search easier</p>
-        <div class="details collapse"></div>
+        <div class="details collapse">Base index settings and methods. Should be extended with at least a name for the index.
+This is an abstract class that can not be instantiated on it&#039;s own</div>
         <a href="../classes/SilverStripe.FullTextSearch.Solr.SolrIndex.html" class="more">« More »</a>
     </div>
 
@@ -1268,7 +1454,7 @@ This class serves as a stub to make migration from Fulltext Search easier</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 09 Sep 2019 11:16:40 +1200.<br/>
+            generated on Mon, 09 Sep 2019 12:23:59 +1200.<br/>
     </footer>
     </body>
 </html>
