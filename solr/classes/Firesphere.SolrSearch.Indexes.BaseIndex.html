@@ -281,8 +281,8 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getQueryFactory" title="getQueryFactory :: Get the QueryComponentFactory. {@see QueryComponentFactory}">
-            <span class="description">Get the QueryComponentFactory. {@see QueryComponentFactory}</span><pre>getQueryFactory</pre>
+        <a href="#method_getQueryFactory" title="getQueryFactory :: Get the QueryComponentFactory. {@link QueryComponentFactory}">
+            <span class="description">Get the QueryComponentFactory. {@link QueryComponentFactory}</span><pre>getQueryFactory</pre>
         </a>
     </li>
 
@@ -403,8 +403,8 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
                             </a>
                         </li>
                                                                                                                                                         <li class="method protected">
-                            <a href="#method_buildFactory" title="buildFactory :: Build a factory to use in the SolrQuery building. {@see static::buildSolrQuery()}">
-                                <span class="description">Build a factory to use in the SolrQuery building. {@see static::buildSolrQuery()}</span><pre>buildFactory</pre>
+                            <a href="#method_buildFactory" title="buildFactory :: Build a factory to use in the SolrQuery building. {@link static::buildSolrQuery()}">
+                                <span class="description">Build a factory to use in the SolrQuery building. {@link static::buildSolrQuery()}</span><pre>buildFactory</pre>
                             </a>
                         </li>
                                                                                                                     <li class="method protected">
@@ -990,7 +990,7 @@ $options is not used anymore, added for backward compatibility</h2>
                         </div>
                                             <a id="method_buildFactory"></a>
                         <div class="element clickable method protected  method_buildFactory" data-toggle="collapse" data-target=".method_buildFactory .collapse">
-                            <h2>Build a factory to use in the SolrQuery building. {@see static::buildSolrQuery()}</h2>
+                            <h2>Build a factory to use in the SolrQuery building. {@link static::buildSolrQuery()}</h2>
                             <pre>buildFactory(\Firesphere\SolrSearch\Queries\BaseQuery $query, \Solarium\QueryType\Select\Query\Query $clientQuery) : \Firesphere\SolrSearch\Factories\QueryComponentFactory|mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -1473,7 +1473,7 @@ This is to add the current index to e.g. an index or select</h2>
                         </div>
                                             <a id="method_getQueryFactory"></a>
                         <div class="element clickable method public  method_getQueryFactory" data-toggle="collapse" data-target=".method_getQueryFactory .collapse">
-                            <h2>Get the QueryComponentFactory. {@see QueryComponentFactory}</h2>
+                            <h2>Get the QueryComponentFactory. {@link QueryComponentFactory}</h2>
                             <pre>getQueryFactory() : \Firesphere\SolrSearch\Factories\QueryComponentFactory</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -2116,8 +2116,8 @@ Used in init to call build methods from configuration yml</h2>
                             </div>
                                                     <a id="property_rawQuery"> </a>
                             <div class="element clickable property  protected property_rawQuery" data-toggle="collapse" data-target=".property_rawQuery .collapse">
-                                <h2>rawQuery</h2>
-                                <pre>rawQuery : \Solarium\Core\Query\Result\Result</pre>
+                                <h2>The raw query result</h2>
+                                <pre>rawQuery : \Solarium\QueryType\Select\Result\Result</pre>
                                 <div class="labels">
                                                                                                         </div>
                                 <div class="row collapse">
@@ -2136,13 +2136,13 @@ Used in init to call build methods from configuration yml</h2>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code>\Solarium\Core\Query\Result\Result</code>
+                                            <code>\Solarium\QueryType\Select\Result\Result</code>
                                                                             </div>
                                 </div>
                             </div>
                                                     <a id="property_schemaService"> </a>
                             <div class="element clickable property  protected property_schemaService" data-toggle="collapse" data-target=".property_schemaService .collapse">
-                                <h2>schemaService</h2>
+                                <h2>{@link SchemaService}</h2>
                                 <pre>schemaService : \Firesphere\SolrSearch\Services\SchemaService</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -2168,7 +2168,7 @@ Used in init to call build methods from configuration yml</h2>
                             </div>
                                                     <a id="property_queryFactory"> </a>
                             <div class="element clickable property  protected property_queryFactory" data-toggle="collapse" data-target=".property_queryFactory .collapse">
-                                <h2>queryFactory</h2>
+                                <h2>{@link QueryComponentFactory}</h2>
                                 <pre>queryFactory : \Firesphere\SolrSearch\Factories\QueryComponentFactory</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -2220,7 +2220,7 @@ Used in init to call build methods from configuration yml</h2>
                             </div>
                                                     <a id="property_retry"> </a>
                             <div class="element clickable property  private property_retry" data-toggle="collapse" data-target=".property_retry .collapse">
-                                <h2>retry</h2>
+                                <h2>Should a retry occur if nothing was found and there are suggestions to follow</h2>
                                 <pre>retry : boolean</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -2580,7 +2580,7 @@ This is to prevent a notice if there is no yml.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 09 Sep 2019 12:52:13 +1200.<br/>
+            generated on Mon, 09 Sep 2019 12:55:30 +1200.<br/>
     </footer>
     </body>
 </html>
