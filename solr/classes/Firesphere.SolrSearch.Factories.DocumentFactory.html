@@ -335,56 +335,7 @@ Factory to create documents to be pushed to Solr</p>
                                             <a id="method_addField"></a>
                         <div class="element clickable method protected  method_addField" data-toggle="collapse" data-target=".method_addField .collapse">
                             <h2>Add a single field to the Solr index</h2>
-                            <pre>addField(\Solarium\QueryType\Update\Query\Document $doc, \SilverStripe\ORM\DataObject $object,  $field) </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>
-                                                                                                            <dt>\LogicException</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
-                                                </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$doc</h4>
-                                                <code>\Solarium\QueryType\Update\Query\Document</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$object</h4>
-                                                <code>\SilverStripe\ORM\DataObject</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$field</h4>
-                                                <code></code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_addToDoc"></a>
-                        <div class="element clickable method protected  method_addToDoc" data-toggle="collapse" data-target=".method_addToDoc .collapse">
-                            <h2>Push field to a document</h2>
-                            <pre>addToDoc(\Solarium\QueryType\Update\Query\Document $doc, array $field, string $type, \SilverStripe\ORM\FieldType\DBField|string $value) </pre>
+                            <pre>addField(\Solarium\QueryType\Update\Query\Document $doc, \SilverStripe\ORM\DataObject $object, array $options) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -409,7 +360,47 @@ Factory to create documents to be pushed to Solr</p>
                                                 <code>\Solarium\QueryType\Update\Query\Document</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$field</h4>
+                                                <h4>$object</h4>
+                                                <code>\SilverStripe\ORM\DataObject</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addToDoc"></a>
+                        <div class="element clickable method protected  method_addToDoc" data-toggle="collapse" data-target=".method_addToDoc .collapse">
+                            <h2>Push field to a document</h2>
+                            <pre>addToDoc(\Solarium\QueryType\Update\Query\Document $doc, array $options, string $type, \SilverStripe\ORM\FieldType\DBField|string $value) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$doc</h4>
+                                                <code>\Solarium\QueryType\Update\Query\Document</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
                                                 <code>array</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
@@ -1031,7 +1022,7 @@ So make sure you properly loop and set $class</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 11 Sep 2019 12:56:49 +1200.<br/>
+            generated on Wed, 11 Sep 2019 21:19:45 +1200.<br/>
     </footer>
     </body>
 </html>

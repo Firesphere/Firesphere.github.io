@@ -120,7 +120,7 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>
-                                                                                                                                                                                                                    <li class="method public inherited">
+                                                                                                                                                                                                                                                                            <li class="method public inherited">
         <a href="#method_getFound" title="getFound :: Get whatever is found">
             <span class="description">Get whatever is found</span><pre>getFound</pre>
         </a>
@@ -138,7 +138,7 @@
         </a>
     </li>
 
-                                                                                                                                                                                                                                                                                                                                        <li class="method public">
+                                                                                                                                                                                                                                                                                                                                                                                                <li class="method public">
         <a href="#method_isSubclassOf" title="isSubclassOf :: Check if class is subclass of (a) the class in $instanceOf, or (b) any of the classes in the array $instanceOf">
             <span class="description">Check if class is subclass of (a) the class in $instanceOf, or (b) any of the classes in the array $instanceOf</span><pre>isSubclassOf</pre>
         </a>
@@ -161,6 +161,11 @@
         <li class="nav-header protected">» Protected
             <ul>
                                                                                                                 <li class="method protected">
+                            <a href="#method_getBuildSources" title="getBuildSources :: Get the sources to build in to a Solr field">
+                                <span class="description">Get the sources to build in to a Solr field</span><pre>getBuildSources</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
                             <a href="#method_getFieldOptions" title="getFieldOptions :: Create field options for the given index field">
                                 <span class="description">Create field options for the given index field</span><pre>getFieldOptions</pre>
                             </a>
@@ -171,6 +176,11 @@
                             </a>
                         </li>
                                                                                                                     <li class="method protected">
+                            <a href="#method_getNext" title="getNext :: Get the next lookup item from the buildSources">
+                                <span class="description">Get the next lookup item from the buildSources</span><pre>getNext</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
                             <a href="#method_getRelationData" title="getRelationData :: Relational data">
                                 <span class="description">Relational data</span><pre>getRelationData</pre>
                             </a>
@@ -194,12 +204,12 @@
                                 <span class="description">Objects to exclude from the index</span><pre>excludeDataObjectIDx</pre>
                             </a>
                         </li>
-                                                                                                                                                        <li class="method private">
+                                                                                                                                                                                            <li class="method private">
                             <a href="#method_getFoundOriginData" title="getFoundOriginData :: FoundOriginData is a helper to make sure the options are properly set.">
                                 <span class="description">FoundOriginData is a helper to make sure the options are properly set.</span><pre>getFoundOriginData</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                <li class="method private">
+                                                                                                                                                                                                                                                                    <li class="method private">
                             <a href="#method_getSourceName" title="getSourceName :: This is used to clean the source name from suffix
 suffixes are needed to support multiple relations with the same name on different page types">
                                 <span class="description">This is used to clean the source name from suffix
@@ -270,6 +280,35 @@ Some additional introspection tools that are used often by the fulltext search c
                                                 <code>array</code><p></p>
                                             </div>
                                                                             
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getBuildSources"></a>
+                        <div class="element clickable method protected  method_getBuildSources" data-toggle="collapse" data-target=".method_getBuildSources .collapse">
+                            <h2>Get the sources to build in to a Solr field</h2>
+                            <pre>getBuildSources() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
                                                                             <h3>Response</h3>
                                         <code>array</code><p></p>
                                                                     </div>
@@ -535,6 +574,46 @@ Some additional introspection tools that are used often by the fulltext search c
                                     
                                                                             <h3>Response</h3>
                                         <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getNext"></a>
+                        <div class="element clickable method protected  method_getNext" data-toggle="collapse" data-target=".method_getNext .collapse">
+                            <h2>Get the next lookup item from the buildSources</h2>
+                            <pre>getNext(array $buildSources,  $lookup) : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$buildSources</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$lookup</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
                                                                     </div>
                             </div>
 
@@ -978,7 +1057,7 @@ Should be replaced with PHP native methods</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 11 Sep 2019 12:56:49 +1200.<br/>
+            generated on Wed, 11 Sep 2019 21:19:45 +1200.<br/>
     </footer>
     </body>
 </html>
