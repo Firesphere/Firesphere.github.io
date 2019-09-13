@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    SilverStripe Solr search &raquo; \Firesphere\SolrSearch\States\SiteState
+    <title>    SilverStripe Solr search &raquo; \Firesphere\SolrSearch\Fluent\FluentSiteState
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -121,90 +121,126 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
+        <a href="#method_activateState" title="activateState :: Activate a given state. This should only be done if the state is applicable">
+            <span class="description">Activate a given state. This should only be done if the state is applicable</span><pre>activateState</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_addState" title="addState :: Add a state">
             <span class="description">Add a state</span><pre>addState</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_addStates" title="addStates :: Add multiple states">
             <span class="description">Add multiple states</span><pre>addStates</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_alterQuery" title="alterQuery :: Alter the query for each instance">
             <span class="description">Alter the query for each instance</span><pre>alterQuery</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_appliesTo" title="appliesTo :: Does the state apply to this class">
+            <span class="description">Does the state apply to this class</span><pre>appliesTo</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_appliesToEnvironment" title="appliesToEnvironment :: Does this state apply to the current object/environment settings">
             <span class="description">Does this state apply to the current object/environment settings</span><pre>appliesToEnvironment</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_currentState" title="currentState :: Return the current state of the site">
+            <span class="description">Return the current state of the site</span><pre>currentState</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_currentStates" title="currentStates :: Get the current state of every variant">
             <span class="description">Get the current state of every variant</span><pre>currentStates</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_getDefaultStates" title="getDefaultStates :: Get the states set as default">
             <span class="description">Get the states set as default</span><pre>getDefaultStates</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_getStates" title="getStates :: Get available states">
             <span class="description">Get available states</span><pre>getStates</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_hasExtension" title="hasExtension :: Does this class, it&#039;s parent (or optionally one of it&#039;s children) have the passed extension attached?">
             <span class="description">Does this class, it&#039;s parent (or optionally one of it&#039;s children) have the passed extension attached?</span><pre>hasExtension</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_isApplicable" title="isApplicable :: Is this extension applied and instantiable">
             <span class="description">Is this extension applied and instantiable</span><pre>isApplicable</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_isEnabled" title="isEnabled :: Is this state enabled">
             <span class="description">Is this state enabled</span><pre>isEnabled</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_setDefaultState" title="setDefaultState :: Reset the SiteState to it&#039;s default state">
+            <span class="description">Reset the SiteState to it&#039;s default state</span><pre>setDefaultState</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_setDefaultStates" title="setDefaultStates :: Set the default states">
             <span class="description">Set the default states</span><pre>setDefaultStates</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_setEnabled" title="setEnabled :: Set the state to whatever is required. Most commonly true">
             <span class="description">Set the state to whatever is required. Most commonly true</span><pre>setEnabled</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_setStates" title="setStates :: Set states">
             <span class="description">Set states</span><pre>setStates</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_stateIsApplicable" title="stateIsApplicable :: Is this state applicable to this extension">
+            <span class="description">Is this state applicable to this extension</span><pre>stateIsApplicable</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_updateQuery" title="updateQuery :: Method to alter the query. Can be no-op.">
+            <span class="description">Method to alter the query. Can be no-op.</span><pre>updateQuery</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_variants" title="variants :: Returns an array of variants.">
             <span class="description">Returns an array of variants.</span><pre>variants</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public">
+                                                                                                        <li class="method public inherited">
         <a href="#method_withState" title="withState :: Activate a site state for indexing">
             <span class="description">Activate a site state for indexing</span><pre>withState</pre>
         </a>
@@ -214,11 +250,16 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="method protected">
+                            <a href="#method_updatePart" title="updatePart :: ">
+                                <span class="description"></span><pre>updatePart</pre>
+                            </a>
+                        </li>
+                                                                                                                                                            </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -237,10 +278,12 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>SiteState</h1>
+                <h1>FluentSiteState</h1>
                 <small style="display: block; text-align: right">
-                                                        </small>
-                <p class="short_description">Class SiteState</p>
+                                            Extends <a href="../classes/Firesphere.SolrSearch.States.SiteState.html">\Firesphere\SolrSearch\States\SiteState</a>
+                                                                Implements <a href="../classes/Firesphere.SolrSearch.Interfaces.SiteStateInterface.html">\Firesphere\SolrSearch\Interfaces\SiteStateInterface</a>
+                                    </small>
+                <p class="short_description">Class FluentSiteState</p>
                 <div class="details">
                     <div class="long_description">
                         <p>Determine and apply the state of the site currently. This is used at index-time to figure out what state to index.
@@ -258,18 +301,45 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Firesphere\SolrSearch\States</p>
+                                                                                <p>Firesphere\SolrSearch\Fluent</p>
                                     </td>
                                 </tr>
                                                                                                                                                                                 </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method_addState"></a>
-                        <div class="element clickable method public  method_addState" data-toggle="collapse" data-target=".method_addState .collapse">
+                                                                <a id="method_activateState"></a>
+                        <div class="element clickable method public  method_activateState" data-toggle="collapse" data-target=".method_activateState .collapse">
+                            <h2>Activate a given state. This should only be done if the state is applicable</h2>
+                            <pre>activateState(string $state) : mixed</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$state</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addState"></a>
+                        <div class="element clickable method public  method_addState inherited" data-toggle="collapse" data-target=".method_addState .collapse">
                             <h2>Add a state</h2>
                             <pre>addState( $state) </pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -306,11 +376,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_addStates"></a>
-                        <div class="element clickable method public  method_addStates" data-toggle="collapse" data-target=".method_addStates .collapse">
+                        <div class="element clickable method public  method_addStates inherited" data-toggle="collapse" data-target=".method_addStates .collapse">
                             <h2>Add multiple states</h2>
                             <pre>addStates(array $states) </pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -347,11 +417,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_alterQuery"></a>
-                        <div class="element clickable method public  method_alterQuery" data-toggle="collapse" data-target=".method_alterQuery .collapse">
+                        <div class="element clickable method public  method_alterQuery inherited" data-toggle="collapse" data-target=".method_alterQuery .collapse">
                             <h2>Alter the query for each instance</h2>
                             <pre>alterQuery(\Firesphere\SolrSearch\Queries\BaseQuery &$query) </pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -387,12 +457,48 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                             </div>
 
                         </div>
+                                            <a id="method_appliesTo"></a>
+                        <div class="element clickable method public  method_appliesTo" data-toggle="collapse" data-target=".method_appliesTo .collapse">
+                            <h2>Does the state apply to this class</h2>
+                            <pre>appliesTo( $class) : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ReflectionException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_appliesToEnvironment"></a>
-                        <div class="element clickable method public  method_appliesToEnvironment" data-toggle="collapse" data-target=".method_appliesToEnvironment .collapse">
+                        <div class="element clickable method public  method_appliesToEnvironment inherited" data-toggle="collapse" data-target=".method_appliesToEnvironment .collapse">
                             <h2>Does this state apply to the current object/environment settings</h2>
                             <pre>appliesToEnvironment() : boolean</pre>
                             <div class="labels">
-                                                                                                                                                                                            </div>
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -416,12 +522,41 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                             </div>
 
                         </div>
+                                            <a id="method_currentState"></a>
+                        <div class="element clickable method public  method_currentState" data-toggle="collapse" data-target=".method_currentState .collapse">
+                            <h2>Return the current state of the site</h2>
+                            <pre>currentState() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_currentStates"></a>
-                        <div class="element clickable method public  method_currentStates" data-toggle="collapse" data-target=".method_currentStates .collapse">
+                        <div class="element clickable method public  method_currentStates inherited" data-toggle="collapse" data-target=".method_currentStates .collapse">
                             <h2>Get the current state of every variant</h2>
                             <pre>currentStates() : array</pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -464,11 +599,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_getDefaultStates"></a>
-                        <div class="element clickable method public  method_getDefaultStates" data-toggle="collapse" data-target=".method_getDefaultStates .collapse">
+                        <div class="element clickable method public  method_getDefaultStates inherited" data-toggle="collapse" data-target=".method_getDefaultStates .collapse">
                             <h2>Get the states set as default</h2>
                             <pre>getDefaultStates() : array</pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -493,11 +628,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_getStates"></a>
-                        <div class="element clickable method public  method_getStates" data-toggle="collapse" data-target=".method_getStates .collapse">
+                        <div class="element clickable method public  method_getStates inherited" data-toggle="collapse" data-target=".method_getStates .collapse">
                             <h2>Get available states</h2>
                             <pre>getStates() : array</pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -531,11 +666,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_hasExtension"></a>
-                        <div class="element clickable method public  method_hasExtension" data-toggle="collapse" data-target=".method_hasExtension .collapse">
+                        <div class="element clickable method public  method_hasExtension inherited" data-toggle="collapse" data-target=".method_hasExtension .collapse">
                             <h2>Does this class, it&#039;s parent (or optionally one of it&#039;s children) have the passed extension attached?</h2>
                             <pre>hasExtension( $class,  $extension) : boolean</pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -580,11 +715,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_isApplicable"></a>
-                        <div class="element clickable method public  method_isApplicable" data-toggle="collapse" data-target=".method_isApplicable .collapse">
+                        <div class="element clickable method public  method_isApplicable inherited" data-toggle="collapse" data-target=".method_isApplicable .collapse">
                             <h2>Is this extension applied and instantiable</h2>
                             <pre>isApplicable( $variantClass) : boolean</pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -625,11 +760,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_isEnabled"></a>
-                        <div class="element clickable method public  method_isEnabled" data-toggle="collapse" data-target=".method_isEnabled .collapse">
+                        <div class="element clickable method public  method_isEnabled inherited" data-toggle="collapse" data-target=".method_isEnabled .collapse">
                             <h2>Is this state enabled</h2>
                             <pre>isEnabled() : boolean</pre>
                             <div class="labels">
-                                                                                                                                                                                            </div>
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -653,12 +788,39 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                             </div>
 
                         </div>
+                                            <a id="method_setDefaultState"></a>
+                        <div class="element clickable method public  method_setDefaultState" data-toggle="collapse" data-target=".method_setDefaultState .collapse">
+                            <h2>Reset the SiteState to it&#039;s default state</h2>
+                            <pre>setDefaultState(string|null $state = null) : mixed</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$state</h4>
+                                                <code>string|null</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_setDefaultStates"></a>
-                        <div class="element clickable method public  method_setDefaultStates" data-toggle="collapse" data-target=".method_setDefaultStates .collapse">
+                        <div class="element clickable method public  method_setDefaultStates inherited" data-toggle="collapse" data-target=".method_setDefaultStates .collapse">
                             <h2>Set the default states</h2>
                             <pre>setDefaultStates(array $defaultStates) </pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -686,11 +848,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_setEnabled"></a>
-                        <div class="element clickable method public  method_setEnabled" data-toggle="collapse" data-target=".method_setEnabled .collapse">
+                        <div class="element clickable method public  method_setEnabled inherited" data-toggle="collapse" data-target=".method_setEnabled .collapse">
                             <h2>Set the state to whatever is required. Most commonly true</h2>
                             <pre>setEnabled(boolean $enabled) </pre>
                             <div class="labels">
-                                                                                                                                                                                            </div>
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -718,11 +880,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_setStates"></a>
-                        <div class="element clickable method public  method_setStates" data-toggle="collapse" data-target=".method_setStates .collapse">
+                        <div class="element clickable method public  method_setStates inherited" data-toggle="collapse" data-target=".method_setStates .collapse">
                             <h2>Set states</h2>
                             <pre>setStates(array $states) </pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -758,12 +920,113 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                             </div>
 
                         </div>
+                                            <a id="method_stateIsApplicable"></a>
+                        <div class="element clickable method public  method_stateIsApplicable" data-toggle="collapse" data-target=".method_stateIsApplicable .collapse">
+                            <h2>Is this state applicable to this extension</h2>
+                            <pre>stateIsApplicable(string $state) : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$state</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_updatePart"></a>
+                        <div class="element clickable method protected  method_updatePart" data-toggle="collapse" data-target=".method_updatePart .collapse">
+                            <h2>updatePart</h2>
+                            <pre>updatePart( &$query, string $locale, string $method) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$query</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$locale</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$method</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_updateQuery"></a>
+                        <div class="element clickable method public  method_updateQuery" data-toggle="collapse" data-target=".method_updateQuery .collapse">
+                            <h2>Method to alter the query. Can be no-op.</h2>
+                            <pre>updateQuery(\Firesphere\SolrSearch\Queries\BaseQuery &$query) : mixed</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$query</h4>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_variants"></a>
-                        <div class="element clickable method public  method_variants" data-toggle="collapse" data-target=".method_variants .collapse">
+                        <div class="element clickable method public  method_variants inherited" data-toggle="collapse" data-target=".method_variants .collapse">
                             <h2>Returns an array of variants.</h2>
                             <pre>variants(boolean $force = false) : array</pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -806,11 +1069,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
 
                         </div>
                                             <a id="method_withState"></a>
-                        <div class="element clickable method public  method_withState" data-toggle="collapse" data-target=".method_withState .collapse">
+                        <div class="element clickable method public  method_withState inherited" data-toggle="collapse" data-target=".method_withState .collapse">
                             <h2>Activate a site state for indexing</h2>
                             <pre>withState( $state) </pre>
                             <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -849,11 +1112,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                     
                                             <h3><i class="icon-custom icon-constant"></i> Constants</h3>
                                                     <a id="constant_DEFAULT_STATE"> </a>
-                            <div class="element clickable constant  constant_DEFAULT_STATE" data-toggle="collapse" data-target=".constant_DEFAULT_STATE .collapse">
+                            <div class="element clickable constant  constant_DEFAULT_STATE inherited" data-toggle="collapse" data-target=".constant_DEFAULT_STATE .collapse">
                                 <h2>DEFAULT_STATE</h2>
                                 <pre>DEFAULT_STATE</pre>
                                 <div class="labels">
-                                                                    </div>
+                                    <span class="label">inherited</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
@@ -872,11 +1135,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                                             
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
                                                     <a id="property_states"> </a>
-                            <div class="element clickable property  public property_states" data-toggle="collapse" data-target=".property_states .collapse">
+                            <div class="element clickable property  public property_states inherited" data-toggle="collapse" data-target=".property_states .collapse">
                                 <h2>States that can be applied</h2>
                                 <pre>states : array</pre>
                                 <div class="labels">
-                                                                        <span class="label">static</span>                                </div>
+                                    <span class="label">inherited</span>                                    <span class="label">static</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
@@ -898,11 +1161,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                                 </div>
                             </div>
                                                     <a id="property_variants"> </a>
-                            <div class="element clickable property  public property_variants" data-toggle="collapse" data-target=".property_variants .collapse">
+                            <div class="element clickable property  public property_variants inherited" data-toggle="collapse" data-target=".property_variants .collapse">
                                 <h2>Variants of SiteState that can be activated</h2>
                                 <pre>variants : array</pre>
                                 <div class="labels">
-                                                                        <span class="label">static</span>                                </div>
+                                    <span class="label">inherited</span>                                    <span class="label">static</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
@@ -924,11 +1187,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                                 </div>
                             </div>
                                                     <a id="property_defaultStates"> </a>
-                            <div class="element clickable property  protected property_defaultStates" data-toggle="collapse" data-target=".property_defaultStates .collapse">
+                            <div class="element clickable property  protected property_defaultStates inherited" data-toggle="collapse" data-target=".property_defaultStates .collapse">
                                 <h2>Default states</h2>
                                 <pre>defaultStates : array</pre>
                                 <div class="labels">
-                                                                        <span class="label">static</span>                                </div>
+                                    <span class="label">inherited</span>                                    <span class="label">static</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
@@ -950,11 +1213,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                                 </div>
                             </div>
                                                     <a id="property_enabled"> </a>
-                            <div class="element clickable property  public property_enabled" data-toggle="collapse" data-target=".property_enabled .collapse">
+                            <div class="element clickable property  public property_enabled inherited" data-toggle="collapse" data-target=".property_enabled .collapse">
                                 <h2>Is this State enabled</h2>
                                 <pre>enabled : boolean</pre>
                                 <div class="labels">
-                                                                                                        </div>
+                                    <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
@@ -976,11 +1239,11 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                                 </div>
                             </div>
                                                     <a id="property_state"> </a>
-                            <div class="element clickable property  protected property_state" data-toggle="collapse" data-target=".property_state .collapse">
+                            <div class="element clickable property  protected property_state inherited" data-toggle="collapse" data-target=".property_state .collapse">
                                 <h2>current state</h2>
                                 <pre>state : string</pre>
                                 <div class="labels">
-                                                                                                        </div>
+                                    <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
@@ -1003,14 +1266,14 @@ An example of this is the FluentSearchVariant extension from Fluent.</p>
                             </div>
                                                             </div>
             </div>
-            <a id="\Firesphere\SolrSearch\States\SiteState"></a>
+            <a id="\Firesphere\SolrSearch\Fluent\FluentSiteState"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
-    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.States.html">States</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Fluent.html">Fluent</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.States.SiteState.html">SiteState</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Fluent.FluentSiteState.html">FluentSiteState</a></li>
             </ul>
         </div>
     </div>

@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    SilverStripe Solr search &raquo; \Firesphere\SolrSearch\Traits\DocumentFactoryTrait
+    <title>    SilverStripe Solr search &raquo; \Firesphere\SolrSearch\Fluent\FluentExtension
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -121,32 +121,32 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method_getClass" title="getClass :: Current class being indexed">
-            <span class="description">Current class being indexed</span><pre>getClass</pre>
+        <a href="#method_onAfterFieldDefinition" title="onAfterFieldDefinition :: Add the locale fields">
+            <span class="description">Add the locale fields</span><pre>onAfterFieldDefinition</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getFieldResolver" title="getFieldResolver :: Get the FieldResolver class">
-            <span class="description">Get the FieldResolver class</span><pre>getFieldResolver</pre>
+        <a href="#method_onAfterInit" title="onAfterInit :: Add the needed language copy fields to Solr">
+            <span class="description">Add the needed language copy fields to Solr</span><pre>onAfterInit</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getItems" title="getItems :: Get the items being indexed">
-            <span class="description">Get the items being indexed</span><pre>getItems</pre>
+        <a href="#method_onBeforeAddDoc" title="onBeforeAddDoc :: Update the Solr field for the value to use the locale name">
+            <span class="description">Update the Solr field for the value to use the locale name</span><pre>onBeforeAddDoc</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_setClass" title="setClass :: Set the current class to be indexed">
-            <span class="description">Set the current class to be indexed</span><pre>setClass</pre>
+        <a href="#method_onBeforeInit" title="onBeforeInit :: Add the fluent states">
+            <span class="description">Add the fluent states</span><pre>onBeforeInit</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_setItems" title="setItems :: Set the items to index">
-            <span class="description">Set the items to index</span><pre>setItems</pre>
+        <a href="#method_onBeforeSearch" title="onBeforeSearch :: Set to the correct language to search if needed">
+            <span class="description">Set to the correct language to search if needed</span><pre>onBeforeSearch</pre>
         </a>
     </li>
 
@@ -172,13 +172,14 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>DocumentFactoryTrait</h1>
+                <h1>FluentExtension</h1>
                 <small style="display: block; text-align: right">
+                                            Extends \SilverStripe\Core\Extension
                                                         </small>
-                <p class="short_description">Trait DocumentFactoryTrait is a basic getter setter for the DocumentFactory.</p>
+                <p class="short_description">Support for Fluent translations.</p>
                 <div class="details">
                     <div class="long_description">
-                        <p>Getter and setter helpers</p>
+                        <p>This class should be moved to a separate repo or to Fluent, but provides the basic Fluent support for now</p>
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -187,16 +188,16 @@
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Firesphere\SolrSearch\Traits</p>
+                                                                                <p>Firesphere\SolrSearch\Compat</p>
                                     </td>
                                 </tr>
-                                                                                                                                                                                </table>
+                                                                                                                                                                                                                                    </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method_getClass"></a>
-                        <div class="element clickable method public  method_getClass" data-toggle="collapse" data-target=".method_getClass .collapse">
-                            <h2>Current class being indexed</h2>
-                            <pre>getClass() : string</pre>
+                                                                <a id="method_onAfterFieldDefinition"></a>
+                        <div class="element clickable method public  method_onAfterFieldDefinition" data-toggle="collapse" data-target=".method_onAfterFieldDefinition .collapse">
+                            <h2>Add the locale fields</h2>
+                            <pre>onAfterFieldDefinition(\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList $data, \SilverStripe\ORM\DataObject $item) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -213,104 +214,96 @@
                                                 <td>
                                                                                                     </td>
                                             </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_getFieldResolver"></a>
-                        <div class="element clickable method public  method_getFieldResolver" data-toggle="collapse" data-target=".method_getFieldResolver .collapse">
-                            <h2>Get the FieldResolver class</h2>
-                            <pre>getFieldResolver() : \Firesphere\SolrSearch\Helpers\FieldResolver</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Helpers.FieldResolver.html">\Firesphere\SolrSearch\Helpers\FieldResolver</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_getItems"></a>
-                        <div class="element clickable method public  method_getItems" data-toggle="collapse" data-target=".method_getItems .collapse">
-                            <h2>Get the items being indexed</h2>
-                            <pre>getItems() : \SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList|null</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList|null</code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_setClass"></a>
-                        <div class="element clickable method public  method_setClass" data-toggle="collapse" data-target=".method_setClass .collapse">
-                            <h2>Set the current class to be indexed</h2>
-                            <pre>setClass(string $class) : \Firesphere\SolrSearch\Factories\DocumentFactory</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
                                                                                                                     </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$class</h4>
+                                                <h4>$data</h4>
+                                                <code>\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$item</h4>
+                                                <code>\SilverStripe\ORM\DataObject</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_onAfterInit"></a>
+                        <div class="element clickable method public  method_onAfterInit" data-toggle="collapse" data-target=".method_onAfterInit .collapse">
+                            <h2>Add the needed language copy fields to Solr</h2>
+                            <pre>onAfterInit() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_onBeforeAddDoc"></a>
+                        <div class="element clickable method public  method_onBeforeAddDoc" data-toggle="collapse" data-target=".method_onBeforeAddDoc .collapse">
+                            <h2>Update the Solr field for the value to use the locale name</h2>
+                            <pre>onBeforeAddDoc(array &$field, string &$value) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                             
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html">\Firesphere\SolrSearch\Factories\DocumentFactory</a></code><p></p>
                                                                     </div>
                             </div>
 
                         </div>
-                                            <a id="method_setItems"></a>
-                        <div class="element clickable method public  method_setItems" data-toggle="collapse" data-target=".method_setItems .collapse">
-                            <h2>Set the items to index</h2>
-                            <pre>setItems(\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList|null $items) : \Firesphere\SolrSearch\Factories\DocumentFactory</pre>
+                                            <a id="method_onBeforeInit"></a>
+                        <div class="element clickable method public  method_onBeforeInit" data-toggle="collapse" data-target=".method_onBeforeInit .collapse">
+                            <h2>Add the fluent states</h2>
+                            <pre>onBeforeInit() </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -320,16 +313,59 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_onBeforeSearch"></a>
+                        <div class="element clickable method public  method_onBeforeSearch" data-toggle="collapse" data-target=".method_onBeforeSearch .collapse">
+                            <h2>Set to the correct language to search if needed</h2>
+                            <pre>onBeforeSearch(\Firesphere\SolrSearch\Queries\BaseQuery $query, \Solarium\QueryType\Select\Query\Query $clientQuery) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
                                                                                                                     </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$items</h4>
-                                                <code>\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList|null</code><p></p>
+                                                <h4>$query</h4>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$clientQuery</h4>
+                                                <code>\Solarium\QueryType\Select\Query\Query</code><p></p>
                                             </div>
                                                                             
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html">\Firesphere\SolrSearch\Factories\DocumentFactory</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -337,10 +373,10 @@
                     
                     
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_fieldResolver"> </a>
-                            <div class="element clickable property  protected property_fieldResolver" data-toggle="collapse" data-target=".property_fieldResolver .collapse">
-                                <h2>Resolver for fields</h2>
-                                <pre>fieldResolver : \Firesphere\SolrSearch\Helpers\FieldResolver</pre>
+                                                    <a id="property_owner"> </a>
+                            <div class="element clickable property  public property_owner" data-toggle="collapse" data-target=".property_owner .collapse">
+                                <h2>owner</h2>
+                                <pre>owner : \Firesphere\SolrSearch\Factories\DocumentFactory|\Firesphere\SolrSearch\Indexes\BaseIndex|\Firesphere\SolrSearch\Services\SchemaService|\Firesphere\SolrSearch\Fluent\FluentExtension</pre>
                                 <div class="labels">
                                                                                                         </div>
                                 <div class="row collapse">
@@ -350,81 +386,28 @@
                                         <table class="table">
                                                                                             <tr>
                                                     <th>
-                                                        var
+                                                        
                                                     </th>
                                                     <td>
-                                                                                                                    <p>Resolver for fields</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code><a href="../classes/Firesphere.SolrSearch.Helpers.FieldResolver.html">\Firesphere\SolrSearch\Helpers\FieldResolver</a></code>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                    <a id="property_items"> </a>
-                            <div class="element clickable property  protected property_items" data-toggle="collapse" data-target=".property_items .collapse">
-                                <h2>Items to create documents for</h2>
-                                <pre>items : null|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</pre>
-                                <div class="labels">
-                                                                                                        </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    <p>Items to create documents for</p>
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>null|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</code>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                    <a id="property_class"> </a>
-                            <div class="element clickable property  protected property_class" data-toggle="collapse" data-target=".property_class .collapse">
-                                <h2>Current class that&#039;s being indexed</h2>
-                                <pre>class : string</pre>
-                                <div class="labels">
-                                                                                                        </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    <p>Current class that's being indexed</p>
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>string</code>
+                                            <code>\Firesphere\SolrSearch\Factories\DocumentFactory|\Firesphere\SolrSearch\Indexes\BaseIndex|\Firesphere\SolrSearch\Services\SchemaService|\Firesphere\SolrSearch\Fluent\FluentExtension</code>
                                                                             </div>
                                 </div>
                             </div>
                                                             </div>
             </div>
-            <a id="\Firesphere\SolrSearch\Traits\DocumentFactoryTrait"></a>
+            <a id="\Firesphere\SolrSearch\Fluent\FluentExtension"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
-    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Traits.html">Traits</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Fluent.html">Fluent</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Traits.DocumentFactoryTrait.html">DocumentFactoryTrait</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Fluent.FluentExtension.html">FluentExtension</a></li>
             </ul>
         </div>
     </div>

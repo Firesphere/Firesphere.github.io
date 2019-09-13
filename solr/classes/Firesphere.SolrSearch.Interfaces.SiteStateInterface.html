@@ -146,15 +146,21 @@ E.g. in case of Fluent, the state &quot;SubsiteID1&quot; does not make sense</sp
         </a>
     </li>
 
+                                                                                                        <li class="method public">
+        <a href="#method_updateQuery" title="updateQuery :: Method to alter the query. Can be no-op.">
+            <span class="description">Method to alter the query. Can be no-op.</span><pre>updateQuery</pre>
+        </a>
+    </li>
+
                                                 </ul>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -249,7 +255,7 @@ E.g. in case of Fluent, the state &quot;SubsiteID1&quot; does not make sense</sp
                                             <a id="method_setDefaultState"></a>
                         <div class="element clickable method public  method_setDefaultState" data-toggle="collapse" data-target=".method_setDefaultState .collapse">
                             <h2>Reset the SiteState to it&#039;s default state</h2>
-                            <pre>setDefaultState() : mixed</pre>
+                            <pre>setDefaultState(string|null $state = null) : mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -259,16 +265,14 @@ E.g. in case of Fluent, the state &quot;SubsiteID1&quot; does not make sense</sp
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
                                                                                                                     </table>
 
-                                    
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$state</h4>
+                                                <code>string|null</code><p></p>
+                                            </div>
+                                                                            
                                                                             <h3>Response</h3>
                                         <code>mixed</code><p></p>
                                                                     </div>
@@ -303,6 +307,33 @@ E.g. in case of Fluent, the state &quot;SubsiteID1&quot; does not make sense</h2
                             </div>
 
                         </div>
+                                            <a id="method_updateQuery"></a>
+                        <div class="element clickable method public  method_updateQuery" data-toggle="collapse" data-target=".method_updateQuery .collapse">
+                            <h2>Method to alter the query. Can be no-op.</h2>
+                            <pre>updateQuery(\Firesphere\SolrSearch\Queries\BaseQuery &$query) : mixed</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$query</h4>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                     
                     
                                                         </div>
@@ -325,7 +356,7 @@ E.g. in case of Fluent, the state &quot;SubsiteID1&quot; does not make sense</h2
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 11 Sep 2019 21:19:46 +1200.<br/>
+            generated on Fri, 13 Sep 2019 12:02:18 +1200.<br/>
     </footer>
     </body>
 </html>

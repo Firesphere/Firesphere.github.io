@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>     &raquo; \Firesphere\SolrSearch\Compat
+    <title>     &raquo; \Firesphere\SolrSearch\Fluent
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -112,8 +112,8 @@
                 <li class="nav-header">
                     <i class="icon-map-marker"></i> Packages
                 </li>
-                <a href="../packages/Firesphere.SolrSearch.Compat.html" title="Compat">
-                    <i class="icon-th"></i> Compat
+                <a href="../packages/Firesphere.SolrSearch.Fluent.html" title="Fluent">
+                    <i class="icon-th"></i> Fluent
                 </a>
                 <ul class="nav nav-list nav-packages">
                         
@@ -141,7 +141,7 @@
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Compat.html">Compat</a>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Fluent.html">Fluent</a>
     </li>
 
     </ul>
@@ -153,19 +153,20 @@
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="FluentExtension" class="element ajax clickable class">
-        <h1>FluentExtension<a href="../classes/Firesphere.SolrSearch.Fluent.FluentExtension.html">¶</a></h1>
-        <p class="short_description">Support for Fluent translations.</p>
-        <div class="details collapse">This class should be moved to a separate repo or to Fluent, but provides the basic Fluent support for now</div>
-        <a href="../classes/Firesphere.SolrSearch.Fluent.FluentExtension.html" class="more">« More »</a>
-    </div>
+                                        <div id="FluentSiteState" class="element ajax clickable class">
+        <h1>FluentSiteState<a href="../classes/Firesphere.SolrSearch.Fluent.FluentSiteState.html">¶</a></h1>
+        <p class="short_description">Class FluentSiteState</p>
+        <div class="details collapse">Determine and apply the state of the site currently. This is used at index-time to figure out what state to index.
+An example of this is the FluentSearchVariant extension from Fluent.
 
-                                        <div id="SubsitesExtension" class="element ajax clickable class">
-        <h1>SubsitesExtension<a href="../classes/Firesphere.SolrSearch.Compat.SubsitesExtension.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Compat\SubsitesExtension
-Add support for subsites</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Compat.SubsitesExtension.html" class="more">« More »</a>
+Fluent uses the old SearchVariant method, which is actually not that bad a concept. These &quot;Variants&quot;, now called
+&quot;States&quot; set the state of the site to a required setting for each available state.
+
+States SHOULD add their own states through an extension, otherwise it won&#039;t be called.
+\Firesphere\SolrSearch\States\FluentExtension::onBeforeInit()
+
+States, options, etc. are simplified for a more streamlined approach</div>
+        <a href="../classes/Firesphere.SolrSearch.Fluent.FluentSiteState.html" class="more">« More »</a>
     </div>
 
                             </div>
