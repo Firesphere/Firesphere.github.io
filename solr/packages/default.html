@@ -175,15 +175,6 @@
         </ul>
     </li>
         <li>
-        <a href="../packages/Firesphere.SolrSearch.Fluent.html" title="Fluent">
-            <i class="icon-th"></i> Fluent
-        </a>
-        <ul class="nav nav-list nav-packages">
-                
-    
-        </ul>
-    </li>
-        <li>
         <a href="../packages/Firesphere.SolrSearch.Forms.html" title="Forms">
             <i class="icon-th"></i> Forms
         </a>
@@ -276,6 +267,15 @@
         <li>
         <a href="../packages/Firesphere.SolrSearch.Stores.html" title="Stores">
             <i class="icon-th"></i> Stores
+        </a>
+        <ul class="nav nav-list nav-packages">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../packages/Firesphere.SolrSearch.Subsites.html" title="Subsites">
+            <i class="icon-th"></i> Subsites
         </a>
         <ul class="nav nav-list nav-packages">
                 
@@ -486,7 +486,47 @@ Dirty hack to get the alert/warning/info classes in to the gridfield</p>
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.States.html">States</a>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Interfaces.html">Interfaces</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="ConfigStore" class="element ajax clickable interface">
+        <h1>ConfigStore<a href="../classes/Firesphere.SolrSearch.Interfaces.ConfigStore.html">¶</a></h1>
+        <p class="short_description">Interface ConfigStore</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Interfaces.ConfigStore.html" class="more">« More »</a>
+    </div>
+
+                
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Queries.html">Queries</a>
     </li>
 
     </ul>
@@ -498,20 +538,11 @@ Dirty hack to get the alert/warning/info classes in to the gridfield</p>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="SiteState" class="element ajax clickable class">
-        <h1>SiteState<a href="../classes/Firesphere.SolrSearch.States.SiteState.html">¶</a></h1>
-        <p class="short_description">Class SiteState</p>
-        <div class="details collapse">Determine and apply the state of the site currently. This is used at index-time to figure out what state to index.
-An example of this is the FluentSearchVariant extension from Fluent.
-
-Fluent uses the old SearchVariant method, which is actually not that bad a concept. These &quot;Variants&quot;, now called
-&quot;States&quot; set the state of the site to a required setting for each available state.
-
-States SHOULD add their own states through an extension, otherwise it won&#039;t be called.
-\Firesphere\SolrSearch\States\FluentExtension::onBeforeInit()
-
-States, options, etc. are simplified for a more streamlined approach</div>
-        <a href="../classes/Firesphere.SolrSearch.States.SiteState.html" class="more">« More »</a>
+                                        <div id="BaseQuery" class="element ajax clickable class">
+        <h1>BaseQuery<a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">¶</a></h1>
+        <p class="short_description">Class BaseQuery is the base of every query executed.</p>
+        <div class="details collapse">Build a query to execute agains Solr. Uses as simle as possible an interface.</div>
+        <a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -535,7 +566,7 @@ States, options, etc. are simplified for a more streamlined approach</div>
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Factories.html">Factories</a>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Services.html">Services</a>
     </li>
 
     </ul>
@@ -547,19 +578,135 @@ States, options, etc. are simplified for a more streamlined approach</div>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="DocumentFactory" class="element ajax clickable class">
-        <h1>DocumentFactory<a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html">¶</a></h1>
-        <p class="short_description">Class DocumentFactory
-Factory to create documents to be pushed to Solr</p>
+                                        <div id="SchemaService" class="element ajax clickable class">
+        <h1>SchemaService<a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">¶</a></h1>
+        <p class="short_description">Class SchemaService</p>
         <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html" class="more">« More »</a>
+        <a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html" class="more">« More »</a>
     </div>
 
-                                        <div id="QueryComponentFactory" class="element ajax clickable class">
-        <h1>QueryComponentFactory<a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">¶</a></h1>
-        <p class="short_description">Class QueryComponentFactory</p>
-        <div class="details collapse">Build a query component for each available build part</div>
-        <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html" class="more">« More »</a>
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Indexes.html">Indexes</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="BaseIndex" class="element ajax clickable class">
+        <h1>BaseIndex<a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">¶</a></h1>
+        <p class="short_description">Base for creating a new Solr core.</p>
+        <div class="details collapse">Base index settings and methods. Should be extended with at least a name for the index.
+This is an abstract class that can not be instantiated on it&#039;s own</div>
+        <a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Results.html">Results</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="SearchResult" class="element ajax clickable class">
+        <h1>SearchResult<a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html">¶</a></h1>
+        <p class="short_description">Class SearchResult is the combined result in a SilverStripe readable way</p>
+        <div class="details collapse">Each of the requested features of a BaseQuery are generated to be easily accessible in the controller.
+In the controller, each required item can be accessed through the resulting method in this class.</div>
+        <a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Admins.html">Admins</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="SearchAdmin" class="element ajax clickable class">
+        <h1>SearchAdmin<a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html">¶</a></h1>
+        <p class="short_description">Class \Firesphere\SolrSearch\Admins\SearchAdmin
+Manage or see the Solr configuration. Default implementation of SilverStripe ModelAdmin
+Nothing to see here</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -722,7 +869,7 @@ so it&#039;s cleaner to read the code</div>
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Models.html">Models</a>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.States.html">States</a>
     </li>
 
     </ul>
@@ -734,19 +881,20 @@ so it&#039;s cleaner to read the code</div>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="DirtyClass" class="element ajax clickable class">
-        <h1>DirtyClass<a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Models\DirtyClass
-Keeping track of Dirty classes in Solr</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html" class="more">« More »</a>
-    </div>
+                                        <div id="SiteState" class="element ajax clickable class">
+        <h1>SiteState<a href="../classes/Firesphere.SolrSearch.States.SiteState.html">¶</a></h1>
+        <p class="short_description">Class SiteState</p>
+        <div class="details collapse">Determine and apply the state of the site currently. This is used at index-time to figure out what state to index.
+An example of this is the FluentSearchVariant extension from Fluent.
 
-                                        <div id="SolrLog" class="element ajax clickable class">
-        <h1>SolrLog<a href="../classes/Firesphere.SolrSearch.Models.SolrLog.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Models\SolrError</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Models.SolrLog.html" class="more">« More »</a>
+Fluent uses the old SearchVariant method, which is actually not that bad a concept. These &quot;Variants&quot;, now called
+&quot;States&quot; set the state of the site to a required setting for each available state.
+
+States SHOULD add their own states through an extension, otherwise it won&#039;t be called.
+\Firesphere\SolrSearch\States\FluentExtension::onBeforeInit()
+
+States, options, etc. are simplified for a more streamlined approach</div>
+        <a href="../classes/Firesphere.SolrSearch.States.SiteState.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -770,7 +918,7 @@ Keeping track of Dirty classes in Solr</p>
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Results.html">Results</a>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Tasks.html">Tasks</a>
     </li>
 
     </ul>
@@ -782,146 +930,26 @@ Keeping track of Dirty classes in Solr</p>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="SearchResult" class="element ajax clickable class">
-        <h1>SearchResult<a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html">¶</a></h1>
-        <p class="short_description">Class SearchResult is the combined result in a SilverStripe readable way</p>
-        <div class="details collapse">Each of the requested features of a BaseQuery are generated to be easily accessible in the controller.
-In the controller, each required item can be accessed through the resulting method in this class.</div>
-        <a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html" class="more">« More »</a>
+                                        <div id="ClearDirtyClassesTask" class="element ajax clickable class">
+        <h1>ClearDirtyClassesTask<a href="../classes/Firesphere.SolrSearch.Tasks.ClearDirtyClassesTask.html">¶</a></h1>
+        <p class="short_description">Class ClearDirtyClasses Clear out classes that were not succesfully updated or deleted in Solr.</p>
+        <div class="details collapse">Any classes that failed to index properly or be removed properly need to be cleaned out regularly
+This task takes care of doing this. It can be run directly via /dev/tasks, or via a queued job</div>
+        <a href="../classes/Firesphere.SolrSearch.Tasks.ClearDirtyClassesTask.html" class="more">« More »</a>
     </div>
 
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Services.html">Services</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="SchemaService" class="element ajax clickable class">
-        <h1>SchemaService<a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">¶</a></h1>
-        <p class="short_description">Class SchemaService</p>
+                                        <div id="SolrConfigureTask" class="element ajax clickable class">
+        <h1>SolrConfigureTask<a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html">¶</a></h1>
+        <p class="short_description">Class SolrConfigureTask</p>
         <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html" class="more">« More »</a>
+        <a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html" class="more">« More »</a>
     </div>
 
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Queries.html">Queries</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="BaseQuery" class="element ajax clickable class">
-        <h1>BaseQuery<a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">¶</a></h1>
-        <p class="short_description">Class BaseQuery is the base of every query executed.</p>
-        <div class="details collapse">Build a query to execute agains Solr. Uses as simle as possible an interface.</div>
-        <a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Jobs.html">Jobs</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="ClearDirtyClassesJob" class="element ajax clickable class">
-        <h1>ClearDirtyClassesJob<a href="../classes/Firesphere.SolrSearch.Jobs.ClearDirtyClassesJob.html">¶</a></h1>
-        <p class="short_description">Class ClearDirtyClassesJob is the queued job version of the ClearDirtyClassesTask</p>
-        <div class="details collapse">Clean up any dirty classes in Solr due to objects not being updated properly</div>
-        <a href="../classes/Firesphere.SolrSearch.Jobs.ClearDirtyClassesJob.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SolrConfigureJob" class="element ajax clickable class">
-        <h1>SolrConfigureJob<a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html">¶</a></h1>
-        <p class="short_description">Class SolrConfigureJob</p>
+                                        <div id="SolrIndexTask" class="element ajax clickable class">
+        <h1>SolrIndexTask<a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html">¶</a></h1>
+        <p class="short_description">Class SolrIndexTask</p>
         <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SolrIndexJob" class="element ajax clickable class">
-        <h1>SolrIndexJob<a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html">¶</a></h1>
-        <p class="short_description">Class SolrIndexJob is a queued job to index all existing indexes and their classes.</p>
-        <div class="details collapse">It always runs on all indexes, to make sure all indexes are up to date.</div>
-        <a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html" class="more">« More »</a>
+        <a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -945,7 +973,7 @@ In the controller, each required item can be accessed through the resulting meth
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Interfaces.html">Interfaces</a>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Factories.html">Factories</a>
     </li>
 
     </ul>
@@ -956,21 +984,70 @@ In the controller, each required item can be accessed through the resulting meth
                     <div class="package-indent">
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
-                                        <div id="ConfigStore" class="element ajax clickable interface">
-        <h1>ConfigStore<a href="../classes/Firesphere.SolrSearch.Interfaces.ConfigStore.html">¶</a></h1>
-        <p class="short_description">Interface ConfigStore</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Interfaces.ConfigStore.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SiteStateInterface" class="element ajax clickable interface">
-        <h1>SiteStateInterface<a href="../classes/Firesphere.SolrSearch.Interfaces.SiteStateInterface.html">¶</a></h1>
-        <p class="short_description">Interface SiteStateInterface defines the methods every State altering must implement.</p>
-        <div class="details collapse">These methods must exist in the SiteStates that are available</div>
-        <a href="../classes/Firesphere.SolrSearch.Interfaces.SiteStateInterface.html" class="more">« More »</a>
-    </div>
-
                 
+                                        <div id="DocumentFactory" class="element ajax clickable class">
+        <h1>DocumentFactory<a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html">¶</a></h1>
+        <p class="short_description">Class DocumentFactory
+Factory to create documents to be pushed to Solr</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="QueryComponentFactory" class="element ajax clickable class">
+        <h1>QueryComponentFactory<a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">¶</a></h1>
+        <p class="short_description">Class QueryComponentFactory</p>
+        <div class="details collapse">Build a query component for each available build part</div>
+        <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Stores.html">Stores</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="FileConfigStore" class="element ajax clickable class">
+        <h1>FileConfigStore<a href="../classes/Firesphere.SolrSearch.Stores.FileConfigStore.html">¶</a></h1>
+        <p class="short_description">Class FileConfigStore
+Store the config in a file storage on the local file system.</p>
+        <div class="details collapse">Store the config in a file storage on the local file system, usually in project/.solr/indexname</div>
+        <a href="../classes/Firesphere.SolrSearch.Stores.FileConfigStore.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="PostConfigStore" class="element ajax clickable class">
+        <h1>PostConfigStore<a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html">¶</a></h1>
+        <p class="short_description">Class PostConfigStore</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html" class="more">« More »</a>
+    </div>
+
                             </div>
             
     
@@ -1064,6 +1141,60 @@ Source: @link https://raw.githubusercontent.com/heiswayi/spelling-uk-vs-us/</p>
 
     
     <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Jobs.html">Jobs</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="ClearDirtyClassesJob" class="element ajax clickable class">
+        <h1>ClearDirtyClassesJob<a href="../classes/Firesphere.SolrSearch.Jobs.ClearDirtyClassesJob.html">¶</a></h1>
+        <p class="short_description">Class ClearDirtyClassesJob is the queued job version of the ClearDirtyClassesTask</p>
+        <div class="details collapse">Clean up any dirty classes in Solr due to objects not being updated properly</div>
+        <a href="../classes/Firesphere.SolrSearch.Jobs.ClearDirtyClassesJob.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="SolrConfigureJob" class="element ajax clickable class">
+        <h1>SolrConfigureJob<a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html">¶</a></h1>
+        <p class="short_description">Class SolrConfigureJob</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="SolrIndexJob" class="element ajax clickable class">
+        <h1>SolrIndexJob<a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html">¶</a></h1>
+        <p class="short_description">Class SolrIndexJob is a queued job to index all existing indexes and their classes.</p>
+        <div class="details collapse">It always runs on all indexes, to make sure all indexes are up to date.</div>
+        <a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
         <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Forms.html">Forms</a>
     </li>
 
@@ -1105,7 +1236,7 @@ Basic form to start searching</p>
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Admins.html">Admins</a>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Models.html">Models</a>
     </li>
 
     </ul>
@@ -1117,13 +1248,19 @@ Basic form to start searching</p>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="SearchAdmin" class="element ajax clickable class">
-        <h1>SearchAdmin<a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Admins\SearchAdmin
-Manage or see the Solr configuration. Default implementation of SilverStripe ModelAdmin
-Nothing to see here</p>
+                                        <div id="DirtyClass" class="element ajax clickable class">
+        <h1>DirtyClass<a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">¶</a></h1>
+        <p class="short_description">Class \Firesphere\SolrSearch\Models\DirtyClass
+Keeping track of Dirty classes in Solr</p>
         <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html" class="more">« More »</a>
+        <a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="SolrLog" class="element ajax clickable class">
+        <h1>SolrLog<a href="../classes/Firesphere.SolrSearch.Models.SolrLog.html">¶</a></h1>
+        <p class="short_description">Class \Firesphere\SolrSearch\Models\SolrError</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Firesphere.SolrSearch.Models.SolrLog.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -1166,205 +1303,45 @@ Nothing to see here</p>
         <a href="../classes/Firesphere.SolrSearch.Fluent.FluentExtension.html" class="more">« More »</a>
     </div>
 
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Subsites.html">Subsites</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
                                         <div id="SubsitesExtension" class="element ajax clickable class">
-        <h1>SubsitesExtension<a href="../classes/Firesphere.SolrSearch.Compat.SubsitesExtension.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Compat\SubsitesExtension
+        <h1>SubsitesExtension<a href="../classes/Firesphere.SolrSearch.Subsites.SubsitesExtension.html">¶</a></h1>
+        <p class="short_description">Class \Firesphere\SolrSearch\Subsites\SubsitesExtension
 Add support for subsites</p>
         <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Compat.SubsitesExtension.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Indexes.html">Indexes</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="BaseIndex" class="element ajax clickable class">
-        <h1>BaseIndex<a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">¶</a></h1>
-        <p class="short_description">Base for creating a new Solr core.</p>
-        <div class="details collapse">Base index settings and methods. Should be extended with at least a name for the index.
-This is an abstract class that can not be instantiated on it&#039;s own</div>
-        <a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Tasks.html">Tasks</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="ClearDirtyClassesTask" class="element ajax clickable class">
-        <h1>ClearDirtyClassesTask<a href="../classes/Firesphere.SolrSearch.Tasks.ClearDirtyClassesTask.html">¶</a></h1>
-        <p class="short_description">Class ClearDirtyClasses Clear out classes that were not succesfully updated or deleted in Solr.</p>
-        <div class="details collapse">Any classes that failed to index properly or be removed properly need to be cleaned out regularly
-This task takes care of doing this. It can be run directly via /dev/tasks, or via a queued job</div>
-        <a href="../classes/Firesphere.SolrSearch.Tasks.ClearDirtyClassesTask.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SolrConfigureTask" class="element ajax clickable class">
-        <h1>SolrConfigureTask<a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html">¶</a></h1>
-        <p class="short_description">Class SolrConfigureTask</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SolrIndexTask" class="element ajax clickable class">
-        <h1>SolrIndexTask<a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html">¶</a></h1>
-        <p class="short_description">Class SolrIndexTask</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Stores.html">Stores</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="FileConfigStore" class="element ajax clickable class">
-        <h1>FileConfigStore<a href="../classes/Firesphere.SolrSearch.Stores.FileConfigStore.html">¶</a></h1>
-        <p class="short_description">Class FileConfigStore
-Store the config in a file storage on the local file system.</p>
-        <div class="details collapse">Store the config in a file storage on the local file system, usually in project/.solr/indexname</div>
-        <a href="../classes/Firesphere.SolrSearch.Stores.FileConfigStore.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="PostConfigStore" class="element ajax clickable class">
-        <h1>PostConfigStore<a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html">¶</a></h1>
-        <p class="short_description">Class PostConfigStore</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.html">Firesphere</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Firesphere.SolrSearch.Fluent.html">Fluent</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="FluentSiteState" class="element ajax clickable class">
-        <h1>FluentSiteState<a href="../classes/Firesphere.SolrSearch.Fluent.FluentSiteState.html">¶</a></h1>
-        <p class="short_description">Class FluentSiteState</p>
-        <div class="details collapse">Determine and apply the state of the site currently. This is used at index-time to figure out what state to index.
-An example of this is the FluentSearchVariant extension from Fluent.
-
-Fluent uses the old SearchVariant method, which is actually not that bad a concept. These &quot;Variants&quot;, now called
-&quot;States&quot; set the state of the site to a required setting for each available state.
-
-States SHOULD add their own states through an extension, otherwise it won&#039;t be called.
-\Firesphere\SolrSearch\States\FluentExtension::onBeforeInit()
-
-States, options, etc. are simplified for a more streamlined approach</div>
-        <a href="../classes/Firesphere.SolrSearch.Fluent.FluentSiteState.html" class="more">« More »</a>
+        <a href="../classes/Firesphere.SolrSearch.Subsites.SubsitesExtension.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -1401,6 +1378,55 @@ States, options, etc. are simplified for a more streamlined approach</div>
 
     </ul>
 
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/SilverStripe.html">SilverStripe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/SilverStripe.FullTextSearch.html">FullTextSearch</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/SilverStripe.FullTextSearch.Solr.html">Solr</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Solr" class="element ajax clickable class">
+        <h1>Solr<a href="../classes/SilverStripe.FullTextSearch.Solr.Solr.html">¶</a></h1>
+        <p class="short_description">Class Solr Stub to convert old Solr configuration to config</p>
+        <div class="details collapse"></div>
+        <a href="../classes/SilverStripe.FullTextSearch.Solr.Solr.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="SolrIndex" class="element ajax clickable class">
+        <h1>SolrIndex<a href="../classes/SilverStripe.FullTextSearch.Solr.SolrIndex.html">¶</a></h1>
+        <p class="short_description">Class SolrIndex
+This class serves as a stub to make migration from Fulltext Search easier</p>
+        <div class="details collapse">Base index settings and methods. Should be extended with at least a name for the index.
+This is an abstract class that can not be instantiated on it&#039;s own</div>
+        <a href="../classes/SilverStripe.FullTextSearch.Solr.SolrIndex.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
     
                 
     <ul class="breadcrumb">
@@ -1474,55 +1500,6 @@ Cover any changes between the SilverStripe FulltextSearch module and the upgrade
             
     
     
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/SilverStripe.html">SilverStripe</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/SilverStripe.FullTextSearch.html">FullTextSearch</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/SilverStripe.FullTextSearch.Solr.html">Solr</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="Solr" class="element ajax clickable class">
-        <h1>Solr<a href="../classes/SilverStripe.FullTextSearch.Solr.Solr.html">¶</a></h1>
-        <p class="short_description">Class Solr Stub to convert old Solr configuration to config</p>
-        <div class="details collapse"></div>
-        <a href="../classes/SilverStripe.FullTextSearch.Solr.Solr.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SolrIndex" class="element ajax clickable class">
-        <h1>SolrIndex<a href="../classes/SilverStripe.FullTextSearch.Solr.SolrIndex.html">¶</a></h1>
-        <p class="short_description">Class SolrIndex
-This class serves as a stub to make migration from Fulltext Search easier</p>
-        <div class="details collapse">Base index settings and methods. Should be extended with at least a name for the index.
-This is an abstract class that can not be instantiated on it&#039;s own</div>
-        <a href="../classes/SilverStripe.FullTextSearch.Solr.SolrIndex.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
     
     
     
@@ -1534,7 +1511,7 @@ This is an abstract class that can not be instantiated on it&#039;s own</div>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 14 Sep 2019 00:04:04 +0000.<br/>
+            generated on Tue, 17 Sep 2019 05:29:48 +0000.<br/>
     </footer>
     </body>
 </html>
