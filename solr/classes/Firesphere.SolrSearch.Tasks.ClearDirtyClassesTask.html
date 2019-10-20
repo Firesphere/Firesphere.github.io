@@ -43,8 +43,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>
                                                                         <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
+                                                                        <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -199,7 +199,7 @@ This task takes care of doing this. It can be run directly via /dev/tasks, or vi
                         <div class="element clickable method protected  method_createDeleteList" data-toggle="collapse" data-target=".method_createDeleteList .collapse">
                             <h2>Create an ArrayList of the dirty items to be deleted from Solr
 Uses the given class name to generate stub objects</h2>
-                            <pre>createDeleteList(array $items, string $dirtyClass,  &$dirtyClasses) </pre>
+                            <pre>createDeleteList(array $items, string $dirtyClass, \SilverStripe\ORM\ArrayList &$dirtyClasses) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -229,7 +229,7 @@ Uses the given class name to generate stub objects</h2>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$dirtyClasses</h4>
-                                                <code></code><p></p>
+                                                <code>\SilverStripe\ORM\ArrayList</code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -239,7 +239,7 @@ Uses the given class name to generate stub objects</h2>
                                             <a id="method_getDirtyClasses"></a>
                         <div class="element clickable method private  method_getDirtyClasses" data-toggle="collapse" data-target=".method_getDirtyClasses .collapse">
                             <h2>Get the objects that need to be deleted or updated as a list</h2>
-                            <pre>getDirtyClasses( $dirtyObject) : \SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</pre>
+                            <pre>getDirtyClasses(\SilverStripe\ORM\DataObject $dirtyObject) : \SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -254,7 +254,7 @@ Uses the given class name to generate stub objects</h2>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$dirtyObject</h4>
-                                                <code></code><p></p>
+                                                <code>\SilverStripe\ORM\DataObject</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -490,7 +490,7 @@ Dirty classes happen when changes to classes are not successfully updated in Sol
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 24 Sep 2019 07:49:32 +0000.<br/>
+            generated on Sun, 20 Oct 2019 04:02:45 +0000.<br/>
     </footer>
     </body>
 </html>
