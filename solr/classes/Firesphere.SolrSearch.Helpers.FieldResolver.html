@@ -132,7 +132,7 @@
         </a>
     </li>
 
-                                                                                                                                                                                                                                                                                                                                                                                                <li class="method public">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method public">
         <a href="#method_isSubclassOf" title="isSubclassOf :: Check if class is subclass of (a) the class in $instanceOf, or (b) any of the classes in the array $instanceOf">
             <span class="description">Check if class is subclass of (a) the class in $instanceOf, or (b) any of the classes in the array $instanceOf</span><pre>isSubclassOf</pre>
         </a>
@@ -175,6 +175,11 @@
                             </a>
                         </li>
                                                                                 <li class="method protected">
+                            <a href="#method_getNextOption" title="getNextOption :: ">
+                                <span class="description"></span><pre>getNextOption</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
                             <a href="#method_getRelationData" title="getRelationData :: Relational data">
                                 <span class="description">Relational data</span><pre>getRelationData</pre>
                             </a>
@@ -203,7 +208,7 @@
                                 <span class="description">FoundOriginData is a helper to make sure the options are properly set.</span><pre>getFoundOriginData</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                    <li class="method private">
+                                                                                                                                                                                                                                                                                                        <li class="method private">
                             <a href="#method_getSourceName" title="getSourceName :: This is used to clean the source name from suffix
 suffixes are needed to support multiple relations with the same name on different page types">
                                 <span class="description">This is used to clean the source name from suffix
@@ -575,6 +580,45 @@ Some additional introspection tools that are used often by the fulltext search c
                                                                                     <div class="subelement argument">
                                                 <h4>$lookup</h4>
                                                 <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getNextOption"></a>
+                        <div class="element clickable method protected  method_getNextOption" data-toggle="collapse" data-target=".method_getNextOption .collapse">
+                            <h2>getNextOption</h2>
+                            <pre>getNextOption(array $next, array|string $class, array $options, string $dataClass) : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$next</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code>array|string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dataClass</h4>
+                                                <code>string</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -996,7 +1040,7 @@ Should be replaced with PHP native methods</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sun, 20 Oct 2019 04:02:45 +0000.<br/>
+            generated on Mon, 21 Oct 2019 08:14:39 +0000.<br/>
     </footer>
     </body>
 </html>
