@@ -132,7 +132,7 @@
         </a>
     </li>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method public">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method public">
         <a href="#method_isSubclassOf" title="isSubclassOf :: Check if class is subclass of (a) the class in $instanceOf, or (b) any of the classes in the array $instanceOf">
             <span class="description">Check if class is subclass of (a) the class in $instanceOf, or (b) any of the classes in the array $instanceOf</span><pre>isSubclassOf</pre>
         </a>
@@ -189,6 +189,11 @@
                                 <span class="description">Get the type of this field</span><pre>getType</pre>
                             </a>
                         </li>
+                                                                                <li class="method protected">
+                            <a href="#method_handleRelationData" title="handleRelationData :: Figure out the relational data for the given source etc.">
+                                <span class="description">Figure out the relational data for the given source etc.</span><pre>handleRelationData</pre>
+                            </a>
+                        </li>
                                                                                                                                                         <li class="method protected">
                             <a href="#method_resolveRelation" title="resolveRelation :: Resolve relations if possible">
                                 <span class="description">Resolve relations if possible</span><pre>resolveRelation</pre>
@@ -222,7 +227,7 @@ Should be replaced with PHP native methods">
 Should be replaced with PHP native methods</span><pre>getSubClasses</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -783,6 +788,49 @@ Should be replaced with PHP native methods</h2>
                             </div>
 
                         </div>
+                                            <a id="method_handleRelationData"></a>
+                        <div class="element clickable method protected  method_handleRelationData" data-toggle="collapse" data-target=".method_handleRelationData .collapse">
+                            <h2>Figure out the relational data for the given source etc.</h2>
+                            <pre>handleRelationData(string $source, array $next, array &$options, array|string|null $class, string|null $dataClass) : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$source</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$next</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code>array|string|null</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dataClass</h4>
+                                                <code>string|null</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_isSubclassOf"></a>
                         <div class="element clickable method public  method_isSubclassOf" data-toggle="collapse" data-target=".method_isSubclassOf .collapse">
                             <h2>Check if class is subclass of (a) the class in $instanceOf, or (b) any of the classes in the array $instanceOf</h2>
@@ -871,7 +919,7 @@ Should be replaced with PHP native methods</h2>
                                             <a id="method_resolveRelation"></a>
                         <div class="element clickable method protected  method_resolveRelation" data-toggle="collapse" data-target=".method_resolveRelation .collapse">
                             <h2>Resolve relations if possible</h2>
-                            <pre>resolveRelation(string $source,  $lookup, array $next) : array</pre>
+                            <pre>resolveRelation(string $source,  $lookup, array $next, array &$options) : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -885,6 +933,8 @@ Should be replaced with PHP native methods</h2>
                                                 <th>Throws</th>
                                                 <td>
                                                     <dl>
+                                                                                                            <dt>\ReflectionException</dt>
+                                                        <dd></dd>
                                                                                                             <dt>\Exception</dt>
                                                         <dd></dd>
                                                                                                                                                             </dl>
@@ -903,6 +953,10 @@ Should be replaced with PHP native methods</h2>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$next</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
                                                 <code>array</code><p></p>
                                             </div>
                                                                             
@@ -1040,7 +1094,7 @@ Should be replaced with PHP native methods</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 21 Oct 2019 08:14:39 +0000.<br/>
+            generated on Sat, 02 Nov 2019 01:43:54 +0000.<br/>
     </footer>
     </body>
 </html>
