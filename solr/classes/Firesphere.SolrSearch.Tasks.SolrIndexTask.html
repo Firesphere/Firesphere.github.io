@@ -43,8 +43,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
                                                                         <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>
+                                                                        <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -164,7 +164,7 @@ execute via the TaskRunner</span><pre>run</pre>
         </a>
     </li>
 
-                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                </ul>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
@@ -178,7 +178,7 @@ execute via the TaskRunner</span><pre>run</pre>
                                 <span class="description">Index the classes for a specific index</span><pre>indexClassForIndex</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                        <li class="method protected">
+                                                                                                                                                                                                                                                                                                                                            <li class="method protected">
                             <a href="#method_taskSetup" title="taskSetup :: Set up the requirements for this task">
                                 <span class="description">Set up the requirements for this task</span><pre>taskSetup</pre>
                             </a>
@@ -205,6 +205,11 @@ to identify problems and fix them.</span><pre>logException</pre>
                             </a>
                         </li>
                                                                                                                                                                                                                                 <li class="method private">
+                            <a href="#method_spawnChildren" title="spawnChildren :: ">
+                                <span class="description"></span><pre>spawnChildren</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
                             <a href="#method_stateReindex" title="stateReindex :: Index a group of a class for a specific state and index">
                                 <span class="description">Index a group of a class for a specific state and index</span><pre>stateReindex</pre>
                             </a>
@@ -350,7 +355,7 @@ to identify problems and fix them.</span><pre>logException</pre>
                                             <a id="method_doReindex"></a>
                         <div class="element clickable method private  method_doReindex" data-toggle="collapse" data-target=".method_doReindex .collapse">
                             <h2>Reindex the given group, for each state</h2>
-                            <pre>doReindex(integer|boolean $group, string $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index) </pre>
+                            <pre>doReindex(integer $group, string $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index,  $pcntl = false) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -371,8 +376,6 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                 <th>Throws</th>
                                                 <td>
                                                     <dl>
-                                                                                                            <dt>\ReflectionException</dt>
-                                                        <dd></dd>
                                                                                                             <dt>\Exception</dt>
                                                         <dd></dd>
                                                                                                                                                             </dl>
@@ -383,7 +386,7 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code>integer|boolean</code><p></p>
+                                                <code>integer</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$class</h4>
@@ -392,6 +395,10 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                                                     <div class="subelement argument">
                                                 <h4>$index</h4>
                                                 <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$pcntl</h4>
+                                                <code></code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -461,7 +468,7 @@ to identify problems and fix them.</span><pre>logException</pre>
                                             <a id="method_indexClass"></a>
                         <div class="element clickable method private  method_indexClass" data-toggle="collapse" data-target=".method_indexClass .collapse">
                             <h2>Index a single class for a given index. {@link static::indexClassForIndex()}</h2>
-                            <pre>indexClass(string $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index, integer|boolean $group) : integer|boolean</pre>
+                            <pre>indexClass(boolean $isGroup, string $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index, integer $group) : integer</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -486,6 +493,10 @@ to identify problems and fix them.</span><pre>logException</pre>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
+                                                <h4>$isGroup</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
                                                 <h4>$class</h4>
                                                 <code>string</code><p></p>
                                             </div>
@@ -495,11 +506,11 @@ to identify problems and fix them.</span><pre>logException</pre>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code>integer|boolean</code><p></p>
+                                                <code>integer</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code>integer|boolean</code><p></p>
+                                        <code>integer</code><p></p>
                                                                     </div>
                             </div>
 
@@ -507,7 +518,7 @@ to identify problems and fix them.</span><pre>logException</pre>
                                             <a id="method_indexClassForIndex"></a>
                         <div class="element clickable method protected  method_indexClassForIndex" data-toggle="collapse" data-target=".method_indexClassForIndex .collapse">
                             <h2>Index the classes for a specific index</h2>
-                            <pre>indexClassForIndex(array $classes, \Firesphere\SolrSearch\Indexes\BaseIndex $index, integer|boolean $group) : integer|boolean</pre>
+                            <pre>indexClassForIndex( $classes,  $isGroup, \Firesphere\SolrSearch\Indexes\BaseIndex $index,  $group) : integer</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -533,7 +544,11 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$classes</h4>
-                                                <code>array</code><p></p>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$isGroup</h4>
+                                                <code></code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$index</h4>
@@ -541,11 +556,11 @@ to identify problems and fix them.</span><pre>logException</pre>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code>integer|boolean</code><p></p>
+                                                <code></code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code>integer|boolean</code><p></p>
+                                        <code>integer</code><p></p>
                                                                     </div>
                             </div>
 
@@ -736,10 +751,62 @@ execute via the TaskRunner</h2>
                             </div>
 
                         </div>
+                                            <a id="method_spawnChildren"></a>
+                        <div class="element clickable method private  method_spawnChildren" data-toggle="collapse" data-target=".method_spawnChildren .collapse">
+                            <h2>spawnChildren</h2>
+                            <pre>spawnChildren(string $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index, integer $group, integer $cores, integer $groups) : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$index</h4>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$group</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$cores</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$groups</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_stateReindex"></a>
                         <div class="element clickable method private  method_stateReindex" data-toggle="collapse" data-target=".method_stateReindex .collapse">
                             <h2>Index a group of a class for a specific state and index</h2>
-                            <pre>stateReindex(integer|boolean $group, string $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index) </pre>
+                            <pre>stateReindex( $group,  $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -770,11 +837,11 @@ execute via the TaskRunner</h2>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code>integer|boolean</code><p></p>
+                                                <code></code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code>string</code><p></p>
+                                                <code></code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$index</h4>
@@ -1062,7 +1129,7 @@ execute via the TaskRunner</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 02 Nov 2019 01:43:54 +0000.<br/>
+            generated on Mon, 25 Nov 2019 01:09:33 +0000.<br/>
     </footer>
     </body>
 </html>

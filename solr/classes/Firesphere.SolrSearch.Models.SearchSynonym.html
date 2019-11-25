@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    SilverStripe Solr search &raquo; \Firesphere\SolrSearch\Traits\GetSetSearchResolverTrait
+    <title>    SilverStripe Solr search &raquo; \Firesphere\SolrSearch\Models\SearchSynonym
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -121,14 +121,8 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method_getIndex" title="getIndex :: Get the current index">
-            <span class="description">Get the current index</span><pre>getIndex</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_setIndex" title="setIndex :: Set the current index">
-            <span class="description">Set the current index</span><pre>setIndex</pre>
+        <a href="#method_getCMSFields" title="getCMSFields :: ">
+            <span class="description"></span><pre>getCMSFields</pre>
         </a>
     </li>
 
@@ -136,11 +130,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                    </ul>
+                                                                                </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                    </ul>
+                                                                                </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -154,14 +148,14 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>GetSetSearchResolverTrait</h1>
+                <h1>SearchSynonym</h1>
                 <small style="display: block; text-align: right">
+                                            Extends \SilverStripe\ORM\DataObject
                                                         </small>
-                <p class="short_description">Setters and getters for the introspection.</p>
+                <p class="short_description"></p>
                 <div class="details">
                     <div class="long_description">
-                        <p>Setters and getters to help with introspection/resolving, it's fairly simple, but extracted
-so it's cleaner to read the code</p>
+                        
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -170,16 +164,16 @@ so it's cleaner to read the code</p>
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Firesphere\SolrSearch\Traits</p>
+                                                                                <p>Default</p>
                                     </td>
                                 </tr>
                                                                                                                                                                                 </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method_getIndex"></a>
-                        <div class="element clickable method public  method_getIndex" data-toggle="collapse" data-target=".method_getIndex .collapse">
-                            <h2>Get the current index</h2>
-                            <pre>getIndex() : \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
+                                                                <a id="method_getCMSFields"></a>
+                        <div class="element clickable method public  method_getCMSFields" data-toggle="collapse" data-target=".method_getCMSFields .collapse">
+                            <h2>getCMSFields</h2>
+                            <pre>getCMSFields() </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -196,38 +190,16 @@ so it's cleaner to read the code</p>
                                                 <td>
                                                                                                     </td>
                                             </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
                                                                                                                     </table>
 
                                     
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_setIndex"></a>
-                        <div class="element clickable method public  method_setIndex" data-toggle="collapse" data-target=".method_setIndex .collapse">
-                            <h2>Set the current index</h2>
-                            <pre>setIndex(mixed $index) : $this</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                                                    </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$index</h4>
-                                                <code>mixed</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>$this</code><p></p>
                                                                     </div>
                             </div>
 
@@ -235,12 +207,12 @@ so it's cleaner to read the code</p>
                     
                     
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_index"> </a>
-                            <div class="element clickable property  protected property_index" data-toggle="collapse" data-target=".property_index .collapse">
-                                <h2>Index to use</h2>
-                                <pre>index : \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
+                                                    <a id="property_table_name"> </a>
+                            <div class="element clickable property  private property_table_name" data-toggle="collapse" data-target=".property_table_name .collapse">
+                                <h2>table_name</h2>
+                                <pre>table_name : </pre>
                                 <div class="labels">
-                                                                                                        </div>
+                                                                        <span class="label">static</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
@@ -248,29 +220,128 @@ so it's cleaner to read the code</p>
                                         <table class="table">
                                                                                             <tr>
                                                     <th>
-                                                        var
+                                                        
                                                     </th>
                                                     <td>
-                                                                                                                    <p>Index to use</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_singular_name"> </a>
+                            <div class="element clickable property  private property_singular_name" data-toggle="collapse" data-target=".property_singular_name .collapse">
+                                <h2>singular_name</h2>
+                                <pre>singular_name : </pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_plural_name"> </a>
+                            <div class="element clickable property  private property_plural_name" data-toggle="collapse" data-target=".property_plural_name .collapse">
+                                <h2>plural_name</h2>
+                                <pre>plural_name : </pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_db"> </a>
+                            <div class="element clickable property  private property_db" data-toggle="collapse" data-target=".property_db .collapse">
+                                <h2>db</h2>
+                                <pre>db : </pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_summary_fields"> </a>
+                            <div class="element clickable property  private property_summary_fields" data-toggle="collapse" data-target=".property_summary_fields .collapse">
+                                <h2>summary_fields</h2>
+                                <pre>summary_fields : </pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
                                                                             </div>
                                 </div>
                             </div>
                                                             </div>
             </div>
-            <a id="\Firesphere\SolrSearch\Traits\GetSetSearchResolverTrait"></a>
+            <a id="\Firesphere\SolrSearch\Models\SearchSynonym"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
-    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Traits.html">Traits</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Models.html">Models</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSearchResolverTrait.html">GetSetSearchResolverTrait</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Models.SearchSynonym.html">SearchSynonym</a></li>
             </ul>
         </div>
     </div>
@@ -281,7 +352,7 @@ so it's cleaner to read the code</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 25 Nov 2019 01:09:34 +0000.<br/>
+            generated on Mon, 25 Nov 2019 01:09:33 +0000.<br/>
     </footer>
     </body>
 </html>

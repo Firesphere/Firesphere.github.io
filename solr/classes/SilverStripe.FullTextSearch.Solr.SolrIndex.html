@@ -43,8 +43,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
                                                                         <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>
+                                                                        <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -1003,15 +1003,6 @@ $options is not used anymore, added for backward compatibility</h2>
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    todo
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>Building a factory is like factoring a factory.</p>
-                                                                                                    </td>
-                                            </tr>
                                                                                                                     </table>
 
                                                                             <h3>Arguments</h3>
@@ -1603,7 +1594,7 @@ This is to add the current index to e.g. an index or select</h2>
                                             <a id="method_getSynonyms"></a>
                         <div class="element clickable method public  method_getSynonyms inherited" data-toggle="collapse" data-target=".method_getSynonyms .collapse">
                             <h2>Add synonyms. Public to be extendable</h2>
-                            <pre>getSynonyms(boolean $defaults = true) : string</pre>
+                            <pre>getSynonyms( $store, boolean $defaults = true) : null</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -1617,12 +1608,16 @@ This is to add the current index to e.g. an index or select</h2>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
+                                                <h4>$store</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
                                                 <h4>$defaults</h4>
                                                 <code>boolean</code><p><p>Include UK to US synonyms</p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code>string</code><p></p>
+                                        <code>null</code><p></p>
                                                                     </div>
                             </div>
 
@@ -2595,7 +2590,7 @@ This is to prevent a notice if there is no yml.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 02 Nov 2019 01:43:54 +0000.<br/>
+            generated on Mon, 25 Nov 2019 01:09:33 +0000.<br/>
     </footer>
     </body>
 </html>

@@ -43,8 +43,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
                                                                         <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>
+                                                                        <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -126,7 +126,7 @@
         </a>
     </li>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method public">
+                                                                                                                                                                                                                                                                                                                                        <li class="method public">
         <a href="#method_buildItems" title="buildItems :: Note, it can only take one type of class at a time!
 So make sure you properly loop and set $class">
             <span class="description">Note, it can only take one type of class at a time!
@@ -203,18 +203,8 @@ So make sure you properly loop and set $class</span><pre>buildItems</pre>
                             </a>
                         </li>
                                                                                 <li class="method protected">
-                            <a href="#method_addToBuffer" title="addToBuffer :: ">
-                                <span class="description"></span><pre>addToBuffer</pre>
-                            </a>
-                        </li>
-                                                                                <li class="method protected">
                             <a href="#method_addToDoc" title="addToDoc :: Push field to a document">
                                 <span class="description">Push field to a document</span><pre>addToDoc</pre>
-                            </a>
-                        </li>
-                                                                                <li class="method protected">
-                            <a href="#method_buildFieldData" title="buildFieldData :: ">
-                                <span class="description"></span><pre>buildFieldData</pre>
                             </a>
                         </li>
                                                                                 <li class="method protected">
@@ -241,7 +231,7 @@ So make sure you properly loop and set $class</span><pre>buildItems</pre>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -387,59 +377,6 @@ Factory to create documents to be pushed to Solr</p>
                             </div>
 
                         </div>
-                                            <a id="method_addToBuffer"></a>
-                        <div class="element clickable method protected  method_addToBuffer" data-toggle="collapse" data-target=".method_addToBuffer .collapse">
-                            <h2>addToBuffer</h2>
-                            <pre>addToBuffer(array $fields, array|array&lt;mixed,\Solarium\QueryType\Update\Query\Query&gt;|array&lt;mixed,\Solarium\Plugin\BufferedAdd\BufferedAdd&gt; $passes, \SilverStripe\ORM\DataObject $item, array $boostFields) </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>
-                                                                                                            <dt>\Exception</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
-                                                </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$fields</h4>
-                                                <code>array</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$passes</h4>
-                                                <code>array|array&lt;mixed,\Solarium\QueryType\Update\Query\Query&gt;|array&lt;mixed,\Solarium\Plugin\BufferedAdd\BufferedAdd&gt;</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$item</h4>
-                                                <code>\SilverStripe\ORM\DataObject</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$boostFields</h4>
-                                                <code>array</code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
-                            </div>
-
-                        </div>
                                             <a id="method_addToDoc"></a>
                         <div class="element clickable method protected  method_addToDoc" data-toggle="collapse" data-target=".method_addToDoc .collapse">
                             <h2>Push field to a document</h2>
@@ -478,54 +415,6 @@ Factory to create documents to be pushed to Solr</p>
                                                                                     <div class="subelement argument">
                                                 <h4>$value</h4>
                                                 <code>\SilverStripe\ORM\FieldType\DBField|string</code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_buildFieldData"></a>
-                        <div class="element clickable method protected  method_buildFieldData" data-toggle="collapse" data-target=".method_buildFieldData .collapse">
-                            <h2>buildFieldData</h2>
-                            <pre>buildFieldData(\Solarium\QueryType\Update\Query\Document $doc, \SilverStripe\ORM\DataObject $item, array $boostFields, array $fieldData,  $field) </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$doc</h4>
-                                                <code>\Solarium\QueryType\Update\Query\Document</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$item</h4>
-                                                <code>\SilverStripe\ORM\DataObject</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$boostFields</h4>
-                                                <code>array</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$fieldData</h4>
-                                                <code>array</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$field</h4>
-                                                <code></code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -589,7 +478,7 @@ Factory to create documents to be pushed to Solr</p>
                         <div class="element clickable method public  method_buildItems" data-toggle="collapse" data-target=".method_buildItems .collapse">
                             <h2>Note, it can only take one type of class at a time!
 So make sure you properly loop and set $class</h2>
-                            <pre>buildItems(array $fields, \Firesphere\SolrSearch\Indexes\BaseIndex $index, \Solarium\QueryType\Update\Query\Query $update, \Solarium\Plugin\BufferedAdd\BufferedAdd $bufferAdd) </pre>
+                            <pre>buildItems(array $fields, \Firesphere\SolrSearch\Indexes\BaseIndex $index, \Solarium\QueryType\Update\Query\Query $update) : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -599,13 +488,6 @@ So make sure you properly loop and set $class</h2>
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
                                                                                                                             <tr>
                                                 <th>Throws</th>
                                                 <td>
@@ -630,11 +512,9 @@ So make sure you properly loop and set $class</h2>
                                                 <h4>$update</h4>
                                                 <code>\Solarium\QueryType\Update\Query\Query</code><p></p>
                                             </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$bufferAdd</h4>
-                                                <code>\Solarium\Plugin\BufferedAdd\BufferedAdd</code><p></p>
-                                            </div>
                                                                             
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1178,7 +1058,7 @@ So make sure you properly loop and set $class</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Sat, 02 Nov 2019 01:43:54 +0000.<br/>
+            generated on Mon, 25 Nov 2019 01:09:33 +0000.<br/>
     </footer>
     </body>
 </html>
