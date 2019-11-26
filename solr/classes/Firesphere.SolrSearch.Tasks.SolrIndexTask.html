@@ -205,8 +205,8 @@ to identify problems and fix them.</span><pre>logException</pre>
                             </a>
                         </li>
                                                                                                                                                                                                                                 <li class="method private">
-                            <a href="#method_spawnChildren" title="spawnChildren :: ">
-                                <span class="description"></span><pre>spawnChildren</pre>
+                            <a href="#method_spawnChildren" title="spawnChildren :: For each core, spawn a child process that will handle a separate group.">
+                                <span class="description">For each core, spawn a child process that will handle a separate group.</span><pre>spawnChildren</pre>
                             </a>
                         </li>
                                                                                 <li class="method private">
@@ -355,7 +355,7 @@ to identify problems and fix them.</span><pre>logException</pre>
                                             <a id="method_doReindex"></a>
                         <div class="element clickable method private  method_doReindex" data-toggle="collapse" data-target=".method_doReindex .collapse">
                             <h2>Reindex the given group, for each state</h2>
-                            <pre>doReindex(integer $group, string $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index,  $pcntl = false) </pre>
+                            <pre>doReindex(integer $group, string $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index, boolean $pcntl = false) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -398,7 +398,7 @@ to identify problems and fix them.</span><pre>logException</pre>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$pcntl</h4>
-                                                <code></code><p></p>
+                                                <code>boolean</code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -631,15 +631,6 @@ execute via the TaskRunner</h2>
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    todo
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>defer to background because it may run out of memory</p>
-                                                                                                    </td>
-                                            </tr>
                                                                                                                             <tr>
                                                 <th>Throws</th>
                                                 <td>
@@ -753,7 +744,7 @@ execute via the TaskRunner</h2>
                         </div>
                                             <a id="method_spawnChildren"></a>
                         <div class="element clickable method private  method_spawnChildren" data-toggle="collapse" data-target=".method_spawnChildren .collapse">
-                            <h2>spawnChildren</h2>
+                            <h2>For each core, spawn a child process that will handle a separate group.</h2>
                             <pre>spawnChildren(string $class, \Firesphere\SolrSearch\Indexes\BaseIndex $index, integer $group, integer $cores, integer $groups) : integer</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -761,7 +752,7 @@ execute via the TaskRunner</h2>
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"></div>
+                                    <div class="long_description"><p>This speeds up indexing through CLI massively.</p></div>
 
                                     <table class="table">
                                                                                                                             <tr>
@@ -1129,7 +1120,7 @@ execute via the TaskRunner</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 26 Nov 2019 02:51:49 +0000.<br/>
+            generated on Tue, 26 Nov 2019 03:18:01 +0000.<br/>
     </footer>
     </body>
 </html>
