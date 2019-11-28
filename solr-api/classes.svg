@@ -15,181 +15,137 @@
 <text text-anchor="middle" x="560.6912" y="-3515.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Global</text>
 </g>
 <g id="clust2" class="cluster">
-<title>cluster_\SilverStripe</title>
-<path fill="none" stroke="#c0c0c0" d="M817.2549,-2718C817.2549,-2718 948.2549,-2718 948.2549,-2718 954.2549,-2718 960.2549,-2724 960.2549,-2730 960.2549,-2730 960.2549,-3020 960.2549,-3020 960.2549,-3026 954.2549,-3032 948.2549,-3032 948.2549,-3032 817.2549,-3032 817.2549,-3032 811.2549,-3032 805.2549,-3026 805.2549,-3020 805.2549,-3020 805.2549,-2730 805.2549,-2730 805.2549,-2724 811.2549,-2718 817.2549,-2718"/>
-<text text-anchor="middle" x="882.7549" y="-3019.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">SilverStripe</text>
-</g>
-<g id="clust3" class="cluster">
-<title>cluster_\SilverStripe\FullTextSearch</title>
-<path fill="none" stroke="#c0c0c0" d="M825.2549,-2726C825.2549,-2726 940.2549,-2726 940.2549,-2726 946.2549,-2726 952.2549,-2732 952.2549,-2738 952.2549,-2738 952.2549,-2992 952.2549,-2992 952.2549,-2998 946.2549,-3004 940.2549,-3004 940.2549,-3004 825.2549,-3004 825.2549,-3004 819.2549,-3004 813.2549,-2998 813.2549,-2992 813.2549,-2992 813.2549,-2738 813.2549,-2738 813.2549,-2732 819.2549,-2726 825.2549,-2726"/>
-<text text-anchor="middle" x="882.7549" y="-2991.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">FullTextSearch</text>
-</g>
-<g id="clust4" class="cluster">
-<title>cluster_\SilverStripe\FullTextSearch\Solr</title>
-<path fill="none" stroke="#c0c0c0" d="M844.7549,-2850C844.7549,-2850 920.7549,-2850 920.7549,-2850 926.7549,-2850 932.7549,-2856 932.7549,-2862 932.7549,-2862 932.7549,-2964 932.7549,-2964 932.7549,-2970 926.7549,-2976 920.7549,-2976 920.7549,-2976 844.7549,-2976 844.7549,-2976 838.7549,-2976 832.7549,-2970 832.7549,-2964 832.7549,-2964 832.7549,-2862 832.7549,-2862 832.7549,-2856 838.7549,-2850 844.7549,-2850"/>
-<text text-anchor="middle" x="882.7549" y="-2963.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Solr</text>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_\SilverStripe\FullTextSearch\Search</title>
-<path fill="none" stroke="#c0c0c0" d="M833.2549,-2734C833.2549,-2734 932.2549,-2734 932.2549,-2734 938.2549,-2734 944.2549,-2740 944.2549,-2746 944.2549,-2746 944.2549,-2830 944.2549,-2830 944.2549,-2836 938.2549,-2842 932.2549,-2842 932.2549,-2842 833.2549,-2842 833.2549,-2842 827.2549,-2842 821.2549,-2836 821.2549,-2830 821.2549,-2830 821.2549,-2746 821.2549,-2746 821.2549,-2740 827.2549,-2734 833.2549,-2734"/>
-<text text-anchor="middle" x="882.7549" y="-2829.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Search</text>
-</g>
-<g id="clust6" class="cluster">
-<title>cluster_\SilverStripe\FullTextSearch\Search\Queries</title>
-<path fill="none" stroke="#c0c0c0" d="M841.2549,-2742C841.2549,-2742 924.2549,-2742 924.2549,-2742 930.2549,-2742 936.2549,-2748 936.2549,-2754 936.2549,-2754 936.2549,-2802 936.2549,-2802 936.2549,-2808 930.2549,-2814 924.2549,-2814 924.2549,-2814 841.2549,-2814 841.2549,-2814 835.2549,-2814 829.2549,-2808 829.2549,-2802 829.2549,-2802 829.2549,-2754 829.2549,-2754 829.2549,-2748 835.2549,-2742 841.2549,-2742"/>
-<text text-anchor="middle" x="882.7549" y="-2801.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Queries</text>
-</g>
-<g id="clust7" class="cluster">
 <title>cluster_\Firesphere</title>
 <path fill="none" stroke="#c0c0c0" d="M173.1275,-484C173.1275,-484 777.2549,-484 777.2549,-484 783.2549,-484 789.2549,-490 789.2549,-496 789.2549,-496 789.2549,-3488 789.2549,-3488 789.2549,-3494 783.2549,-3500 777.2549,-3500 777.2549,-3500 173.1275,-3500 173.1275,-3500 167.1275,-3500 161.1275,-3494 161.1275,-3488 161.1275,-3488 161.1275,-496 161.1275,-496 161.1275,-490 167.1275,-484 173.1275,-484"/>
 <text text-anchor="middle" x="475.1912" y="-3487.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Firesphere</text>
 </g>
-<g id="clust8" class="cluster">
+<g id="clust3" class="cluster">
 <title>cluster_\Firesphere\SolrSearch</title>
 <path fill="none" stroke="#c0c0c0" d="M181.1275,-492C181.1275,-492 769.2549,-492 769.2549,-492 775.2549,-492 781.2549,-498 781.2549,-504 781.2549,-504 781.2549,-3460 781.2549,-3460 781.2549,-3466 775.2549,-3472 769.2549,-3472 769.2549,-3472 181.1275,-3472 181.1275,-3472 175.1275,-3472 169.1275,-3466 169.1275,-3460 169.1275,-3460 169.1275,-504 169.1275,-504 169.1275,-498 175.1275,-492 181.1275,-492"/>
 <text text-anchor="middle" x="475.1912" y="-3459.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">SolrSearch</text>
 </g>
-<g id="clust9" class="cluster">
+<g id="clust4" class="cluster">
 <title>cluster_\Firesphere\SolrSearch\Compat</title>
 <path fill="none" stroke="#c0c0c0" d="M590.7549,-3372C590.7549,-3372 754.7549,-3372 754.7549,-3372 760.7549,-3372 766.7549,-3378 766.7549,-3384 766.7549,-3384 766.7549,-3432 766.7549,-3432 766.7549,-3438 760.7549,-3444 754.7549,-3444 754.7549,-3444 590.7549,-3444 590.7549,-3444 584.7549,-3444 578.7549,-3438 578.7549,-3432 578.7549,-3432 578.7549,-3384 578.7549,-3384 578.7549,-3378 584.7549,-3372 590.7549,-3372"/>
 <text text-anchor="middle" x="672.7549" y="-3431.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Compat</text>
 </g>
-<g id="clust10" class="cluster">
+<g id="clust5" class="cluster">
 <title>cluster_\Firesphere\SolrSearch\Services</title>
 <path fill="none" stroke="#c0c0c0" d="M617.7549,-3238C617.7549,-3238 727.7549,-3238 727.7549,-3238 733.7549,-3238 739.7549,-3244 739.7549,-3250 739.7549,-3250 739.7549,-3352 739.7549,-3352 739.7549,-3358 733.7549,-3364 727.7549,-3364 727.7549,-3364 617.7549,-3364 617.7549,-3364 611.7549,-3364 605.7549,-3358 605.7549,-3352 605.7549,-3352 605.7549,-3250 605.7549,-3250 605.7549,-3244 611.7549,-3238 617.7549,-3238"/>
 <text text-anchor="middle" x="672.7549" y="-3351.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Services</text>
 </g>
-<g id="clust11" class="cluster">
+<g id="clust6" class="cluster">
 <title>cluster_\Firesphere\SolrSearch\Indexes</title>
 <path fill="none" stroke="#c0c0c0" d="M634.7549,-3158C634.7549,-3158 710.7549,-3158 710.7549,-3158 716.7549,-3158 722.7549,-3164 722.7549,-3170 722.7549,-3170 722.7549,-3218 722.7549,-3218 722.7549,-3224 716.7549,-3230 710.7549,-3230 710.7549,-3230 634.7549,-3230 634.7549,-3230 628.7549,-3230 622.7549,-3224 622.7549,-3218 622.7549,-3218 622.7549,-3170 622.7549,-3170 622.7549,-3164 628.7549,-3158 634.7549,-3158"/>
 <text text-anchor="middle" x="672.7549" y="-3217.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Indexes</text>
 </g>
+<g id="clust7" class="cluster">
+<title>cluster_\Firesphere\SolrSearch\States</title>
+<path fill="none" stroke="#c0c0c0" d="M634.7549,-3078C634.7549,-3078 710.7549,-3078 710.7549,-3078 716.7549,-3078 722.7549,-3084 722.7549,-3090 722.7549,-3090 722.7549,-3138 722.7549,-3138 722.7549,-3144 716.7549,-3150 710.7549,-3150 710.7549,-3150 634.7549,-3150 634.7549,-3150 628.7549,-3150 622.7549,-3144 622.7549,-3138 622.7549,-3138 622.7549,-3090 622.7549,-3090 622.7549,-3084 628.7549,-3078 634.7549,-3078"/>
+<text text-anchor="middle" x="672.7549" y="-3137.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">States</text>
+</g>
+<g id="clust8" class="cluster">
+<title>cluster_\Firesphere\SolrSearch\Traits</title>
+<path fill="none" stroke="#c0c0c0" d="M584.2549,-2242C584.2549,-2242 761.2549,-2242 761.2549,-2242 767.2549,-2242 773.2549,-2248 773.2549,-2254 773.2549,-2254 773.2549,-3058 773.2549,-3058 773.2549,-3064 767.2549,-3070 761.2549,-3070 761.2549,-3070 584.2549,-3070 584.2549,-3070 578.2549,-3070 572.2549,-3064 572.2549,-3058 572.2549,-3058 572.2549,-2254 572.2549,-2254 572.2549,-2248 578.2549,-2242 584.2549,-2242"/>
+<text text-anchor="middle" x="672.7549" y="-3057.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Traits</text>
+</g>
+<g id="clust9" class="cluster">
+<title>cluster_\Firesphere\SolrSearch\Queries</title>
+<path fill="none" stroke="#c0c0c0" d="M638.2549,-2162C638.2549,-2162 707.2549,-2162 707.2549,-2162 713.2549,-2162 719.2549,-2168 719.2549,-2174 719.2549,-2174 719.2549,-2222 719.2549,-2222 719.2549,-2228 713.2549,-2234 707.2549,-2234 707.2549,-2234 638.2549,-2234 638.2549,-2234 632.2549,-2234 626.2549,-2228 626.2549,-2222 626.2549,-2222 626.2549,-2174 626.2549,-2174 626.2549,-2168 632.2549,-2162 638.2549,-2162"/>
+<text text-anchor="middle" x="672.7549" y="-2221.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Queries</text>
+</g>
+<g id="clust10" class="cluster">
+<title>cluster_\Firesphere\SolrSearch\Jobs</title>
+<path fill="none" stroke="#c0c0c0" d="M600.7549,-1840C600.7549,-1840 744.7549,-1840 744.7549,-1840 750.7549,-1840 756.7549,-1846 756.7549,-1852 756.7549,-1852 756.7549,-2008 756.7549,-2008 756.7549,-2014 750.7549,-2020 744.7549,-2020 744.7549,-2020 600.7549,-2020 600.7549,-2020 594.7549,-2020 588.7549,-2014 588.7549,-2008 588.7549,-2008 588.7549,-1852 588.7549,-1852 588.7549,-1846 594.7549,-1840 600.7549,-1840"/>
+<text text-anchor="middle" x="672.7549" y="-2007.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Jobs</text>
+</g>
+<g id="clust11" class="cluster">
+<title>cluster_\Firesphere\SolrSearch\Models</title>
+<path fill="none" stroke="#c0c0c0" d="M624.7549,-1652C624.7549,-1652 720.7549,-1652 720.7549,-1652 726.7549,-1652 732.7549,-1658 732.7549,-1664 732.7549,-1664 732.7549,-1820 732.7549,-1820 732.7549,-1826 726.7549,-1832 720.7549,-1832 720.7549,-1832 624.7549,-1832 624.7549,-1832 618.7549,-1832 612.7549,-1826 612.7549,-1820 612.7549,-1820 612.7549,-1664 612.7549,-1664 612.7549,-1658 618.7549,-1652 624.7549,-1652"/>
+<text text-anchor="middle" x="672.7549" y="-1819.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Models</text>
+</g>
 <g id="clust12" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Tasks</title>
-<path fill="none" stroke="#c0c0c0" d="M597.7549,-2836C597.7549,-2836 747.7549,-2836 747.7549,-2836 753.7549,-2836 759.7549,-2842 759.7549,-2848 759.7549,-2848 759.7549,-3004 759.7549,-3004 759.7549,-3010 753.7549,-3016 747.7549,-3016 747.7549,-3016 597.7549,-3016 597.7549,-3016 591.7549,-3016 585.7549,-3010 585.7549,-3004 585.7549,-3004 585.7549,-2848 585.7549,-2848 585.7549,-2842 591.7549,-2836 597.7549,-2836"/>
-<text text-anchor="middle" x="672.7549" y="-3003.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Tasks</text>
+<title>cluster_\Firesphere\SolrSearch\Stores</title>
+<path fill="none" stroke="#c0c0c0" d="M617.7549,-2028C617.7549,-2028 727.7549,-2028 727.7549,-2028 733.7549,-2028 739.7549,-2034 739.7549,-2040 739.7549,-2040 739.7549,-2142 739.7549,-2142 739.7549,-2148 733.7549,-2154 727.7549,-2154 727.7549,-2154 617.7549,-2154 617.7549,-2154 611.7549,-2154 605.7549,-2148 605.7549,-2142 605.7549,-2142 605.7549,-2040 605.7549,-2040 605.7549,-2034 611.7549,-2028 617.7549,-2028"/>
+<text text-anchor="middle" x="672.7549" y="-2141.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Stores</text>
 </g>
 <g id="clust13" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Stores</title>
-<path fill="none" stroke="#c0c0c0" d="M617.7549,-3024C617.7549,-3024 727.7549,-3024 727.7549,-3024 733.7549,-3024 739.7549,-3030 739.7549,-3036 739.7549,-3036 739.7549,-3138 739.7549,-3138 739.7549,-3144 733.7549,-3150 727.7549,-3150 727.7549,-3150 617.7549,-3150 617.7549,-3150 611.7549,-3150 605.7549,-3144 605.7549,-3138 605.7549,-3138 605.7549,-3036 605.7549,-3036 605.7549,-3030 611.7549,-3024 617.7549,-3024"/>
-<text text-anchor="middle" x="672.7549" y="-3137.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Stores</text>
+<title>cluster_\Firesphere\SolrSearch\Helpers</title>
+<path fill="none" stroke="#c0c0c0" d="M624.7549,-1356C624.7549,-1356 720.7549,-1356 720.7549,-1356 726.7549,-1356 732.7549,-1362 732.7549,-1368 732.7549,-1368 732.7549,-1632 732.7549,-1632 732.7549,-1638 726.7549,-1644 720.7549,-1644 720.7549,-1644 624.7549,-1644 624.7549,-1644 618.7549,-1644 612.7549,-1638 612.7549,-1632 612.7549,-1632 612.7549,-1368 612.7549,-1368 612.7549,-1362 618.7549,-1356 624.7549,-1356"/>
+<text text-anchor="middle" x="672.7549" y="-1631.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Helpers</text>
 </g>
 <g id="clust14" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Interfaces</title>
-<path fill="none" stroke="#c0c0c0" d="M189.1275,-3051C189.1275,-3051 319.1275,-3051 319.1275,-3051 325.1275,-3051 331.1275,-3057 331.1275,-3063 331.1275,-3063 331.1275,-3165 331.1275,-3165 331.1275,-3171 325.1275,-3177 319.1275,-3177 319.1275,-3177 189.1275,-3177 189.1275,-3177 183.1275,-3177 177.1275,-3171 177.1275,-3165 177.1275,-3165 177.1275,-3063 177.1275,-3063 177.1275,-3057 183.1275,-3051 189.1275,-3051"/>
-<text text-anchor="middle" x="254.1275" y="-3164.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Interfaces</text>
+<title>cluster_\Firesphere\SolrSearch\Forms</title>
+<path fill="none" stroke="#c0c0c0" d="M634.7549,-1276C634.7549,-1276 710.7549,-1276 710.7549,-1276 716.7549,-1276 722.7549,-1282 722.7549,-1288 722.7549,-1288 722.7549,-1336 722.7549,-1336 722.7549,-1342 716.7549,-1348 710.7549,-1348 710.7549,-1348 634.7549,-1348 634.7549,-1348 628.7549,-1348 622.7549,-1342 622.7549,-1336 622.7549,-1336 622.7549,-1288 622.7549,-1288 622.7549,-1282 628.7549,-1276 634.7549,-1276"/>
+<text text-anchor="middle" x="672.7549" y="-1335.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Forms</text>
 </g>
 <g id="clust15" class="cluster">
 <title>cluster_\Firesphere\SolrSearch\Factories</title>
-<path fill="none" stroke="#c0c0c0" d="M597.7549,-2702C597.7549,-2702 747.7549,-2702 747.7549,-2702 753.7549,-2702 759.7549,-2708 759.7549,-2714 759.7549,-2714 759.7549,-2816 759.7549,-2816 759.7549,-2822 753.7549,-2828 747.7549,-2828 747.7549,-2828 597.7549,-2828 597.7549,-2828 591.7549,-2828 585.7549,-2822 585.7549,-2816 585.7549,-2816 585.7549,-2714 585.7549,-2714 585.7549,-2708 591.7549,-2702 597.7549,-2702"/>
-<text text-anchor="middle" x="672.7549" y="-2815.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Factories</text>
+<path fill="none" stroke="#c0c0c0" d="M597.7549,-1142C597.7549,-1142 747.7549,-1142 747.7549,-1142 753.7549,-1142 759.7549,-1148 759.7549,-1154 759.7549,-1154 759.7549,-1256 759.7549,-1256 759.7549,-1262 753.7549,-1268 747.7549,-1268 747.7549,-1268 597.7549,-1268 597.7549,-1268 591.7549,-1268 585.7549,-1262 585.7549,-1256 585.7549,-1256 585.7549,-1154 585.7549,-1154 585.7549,-1148 591.7549,-1142 597.7549,-1142"/>
+<text text-anchor="middle" x="672.7549" y="-1255.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Factories</text>
 </g>
 <g id="clust16" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Jobs</title>
-<path fill="none" stroke="#c0c0c0" d="M600.7549,-2514C600.7549,-2514 744.7549,-2514 744.7549,-2514 750.7549,-2514 756.7549,-2520 756.7549,-2526 756.7549,-2526 756.7549,-2682 756.7549,-2682 756.7549,-2688 750.7549,-2694 744.7549,-2694 744.7549,-2694 600.7549,-2694 600.7549,-2694 594.7549,-2694 588.7549,-2688 588.7549,-2682 588.7549,-2682 588.7549,-2526 588.7549,-2526 588.7549,-2520 594.7549,-2514 600.7549,-2514"/>
-<text text-anchor="middle" x="672.7549" y="-2681.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Jobs</text>
+<title>cluster_\Firesphere\SolrSearch\Admins</title>
+<path fill="none" stroke="#c0c0c0" d="M631.2549,-1062C631.2549,-1062 714.2549,-1062 714.2549,-1062 720.2549,-1062 726.2549,-1068 726.2549,-1074 726.2549,-1074 726.2549,-1122 726.2549,-1122 726.2549,-1128 720.2549,-1134 714.2549,-1134 714.2549,-1134 631.2549,-1134 631.2549,-1134 625.2549,-1134 619.2549,-1128 619.2549,-1122 619.2549,-1122 619.2549,-1074 619.2549,-1074 619.2549,-1068 625.2549,-1062 631.2549,-1062"/>
+<text text-anchor="middle" x="672.7549" y="-1121.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Admins</text>
 </g>
 <g id="clust17" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Queries</title>
-<path fill="none" stroke="#c0c0c0" d="M638.2549,-2434C638.2549,-2434 707.2549,-2434 707.2549,-2434 713.2549,-2434 719.2549,-2440 719.2549,-2446 719.2549,-2446 719.2549,-2494 719.2549,-2494 719.2549,-2500 713.2549,-2506 707.2549,-2506 707.2549,-2506 638.2549,-2506 638.2549,-2506 632.2549,-2506 626.2549,-2500 626.2549,-2494 626.2549,-2494 626.2549,-2446 626.2549,-2446 626.2549,-2440 632.2549,-2434 638.2549,-2434"/>
-<text text-anchor="middle" x="672.7549" y="-2493.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Queries</text>
+<title>cluster_\Firesphere\SolrSearch\Results</title>
+<path fill="none" stroke="#c0c0c0" d="M627.7549,-982C627.7549,-982 717.7549,-982 717.7549,-982 723.7549,-982 729.7549,-988 729.7549,-994 729.7549,-994 729.7549,-1042 729.7549,-1042 729.7549,-1048 723.7549,-1054 717.7549,-1054 717.7549,-1054 627.7549,-1054 627.7549,-1054 621.7549,-1054 615.7549,-1048 615.7549,-1042 615.7549,-1042 615.7549,-994 615.7549,-994 615.7549,-988 621.7549,-982 627.7549,-982"/>
+<text text-anchor="middle" x="672.7549" y="-1041.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Results</text>
 </g>
 <g id="clust18" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Models</title>
-<path fill="none" stroke="#c0c0c0" d="M624.7549,-2246C624.7549,-2246 720.7549,-2246 720.7549,-2246 726.7549,-2246 732.7549,-2252 732.7549,-2258 732.7549,-2258 732.7549,-2414 732.7549,-2414 732.7549,-2420 726.7549,-2426 720.7549,-2426 720.7549,-2426 624.7549,-2426 624.7549,-2426 618.7549,-2426 612.7549,-2420 612.7549,-2414 612.7549,-2414 612.7549,-2258 612.7549,-2258 612.7549,-2252 618.7549,-2246 624.7549,-2246"/>
-<text text-anchor="middle" x="672.7549" y="-2413.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Models</text>
+<title>cluster_\Firesphere\SolrSearch\Tasks</title>
+<path fill="none" stroke="#c0c0c0" d="M597.7549,-714C597.7549,-714 747.7549,-714 747.7549,-714 753.7549,-714 759.7549,-720 759.7549,-726 759.7549,-726 759.7549,-882 759.7549,-882 759.7549,-888 753.7549,-894 747.7549,-894 747.7549,-894 597.7549,-894 597.7549,-894 591.7549,-894 585.7549,-888 585.7549,-882 585.7549,-882 585.7549,-726 585.7549,-726 585.7549,-720 591.7549,-714 597.7549,-714"/>
+<text text-anchor="middle" x="672.7549" y="-881.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Tasks</text>
 </g>
 <g id="clust19" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Results</title>
-<path fill="none" stroke="#c0c0c0" d="M627.7549,-2166C627.7549,-2166 717.7549,-2166 717.7549,-2166 723.7549,-2166 729.7549,-2172 729.7549,-2178 729.7549,-2178 729.7549,-2226 729.7549,-2226 729.7549,-2232 723.7549,-2238 717.7549,-2238 717.7549,-2238 627.7549,-2238 627.7549,-2238 621.7549,-2238 615.7549,-2232 615.7549,-2226 615.7549,-2226 615.7549,-2178 615.7549,-2178 615.7549,-2172 621.7549,-2166 627.7549,-2166"/>
-<text text-anchor="middle" x="672.7549" y="-2225.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Results</text>
+<title>cluster_\Firesphere\SolrSearch\Extensions</title>
+<path fill="none" stroke="#c0c0c0" d="M604.2549,-580C604.2549,-580 741.2549,-580 741.2549,-580 747.2549,-580 753.2549,-586 753.2549,-592 753.2549,-592 753.2549,-694 753.2549,-694 753.2549,-700 747.2549,-706 741.2549,-706 741.2549,-706 604.2549,-706 604.2549,-706 598.2549,-706 592.2549,-700 592.2549,-694 592.2549,-694 592.2549,-592 592.2549,-592 592.2549,-586 598.2549,-580 604.2549,-580"/>
+<text text-anchor="middle" x="672.7549" y="-693.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Extensions</text>
 </g>
 <g id="clust20" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Extensions</title>
-<path fill="none" stroke="#c0c0c0" d="M604.2549,-2032C604.2549,-2032 741.2549,-2032 741.2549,-2032 747.2549,-2032 753.2549,-2038 753.2549,-2044 753.2549,-2044 753.2549,-2146 753.2549,-2146 753.2549,-2152 747.2549,-2158 741.2549,-2158 741.2549,-2158 604.2549,-2158 604.2549,-2158 598.2549,-2158 592.2549,-2152 592.2549,-2146 592.2549,-2146 592.2549,-2044 592.2549,-2044 592.2549,-2038 598.2549,-2032 604.2549,-2032"/>
-<text text-anchor="middle" x="672.7549" y="-2145.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Extensions</text>
+<title>cluster_\Firesphere\SolrSearch\Interfaces</title>
+<path fill="none" stroke="#c0c0c0" d="M189.1275,-2055C189.1275,-2055 319.1275,-2055 319.1275,-2055 325.1275,-2055 331.1275,-2061 331.1275,-2067 331.1275,-2067 331.1275,-2169 331.1275,-2169 331.1275,-2175 325.1275,-2181 319.1275,-2181 319.1275,-2181 189.1275,-2181 189.1275,-2181 183.1275,-2181 177.1275,-2175 177.1275,-2169 177.1275,-2169 177.1275,-2067 177.1275,-2067 177.1275,-2061 183.1275,-2055 189.1275,-2055"/>
+<text text-anchor="middle" x="254.1275" y="-2168.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Interfaces</text>
 </g>
 <g id="clust21" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Traits</title>
-<path fill="none" stroke="#c0c0c0" d="M584.2549,-1196C584.2549,-1196 761.2549,-1196 761.2549,-1196 767.2549,-1196 773.2549,-1202 773.2549,-1208 773.2549,-1208 773.2549,-2012 773.2549,-2012 773.2549,-2018 767.2549,-2024 761.2549,-2024 761.2549,-2024 584.2549,-2024 584.2549,-2024 578.2549,-2024 572.2549,-2018 572.2549,-2012 572.2549,-2012 572.2549,-1208 572.2549,-1208 572.2549,-1202 578.2549,-1196 584.2549,-1196"/>
-<text text-anchor="middle" x="672.7549" y="-2011.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Traits</text>
+<title>cluster_\Firesphere\SolrSearch\Fluent</title>
+<path fill="none" stroke="#c0c0c0" d="M617.7549,-902C617.7549,-902 727.7549,-902 727.7549,-902 733.7549,-902 739.7549,-908 739.7549,-914 739.7549,-914 739.7549,-962 739.7549,-962 739.7549,-968 733.7549,-974 727.7549,-974 727.7549,-974 617.7549,-974 617.7549,-974 611.7549,-974 605.7549,-968 605.7549,-962 605.7549,-962 605.7549,-914 605.7549,-914 605.7549,-908 611.7549,-902 617.7549,-902"/>
+<text text-anchor="middle" x="672.7549" y="-961.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Fluent</text>
 </g>
 <g id="clust22" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Admins</title>
-<path fill="none" stroke="#c0c0c0" d="M631.2549,-1116C631.2549,-1116 714.2549,-1116 714.2549,-1116 720.2549,-1116 726.2549,-1122 726.2549,-1128 726.2549,-1128 726.2549,-1176 726.2549,-1176 726.2549,-1182 720.2549,-1188 714.2549,-1188 714.2549,-1188 631.2549,-1188 631.2549,-1188 625.2549,-1188 619.2549,-1182 619.2549,-1176 619.2549,-1176 619.2549,-1128 619.2549,-1128 619.2549,-1122 625.2549,-1116 631.2549,-1116"/>
-<text text-anchor="middle" x="672.7549" y="-1175.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Admins</text>
-</g>
-<g id="clust23" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Helpers</title>
-<path fill="none" stroke="#c0c0c0" d="M624.7549,-820C624.7549,-820 720.7549,-820 720.7549,-820 726.7549,-820 732.7549,-826 732.7549,-832 732.7549,-832 732.7549,-1096 732.7549,-1096 732.7549,-1102 726.7549,-1108 720.7549,-1108 720.7549,-1108 624.7549,-1108 624.7549,-1108 618.7549,-1108 612.7549,-1102 612.7549,-1096 612.7549,-1096 612.7549,-832 612.7549,-832 612.7549,-826 618.7549,-820 624.7549,-820"/>
-<text text-anchor="middle" x="672.7549" y="-1095.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Helpers</text>
-</g>
-<g id="clust24" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Forms</title>
-<path fill="none" stroke="#c0c0c0" d="M634.7549,-740C634.7549,-740 710.7549,-740 710.7549,-740 716.7549,-740 722.7549,-746 722.7549,-752 722.7549,-752 722.7549,-800 722.7549,-800 722.7549,-806 716.7549,-812 710.7549,-812 710.7549,-812 634.7549,-812 634.7549,-812 628.7549,-812 622.7549,-806 622.7549,-800 622.7549,-800 622.7549,-752 622.7549,-752 622.7549,-746 628.7549,-740 634.7549,-740"/>
-<text text-anchor="middle" x="672.7549" y="-799.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Forms</text>
-</g>
-<g id="clust25" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\States</title>
-<path fill="none" stroke="#c0c0c0" d="M634.7549,-660C634.7549,-660 710.7549,-660 710.7549,-660 716.7549,-660 722.7549,-666 722.7549,-672 722.7549,-672 722.7549,-720 722.7549,-720 722.7549,-726 716.7549,-732 710.7549,-732 710.7549,-732 634.7549,-732 634.7549,-732 628.7549,-732 622.7549,-726 622.7549,-720 622.7549,-720 622.7549,-672 622.7549,-672 622.7549,-666 628.7549,-660 634.7549,-660"/>
-<text text-anchor="middle" x="672.7549" y="-719.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">States</text>
-</g>
-<g id="clust26" class="cluster">
-<title>cluster_\Firesphere\SolrSearch\Fluent</title>
-<path fill="none" stroke="#c0c0c0" d="M617.7549,-580C617.7549,-580 727.7549,-580 727.7549,-580 733.7549,-580 739.7549,-586 739.7549,-592 739.7549,-592 739.7549,-640 739.7549,-640 739.7549,-646 733.7549,-652 727.7549,-652 727.7549,-652 617.7549,-652 617.7549,-652 611.7549,-652 605.7549,-646 605.7549,-640 605.7549,-640 605.7549,-592 605.7549,-592 605.7549,-586 611.7549,-580 617.7549,-580"/>
-<text text-anchor="middle" x="672.7549" y="-639.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Fluent</text>
-</g>
-<g id="clust27" class="cluster">
 <title>cluster_\Firesphere\SolrSearch\Subsites</title>
 <path fill="none" stroke="#c0c0c0" d="M611.2549,-500C611.2549,-500 734.2549,-500 734.2549,-500 740.2549,-500 746.2549,-506 746.2549,-512 746.2549,-512 746.2549,-560 746.2549,-560 746.2549,-566 740.2549,-572 734.2549,-572 734.2549,-572 611.2549,-572 611.2549,-572 605.2549,-572 599.2549,-566 599.2549,-560 599.2549,-560 599.2549,-512 599.2549,-512 599.2549,-506 605.2549,-500 611.2549,-500"/>
 <text text-anchor="middle" x="672.7549" y="-559.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Subsites</text>
 </g>
-<!-- \\SilverStripe\\FullTextSearch\\Solr\\Solr -->
-<g id="node1" class="node">
-<title>\\SilverStripe\\FullTextSearch\\Solr\\Solr</title>
-<polygon fill="none" stroke="#000000" points="909.7549,-2948 855.7549,-2948 855.7549,-2912 909.7549,-2912 909.7549,-2948"/>
-<text text-anchor="middle" x="882.7549" y="-2927.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">Solr</text>
+<g id="clust23" class="cluster">
+<title>cluster_\SilverStripe</title>
+<path fill="none" stroke="#c0c0c0" d="M817.2549,-2555C817.2549,-2555 948.2549,-2555 948.2549,-2555 954.2549,-2555 960.2549,-2561 960.2549,-2567 960.2549,-2567 960.2549,-2857 960.2549,-2857 960.2549,-2863 954.2549,-2869 948.2549,-2869 948.2549,-2869 817.2549,-2869 817.2549,-2869 811.2549,-2869 805.2549,-2863 805.2549,-2857 805.2549,-2857 805.2549,-2567 805.2549,-2567 805.2549,-2561 811.2549,-2555 817.2549,-2555"/>
+<text text-anchor="middle" x="882.7549" y="-2856.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">SilverStripe</text>
 </g>
-<!-- \\SilverStripe\\FullTextSearch\\Solr\\SolrIndex -->
-<g id="node2" class="node">
-<title>\\SilverStripe\\FullTextSearch\\Solr\\SolrIndex</title>
-<polygon fill="none" stroke="#000000" points="924.7549,-2894 840.7549,-2894 840.7549,-2858 924.7549,-2858 924.7549,-2894"/>
-<text text-anchor="start" x="848.7549" y="-2879.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
-<text text-anchor="start" x="852.2549" y="-2867.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrIndex</text>
+<g id="clust24" class="cluster">
+<title>cluster_\SilverStripe\FullTextSearch</title>
+<path fill="none" stroke="#c0c0c0" d="M825.2549,-2563C825.2549,-2563 940.2549,-2563 940.2549,-2563 946.2549,-2563 952.2549,-2569 952.2549,-2575 952.2549,-2575 952.2549,-2829 952.2549,-2829 952.2549,-2835 946.2549,-2841 940.2549,-2841 940.2549,-2841 825.2549,-2841 825.2549,-2841 819.2549,-2841 813.2549,-2835 813.2549,-2829 813.2549,-2829 813.2549,-2575 813.2549,-2575 813.2549,-2569 819.2549,-2563 825.2549,-2563"/>
+<text text-anchor="middle" x="882.7549" y="-2828.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">FullTextSearch</text>
 </g>
-<!-- \\Firesphere\\SolrSearch\\Indexes\\BaseIndex -->
-<g id="node7" class="node">
-<title>\\Firesphere\\SolrSearch\\Indexes\\BaseIndex</title>
-<polygon fill="none" stroke="#000000" points="714.7549,-3202 630.7549,-3202 630.7549,-3166 714.7549,-3166 714.7549,-3202"/>
-<text text-anchor="start" x="638.7549" y="-3187.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
-<text text-anchor="start" x="642.2549" y="-3175.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">BaseIndex</text>
+<g id="clust25" class="cluster">
+<title>cluster_\SilverStripe\FullTextSearch\Solr</title>
+<path fill="none" stroke="#c0c0c0" d="M844.7549,-2687C844.7549,-2687 920.7549,-2687 920.7549,-2687 926.7549,-2687 932.7549,-2693 932.7549,-2699 932.7549,-2699 932.7549,-2801 932.7549,-2801 932.7549,-2807 926.7549,-2813 920.7549,-2813 920.7549,-2813 844.7549,-2813 844.7549,-2813 838.7549,-2813 832.7549,-2807 832.7549,-2801 832.7549,-2801 832.7549,-2699 832.7549,-2699 832.7549,-2693 838.7549,-2687 844.7549,-2687"/>
+<text text-anchor="middle" x="882.7549" y="-2800.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Solr</text>
 </g>
-<!-- \\SilverStripe\\FullTextSearch\\Solr\\SolrIndex&#45;&gt;\\Firesphere\\SolrSearch\\Indexes\\BaseIndex -->
-<g id="edge2" class="edge">
-<title>\\SilverStripe\\FullTextSearch\\Solr\\SolrIndex&#45;&gt;\\Firesphere\\SolrSearch\\Indexes\\BaseIndex</title>
-<path fill="none" stroke="#000000" d="M840.6884,-2881.3353C827.3103,-2885.1847 813.787,-2891.7675 805.2549,-2903 771.4478,-2947.5071 824.8837,-3110.9374 789.2549,-3154 773.714,-3172.7834 748.1247,-3180.6748 724.8813,-3183.7018"/>
-<polygon fill="none" stroke="#000000" points="724.3451,-3180.2384 714.7567,-3184.7455 725.063,-3187.2015 724.3451,-3180.2384"/>
+<g id="clust26" class="cluster">
+<title>cluster_\SilverStripe\FullTextSearch\Search</title>
+<path fill="none" stroke="#c0c0c0" d="M833.2549,-2571C833.2549,-2571 932.2549,-2571 932.2549,-2571 938.2549,-2571 944.2549,-2577 944.2549,-2583 944.2549,-2583 944.2549,-2667 944.2549,-2667 944.2549,-2673 938.2549,-2679 932.2549,-2679 932.2549,-2679 833.2549,-2679 833.2549,-2679 827.2549,-2679 821.2549,-2673 821.2549,-2667 821.2549,-2667 821.2549,-2583 821.2549,-2583 821.2549,-2577 827.2549,-2571 833.2549,-2571"/>
+<text text-anchor="middle" x="882.7549" y="-2666.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Search</text>
 </g>
-<!-- \\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery -->
-<g id="node3" class="node">
-<title>\\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery</title>
-<polygon fill="none" stroke="#000000" points="928.2549,-2786 837.2549,-2786 837.2549,-2750 928.2549,-2750 928.2549,-2786"/>
-<text text-anchor="middle" x="882.7549" y="-2765.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchQuery</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Queries\\BaseQuery -->
-<g id="node20" class="node">
-<title>\\Firesphere\\SolrSearch\\Queries\\BaseQuery</title>
-<polygon fill="none" stroke="#000000" points="711.2549,-2478 634.2549,-2478 634.2549,-2442 711.2549,-2442 711.2549,-2478"/>
-<text text-anchor="middle" x="672.7549" y="-2457.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">BaseQuery</text>
-</g>
-<!-- \\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery&#45;&gt;\\Firesphere\\SolrSearch\\Queries\\BaseQuery -->
-<g id="edge3" class="edge">
-<title>\\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery&#45;&gt;\\Firesphere\\SolrSearch\\Queries\\BaseQuery</title>
-<path fill="none" stroke="#000000" d="M881.0829,-2749.8178C875.9227,-2703.7418 856.2939,-2581.0252 789.2549,-2510 771.1446,-2490.8129 744.4502,-2478.6315 721.1819,-2471.1019"/>
-<polygon fill="none" stroke="#000000" points="722.0399,-2467.7048 711.4546,-2468.1529 720.009,-2474.4037 722.0399,-2467.7048"/>
+<g id="clust27" class="cluster">
+<title>cluster_\SilverStripe\FullTextSearch\Search\Queries</title>
+<path fill="none" stroke="#c0c0c0" d="M841.2549,-2579C841.2549,-2579 924.2549,-2579 924.2549,-2579 930.2549,-2579 936.2549,-2585 936.2549,-2591 936.2549,-2591 936.2549,-2639 936.2549,-2639 936.2549,-2645 930.2549,-2651 924.2549,-2651 924.2549,-2651 841.2549,-2651 841.2549,-2651 835.2549,-2651 829.2549,-2645 829.2549,-2639 829.2549,-2639 829.2549,-2591 829.2549,-2591 829.2549,-2585 835.2549,-2579 841.2549,-2579"/>
+<text text-anchor="middle" x="882.7549" y="-2638.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Queries</text>
 </g>
 <!-- \\Firesphere\\SolrSearch\\Compat\\FulltextSearchExtension -->
-<g id="node4" class="node">
+<g id="node1" class="node">
 <title>\\Firesphere\\SolrSearch\\Compat\\FulltextSearchExtension</title>
 <polygon fill="none" stroke="#000000" points="758.7549,-3416 586.7549,-3416 586.7549,-3380 758.7549,-3380 758.7549,-3416"/>
 <text text-anchor="middle" x="672.7549" y="-3395.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">FulltextSearchExtension</text>
@@ -197,23 +153,23 @@
 <!-- \\SilverStripe\\Core\\Extension -->
 <g id="node52" class="node">
 <title>\\SilverStripe\\Core\\Extension</title>
-<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-180" rx="144.0747" ry="18"/>
-<text text-anchor="middle" x="254.1275" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Core\Extension</text>
+<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-126" rx="144.0747" ry="18"/>
+<text text-anchor="middle" x="254.1275" y="-122.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Core\Extension</text>
 </g>
 <!-- \\Firesphere\\SolrSearch\\Compat\\FulltextSearchExtension&#45;&gt;\\SilverStripe\\Core\\Extension -->
 <g id="edge1" class="edge">
 <title>\\Firesphere\\SolrSearch\\Compat\\FulltextSearchExtension&#45;&gt;\\SilverStripe\\Core\\Extension</title>
-<path fill="none" stroke="#000000" d="M586.4531,-3381.1706C581.065,-3377.5592 576.2245,-3373.2165 572.2549,-3368 465.889,-3228.2209 627.0279,-336.402 508.2549,-207 466.3676,-161.3642 394.5819,-157.4752 337.9686,-163.3712"/>
-<polygon fill="none" stroke="#000000" points="337.4759,-159.9048 327.945,-164.5321 338.2813,-166.8583 337.4759,-159.9048"/>
+<path fill="none" stroke="#000000" d="M586.4511,-3381.1721C581.0635,-3377.5604 576.2236,-3373.2172 572.2549,-3368 464.0969,-3225.8156 629.0337,-284.6322 508.2549,-153 466.3754,-107.3571 394.5889,-103.4688 337.9734,-109.3668"/>
+<polygon fill="none" stroke="#000000" points="337.4802,-105.9004 327.9494,-110.5281 338.2858,-112.8539 337.4802,-105.9004"/>
 </g>
 <!-- \\Firesphere\\SolrSearch\\Services\\SolrCoreService -->
-<g id="node5" class="node">
+<g id="node2" class="node">
 <title>\\Firesphere\\SolrSearch\\Services\\SolrCoreService</title>
 <polygon fill="none" stroke="#000000" points="731.7549,-3336 613.7549,-3336 613.7549,-3300 731.7549,-3300 731.7549,-3336"/>
 <text text-anchor="middle" x="672.7549" y="-3315.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrCoreService</text>
 </g>
 <!-- \\Firesphere\\SolrSearch\\Services\\SchemaService -->
-<g id="node6" class="node">
+<g id="node3" class="node">
 <title>\\Firesphere\\SolrSearch\\Services\\SchemaService</title>
 <polygon fill="none" stroke="#000000" points="724.7549,-3282 620.7549,-3282 620.7549,-3246 724.7549,-3246 724.7549,-3282"/>
 <text text-anchor="middle" x="672.7549" y="-3261.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SchemaService</text>
@@ -227,408 +183,421 @@
 <!-- \\Firesphere\\SolrSearch\\Services\\SchemaService&#45;&gt;\\SilverStripe\\View\\ViewableData -->
 <g id="edge4" class="edge">
 <title>\\Firesphere\\SolrSearch\\Services\\SchemaService&#45;&gt;\\SilverStripe\\View\\ViewableData</title>
-<path fill="none" stroke="#000000" d="M620.6136,-3260.0094C602.738,-3255.9679 584.2391,-3248.308 572.2549,-3234 478.3822,-3121.9248 280.2561,-765.0458 256.4779,-478.4587"/>
-<polygon fill="none" stroke="#000000" points="259.9327,-477.7682 255.6189,-468.0913 252.9566,-478.3462 259.9327,-477.7682"/>
+<path fill="none" stroke="#000000" d="M620.6715,-3260.5045C602.5792,-3256.5395 583.9192,-3248.8025 572.2549,-3234 490.7812,-3130.6064 522.1472,-2181.9015 508.2549,-2051 440.2387,-1410.1108 290.5536,-634.6902 259.7403,-478.2756"/>
+<polygon fill="none" stroke="#000000" points="263.1008,-477.2264 257.73,-468.0938 256.2334,-478.5824 263.1008,-477.2264"/>
 </g>
-<!-- \\Firesphere\\SolrSearch\\Tasks\\ClearDirtyClassesTask -->
-<g id="node8" class="node">
-<title>\\Firesphere\\SolrSearch\\Tasks\\ClearDirtyClassesTask</title>
-<polygon fill="none" stroke="#000000" points="751.7549,-2880 593.7549,-2880 593.7549,-2844 751.7549,-2844 751.7549,-2880"/>
-<text text-anchor="middle" x="672.7549" y="-2859.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ClearDirtyClassesTask</text>
-</g>
-<!-- \\SilverStripe\\Dev\\BuildTask -->
-<g id="node54" class="node">
-<title>\\SilverStripe\\Dev\\BuildTask</title>
-<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-396" rx="139.9756" ry="18"/>
-<text text-anchor="middle" x="254.1275" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Dev\BuildTask</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Tasks\\ClearDirtyClassesTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask -->
-<g id="edge5" class="edge">
-<title>\\Firesphere\\SolrSearch\\Tasks\\ClearDirtyClassesTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask</title>
-<path fill="none" stroke="#000000" d="M593.4948,-2849.28C585.2874,-2844.9978 577.9018,-2839.3723 572.2549,-2832 409.4357,-2619.4302 689.9378,-619.691 508.2549,-423 466.1527,-377.4199 394.2084,-373.5827 337.5928,-379.4831"/>
-<polygon fill="none" stroke="#000000" points="337.1012,-376.0166 327.5705,-380.6443 337.9069,-382.9701 337.1012,-376.0166"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Tasks\\SolrConfigureTask -->
-<g id="node9" class="node">
-<title>\\Firesphere\\SolrSearch\\Tasks\\SolrConfigureTask</title>
-<polygon fill="none" stroke="#000000" points="738.2549,-2988 607.2549,-2988 607.2549,-2952 738.2549,-2952 738.2549,-2988"/>
-<text text-anchor="middle" x="672.7549" y="-2967.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrConfigureTask</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Tasks\\SolrConfigureTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask -->
-<g id="edge6" class="edge">
-<title>\\Firesphere\\SolrSearch\\Tasks\\SolrConfigureTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask</title>
-<path fill="none" stroke="#000000" d="M607.2009,-2965.0522C593.7058,-2960.9049 580.9711,-2954.073 572.2549,-2943 485.6335,-2832.9574 603.219,-525.9294 508.2549,-423 466.1793,-377.3953 394.2326,-373.5603 337.6093,-379.468"/>
-<polygon fill="none" stroke="#000000" points="337.1157,-376.0016 327.5855,-380.6305 337.9222,-382.955 337.1157,-376.0016"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Tasks\\SolrIndexTask -->
-<g id="node10" class="node">
-<title>\\Firesphere\\SolrSearch\\Tasks\\SolrIndexTask</title>
-<polygon fill="none" stroke="#000000" points="724.7549,-2934 620.7549,-2934 620.7549,-2898 724.7549,-2898 724.7549,-2934"/>
-<text text-anchor="middle" x="672.7549" y="-2913.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrIndexTask</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Tasks\\SolrIndexTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask -->
-<g id="edge7" class="edge">
-<title>\\Firesphere\\SolrSearch\\Tasks\\SolrIndexTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask</title>
-<path fill="none" stroke="#000000" d="M620.5709,-2914.3099C602.4666,-2910.9148 583.8247,-2903.6898 572.2549,-2889 487.4585,-2781.3375 601.2134,-523.6994 508.2549,-423 466.1667,-377.407 394.2211,-373.571 337.6015,-379.4752"/>
-<polygon fill="none" stroke="#000000" points="337.1088,-376.0087 327.5784,-380.6371 337.9149,-382.9622 337.1088,-376.0087"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Stores\\FileConfigStore -->
-<g id="node11" class="node">
-<title>\\Firesphere\\SolrSearch\\Stores\\FileConfigStore</title>
-<polygon fill="none" stroke="#000000" points="731.7549,-3122 613.7549,-3122 613.7549,-3086 731.7549,-3086 731.7549,-3122"/>
-<text text-anchor="middle" x="672.7549" y="-3101.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">FileConfigStore</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Interfaces\\ConfigStore -->
-<g id="node14" class="node">
-<title>\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore</title>
-<polygon fill="none" stroke="#000000" points="299.6275,-3095 208.6275,-3095 208.6275,-3059 299.6275,-3059 299.6275,-3095"/>
-<text text-anchor="middle" x="254.1275" y="-3074.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ConfigStore</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Stores\\FileConfigStore&#45;&gt;\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore -->
-<g id="edge8" class="edge">
-<title>\\Firesphere\\SolrSearch\\Stores\\FileConfigStore&#45;&gt;\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M613.6637,-3100.1888C532.8854,-3094.9789 389.0185,-3085.7 309.9722,-3080.6018"/>
-<polygon fill="none" stroke="#000000" points="309.9333,-3077.0921 299.7287,-3079.9411 309.4827,-3084.0776 309.9333,-3077.0921"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Stores\\PostConfigStore -->
-<g id="node12" class="node">
-<title>\\Firesphere\\SolrSearch\\Stores\\PostConfigStore</title>
-<polygon fill="none" stroke="#000000" points="731.7549,-3068 613.7549,-3068 613.7549,-3032 731.7549,-3032 731.7549,-3068"/>
-<text text-anchor="middle" x="672.7549" y="-3047.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PostConfigStore</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Stores\\PostConfigStore&#45;&gt;\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore -->
-<g id="edge9" class="edge">
-<title>\\Firesphere\\SolrSearch\\Stores\\PostConfigStore&#45;&gt;\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M613.6637,-3053.8112C532.8854,-3059.0211 389.0185,-3068.3 309.9722,-3073.3982"/>
-<polygon fill="none" stroke="#000000" points="309.4827,-3069.9224 299.7287,-3074.0589 309.9333,-3076.9079 309.4827,-3069.9224"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Interfaces\\SiteStateInterface -->
-<g id="node13" class="node">
-<title>\\Firesphere\\SolrSearch\\Interfaces\\SiteStateInterface</title>
-<polygon fill="none" stroke="#000000" points="323.1275,-3149 185.1275,-3149 185.1275,-3113 323.1275,-3113 323.1275,-3149"/>
-<text text-anchor="middle" x="254.1275" y="-3128.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SiteStateInterface</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Factories\\DocumentFactory -->
-<g id="node15" class="node">
-<title>\\Firesphere\\SolrSearch\\Factories\\DocumentFactory</title>
-<polygon fill="none" stroke="#000000" points="731.7549,-2800 613.7549,-2800 613.7549,-2764 731.7549,-2764 731.7549,-2800"/>
-<text text-anchor="middle" x="672.7549" y="-2779.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DocumentFactory</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Factories\\QueryComponentFactory -->
-<g id="node16" class="node">
-<title>\\Firesphere\\SolrSearch\\Factories\\QueryComponentFactory</title>
-<polygon fill="none" stroke="#000000" points="751.7549,-2746 593.7549,-2746 593.7549,-2710 751.7549,-2710 751.7549,-2746"/>
-<text text-anchor="middle" x="672.7549" y="-2725.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">QueryComponentFactory</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Jobs\\SolrIndexJob -->
-<g id="node17" class="node">
-<title>\\Firesphere\\SolrSearch\\Jobs\\SolrIndexJob</title>
-<polygon fill="none" stroke="#000000" points="721.7549,-2558 623.7549,-2558 623.7549,-2522 721.7549,-2522 721.7549,-2558"/>
-<text text-anchor="middle" x="672.7549" y="-2537.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrIndexJob</text>
-</g>
-<!-- \\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob -->
-<g id="node55" class="node">
-<title>\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob</title>
-<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-342" rx="254.255" ry="18"/>
-<text text-anchor="middle" x="254.1275" y="-338.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symbiote\QueuedJobs\Services\AbstractQueuedJob</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Jobs\\SolrIndexJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob -->
-<g id="edge10" class="edge">
-<title>\\Firesphere\\SolrSearch\\Jobs\\SolrIndexJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob</title>
-<path fill="none" stroke="#000000" d="M623.6241,-2537.3021C604.5486,-2533.5821 584.4053,-2525.8086 572.2549,-2510 427.222,-2321.3014 670.031,-543.5571 508.2549,-369 469.6516,-327.3469 406.1194,-320.597 352.2382,-324.2603"/>
-<polygon fill="none" stroke="#000000" points="351.6354,-320.7975 341.9499,-325.0918 352.1994,-327.7748 351.6354,-320.7975"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Jobs\\SolrConfigureJob -->
-<g id="node18" class="node">
-<title>\\Firesphere\\SolrSearch\\Jobs\\SolrConfigureJob</title>
-<polygon fill="none" stroke="#000000" points="735.2549,-2666 610.2549,-2666 610.2549,-2630 735.2549,-2630 735.2549,-2666"/>
-<text text-anchor="middle" x="672.7549" y="-2645.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrConfigureJob</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Jobs\\SolrConfigureJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob -->
-<g id="edge11" class="edge">
-<title>\\Firesphere\\SolrSearch\\Jobs\\SolrConfigureJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob</title>
-<path fill="none" stroke="#000000" d="M610.0903,-2643.8708C595.5458,-2639.8283 581.6036,-2632.8397 572.2549,-2621 417.1269,-2424.5388 678.2758,-552.7243 508.2549,-369 469.6115,-327.242 405.9168,-320.5439 351.9647,-324.2593"/>
-<polygon fill="none" stroke="#000000" points="351.3456,-320.7981 341.6639,-325.1009 351.9157,-327.7749 351.3456,-320.7981"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Jobs\\ClearDirtyClassesJob -->
-<g id="node19" class="node">
-<title>\\Firesphere\\SolrSearch\\Jobs\\ClearDirtyClassesJob</title>
-<polygon fill="none" stroke="#000000" points="748.7549,-2612 596.7549,-2612 596.7549,-2576 748.7549,-2576 748.7549,-2612"/>
-<text text-anchor="middle" x="672.7549" y="-2591.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ClearDirtyClassesJob</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Jobs\\ClearDirtyClassesJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob -->
-<g id="edge12" class="edge">
-<title>\\Firesphere\\SolrSearch\\Jobs\\ClearDirtyClassesJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob</title>
-<path fill="none" stroke="#000000" d="M596.5572,-2585.0668C587.1633,-2580.9003 578.6395,-2575.0799 572.2549,-2567 420.7767,-2375.2986 674.2648,-548.2645 508.2549,-369 469.6677,-327.3319 406.1355,-320.582 352.2503,-324.2491"/>
-<polygon fill="none" stroke="#000000" points="351.6464,-320.7864 341.9612,-325.0814 352.2109,-327.7636 351.6464,-320.7864"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Models\\SearchSynonym -->
-<g id="node21" class="node">
-<title>\\Firesphere\\SolrSearch\\Models\\SearchSynonym</title>
-<polygon fill="none" stroke="#000000" points="724.7549,-2344 620.7549,-2344 620.7549,-2308 724.7549,-2308 724.7549,-2344"/>
-<text text-anchor="middle" x="672.7549" y="-2323.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchSynonym</text>
-</g>
-<!-- \\SilverStripe\\ORM\\DataObject -->
-<g id="node56" class="node">
-<title>\\SilverStripe\\ORM\\DataObject</title>
-<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-288" rx="152.9733" ry="18"/>
-<text text-anchor="middle" x="254.1275" y="-284.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\ORM\DataObject</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Models\\SearchSynonym&#45;&gt;\\SilverStripe\\ORM\\DataObject -->
-<g id="edge13" class="edge">
-<title>\\Firesphere\\SolrSearch\\Models\\SearchSynonym&#45;&gt;\\SilverStripe\\ORM\\DataObject</title>
-<path fill="none" stroke="#000000" d="M620.6201,-2324.271C602.5217,-2320.8713 583.871,-2313.6532 572.2549,-2299 435.2403,-2126.161 658.37,-476.5914 508.2549,-315 466.6642,-270.2297 396.2676,-265.8179 340.0994,-271.2969"/>
-<polygon fill="none" stroke="#000000" points="339.7062,-267.819 330.1454,-272.3842 340.4663,-274.7776 339.7062,-267.819"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Models\\SolrLog -->
-<g id="node22" class="node">
-<title>\\Firesphere\\SolrSearch\\Models\\SolrLog</title>
-<polygon fill="none" stroke="#000000" points="704.7549,-2290 640.7549,-2290 640.7549,-2254 704.7549,-2254 704.7549,-2290"/>
-<text text-anchor="middle" x="672.7549" y="-2269.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrLog</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Models\\SolrLog&#45;&gt;\\SilverStripe\\ORM\\DataObject -->
-<g id="edge14" class="edge">
-<title>\\Firesphere\\SolrSearch\\Models\\SolrLog&#45;&gt;\\SilverStripe\\ORM\\DataObject</title>
-<path fill="none" stroke="#000000" d="M640.5924,-2271.6766C617.652,-2269.5632 588.1568,-2262.6187 572.2549,-2242 441.4234,-2072.3614 654.1366,-471.8843 508.2549,-315 466.7141,-270.3262 396.4889,-265.8514 340.3744,-271.2816"/>
-<polygon fill="none" stroke="#000000" points="339.993,-267.8023 330.4287,-272.3603 340.7478,-274.7615 339.993,-267.8023"/>
-</g>
-<!-- \\SilverStripe\\Security\\PermissionProvider -->
-<g id="node57" class="node">
-<title>\\SilverStripe\\Security\\PermissionProvider</title>
-<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-234" rx="206.0634" ry="18"/>
-<text text-anchor="middle" x="254.1275" y="-230.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Security\PermissionProvider</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Models\\SolrLog&#45;&gt;\\SilverStripe\\Security\\PermissionProvider -->
-<g id="edge15" class="edge">
-<title>\\Firesphere\\SolrSearch\\Models\\SolrLog&#45;&gt;\\SilverStripe\\Security\\PermissionProvider</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M640.587,-2271.6808C617.6438,-2269.5696 588.1475,-2262.6259 572.2549,-2242 437.84,-2067.552 658.1472,-422.3436 508.2549,-261 468.526,-218.236 402.5149,-212.295 347.7278,-216.6237"/>
-<polygon fill="none" stroke="#000000" points="347.2776,-213.1501 337.6373,-217.5449 347.9141,-220.1211 347.2776,-213.1501"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Models\\DirtyClass -->
-<g id="node23" class="node">
-<title>\\Firesphere\\SolrSearch\\Models\\DirtyClass</title>
-<polygon fill="none" stroke="#000000" points="714.7549,-2398 630.7549,-2398 630.7549,-2362 714.7549,-2362 714.7549,-2398"/>
-<text text-anchor="middle" x="672.7549" y="-2377.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DirtyClass</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Models\\DirtyClass&#45;&gt;\\SilverStripe\\ORM\\DataObject -->
-<g id="edge16" class="edge">
-<title>\\Firesphere\\SolrSearch\\Models\\DirtyClass&#45;&gt;\\SilverStripe\\ORM\\DataObject</title>
-<path fill="none" stroke="#000000" d="M630.7341,-2379.8149C609.7915,-2377.3333 586.0521,-2370.4199 572.2549,-2353 431.5907,-2175.4014 662.3807,-481.0508 508.2549,-315 466.6833,-270.212 396.2853,-265.8015 340.1117,-271.2856"/>
-<polygon fill="none" stroke="#000000" points="339.717,-267.8078 330.1566,-272.3738 340.4777,-274.7663 339.717,-267.8078"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Results\\SearchResult -->
-<g id="node24" class="node">
-<title>\\Firesphere\\SolrSearch\\Results\\SearchResult</title>
-<polygon fill="none" stroke="#000000" points="721.7549,-2210 623.7549,-2210 623.7549,-2174 721.7549,-2174 721.7549,-2210"/>
-<text text-anchor="middle" x="672.7549" y="-2189.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchResult</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Extensions\\DataObjectExtension -->
-<g id="node25" class="node">
-<title>\\Firesphere\\SolrSearch\\Extensions\\DataObjectExtension</title>
-<polygon fill="none" stroke="#000000" points="745.2549,-2076 600.2549,-2076 600.2549,-2040 745.2549,-2040 745.2549,-2076"/>
-<text text-anchor="middle" x="672.7549" y="-2055.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DataObjectExtension</text>
-</g>
-<!-- \\SilverStripe\\ORM\\DataExtension -->
-<g id="node58" class="node">
-<title>\\SilverStripe\\ORM\\DataExtension</title>
-<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-126" rx="167.8704" ry="18"/>
-<text text-anchor="middle" x="254.1275" y="-122.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\ORM\DataExtension</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Extensions\\DataObjectExtension&#45;&gt;\\SilverStripe\\ORM\\DataExtension -->
-<g id="edge17" class="edge">
-<title>\\Firesphere\\SolrSearch\\Extensions\\DataObjectExtension&#45;&gt;\\SilverStripe\\ORM\\DataExtension</title>
-<path fill="none" stroke="#000000" d="M600.2273,-2048.3602C589.3719,-2043.8132 579.4317,-2037.2967 572.2549,-2028 444.874,-1862.9926 650.2746,-305.5902 508.2549,-153 467.3488,-109.0492 398.6768,-104.0202 343.025,-109.0448"/>
-<polygon fill="none" stroke="#000000" points="342.386,-105.5919 332.7948,-110.0929 343.0995,-112.5554 342.386,-105.5919"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Extensions\\GridFieldExtension -->
-<g id="node26" class="node">
-<title>\\Firesphere\\SolrSearch\\Extensions\\GridFieldExtension</title>
-<polygon fill="none" stroke="#000000" points="741.7549,-2130 603.7549,-2130 603.7549,-2094 741.7549,-2094 741.7549,-2130"/>
-<text text-anchor="middle" x="672.7549" y="-2109.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">GridFieldExtension</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Extensions\\GridFieldExtension&#45;&gt;\\SilverStripe\\Core\\Extension -->
-<g id="edge18" class="edge">
-<title>\\Firesphere\\SolrSearch\\Extensions\\GridFieldExtension&#45;&gt;\\SilverStripe\\Core\\Extension</title>
-<path fill="none" stroke="#000000" d="M603.6567,-2105.8155C591.5155,-2101.5946 580.2325,-2095.0447 572.2549,-2085 442.4041,-1921.5035 650.4974,-359.8379 508.2549,-207 466.3384,-161.9612 395.2644,-157.7942 338.9215,-163.4349"/>
-<polygon fill="none" stroke="#000000" points="338.4909,-159.9611 328.9416,-164.5503 339.2685,-166.9178 338.4909,-159.9611"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\GetSetSearchResolverTrait -->
-<g id="node27" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\GetSetSearchResolverTrait</title>
-<polygon fill="none" stroke="#000000" points="765.2549,-1996 580.2549,-1996 580.2549,-1960 765.2549,-1960 765.2549,-1996"/>
-<text text-anchor="middle" x="672.7549" y="-1975.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">GetSetSearchResolverTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\CoreAdminTrait -->
-<g id="node28" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\CoreAdminTrait</title>
-<polygon fill="none" stroke="#000000" points="728.2549,-1942 617.2549,-1942 617.2549,-1906 728.2549,-1906 728.2549,-1942"/>
-<text text-anchor="middle" x="672.7549" y="-1921.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CoreAdminTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\CoreServiceTrait -->
-<g id="node29" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\CoreServiceTrait</title>
-<polygon fill="none" stroke="#000000" points="735.2549,-1888 610.2549,-1888 610.2549,-1852 735.2549,-1852 735.2549,-1888"/>
-<text text-anchor="middle" x="672.7549" y="-1867.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CoreServiceTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\BaseIndexTrait -->
-<g id="node30" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\BaseIndexTrait</title>
-<polygon fill="none" stroke="#000000" points="728.2549,-1834 617.2549,-1834 617.2549,-1798 728.2549,-1798 728.2549,-1834"/>
-<text text-anchor="middle" x="672.7549" y="-1813.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">BaseIndexTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\LoggerTrait -->
-<g id="node31" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\LoggerTrait</title>
-<polygon fill="none" stroke="#000000" points="718.2549,-1780 627.2549,-1780 627.2549,-1744 718.2549,-1744 718.2549,-1780"/>
-<text text-anchor="middle" x="672.7549" y="-1759.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">LoggerTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\GetterSetterTrait -->
-<g id="node32" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\GetterSetterTrait</title>
-<polygon fill="none" stroke="#000000" points="738.2549,-1726 607.2549,-1726 607.2549,-1690 738.2549,-1690 738.2549,-1726"/>
-<text text-anchor="middle" x="672.7549" y="-1705.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">GetterSetterTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\SearchResultSetTrait -->
-<g id="node33" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\SearchResultSetTrait</title>
-<polygon fill="none" stroke="#000000" points="748.7549,-1672 596.7549,-1672 596.7549,-1636 748.7549,-1636 748.7549,-1672"/>
-<text text-anchor="middle" x="672.7549" y="-1651.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchResultSetTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\SearchResultGetTrait -->
-<g id="node34" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\SearchResultGetTrait</title>
-<polygon fill="none" stroke="#000000" points="748.7549,-1618 596.7549,-1618 596.7549,-1582 748.7549,-1582 748.7549,-1618"/>
-<text text-anchor="middle" x="672.7549" y="-1597.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchResultGetTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\GetSetSchemaServiceTrait -->
-<g id="node35" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\GetSetSchemaServiceTrait</title>
-<polygon fill="none" stroke="#000000" points="762.2549,-1564 583.2549,-1564 583.2549,-1528 762.2549,-1528 762.2549,-1564"/>
-<text text-anchor="middle" x="672.7549" y="-1543.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">GetSetSchemaServiceTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\DataResolveTrait -->
-<g id="node36" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\DataResolveTrait</title>
-<polygon fill="none" stroke="#000000" points="735.2549,-1510 610.2549,-1510 610.2549,-1474 735.2549,-1474 735.2549,-1510"/>
-<text text-anchor="middle" x="672.7549" y="-1489.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DataResolveTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\DocumentFactoryTrait -->
-<g id="node37" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\DocumentFactoryTrait</title>
-<polygon fill="none" stroke="#000000" points="748.7549,-1456 596.7549,-1456 596.7549,-1420 748.7549,-1420 748.7549,-1456"/>
-<text text-anchor="middle" x="672.7549" y="-1435.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DocumentFactoryTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\BaseQueryTrait -->
-<g id="node38" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\BaseQueryTrait</title>
-<polygon fill="none" stroke="#000000" points="728.2549,-1402 617.2549,-1402 617.2549,-1366 728.2549,-1366 728.2549,-1402"/>
-<text text-anchor="middle" x="672.7549" y="-1381.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">BaseQueryTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\QueryComponentFilterTrait -->
-<g id="node39" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\QueryComponentFilterTrait</title>
-<polygon fill="none" stroke="#000000" points="765.2549,-1348 580.2549,-1348 580.2549,-1312 765.2549,-1312 765.2549,-1348"/>
-<text text-anchor="middle" x="672.7549" y="-1327.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">QueryComponentFilterTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\QueryComponentFacetTrait -->
-<g id="node40" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\QueryComponentFacetTrait</title>
-<polygon fill="none" stroke="#000000" points="762.2549,-1294 583.2549,-1294 583.2549,-1258 762.2549,-1258 762.2549,-1294"/>
-<text text-anchor="middle" x="672.7549" y="-1273.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">QueryComponentFacetTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Traits\\QueryComponentBoostTrait -->
-<g id="node41" class="node">
-<title>\\Firesphere\\SolrSearch\\Traits\\QueryComponentBoostTrait</title>
-<polygon fill="none" stroke="#000000" points="762.2549,-1240 583.2549,-1240 583.2549,-1204 762.2549,-1204 762.2549,-1240"/>
-<text text-anchor="middle" x="672.7549" y="-1219.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">QueryComponentBoostTrait</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Admins\\SearchAdmin -->
-<g id="node42" class="node">
-<title>\\Firesphere\\SolrSearch\\Admins\\SearchAdmin</title>
-<polygon fill="none" stroke="#000000" points="718.2549,-1160 627.2549,-1160 627.2549,-1124 718.2549,-1124 718.2549,-1160"/>
-<text text-anchor="middle" x="672.7549" y="-1139.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchAdmin</text>
-</g>
-<!-- \\SilverStripe\\Admin\\ModelAdmin -->
-<g id="node59" class="node">
-<title>\\SilverStripe\\Admin\\ModelAdmin</title>
-<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-72" rx="165.1707" ry="18"/>
-<text text-anchor="middle" x="254.1275" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Admin\ModelAdmin</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Admins\\SearchAdmin&#45;&gt;\\SilverStripe\\Admin\\ModelAdmin -->
-<g id="edge19" class="edge">
-<title>\\Firesphere\\SolrSearch\\Admins\\SearchAdmin&#45;&gt;\\SilverStripe\\Admin\\ModelAdmin</title>
-<path fill="none" stroke="#000000" d="M626.9973,-1139.6833C607.082,-1136.1738 585.3462,-1128.4597 572.2549,-1112 431.8493,-935.468 664.3042,-261.8678 508.2549,-99 467.222,-56.1742 399.7477,-50.7122 344.6354,-55.2699"/>
-<polygon fill="none" stroke="#000000" points="344.1228,-51.8027 334.4977,-56.2308 344.7834,-58.7715 344.1228,-51.8027"/>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Helpers\\DataResolver -->
-<g id="node43" class="node">
-<title>\\Firesphere\\SolrSearch\\Helpers\\DataResolver</title>
-<polygon fill="none" stroke="#000000" points="721.7549,-1080 623.7549,-1080 623.7549,-1044 721.7549,-1044 721.7549,-1080"/>
-<text text-anchor="middle" x="672.7549" y="-1059.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DataResolver</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Helpers\\SolrLogger -->
-<g id="node44" class="node">
-<title>\\Firesphere\\SolrSearch\\Helpers\\SolrLogger</title>
-<polygon fill="none" stroke="#000000" points="714.7549,-1026 630.7549,-1026 630.7549,-990 714.7549,-990 714.7549,-1026"/>
-<text text-anchor="middle" x="672.7549" y="-1005.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrLogger</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Helpers\\FieldResolver -->
-<g id="node45" class="node">
-<title>\\Firesphere\\SolrSearch\\Helpers\\FieldResolver</title>
-<polygon fill="none" stroke="#000000" points="724.7549,-972 620.7549,-972 620.7549,-936 724.7549,-936 724.7549,-972"/>
-<text text-anchor="middle" x="672.7549" y="-951.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">FieldResolver</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Helpers\\Statics -->
-<g id="node46" class="node">
-<title>\\Firesphere\\SolrSearch\\Helpers\\Statics</title>
-<polygon fill="none" stroke="#000000" points="704.7549,-918 640.7549,-918 640.7549,-882 704.7549,-882 704.7549,-918"/>
-<text text-anchor="middle" x="672.7549" y="-897.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">Statics</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Helpers\\Synonyms -->
-<g id="node47" class="node">
-<title>\\Firesphere\\SolrSearch\\Helpers\\Synonyms</title>
-<polygon fill="none" stroke="#000000" points="708.2549,-864 637.2549,-864 637.2549,-828 708.2549,-828 708.2549,-864"/>
-<text text-anchor="middle" x="672.7549" y="-843.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">Synonyms</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Forms\\SearchForm -->
-<g id="node48" class="node">
-<title>\\Firesphere\\SolrSearch\\Forms\\SearchForm</title>
-<polygon fill="none" stroke="#000000" points="714.7549,-784 630.7549,-784 630.7549,-748 714.7549,-748 714.7549,-784"/>
-<text text-anchor="middle" x="672.7549" y="-763.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchForm</text>
-</g>
-<!-- \\SilverStripe\\Forms\\Form -->
-<g id="node60" class="node">
-<title>\\SilverStripe\\Forms\\Form</title>
-<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-18" rx="129.1772" ry="18"/>
-<text text-anchor="middle" x="254.1275" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Forms\Form</text>
-</g>
-<!-- \\Firesphere\\SolrSearch\\Forms\\SearchForm&#45;&gt;\\SilverStripe\\Forms\\Form -->
-<g id="edge20" class="edge">
-<title>\\Firesphere\\SolrSearch\\Forms\\SearchForm&#45;&gt;\\SilverStripe\\Forms\\Form</title>
-<path fill="none" stroke="#000000" d="M630.5483,-764.0689C609.8206,-760.8006 586.3358,-753.1819 572.2549,-736 474.5057,-616.7244 616.5617,-154.7781 508.2549,-45 465.2065,-1.3668 394.612,3.0359 338.7389,-2.1573"/>
-<polygon fill="none" stroke="#000000" points="338.0683,1.2917 328.4875,-3.2314 338.7978,-5.6702 338.0683,1.2917"/>
+<!-- \\Firesphere\\SolrSearch\\Indexes\\BaseIndex -->
+<g id="node4" class="node">
+<title>\\Firesphere\\SolrSearch\\Indexes\\BaseIndex</title>
+<polygon fill="none" stroke="#000000" points="714.7549,-3202 630.7549,-3202 630.7549,-3166 714.7549,-3166 714.7549,-3202"/>
+<text text-anchor="start" x="638.7549" y="-3187.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
+<text text-anchor="start" x="642.2549" y="-3175.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">BaseIndex</text>
 </g>
 <!-- \\Firesphere\\SolrSearch\\States\\SiteState -->
-<g id="node49" class="node">
+<g id="node5" class="node">
 <title>\\Firesphere\\SolrSearch\\States\\SiteState</title>
-<polygon fill="none" stroke="#000000" points="714.7549,-704 630.7549,-704 630.7549,-668 714.7549,-668 714.7549,-704"/>
-<text text-anchor="start" x="638.7549" y="-689.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
-<text text-anchor="start" x="642.2549" y="-677.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SiteState</text>
+<polygon fill="none" stroke="#000000" points="714.7549,-3122 630.7549,-3122 630.7549,-3086 714.7549,-3086 714.7549,-3122"/>
+<text text-anchor="start" x="638.7549" y="-3107.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
+<text text-anchor="start" x="642.2549" y="-3095.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SiteState</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\QueryComponentFacetTrait -->
+<g id="node6" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\QueryComponentFacetTrait</title>
+<polygon fill="none" stroke="#000000" points="762.2549,-3042 583.2549,-3042 583.2549,-3006 762.2549,-3006 762.2549,-3042"/>
+<text text-anchor="middle" x="672.7549" y="-3021.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">QueryComponentFacetTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\QueryComponentFilterTrait -->
+<g id="node7" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\QueryComponentFilterTrait</title>
+<polygon fill="none" stroke="#000000" points="765.2549,-2988 580.2549,-2988 580.2549,-2952 765.2549,-2952 765.2549,-2988"/>
+<text text-anchor="middle" x="672.7549" y="-2967.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">QueryComponentFilterTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\QueryComponentBoostTrait -->
+<g id="node8" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\QueryComponentBoostTrait</title>
+<polygon fill="none" stroke="#000000" points="762.2549,-2934 583.2549,-2934 583.2549,-2898 762.2549,-2898 762.2549,-2934"/>
+<text text-anchor="middle" x="672.7549" y="-2913.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">QueryComponentBoostTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\SearchResultGetTrait -->
+<g id="node9" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\SearchResultGetTrait</title>
+<polygon fill="none" stroke="#000000" points="748.7549,-2880 596.7549,-2880 596.7549,-2844 748.7549,-2844 748.7549,-2880"/>
+<text text-anchor="middle" x="672.7549" y="-2859.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchResultGetTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\SearchResultSetTrait -->
+<g id="node10" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\SearchResultSetTrait</title>
+<polygon fill="none" stroke="#000000" points="748.7549,-2826 596.7549,-2826 596.7549,-2790 748.7549,-2790 748.7549,-2826"/>
+<text text-anchor="middle" x="672.7549" y="-2805.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchResultSetTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\LoggerTrait -->
+<g id="node11" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\LoggerTrait</title>
+<polygon fill="none" stroke="#000000" points="718.2549,-2772 627.2549,-2772 627.2549,-2736 718.2549,-2736 718.2549,-2772"/>
+<text text-anchor="middle" x="672.7549" y="-2751.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">LoggerTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\GetSetSearchResolverTrait -->
+<g id="node12" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\GetSetSearchResolverTrait</title>
+<polygon fill="none" stroke="#000000" points="765.2549,-2718 580.2549,-2718 580.2549,-2682 765.2549,-2682 765.2549,-2718"/>
+<text text-anchor="middle" x="672.7549" y="-2697.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">GetSetSearchResolverTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\DataResolveTrait -->
+<g id="node13" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\DataResolveTrait</title>
+<polygon fill="none" stroke="#000000" points="735.2549,-2664 610.2549,-2664 610.2549,-2628 735.2549,-2628 735.2549,-2664"/>
+<text text-anchor="middle" x="672.7549" y="-2643.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DataResolveTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\BaseIndexTrait -->
+<g id="node14" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\BaseIndexTrait</title>
+<polygon fill="none" stroke="#000000" points="728.2549,-2610 617.2549,-2610 617.2549,-2574 728.2549,-2574 728.2549,-2610"/>
+<text text-anchor="middle" x="672.7549" y="-2589.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">BaseIndexTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\CoreServiceTrait -->
+<g id="node15" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\CoreServiceTrait</title>
+<polygon fill="none" stroke="#000000" points="735.2549,-2556 610.2549,-2556 610.2549,-2520 735.2549,-2520 735.2549,-2556"/>
+<text text-anchor="middle" x="672.7549" y="-2535.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CoreServiceTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\CoreAdminTrait -->
+<g id="node16" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\CoreAdminTrait</title>
+<polygon fill="none" stroke="#000000" points="728.2549,-2502 617.2549,-2502 617.2549,-2466 728.2549,-2466 728.2549,-2502"/>
+<text text-anchor="middle" x="672.7549" y="-2481.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CoreAdminTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\GetSetSchemaServiceTrait -->
+<g id="node17" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\GetSetSchemaServiceTrait</title>
+<polygon fill="none" stroke="#000000" points="762.2549,-2448 583.2549,-2448 583.2549,-2412 762.2549,-2412 762.2549,-2448"/>
+<text text-anchor="middle" x="672.7549" y="-2427.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">GetSetSchemaServiceTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\GetterSetterTrait -->
+<g id="node18" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\GetterSetterTrait</title>
+<polygon fill="none" stroke="#000000" points="738.2549,-2394 607.2549,-2394 607.2549,-2358 738.2549,-2358 738.2549,-2394"/>
+<text text-anchor="middle" x="672.7549" y="-2373.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">GetterSetterTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\BaseQueryTrait -->
+<g id="node19" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\BaseQueryTrait</title>
+<polygon fill="none" stroke="#000000" points="728.2549,-2340 617.2549,-2340 617.2549,-2304 728.2549,-2304 728.2549,-2340"/>
+<text text-anchor="middle" x="672.7549" y="-2319.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">BaseQueryTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Traits\\DocumentFactoryTrait -->
+<g id="node20" class="node">
+<title>\\Firesphere\\SolrSearch\\Traits\\DocumentFactoryTrait</title>
+<polygon fill="none" stroke="#000000" points="748.7549,-2286 596.7549,-2286 596.7549,-2250 748.7549,-2250 748.7549,-2286"/>
+<text text-anchor="middle" x="672.7549" y="-2265.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DocumentFactoryTrait</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Queries\\BaseQuery -->
+<g id="node21" class="node">
+<title>\\Firesphere\\SolrSearch\\Queries\\BaseQuery</title>
+<polygon fill="none" stroke="#000000" points="711.2549,-2206 634.2549,-2206 634.2549,-2170 711.2549,-2170 711.2549,-2206"/>
+<text text-anchor="middle" x="672.7549" y="-2185.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">BaseQuery</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Jobs\\ClearDirtyClassesJob -->
+<g id="node22" class="node">
+<title>\\Firesphere\\SolrSearch\\Jobs\\ClearDirtyClassesJob</title>
+<polygon fill="none" stroke="#000000" points="748.7549,-1884 596.7549,-1884 596.7549,-1848 748.7549,-1848 748.7549,-1884"/>
+<text text-anchor="middle" x="672.7549" y="-1863.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ClearDirtyClassesJob</text>
+</g>
+<!-- \\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob -->
+<g id="node54" class="node">
+<title>\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob</title>
+<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-396" rx="254.255" ry="18"/>
+<text text-anchor="middle" x="254.1275" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symbiote\QueuedJobs\Services\AbstractQueuedJob</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Jobs\\ClearDirtyClassesJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob -->
+<g id="edge5" class="edge">
+<title>\\Firesphere\\SolrSearch\\Jobs\\ClearDirtyClassesJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob</title>
+<path fill="none" stroke="#000000" d="M596.5633,-1854.6286C587.1686,-1850.205 578.6429,-1844.1803 572.2549,-1836 475.5266,-1712.1323 615.9676,-537.4445 508.2549,-423 469.7609,-382.1002 407.1961,-375.0479 353.7792,-378.3691"/>
+<polygon fill="none" stroke="#000000" points="353.2844,-374.8963 343.5741,-379.1343 353.8079,-381.8767 353.2844,-374.8963"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Jobs\\SolrIndexJob -->
+<g id="node23" class="node">
+<title>\\Firesphere\\SolrSearch\\Jobs\\SolrIndexJob</title>
+<polygon fill="none" stroke="#000000" points="721.7549,-1992 623.7549,-1992 623.7549,-1956 721.7549,-1956 721.7549,-1992"/>
+<text text-anchor="middle" x="672.7549" y="-1971.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrIndexJob</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Jobs\\SolrIndexJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob -->
+<g id="edge6" class="edge">
+<title>\\Firesphere\\SolrSearch\\Jobs\\SolrIndexJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob</title>
+<path fill="none" stroke="#000000" d="M623.5737,-1972.7222C604.6097,-1969.5489 584.5631,-1962.3723 572.2549,-1947 466.3254,-1814.7 624.209,-546.6082 508.2549,-423 469.757,-381.9609 407.032,-374.9578 353.5336,-378.3393"/>
+<polygon fill="none" stroke="#000000" points="353.0197,-374.8681 343.3138,-379.1161 353.5503,-381.848 353.0197,-374.8681"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Jobs\\SolrConfigureJob -->
+<g id="node24" class="node">
+<title>\\Firesphere\\SolrSearch\\Jobs\\SolrConfigureJob</title>
+<polygon fill="none" stroke="#000000" points="735.2549,-1938 610.2549,-1938 610.2549,-1902 735.2549,-1902 735.2549,-1938"/>
+<text text-anchor="middle" x="672.7549" y="-1917.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrConfigureJob</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Jobs\\SolrConfigureJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob -->
+<g id="edge7" class="edge">
+<title>\\Firesphere\\SolrSearch\\Jobs\\SolrConfigureJob&#45;&gt;\\Symbiote\\QueuedJobs\\Services\\AbstractQueuedJob</title>
+<path fill="none" stroke="#000000" d="M610.2116,-1915.7742C595.6659,-1911.7327 581.6927,-1904.7687 572.2549,-1893 469.9738,-1765.4581 620.1996,-542.1501 508.2549,-423 469.7255,-381.9906 407.0002,-374.9877 353.5095,-378.3619"/>
+<polygon fill="none" stroke="#000000" points="352.9977,-374.8906 343.2912,-379.1373 353.5274,-381.8705 352.9977,-374.8906"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Models\\SearchSynonym -->
+<g id="node25" class="node">
+<title>\\Firesphere\\SolrSearch\\Models\\SearchSynonym</title>
+<polygon fill="none" stroke="#000000" points="724.7549,-1750 620.7549,-1750 620.7549,-1714 724.7549,-1714 724.7549,-1750"/>
+<text text-anchor="middle" x="672.7549" y="-1729.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchSynonym</text>
+</g>
+<!-- \\SilverStripe\\ORM\\DataObject -->
+<g id="node55" class="node">
+<title>\\SilverStripe\\ORM\\DataObject</title>
+<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-342" rx="152.9733" ry="18"/>
+<text text-anchor="middle" x="254.1275" y="-338.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\ORM\DataObject</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Models\\SearchSynonym&#45;&gt;\\SilverStripe\\ORM\\DataObject -->
+<g id="edge8" class="edge">
+<title>\\Firesphere\\SolrSearch\\Models\\SearchSynonym&#45;&gt;\\SilverStripe\\ORM\\DataObject</title>
+<path fill="none" stroke="#000000" d="M620.7416,-1730.1739C602.6576,-1726.7627 583.9851,-1719.5621 572.2549,-1705 479.0265,-1589.2642 610.2511,-477.0884 508.2549,-369 466.6893,-324.9517 397.1968,-320.2015 341.3777,-325.3642"/>
+<polygon fill="none" stroke="#000000" points="340.7057,-321.9153 331.124,-326.4364 341.4338,-328.8774 340.7057,-321.9153"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Models\\SolrLog -->
+<g id="node26" class="node">
+<title>\\Firesphere\\SolrSearch\\Models\\SolrLog</title>
+<polygon fill="none" stroke="#000000" points="704.7549,-1696 640.7549,-1696 640.7549,-1660 704.7549,-1660 704.7549,-1696"/>
+<text text-anchor="middle" x="672.7549" y="-1675.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrLog</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Models\\SolrLog&#45;&gt;\\SilverStripe\\ORM\\DataObject -->
+<g id="edge9" class="edge">
+<title>\\Firesphere\\SolrSearch\\Models\\SolrLog&#45;&gt;\\SilverStripe\\ORM\\DataObject</title>
+<path fill="none" stroke="#000000" d="M640.6933,-1677.5982C617.8044,-1675.4447 588.3294,-1668.4844 572.2549,-1648 484.4147,-1536.0615 606.0198,-472.3836 508.2549,-369 466.7142,-325.0719 397.3926,-320.2593 341.6358,-325.3666"/>
+<polygon fill="none" stroke="#000000" points="340.9782,-321.916 331.3924,-326.4285 341.7,-328.8787 340.9782,-321.916"/>
+</g>
+<!-- \\SilverStripe\\Security\\PermissionProvider -->
+<g id="node56" class="node">
+<title>\\SilverStripe\\Security\\PermissionProvider</title>
+<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-288" rx="206.0634" ry="18"/>
+<text text-anchor="middle" x="254.1275" y="-284.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Security\PermissionProvider</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Models\\SolrLog&#45;&gt;\\SilverStripe\\Security\\PermissionProvider -->
+<g id="edge10" class="edge">
+<title>\\Firesphere\\SolrSearch\\Models\\SolrLog&#45;&gt;\\SilverStripe\\Security\\PermissionProvider</title>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M640.6812,-1677.6077C617.7861,-1675.459 588.3087,-1668.5006 572.2549,-1648 480.8331,-1531.2545 610.0284,-422.8407 508.2549,-315 468.622,-273.0044 403.6041,-266.731 349.2562,-270.7122"/>
+<polygon fill="none" stroke="#000000" points="348.9063,-267.2292 339.2409,-271.5686 349.5028,-274.2038 348.9063,-267.2292"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Models\\DirtyClass -->
+<g id="node27" class="node">
+<title>\\Firesphere\\SolrSearch\\Models\\DirtyClass</title>
+<polygon fill="none" stroke="#000000" points="714.7549,-1804 630.7549,-1804 630.7549,-1768 714.7549,-1768 714.7549,-1804"/>
+<text text-anchor="middle" x="672.7549" y="-1783.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DirtyClass</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Models\\DirtyClass&#45;&gt;\\SilverStripe\\ORM\\DataObject -->
+<g id="edge11" class="edge">
+<title>\\Firesphere\\SolrSearch\\Models\\DirtyClass&#45;&gt;\\SilverStripe\\ORM\\DataObject</title>
+<path fill="none" stroke="#000000" d="M630.5818,-1785.7021C609.7305,-1783.1717 586.1224,-1776.2482 572.2549,-1759 475.3786,-1638.5067 614.26,-481.5459 508.2549,-369 466.7302,-324.9131 397.235,-320.1654 341.4044,-325.339"/>
+<polygon fill="none" stroke="#000000" points="340.7294,-321.8905 331.1485,-326.4133 341.4587,-328.8524 340.7294,-321.8905"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Stores\\FileConfigStore -->
+<g id="node28" class="node">
+<title>\\Firesphere\\SolrSearch\\Stores\\FileConfigStore</title>
+<polygon fill="none" stroke="#000000" points="731.7549,-2126 613.7549,-2126 613.7549,-2090 731.7549,-2090 731.7549,-2126"/>
+<text text-anchor="middle" x="672.7549" y="-2105.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">FileConfigStore</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Interfaces\\ConfigStore -->
+<g id="node46" class="node">
+<title>\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore</title>
+<polygon fill="none" stroke="#000000" points="299.6275,-2099 208.6275,-2099 208.6275,-2063 299.6275,-2063 299.6275,-2099"/>
+<text text-anchor="middle" x="254.1275" y="-2078.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ConfigStore</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Stores\\FileConfigStore&#45;&gt;\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore -->
+<g id="edge12" class="edge">
+<title>\\Firesphere\\SolrSearch\\Stores\\FileConfigStore&#45;&gt;\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore</title>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M613.6637,-2104.1888C532.8854,-2098.9789 389.0185,-2089.7 309.9722,-2084.6018"/>
+<polygon fill="none" stroke="#000000" points="309.9333,-2081.0921 299.7287,-2083.9411 309.4827,-2088.0776 309.9333,-2081.0921"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Stores\\PostConfigStore -->
+<g id="node29" class="node">
+<title>\\Firesphere\\SolrSearch\\Stores\\PostConfigStore</title>
+<polygon fill="none" stroke="#000000" points="731.7549,-2072 613.7549,-2072 613.7549,-2036 731.7549,-2036 731.7549,-2072"/>
+<text text-anchor="middle" x="672.7549" y="-2051.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PostConfigStore</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Stores\\PostConfigStore&#45;&gt;\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore -->
+<g id="edge13" class="edge">
+<title>\\Firesphere\\SolrSearch\\Stores\\PostConfigStore&#45;&gt;\\Firesphere\\SolrSearch\\Interfaces\\ConfigStore</title>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M613.6637,-2057.8112C532.8854,-2063.0211 389.0185,-2072.3 309.9722,-2077.3982"/>
+<polygon fill="none" stroke="#000000" points="309.4827,-2073.9224 299.7287,-2078.0589 309.9333,-2080.9079 309.4827,-2073.9224"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Helpers\\DataResolver -->
+<g id="node30" class="node">
+<title>\\Firesphere\\SolrSearch\\Helpers\\DataResolver</title>
+<polygon fill="none" stroke="#000000" points="721.7549,-1616 623.7549,-1616 623.7549,-1580 721.7549,-1580 721.7549,-1616"/>
+<text text-anchor="middle" x="672.7549" y="-1595.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DataResolver</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Helpers\\FieldResolver -->
+<g id="node31" class="node">
+<title>\\Firesphere\\SolrSearch\\Helpers\\FieldResolver</title>
+<polygon fill="none" stroke="#000000" points="724.7549,-1562 620.7549,-1562 620.7549,-1526 724.7549,-1526 724.7549,-1562"/>
+<text text-anchor="middle" x="672.7549" y="-1541.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">FieldResolver</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Helpers\\SolrLogger -->
+<g id="node32" class="node">
+<title>\\Firesphere\\SolrSearch\\Helpers\\SolrLogger</title>
+<polygon fill="none" stroke="#000000" points="714.7549,-1508 630.7549,-1508 630.7549,-1472 714.7549,-1472 714.7549,-1508"/>
+<text text-anchor="middle" x="672.7549" y="-1487.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrLogger</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Helpers\\Statics -->
+<g id="node33" class="node">
+<title>\\Firesphere\\SolrSearch\\Helpers\\Statics</title>
+<polygon fill="none" stroke="#000000" points="704.7549,-1454 640.7549,-1454 640.7549,-1418 704.7549,-1418 704.7549,-1454"/>
+<text text-anchor="middle" x="672.7549" y="-1433.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">Statics</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Helpers\\Synonyms -->
+<g id="node34" class="node">
+<title>\\Firesphere\\SolrSearch\\Helpers\\Synonyms</title>
+<polygon fill="none" stroke="#000000" points="708.2549,-1400 637.2549,-1400 637.2549,-1364 708.2549,-1364 708.2549,-1400"/>
+<text text-anchor="middle" x="672.7549" y="-1379.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">Synonyms</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Forms\\SearchForm -->
+<g id="node35" class="node">
+<title>\\Firesphere\\SolrSearch\\Forms\\SearchForm</title>
+<polygon fill="none" stroke="#000000" points="714.7549,-1320 630.7549,-1320 630.7549,-1284 714.7549,-1284 714.7549,-1320"/>
+<text text-anchor="middle" x="672.7549" y="-1299.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchForm</text>
+</g>
+<!-- \\SilverStripe\\Forms\\Form -->
+<g id="node57" class="node">
+<title>\\SilverStripe\\Forms\\Form</title>
+<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-234" rx="129.1772" ry="18"/>
+<text text-anchor="middle" x="254.1275" y="-230.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Forms\Form</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Forms\\SearchForm&#45;&gt;\\SilverStripe\\Forms\\Form -->
+<g id="edge14" class="edge">
+<title>\\Firesphere\\SolrSearch\\Forms\\SearchForm&#45;&gt;\\SilverStripe\\Forms\\Form</title>
+<path fill="none" stroke="#000000" d="M630.5967,-1300.2754C609.7496,-1297.0758 586.1407,-1289.4564 572.2549,-1272 432.1144,-1095.8239 664.0074,-423.5378 508.2549,-261 465.3244,-216.1992 393.4568,-212.2898 337.0813,-217.9644"/>
+<polygon fill="none" stroke="#000000" points="336.6514,-214.4906 327.1039,-219.0834 337.4317,-221.447 336.6514,-214.4906"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Factories\\QueryComponentFactory -->
+<g id="node36" class="node">
+<title>\\Firesphere\\SolrSearch\\Factories\\QueryComponentFactory</title>
+<polygon fill="none" stroke="#000000" points="751.7549,-1240 593.7549,-1240 593.7549,-1204 751.7549,-1204 751.7549,-1240"/>
+<text text-anchor="middle" x="672.7549" y="-1219.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">QueryComponentFactory</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Factories\\DocumentFactory -->
+<g id="node37" class="node">
+<title>\\Firesphere\\SolrSearch\\Factories\\DocumentFactory</title>
+<polygon fill="none" stroke="#000000" points="731.7549,-1186 613.7549,-1186 613.7549,-1150 731.7549,-1150 731.7549,-1186"/>
+<text text-anchor="middle" x="672.7549" y="-1165.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DocumentFactory</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Admins\\SearchAdmin -->
+<g id="node38" class="node">
+<title>\\Firesphere\\SolrSearch\\Admins\\SearchAdmin</title>
+<polygon fill="none" stroke="#000000" points="718.2549,-1106 627.2549,-1106 627.2549,-1070 718.2549,-1070 718.2549,-1106"/>
+<text text-anchor="middle" x="672.7549" y="-1085.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchAdmin</text>
+</g>
+<!-- \\SilverStripe\\Admin\\ModelAdmin -->
+<g id="node58" class="node">
+<title>\\SilverStripe\\Admin\\ModelAdmin</title>
+<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-180" rx="165.1707" ry="18"/>
+<text text-anchor="middle" x="254.1275" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Admin\ModelAdmin</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Admins\\SearchAdmin&#45;&gt;\\SilverStripe\\Admin\\ModelAdmin -->
+<g id="edge15" class="edge">
+<title>\\Firesphere\\SolrSearch\\Admins\\SearchAdmin&#45;&gt;\\SilverStripe\\Admin\\ModelAdmin</title>
+<path fill="none" stroke="#000000" d="M627.0861,-1085.6123C607.1899,-1082.0875 585.4445,-1074.3811 572.2549,-1058 453.3192,-910.2854 640.2744,-343.1475 508.2549,-207 467.1846,-164.6455 400.2154,-159.0065 345.3335,-163.3683"/>
+<polygon fill="none" stroke="#000000" points="344.8749,-159.8956 335.2355,-164.2925 345.5129,-166.8664 344.8749,-159.8956"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Results\\SearchResult -->
+<g id="node39" class="node">
+<title>\\Firesphere\\SolrSearch\\Results\\SearchResult</title>
+<polygon fill="none" stroke="#000000" points="721.7549,-1026 623.7549,-1026 623.7549,-990 721.7549,-990 721.7549,-1026"/>
+<text text-anchor="middle" x="672.7549" y="-1005.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchResult</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Tasks\\ClearDirtyClassesTask -->
+<g id="node40" class="node">
+<title>\\Firesphere\\SolrSearch\\Tasks\\ClearDirtyClassesTask</title>
+<polygon fill="none" stroke="#000000" points="751.7549,-758 593.7549,-758 593.7549,-722 751.7549,-722 751.7549,-758"/>
+<text text-anchor="middle" x="672.7549" y="-737.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ClearDirtyClassesTask</text>
+</g>
+<!-- \\SilverStripe\\Dev\\BuildTask -->
+<g id="node59" class="node">
+<title>\\SilverStripe\\Dev\\BuildTask</title>
+<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-72" rx="139.9756" ry="18"/>
+<text text-anchor="middle" x="254.1275" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\Dev\BuildTask</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Tasks\\ClearDirtyClassesTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask -->
+<g id="edge16" class="edge">
+<title>\\Firesphere\\SolrSearch\\Tasks\\ClearDirtyClassesTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask</title>
+<path fill="none" stroke="#000000" d="M593.5509,-726.5977C585.4441,-722.4212 578.068,-717.007 572.2549,-710 485.0876,-604.9299 604.7179,-195.6062 508.2549,-99 465.8306,-56.5128 397.2456,-51.4 342.0131,-56.0204"/>
+<polygon fill="none" stroke="#000000" points="341.4866,-52.5547 331.8647,-56.9896 342.1521,-59.523 341.4866,-52.5547"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Tasks\\SolrConfigureTask -->
+<g id="node41" class="node">
+<title>\\Firesphere\\SolrSearch\\Tasks\\SolrConfigureTask</title>
+<polygon fill="none" stroke="#000000" points="738.2549,-866 607.2549,-866 607.2549,-830 738.2549,-830 738.2549,-866"/>
+<text text-anchor="middle" x="672.7549" y="-845.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrConfigureTask</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Tasks\\SolrConfigureTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask -->
+<g id="edge17" class="edge">
+<title>\\Firesphere\\SolrSearch\\Tasks\\SolrConfigureTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask</title>
+<path fill="none" stroke="#000000" d="M607.1811,-842.4858C593.8555,-838.3423 581.1995,-831.6545 572.2549,-821 468.6889,-697.6356 621.1538,-213.8849 508.2549,-99 465.8782,-55.8778 396.6106,-51.0132 341.0872,-55.8955"/>
+<polygon fill="none" stroke="#000000" points="340.4921,-52.4374 330.8893,-56.9136 341.1875,-59.4028 340.4921,-52.4374"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Tasks\\SolrIndexTask -->
+<g id="node42" class="node">
+<title>\\Firesphere\\SolrSearch\\Tasks\\SolrIndexTask</title>
+<polygon fill="none" stroke="#000000" points="724.7549,-812 620.7549,-812 620.7549,-776 724.7549,-776 724.7549,-812"/>
+<text text-anchor="middle" x="672.7549" y="-791.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrIndexTask</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Tasks\\SolrIndexTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask -->
+<g id="edge18" class="edge">
+<title>\\Firesphere\\SolrSearch\\Tasks\\SolrIndexTask&#45;&gt;\\SilverStripe\\Dev\\BuildTask</title>
+<path fill="none" stroke="#000000" d="M620.5843,-791.7711C602.7055,-788.286 584.212,-781.1405 572.2549,-767 475.9669,-653.1289 613.1555,-204.9901 508.2549,-99 465.7987,-56.1028 396.7067,-51.1712 341.2744,-55.9695"/>
+<polygon fill="none" stroke="#000000" points="340.7015,-52.5089 331.0925,-56.9717 341.3873,-59.4752 340.7015,-52.5089"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Extensions\\GridFieldExtension -->
+<g id="node43" class="node">
+<title>\\Firesphere\\SolrSearch\\Extensions\\GridFieldExtension</title>
+<polygon fill="none" stroke="#000000" points="741.7549,-678 603.7549,-678 603.7549,-642 741.7549,-642 741.7549,-678"/>
+<text text-anchor="middle" x="672.7549" y="-657.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">GridFieldExtension</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Extensions\\GridFieldExtension&#45;&gt;\\SilverStripe\\Core\\Extension -->
+<g id="edge19" class="edge">
+<title>\\Firesphere\\SolrSearch\\Extensions\\GridFieldExtension&#45;&gt;\\SilverStripe\\Core\\Extension</title>
+<path fill="none" stroke="#000000" d="M603.6439,-652.9139C591.7316,-648.7389 580.5385,-642.4362 572.2549,-633 430.2694,-471.2585 662.4576,-303.1391 508.2549,-153 466.0591,-111.9161 399.2985,-106.178 344.7917,-110.1769"/>
+<polygon fill="none" stroke="#000000" points="344.4324,-106.6947 334.7654,-111.0305 345.0263,-113.6695 344.4324,-106.6947"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Extensions\\DataObjectExtension -->
+<g id="node44" class="node">
+<title>\\Firesphere\\SolrSearch\\Extensions\\DataObjectExtension</title>
+<polygon fill="none" stroke="#000000" points="745.2549,-624 600.2549,-624 600.2549,-588 745.2549,-588 745.2549,-624"/>
+<text text-anchor="middle" x="672.7549" y="-603.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DataObjectExtension</text>
+</g>
+<!-- \\SilverStripe\\ORM\\DataExtension -->
+<g id="node60" class="node">
+<title>\\SilverStripe\\ORM\\DataExtension</title>
+<ellipse fill="none" stroke="#000000" cx="254.1275" cy="-18" rx="167.8704" ry="18"/>
+<text text-anchor="middle" x="254.1275" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\SilverStripe\ORM\DataExtension</text>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Extensions\\DataObjectExtension&#45;&gt;\\SilverStripe\\ORM\\DataExtension -->
+<g id="edge20" class="edge">
+<title>\\Firesphere\\SolrSearch\\Extensions\\DataObjectExtension&#45;&gt;\\SilverStripe\\ORM\\DataExtension</title>
+<path fill="none" stroke="#000000" d="M600.1247,-595.5127C589.4887,-591.0425 579.6479,-584.7714 572.2549,-576 419.0594,-394.2413 677.5206,-211.8958 508.2549,-45 467.4446,-4.7611 403.1158,1.744 349.3935,-1.6864"/>
+<polygon fill="none" stroke="#000000" points="348.8529,1.7826 339.1477,-2.4671 349.3848,-5.1971 348.8529,1.7826"/>
+</g>
+<!-- \\Firesphere\\SolrSearch\\Interfaces\\SiteStateInterface -->
+<g id="node45" class="node">
+<title>\\Firesphere\\SolrSearch\\Interfaces\\SiteStateInterface</title>
+<polygon fill="none" stroke="#000000" points="323.1275,-2153 185.1275,-2153 185.1275,-2117 323.1275,-2117 323.1275,-2153"/>
+<text text-anchor="middle" x="254.1275" y="-2132.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SiteStateInterface</text>
 </g>
 <!-- \\Firesphere\\SolrSearch\\Fluent\\FluentExtension -->
-<g id="node50" class="node">
+<g id="node47" class="node">
 <title>\\Firesphere\\SolrSearch\\Fluent\\FluentExtension</title>
-<polygon fill="none" stroke="#000000" points="731.7549,-624 613.7549,-624 613.7549,-588 731.7549,-588 731.7549,-624"/>
-<text text-anchor="middle" x="672.7549" y="-603.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">FluentExtension</text>
+<polygon fill="none" stroke="#000000" points="731.7549,-946 613.7549,-946 613.7549,-910 731.7549,-910 731.7549,-946"/>
+<text text-anchor="middle" x="672.7549" y="-925.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">FluentExtension</text>
 </g>
 <!-- \\Firesphere\\SolrSearch\\Fluent\\FluentExtension&#45;&gt;\\SilverStripe\\Core\\Extension -->
 <g id="edge21" class="edge">
 <title>\\Firesphere\\SolrSearch\\Fluent\\FluentExtension&#45;&gt;\\SilverStripe\\Core\\Extension</title>
-<path fill="none" stroke="#000000" d="M613.7264,-599.7515C598.2689,-595.3523 582.9559,-588.0488 572.2549,-576 461.725,-451.5483 629.7644,-320.7565 508.2549,-207 466.1883,-167.6175 401.3948,-161.2461 347.7627,-164.5268"/>
-<polygon fill="none" stroke="#000000" points="347.2589,-161.0542 337.5412,-165.2752 347.7701,-168.0356 347.2589,-161.0542"/>
+<path fill="none" stroke="#000000" d="M613.5727,-922.4758C597.9209,-918.1074 582.5427,-910.6391 572.2549,-898 467.3581,-769.1297 624.5616,-271.6746 508.2549,-153 466.156,-110.044 397.3825,-105.0108 341.9901,-109.7824"/>
+<polygon fill="none" stroke="#000000" points="341.4229,-106.3212 331.8122,-110.7806 342.1061,-113.2878 341.4229,-106.3212"/>
 </g>
 <!-- \\Firesphere\\SolrSearch\\Subsites\\SubsitesExtension -->
-<g id="node51" class="node">
+<g id="node48" class="node">
 <title>\\Firesphere\\SolrSearch\\Subsites\\SubsitesExtension</title>
 <polygon fill="none" stroke="#000000" points="738.2549,-544 607.2549,-544 607.2549,-508 738.2549,-508 738.2549,-544"/>
 <text text-anchor="middle" x="672.7549" y="-523.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SubsitesExtension</text>
@@ -636,8 +605,39 @@
 <!-- \\Firesphere\\SolrSearch\\Subsites\\SubsitesExtension&#45;&gt;\\SilverStripe\\ORM\\DataExtension -->
 <g id="edge22" class="edge">
 <title>\\Firesphere\\SolrSearch\\Subsites\\SubsitesExtension&#45;&gt;\\SilverStripe\\ORM\\DataExtension</title>
-<path fill="none" stroke="#000000" d="M670.9553,-507.7C663.7989,-445.7721 631.4373,-242.9354 508.2549,-153 476.5122,-129.8247 436.3088,-119.4552 397.3008,-115.8041"/>
-<polygon fill="none" stroke="#000000" points="397.1232,-112.2793 386.8789,-114.9819 396.5726,-119.2576 397.1232,-112.2793"/>
+<path fill="none" stroke="#000000" d="M669.255,-507.955C653.3631,-427.9615 585.4274,-106.5886 508.2549,-45 471.5859,-15.7358 421.8522,-6.0403 376.1027,-4.7406"/>
+<polygon fill="none" stroke="#000000" points="376.1562,-1.2411 366.1032,-4.5857 376.0477,-8.2403 376.1562,-1.2411"/>
+</g>
+<!-- \\SilverStripe\\FullTextSearch\\Solr\\SolrIndex -->
+<g id="node49" class="node">
+<title>\\SilverStripe\\FullTextSearch\\Solr\\SolrIndex</title>
+<polygon fill="none" stroke="#000000" points="924.7549,-2785 840.7549,-2785 840.7549,-2749 924.7549,-2749 924.7549,-2785"/>
+<text text-anchor="start" x="848.7549" y="-2770.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
+<text text-anchor="start" x="852.2549" y="-2758.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SolrIndex</text>
+</g>
+<!-- \\SilverStripe\\FullTextSearch\\Solr\\SolrIndex&#45;&gt;\\Firesphere\\SolrSearch\\Indexes\\BaseIndex -->
+<g id="edge2" class="edge">
+<title>\\SilverStripe\\FullTextSearch\\Solr\\SolrIndex&#45;&gt;\\Firesphere\\SolrSearch\\Indexes\\BaseIndex</title>
+<path fill="none" stroke="#000000" d="M880.8415,-2785.0623C873.1746,-2854.0782 842.4928,-3099.9588 789.2549,-3154 772.5404,-3170.9667 747.6003,-3178.7705 725.0793,-3182.2081"/>
+<polygon fill="none" stroke="#000000" points="724.4188,-3178.7638 714.9403,-3183.4975 725.302,-3185.7079 724.4188,-3178.7638"/>
+</g>
+<!-- \\SilverStripe\\FullTextSearch\\Solr\\Solr -->
+<g id="node50" class="node">
+<title>\\SilverStripe\\FullTextSearch\\Solr\\Solr</title>
+<polygon fill="none" stroke="#000000" points="909.7549,-2731 855.7549,-2731 855.7549,-2695 909.7549,-2695 909.7549,-2731"/>
+<text text-anchor="middle" x="882.7549" y="-2710.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">Solr</text>
+</g>
+<!-- \\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery -->
+<g id="node51" class="node">
+<title>\\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery</title>
+<polygon fill="none" stroke="#000000" points="928.2549,-2623 837.2549,-2623 837.2549,-2587 928.2549,-2587 928.2549,-2623"/>
+<text text-anchor="middle" x="882.7549" y="-2602.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SearchQuery</text>
+</g>
+<!-- \\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery&#45;&gt;\\Firesphere\\SolrSearch\\Queries\\BaseQuery -->
+<g id="edge3" class="edge">
+<title>\\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery&#45;&gt;\\Firesphere\\SolrSearch\\Queries\\BaseQuery</title>
+<path fill="none" stroke="#000000" d="M880.2648,-2586.7421C870.8844,-2520.3042 835.8304,-2292.4705 789.2549,-2238 771.9206,-2217.7274 744.8908,-2205.4436 721.2294,-2198.128"/>
+<polygon fill="none" stroke="#000000" points="721.9107,-2194.6823 711.3332,-2195.2881 719.9798,-2201.4108 721.9107,-2194.6823"/>
 </g>
 </g>
 </svg>

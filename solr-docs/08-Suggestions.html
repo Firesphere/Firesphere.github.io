@@ -478,44 +478,91 @@
 <li><a class="" href="05-CMS-Usage.html">CMS Usage</a></li>
 <li><a class="" href="06-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
 <li><a class="" href="07-Debugging.html">Debugging</a></li>
-<li><a class="" href="08-Suggestions.html">Suggestions</a></li>
+<li><a class="active" href="08-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="10-About.html">About</a></li>
-<li><a class="active" href="11-FAQ.html">FAQ</a></li>
+<li><a class="" href="11-FAQ.html">FAQ</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <h1 id="faq">FAQ <a class="heading-anchor-permalink" href="#faq">#</a></h1>
-<h3 id="what-do-you-mean-not-fast-enough%3F">What do you mean not fast enough? <a class="heading-anchor-permalink" href="#what-do-you-mean-not-fast-enough%3F">#</a></h3>
-<p>All indexing, as well as the search, require disk space. If the disk can not respond fast enough to a write,
-either PHP or Java will stop and throw an error</p>
-<h3 id="do-you-support-synonyms">Do you support synonyms <a class="heading-anchor-permalink" href="#do-you-support-synonyms">#</a></h3>
-<p>Yes! Including US to UK spelling synonyms by default!</p>
-<h3 id="fast%3F">Fast? <a class="heading-anchor-permalink" href="#fast%3F">#</a></h3>
-<p>Yes, very fast</p>
-<h3 id="compatible-with-the-fulltext-search-module%3F">Compatible with the Fulltext Search Module? <a class="heading-anchor-permalink" href="#compatible-with-the-fulltext-search-module%3F">#</a></h3>
-<p>99% and counting, does that work for you? Have a look at the compatibility module</p>
-<h3 id="why-do-i-need-to-name-my-index%3F">Why do I need to name my index? <a class="heading-anchor-permalink" href="#why-do-i-need-to-name-my-index%3F">#</a></h3>
-<p>You have a name yourself, don’t you? It makes sense to name the index too.</p>
-<h3 id="only-file-storage%3F">Only File storage? <a class="heading-anchor-permalink" href="#only-file-storage%3F">#</a></h3>
-<p>Hold your horses, this is a beta stage project, more storage options to come!</p>
-<h3 id="my-core.properties-won%E2%80%99t-persist%2C-what-gives%3F">My core.properties won’t persist, what gives? <a class="heading-anchor-permalink" href="#my-core.properties-won%E2%80%99t-persist%2C-what-gives%3F">#</a></h3>
-<p>Most likely, you’re running a vagrant or docker machine? And even more likely
-running it on Linux.</p>
-<p>The solution is to create a symlink in <code>/var/solr/data/{your-policy-name/</code> to <code>/var/www/{yoursite}/.solr/.conf</code>, so the
-<code>conf</code> folder points to your locally writable folder for Vagrant.</p>
-<p>In your search.yml, add the following as the location of your FileStore config:</p>
-<pre><code class="language-yaml">Firesphere\SolrSearch\Services\SolrCoreService:
-  store:
-    mode: 'file'
-    path: '/var/solr/data'
+        <h1 id="solr-suggest">Solr Suggest <a class="heading-anchor-permalink" href="#solr-suggest">#</a></h1>
+<p>If you are using Solr5 or above, you can use the Solr Suggest option. This is enabled by default.</p>
+<p>To set this up, have a look at <a href="https://github.com/Firesphere/silverstripe-solr-search/blob/master/client/proxy/autosuggest.php">autosuggest proxy</a></p>
+<p>Copy this file to a convenient location, e.g. your <code>docroot/public</code> folder and edit the contents of your copy, to match your Solr core and location of the Solr instance.</p>
+<p>Note that the proxy can not read from the Silverstripe config, thus it needs to be edited manually.</p>
+<p>Once that’s in place, you can use javascript to get Solr’s suggestions, by querying the autosuggest.php file directly.</p>
+<p>You need to query the file directly, to prevent a full execution of the whole Silverstripe stack, which is too slow for proper auto suggesting.
+Also, make sure the file is accessible.</p>
+<p>The output of the file is a JSON object, looking something like this:</p>
+<pre><code class="language-json">{
+
+    &quot;responseHeader&quot;: {
+        &quot;status&quot;: 0,
+        &quot;QTime&quot;: 0
+    },
+    &quot;suggest&quot;: {
+        &quot;Suggester&quot;: {
+            &quot;home&quot;: {
+                &quot;numFound&quot;: 10,
+                &quot;suggestions&quot;: [
+                    {
+                        &quot;term&quot;: &quot;home&quot;,
+                        &quot;weight&quot;: 376,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homeajaxaction&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebartonvillevpsbartonvilletccommysitecodememberextensionphp&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homeblauwboomdomainsmyserverpublichtmlcompframeworksrci&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrew&quot;,
+                        &quot;weight&quot;: 26,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrewcurlother&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrewhttpsbrewsh&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrewing&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebridgewillstaginpublichtmlsilvershopcodecartordertotalcalculatorphp&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homecategorycategory&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    }
+                ]
+            }
+        }
+    }
+}
 </code></pre>
-<p>That way, Solr will write it’s own files to the correct core folder where it can write, but your config can still live
-inside your project.</p>
-<h3 id="i-would-like-a-feature-to-be-added!">I would like a feature to be added! <a class="heading-anchor-permalink" href="#i-would-like-a-feature-to-be-added!">#</a></h3>
-<p>I would like an issue to be created</p>
-<h3 id="dealing-with-errors">Dealing with errors <a class="heading-anchor-permalink" href="#dealing-with-errors">#</a></h3>
-<p>Especially when using facets, you should not redeclare fields to be filterable as well. If you run in to an error
-saying you have duplicate fields, check your configuration that e.g. FilterFields does not have an overlap with FacetFields, etc.</p>
+<p>Which you can then use in your javascript to populate a dropdown.</p>
+<h2 id="security-note">Security note <a class="heading-anchor-permalink" href="#security-note">#</a></h2>
+<p>As the query is passed straight in to Solr, there is no option of database SQL injection.</p>
 
       </article>
     </div>
