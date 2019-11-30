@@ -12,7 +12,7 @@
         <target>solr</target>
     </transformer>
     <transformations>
-        <template name="clean" />
+        <template name="new-black" />
     </transformations>
     <files>
         <directory>compat/src</directory>
