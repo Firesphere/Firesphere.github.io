@@ -3,825 +3,1049 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>SilverStripe Solr search &raquo;\Firesphere\SolrSearch\Factories\QueryComponentFactory</title>
+    <title>SilverStripe Solr search</title>
     <meta name="author" content=""/>
-    <meta name="description" content=""/>        <link href="../css/template.css" rel="stylesheet" media="all"/>        <!--[if lt IE 9]>
-        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-        <![endif]-->
-        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
-        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
-        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
-        <script src="../js/template.js" type="text/javascript"></script>
-        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>        <link rel="shortcut icon" href="../img/favicon.ico"/>
-        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
-        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/></head>
-<body>    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> </a>
-                <a class="brand" href="../index.html">SilverStripe Solr search</a>
+    <meta name="description" content=""/>
 
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
-                                API Documentation <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
-                        </li>
-                        <li class="dropdown" id="charts-menu">
-                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
-                                Charts <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../graph_class.html">
-                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown" id="reports-menu">
-                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                Reports <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../errors.html">
-                                        <i class="icon-list-alt"></i>&#160;Errors
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../markers.html">
-                                        <i class="icon-list-alt"></i>&#160;Markers
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../deprecated.html">
-                                        <i class="icon-list-alt"></i>&#160;Deprecated
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit--><script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">SilverStripe Solr search</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">                    <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">                            <li><a href="../namespaces/Firesphere.html">\Firesphere</a></li>                            <li><a href="../namespaces/SilverStripe.html">\SilverStripe</a></li>                        </ul>
+                    </li>                    <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">54</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">                                    <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">6</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">    <section class="row-fluid">
+        <div class="span2 sidebar">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-toggle" data-toggle="collapse" data-target="#namespace-774217959"></a>                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-774217959" class="accordion-body collapsein">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1229699359"></a>                <a href="../namespaces/Firesphere.html" style="margin-left: 30px; padding-left: 0">Firesphere</a>
+            </div>
+            <div id="namespace-1229699359" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1544868092"></a>                <a href="../namespaces/Firesphere.SolrSearch.html" style="margin-left: 30px; padding-left: 0">SolrSearch</a>
+            </div>
+            <div id="namespace-1544868092" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1825504355"></a>                <a href="../namespaces/Firesphere.SolrSearch.Admins.html" style="margin-left: 30px; padding-left: 0">Admins</a>
+            </div>
+            <div id="namespace-1825504355" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html">SearchAdmin</a></li>                    </ul>
                 </div>
             </div>
         </div>
-        <div class="go_to_top">
-            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1217670203"></a>                <a href="../namespaces/Firesphere.SolrSearch.Compat.html" style="margin-left: 30px; padding-left: 0">Compat</a>
+            </div>
+            <div id="namespace-1217670203" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Compat.FulltextSearchExtension.html">FulltextSearchExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1478426768"></a>                <a href="../namespaces/Firesphere.SolrSearch.Extensions.html" style="margin-left: 30px; padding-left: 0">Extensions</a>
+            </div>
+            <div id="namespace-1478426768" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Extensions.DataObjectExtension.html">DataObjectExtension</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Extensions.GridFieldExtension.html">GridFieldExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1558228177"></a>                <a href="../namespaces/Firesphere.SolrSearch.Factories.html" style="margin-left: 30px; padding-left: 0">Factories</a>
+            </div>
+            <div id="namespace-1558228177" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html">DocumentFactory</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">QueryComponentFactory</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-146034514"></a>                <a href="../namespaces/Firesphere.SolrSearch.Fluent.html" style="margin-left: 30px; padding-left: 0">Fluent</a>
+            </div>
+            <div id="namespace-146034514" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Fluent.FluentExtension.html">FluentExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-143002435"></a>                <a href="../namespaces/Firesphere.SolrSearch.Forms.html" style="margin-left: 30px; padding-left: 0">Forms</a>
+            </div>
+            <div id="namespace-143002435" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Forms.SearchForm.html">SearchForm</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-579316981"></a>                <a href="../namespaces/Firesphere.SolrSearch.Helpers.html" style="margin-left: 30px; padding-left: 0">Helpers</a>
+            </div>
+            <div id="namespace-579316981" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html">DataResolver</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.FieldResolver.html">FieldResolver</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.SolrLogger.html">SolrLogger</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.Statics.html">Statics</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.Synonyms.html">Synonyms</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-734754181"></a>                <a href="../namespaces/Firesphere.SolrSearch.Indexes.html" style="margin-left: 30px; padding-left: 0">Indexes</a>
+            </div>
+            <div id="namespace-734754181" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">BaseIndex</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1027851832"></a>                <a href="../namespaces/Firesphere.SolrSearch.Interfaces.html" style="margin-left: 30px; padding-left: 0">Interfaces</a>
+            </div>
+            <div id="namespace-1027851832" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="interface"><a href="../classes/Firesphere.SolrSearch.Interfaces.ConfigStore.html">ConfigStore</a></li>                            <li class="interface"><a href="../classes/Firesphere.SolrSearch.Interfaces.SiteStateInterface.html">SiteStateInterface</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-912191863"></a>                <a href="../namespaces/Firesphere.SolrSearch.Jobs.html" style="margin-left: 30px; padding-left: 0">Jobs</a>
+            </div>
+            <div id="namespace-912191863" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Jobs.ClearDirtyClassesJob.html">ClearDirtyClassesJob</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html">SolrConfigureJob</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html">SolrIndexJob</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-2145305710"></a>                <a href="../namespaces/Firesphere.SolrSearch.Models.html" style="margin-left: 30px; padding-left: 0">Models</a>
+            </div>
+            <div id="namespace-2145305710" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">DirtyClass</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Models.SearchSynonym.html">SearchSynonym</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Models.SolrLog.html">SolrLog</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1421090379"></a>                <a href="../namespaces/Firesphere.SolrSearch.Queries.html" style="margin-left: 30px; padding-left: 0">Queries</a>
+            </div>
+            <div id="namespace-1421090379" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">BaseQuery</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1953908606"></a>                <a href="../namespaces/Firesphere.SolrSearch.Results.html" style="margin-left: 30px; padding-left: 0">Results</a>
+            </div>
+            <div id="namespace-1953908606" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html">SearchResult</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1417911470"></a>                <a href="../namespaces/Firesphere.SolrSearch.Services.html" style="margin-left: 30px; padding-left: 0">Services</a>
+            </div>
+            <div id="namespace-1417911470" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">SchemaService</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">SolrCoreService</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1140145501"></a>                <a href="../namespaces/Firesphere.SolrSearch.States.html" style="margin-left: 30px; padding-left: 0">States</a>
+            </div>
+            <div id="namespace-1140145501" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.States.SiteState.html">SiteState</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1896199070"></a>                <a href="../namespaces/Firesphere.SolrSearch.Stores.html" style="margin-left: 30px; padding-left: 0">Stores</a>
+            </div>
+            <div id="namespace-1896199070" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Stores.FileConfigStore.html">FileConfigStore</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html">PostConfigStore</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1456278158"></a>                <a href="../namespaces/Firesphere.SolrSearch.Subsites.html" style="margin-left: 30px; padding-left: 0">Subsites</a>
+            </div>
+            <div id="namespace-1456278158" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Subsites.SubsitesExtension.html">SubsitesExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1455541041"></a>                <a href="../namespaces/Firesphere.SolrSearch.Tasks.html" style="margin-left: 30px; padding-left: 0">Tasks</a>
+            </div>
+            <div id="namespace-1455541041" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Tasks.ClearDirtyClassesTask.html">ClearDirtyClassesTask</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html">SolrConfigureTask</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html">SolrIndexTask</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1559174586"></a>                <a href="../namespaces/Firesphere.SolrSearch.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-1559174586" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.BaseIndexTrait.html">BaseIndexTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.BaseQueryTrait.html">BaseQueryTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.CoreAdminTrait.html">CoreAdminTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.CoreServiceTrait.html">CoreServiceTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html">DataResolveTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.DocumentFactoryTrait.html">DocumentFactoryTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSchemaServiceTrait.html">GetSetSchemaServiceTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSearchResolverTrait.html">GetSetSearchResolverTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.GetterSetterTrait.html">GetterSetterTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.LoggerTrait.html">LoggerTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html">QueryComponentBoostTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html">QueryComponentFacetTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html">QueryComponentFilterTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.SearchResultGetTrait.html">SearchResultGetTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.SearchResultSetTrait.html">SearchResultSetTrait</a></li>                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="___" class="container">
-        <noscript>
-            <div class="alert alert-warning">
-                Javascript is disabled; several features are only available if Javascript is enabled.
+                    <ul>                    </ul>
+                </div>
             </div>
-        </noscript>    <style>
-        .deprecated h2 {
-            text-decoration: line-through;
-        }
-    </style>
-    <div class="row">
-        <div class="span4">    <div class="btn-group view pull-right" data-toggle="buttons-radio">
-        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
-        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+        </div>
     </div>
-    <div class="btn-group visibility" data-toggle="buttons-checkbox">
-        <button class="btn public active" title="Show public elements">Public</button>
-        <button class="btn protected" title="Show protected elements">Protected</button>
-        <button class="btn private" title="Show private elements">Private</button>
-        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
-    </div>    <ul class="side-nav nav nav-list">
-        <li class="nav-header">
-            <i class="icon-custom icon-method"></i> Methods
-            <ul>    <li class="methodpublic">
-        <a href="#method_buildQuery" title="buildQuery ::Build the full query">
-            <span class="description">Build the full query</span><pre>buildQuery</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_escapeSearch" title="escapeSearch ::Escape the search query">
-            <span class="description">Escape the search query</span><pre>escapeSearch</pre>
-        </a>
-    </li>    <li class="methodpublic inherited">
-        <a href="#method_getBoostTerms" title="getBoostTerms ::Get the boosted terms">
-            <span class="description">Get the boosted terms</span><pre>getBoostTerms</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_getClientQuery" title="getClientQuery ::Get the client Query components">
-            <span class="description">Get the client Query components</span><pre>getClientQuery</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_getHelper" title="getHelper ::Get the query helper">
-            <span class="description">Get the query helper</span><pre>getHelper</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_getIndex" title="getIndex ::Get the BaseIndex">
-            <span class="description">Get the BaseIndex</span><pre>getIndex</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_getQuery" title="getQuery ::Get the base query">
-            <span class="description">Get the base query</span><pre>getQuery</pre>
-        </a>
-    </li>    <li class="methodpublic inherited">
-        <a href="#method_getQueryArray" title="getQueryArray ::Any class using this needs getQueryArray">
-            <span class="description">Any class using this needs getQueryArray</span><pre>getQueryArray</pre>
-        </a>
-    </li>    <li class="methodpublic inherited">
-        <a href="#method_setBoostTerms" title="setBoostTerms ::Set the boosted terms manually">
-            <span class="description">Set the boosted terms manually</span><pre>setBoostTerms</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_setClientQuery" title="setClientQuery ::Set a custom Client Query object">
-            <span class="description">Set a custom Client Query object</span><pre>setClientQuery</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_setHelper" title="setHelper ::Set the Helper">
-            <span class="description">Set the Helper</span><pre>setHelper</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_setIndex" title="setIndex ::Set a BaseIndex">
-            <span class="description">Set a BaseIndex</span><pre>setIndex</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_setQuery" title="setQuery ::Set the base query">
-            <span class="description">Set the base query</span><pre>setQuery</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_setQueryArray" title="setQueryArray ::Set the array of queries that are sent to Solr">
-            <span class="description">Set the array of queries that are sent to Solr</span><pre>setQueryArray</pre>
-        </a>
-    </li>            </ul>
-        </li>
-        <li class="nav-header protected">» Protected
-            <ul>                        <li class="methodprotected inherited">
-                            <a href="#method_buildBoosts" title="buildBoosts ::Build the boosted field setup through Criteria">
-                                <span class="description">Build the boosted field setup through Criteria</span><pre>buildBoosts</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_buildClassFilter" title="buildClassFilter ::Add filtered queries based on class hierarchy
-We only need the class itself, since the hierarchy will take care of the rest">
-                                <span class="description">Add filtered queries based on class hierarchy
-We only need the class itself, since the hierarchy will take care of the rest</span><pre>buildClassFilter</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_buildExcludes" title="buildExcludes ::Remove items to exclude">
-                                <span class="description">Remove items to exclude</span><pre>buildExcludes</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_buildFacetQuery" title="buildFacetQuery ::Add facet filters based on the current request">
-                                <span class="description">Add facet filters based on the current request</span><pre>buildFacetQuery</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_buildFacets" title="buildFacets ::Add facets from the index">
-                                <span class="description">Add facets from the index</span><pre>buildFacets</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_buildFilters" title="buildFilters ::Create filter queries">
-                                <span class="description">Create filter queries</span><pre>buildFilters</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_buildQueryBoost" title="buildQueryBoost ::Set boosting at Query time">
-                                <span class="description">Set boosting at Query time</span><pre>buildQueryBoost</pre>
-                            </a>
-                        </li>                        <li class="methodprotected">
-                            <a href="#method_buildSpellcheck" title="buildSpellcheck ::Add spellcheck elements">
-                                <span class="description">Add spellcheck elements</span><pre>buildSpellcheck</pre>
-                            </a>
-                        </li>                        <li class="methodprotected">
-                            <a href="#method_buildTerms" title="buildTerms ::Build the terms and boost terms">
-                                <span class="description">Build the terms and boost terms</span><pre>buildTerms</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_buildViewFilter" title="buildViewFilter ::Add filtering on canView">
-                                <span class="description">Add filtering on canView</span><pre>buildViewFilter</pre>
-                            </a>
-                        </li>                        <li class="methodprotected">
-                            <a href="#method_isFuzzy" title="isFuzzy ::If the search is fuzzy, add fuzzyness">
-                                <span class="description">If the search is fuzzy, add fuzzyness</span><pre>isFuzzy</pre>
-                            </a>
-                        </li>            </ul>
-        </li>
-        <li class="nav-header private">» Private
-            <ul>            </ul>
-        </li>
-        <li class="nav-header">
-            <i class="icon-custom icon-constant"></i> Constants
-            <ul>                <li class="constant">
-                    <a href="#constant_DEFAULT_FIELDS" title="DEFAULT_FIELDS ::Default fields that should always be added">
-                        <span class="description">Default fields that should always be added</span><pre>DEFAULT_FIELDS</pre>
-                    </a>
-                </li>            </ul>
-        </li>
-    </ul>
-        </div>
-
-        <div class="span8">
-            <div class="element class">
-                <h1>QueryComponentFactory</h1>
-                <small style="display: block; text-align: right">                </small>
-                <p class="short_description">Class QueryComponentFactory</p>
-                <div class="details">
-                    <div class="long_description"><p>Build a query component for each available build part</p>
-                    </div>
-                    <table class="table table-bordered">                                <tr>
-                                    <th>package                                    </th>
-                                    <td><p>Firesphere\SolrSearch\Factories</p>
-                                    </td>
-                                </tr>                    </table>
-
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_buildBoosts"></a>
-                        <div class="element clickable methodprotected method_buildBoosts inherited" data-toggle="collapse" data-target=".method_buildBoosts .collapse">
-                            <h2>Build the boosted field setup through Criteria</h2>
-                            <pre>buildBoosts()</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"><p>Add the index-time boosting to the query</p></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildClassFilter"></a>
-                        <div class="element clickable methodprotected method_buildClassFilter inherited" data-toggle="collapse" data-target=".method_buildClassFilter .collapse">
-                            <h2>Add filtered queries based on class hierarchy
-We only need the class itself, since the hierarchy will take care of the rest</h2>
-                            <pre>buildClassFilter()</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildExcludes"></a>
-                        <div class="element clickable methodprotected method_buildExcludes inherited" data-toggle="collapse" data-target=".method_buildExcludes .collapse">
-                            <h2>Remove items to exclude</h2>
-                            <pre>buildExcludes()</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildFacetQuery"></a>
-                        <div class="element clickable methodprotected method_buildFacetQuery inherited" data-toggle="collapse" data-target=".method_buildFacetQuery .collapse">
-                            <h2>Add facet filters based on the current request</h2>
-                            <pre>buildFacetQuery()</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildFacets"></a>
-                        <div class="element clickable methodprotected method_buildFacets inherited" data-toggle="collapse" data-target=".method_buildFacets .collapse">
-                            <h2>Add facets from the index</h2>
-                            <pre>buildFacets()</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildFilters"></a>
-                        <div class="element clickable methodprotected method_buildFilters inherited" data-toggle="collapse" data-target=".method_buildFilters .collapse">
-                            <h2>Create filter queries</h2>
-                            <pre>buildFilters()</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildQuery"></a>
-                        <div class="element clickable methodpublic method_buildQuery" data-toggle="collapse" data-target=".method_buildQuery .collapse">
-                            <h2>Build the full query</h2>
-                            <pre>buildQuery(): \Solarium\QueryType\Select\Query\Query</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>\Solarium\QueryType\Select\Query\Query</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildQueryBoost"></a>
-                        <div class="element clickable methodprotected method_buildQueryBoost inherited" data-toggle="collapse" data-target=".method_buildQueryBoost .collapse">
-                            <h2>Set boosting at Query time</h2>
-                            <pre>buildQueryBoost(array $search,string $term,array &$boostTerms): array</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$search</h4>
-                                                <code>array</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$term</h4>
-                                                <code>string</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$boostTerms</h4>
-                                                <code>array</code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>array</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildSpellcheck"></a>
-                        <div class="element clickable methodprotected method_buildSpellcheck" data-toggle="collapse" data-target=".method_buildSpellcheck .collapse">
-                            <h2>Add spellcheck elements</h2>
-                            <pre>buildSpellcheck()</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildTerms"></a>
-                        <div class="element clickable methodprotected method_buildTerms" data-toggle="collapse" data-target=".method_buildTerms .collapse">
-                            <h2>Build the terms and boost terms</h2>
-                            <pre>buildTerms(): void</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_buildViewFilter"></a>
-                        <div class="element clickable methodprotected method_buildViewFilter inherited" data-toggle="collapse" data-target=".method_buildViewFilter .collapse">
-                            <h2>Add filtering on canView</h2>
-                            <pre>buildViewFilter()</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_escapeSearch"></a>
-                        <div class="element clickable methodpublic method_escapeSearch" data-toggle="collapse" data-target=".method_escapeSearch .collapse">
-                            <h2>Escape the search query</h2>
-                            <pre>escapeSearch(string $searchTerm,\Solarium\Core\Query\Helper $helper): string</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$searchTerm</h4>
-                                                <code>string</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$helper</h4>
-                                                <code>\Solarium\Core\Query\Helper</code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>string</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_getBoostTerms"></a>
-                        <div class="element clickable methodpublic method_getBoostTerms inherited" data-toggle="collapse" data-target=".method_getBoostTerms .collapse">
-                            <h2>Get the boosted terms</h2>
-                            <pre>getBoostTerms(): array</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>array</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_getClientQuery"></a>
-                        <div class="element clickable methodpublic method_getClientQuery" data-toggle="collapse" data-target=".method_getClientQuery .collapse">
-                            <h2>Get the client Query components</h2>
-                            <pre>getClientQuery(): \Solarium\QueryType\Select\Query\Query</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>\Solarium\QueryType\Select\Query\Query</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_getHelper"></a>
-                        <div class="element clickable methodpublic method_getHelper" data-toggle="collapse" data-target=".method_getHelper .collapse">
-                            <h2>Get the query helper</h2>
-                            <pre>getHelper(): \Solarium\Core\Query\Helper</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>\Solarium\Core\Query\Helper</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_getIndex"></a>
-                        <div class="element clickable methodpublic method_getIndex" data-toggle="collapse" data-target=".method_getIndex .collapse">
-                            <h2>Get the BaseIndex</h2>
-                            <pre>getIndex(): \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_getQuery"></a>
-                        <div class="element clickable methodpublic method_getQuery" data-toggle="collapse" data-target=".method_getQuery .collapse">
-                            <h2>Get the base query</h2>
-                            <pre>getQuery(): \Firesphere\SolrSearch\Queries\BaseQuery</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_getQueryArray"></a>
-                        <div class="element clickable methodpublic method_getQueryArray inherited" data-toggle="collapse" data-target=".method_getQueryArray .collapse">
-                            <h2>Any class using this needs getQueryArray</h2>
-                            <pre>getQueryArray(): mixed</pre>
-                            <div class="labels"><span class="label">inherited</span><span class="label">abstract</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>mixed</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_isFuzzy"></a>
-                        <div class="element clickable methodprotected method_isFuzzy" data-toggle="collapse" data-target=".method_isFuzzy .collapse">
-                            <h2>If the search is fuzzy, add fuzzyness</h2>
-                            <pre>isFuzzy( $search): string</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$search</h4>
-                                                <code></code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>string</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_setBoostTerms"></a>
-                        <div class="element clickable methodpublic method_setBoostTerms inherited" data-toggle="collapse" data-target=".method_setBoostTerms .collapse">
-                            <h2>Set the boosted terms manually</h2>
-                            <pre>setBoostTerms(array $boostTerms): \Firesphere\SolrSearch\Factories\QueryComponentFactory</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$boostTerms</h4>
-                                                <code>array</code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">\Firesphere\SolrSearch\Factories\QueryComponentFactory</a></code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_setClientQuery"></a>
-                        <div class="element clickable methodpublic method_setClientQuery" data-toggle="collapse" data-target=".method_setClientQuery .collapse">
-                            <h2>Set a custom Client Query object</h2>
-                            <pre>setClientQuery(\Solarium\QueryType\Select\Query\Query $clientQuery): self</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$clientQuery</h4>
-                                                <code>\Solarium\QueryType\Select\Query\Query</code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>self</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_setHelper"></a>
-                        <div class="element clickable methodpublic method_setHelper" data-toggle="collapse" data-target=".method_setHelper .collapse">
-                            <h2>Set the Helper</h2>
-                            <pre>setHelper(\Solarium\Core\Query\Helper $helper): self</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$helper</h4>
-                                                <code>\Solarium\Core\Query\Helper</code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>self</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_setIndex"></a>
-                        <div class="element clickable methodpublic method_setIndex" data-toggle="collapse" data-target=".method_setIndex .collapse">
-                            <h2>Set a BaseIndex</h2>
-                            <pre>setIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $index): self</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$index</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>self</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_setQuery"></a>
-                        <div class="element clickable methodpublic method_setQuery" data-toggle="collapse" data-target=".method_setQuery .collapse">
-                            <h2>Set the base query</h2>
-                            <pre>setQuery(\Firesphere\SolrSearch\Queries\BaseQuery $query): self</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$query</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>self</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_setQueryArray"></a>
-                        <div class="element clickable methodpublic method_setQueryArray" data-toggle="collapse" data-target=".method_setQueryArray .collapse">
-                            <h2>Set the array of queries that are sent to Solr</h2>
-                            <pre>setQueryArray(array $queryArray): self</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$queryArray</h4>
-                                                <code>array</code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>self</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <h3><i class="icon-custom icon-constant"></i> Constants</h3>                            <a id="constant_DEFAULT_FIELDS"> </a>
-                            <div class="element clickable constant constant_DEFAULT_FIELDS" data-toggle="collapse" data-target=".constant_DEFAULT_FIELDS .collapse">
-                                <h2>Default fields that should always be added</h2>
-                                <pre>DEFAULT_FIELDS</pre>
-                                <div class="labels">                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>
-                                    </div>
-                                </div>
-                            </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_builds"> </a>
-                            <div class="element clickable propertyprotected property_builds" data-toggle="collapse" data-target=".property_builds .collapse">
-                                <h2>Build methods to run</h2>
-                                <pre>builds :array</pre>
-                                <div class="labels"><span class="label">static</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>array</code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_query"> </a>
-                            <div class="element clickable propertyprotected property_query inherited" data-toggle="collapse" data-target=".property_query .collapse">
-                                <h2>Query to use</h2>
-                                <pre>query :\Firesphere\SolrSearch\Queries\BaseQuery</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td><p>Query to use</p>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_helper"> </a>
-                            <div class="element clickable propertyprotected property_helper" data-toggle="collapse" data-target=".property_helper .collapse">
-                                <h2>Helper to escape the query terms properly</h2>
-                                <pre>helper :\Solarium\Core\Query\Helper</pre>
-                                <div class="labels">                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>\Solarium\Core\Query\Helper</code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_queryArray"> </a>
-                            <div class="element clickable propertyprotected property_queryArray inherited" data-toggle="collapse" data-target=".property_queryArray .collapse">
-                                <h2>Query set that has been executed</h2>
-                                <pre>queryArray :array</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>array</code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_index"> </a>
-                            <div class="element clickable propertyprotected property_index inherited" data-toggle="collapse" data-target=".property_index .collapse">
-                                <h2>Index to query</h2>
-                                <pre>index :\Firesphere\SolrSearch\Indexes\BaseIndex</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td><p>Index to query</p>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_clientQuery"> </a>
-                            <div class="element clickable propertyprotected property_clientQuery inherited" data-toggle="collapse" data-target=".property_clientQuery .collapse">
-                                <h2>Solarium query</h2>
-                                <pre>clientQuery :\Solarium\QueryType\Select\Query\Query</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td><p>Solarium query</p>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>\Solarium\QueryType\Select\Query\Query</code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_boostTerms"> </a>
-                            <div class="element clickable propertyprotected property_boostTerms inherited" data-toggle="collapse" data-target=".property_boostTerms .collapse">
-                                <h2>Terms that are going to be boosted</h2>
-                                <pre>boostTerms :array</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>array</code>                                    </div>
-                                </div>
-                            </div>                </div>
+                    <ul>                    </ul>
+                </div>
             </div>
-            <a id="\Firesphere\SolrSearch\Factories\QueryComponentFactory"></a>
-            <ul class="breadcrumb">
-                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
-    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Factories.html">Factories</a></li>
-                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">QueryComponentFactory</a></li>
-            </ul>
         </div>
-    </div>    </div>    <footer class="span12">
-            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
-            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSat, 30 Nov 2019 21:48:15 +0000.<br/>
-    </footer></body>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1515183864"></a>                <a href="../namespaces/SilverStripe.html" style="margin-left: 30px; padding-left: 0">SilverStripe</a>
+            </div>
+            <div id="namespace-1515183864" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1867711241"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.html" style="margin-left: 30px; padding-left: 0">FullTextSearch</a>
+            </div>
+            <div id="namespace-1867711241" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1637150149"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.Search.html" style="margin-left: 30px; padding-left: 0">Search</a>
+            </div>
+            <div id="namespace-1637150149" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-942653065"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.Search.Queries.html" style="margin-left: 30px; padding-left: 0">Queries</a>
+            </div>
+            <div id="namespace-942653065" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/SilverStripe.FullTextSearch.Search.Queries.SearchQuery.html">SearchQuery</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1117051461"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.Solr.html" style="margin-left: 30px; padding-left: 0">Solr</a>
+            </div>
+            <div id="namespace-1117051461" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/SilverStripe.FullTextSearch.Solr.Solr.html">Solr</a></li>                            <li class="class"><a href="../classes/SilverStripe.FullTextSearch.Solr.SolrIndex.html">SolrIndex</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav><a href="../namespaces/Firesphere.SolrSearch.Factories.html">\Firesphere\SolrSearch\Factories</a> <i class="icon-level-up"></i>                    </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Firesphere\SolrSearch\Factories</small>QueryComponentFactory</h1>
+                    <p><em>Class QueryComponentFactory</em></p><p>Build a query component for each available build part</p>                    
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html#method_getBoostTerms" class="">getBoostTerms()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html#method_setBoostTerms" class="">setBoostTerms()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_getQueryArray" class="">getQueryArray()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_buildQuery" class="">buildQuery()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_getQuery" class="">getQuery()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_setQuery" class="">setQuery()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_setQueryArray" class="">setQueryArray()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_getClientQuery" class="">getClientQuery()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_setClientQuery" class="">setClientQuery()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_getHelper" class="">getHelper()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_setHelper" class="">setHelper()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_getIndex" class="">getIndex()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_setIndex" class="">setIndex()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_escapeSearch" class="">escapeSearch()</a><br />                            </section>
+                            <section class="span4">                                    <em>No public properties found</em>                            </section>
+                            <section class="span4">                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#constant_DEFAULT_FIELDS" class="">DEFAULT_FIELDS</a><br />                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html#method_buildFilters" class="">buildFilters()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html#method_buildViewFilter" class="">buildViewFilter()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html#method_buildClassFilter" class="">buildClassFilter()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html#method_buildExcludes" class="">buildExcludes()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html#method_buildBoosts" class="">buildBoosts()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html#method_buildQueryBoost" class="">buildQueryBoost()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html#method_buildFacets" class="">buildFacets()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html#method_buildFacetQuery" class="">buildFacetQuery()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_buildTerms" class="">buildTerms()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_isFuzzy" class="">isFuzzy()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#method_buildSpellcheck" class="">buildSpellcheck()</a><br />                            </section>
+                            <section class="span4">                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#property_query" class="">$query</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html#property_clientQuery" class="">$clientQuery</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html#property_boostTerms" class="">$boostTerms</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#property_queryArray" class="">$queryArray</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#property_index" class="">$index</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#property_builds" class="">$builds</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html#property_helper" class="">$helper</a><br />                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">                                    <em>No private methods found</em>                            </section>
+                            <section class="span4">                                    <em>No private properties found</em>                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/search.src.Factories.QueryComponentFactory.html"><div class="path-wrapper">search/src/Factories/QueryComponentFactory.php</div></a></dd>                        <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">SolrSearch\Factories</div></dd>                        <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">                                <div class="namespace-wrapper">\Firesphere\SolrSearch\Factories\QueryComponentFactory</div>
+                            </dd>                                <dt>Uses traits</dt>                            <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html">                                    <div class="namespace-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentFilterTrait</div></a>                            </dd>                            <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html">                                    <div class="namespace-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentBoostTrait</div></a>                            </dd>                            <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html">                                    <div class="namespace-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentFacetTrait</div></a>                            </dd>                    </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">                        <tr><td colspan="2"><em>None found</em></td></tr>                    </table>
+                </aside>
+            </div>            <a id="constants" name="constants"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Constants</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_DEFAULT_FIELDS" name="constant_DEFAULT_FIELDS" class="anchor"></a>
+            <article id="constant_DEFAULT_FIELDS" class="constant">
+                <h3 class="">DEFAULT_FIELDS</h3>
+                <pre class="signature">DEFAULT_FIELDS</pre>
+                <p><em>Default fields that should always be added</em></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>            <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_query" name="property_query" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$query</h3>
+                <pre class="signature">$query :\Firesphere\SolrSearch\Queries\BaseQuery</pre>
+                <p><em>BaseQuery that needs to be executed</em></p>                <h4>Type</h4><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_clientQuery" name="property_clientQuery" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$clientQuery</h3>
+                <pre class="signature">$clientQuery :\Solarium\QueryType\Select\Query\Query</pre>
+                <p><em></em></p>                <h4>Type</h4>\Solarium\QueryType\Select\Query\Query&mdash;Solarium query            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentFacetTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_boostTerms" name="property_boostTerms" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$boostTerms</h3>
+                <pre class="signature">$boostTerms :array</pre>
+                <p><em>Terms that are going to be boosted</em></p>                <h4>Type</h4>array            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentBoostTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_queryArray" name="property_queryArray" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$queryArray</h3>
+                <pre class="signature">$queryArray :array</pre>
+                <p><em>Resulting querie parts as an array</em></p>                <h4>Type</h4>array            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_index" name="property_index" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$index</h3>
+                <pre class="signature">$index :\Firesphere\SolrSearch\Indexes\BaseIndex</pre>
+                <p><em>Index to query</em></p>                <h4>Type</h4><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_builds" name="property_builds" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$builds</h3>
+                <pre class="signature">$builds :array</pre>
+                <p><em>Build methods to run</em></p>                <h4>Type</h4>array            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_helper" name="property_helper" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$helper</h3>
+                <pre class="signature">$helper :\Solarium\Core\Query\Helper</pre>
+                <p><em>Helper to escape the query terms properly</em></p>                <h4>Type</h4>\Solarium\Core\Query\Helper            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>            <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getBoostTerms" name="method_getBoostTerms" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">getBoostTerms()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getBoostTerms(): array</pre>
+                <p><em>Get the boosted terms</em></p>                    <h4>Returns</h4>array            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentBoostTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setBoostTerms" name="method_setBoostTerms" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">setBoostTerms()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setBoostTerms(array  <span class="argument">$boostTerms</span>): \Firesphere\SolrSearch\Factories\QueryComponentFactory</pre>
+                <p><em>Set the boosted terms manually</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td>array</td>
+                                <td>$boostTerms</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Returns</h4><a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">\Firesphere\SolrSearch\Factories\QueryComponentFactory</a>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentBoostTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getQueryArray" name="method_getQueryArray" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">getQueryArray()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getQueryArray(): array</pre>
+                <p><em>Get the array of terms used to query Solr</em></p>                    <h4>Returns</h4>array            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildQuery" name="method_buildQuery" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">buildQuery()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildQuery(): \Solarium\QueryType\Select\Query\Query</pre>
+                <p><em>Build the full query</em></p>                    <h4>Returns</h4>\Solarium\QueryType\Select\Query\Query            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getQuery" name="method_getQuery" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">getQuery()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getQuery(): \Firesphere\SolrSearch\Queries\BaseQuery</pre>
+                <p><em>Get the base query</em></p>                    <h4>Returns</h4><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setQuery" name="method_setQuery" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">setQuery()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setQuery(\Firesphere\SolrSearch\Queries\BaseQuery  <span class="argument">$query</span>): self</pre>
+                <p><em>Set the base query</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></td>
+                                <td>$query</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Returns</h4>self            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setQueryArray" name="method_setQueryArray" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">setQueryArray()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setQueryArray(array  <span class="argument">$queryArray</span>): self</pre>
+                <p><em>Set the array of queries that are sent to Solr</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td>array</td>
+                                <td>$queryArray</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Returns</h4>self            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getClientQuery" name="method_getClientQuery" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">getClientQuery()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getClientQuery(): \Solarium\QueryType\Select\Query\Query</pre>
+                <p><em>Get the client Query components</em></p>                    <h4>Returns</h4>\Solarium\QueryType\Select\Query\Query            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setClientQuery" name="method_setClientQuery" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">setClientQuery()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setClientQuery(\Solarium\QueryType\Select\Query\Query  <span class="argument">$clientQuery</span>): self</pre>
+                <p><em>Set a custom Client Query object</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td>\Solarium\QueryType\Select\Query\Query</td>
+                                <td>$clientQuery</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Returns</h4>self            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getHelper" name="method_getHelper" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">getHelper()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getHelper(): \Solarium\Core\Query\Helper</pre>
+                <p><em>Get the query helper</em></p>                    <h4>Returns</h4>\Solarium\Core\Query\Helper            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setHelper" name="method_setHelper" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">setHelper()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setHelper(\Solarium\Core\Query\Helper  <span class="argument">$helper</span>): self</pre>
+                <p><em>Set the Helper</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td>\Solarium\Core\Query\Helper</td>
+                                <td>$helper</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Returns</h4>self            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getIndex" name="method_getIndex" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">getIndex()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getIndex(): \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
+                <p><em>Get the BaseIndex</em></p>                    <h4>Returns</h4><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setIndex" name="method_setIndex" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">setIndex()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setIndex(\Firesphere\SolrSearch\Indexes\BaseIndex  <span class="argument">$index</span>): self</pre>
+                <p><em>Set a BaseIndex</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></td>
+                                <td>$index</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Returns</h4>self            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_escapeSearch" name="method_escapeSearch" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">escapeSearch()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">escapeSearch(string  <span class="argument">$searchTerm</span>,\Solarium\Core\Query\Helper  <span class="argument">$helper</span>): string</pre>
+                <p><em>Escape the search query</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td>string</td>
+                                <td>$searchTerm</td>
+                                <td></td>
+                            </tr>                            <tr>
+                                <td>\Solarium\Core\Query\Helper</td>
+                                <td>$helper</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Returns</h4>string            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildFilters" name="method_buildFilters" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildFilters()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildFilters()</pre>
+                <p><em>Create filter queries</em></p>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentFilterTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildViewFilter" name="method_buildViewFilter" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildViewFilter()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildViewFilter()</pre>
+                <p><em>Add filtering on canView</em></p>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentFilterTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildClassFilter" name="method_buildClassFilter" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildClassFilter()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildClassFilter()</pre>
+                <p><em>Add filtered queries based on class hierarchy
+We only need the class itself, since the hierarchy will take care of the rest</em></p>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentFilterTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildExcludes" name="method_buildExcludes" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildExcludes()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildExcludes()</pre>
+                <p><em>Remove items to exclude</em></p>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentFilterTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildBoosts" name="method_buildBoosts" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildBoosts()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildBoosts()</pre>
+                <p><em>Build the boosted field setup through Criteria</em></p><p>Add the index-time boosting to the query</p>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentBoostTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildQueryBoost" name="method_buildQueryBoost" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildQueryBoost()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildQueryBoost(array  <span class="argument">$search</span>,string  <span class="argument">$term</span>,array  <span class="argument">$boostTerms</span>): array</pre>
+                <p><em>Set boosting at Query time</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td>array</td>
+                                <td>$search</td>
+                                <td></td>
+                            </tr>                            <tr>
+                                <td>string</td>
+                                <td>$term</td>
+                                <td></td>
+                            </tr>                            <tr>
+                                <td>array</td>
+                                <td>$boostTerms</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Returns</h4>array            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentBoostTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildFacets" name="method_buildFacets" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildFacets()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildFacets()</pre>
+                <p><em>Add facets from the index</em></p>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentFacetTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildFacetQuery" name="method_buildFacetQuery" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildFacetQuery()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildFacetQuery()</pre>
+                <p><em>Add facet filters based on the current request</em></p>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\QueryComponentFacetTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildTerms" name="method_buildTerms" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildTerms()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildTerms(): void</pre>
+                <p><em>Build the terms and boost terms</em></p>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isFuzzy" name="method_isFuzzy" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">isFuzzy()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isFuzzy(  <span class="argument">$search</span>): string</pre>
+                <p><em>If the search is fuzzy, add fuzzyness</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td></td>
+                                <td>$search</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Returns</h4>string            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buildSpellcheck" name="method_buildSpellcheck" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">buildSpellcheck()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buildSpellcheck()</pre>
+                <p><em>Add spellcheck elements</em></p>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>        </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">QueryComponentFactory.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/search/src/Factories/QueryComponentFactory.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">                            <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>                                        <li><a href="../namespaces/Firesphere.html">\Firesphere</a></li>                                        <li><a href="../namespaces/SilverStripe.html">\SilverStripe</a></li>                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">                            <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">                            <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    onNovember 30th, 2019 at 21:58.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
 </html>

@@ -3,646 +3,417 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title> &raquo;\Firesphere</title>
+    <title>SilverStripe Solr search</title>
     <meta name="author" content=""/>
-    <meta name="description" content=""/>        <link href="../css/template.css" rel="stylesheet" media="all"/>        <!--[if lt IE 9]>
-        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-        <![endif]-->
-        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
-        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
-        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
-        <script src="../js/template.js" type="text/javascript"></script>
-        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>        <link rel="shortcut icon" href="../img/favicon.ico"/>
-        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
-        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/></head>
-<body>    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> </a>
-                <a class="brand" href="../index.html">SilverStripe Solr search</a>
+    <meta name="description" content=""/>
 
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
-                                API Documentation <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
-                        </li>
-                        <li class="dropdown" id="charts-menu">
-                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
-                                Charts <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../graph_class.html">
-                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown" id="reports-menu">
-                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                Reports <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../errors.html">
-                                        <i class="icon-list-alt"></i>&#160;Errors
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../markers.html">
-                                        <i class="icon-list-alt"></i>&#160;Markers
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../deprecated.html">
-                                        <i class="icon-list-alt"></i>&#160;Deprecated
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">SilverStripe Solr search</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">                    <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">                            <li><a href="../namespaces/Firesphere.html">\Firesphere</a></li>                            <li><a href="../namespaces/SilverStripe.html">\SilverStripe</a></li>                        </ul>
+                    </li>                    <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">54</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">                                    <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">6</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">    <section class="row-fluid">
+        <div class="span2 sidebar">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-toggle" data-toggle="collapse" data-target="#namespace-1637276008"></a>                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1637276008" class="accordion-body collapsein">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-2034369462"></a>                <a href="../namespaces/Firesphere.html" style="margin-left: 30px; padding-left: 0">Firesphere</a>
+            </div>
+            <div id="namespace-2034369462" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-113938156"></a>                <a href="../namespaces/Firesphere.SolrSearch.html" style="margin-left: 30px; padding-left: 0">SolrSearch</a>
+            </div>
+            <div id="namespace-113938156" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1917947708"></a>                <a href="../namespaces/Firesphere.SolrSearch.Admins.html" style="margin-left: 30px; padding-left: 0">Admins</a>
+            </div>
+            <div id="namespace-1917947708" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html">SearchAdmin</a></li>                    </ul>
                 </div>
             </div>
         </div>
-        <div class="go_to_top">
-            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1704884064"></a>                <a href="../namespaces/Firesphere.SolrSearch.Compat.html" style="margin-left: 30px; padding-left: 0">Compat</a>
+            </div>
+            <div id="namespace-1704884064" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Compat.FulltextSearchExtension.html">FulltextSearchExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-804004704"></a>                <a href="../namespaces/Firesphere.SolrSearch.Extensions.html" style="margin-left: 30px; padding-left: 0">Extensions</a>
+            </div>
+            <div id="namespace-804004704" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Extensions.DataObjectExtension.html">DataObjectExtension</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Extensions.GridFieldExtension.html">GridFieldExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1720957690"></a>                <a href="../namespaces/Firesphere.SolrSearch.Factories.html" style="margin-left: 30px; padding-left: 0">Factories</a>
+            </div>
+            <div id="namespace-1720957690" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html">DocumentFactory</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">QueryComponentFactory</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1904964983"></a>                <a href="../namespaces/Firesphere.SolrSearch.Fluent.html" style="margin-left: 30px; padding-left: 0">Fluent</a>
+            </div>
+            <div id="namespace-1904964983" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Fluent.FluentExtension.html">FluentExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-85665464"></a>                <a href="../namespaces/Firesphere.SolrSearch.Forms.html" style="margin-left: 30px; padding-left: 0">Forms</a>
+            </div>
+            <div id="namespace-85665464" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Forms.SearchForm.html">SearchForm</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-422793194"></a>                <a href="../namespaces/Firesphere.SolrSearch.Helpers.html" style="margin-left: 30px; padding-left: 0">Helpers</a>
+            </div>
+            <div id="namespace-422793194" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html">DataResolver</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.FieldResolver.html">FieldResolver</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.SolrLogger.html">SolrLogger</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.Statics.html">Statics</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.Synonyms.html">Synonyms</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-544679737"></a>                <a href="../namespaces/Firesphere.SolrSearch.Indexes.html" style="margin-left: 30px; padding-left: 0">Indexes</a>
+            </div>
+            <div id="namespace-544679737" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">BaseIndex</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-915990670"></a>                <a href="../namespaces/Firesphere.SolrSearch.Interfaces.html" style="margin-left: 30px; padding-left: 0">Interfaces</a>
+            </div>
+            <div id="namespace-915990670" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="interface"><a href="../classes/Firesphere.SolrSearch.Interfaces.ConfigStore.html">ConfigStore</a></li>                            <li class="interface"><a href="../classes/Firesphere.SolrSearch.Interfaces.SiteStateInterface.html">SiteStateInterface</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-105214608"></a>                <a href="../namespaces/Firesphere.SolrSearch.Jobs.html" style="margin-left: 30px; padding-left: 0">Jobs</a>
+            </div>
+            <div id="namespace-105214608" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Jobs.ClearDirtyClassesJob.html">ClearDirtyClassesJob</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html">SolrConfigureJob</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html">SolrIndexJob</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-500728831"></a>                <a href="../namespaces/Firesphere.SolrSearch.Models.html" style="margin-left: 30px; padding-left: 0">Models</a>
+            </div>
+            <div id="namespace-500728831" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">DirtyClass</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Models.SearchSynonym.html">SearchSynonym</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Models.SolrLog.html">SolrLog</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-566179060"></a>                <a href="../namespaces/Firesphere.SolrSearch.Queries.html" style="margin-left: 30px; padding-left: 0">Queries</a>
+            </div>
+            <div id="namespace-566179060" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">BaseQuery</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1311780702"></a>                <a href="../namespaces/Firesphere.SolrSearch.Results.html" style="margin-left: 30px; padding-left: 0">Results</a>
+            </div>
+            <div id="namespace-1311780702" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html">SearchResult</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1910690461"></a>                <a href="../namespaces/Firesphere.SolrSearch.Services.html" style="margin-left: 30px; padding-left: 0">Services</a>
+            </div>
+            <div id="namespace-1910690461" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">SchemaService</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">SolrCoreService</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1332584276"></a>                <a href="../namespaces/Firesphere.SolrSearch.States.html" style="margin-left: 30px; padding-left: 0">States</a>
+            </div>
+            <div id="namespace-1332584276" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.States.SiteState.html">SiteState</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-218568286"></a>                <a href="../namespaces/Firesphere.SolrSearch.Stores.html" style="margin-left: 30px; padding-left: 0">Stores</a>
+            </div>
+            <div id="namespace-218568286" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Stores.FileConfigStore.html">FileConfigStore</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html">PostConfigStore</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1612817784"></a>                <a href="../namespaces/Firesphere.SolrSearch.Subsites.html" style="margin-left: 30px; padding-left: 0">Subsites</a>
+            </div>
+            <div id="namespace-1612817784" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Subsites.SubsitesExtension.html">SubsitesExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1821771268"></a>                <a href="../namespaces/Firesphere.SolrSearch.Tasks.html" style="margin-left: 30px; padding-left: 0">Tasks</a>
+            </div>
+            <div id="namespace-1821771268" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Tasks.ClearDirtyClassesTask.html">ClearDirtyClassesTask</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html">SolrConfigureTask</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html">SolrIndexTask</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-69212271"></a>                <a href="../namespaces/Firesphere.SolrSearch.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-69212271" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.BaseIndexTrait.html">BaseIndexTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.BaseQueryTrait.html">BaseQueryTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.CoreAdminTrait.html">CoreAdminTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.CoreServiceTrait.html">CoreServiceTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html">DataResolveTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.DocumentFactoryTrait.html">DocumentFactoryTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSchemaServiceTrait.html">GetSetSchemaServiceTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSearchResolverTrait.html">GetSetSearchResolverTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.GetterSetterTrait.html">GetterSetterTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.LoggerTrait.html">LoggerTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html">QueryComponentBoostTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html">QueryComponentFacetTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html">QueryComponentFilterTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.SearchResultGetTrait.html">SearchResultGetTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.SearchResultSetTrait.html">SearchResultSetTrait</a></li>                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="___" class="container">
-        <noscript>
-            <div class="alert alert-warning">
-                Javascript is disabled; several features are only available if Javascript is enabled.
+                    <ul>                    </ul>
+                </div>
             </div>
-        </noscript>
-    <div class="row">
-
-        <div class="span4">
-            <div class="btn-group view pull-right" data-toggle="buttons-radio">
-                <button class="btn details" title="Show descriptions and method names">
-                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
-                    <i class="icon-align-justify"></i>
-                </button>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
             </div>
-            <ul class="side-nav nav nav-list">
-                <li class="nav-header">
-                    <i class="icon-map-marker"></i> Namespaces
-                </li>
-                <a href="../namespaces/Firesphere.html" title="Firesphere">
-                    <i class="icon-th"></i>Firesphere
-                </a>
-                <ul class="nav nav-list nav-namespaces">    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.html" title="SolrSearch">
-            <i class="icon-th"></i>SolrSearch
-        </a>
-        <ul class="nav nav-list nav-namespaces">    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Admins.html" title="Admins">
-            <i class="icon-th"></i>Admins
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Compat.html" title="Compat">
-            <i class="icon-th"></i>Compat
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Extensions.html" title="Extensions">
-            <i class="icon-th"></i>Extensions
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Factories.html" title="Factories">
-            <i class="icon-th"></i>Factories
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Fluent.html" title="Fluent">
-            <i class="icon-th"></i>Fluent
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Forms.html" title="Forms">
-            <i class="icon-th"></i>Forms
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Helpers.html" title="Helpers">
-            <i class="icon-th"></i>Helpers
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Indexes.html" title="Indexes">
-            <i class="icon-th"></i>Indexes
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Interfaces.html" title="Interfaces">
-            <i class="icon-th"></i>Interfaces
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Jobs.html" title="Jobs">
-            <i class="icon-th"></i>Jobs
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Models.html" title="Models">
-            <i class="icon-th"></i>Models
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Queries.html" title="Queries">
-            <i class="icon-th"></i>Queries
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Results.html" title="Results">
-            <i class="icon-th"></i>Results
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Services.html" title="Services">
-            <i class="icon-th"></i>Services
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.States.html" title="States">
-            <i class="icon-th"></i>States
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Stores.html" title="Stores">
-            <i class="icon-th"></i>Stores
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Subsites.html" title="Subsites">
-            <i class="icon-th"></i>Subsites
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Tasks.html" title="Tasks">
-            <i class="icon-th"></i>Tasks
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>    <li>
-        <a href="../namespaces/Firesphere.SolrSearch.Traits.html" title="Traits">
-            <i class="icon-th"></i>Traits
-        </a>
-        <ul class="nav nav-list nav-namespaces">
-        </ul>
-    </li>
-        </ul>
-    </li>
-                </ul>
-            </ul>
         </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1041509992"></a>                <a href="../namespaces/SilverStripe.html" style="margin-left: 30px; padding-left: 0">SilverStripe</a>
+            </div>
+            <div id="namespace-1041509992" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1312956407"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.html" style="margin-left: 30px; padding-left: 0">FullTextSearch</a>
+            </div>
+            <div id="namespace-1312956407" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-249278565"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.Search.html" style="margin-left: 30px; padding-left: 0">Search</a>
+            </div>
+            <div id="namespace-249278565" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-499185701"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.Search.Queries.html" style="margin-left: 30px; padding-left: 0">Queries</a>
+            </div>
+            <div id="namespace-499185701" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/SilverStripe.FullTextSearch.Search.Queries.SearchQuery.html">SearchQuery</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1604041607"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.Solr.html" style="margin-left: 30px; padding-left: 0">Solr</a>
+            </div>
+            <div id="namespace-1604041607" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/SilverStripe.FullTextSearch.Solr.Solr.html">Solr</a></li>                            <li class="class"><a href="../classes/SilverStripe.FullTextSearch.Solr.SolrIndex.html">SolrIndex</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content namespace">
+                    <nav><a href="../namespaces/default.html">\</a>                    </nav>
+                    <h1><small>\</small>Firesphere</h1>                    <h2>Namespaces</h2>
+                    <table class="table table-hover">                            <tr>
+                                <td><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a></td>
+                            </tr>                    </table>                </div>
 
-        <div class="span8 namespace-contents">
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Compat.html">Compat</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_FulltextSearchExtension" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_FulltextSearchExtension .collapse">
-        <h1>FulltextSearchExtension<a href="../classes/Firesphere.SolrSearch.Compat.FulltextSearchExtension.html">¶</a></h1>
-        <p class="short_description">Class FulltextSearchExtension
-Backward compatibility stubs for the Full text search module</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Compat.FulltextSearchExtension.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Admins.html">Admins</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_SearchAdmin" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SearchAdmin .collapse">
-        <h1>SearchAdmin<a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Admins\SearchAdmin
-Manage or see the Solr configuration. Default implementation of SilverStripe ModelAdmin
-Nothing to see here</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Indexes.html">Indexes</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_BaseIndex" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_BaseIndex .collapse">
-        <h1>BaseIndex<a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">¶</a></h1>
-        <p class="short_description">Base for creating a new Solr core.</p>
-        <div class="details collapse"><p>Base index settings and methods. Should be extended with at least a name for the index.
-This is an abstract class that can not be instantiated on it's own</p>        </div><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Forms.html">Forms</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_SearchForm" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SearchForm .collapse">
-        <h1>SearchForm<a href="../classes/Firesphere.SolrSearch.Forms.SearchForm.html">¶</a></h1>
-        <p class="short_description">Class SolrSearchForm
-Basic form to start searching</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Forms.SearchForm.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Traits.html">Traits</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="trait_BaseIndexTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_BaseIndexTrait .collapse">
-        <h1>BaseIndexTrait<a href="../classes/Firesphere.SolrSearch.Traits.BaseIndexTrait.html">¶</a></h1>
-        <p class="short_description">This is slightly cheating, but it works and also makes things more readable.</p>
-        <div class="details collapse"><p>This is slightly cheating, but it works and also makes things more readable.</p>        </div><a href="../classes/Firesphere.SolrSearch.Traits.BaseIndexTrait.html" class="more">« More »</a>    </div>    <div id="trait_BaseQueryTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_BaseQueryTrait .collapse">
-        <h1>BaseQueryTrait<a href="../classes/Firesphere.SolrSearch.Traits.BaseQueryTrait.html">¶</a></h1>
-        <p class="short_description">Trait BaseQueryTrait Extraction from the BaseQuery class to keep things readable.</p>
-        <div class="details collapse"><p>This trait adds the support for adding the basic field/filter/term/facet options</p>        </div><a href="../classes/Firesphere.SolrSearch.Traits.BaseQueryTrait.html" class="more">« More »</a>    </div>    <div id="trait_CoreAdminTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_CoreAdminTrait .collapse">
-        <h1>CoreAdminTrait<a href="../classes/Firesphere.SolrSearch.Traits.CoreAdminTrait.html">¶</a></h1>
-        <p class="short_description">Trait CoreAdminTrait is the trait that helps with Admin operations.</p>
-        <div class="details collapse"><p>Core operations, such as reload, load, create, unload etc. are supplied by this trait.</p>        </div><a href="../classes/Firesphere.SolrSearch.Traits.CoreAdminTrait.html" class="more">« More »</a>    </div>    <div id="trait_CoreServiceTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_CoreServiceTrait .collapse">
-        <h1>CoreServiceTrait<a href="../classes/Firesphere.SolrSearch.Traits.CoreServiceTrait.html">¶</a></h1>
-        <p class="short_description">Trait CoreServiceTrait to have simple methods that don&#039;t really need to be in core.</p>
-        <div class="details collapse"><p>Trait to support basic settings for the Solr Core Service</p>        </div><a href="../classes/Firesphere.SolrSearch.Traits.CoreServiceTrait.html" class="more">« More »</a>    </div>    <div id="trait_DataResolveTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_DataResolveTrait .collapse">
-        <h1>DataResolveTrait<a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html">¶</a></h1>
-        <p class="short_description">Trait ResolveTrait All resolver methods for the DataResolver</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html" class="more">« More »</a>    </div>    <div id="trait_DocumentFactoryTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_DocumentFactoryTrait .collapse">
-        <h1>DocumentFactoryTrait<a href="../classes/Firesphere.SolrSearch.Traits.DocumentFactoryTrait.html">¶</a></h1>
-        <p class="short_description">Trait DocumentFactoryTrait is a basic getter setter for the DocumentFactory.</p>
-        <div class="details collapse"><p>Getter and setter helpers</p>        </div><a href="../classes/Firesphere.SolrSearch.Traits.DocumentFactoryTrait.html" class="more">« More »</a>    </div>    <div id="trait_GetSetSchemaServiceTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_GetSetSchemaServiceTrait .collapse">
-        <h1>GetSetSchemaServiceTrait<a href="../classes/Firesphere.SolrSearch.Traits.GetSetSchemaServiceTrait.html">¶</a></h1>
-        <p class="short_description">Trait GetSetSchemaServiceTrait</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSchemaServiceTrait.html" class="more">« More »</a>    </div>    <div id="trait_GetSetSearchResolverTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_GetSetSearchResolverTrait .collapse">
-        <h1>GetSetSearchResolverTrait<a href="../classes/Firesphere.SolrSearch.Traits.GetSetSearchResolverTrait.html">¶</a></h1>
-        <p class="short_description">Setters and getters for the introspection.</p>
-        <div class="details collapse"><p>Setters and getters to help with introspection/resolving, it's fairly simple, but extracted
-so it's cleaner to read the code</p>        </div><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSearchResolverTrait.html" class="more">« More »</a>    </div>    <div id="trait_GetterSetterTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_GetterSetterTrait .collapse">
-        <h1>GetterSetterTrait<a href="../classes/Firesphere.SolrSearch.Traits.GetterSetterTrait.html">¶</a></h1>
-        <p class="short_description">Trait GetterSetterTrait for getting and setting data</p>
-        <div class="details collapse"><p>Getters and setters shared between the Index and Query</p>        </div><a href="../classes/Firesphere.SolrSearch.Traits.GetterSetterTrait.html" class="more">« More »</a>    </div>    <div id="trait_LoggerTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_LoggerTrait .collapse">
-        <h1>LoggerTrait<a href="../classes/Firesphere.SolrSearch.Traits.LoggerTrait.html">¶</a></h1>
-        <p class="short_description">Trait LoggerTrait</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Traits.LoggerTrait.html" class="more">« More »</a>    </div>    <div id="trait_QueryComponentBoostTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_QueryComponentBoostTrait .collapse">
-        <h1>QueryComponentBoostTrait<a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html">¶</a></h1>
-        <p class="short_description">Trait QueryComponentBoostTrait adds support for boosting to a QueryComponent</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html" class="more">« More »</a>    </div>    <div id="trait_QueryComponentFacetTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_QueryComponentFacetTrait .collapse">
-        <h1>QueryComponentFacetTrait<a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html">¶</a></h1>
-        <p class="short_description">Trait QueryComponentFacetTrait deals with the facets.</p>
-        <div class="details collapse"><p>Faceting for any given query or index.</p>        </div><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html" class="more">« More »</a>    </div>    <div id="trait_QueryComponentFilterTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_QueryComponentFilterTrait .collapse">
-        <h1>QueryComponentFilterTrait<a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html">¶</a></h1>
-        <p class="short_description">Trait QueryComponentFilterTrait</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html" class="more">« More »</a>    </div>    <div id="trait_SearchResultGetTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_SearchResultGetTrait .collapse">
-        <h1>SearchResultGetTrait<a href="../classes/Firesphere.SolrSearch.Traits.SearchResultGetTrait.html">¶</a></h1>
-        <p class="short_description">Trait SearchResultGetTrait</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Traits.SearchResultGetTrait.html" class="more">« More »</a>    </div>    <div id="trait_SearchResultSetTrait" class="element ajax clickabletrait" data-toggle="collapse" data-target="#trait_SearchResultSetTrait .collapse">
-        <h1>SearchResultSetTrait<a href="../classes/Firesphere.SolrSearch.Traits.SearchResultSetTrait.html">¶</a></h1>
-        <p class="short_description">Trait SearchResultSetTrait</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Traits.SearchResultSetTrait.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.States.html">States</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_SiteState" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SiteState .collapse">
-        <h1>SiteState<a href="../classes/Firesphere.SolrSearch.States.SiteState.html">¶</a></h1>
-        <p class="short_description">Class SiteState</p>
-        <div class="details collapse"><p>Determine and apply the state of the site currently. This is used at index-time to figure out what state to index.
-An example of this is the FluentSearchVariant extension from Fluent.</p>
-<p>Fluent uses the old SearchVariant method, which is actually not that bad a concept. These &quot;Variants&quot;, now called
-&quot;States&quot; set the state of the site to a required setting for each available state.</p>
-<p>States SHOULD add their own states through an extension, otherwise it won't be called.
-\Firesphere\SolrSearch\States\FluentExtension::onBeforeInit()</p>
-<p>States, options, etc. are simplified for a more streamlined approach</p>        </div><a href="../classes/Firesphere.SolrSearch.States.SiteState.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Tasks.html">Tasks</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_ClearDirtyClassesTask" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_ClearDirtyClassesTask .collapse">
-        <h1>ClearDirtyClassesTask<a href="../classes/Firesphere.SolrSearch.Tasks.ClearDirtyClassesTask.html">¶</a></h1>
-        <p class="short_description">Class ClearDirtyClasses Clear out classes that were not succesfully updated or deleted in Solr.</p>
-        <div class="details collapse"><p>Any classes that failed to index properly or be removed properly need to be cleaned out regularly
-This task takes care of doing this. It can be run directly via /dev/tasks, or via a queued job</p>        </div><a href="../classes/Firesphere.SolrSearch.Tasks.ClearDirtyClassesTask.html" class="more">« More »</a>    </div>    <div id="class_SolrConfigureTask" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SolrConfigureTask .collapse">
-        <h1>SolrConfigureTask<a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html">¶</a></h1>
-        <p class="short_description">Class SolrConfigureTask</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html" class="more">« More »</a>    </div>    <div id="class_SolrIndexTask" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SolrIndexTask .collapse">
-        <h1>SolrIndexTask<a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html">¶</a></h1>
-        <p class="short_description">Class SolrIndexTask</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Helpers.html">Helpers</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_DataResolver" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_DataResolver .collapse">
-        <h1>DataResolver<a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html">¶</a></h1>
-        <p class="short_description">Class DataResolver</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html" class="more">« More »</a>    </div>    <div id="class_FieldResolver" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_FieldResolver .collapse">
-        <h1>FieldResolver<a href="../classes/Firesphere.SolrSearch.Helpers.FieldResolver.html">¶</a></h1>
-        <p class="short_description">Class FieldResolver
-Some additional introspection tools that are used often by the fulltext search code</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Helpers.FieldResolver.html" class="more">« More »</a>    </div>    <div id="class_SolrLogger" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SolrLogger .collapse">
-        <h1>SolrLogger<a href="../classes/Firesphere.SolrSearch.Helpers.SolrLogger.html">¶</a></h1>
-        <p class="short_description">Class SolrLogger</p>
-        <div class="details collapse"><p>Log information from Solr to the CMS for reference</p>        </div><a href="../classes/Firesphere.SolrSearch.Helpers.SolrLogger.html" class="more">« More »</a>    </div>    <div id="class_Statics" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_Statics .collapse">
-        <h1>Statics<a href="../classes/Firesphere.SolrSearch.Helpers.Statics.html">¶</a></h1>
-        <p class="short_description">Class Statics
-Typemap static helper</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Helpers.Statics.html" class="more">« More »</a>    </div>    <div id="class_Synonyms" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_Synonyms .collapse">
-        <h1>Synonyms<a href="../classes/Firesphere.SolrSearch.Helpers.Synonyms.html">¶</a></h1>
-        <p class="short_description">Class Synonyms
-List out UK to US synonyms and synonyms from {@link SiteConfig}
-Source: @link https://raw.githubusercontent.com/heiswayi/spelling-uk-vs-us/</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Helpers.Synonyms.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Extensions.html">Extensions</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_DataObjectExtension" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_DataObjectExtension .collapse">
-        <h1>DataObjectExtension<a href="../classes/Firesphere.SolrSearch.Extensions.DataObjectExtension.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Compat\DataObjectExtension</p>
-        <div class="details collapse"><p>Extend every DataObject with the option to update the index.</p>        </div><a href="../classes/Firesphere.SolrSearch.Extensions.DataObjectExtension.html" class="more">« More »</a>    </div>    <div id="class_GridFieldExtension" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_GridFieldExtension .collapse">
-        <h1>GridFieldExtension<a href="../classes/Firesphere.SolrSearch.Extensions.GridFieldExtension.html">¶</a></h1>
-        <p class="short_description">Class GridFieldExtension
-Dirty hack to get the alert/warning/info classes in to the gridfield</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Extensions.GridFieldExtension.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Models.html">Models</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_DirtyClass" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_DirtyClass .collapse">
-        <h1>DirtyClass<a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Models\DirtyClass
-Keeping track of Dirty classes in Solr</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html" class="more">« More »</a>    </div>    <div id="class_SearchSynonym" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SearchSynonym .collapse">
-        <h1>SearchSynonym<a href="../classes/Firesphere.SolrSearch.Models.SearchSynonym.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Models\SearchSynonym</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Models.SearchSynonym.html" class="more">« More »</a>    </div>    <div id="class_SolrLog" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SolrLog .collapse">
-        <h1>SolrLog<a href="../classes/Firesphere.SolrSearch.Models.SolrLog.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Models\SolrError</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Models.SolrLog.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Jobs.html">Jobs</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_ClearDirtyClassesJob" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_ClearDirtyClassesJob .collapse">
-        <h1>ClearDirtyClassesJob<a href="../classes/Firesphere.SolrSearch.Jobs.ClearDirtyClassesJob.html">¶</a></h1>
-        <p class="short_description">Class ClearDirtyClassesJob is the queued job version of the ClearDirtyClassesTask</p>
-        <div class="details collapse"><p>Clean up any dirty classes in Solr due to objects not being updated properly</p>        </div><a href="../classes/Firesphere.SolrSearch.Jobs.ClearDirtyClassesJob.html" class="more">« More »</a>    </div>    <div id="class_SolrConfigureJob" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SolrConfigureJob .collapse">
-        <h1>SolrConfigureJob<a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html">¶</a></h1>
-        <p class="short_description">Class SolrConfigureJob</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html" class="more">« More »</a>    </div>    <div id="class_SolrIndexJob" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SolrIndexJob .collapse">
-        <h1>SolrIndexJob<a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html">¶</a></h1>
-        <p class="short_description">Class SolrIndexJob is a queued job to index all existing indexes and their classes.</p>
-        <div class="details collapse"><p>It always runs on all indexes, to make sure all indexes are up to date.</p>        </div><a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Services.html">Services</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_SchemaService" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SchemaService .collapse">
-        <h1>SchemaService<a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">¶</a></h1>
-        <p class="short_description">Class SchemaService</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html" class="more">« More »</a>    </div>    <div id="class_SolrCoreService" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SolrCoreService .collapse">
-        <h1>SolrCoreService<a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">¶</a></h1>
-        <p class="short_description">Class SolrCoreService provides the base connection to Solr.</p>
-        <div class="details collapse"><p>Default service to connect to Solr and handle all base requirements to support Solr.
-Default constants are available to support any set up.</p>        </div><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Factories.html">Factories</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_DocumentFactory" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_DocumentFactory .collapse">
-        <h1>DocumentFactory<a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html">¶</a></h1>
-        <p class="short_description">Class DocumentFactory
-Factory to create documents to be pushed to Solr</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html" class="more">« More »</a>    </div>    <div id="class_QueryComponentFactory" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_QueryComponentFactory .collapse">
-        <h1>QueryComponentFactory<a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">¶</a></h1>
-        <p class="short_description">Class QueryComponentFactory</p>
-        <div class="details collapse"><p>Build a query component for each available build part</p>        </div><a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Interfaces.html">Interfaces</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="interface_ConfigStore" class="element ajax clickableinterface" data-toggle="collapse" data-target="#interface_ConfigStore .collapse">
-        <h1>ConfigStore<a href="../classes/Firesphere.SolrSearch.Interfaces.ConfigStore.html">¶</a></h1>
-        <p class="short_description">Interface ConfigStore</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Interfaces.ConfigStore.html" class="more">« More »</a>    </div>    <div id="interface_SiteStateInterface" class="element ajax clickableinterface" data-toggle="collapse" data-target="#interface_SiteStateInterface .collapse">
-        <h1>SiteStateInterface<a href="../classes/Firesphere.SolrSearch.Interfaces.SiteStateInterface.html">¶</a></h1>
-        <p class="short_description">Interface SiteStateInterface defines the methods every State altering must implement.</p>
-        <div class="details collapse"><p>These methods must exist in the SiteStates that are available</p>        </div><a href="../classes/Firesphere.SolrSearch.Interfaces.SiteStateInterface.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Queries.html">Queries</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_BaseQuery" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_BaseQuery .collapse">
-        <h1>BaseQuery<a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">¶</a></h1>
-        <p class="short_description">Class BaseQuery is the base of every query executed.</p>
-        <div class="details collapse"><p>Build a query to execute agains Solr. Uses as simle as possible an interface.</p>        </div><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Stores.html">Stores</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_FileConfigStore" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_FileConfigStore .collapse">
-        <h1>FileConfigStore<a href="../classes/Firesphere.SolrSearch.Stores.FileConfigStore.html">¶</a></h1>
-        <p class="short_description">Class FileConfigStore
-Store the config in a file storage on the local file system.</p>
-        <div class="details collapse"><p>Store the config in a file storage on the local file system, usually in project/.solr/indexname</p>        </div><a href="../classes/Firesphere.SolrSearch.Stores.FileConfigStore.html" class="more">« More »</a>    </div>    <div id="class_PostConfigStore" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_PostConfigStore .collapse">
-        <h1>PostConfigStore<a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html">¶</a></h1>
-        <p class="short_description">Class PostConfigStore</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Results.html">Results</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_SearchResult" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SearchResult .collapse">
-        <h1>SearchResult<a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html">¶</a></h1>
-        <p class="short_description">Class SearchResult is the combined result in a SilverStripe readable way</p>
-        <div class="details collapse"><p>Each of the requested features of a BaseQuery are generated to be easily accessible in the controller.
-In the controller, each required item can be accessed through the resulting method in this class.</p>        </div><a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Fluent.html">Fluent</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_FluentExtension" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_FluentExtension .collapse">
-        <h1>FluentExtension<a href="../classes/Firesphere.SolrSearch.Fluent.FluentExtension.html">¶</a></h1>
-        <p class="short_description">Support for Fluent translations.</p>
-        <div class="details collapse"><p>This class should be moved to a separate repo or to Fluent, but provides the basic Fluent support for now</p>        </div><a href="../classes/Firesphere.SolrSearch.Fluent.FluentExtension.html" class="more">« More »</a>    </div>            </div>
-        <ul class="breadcrumb">
-            <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.html">Firesphere</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.html">SolrSearch</a>
-    </li>
-    <li>
-        <span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Subsites.html">Subsites</a>
-    </li>
-        </ul>            <div class="namespace-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>    <div id="class_SubsitesExtension" class="element ajax clickableclass" data-toggle="collapse" data-target="#class_SubsitesExtension .collapse">
-        <h1>SubsitesExtension<a href="../classes/Firesphere.SolrSearch.Subsites.SubsitesExtension.html">¶</a></h1>
-        <p class="short_description">Class \Firesphere\SolrSearch\Subsites\SubsitesExtension
-Add support for subsites</p>
-        <div class="details collapse">        </div><a href="../classes/Firesphere.SolrSearch.Subsites.SubsitesExtension.html" class="more">« More »</a>    </div>            </div>
+                <aside class="span4 detailsbar">
+                    <dl>
+                        <dt>Namespace hierarchy</dt>
+                        <dd class="hierarchy">
+                                    <div class="namespace-wrapper"><a href="../namespaces/default.html">\</a></div>                            <div class="namespace-wrapper">\Firesphere</div>
+                        </dd>
+                    </dl>
+                </aside>
+            </div>
         </div>
-    </div>    </div>    <footer class="span12">
-            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
-            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSat, 30 Nov 2019 21:48:15 +0000.<br/>
-    </footer></body>
+    </section>
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">                            <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>                                        <li><a href="../namespaces/Firesphere.html">\Firesphere</a></li>                                        <li><a href="../namespaces/SilverStripe.html">\SilverStripe</a></li>                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">                            <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">                            <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    onNovember 30th, 2019 at 21:58.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
 </html>

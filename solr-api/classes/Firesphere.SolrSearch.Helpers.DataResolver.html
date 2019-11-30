@@ -3,483 +3,775 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>SilverStripe Solr search &raquo;\Firesphere\SolrSearch\Helpers\DataResolver</title>
+    <title>SilverStripe Solr search</title>
     <meta name="author" content=""/>
-    <meta name="description" content=""/>        <link href="../css/template.css" rel="stylesheet" media="all"/>        <!--[if lt IE 9]>
-        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-        <![endif]-->
-        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
-        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
-        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
-        <script src="../js/template.js" type="text/javascript"></script>
-        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>        <link rel="shortcut icon" href="../img/favicon.ico"/>
-        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
-        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/></head>
-<body>    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> </a>
-                <a class="brand" href="../index.html">SilverStripe Solr search</a>
+    <meta name="description" content=""/>
 
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
-                                API Documentation <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
-                        </li>
-                        <li class="dropdown" id="charts-menu">
-                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
-                                Charts <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../graph_class.html">
-                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown" id="reports-menu">
-                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                Reports <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../errors.html">
-                                        <i class="icon-list-alt"></i>&#160;Errors
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../markers.html">
-                                        <i class="icon-list-alt"></i>&#160;Markers
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../deprecated.html">
-                                        <i class="icon-list-alt"></i>&#160;Deprecated
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit--><script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">SilverStripe Solr search</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">                    <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">                            <li><a href="../namespaces/Firesphere.html">\Firesphere</a></li>                            <li><a href="../namespaces/SilverStripe.html">\SilverStripe</a></li>                        </ul>
+                    </li>                    <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">54</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">                                    <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">6</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">    <section class="row-fluid">
+        <div class="span2 sidebar">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-toggle" data-toggle="collapse" data-target="#namespace-1676617097"></a>                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1676617097" class="accordion-body collapsein">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-620668616"></a>                <a href="../namespaces/Firesphere.html" style="margin-left: 30px; padding-left: 0">Firesphere</a>
+            </div>
+            <div id="namespace-620668616" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-505097963"></a>                <a href="../namespaces/Firesphere.SolrSearch.html" style="margin-left: 30px; padding-left: 0">SolrSearch</a>
+            </div>
+            <div id="namespace-505097963" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-683460343"></a>                <a href="../namespaces/Firesphere.SolrSearch.Admins.html" style="margin-left: 30px; padding-left: 0">Admins</a>
+            </div>
+            <div id="namespace-683460343" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Admins.SearchAdmin.html">SearchAdmin</a></li>                    </ul>
                 </div>
             </div>
         </div>
-        <div class="go_to_top">
-            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1653769138"></a>                <a href="../namespaces/Firesphere.SolrSearch.Compat.html" style="margin-left: 30px; padding-left: 0">Compat</a>
+            </div>
+            <div id="namespace-1653769138" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Compat.FulltextSearchExtension.html">FulltextSearchExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-2119461282"></a>                <a href="../namespaces/Firesphere.SolrSearch.Extensions.html" style="margin-left: 30px; padding-left: 0">Extensions</a>
+            </div>
+            <div id="namespace-2119461282" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Extensions.DataObjectExtension.html">DataObjectExtension</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Extensions.GridFieldExtension.html">GridFieldExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-298587580"></a>                <a href="../namespaces/Firesphere.SolrSearch.Factories.html" style="margin-left: 30px; padding-left: 0">Factories</a>
+            </div>
+            <div id="namespace-298587580" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html">DocumentFactory</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">QueryComponentFactory</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-274340530"></a>                <a href="../namespaces/Firesphere.SolrSearch.Fluent.html" style="margin-left: 30px; padding-left: 0">Fluent</a>
+            </div>
+            <div id="namespace-274340530" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Fluent.FluentExtension.html">FluentExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1786517967"></a>                <a href="../namespaces/Firesphere.SolrSearch.Forms.html" style="margin-left: 30px; padding-left: 0">Forms</a>
+            </div>
+            <div id="namespace-1786517967" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Forms.SearchForm.html">SearchForm</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1341498465"></a>                <a href="../namespaces/Firesphere.SolrSearch.Helpers.html" style="margin-left: 30px; padding-left: 0">Helpers</a>
+            </div>
+            <div id="namespace-1341498465" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html">DataResolver</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.FieldResolver.html">FieldResolver</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.SolrLogger.html">SolrLogger</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.Statics.html">Statics</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Helpers.Synonyms.html">Synonyms</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1335995984"></a>                <a href="../namespaces/Firesphere.SolrSearch.Indexes.html" style="margin-left: 30px; padding-left: 0">Indexes</a>
+            </div>
+            <div id="namespace-1335995984" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">BaseIndex</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1343979066"></a>                <a href="../namespaces/Firesphere.SolrSearch.Interfaces.html" style="margin-left: 30px; padding-left: 0">Interfaces</a>
+            </div>
+            <div id="namespace-1343979066" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="interface"><a href="../classes/Firesphere.SolrSearch.Interfaces.ConfigStore.html">ConfigStore</a></li>                            <li class="interface"><a href="../classes/Firesphere.SolrSearch.Interfaces.SiteStateInterface.html">SiteStateInterface</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1908792102"></a>                <a href="../namespaces/Firesphere.SolrSearch.Jobs.html" style="margin-left: 30px; padding-left: 0">Jobs</a>
+            </div>
+            <div id="namespace-1908792102" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Jobs.ClearDirtyClassesJob.html">ClearDirtyClassesJob</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Jobs.SolrConfigureJob.html">SolrConfigureJob</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Jobs.SolrIndexJob.html">SolrIndexJob</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-706221548"></a>                <a href="../namespaces/Firesphere.SolrSearch.Models.html" style="margin-left: 30px; padding-left: 0">Models</a>
+            </div>
+            <div id="namespace-706221548" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">DirtyClass</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Models.SearchSynonym.html">SearchSynonym</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Models.SolrLog.html">SolrLog</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-473541007"></a>                <a href="../namespaces/Firesphere.SolrSearch.Queries.html" style="margin-left: 30px; padding-left: 0">Queries</a>
+            </div>
+            <div id="namespace-473541007" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">BaseQuery</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-430766895"></a>                <a href="../namespaces/Firesphere.SolrSearch.Results.html" style="margin-left: 30px; padding-left: 0">Results</a>
+            </div>
+            <div id="namespace-430766895" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Results.SearchResult.html">SearchResult</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1925949722"></a>                <a href="../namespaces/Firesphere.SolrSearch.Services.html" style="margin-left: 30px; padding-left: 0">Services</a>
+            </div>
+            <div id="namespace-1925949722" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">SchemaService</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">SolrCoreService</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1124211834"></a>                <a href="../namespaces/Firesphere.SolrSearch.States.html" style="margin-left: 30px; padding-left: 0">States</a>
+            </div>
+            <div id="namespace-1124211834" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.States.SiteState.html">SiteState</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1444535525"></a>                <a href="../namespaces/Firesphere.SolrSearch.Stores.html" style="margin-left: 30px; padding-left: 0">Stores</a>
+            </div>
+            <div id="namespace-1444535525" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Stores.FileConfigStore.html">FileConfigStore</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Stores.PostConfigStore.html">PostConfigStore</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-861140095"></a>                <a href="../namespaces/Firesphere.SolrSearch.Subsites.html" style="margin-left: 30px; padding-left: 0">Subsites</a>
+            </div>
+            <div id="namespace-861140095" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Subsites.SubsitesExtension.html">SubsitesExtension</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-2104644811"></a>                <a href="../namespaces/Firesphere.SolrSearch.Tasks.html" style="margin-left: 30px; padding-left: 0">Tasks</a>
+            </div>
+            <div id="namespace-2104644811" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Tasks.ClearDirtyClassesTask.html">ClearDirtyClassesTask</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Tasks.SolrConfigureTask.html">SolrConfigureTask</a></li>                            <li class="class"><a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html">SolrIndexTask</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-2103027896"></a>                <a href="../namespaces/Firesphere.SolrSearch.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-2103027896" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.BaseIndexTrait.html">BaseIndexTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.BaseQueryTrait.html">BaseQueryTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.CoreAdminTrait.html">CoreAdminTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.CoreServiceTrait.html">CoreServiceTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html">DataResolveTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.DocumentFactoryTrait.html">DocumentFactoryTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSchemaServiceTrait.html">GetSetSchemaServiceTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSearchResolverTrait.html">GetSetSearchResolverTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.GetterSetterTrait.html">GetterSetterTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.LoggerTrait.html">LoggerTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentBoostTrait.html">QueryComponentBoostTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFacetTrait.html">QueryComponentFacetTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.QueryComponentFilterTrait.html">QueryComponentFilterTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.SearchResultGetTrait.html">SearchResultGetTrait</a></li>                            <li class="trait"><a href="../classes/Firesphere.SolrSearch.Traits.SearchResultSetTrait.html">SearchResultSetTrait</a></li>                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="___" class="container">
-        <noscript>
-            <div class="alert alert-warning">
-                Javascript is disabled; several features are only available if Javascript is enabled.
+                    <ul>                    </ul>
+                </div>
             </div>
-        </noscript>    <style>
-        .deprecated h2 {
-            text-decoration: line-through;
-        }
-    </style>
-    <div class="row">
-        <div class="span4">    <div class="btn-group view pull-right" data-toggle="buttons-radio">
-        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
-        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+        </div>
     </div>
-    <div class="btn-group visibility" data-toggle="buttons-checkbox">
-        <button class="btn public active" title="Show public elements">Public</button>
-        <button class="btn protected" title="Show protected elements">Protected</button>
-        <button class="btn private" title="Show private elements">Private</button>
-        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
-    </div>    <ul class="side-nav nav nav-list">
-        <li class="nav-header">
-            <i class="icon-custom icon-method"></i> Methods
-            <ul>    <li class="methodpublic">
-        <a href="#method___construct" title="__construct ::DataResolver constructor.">
-            <span class="description">DataResolver constructor.</span><pre>__construct</pre>
-        </a>
-    </li>    <li class="methodpublic">
-        <a href="#method_identify" title="identify ::Identify the given object&#039;s columns">
-            <span class="description">Identify the given object&#039;s columns</span><pre>identify</pre>
-        </a>
-    </li>            </ul>
-        </li>
-        <li class="nav-header protected">» Protected
-            <ul>                        <li class="methodprotected inherited">
-                            <a href="#method_cannotIdentifyException" title="cannotIdentifyException ::Each class using this trait should have a way to throw unidentifiable objects or items">
-                                <span class="description">Each class using this trait should have a way to throw unidentifiable objects or items</span><pre>cannotIdentifyException</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_checkHasMethod" title="checkHasMethod ::Check if a component has the method instead of it being a property">
-                                <span class="description">Check if a component has the method instead of it being a property</span><pre>checkHasMethod</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_getFieldValue" title="getFieldValue ::Get the value for a field">
-                                <span class="description">Get the value for a field</span><pre>getFieldValue</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_getMethodValue" title="getMethodValue ::Get the value for a method">
-                                <span class="description">Get the value for a method</span><pre>getMethodValue</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_resolveArrayData" title="resolveArrayData ::Resolves an ArrayData value">
-                                <span class="description">Resolves an ArrayData value</span><pre>resolveArrayData</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_resolveDataObject" title="resolveDataObject ::Resolves a DataObject value">
-                                <span class="description">Resolves a DataObject value</span><pre>resolveDataObject</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_resolveField" title="resolveField ::Resolves a Single field in the database.">
-                                <span class="description">Resolves a Single field in the database.</span><pre>resolveField</pre>
-                            </a>
-                        </li>                        <li class="methodprotected inherited">
-                            <a href="#method_resolveList" title="resolveList ::Resolves a DataList values">
-                                <span class="description">Resolves a DataList values</span><pre>resolveList</pre>
-                            </a>
-                        </li>            </ul>
-        </li>
-        <li class="nav-header private">» Private
-            <ul>            </ul>
-        </li>
-        <li class="nav-header">
-            <i class="icon-custom icon-constant"></i> Constants
-            <ul>            </ul>
-        </li>
-    </ul>
-        </div>
-
-        <div class="span8">
-            <div class="element class">
-                <h1>DataResolver</h1>
-                <small style="display: block; text-align: right">                </small>
-                <p class="short_description">Class DataResolver</p>
-                <div class="details">
-                    <div class="long_description">
-                    </div>
-                    <table class="table table-bordered">                                <tr>
-                                    <th>package                                    </th>
-                                    <td><p>Firesphere\SolrSearch\Helpers</p>
-                                    </td>
-                                </tr>                    </table>
-
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method___construct"></a>
-                        <div class="element clickable methodpublic method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
-                            <h2>DataResolver constructor.</h2>
-                            <pre>__construct(\SilverStripe\ORM\DataObject|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField $component,array|string $columns = array())</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$component</h4>
-                                                <code>\SilverStripe\ORM\DataObject|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$columns</h4>
-                                                <code>array|string</code><p></p>
-                                            </div>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_cannotIdentifyException"></a>
-                        <div class="element clickable methodprotected method_cannotIdentifyException inherited" data-toggle="collapse" data-target=".method_cannotIdentifyException .collapse">
-                            <h2>Each class using this trait should have a way to throw unidentifiable objects or items</h2>
-                            <pre>cannotIdentifyException(\SilverStripe\ORM\DataObject|\SilverStripe\View\ArrayData|\SilverStripe\ORM\SS_List $component,array $columns = array()): void</pre>
-                            <div class="labels"><span class="label">inherited</span><span class="label">abstract</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>                                                        <dt>\LogicException</dt>
-                                                        <dd></dd>                                                    </dl>
-                                                </td>
-                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$component</h4>
-                                                <code>\SilverStripe\ORM\DataObject|\SilverStripe\View\ArrayData|\SilverStripe\ORM\SS_List</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$columns</h4>
-                                                <code>array</code><p></p>
-                                            </div>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_checkHasMethod"></a>
-                        <div class="element clickable methodprotected method_checkHasMethod inherited" data-toggle="collapse" data-target=".method_checkHasMethod .collapse">
-                            <h2>Check if a component has the method instead of it being a property</h2>
-                            <pre>checkHasMethod(): null|mixed|string</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>                                                        <dt>\LogicException</dt>
-                                                        <dd></dd>                                                    </dl>
-                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>null|mixed|string</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_getFieldValue"></a>
-                        <div class="element clickable methodprotected method_getFieldValue inherited" data-toggle="collapse" data-target=".method_getFieldValue .collapse">
-                            <h2>Get the value for a field</h2>
-                            <pre>getFieldValue(): mixed</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>mixed</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_getMethodValue"></a>
-                        <div class="element clickable methodprotected method_getMethodValue inherited" data-toggle="collapse" data-target=".method_getMethodValue .collapse">
-                            <h2>Get the value for a method</h2>
-                            <pre>getMethodValue(): mixed</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>mixed</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_identify"></a>
-                        <div class="element clickable methodpublic method_identify" data-toggle="collapse" data-target=".method_identify .collapse">
-                            <h2>Identify the given object&#039;s columns</h2>
-                            <pre>identify(\SilverStripe\ORM\DataObject|\SilverStripe\View\ArrayData|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField $obj,array|string $columns = array()): mixed</pre>
-                            <div class="labels"><span class="label">static</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>                                                        <dt>\LogicException</dt>
-                                                        <dd></dd>                                                    </dl>
-                                                </td>
-                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$obj</h4>
-                                                <code>\SilverStripe\ORM\DataObject|\SilverStripe\View\ArrayData|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$columns</h4>
-                                                <code>array|string</code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>mixed</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_resolveArrayData"></a>
-                        <div class="element clickable methodprotected method_resolveArrayData inherited" data-toggle="collapse" data-target=".method_resolveArrayData .collapse">
-                            <h2>Resolves an ArrayData value</h2>
-                            <pre>resolveArrayData(): mixed</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>                                                        <dt>\LogicException</dt>
-                                                        <dd></dd>                                                    </dl>
-                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>mixed</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_resolveDataObject"></a>
-                        <div class="element clickable methodprotected method_resolveDataObject inherited" data-toggle="collapse" data-target=".method_resolveDataObject .collapse">
-                            <h2>Resolves a DataObject value</h2>
-                            <pre>resolveDataObject(): mixed</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>                                                        <dt>\LogicException</dt>
-                                                        <dd></dd>                                                    </dl>
-                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>mixed</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_resolveField"></a>
-                        <div class="element clickable methodprotected method_resolveField inherited" data-toggle="collapse" data-target=".method_resolveField .collapse">
-                            <h2>Resolves a Single field in the database.</h2>
-                            <pre>resolveField(): mixed</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>                                                        <dt>\LogicException</dt>
-                                                        <dd></dd>                                                    </dl>
-                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>mixed</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_resolveList"></a>
-                        <div class="element clickable methodprotected method_resolveList inherited" data-toggle="collapse" data-target=".method_resolveList .collapse">
-                            <h2>Resolves a DataList values</h2>
-                            <pre>resolveList(): array|mixed</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>                                                        <dt>\LogicException</dt>
-                                                        <dd></dd>                                                    </dl>
-                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>array|mixed</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_objTypes"> </a>
-                            <div class="element clickable propertyprivate property_objTypes" data-toggle="collapse" data-target=".property_objTypes .collapse">
-                                <h2>Supported object types</h2>
-                                <pre>objTypes :array</pre>
-                                <div class="labels"><span class="label">static</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td><p>map of objects to methods</p>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>array</code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_component"> </a>
-                            <div class="element clickable propertyprotected property_component inherited" data-toggle="collapse" data-target=".property_component .collapse">
-                                <h2>Component to resolve</h2>
-                                <pre>component :\SilverStripe\ORM\DataObject|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>\SilverStripe\ORM\DataObject|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField</code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_columns"> </a>
-                            <div class="element clickable propertyprotected property_columns inherited" data-toggle="collapse" data-target=".property_columns .collapse">
-                                <h2>Columns to resolve</h2>
-                                <pre>columns :array</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>array</code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_columnName"> </a>
-                            <div class="element clickable propertyprotected property_columnName inherited" data-toggle="collapse" data-target=".property_columnName .collapse">
-                                <h2>Column to resolve</h2>
-                                <pre>columnName :mixed|string|null</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>mixed|string|null</code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_shortName"> </a>
-                            <div class="element clickable propertyprotected property_shortName inherited" data-toggle="collapse" data-target=".property_shortName .collapse">
-                                <h2>ShortName of a class</h2>
-                                <pre>shortName :string</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>string</code>                                    </div>
-                                </div>
-                            </div>                </div>
+                    <ul>                    </ul>
+                </div>
             </div>
-            <a id="\Firesphere\SolrSearch\Helpers\DataResolver"></a>
-            <ul class="breadcrumb">
-                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
-    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Helpers.html">Helpers</a></li>
-                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html">DataResolver</a></li>
-            </ul>
         </div>
-    </div>    </div>    <footer class="span12">
-            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
-            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSat, 30 Nov 2019 21:48:15 +0000.<br/>
-    </footer></body>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1204607350"></a>                <a href="../namespaces/SilverStripe.html" style="margin-left: 30px; padding-left: 0">SilverStripe</a>
+            </div>
+            <div id="namespace-1204607350" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-470273056"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.html" style="margin-left: 30px; padding-left: 0">FullTextSearch</a>
+            </div>
+            <div id="namespace-470273056" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-1716591452"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.Search.html" style="margin-left: 30px; padding-left: 0">Search</a>
+            </div>
+            <div id="namespace-1716591452" class="accordion-body collapse">
+                <div class="accordion-inner">    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-741635866"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.Search.Queries.html" style="margin-left: 30px; padding-left: 0">Queries</a>
+            </div>
+            <div id="namespace-741635866" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/SilverStripe.FullTextSearch.Search.Queries.SearchQuery.html">SearchQuery</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">                    <a class="accordion-togglecollapsed" data-toggle="collapse" data-target="#namespace-2100849772"></a>                <a href="../namespaces/SilverStripe.FullTextSearch.Solr.html" style="margin-left: 30px; padding-left: 0">Solr</a>
+            </div>
+            <div id="namespace-2100849772" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul>                            <li class="class"><a href="../classes/SilverStripe.FullTextSearch.Solr.Solr.html">Solr</a></li>                            <li class="class"><a href="../classes/SilverStripe.FullTextSearch.Solr.SolrIndex.html">SolrIndex</a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <ul>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav><a href="../namespaces/Firesphere.SolrSearch.Helpers.html">\Firesphere\SolrSearch\Helpers</a> <i class="icon-level-up"></i>                    </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Firesphere\SolrSearch\Helpers</small>DataResolver</h1>
+                    <p><em>Class DataResolver</em></p>                    
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">                                    <a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html#method___construct" class="">__construct()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html#method_identify" class="">identify()</a><br />                            </section>
+                            <section class="span4">                                    <em>No public properties found</em>                            </section>
+                            <section class="span4">                                    <em>No constants found</em>                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#method_resolveArrayData" class="">resolveArrayData()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html#method_cannotIdentifyException" class="">cannotIdentifyException()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#method_resolveList" class="">resolveList()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#method_resolveField" class="">resolveField()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#method_checkHasMethod" class="">checkHasMethod()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#method_resolveDataObject" class="">resolveDataObject()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#method_getMethodValue" class="">getMethodValue()</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#method_getFieldValue" class="">getFieldValue()</a><br />                            </section>
+                            <section class="span4">                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#property_component" class="">$component</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#property_columns" class="">$columns</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#property_columnName" class="">$columnName</a><br />                                    <a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html#property_shortName" class="">$shortName</a><br />                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">                                    <em>No private methods found</em>                            </section>
+                            <section class="span4">                                    <a href="../classes/Firesphere.SolrSearch.Helpers.DataResolver.html#property_objTypes" class="">$objTypes</a><br />                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/search.src.Helpers.DataResolver.html"><div class="path-wrapper">search/src/Helpers/DataResolver.php</div></a></dd>                        <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">SolrSearch\Helpers</div></dd>                        <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">                                <div class="namespace-wrapper">\Firesphere\SolrSearch\Helpers\DataResolver</div>
+                            </dd>                                <dt>Uses traits</dt>                            <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html">                                    <div class="namespace-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a>                            </dd>                    </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">                        <tr><td colspan="2"><em>None found</em></td></tr>                    </table>
+                </aside>
+            </div>            <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_component" name="property_component" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$component</h3>
+                <pre class="signature">$component :\SilverStripe\ORM\DataObject|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField</pre>
+                <p><em>Component to resolve</em></p>                <h4>Type</h4>\SilverStripe\ORM\DataObject|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_columns" name="property_columns" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$columns</h3>
+                <pre class="signature">$columns :array</pre>
+                <p><em>Columns to resolve</em></p>                <h4>Type</h4>array            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_columnName" name="property_columnName" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$columnName</h3>
+                <pre class="signature">$columnName :mixed|string|null</pre>
+                <p><em>Column to resolve</em></p>                <h4>Type</h4>mixed|string|null            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_shortName" name="property_shortName" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected">$shortName</h3>
+                <pre class="signature">$shortName :string</pre>
+                <p><em>ShortName of a class</em></p>                <h4>Type</h4>string            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_objTypes" name="property_objTypes" class="anchor"></a>
+            <article class="property">
+                <h3 class="private">$objTypes</h3>
+                <pre class="signature">$objTypes :array</pre>
+                <p><em>Supported object types</em></p>                <h4>Type</h4>array&mdash;map of objects to methods            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>            <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(\SilverStripe\ORM\DataObject|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField  <span class="argument">$component</span>,array|string  <span class="argument">$columns = array()</span>)</pre>
+                <p><em>DataResolver constructor.</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td>\SilverStripe\ORM\DataObject|\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField</td>
+                                <td>$component</td>
+                                <td></td>
+                            </tr>                            <tr>
+                                <td>array|string</td>
+                                <td>$columns</td>
+                                <td></td>
+                            </tr>                    </table>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_identify" name="method_identify" class="anchor"></a>
+            <article class="method">
+                <h3 class="public">identify()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">identify(\SilverStripe\ORM\DataObject|\SilverStripe\View\ArrayData|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField  <span class="argument">$obj</span>,array|string  <span class="argument">$columns = array()</span>): mixed</pre>
+                <p><em>Identify the given object&#039;s columns</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td>\SilverStripe\ORM\DataObject|\SilverStripe\View\ArrayData|\SilverStripe\ORM\SS_List|\SilverStripe\ORM\FieldType\DBField</td>
+                                <td>$obj</td>
+                                <td></td>
+                            </tr>                            <tr>
+                                <td>array|string</td>
+                                <td>$columns</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Throws</h4>
+                    <dl>                            <dt>\LogicException</dt>
+                            <dd></dd>                    </dl>                    <h4>Returns</h4>mixed            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>                <span class="label label-info">static</span>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_resolveArrayData" name="method_resolveArrayData" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">resolveArrayData()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">resolveArrayData(): mixed</pre>
+                <p><em>Resolves an ArrayData value</em></p>                    <h4>Throws</h4>
+                    <dl>                            <dt>\LogicException</dt>
+                            <dd></dd>                    </dl>                    <h4>Returns</h4>mixed            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_cannotIdentifyException" name="method_cannotIdentifyException" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">cannotIdentifyException()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">cannotIdentifyException(\SilverStripe\ORM\DataObject|\SilverStripe\View\ArrayData|\SilverStripe\ORM\SS_List  <span class="argument">$component</span>,array  <span class="argument">$columns = array()</span>): void</pre>
+                <p><em>An error occured, so log it</em></p>                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">                            <tr>
+                                <td>\SilverStripe\ORM\DataObject|\SilverStripe\View\ArrayData|\SilverStripe\ORM\SS_List</td>
+                                <td>$component</td>
+                                <td></td>
+                            </tr>                            <tr>
+                                <td>array</td>
+                                <td>$columns</td>
+                                <td></td>
+                            </tr>                    </table>                    <h4>Throws</h4>
+                    <dl>                            <dt>\LogicException</dt>
+                            <dd></dd>                    </dl>            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_resolveList" name="method_resolveList" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">resolveList()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">resolveList(): array|mixed</pre>
+                <p><em>Resolves a DataList values</em></p>                    <h4>Throws</h4>
+                    <dl>                            <dt>\LogicException</dt>
+                            <dd></dd>                    </dl>                    <h4>Returns</h4>array|mixed            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_resolveField" name="method_resolveField" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">resolveField()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">resolveField(): mixed</pre>
+                <p><em>Resolves a Single field in the database.</em></p>                    <h4>Throws</h4>
+                    <dl>                            <dt>\LogicException</dt>
+                            <dd></dd>                    </dl>                    <h4>Returns</h4>mixed            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_checkHasMethod" name="method_checkHasMethod" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">checkHasMethod()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">checkHasMethod(): null|mixed|string</pre>
+                <p><em>Check if a component has the method instead of it being a property</em></p>                    <h4>Throws</h4>
+                    <dl>                            <dt>\LogicException</dt>
+                            <dd></dd>                    </dl>                    <h4>Returns</h4>null|mixed|string            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_resolveDataObject" name="method_resolveDataObject" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">resolveDataObject()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">resolveDataObject(): mixed</pre>
+                <p><em>Resolves a DataObject value</em></p>                    <h4>Throws</h4>
+                    <dl>                            <dt>\LogicException</dt>
+                            <dd></dd>                    </dl>                    <h4>Returns</h4>mixed            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getMethodValue" name="method_getMethodValue" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">getMethodValue()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getMethodValue(): mixed</pre>
+                <p><em>Get the value for a method</em></p>                    <h4>Returns</h4>mixed            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getFieldValue" name="method_getFieldValue" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected">getFieldValue()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getFieldValue(): mixed</pre>
+                <p><em>Get the value for a field</em></p>                    <h4>Returns</h4>mixed            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>            <dl>                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Firesphere.SolrSearch.Traits.DataResolveTrait.html"><div class="path-wrapper">\Firesphere\SolrSearch\Traits\DataResolveTrait</div></a></dd>            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">                    <tr><td colspan="2"><em>None found</em></td></tr>            </table>
+        </aside>
+    </div>        </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">DataResolver.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/search/src/Helpers/DataResolver.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">                            <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>                                        <li><a href="../namespaces/Firesphere.html">\Firesphere</a></li>                                        <li><a href="../namespaces/SilverStripe.html">\SilverStripe</a></li>                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">                            <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">                            <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    onNovember 30th, 2019 at 21:58.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
 </html>
