@@ -471,7 +471,7 @@
       <nav id="menu">
         <ul>
 <li><a class="" href="index.html">index</a></li>
-<li><a class="active" href="01-Changelog.html">Changelog</a></li>
+<li><a class="" href="01-Changelog.html">Changelog</a></li>
 <li><a class="" href="02-Installation.html">Installation</a></li>
 <li><a class="" href="03-Solr.html">Solr</a></li>
 <li><a class="" href="04-Usage.html">Usage</a></li>
@@ -479,53 +479,92 @@
 <li><a class="" href="06-CMS-Usage.html">CMS Usage</a></li>
 <li><a class="" href="07-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
 <li><a class="" href="08-Debugging.html">Debugging</a></li>
-<li><a class="" href="09-Suggestions.html">Suggestions</a></li>
+<li><a class="active" href="09-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="10-About.html">About</a></li>
 <li><a class="" href="15-FAQ.html">FAQ</a></li>
 <li><a class="" href="16-Known-issues.html">Known issues</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <h1 id="changelog">Changelog <a class="heading-anchor-permalink" href="#changelog">#</a></h1>
-<h2 id="1.0-beta">1.0 beta <a class="heading-anchor-permalink" href="#1.0-beta">#</a></h2>
-<ul>
-<li>Fixes to the CMS Index Job</li>
-<li>Fix issue #140 User not reset correctly</li>
-<li>Fix issue #143 Not showing in search wasn’t cleaned out correctly</li>
-<li>Improved documentation</li>
-</ul>
-<h2 id="0.9.x">0.9.x <a class="heading-anchor-permalink" href="#0.9.x">#</a></h2>
-<ul>
-<li>Documentation updates</li>
-<li>Bump the version to leave bugs behind</li>
-</ul>
-<h2 id="0.8.x">0.8.x <a class="heading-anchor-permalink" href="#0.8.x">#</a></h2>
-<ul>
-<li>Use multi-threaded indexing</li>
-<li>Fix error with buffer adding</li>
-<li>Initial Synonym support</li>
-</ul>
-<h2 id="0.7.5-notable-updates">0.7.5 Notable updates <a class="heading-anchor-permalink" href="#0.7.5-notable-updates">#</a></h2>
-<ul>
-<li>Added <code>Add[X]Fields()</code></li>
-<li>Fix spellcheck retry</li>
-<li>Increased test coverage</li>
-<li>Support for basic Fluent (select your language for each indexing run)</li>
-<li>Documentation</li>
-<li>Extracted compatibility to separate module</li>
-</ul>
-<h2 id="0.5-first-release">0.5 First release <a class="heading-anchor-permalink" href="#0.5-first-release">#</a></h2>
-<ul>
-<li>Use Solarium</li>
-<li>Support Facets</li>
-<li>Support terms</li>
-<li>Support boosting</li>
-<li>Support filtering/excluding</li>
-<li>Support highlighting</li>
-<li>Support elevation</li>
-<li>Simplified API</li>
-<li>Fulltext Search compatibility</li>
-</ul>
+        <h1 id="solr-suggest">Solr Suggest <a class="heading-anchor-permalink" href="#solr-suggest">#</a></h1>
+<p>If you are using Solr5 or above, you can use the Solr Suggest option. This is enabled by default.</p>
+<p>To set this up, have a look at <a href="https://github.com/Firesphere/silverstripe-solr-search/blob/master/client/proxy/autosuggest.php">autosuggest proxy</a></p>
+<p>Copy this file to a convenient location, e.g. your <code>docroot/public</code> folder and edit the contents of your copy, to match your Solr core and location of the Solr instance.</p>
+<p>Note that the proxy can not read from the Silverstripe config, thus it needs to be edited manually.</p>
+<p>Once that’s in place, you can use javascript to get Solr’s suggestions, by querying the autosuggest.php file directly.</p>
+<p>You need to query the file directly, to prevent a full execution of the whole Silverstripe stack, which is too slow for proper auto suggesting.
+Also, make sure the file is accessible.</p>
+<p>The output of the file is a JSON object, looking something like this:</p>
+<pre><code class="language-json">{
+
+    &quot;responseHeader&quot;: {
+        &quot;status&quot;: 0,
+        &quot;QTime&quot;: 0
+    },
+    &quot;suggest&quot;: {
+        &quot;Suggester&quot;: {
+            &quot;home&quot;: {
+                &quot;numFound&quot;: 10,
+                &quot;suggestions&quot;: [
+                    {
+                        &quot;term&quot;: &quot;home&quot;,
+                        &quot;weight&quot;: 376,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homeajaxaction&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebartonvillevpsbartonvilletccommysitecodememberextensionphp&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homeblauwboomdomainsmyserverpublichtmlcompframeworksrci&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrew&quot;,
+                        &quot;weight&quot;: 26,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrewcurlother&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrewhttpsbrewsh&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrewing&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebridgewillstaginpublichtmlsilvershopcodecartordertotalcalculatorphp&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homecategorycategory&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    }
+                ]
+            }
+        }
+    }
+}
+</code></pre>
+<p>Which you can then use in your javascript to populate a dropdown.</p>
+<h2 id="security-note">Security note <a class="heading-anchor-permalink" href="#security-note">#</a></h2>
+<p>As the query is passed straight in to Solr, there is no option of database SQL injection.</p>
 
       </article>
     </div>

@@ -471,7 +471,7 @@
       <nav id="menu">
         <ul>
 <li><a class="" href="index.html">index</a></li>
-<li><a class="active" href="01-Changelog.html">Changelog</a></li>
+<li><a class="" href="01-Changelog.html">Changelog</a></li>
 <li><a class="" href="02-Installation.html">Installation</a></li>
 <li><a class="" href="03-Solr.html">Solr</a></li>
 <li><a class="" href="04-Usage.html">Usage</a></li>
@@ -482,50 +482,32 @@
 <li><a class="" href="09-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="10-About.html">About</a></li>
 <li><a class="" href="15-FAQ.html">FAQ</a></li>
-<li><a class="" href="16-Known-issues.html">Known issues</a></li>
+<li><a class="active" href="16-Known-issues.html">Known issues</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <h1 id="changelog">Changelog <a class="heading-anchor-permalink" href="#changelog">#</a></h1>
-<h2 id="1.0-beta">1.0 beta <a class="heading-anchor-permalink" href="#1.0-beta">#</a></h2>
+        <h1 id="known-issues">Known issues <a class="heading-anchor-permalink" href="#known-issues">#</a></h1>
+<h2 id="database-errors">Database errors <a class="heading-anchor-permalink" href="#database-errors">#</a></h2>
+<p>Did you do a build?</p>
+<p><code>https://yourdomain.com/dev/build?flush=all</code></p>
+<p>It is known that the final index might throw a MySQL error.
+This is expected at the moment, and sadly, unavoidable so far.
+If you have a solution, we would love to hear from you!</p>
+<h2 id="linux-hosts-with-vagrant">Linux hosts with Vagrant <a class="heading-anchor-permalink" href="#linux-hosts-with-vagrant">#</a></h2>
+<p>There is a known issue between Linux hosts using Vagrant. Solr does not have
+the correct write permissions, and Apache does not have the correct write permissions either.</p>
+<p>This can be resolved by setting the folder of your Solr Core to <code>/var/solr/data</code>.</p>
+<p>Then, create the following subfolders in the data folder:</p>
 <ul>
-<li>Fixes to the CMS Index Job</li>
-<li>Fix issue #140 User not reset correctly</li>
-<li>Fix issue #143 Not showing in search wasn’t cleaned out correctly</li>
-<li>Improved documentation</li>
+<li><code>YourCoreName/conf</code></li>
+<li><code>YourCoreName/data</code></li>
 </ul>
-<h2 id="0.9.x">0.9.x <a class="heading-anchor-permalink" href="#0.9.x">#</a></h2>
-<ul>
-<li>Documentation updates</li>
-<li>Bump the version to leave bugs behind</li>
-</ul>
-<h2 id="0.8.x">0.8.x <a class="heading-anchor-permalink" href="#0.8.x">#</a></h2>
-<ul>
-<li>Use multi-threaded indexing</li>
-<li>Fix error with buffer adding</li>
-<li>Initial Synonym support</li>
-</ul>
-<h2 id="0.7.5-notable-updates">0.7.5 Notable updates <a class="heading-anchor-permalink" href="#0.7.5-notable-updates">#</a></h2>
-<ul>
-<li>Added <code>Add[X]Fields()</code></li>
-<li>Fix spellcheck retry</li>
-<li>Increased test coverage</li>
-<li>Support for basic Fluent (select your language for each indexing run)</li>
-<li>Documentation</li>
-<li>Extracted compatibility to separate module</li>
-</ul>
-<h2 id="0.5-first-release">0.5 First release <a class="heading-anchor-permalink" href="#0.5-first-release">#</a></h2>
-<ul>
-<li>Use Solarium</li>
-<li>Support Facets</li>
-<li>Support terms</li>
-<li>Support boosting</li>
-<li>Support filtering/excluding</li>
-<li>Support highlighting</li>
-<li>Support elevation</li>
-<li>Simplified API</li>
-<li>Fulltext Search compatibility</li>
-</ul>
+<p>Then, add the <code>solr</code> user to the <code>apache</code> group (or <code>www-data</code>)
+And the other way around, add apache to solr.</p>
+<p>Change the ownership of the whole <code>YourCoreName</code> folder to <code>solr:solr</code>.</p>
+<p>Change the permissions on <code>YourCoreName/conf</code> to be <code>777</code>.</p>
+<p>This should, in theory, resolve your permission errors.</p>
+<p>These errors are <em>not</em> related to this module, but on how Vagrant is set up on Linux.</p>
 
       </article>
     </div>

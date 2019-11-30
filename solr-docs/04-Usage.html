@@ -473,25 +473,163 @@
 <li><a class="" href="index.html">index</a></li>
 <li><a class="" href="01-Changelog.html">Changelog</a></li>
 <li><a class="" href="02-Installation.html">Installation</a></li>
-<li><a class="" href="03-Usage.html">Usage</a></li>
-<li><a class="" href="04-Customisation.html">Customisation</a></li>
-<li><a class="" href="05-CMS-Usage.html">CMS Usage</a></li>
-<li><a class="active" href="06-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
-<li><a class="" href="07-Debugging.html">Debugging</a></li>
-<li><a class="" href="08-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="03-Solr.html">Solr</a></li>
+<li><a class="active" href="04-Usage.html">Usage</a></li>
+<li><a class="" href="05-Customisation.html">Customisation</a></li>
+<li><a class="" href="06-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="07-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="08-Debugging.html">Debugging</a></li>
+<li><a class="" href="09-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="10-About.html">About</a></li>
-<li><a class="" href="11-FAQ.html">FAQ</a></li>
+<li><a class="" href="15-FAQ.html">FAQ</a></li>
+<li><a class="" href="16-Known-issues.html">Known issues</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <h1 id="fulltext-search-compatibility*">Fulltext Search Compatibility* <a class="heading-anchor-permalink" href="#fulltext-search-compatibility*">#</a></h1>
-<p>To minimise the impact of migrating, there is a compatibility module available.</p>
-<p>This module will remove the need to completely update all your indexes.</p>
-<p>A few small changes to your Search Controller and Results template may be needed however.</p>
-<p>The primary difference between FTS and this module is the way it’s configured. Therefore some stubs are available in the compatibility module.</p>
-<p>You can find this compatibility module here: <a href="https://github.com/Firesphere/silverstripe-solr-compatibility">https://github.com/Firesphere/silverstripe-solr-compatibility</a></p>
+        <h1 id="usage">Usage <a class="heading-anchor-permalink" href="#usage">#</a></h1>
+<h2 id="getting-started">Getting started <a class="heading-anchor-permalink" href="#getting-started">#</a></h2>
+<p>First, create an index extending the <code>BaseIndex</code> class. This will require a <code>getIndexName</code> method
+which is used to determine the name of the index to query Solr.</p>
+<h2 id="configuration">Configuration <a class="heading-anchor-permalink" href="#configuration">#</a></h2>
+<p>Configuring Solr is done via YML:</p>
+<pre><code class="language-yml">Firesphere\SolrSearch\Services\SolrCoreService:
+  config:
+    endpoint:
+      myhostname:
+        host: myhost.com
+        port: 8983
+        timeout: 10
+        # set up timeouts
+        index_timeout: 10
+        optimize_timeout: 100
+        finalize_timeout: 300
+        http_method: 'AUTO'
+        # commit within 60ms
+        commit_within: 60
+  # default path settings
+  store:
+    mode: 'file'
+    path: '.solr'
+  cores: 2
+
+</code></pre>
+<p>The config is used to connect to Solr. This will tell the module where the Solr instance for this index lives and how to connect.</p>
+<p>The store is to select the way to configure the solr configuration storage. Options are <code>file</code> and a required path, or <code>post</code> and a required endpoint to post to.</p>
+<p>Post config:</p>
+<pre><code class="language-yml">store:
+  mode: 'post'
+  path: '/my_post_endpoint'
+  uri: 'https://mydomain.com'
+</code></pre>
+<h4 id="defining-cores">Defining cores <a class="heading-anchor-permalink" href="#defining-cores">#</a></h4>
+<p>If your server has multiple cores available, you can define the amount of cores in the config.
+During indexing, this means that each core gets to do an indexing of a group.
+The advantage is that it takes all cores available, speeding up the indexing process by the amount of cores available.</p>
+<p>Because the amount of cores can not be determined programmatically, due to access control, you will have to define the amount of cores available manually.</p>
+<p><strong>NOTE</strong></p>
+<p>Given the current situation in server-land, the default amount of cores is 2. This should work fine for
+most situations, even if you only have one core available. If you have more cores, you can make this
+number larger, of course.</p>
+<p><strong>NOTE</strong></p>
+<p>Using all cores your system has, will make your website pretty slow during indexing! It is adviced to keep
+at least one core free for handling page visits, while you’re running an index.</p>
+<h3 id="using-init()">Using init() <a class="heading-anchor-permalink" href="#using-init()">#</a></h3>
+<p>Similar to the FulltextSearch module, using init supports all basic methods to add fulltext or filter fields.</p>
+<p>Available methods are:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Purpose</th>
+<th>Required</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>addClass</td>
+<td>Add classes to index</td>
+<td>Yes</td>
+<td><code>$this-&gt;addClass(SiteTree::class);</code></td>
+</tr>
+<tr>
+<td>addFulltextField</td>
+<td>Add fields to index</td>
+<td>No*</td>
+<td><code>$this-&gt;addFulltextField('Content');</code></td>
+</tr>
+<tr>
+<td>addFilterField</td>
+<td>Add fields to use for filtering</td>
+<td>No</td>
+<td><code>$this-&gt;addFilterField('ID');</code></td>
+</tr>
+<tr>
+<td>addBoostedField</td>
+<td>Fields to boost by on Query time</td>
+<td>No</td>
+<td><code>$this-&gt;addBoostedField('Title', ([]/2), 2);</code>**</td>
+</tr>
+<tr>
+<td>addSortField</td>
+<td>Field to sort by</td>
+<td>No</td>
+<td><code>$this-&gt;addSortField('Created');</code></td>
+</tr>
+<tr>
+<td>addCopyField</td>
+<td>Add a special copy field, besides the default _text</td>
+<td>No</td>
+<td><code>$this-&gt;addCopyField('myCopy', ['Fields', 'To', 'Copy']);</code></td>
+</tr>
+<tr>
+<td>addStoredField</td>
+<td>Add a field to be stored specifically</td>
+<td>No</td>
+<td><code>$this-&gt;addStoredField('LastEdited');</code></td>
+</tr>
+<tr>
+<td>addFacetField</td>
+<td>Field to build faceting on</td>
+<td>No</td>
+<td><code>$this-&gt;addFacetField(SiteTree::class, ['Title' =&gt; 'FacetObject', 'Field' =&gt; 'FacetObjectID']);</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="using-yml">Using YML <a class="heading-anchor-permalink" href="#using-yml">#</a></h3>
+<pre><code class="language-yml">Firesphere\SolrSearch\Indexes\BaseIndex:
+  MySearchIndex:
+    Classes:
+      - SilverStripe\CMS\Model\SiteTree
+    FulltextFields:
+      - Content
+      - TestObject.Title
+      - TestObject.TestRelation.Title
+    SortFields: 
+	  - Created
+    FilterFields:
+      - Title
+      - Created
+      - Firesphere\SolrSearch\Tests\TestObject
+    BoostedFields:
+	  - Title
+    CopyFields:
+      _text:
+        - '*'
+    DefaultField: _text
+    FacetFields:
+      Firesphere\SolrSearch\Tests\TestObject:
+        Field: ID
+        Title: TestObject
+
+</code></pre>
+<h4 id="moving-from-init-to-yml">Moving from init to YML <a class="heading-anchor-permalink" href="#moving-from-init-to-yml">#</a></h4>
+<p>The compatibility module has an extension method that allows you to build your index and then generate the YML content for you. See the compatibility module for more details.</p>
+<h2 id="accessing-solr">Accessing Solr <a class="heading-anchor-permalink" href="#accessing-solr">#</a></h2>
+<p>If available, you can access your Solr instance at <code>http://mydomain.com:8983</code></p>
 <hr>
-<p>* From here on called “FTS”</p>
+<p>* Although not required, it’s highly recomended</p>
+<p>** The second option of an array can be omitted and directly given the boost value</p>
 
       </article>
     </div>

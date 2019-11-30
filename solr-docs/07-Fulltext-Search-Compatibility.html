@@ -473,49 +473,27 @@
 <li><a class="" href="index.html">index</a></li>
 <li><a class="" href="01-Changelog.html">Changelog</a></li>
 <li><a class="" href="02-Installation.html">Installation</a></li>
-<li><a class="" href="03-Usage.html">Usage</a></li>
-<li><a class="" href="04-Customisation.html">Customisation</a></li>
-<li><a class="" href="05-CMS-Usage.html">CMS Usage</a></li>
-<li><a class="" href="06-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
-<li><a class="" href="07-Debugging.html">Debugging</a></li>
-<li><a class="" href="08-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="03-Solr.html">Solr</a></li>
+<li><a class="" href="04-Usage.html">Usage</a></li>
+<li><a class="" href="05-Customisation.html">Customisation</a></li>
+<li><a class="" href="06-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="active" href="07-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="08-Debugging.html">Debugging</a></li>
+<li><a class="" href="09-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="10-About.html">About</a></li>
-<li><a class="active" href="11-FAQ.html">FAQ</a></li>
+<li><a class="" href="15-FAQ.html">FAQ</a></li>
+<li><a class="" href="16-Known-issues.html">Known issues</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <h1 id="faq">FAQ <a class="heading-anchor-permalink" href="#faq">#</a></h1>
-<h3 id="what-do-you-mean-not-fast-enough%3F">What do you mean not fast enough? <a class="heading-anchor-permalink" href="#what-do-you-mean-not-fast-enough%3F">#</a></h3>
-<p>All indexing, as well as the search, require disk space. If the disk can not respond fast enough to a write,
-either PHP or Java will stop and throw an error</p>
-<h3 id="do-you-support-synonyms">Do you support synonyms <a class="heading-anchor-permalink" href="#do-you-support-synonyms">#</a></h3>
-<p>Yes! Including US to UK spelling synonyms by default!</p>
-<h3 id="fast%3F">Fast? <a class="heading-anchor-permalink" href="#fast%3F">#</a></h3>
-<p>Yes, very fast</p>
-<h3 id="compatible-with-the-fulltext-search-module%3F">Compatible with the Fulltext Search Module? <a class="heading-anchor-permalink" href="#compatible-with-the-fulltext-search-module%3F">#</a></h3>
-<p>99% and counting, does that work for you? Have a look at the compatibility module</p>
-<h3 id="why-do-i-need-to-name-my-index%3F">Why do I need to name my index? <a class="heading-anchor-permalink" href="#why-do-i-need-to-name-my-index%3F">#</a></h3>
-<p>You have a name yourself, don’t you? It makes sense to name the index too.</p>
-<h3 id="only-file-storage%3F">Only File storage? <a class="heading-anchor-permalink" href="#only-file-storage%3F">#</a></h3>
-<p>Hold your horses, this is a beta stage project, more storage options to come!</p>
-<h3 id="my-core.properties-won%E2%80%99t-persist%2C-what-gives%3F">My core.properties won’t persist, what gives? <a class="heading-anchor-permalink" href="#my-core.properties-won%E2%80%99t-persist%2C-what-gives%3F">#</a></h3>
-<p>Most likely, you’re running a vagrant or docker machine? And even more likely
-running it on Linux.</p>
-<p>The solution is to create a symlink in <code>/var/solr/data/{your-policy-name/</code> to <code>/var/www/{yoursite}/.solr/.conf</code>, so the
-<code>conf</code> folder points to your locally writable folder for Vagrant.</p>
-<p>In your search.yml, add the following as the location of your FileStore config:</p>
-<pre><code class="language-yaml">Firesphere\SolrSearch\Services\SolrCoreService:
-  store:
-    mode: 'file'
-    path: '/var/solr/data'
-</code></pre>
-<p>That way, Solr will write it’s own files to the correct core folder where it can write, but your config can still live
-inside your project.</p>
-<h3 id="i-would-like-a-feature-to-be-added!">I would like a feature to be added! <a class="heading-anchor-permalink" href="#i-would-like-a-feature-to-be-added!">#</a></h3>
-<p>I would like an issue to be created</p>
-<h3 id="dealing-with-errors">Dealing with errors <a class="heading-anchor-permalink" href="#dealing-with-errors">#</a></h3>
-<p>Especially when using facets, you should not redeclare fields to be filterable as well. If you run in to an error
-saying you have duplicate fields, check your configuration that e.g. FilterFields does not have an overlap with FacetFields, etc.</p>
+        <h1 id="fulltext-search-compatibility*">Fulltext Search Compatibility* <a class="heading-anchor-permalink" href="#fulltext-search-compatibility*">#</a></h1>
+<p>To minimise the impact of migrating, there is a compatibility module available.</p>
+<p>This module will remove the need to completely update all your indexes.</p>
+<p>A few small changes to your Search Controller and Results template may be needed however.</p>
+<p>The primary difference between FTS and this module is the way it’s configured. Therefore some stubs are available in the compatibility module.</p>
+<p>You can find this compatibility module here: <a href="https://github.com/Firesphere/silverstripe-solr-compatibility">https://github.com/Firesphere/silverstripe-solr-compatibility</a></p>
+<hr>
+<p>* From here on called “FTS”</p>
 
       </article>
     </div>

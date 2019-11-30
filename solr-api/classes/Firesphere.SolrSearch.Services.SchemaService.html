@@ -3,14 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    SilverStripe Solr search &raquo; \Firesphere\SolrSearch\Services\SchemaService
-</title>
+    <title>SilverStripe Solr search &raquo;\Firesphere\SolrSearch\Services\SchemaService</title>
     <meta name="author" content=""/>
-    <meta name="description" content=""/>
-
-            <link href="../css/template.css" rel="stylesheet" media="all"/>
-    
-            <!--[if lt IE 9]>
+    <meta name="description" content=""/>        <link href="../css/template.css" rel="stylesheet" media="all"/>        <!--[if lt IE 9]>
         <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
         <![endif]-->
         <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
@@ -18,16 +13,11 @@
         <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
         <script src="../js/bootstrap.js" type="text/javascript"></script>
         <script src="../js/template.js" type="text/javascript"></script>
-        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
-    
-            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>        <link rel="shortcut icon" href="../img/favicon.ico"/>
         <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
         <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
-    </head>
-<body>
-
-        <div class="navbar navbar-fixed-top">
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/></head>
+<body>    <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -41,11 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">
-                                                                    <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>
-                                                                        <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
-                                                                                                                                </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -89,23 +75,18 @@
             <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
         </div>
     </div>
-    
     <div id="___" class="container">
         <noscript>
             <div class="alert alert-warning">
                 Javascript is disabled; several features are only available if Javascript is enabled.
             </div>
-        </noscript>
-
-        
-            <style>
+        </noscript>    <style>
         .deprecated h2 {
             text-decoration: line-through;
         }
     </style>
     <div class="row">
-        <div class="span4">
-                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <div class="span4">    <div class="btn-group view pull-right" data-toggle="buttons-radio">
         <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
         <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
     </div>
@@ -114,1018 +95,622 @@
         <button class="btn protected" title="Show protected elements">Protected</button>
         <button class="btn private" title="Show private elements">Private</button>
         <button class="btn inherited active" title="Show inherited elements">Inherited</button>
-    </div>
-
-        <ul class="side-nav nav nav-list">
+    </div>    <ul class="side-nav nav nav-list">
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
-            <ul>
-                                                                                                    <li class="method public">
-        <a href="#method___construct" title="__construct :: SchemaService constructor.">
+            <ul>    <li class="methodpublic">
+        <a href="#method___construct" title="__construct ::SchemaService constructor.">
             <span class="description">SchemaService constructor.</span><pre>__construct</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_generateSchema" title="generateSchema :: Generate the Schema xml">
+    </li>    <li class="methodpublic">
+        <a href="#method_generateSchema" title="generateSchema ::Generate the Schema xml">
             <span class="description">Generate the Schema xml</span><pre>generateSchema</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_getClassID" title="getClassID :: Get the Identifier Field for Solr">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_getClassID" title="getClassID ::Get the Identifier Field for Solr">
             <span class="description">Get the Identifier Field for Solr</span><pre>getClassID</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_getCopyFieldDefinitions" title="getCopyFieldDefinitions :: Get the definition of a copy field for determining what to load in to Solr">
+    </li>    <li class="methodpublic">
+        <a href="#method_getCopyFieldDefinitions" title="getCopyFieldDefinitions ::Get the definition of a copy field for determining what to load in to Solr">
             <span class="description">Get the definition of a copy field for determining what to load in to Solr</span><pre>getCopyFieldDefinitions</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_getCopyFields" title="getCopyFields :: Get the fields that should be copied">
+    </li>    <li class="methodpublic">
+        <a href="#method_getCopyFields" title="getCopyFields ::Get the fields that should be copied">
             <span class="description">Get the fields that should be copied</span><pre>getCopyFields</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_getDefaultField" title="getDefaultField :: Get the default field to generate df components for">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_getDefaultField" title="getDefaultField ::Get the default field to generate df components for">
             <span class="description">Get the default field to generate df components for</span><pre>getDefaultField</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_getExtrasPath" title="getExtrasPath :: Get any extras that need loading in to Solr">
+    </li>    <li class="methodpublic">
+        <a href="#method_getExtrasPath" title="getExtrasPath ::Get any extras that need loading in to Solr">
             <span class="description">Get any extras that need loading in to Solr</span><pre>getExtrasPath</pre>
         </a>
-    </li>
-
-                                                                                                                                                                <li class="method public">
-        <a href="#method_getFilterFieldDefinitions" title="getFilterFieldDefinitions :: Get the definitions of a filter field to load in to Solr.">
+    </li>    <li class="methodpublic">
+        <a href="#method_getFilterFieldDefinitions" title="getFilterFieldDefinitions ::Get the definitions of a filter field to load in to Solr.">
             <span class="description">Get the definitions of a filter field to load in to Solr.</span><pre>getFilterFieldDefinitions</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_getFulltextFieldDefinitions" title="getFulltextFieldDefinitions :: Get all fulltext field definitions that are loaded">
+    </li>    <li class="methodpublic">
+        <a href="#method_getFulltextFieldDefinitions" title="getFulltextFieldDefinitions ::Get all fulltext field definitions that are loaded">
             <span class="description">Get all fulltext field definitions that are loaded</span><pre>getFulltextFieldDefinitions</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_getIDField" title="getIDField :: Get the Identifier Field for Solr">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_getIDField" title="getIDField ::Get the Identifier Field for Solr">
             <span class="description">Get the Identifier Field for Solr</span><pre>getIDField</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_getIndex" title="getIndex :: Get the Index that&#039;s being used">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_getIndex" title="getIndex ::Get the Index that&#039;s being used">
             <span class="description">Get the Index that&#039;s being used</span><pre>getIndex</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_getIndexName" title="getIndexName :: Get the name of the index being used">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_getIndexName" title="getIndexName ::Get the name of the index being used">
             <span class="description">Get the name of the index being used</span><pre>getIndexName</pre>
         </a>
-    </li>
-
-                                                                                                                                                                <li class="method public inherited">
-        <a href="#method_getTemplate" title="getTemplate :: Get the base template for the schema xml">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_getTemplate" title="getTemplate ::Get the base template for the schema xml">
             <span class="description">Get the base template for the schema xml</span><pre>getTemplate</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_getTypes" title="getTypes :: Get the types template in a rendered state">
+    </li>    <li class="methodpublic">
+        <a href="#method_getTypes" title="getTypes ::Get the types template in a rendered state">
             <span class="description">Get the types template in a rendered state</span><pre>getTypes</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_getTypesTemplate" title="getTypesTemplate :: Get the types template if defined">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_getTypesTemplate" title="getTypesTemplate ::Get the types template if defined">
             <span class="description">Get the types template if defined</span><pre>getTypesTemplate</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_setIndex" title="setIndex :: Set the index that&#039;s being used and add the introspection for it">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_setIndex" title="setIndex ::Set the index that&#039;s being used and add the introspection for it">
             <span class="description">Set the index that&#039;s being used and add the introspection for it</span><pre>setIndex</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_setStore" title="setStore :: Set the store value">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_setStore" title="setStore ::Set the store value">
             <span class="description">Set the store value</span><pre>setStore</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_setTemplate" title="setTemplate :: Set a custom template for schema xml">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_setTemplate" title="setTemplate ::Set a custom template for schema xml">
             <span class="description">Set a custom template for schema xml</span><pre>setTemplate</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_setTypesTemplate" title="setTypesTemplate :: Set custom types template">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_setTypesTemplate" title="setTypesTemplate ::Set custom types template">
             <span class="description">Set custom types template</span><pre>setTypesTemplate</pre>
         </a>
-    </li>
-
-                                                </ul>
+    </li>            </ul>
         </li>
         <li class="nav-header protected">» Protected
-            <ul>
-                                                                                                                                                                                                                                                                                                                                        <li class="method protected">
-                            <a href="#method_getFieldDefinition" title="getFieldDefinition :: Get the field definition for a single field">
+            <ul>                        <li class="methodprotected">
+                            <a href="#method_getFieldDefinition" title="getFieldDefinition ::Get the field definition for a single field">
                                 <span class="description">Get the field definition for a single field</span><pre>getFieldDefinition</pre>
                             </a>
-                        </li>
-                                                                                                                                                                                                                                                                    <li class="method protected">
-                            <a href="#method_getStoreFields" title="getStoreFields :: Get the stored fields. This includes boosted and faceted fields">
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_getStoreFields" title="getStoreFields ::Get the stored fields. This includes boosted and faceted fields">
                                 <span class="description">Get the stored fields. This includes boosted and faceted fields</span><pre>getStoreFields</pre>
                             </a>
-                        </li>
-                                                                                                                                                                                                                                                                                                            </ul>
+                        </li>            </ul>
         </li>
         <li class="nav-header private">» Private
-            <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+            <ul>            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
-            <ul>
-                            </ul>
+            <ul>            </ul>
         </li>
     </ul>
-
-
         </div>
 
         <div class="span8">
             <div class="element class">
                 <h1>SchemaService</h1>
-                <small style="display: block; text-align: right">
-                                            Extends \SilverStripe\View\ViewableData
-                                                        </small>
+                <small style="display: block; text-align: right">                        Extends\SilverStripe\View\ViewableData                </small>
                 <p class="short_description">Class SchemaService</p>
                 <div class="details">
                     <div class="long_description">
-                        
                     </div>
-                    <table class="table table-bordered">
-                                                                                    <tr>
-                                    <th>
-                                        package
-                                                                            </th>
-                                    <td>
-                                                                                    
-                                                                                <p>Firesphere\SolrSearch\Services</p>
+                    <table class="table table-bordered">                                <tr>
+                                    <th>package                                    </th>
+                                    <td><p>Firesphere\SolrSearch\Services</p>
                                     </td>
-                                </tr>
-                                                                                                                                                                                </table>
+                                </tr>                    </table>
 
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method___construct"></a>
-                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method___construct"></a>
+                        <div class="element clickable methodpublic method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
                             <h2>SchemaService constructor.</h2>
-                            <pre>__construct() </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>__construct()</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_generateSchema"></a>
-                        <div class="element clickable method public  method_generateSchema" data-toggle="collapse" data-target=".method_generateSchema .collapse">
+                        </div>                        <a id="method_generateSchema"></a>
+                        <div class="element clickable methodpublic method_generateSchema" data-toggle="collapse" data-target=".method_generateSchema .collapse">
                             <h2>Generate the Schema xml</h2>
-                            <pre>generateSchema() : \SilverStripe\ORM\FieldType\DBHTMLText</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>generateSchema(): \SilverStripe\ORM\FieldType\DBHTMLText</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>\SilverStripe\ORM\FieldType\DBHTMLText</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>\SilverStripe\ORM\FieldType\DBHTMLText</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getClassID"></a>
-                        <div class="element clickable method public  method_getClassID inherited" data-toggle="collapse" data-target=".method_getClassID .collapse">
+                        </div>                        <a id="method_getClassID"></a>
+                        <div class="element clickable methodpublic method_getClassID inherited" data-toggle="collapse" data-target=".method_getClassID .collapse">
                             <h2>Get the Identifier Field for Solr</h2>
-                            <pre>getClassID() : string</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>getClassID(): string</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>string</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getCopyFieldDefinitions"></a>
-                        <div class="element clickable method public  method_getCopyFieldDefinitions" data-toggle="collapse" data-target=".method_getCopyFieldDefinitions .collapse">
+                        </div>                        <a id="method_getCopyFieldDefinitions"></a>
+                        <div class="element clickable methodpublic method_getCopyFieldDefinitions" data-toggle="collapse" data-target=".method_getCopyFieldDefinitions .collapse">
                             <h2>Get the definition of a copy field for determining what to load in to Solr</h2>
-                            <pre>getCopyFieldDefinitions() : \SilverStripe\ORM\ArrayList</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getCopyFieldDefinitions(): \SilverStripe\ORM\ArrayList</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\Exception</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\Exception</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>\SilverStripe\ORM\ArrayList</code><p></p>
-                                                                    </div>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>\SilverStripe\ORM\ArrayList</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getCopyFields"></a>
-                        <div class="element clickable method public  method_getCopyFields" data-toggle="collapse" data-target=".method_getCopyFields .collapse">
+                        </div>                        <a id="method_getCopyFields"></a>
+                        <div class="element clickable methodpublic method_getCopyFields" data-toggle="collapse" data-target=".method_getCopyFields .collapse">
                             <h2>Get the fields that should be copied</h2>
-                            <pre>getCopyFields() : \SilverStripe\ORM\ArrayList</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getCopyFields(): \SilverStripe\ORM\ArrayList</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>\SilverStripe\ORM\ArrayList</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>\SilverStripe\ORM\ArrayList</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getDefaultField"></a>
-                        <div class="element clickable method public  method_getDefaultField inherited" data-toggle="collapse" data-target=".method_getDefaultField .collapse">
+                        </div>                        <a id="method_getDefaultField"></a>
+                        <div class="element clickable methodpublic method_getDefaultField inherited" data-toggle="collapse" data-target=".method_getDefaultField .collapse">
                             <h2>Get the default field to generate df components for</h2>
-                            <pre>getDefaultField() : string|array</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>getDefaultField(): string|array</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>string|array</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>string|array</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getExtrasPath"></a>
-                        <div class="element clickable method public  method_getExtrasPath" data-toggle="collapse" data-target=".method_getExtrasPath .collapse">
+                        </div>                        <a id="method_getExtrasPath"></a>
+                        <div class="element clickable methodpublic method_getExtrasPath" data-toggle="collapse" data-target=".method_getExtrasPath .collapse">
                             <h2>Get any extras that need loading in to Solr</h2>
-                            <pre>getExtrasPath() : string</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getExtrasPath(): string</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>string</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getFieldDefinition"></a>
-                        <div class="element clickable method protected  method_getFieldDefinition" data-toggle="collapse" data-target=".method_getFieldDefinition .collapse">
+                        </div>                        <a id="method_getFieldDefinition"></a>
+                        <div class="element clickable methodprotected method_getFieldDefinition" data-toggle="collapse" data-target=".method_getFieldDefinition .collapse">
                             <h2>Get the field definition for a single field</h2>
-                            <pre>getFieldDefinition( $fieldName, \SilverStripe\ORM\ArrayList &$return, null|string $copyField = null) </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getFieldDefinition( $fieldName,\SilverStripe\ORM\ArrayList &$return,null|string $copyField = null)</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\Exception</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\Exception</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$fieldName</h4>
                                                 <code></code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
+                                            </div>                                            <div class="subelement argument">
                                                 <h4>$return</h4>
                                                 <code>\SilverStripe\ORM\ArrayList</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
+                                            </div>                                            <div class="subelement argument">
                                                 <h4>$copyField</h4>
                                                 <code>null|string</code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
+                                            </div>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getFilterFieldDefinitions"></a>
-                        <div class="element clickable method public  method_getFilterFieldDefinitions" data-toggle="collapse" data-target=".method_getFilterFieldDefinitions .collapse">
+                        </div>                        <a id="method_getFilterFieldDefinitions"></a>
+                        <div class="element clickable methodpublic method_getFilterFieldDefinitions" data-toggle="collapse" data-target=".method_getFilterFieldDefinitions .collapse">
                             <h2>Get the definitions of a filter field to load in to Solr.</h2>
-                            <pre>getFilterFieldDefinitions() : \SilverStripe\ORM\ArrayList</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getFilterFieldDefinitions(): \SilverStripe\ORM\ArrayList</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\Exception</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\Exception</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>\SilverStripe\ORM\ArrayList</code><p></p>
-                                                                    </div>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>\SilverStripe\ORM\ArrayList</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getFulltextFieldDefinitions"></a>
-                        <div class="element clickable method public  method_getFulltextFieldDefinitions" data-toggle="collapse" data-target=".method_getFulltextFieldDefinitions .collapse">
+                        </div>                        <a id="method_getFulltextFieldDefinitions"></a>
+                        <div class="element clickable methodpublic method_getFulltextFieldDefinitions" data-toggle="collapse" data-target=".method_getFulltextFieldDefinitions .collapse">
                             <h2>Get all fulltext field definitions that are loaded</h2>
-                            <pre>getFulltextFieldDefinitions() : \SilverStripe\ORM\ArrayList</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getFulltextFieldDefinitions(): \SilverStripe\ORM\ArrayList</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\Exception</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\Exception</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>\SilverStripe\ORM\ArrayList</code><p></p>
-                                                                    </div>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>\SilverStripe\ORM\ArrayList</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getIDField"></a>
-                        <div class="element clickable method public  method_getIDField inherited" data-toggle="collapse" data-target=".method_getIDField .collapse">
+                        </div>                        <a id="method_getIDField"></a>
+                        <div class="element clickable methodpublic method_getIDField inherited" data-toggle="collapse" data-target=".method_getIDField .collapse">
                             <h2>Get the Identifier Field for Solr</h2>
-                            <pre>getIDField() : string</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>getIDField(): string</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>string</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getIndex"></a>
-                        <div class="element clickable method public  method_getIndex inherited" data-toggle="collapse" data-target=".method_getIndex .collapse">
+                        </div>                        <a id="method_getIndex"></a>
+                        <div class="element clickable methodpublic method_getIndex inherited" data-toggle="collapse" data-target=".method_getIndex .collapse">
                             <h2>Get the Index that&#039;s being used</h2>
-                            <pre>getIndex() : \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>getIndex(): \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getIndexName"></a>
-                        <div class="element clickable method public  method_getIndexName inherited" data-toggle="collapse" data-target=".method_getIndexName .collapse">
+                        </div>                        <a id="method_getIndexName"></a>
+                        <div class="element clickable methodpublic method_getIndexName inherited" data-toggle="collapse" data-target=".method_getIndexName .collapse">
                             <h2>Get the name of the index being used</h2>
-                            <pre>getIndexName() : string</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>getIndexName(): string</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>string</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getStoreFields"></a>
-                        <div class="element clickable method protected  method_getStoreFields" data-toggle="collapse" data-target=".method_getStoreFields .collapse">
+                        </div>                        <a id="method_getStoreFields"></a>
+                        <div class="element clickable methodprotected method_getStoreFields" data-toggle="collapse" data-target=".method_getStoreFields .collapse">
                             <h2>Get the stored fields. This includes boosted and faceted fields</h2>
-                            <pre>getStoreFields() : array</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getStoreFields(): array</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>array</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getTemplate"></a>
-                        <div class="element clickable method public  method_getTemplate inherited" data-toggle="collapse" data-target=".method_getTemplate .collapse">
+                        </div>                        <a id="method_getTemplate"></a>
+                        <div class="element clickable methodpublic method_getTemplate inherited" data-toggle="collapse" data-target=".method_getTemplate .collapse">
                             <h2>Get the base template for the schema xml</h2>
-                            <pre>getTemplate() : string</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>getTemplate(): string</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>string</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getTypes"></a>
-                        <div class="element clickable method public  method_getTypes" data-toggle="collapse" data-target=".method_getTypes .collapse">
+                        </div>                        <a id="method_getTypes"></a>
+                        <div class="element clickable methodpublic method_getTypes" data-toggle="collapse" data-target=".method_getTypes .collapse">
                             <h2>Get the types template in a rendered state</h2>
-                            <pre>getTypes() : \SilverStripe\ORM\FieldType\DBHTMLText</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getTypes(): \SilverStripe\ORM\FieldType\DBHTMLText</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>\SilverStripe\ORM\FieldType\DBHTMLText</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>\SilverStripe\ORM\FieldType\DBHTMLText</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getTypesTemplate"></a>
-                        <div class="element clickable method public  method_getTypesTemplate inherited" data-toggle="collapse" data-target=".method_getTypesTemplate .collapse">
+                        </div>                        <a id="method_getTypesTemplate"></a>
+                        <div class="element clickable methodpublic method_getTypesTemplate inherited" data-toggle="collapse" data-target=".method_getTypesTemplate .collapse">
                             <h2>Get the types template if defined</h2>
-                            <pre>getTypesTemplate() : string</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>getTypesTemplate(): string</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>string</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_setIndex"></a>
-                        <div class="element clickable method public  method_setIndex inherited" data-toggle="collapse" data-target=".method_setIndex .collapse">
+                        </div>                        <a id="method_setIndex"></a>
+                        <div class="element clickable methodpublic method_setIndex inherited" data-toggle="collapse" data-target=".method_setIndex .collapse">
                             <h2>Set the index that&#039;s being used and add the introspection for it</h2>
-                            <pre>setIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $index) : \Firesphere\SolrSearch\Services\SchemaService</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>setIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $index): \Firesphere\SolrSearch\Services\SchemaService</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                                                    </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$index</h4>
                                                 <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>
-                                                                    </div>
+                                            </div>                                        <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_setStore"></a>
-                        <div class="element clickable method public  method_setStore inherited" data-toggle="collapse" data-target=".method_setStore .collapse">
+                        </div>                        <a id="method_setStore"></a>
+                        <div class="element clickable methodpublic method_setStore inherited" data-toggle="collapse" data-target=".method_setStore .collapse">
                             <h2>Set the store value</h2>
-                            <pre>setStore(boolean $store) </pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>setStore(boolean $store)</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$store</h4>
                                                 <code>boolean</code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
+                                            </div>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_setTemplate"></a>
-                        <div class="element clickable method public  method_setTemplate inherited" data-toggle="collapse" data-target=".method_setTemplate .collapse">
+                        </div>                        <a id="method_setTemplate"></a>
+                        <div class="element clickable methodpublic method_setTemplate inherited" data-toggle="collapse" data-target=".method_setTemplate .collapse">
                             <h2>Set a custom template for schema xml</h2>
-                            <pre>setTemplate(string $template) : \Firesphere\SolrSearch\Services\SchemaService</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>setTemplate(string $template): \Firesphere\SolrSearch\Services\SchemaService</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                                                    </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$template</h4>
                                                 <code>string</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>
-                                                                    </div>
+                                            </div>                                        <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_setTypesTemplate"></a>
-                        <div class="element clickable method public  method_setTypesTemplate inherited" data-toggle="collapse" data-target=".method_setTypesTemplate .collapse">
+                        </div>                        <a id="method_setTypesTemplate"></a>
+                        <div class="element clickable methodpublic method_setTypesTemplate inherited" data-toggle="collapse" data-target=".method_setTypesTemplate .collapse">
                             <h2>Set custom types template</h2>
-                            <pre>setTypesTemplate(string $typesTemplate) : \Firesphere\SolrSearch\Services\SchemaService</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
+                            <pre>setTypesTemplate(string $typesTemplate): \Firesphere\SolrSearch\Services\SchemaService</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                                                    </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$typesTemplate</h4>
                                                 <code>string</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>
-                                                                    </div>
+                                            </div>                                        <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>                                </div>
                             </div>
 
-                        </div>
-                    
-                    
-                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_fieldResolver"> </a>
-                            <div class="element clickable property  protected property_fieldResolver" data-toggle="collapse" data-target=".property_fieldResolver .collapse">
+                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_fieldResolver"> </a>
+                            <div class="element clickable propertyprotected property_fieldResolver" data-toggle="collapse" data-target=".property_fieldResolver .collapse">
                                 <h2>The field resolver to find a field for a class</h2>
-                                <pre>fieldResolver : \Firesphere\SolrSearch\Helpers\FieldResolver</pre>
-                                <div class="labels">
-                                                                                                        </div>
+                                <pre>fieldResolver :\Firesphere\SolrSearch\Helpers\FieldResolver</pre>
+                                <div class="labels">                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
+                                        <table class="table">                                                <tr>
+                                                    <th>var
                                                     </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code><a href="../classes/Firesphere.SolrSearch.Helpers.FieldResolver.html">\Firesphere\SolrSearch\Helpers\FieldResolver</a></code>
-                                                                            </div>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code><a href="../classes/Firesphere.SolrSearch.Helpers.FieldResolver.html">\Firesphere\SolrSearch\Helpers\FieldResolver</a></code>                                    </div>
                                 </div>
-                            </div>
-                                                    <a id="property_coreService"> </a>
-                            <div class="element clickable property  protected property_coreService" data-toggle="collapse" data-target=".property_coreService .collapse">
+                            </div>                            <a id="property_coreService"> </a>
+                            <div class="element clickable propertyprotected property_coreService" data-toggle="collapse" data-target=".property_coreService .collapse">
                                 <h2>CoreService to use</h2>
-                                <pre>coreService : \Firesphere\SolrSearch\Services\SolrCoreService</pre>
-                                <div class="labels">
-                                                                                                        </div>
+                                <pre>coreService :\Firesphere\SolrSearch\Services\SolrCoreService</pre>
+                                <div class="labels">                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
+                                        <table class="table">                                                <tr>
+                                                    <th>var
                                                     </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">\Firesphere\SolrSearch\Services\SolrCoreService</a></code>
-                                                                            </div>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">\Firesphere\SolrSearch\Services\SolrCoreService</a></code>                                    </div>
                                 </div>
-                            </div>
-                                                    <a id="property_template"> </a>
-                            <div class="element clickable property  protected property_template inherited" data-toggle="collapse" data-target=".property_template .collapse">
+                            </div>                            <a id="property_template"> </a>
+                            <div class="element clickable propertyprotected property_template inherited" data-toggle="collapse" data-target=".property_template .collapse">
                                 <h2>ABSOLUTE Path to template</h2>
-                                <pre>template : string</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
+                                <pre>template :string</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
+                                        <table class="table">                                                <tr>
+                                                    <th>var
                                                     </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>string</code>
-                                                                            </div>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>string</code>                                    </div>
                                 </div>
-                            </div>
-                                                    <a id="property_store"> </a>
-                            <div class="element clickable property  protected property_store inherited" data-toggle="collapse" data-target=".property_store .collapse">
+                            </div>                            <a id="property_store"> </a>
+                            <div class="element clickable propertyprotected property_store inherited" data-toggle="collapse" data-target=".property_store .collapse">
                                 <h2>Store the value in Solr</h2>
-                                <pre>store : boolean</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
+                                <pre>store :boolean</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
+                                        <table class="table">                                                <tr>
+                                                    <th>var
                                                     </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>boolean</code>
-                                                                            </div>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>boolean</code>                                    </div>
                                 </div>
-                            </div>
-                                                    <a id="property_index"> </a>
-                            <div class="element clickable property  protected property_index inherited" data-toggle="collapse" data-target=".property_index .collapse">
+                            </div>                            <a id="property_index"> </a>
+                            <div class="element clickable propertyprotected property_index inherited" data-toggle="collapse" data-target=".property_index .collapse">
                                 <h2>Index to generate the schema for</h2>
-                                <pre>index : \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
+                                <pre>index :\Firesphere\SolrSearch\Indexes\BaseIndex</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
+                                        <table class="table">                                                <tr>
+                                                    <th>var
                                                     </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code>
-                                                                            </div>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code>                                    </div>
                                 </div>
-                            </div>
-                                                    <a id="property_typesTemplate"> </a>
-                            <div class="element clickable property  protected property_typesTemplate inherited" data-toggle="collapse" data-target=".property_typesTemplate .collapse">
+                            </div>                            <a id="property_typesTemplate"> </a>
+                            <div class="element clickable propertyprotected property_typesTemplate inherited" data-toggle="collapse" data-target=".property_typesTemplate .collapse">
                                 <h2>ABSOLUTE Path to types.ss template</h2>
-                                <pre>typesTemplate : string</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
+                                <pre>typesTemplate :string</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
+                                        <table class="table">                                                <tr>
+                                                    <th>var
                                                     </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>string</code>
-                                                                            </div>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>string</code>                                    </div>
                                 </div>
-                            </div>
-                                                            </div>
+                            </div>                </div>
             </div>
             <a id="\Firesphere\SolrSearch\Services\SchemaService"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
-                    
-    
     <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Services.html">Services</a></li>
-
                 <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">SchemaService</a></li>
             </ul>
         </div>
-    </div>
-
-    </div>
-
-        <footer class="span12">
+    </div>    </div>    <footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Thu, 28 Nov 2019 22:23:11 +0000.<br/>
-    </footer>
-    </body>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
+            generated onSat, 30 Nov 2019 20:36:03 +0000.<br/>
+    </footer></body>
 </html>

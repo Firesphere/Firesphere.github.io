@@ -3,14 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    SilverStripe Solr search &raquo; \Firesphere\SolrSearch\Extensions\DataObjectExtension
-</title>
+    <title>SilverStripe Solr search &raquo;\Firesphere\SolrSearch\Extensions\DataObjectExtension</title>
     <meta name="author" content=""/>
-    <meta name="description" content=""/>
-
-            <link href="../css/template.css" rel="stylesheet" media="all"/>
-    
-            <!--[if lt IE 9]>
+    <meta name="description" content=""/>        <link href="../css/template.css" rel="stylesheet" media="all"/>        <!--[if lt IE 9]>
         <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
         <![endif]-->
         <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
@@ -18,16 +13,11 @@
         <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
         <script src="../js/bootstrap.js" type="text/javascript"></script>
         <script src="../js/template.js" type="text/javascript"></script>
-        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
-    
-            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>        <link rel="shortcut icon" href="../img/favicon.ico"/>
         <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
         <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
-    </head>
-<body>
-
-        <div class="navbar navbar-fixed-top">
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/></head>
+<body>    <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -41,11 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">
-                                                                    <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>
-                                                                        <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>
-                                                                                                                                </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -89,23 +75,18 @@
             <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
         </div>
     </div>
-    
     <div id="___" class="container">
         <noscript>
             <div class="alert alert-warning">
                 Javascript is disabled; several features are only available if Javascript is enabled.
             </div>
-        </noscript>
-
-        
-            <style>
+        </noscript>    <style>
         .deprecated h2 {
             text-decoration: line-through;
         }
     </style>
     <div class="row">
-        <div class="span4">
-                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <div class="span4">    <div class="btn-group view pull-right" data-toggle="buttons-radio">
         <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
         <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
     </div>
@@ -114,657 +95,411 @@
         <button class="btn protected" title="Show protected elements">Protected</button>
         <button class="btn private" title="Show private elements">Private</button>
         <button class="btn inherited active" title="Show inherited elements">Inherited</button>
-    </div>
-
-        <ul class="side-nav nav nav-list">
+    </div>    <ul class="side-nav nav nav-list">
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
-            <ul>
-                                                                                                                                                                                                                                                                                                                                    <li class="method public">
-        <a href="#method_getViewStatus" title="getViewStatus :: Get the view status for each member in this object">
+            <ul>    <li class="methodpublic">
+        <a href="#method_getViewStatus" title="getViewStatus ::Get the view status for each member in this object">
             <span class="description">Get the view status for each member in this object</span><pre>getViewStatus</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_onAfterDelete" title="onAfterDelete :: Attempt to remove the item from Solr">
+    </li>    <li class="methodpublic">
+        <a href="#method_onAfterDelete" title="onAfterDelete ::Attempt to remove the item from Solr">
             <span class="description">Attempt to remove the item from Solr</span><pre>onAfterDelete</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_onAfterPublish" title="onAfterPublish :: Push the item to Solr after publishing">
+    </li>    <li class="methodpublic">
+        <a href="#method_onAfterPublish" title="onAfterPublish ::Push the item to Solr after publishing">
             <span class="description">Push the item to Solr after publishing</span><pre>onAfterPublish</pre>
         </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_onAfterWrite" title="onAfterWrite :: Push the item to solr if it is not versioned
+    </li>    <li class="methodpublic">
+        <a href="#method_onAfterWrite" title="onAfterWrite ::Push the item to solr if it is not versioned
 Update the index after write.">
             <span class="description">Push the item to solr if it is not versioned
 Update the index after write.</span><pre>onAfterWrite</pre>
         </a>
-    </li>
-
-                                                                                                                                                                                                                        </ul>
+    </li>            </ul>
         </li>
         <li class="nav-header protected">» Protected
-            <ul>
-                                                                            <li class="method protected">
-                            <a href="#method_clearIDs" title="clearIDs :: Remove the owner ID from the dirty ID set">
+            <ul>                        <li class="methodprotected">
+                            <a href="#method_clearIDs" title="clearIDs ::Remove the owner ID from the dirty ID set">
                                 <span class="description">Remove the owner ID from the dirty ID set</span><pre>clearIDs</pre>
                             </a>
-                        </li>
-                                                                                <li class="method protected">
-                            <a href="#method_getDirtyClass" title="getDirtyClass :: Find or create a new DirtyClass for recording dirty IDs">
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_getDirtyClass" title="getDirtyClass ::Find or create a new DirtyClass for recording dirty IDs">
                                 <span class="description">Find or create a new DirtyClass for recording dirty IDs</span><pre>getDirtyClass</pre>
                             </a>
-                        </li>
-                                                                                <li class="method protected">
-                            <a href="#method_getMemberPermissions" title="getMemberPermissions :: Get the view permissions for each member in the system">
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_getMemberPermissions" title="getMemberPermissions ::Get the view permissions for each member in the system">
                                 <span class="description">Get the view permissions for each member in the system</span><pre>getMemberPermissions</pre>
                             </a>
-                        </li>
-                                                                                <li class="method protected">
-                            <a href="#method_getMembers" title="getMembers :: Get the static list of members">
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_getMembers" title="getMembers ::Get the static list of members">
                                 <span class="description">Get the static list of members</span><pre>getMembers</pre>
                             </a>
-                        </li>
-                                                                                                                                                                                                                                <li class="method protected">
-                            <a href="#method_pushToSolr" title="pushToSolr :: Try to push the newly updated item to Solr">
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_pushToSolr" title="pushToSolr ::Try to push the newly updated item to Solr">
                                 <span class="description">Try to push the newly updated item to Solr</span><pre>pushToSolr</pre>
                             </a>
-                        </li>
-                                                                                <li class="method protected">
-                            <a href="#method_registerException" title="registerException :: Register the exception of the attempted index for later clean-up use">
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_registerException" title="registerException ::Register the exception of the attempted index for later clean-up use">
                                 <span class="description">Register the exception of the attempted index for later clean-up use</span><pre>registerException</pre>
                             </a>
-                        </li>
-                                                                                <li class="method protected">
-                            <a href="#method_shouldPush" title="shouldPush :: Should this write be pushed to Solr">
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_shouldPush" title="shouldPush ::Should this write be pushed to Solr">
                                 <span class="description">Should this write be pushed to Solr</span><pre>shouldPush</pre>
                             </a>
-                        </li>
-                                                </ul>
+                        </li>            </ul>
         </li>
         <li class="nav-header private">» Private
-            <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+            <ul>            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
-            <ul>
-                            </ul>
+            <ul>            </ul>
         </li>
     </ul>
-
-
         </div>
 
         <div class="span8">
             <div class="element class">
                 <h1>DataObjectExtension</h1>
-                <small style="display: block; text-align: right">
-                                            Extends \SilverStripe\ORM\DataExtension
-                                                        </small>
+                <small style="display: block; text-align: right">                        Extends\SilverStripe\ORM\DataExtension                </small>
                 <p class="short_description">Class \Firesphere\SolrSearch\Compat\DataObjectExtension</p>
                 <div class="details">
-                    <div class="long_description">
-                        <p>Extend every DataObject with the option to update the index.</p>
+                    <div class="long_description"><p>Extend every DataObject with the option to update the index.</p>
                     </div>
-                    <table class="table table-bordered">
-                                                                                    <tr>
-                                    <th>
-                                        package
-                                                                            </th>
-                                    <td>
-                                                                                    
-                                                                                <p>Firesphere\SolrSearch\Extensions</p>
+                    <table class="table table-bordered">                                <tr>
+                                    <th>package                                    </th>
+                                    <td><p>Firesphere\SolrSearch\Extensions</p>
                                     </td>
-                                </tr>
-                                                                                                                                                                                                                                    </table>
+                                </tr>                    </table>
 
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method_clearIDs"></a>
-                        <div class="element clickable method protected  method_clearIDs" data-toggle="collapse" data-target=".method_clearIDs .collapse">
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_clearIDs"></a>
+                        <div class="element clickable methodprotected method_clearIDs" data-toggle="collapse" data-target=".method_clearIDs .collapse">
                             <h2>Remove the owner ID from the dirty ID set</h2>
-                            <pre>clearIDs(\SilverStripe\ORM\DataObject $owner, array $ids, \Firesphere\SolrSearch\Models\DirtyClass $record) </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>clearIDs(\SilverStripe\ORM\DataObject $owner,array $ids,\Firesphere\SolrSearch\Models\DirtyClass $record)</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$owner</h4>
                                                 <code>\SilverStripe\ORM\DataObject</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
+                                            </div>                                            <div class="subelement argument">
                                                 <h4>$ids</h4>
                                                 <code>array</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
+                                            </div>                                            <div class="subelement argument">
                                                 <h4>$record</h4>
                                                 <code><a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">\Firesphere\SolrSearch\Models\DirtyClass</a></code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
+                                            </div>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getDirtyClass"></a>
-                        <div class="element clickable method protected  method_getDirtyClass" data-toggle="collapse" data-target=".method_getDirtyClass .collapse">
+                        </div>                        <a id="method_getDirtyClass"></a>
+                        <div class="element clickable methodprotected method_getDirtyClass" data-toggle="collapse" data-target=".method_getDirtyClass .collapse">
                             <h2>Find or create a new DirtyClass for recording dirty IDs</h2>
-                            <pre>getDirtyClass(\SilverStripe\ORM\DataObject $owner, string $type) : \Firesphere\SolrSearch\Models\DirtyClass</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getDirtyClass(\SilverStripe\ORM\DataObject $owner,string $type): \Firesphere\SolrSearch\Models\DirtyClass</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                                                            <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$owner</h4>
                                                 <code>\SilverStripe\ORM\DataObject</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
+                                            </div>                                            <div class="subelement argument">
                                                 <h4>$type</h4>
                                                 <code>string</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">\Firesphere\SolrSearch\Models\DirtyClass</a></code><p></p>
-                                                                    </div>
+                                            </div>                                        <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">\Firesphere\SolrSearch\Models\DirtyClass</a></code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getMemberPermissions"></a>
-                        <div class="element clickable method protected  method_getMemberPermissions" data-toggle="collapse" data-target=".method_getMemberPermissions .collapse">
+                        </div>                        <a id="method_getMemberPermissions"></a>
+                        <div class="element clickable methodprotected method_getMemberPermissions" data-toggle="collapse" data-target=".method_getMemberPermissions .collapse">
                             <h2>Get the view permissions for each member in the system</h2>
-                            <pre>getMemberPermissions(\SilverStripe\ORM\DataObject|\SilverStripe\CMS\Model\SiteTree $owner) : array</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getMemberPermissions(\SilverStripe\ORM\DataObject|\SilverStripe\CMS\Model\SiteTree $owner): array</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                                                    </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$owner</h4>
                                                 <code>\SilverStripe\ORM\DataObject|\SilverStripe\CMS\Model\SiteTree</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>array</code><p></p>
-                                                                    </div>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getMembers"></a>
-                        <div class="element clickable method protected  method_getMembers" data-toggle="collapse" data-target=".method_getMembers .collapse">
+                        </div>                        <a id="method_getMembers"></a>
+                        <div class="element clickable methodprotected method_getMembers" data-toggle="collapse" data-target=".method_getMembers .collapse">
                             <h2>Get the static list of members</h2>
-                            <pre>getMembers() : \SilverStripe\ORM\DataList</pre>
-                            <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
-
-                            
+                            <pre>getMembers(): \SilverStripe\ORM\DataList</pre>
+                            <div class="labels"><span class="label">static</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>\SilverStripe\ORM\DataList</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>\SilverStripe\ORM\DataList</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_getViewStatus"></a>
-                        <div class="element clickable method public  method_getViewStatus" data-toggle="collapse" data-target=".method_getViewStatus .collapse">
+                        </div>                        <a id="method_getViewStatus"></a>
+                        <div class="element clickable methodpublic method_getViewStatus" data-toggle="collapse" data-target=".method_getViewStatus .collapse">
                             <h2>Get the view status for each member in this object</h2>
-                            <pre>getViewStatus() : array</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>getViewStatus(): array</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>array</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_onAfterDelete"></a>
-                        <div class="element clickable method public  method_onAfterDelete" data-toggle="collapse" data-target=".method_onAfterDelete .collapse">
+                        </div>                        <a id="method_onAfterDelete"></a>
+                        <div class="element clickable methodpublic method_onAfterDelete" data-toggle="collapse" data-target=".method_onAfterDelete .collapse">
                             <h2>Attempt to remove the item from Solr</h2>
-                            <pre>onAfterDelete() </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>onAfterDelete()</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
-                                                        <dd></dd>
-                                                                                                            <dt>\GuzzleHttp\Exception\GuzzleException</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                    </div>
+                                            </tr>                                    </table>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_onAfterPublish"></a>
-                        <div class="element clickable method public  method_onAfterPublish" data-toggle="collapse" data-target=".method_onAfterPublish .collapse">
+                        </div>                        <a id="method_onAfterPublish"></a>
+                        <div class="element clickable methodpublic method_onAfterPublish" data-toggle="collapse" data-target=".method_onAfterPublish .collapse">
                             <h2>Push the item to Solr after publishing</h2>
-                            <pre>onAfterPublish() </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>onAfterPublish()</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
-                                                        <dd></dd>
-                                                                                                            <dt>\GuzzleHttp\Exception\GuzzleException</dt>
-                                                        <dd></dd>
-                                                                                                            <dt>\ReflectionException</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>                                                        <dt>\ReflectionException</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                    </div>
+                                            </tr>                                    </table>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_onAfterWrite"></a>
-                        <div class="element clickable method public  method_onAfterWrite" data-toggle="collapse" data-target=".method_onAfterWrite .collapse">
+                        </div>                        <a id="method_onAfterWrite"></a>
+                        <div class="element clickable methodpublic method_onAfterWrite" data-toggle="collapse" data-target=".method_onAfterWrite .collapse">
                             <h2>Push the item to solr if it is not versioned
 Update the index after write.</h2>
-                            <pre>onAfterWrite() </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>onAfterWrite()</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
-                                                        <dd></dd>
-                                                                                                            <dt>\GuzzleHttp\Exception\GuzzleException</dt>
-                                                        <dd></dd>
-                                                                                                            <dt>\ReflectionException</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>                                                        <dt>\ReflectionException</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                    </div>
+                                            </tr>                                    </table>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_pushToSolr"></a>
-                        <div class="element clickable method protected  method_pushToSolr" data-toggle="collapse" data-target=".method_pushToSolr .collapse">
+                        </div>                        <a id="method_pushToSolr"></a>
+                        <div class="element clickable methodprotected method_pushToSolr" data-toggle="collapse" data-target=".method_pushToSolr .collapse">
                             <h2>Try to push the newly updated item to Solr</h2>
-                            <pre>pushToSolr(\SilverStripe\ORM\DataObject $owner) </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>pushToSolr(\SilverStripe\ORM\DataObject $owner)</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
-                                                        <dd></dd>
-                                                                                                            <dt>\GuzzleHttp\Exception\GuzzleException</dt>
-                                                        <dd></dd>
-                                                                                                            <dt>\ReflectionException</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>                                                        <dt>\ReflectionException</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$owner</h4>
                                                 <code>\SilverStripe\ORM\DataObject</code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
+                                            </div>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_registerException"></a>
-                        <div class="element clickable method protected  method_registerException" data-toggle="collapse" data-target=".method_registerException .collapse">
+                        </div>                        <a id="method_registerException"></a>
+                        <div class="element clickable methodprotected method_registerException" data-toggle="collapse" data-target=".method_registerException .collapse">
                             <h2>Register the exception of the attempted index for later clean-up use</h2>
-                            <pre>registerException(array $ids,  $record, \Exception $error) </pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>registerException(array $ids, $record,\Exception $error)</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                            <tr>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
                                                 <th>Throws</th>
                                                 <td>
-                                                    <dl>
-                                                                                                            <dt>\SilverStripe\ORM\ValidationException</dt>
-                                                        <dd></dd>
-                                                                                                            <dt>\GuzzleHttp\Exception\GuzzleException</dt>
-                                                        <dd></dd>
-                                                                                                                                                            </dl>
+                                                    <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>                                                    </dl>
                                                 </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$ids</h4>
                                                 <code>array</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
+                                            </div>                                            <div class="subelement argument">
                                                 <h4>$record</h4>
                                                 <code></code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
+                                            </div>                                            <div class="subelement argument">
                                                 <h4>$error</h4>
                                                 <code>\Exception</code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
+                                            </div>                                </div>
                             </div>
 
-                        </div>
-                                            <a id="method_shouldPush"></a>
-                        <div class="element clickable method protected  method_shouldPush" data-toggle="collapse" data-target=".method_shouldPush .collapse">
+                        </div>                        <a id="method_shouldPush"></a>
+                        <div class="element clickable methodprotected method_shouldPush" data-toggle="collapse" data-target=".method_shouldPush .collapse">
                             <h2>Should this write be pushed to Solr</h2>
-                            <pre>shouldPush() : boolean</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
+                            <pre>shouldPush(): boolean</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
+                                    <table class="table">                                            <tr>
                                                 <th>
-                                                    
                                                 </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>boolean</code><p></p>
-                                                                    </div>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>boolean</code><p></p>                                </div>
                             </div>
 
-                        </div>
-                    
-                    
-                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_canViewClasses"> </a>
-                            <div class="element clickable property  public property_canViewClasses" data-toggle="collapse" data-target=".property_canViewClasses .collapse">
+                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_canViewClasses"> </a>
+                            <div class="element clickable propertypublic property_canViewClasses" data-toggle="collapse" data-target=".property_canViewClasses .collapse">
                                 <h2>canView cache</h2>
-                                <pre>canViewClasses : array</pre>
-                                <div class="labels">
-                                                                        <span class="label">static</span>                                </div>
+                                <pre>canViewClasses :array</pre>
+                                <div class="labels"><span class="label">static</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
+                                        <table class="table">                                                <tr>
+                                                    <th>var
                                                     </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>array</code>
-                                                                            </div>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>array</code>                                    </div>
                                 </div>
-                            </div>
-                                                    <a id="property_members"> </a>
-                            <div class="element clickable property  protected property_members" data-toggle="collapse" data-target=".property_members .collapse">
+                            </div>                            <a id="property_members"> </a>
+                            <div class="element clickable propertyprotected property_members" data-toggle="collapse" data-target=".property_members .collapse">
                                 <h2>Member cache</h2>
-                                <pre>members : \SilverStripe\ORM\DataList</pre>
-                                <div class="labels">
-                                                                        <span class="label">static</span>                                </div>
+                                <pre>members :\SilverStripe\ORM\DataList</pre>
+                                <div class="labels"><span class="label">static</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
+                                        <table class="table">                                                <tr>
+                                                    <th>var
                                                     </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>\SilverStripe\ORM\DataList</code>
-                                                                            </div>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>\SilverStripe\ORM\DataList</code>                                    </div>
                                 </div>
-                            </div>
-                                                    <a id="property_owner"> </a>
-                            <div class="element clickable property  public property_owner" data-toggle="collapse" data-target=".property_owner .collapse">
+                            </div>                            <a id="property_owner"> </a>
+                            <div class="element clickable propertypublic property_owner" data-toggle="collapse" data-target=".property_owner .collapse">
                                 <h2>owner</h2>
-                                <pre>owner : \SilverStripe\ORM\DataObject|\Firesphere\SolrSearch\Extensions\DataObjectExtension</pre>
-                                <div class="labels">
-                                                                                                        </div>
+                                <pre>owner :\SilverStripe\ORM\DataObject|\Firesphere\SolrSearch\Extensions\DataObjectExtension</pre>
+                                <div class="labels">                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
-                                        <table class="table">
-                                                                                            <tr>
+                                        <table class="table">                                                <tr>
                                                     <th>
-                                                        
                                                     </th>
-                                                    <td>
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>\SilverStripe\ORM\DataObject|\Firesphere\SolrSearch\Extensions\DataObjectExtension</code>
-                                                                            </div>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>\SilverStripe\ORM\DataObject|\Firesphere\SolrSearch\Extensions\DataObjectExtension</code>                                    </div>
                                 </div>
-                            </div>
-                                                            </div>
+                            </div>                </div>
             </div>
             <a id="\Firesphere\SolrSearch\Extensions\DataObjectExtension"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
-                    
-    
     <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Extensions.html">Extensions</a></li>
-
                 <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Extensions.DataObjectExtension.html">DataObjectExtension</a></li>
             </ul>
         </div>
-    </div>
-
-    </div>
-
-        <footer class="span12">
+    </div>    </div>    <footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Thu, 28 Nov 2019 22:23:12 +0000.<br/>
-    </footer>
-    </body>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
+            generated onSat, 30 Nov 2019 20:36:03 +0000.<br/>
+    </footer></body>
 </html>
