@@ -12,7 +12,7 @@
         <target>solr</target>
     </transformer>
     <transformations>
-        <template name="responsive-twig" />
+        <template name="clean" />
     </transformations>
     <files>
         <directory>compat/src</directory>
