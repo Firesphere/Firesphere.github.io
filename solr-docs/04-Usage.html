@@ -514,7 +514,7 @@ which is used to determine the name of the index to query Solr.</p>
   store:
     mode: 'file'
     path: '.solr'
-  cores: 2
+  cpucores: 2
 
 </code></pre>
 <p>The config is used to connect to Solr. This will tell the module where the Solr instance for this index lives and how to connect.</p>
@@ -525,8 +525,8 @@ which is used to determine the name of the index to query Solr.</p>
   path: '/my_post_endpoint'
   uri: 'https://mydomain.com'
 </code></pre>
-<h4 id="defining-cores">Defining cores <a class="heading-anchor-permalink" href="#defining-cores">#</a></h4>
-<p>If your server has multiple cores available, you can define the amount of cores in the config.
+<h4 id="defining-amount-of-cpu-cores">Defining amount of CPU cores <a class="heading-anchor-permalink" href="#defining-amount-of-cpu-cores">#</a></h4>
+<p>If your server has multiple CPU cores available, you can define the amount of cores in the config.
 During indexing, this means that each core gets to do an indexing of a group.
 The advantage is that it takes all cores available, speeding up the indexing process by the amount of cores available.</p>
 <p>Because the amount of cores can not be determined programmatically, due to access control, you will have to define the amount of cores available manually.</p>
