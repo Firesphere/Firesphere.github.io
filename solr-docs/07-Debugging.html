@@ -484,6 +484,7 @@
 <li><a class="active" href="07-Debugging.html">Debugging</a></li>
 <li><a class="" href="08-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="09-Elemental.html">Elemental</a></li>
+<li><a class="" href="10-View-Permissions.html">View Permissions</a></li>
 <li><a class="" href="13-Changelog.html">Changelog</a></li>
 <li><a class="" href="14-About.html">About</a></li>
 <li><a class="" href="15-FAQ.html">FAQ</a></li>
@@ -502,6 +503,11 @@
 <p>Every error triggers the SolrLogger, to retrieve the errors from Solr and store them in the database.</p>
 <p>These error logs are deletable only in dev mode or by administrators.</p>
 <p>The logs can be found at <code>admin/searchadmin/Firesphere-SolrSearch-Models-SolrLog</code> for checking what is wrong.</p>
+<h2 id="clearing-out-the-logs">Clearing out the logs <a class="heading-anchor-permalink" href="#clearing-out-the-logs">#</a></h2>
+<p>As an admin, you should have access to <code>dev/tasks</code>, where an option to truncate the log database is available at
+<code>dev/tasks/SolrClearErrorsTask</code>. Use this with caution though, as it will truncate the errors logged and no data remains
+at all.</p>
+<p>It is strongly advised to only clear out the logs if they have all been reviewed and you are sure nothing serious is wrong.</p>
 <h2 id="x%3Aunknown-indexes">x:Unknown indexes <a class="heading-anchor-permalink" href="#x%3Aunknown-indexes">#</a></h2>
 <p>Because Solr 5 and lower don’t return the actual core that threw the error, logging will say <code>x:Unknown</code>. This does not mean
 the log is not there, it simply means the core that threw the error isn’t known by the server.</p>

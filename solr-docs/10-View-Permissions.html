@@ -474,7 +474,7 @@
     </a>
     <nav id="menu">
         <ul>
-<li><a class="active" href="index.html">index</a></li>
+<li><a class="" href="index.html">index</a></li>
 <li><a class="" href="01-Installation.html">Installation</a></li>
 <li><a class="" href="02-Solr.html">Solr</a></li>
 <li><a class="" href="03-Usage.html">Usage</a></li>
@@ -484,7 +484,7 @@
 <li><a class="" href="07-Debugging.html">Debugging</a></li>
 <li><a class="" href="08-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="09-Elemental.html">Elemental</a></li>
-<li><a class="" href="10-View-Permissions.html">View Permissions</a></li>
+<li><a class="active" href="10-View-Permissions.html">View Permissions</a></li>
 <li><a class="" href="13-Changelog.html">Changelog</a></li>
 <li><a class="" href="14-About.html">About</a></li>
 <li><a class="" href="15-FAQ.html">FAQ</a></li>
@@ -492,23 +492,16 @@
 </ul>
     </nav>
     <article id="main" class="content">
-        <h1 id="solr-search">Solr Search <a class="heading-anchor-permalink" href="#solr-search">#</a></h1>
-<ol>
-<li><a href="01-Installation.html">Installation</a></li>
-<li><a href="02-Solr.html">Solr</a></li>
-<li><a href="03-Usage.html">Usage</a></li>
-<li><a href="04-Customisation.html">Customisation</a></li>
-<li><a href="05-CMS-Usage.html">CMS Usage</a></li>
-<li><a href="06-Fulltext-Search-Compatibility.html">Fulltext Search compatibility</a></li>
-<li><a href="07-Debugging.html">Debugging</a></li>
-<li><a href="08-Suggestions.html">Suggestions</a></li>
-<li><a href="09-Elemental.html">Elemental</a></li>
-<li><a href="10-View-Permissions.html">View permissions</a></li>
-<li><a href="13-Changelog.html">Changelog</a></li>
-<li><a href="14-About.html">About</a></li>
-<li><a href="15-FAQ.html">FAQ</a></li>
-<li><a href="16-Known-issues.html">Known issues</a></li>
-</ol>
+        <h1 id="viewing-permissions">Viewing permissions <a class="heading-anchor-permalink" href="#viewing-permissions">#</a></h1>
+<p>View permissions are indexed group based and setting based.</p>
+<p>On page level, this means if it’s public, the view will be indexed as <code>'null'</code>, meaning anyone can see.
+Inheritance is calculated, and if it is logged in only, then only logged in members will be able to see it.</p>
+<p>If it’s specific groups, then these groups are indexed.</p>
+<h2 id="more-granular-approaches">More granular approaches <a class="heading-anchor-permalink" href="#more-granular-approaches">#</a></h2>
+<p>In case you have custom <code>canView()</code> implementations, we strongly suggest using <code>InheritedPermissionsExtension</code> and proper
+permission implementations instead.</p>
+<p>The reason for not using custom <code>Member</code> based permission checks, is because when a site has a lot of members, indexing
+and the granular approach would become incredibly complex and long. Possibly causing errors during indexing.</p>
 
     </article>
 </div>

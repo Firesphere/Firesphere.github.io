@@ -484,6 +484,7 @@
 <li><a class="" href="07-Debugging.html">Debugging</a></li>
 <li><a class="" href="08-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="09-Elemental.html">Elemental</a></li>
+<li><a class="" href="10-View-Permissions.html">View Permissions</a></li>
 <li><a class="" href="13-Changelog.html">Changelog</a></li>
 <li><a class="" href="14-About.html">About</a></li>
 <li><a class="" href="15-FAQ.html">FAQ</a></li>
@@ -629,7 +630,29 @@ at least one core free for handling page visits, while you’re running an index
 
 </code></pre>
 <h4 id="moving-from-init-to-yml">Moving from init to YML <a class="heading-anchor-permalink" href="#moving-from-init-to-yml">#</a></h4>
-<p>The compatibility module has an extension method that allows you to build your index and then generate the YML content for you. See the compatibility module for more details.</p>
+<p>The <a href="06-Fulltext-Search-Compatibility.html">compatibility module</a> has an extension method that allows you to build your index and then generate the YML content for you. See the compatibility module for more details.</p>
+<h2 id="another-way-to-set-the-config-in-php">Another way to set the config in PHP <a class="heading-anchor-permalink" href="#another-way-to-set-the-config-in-php">#</a></h2>
+<p>You could also use PHP, just like it was, to set the config. For readability however, it’s better to use statics for Facets:</p>
+<pre><code class="language-php">    protected $facetFields = [
+        RelatedObject::class   =&gt; [
+            'Field' =&gt; 'RelatedObjectID',
+            'Title' =&gt; 'RelationOne'
+        ],
+        OtherRelatedObject::class =&gt; [
+            'Field' =&gt; 'OtherRelatedObjectID',
+            'Title' =&gt; 'RelationTwo'
+        ]
+    ];
+</code></pre>
+<p>This will generate a facet field in Solr, assuming this relation exists on <code>SiteTree</code> or <code>Page</code>.</p>
+<p>The relation would look like <code>SiteTree_RelatedObjectID</code>, where <code>RelatedObject</code> the name of the relation reflects.</p>
+<p>The Title is used to group all facets by their Title, in the template, this is accessible by looping <code>$Result.FacetSet.TitleOfTheFacet</code></p>
+<h3 id="important-notice">Important notice <a class="heading-anchor-permalink" href="#important-notice">#</a></h3>
+<p>Note, that Facets are relational. For faceting on a relation, omit the origin class (e.g. <code>SiteTree</code>), but supply the full relational
+path to the facet. e.g. if you want to have facets on <code>RelationObject-&gt;RelationThing()-&gt;Relation()-&gt;ID</code>, the Facet declaration should be
+<code>RelationObject.RelationThing.RelationID</code>. It should always end with an ID that is a <code>has_one</code> relation.</p>
+<p>Although it can be a <code>has_many</code> just as well, and it would be <code>Relation.ID</code>, it is not advised, as it creates a lot of overhead.</p>
+<p>It would and should work though. If you want to do it that way, there’s no stopping you, it’s just not advised.</p>
 <h2 id="accessing-solr">Accessing Solr <a class="heading-anchor-permalink" href="#accessing-solr">#</a></h2>
 <p>If available, you can access your Solr instance at <code>http://mydomain.com:8983</code></p>
 <hr>

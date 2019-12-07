@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -128,12 +128,8 @@ Update the index after write.</span><pre>onAfterWrite</pre>
                                 <span class="description">Find or create a new DirtyClass for recording dirty IDs</span><pre>getDirtyClass</pre>
                             </a>
                         </li>                        <li class="methodprotected">
-                            <a href="#method_getMemberPermissions" title="getMemberPermissions ::Get the view permissions for each member in the system">
-                                <span class="description">Get the view permissions for each member in the system</span><pre>getMemberPermissions</pre>
-                            </a>
-                        </li>                        <li class="methodprotected">
-                            <a href="#method_getMembers" title="getMembers ::Get the static list of members">
-                                <span class="description">Get the static list of members</span><pre>getMembers</pre>
+                            <a href="#method_getGroupViewPermissions" title="getGroupViewPermissions ::Determine the view permissions based on group settings">
+                                <span class="description">Determine the view permissions based on group settings</span><pre>getGroupViewPermissions</pre>
                             </a>
                         </li>                        <li class="methodprotected">
                             <a href="#method_pushToSolr" title="pushToSolr ::Try to push the newly updated item to Solr">
@@ -229,10 +225,10 @@ Update the index after write.</span><pre>onAfterWrite</pre>
                                         <code><a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">\Firesphere\SolrSearch\Models\DirtyClass</a></code><p></p>                                </div>
                             </div>
 
-                        </div>                        <a id="method_getMemberPermissions"></a>
-                        <div class="element clickable methodprotected method_getMemberPermissions" data-toggle="collapse" data-target=".method_getMemberPermissions .collapse">
-                            <h2>Get the view permissions for each member in the system</h2>
-                            <pre>getMemberPermissions(\SilverStripe\ORM\DataObject|\SilverStripe\CMS\Model\SiteTree $owner): array</pre>
+                        </div>                        <a id="method_getGroupViewPermissions"></a>
+                        <div class="element clickable methodprotected method_getGroupViewPermissions" data-toggle="collapse" data-target=".method_getGroupViewPermissions .collapse">
+                            <h2>Determine the view permissions based on group settings</h2>
+                            <pre>getGroupViewPermissions(\SilverStripe\ORM\DataObject|\SilverStripe\CMS\Model\SiteTree|\SilverStripe\SiteConfig\SiteConfig $owner): array</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -240,26 +236,9 @@ Update the index after write.</span><pre>onAfterWrite</pre>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$owner</h4>
-                                                <code>\SilverStripe\ORM\DataObject|\SilverStripe\CMS\Model\SiteTree</code><p></p>
+                                                <code>\SilverStripe\ORM\DataObject|\SilverStripe\CMS\Model\SiteTree|\SilverStripe\SiteConfig\SiteConfig</code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>array</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_getMembers"></a>
-                        <div class="element clickable methodprotected method_getMembers" data-toggle="collapse" data-target=".method_getMembers .collapse">
-                            <h2>Get the static list of members</h2>
-                            <pre>getMembers(): \SilverStripe\ORM\DataList</pre>
-                            <div class="labels"><span class="label">static</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>\SilverStripe\ORM\DataList</code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_getViewStatus"></a>
@@ -439,10 +418,10 @@ Update the index after write.</h2>
                                         <code>boolean</code><p></p>                                </div>
                             </div>
 
-                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_canViewClasses"> </a>
-                            <div class="element clickable propertypublic property_canViewClasses" data-toggle="collapse" data-target=".property_canViewClasses .collapse">
-                                <h2>canView cache</h2>
-                                <pre>canViewClasses :array</pre>
+                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_cachedClasses"> </a>
+                            <div class="element clickable propertypublic property_cachedClasses" data-toggle="collapse" data-target=".property_cachedClasses .collapse">
+                                <h2>cachedClasses</h2>
+                                <pre>cachedClasses :array</pre>
                                 <div class="labels"><span class="label">static</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
@@ -455,10 +434,10 @@ Update the index after write.</h2>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>array</code>                                    </div>
                                 </div>
-                            </div>                            <a id="property_members"> </a>
-                            <div class="element clickable propertyprotected property_members" data-toggle="collapse" data-target=".property_members .collapse">
-                                <h2>Member cache</h2>
-                                <pre>members :\SilverStripe\ORM\DataList</pre>
+                            </div>                            <a id="property_siteConfig"> </a>
+                            <div class="element clickable propertyprotected property_siteConfig" data-toggle="collapse" data-target=".property_siteConfig .collapse">
+                                <h2>siteConfig</h2>
+                                <pre>siteConfig :\SilverStripe\SiteConfig\SiteConfig</pre>
                                 <div class="labels"><span class="label">static</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
@@ -469,7 +448,7 @@ Update the index after write.</h2>
                                                     </th>
                                                     <td>                                                    </td>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>\SilverStripe\ORM\DataList</code>                                    </div>
+                                            <code>\SilverStripe\SiteConfig\SiteConfig</code>                                    </div>
                                 </div>
                             </div>                            <a id="property_owner"> </a>
                             <div class="element clickable propertypublic property_owner" data-toggle="collapse" data-target=".property_owner .collapse">
@@ -500,6 +479,6 @@ Update the index after write.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onThu, 05 Dec 2019 08:13:18 +0000.<br/>
+            generated onSat, 07 Dec 2019 09:54:10 +0000.<br/>
     </footer></body>
 </html>

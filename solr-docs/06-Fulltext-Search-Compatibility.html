@@ -484,6 +484,7 @@
 <li><a class="" href="07-Debugging.html">Debugging</a></li>
 <li><a class="" href="08-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="09-Elemental.html">Elemental</a></li>
+<li><a class="" href="10-View-Permissions.html">View Permissions</a></li>
 <li><a class="" href="13-Changelog.html">Changelog</a></li>
 <li><a class="" href="14-About.html">About</a></li>
 <li><a class="" href="15-FAQ.html">FAQ</a></li>
@@ -491,12 +492,18 @@
 </ul>
     </nav>
     <article id="main" class="content">
-        <h1 id="fulltext-search-compatibility*">Fulltext Search Compatibility* <a class="heading-anchor-permalink" href="#fulltext-search-compatibility*">#</a></h1>
-<p>To minimise the impact of migrating, there is a compatibility module available.</p>
-<p>This module will remove the need to completely update all your indexes.</p>
-<p>A few small changes to your Search Controller and Results template may be needed however.</p>
-<p>The primary difference between FTS and this module is the way it’s configured. Therefore some stubs are available in the compatibility module.</p>
-<p>You can find this compatibility module here: <a href="https://github.com/Firesphere/silverstripe-solr-compatibility">https://github.com/Firesphere/silverstripe-solr-compatibility</a></p>
+        <h1 id="fulltext-search*-compatibility">Fulltext Search* Compatibility <a class="heading-anchor-permalink" href="#fulltext-search*-compatibility">#</a></h1>
+<p>To minimise the impact of migrating, there is a compatibility module available.
+<a href="https://github.com/Firesphere/silverstripe-solr-compatibility">This module</a> will remove the need to completely update all your indexes.
+A few small changes to your Search Controller and Results template may be needed however.</p>
+<p>The primary difference between FTS and this module is the way it’s configured. Therefore some stubs are available in the compatibility module.
+You can find this compatibility module here: <a href="https://github.com/Firesphere/silverstripe-solr-compatibility">https://github.com/Firesphere/silverstripe-solr-compatibility</a></p>
+<h2 id="init-to-yml">Init to YML <a class="heading-anchor-permalink" href="#init-to-yml">#</a></h2>
+<p>To get the <code>init()</code> method to a YML, the module provides a helper function. This requires the <a href="https://www.php.net/manual/en/book.yaml.php">PHP module <code>php_yaml</code></a> to be installed.</p>
+<p>Easiest to get the YML is to do in your <code>PageController::init()</code></p>
+<pre><code class="language-php">$index = new MyIndexClass();
+$index-&gt;initToYml();
+</code></pre>
 <hr>
 <p>* From here on called “FTS”</p>
 
