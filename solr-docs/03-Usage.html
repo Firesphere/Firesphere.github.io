@@ -243,7 +243,7 @@
         .content {
             margin: 50px auto;
             padding: 0 2em;
-            max-width: 80%;
+            max-width: 90%;
             line-height: 1.6em;
         }
 
@@ -598,7 +598,7 @@ at least one core free for handling page visits, while you’re running an index
 <td>addFacetField</td>
 <td>Field to build faceting on</td>
 <td>No</td>
-<td><code>$this-&gt;addFacetField(SiteTree::class, ['Title' =&gt; 'FacetObject', 'Field' =&gt; 'FacetObjectID']);</code></td>
+<td><code>$this-&gt;addFacetField(SiteTree::class, ['BaseClass' =&gt; SiteTree::class, 'Title' =&gt; 'FacetObject', 'Field' =&gt; 'FacetObjectID']);</code></td>
 </tr>
 </tbody>
 </table>
@@ -625,6 +625,7 @@ at least one core free for handling page visits, while you’re running an index
     DefaultField: _text
     FacetFields:
       Firesphere\SolrSearch\Tests\TestObject:
+        BaseClass: SilverStripe\CMS\Model\SiteTree
         Field: ID
         Title: TestObject
 
@@ -635,12 +636,14 @@ at least one core free for handling page visits, while you’re running an index
 <p>You could also use PHP, just like it was, to set the config. For readability however, it’s better to use statics for Facets:</p>
 <pre><code class="language-php">    protected $facetFields = [
         RelatedObject::class   =&gt; [
-            'Field' =&gt; 'RelatedObjectID',
-            'Title' =&gt; 'RelationOne'
+            'BaseClass' =&gt; SiteTree::class,
+            'Field'     =&gt; 'RelatedObjectID',
+            'Title'     =&gt; 'RelationOne'
         ],
         OtherRelatedObject::class =&gt; [
-            'Field' =&gt; 'OtherRelatedObjectID',
-            'Title' =&gt; 'RelationTwo'
+            'BaseClass' =&gt; SiteTree::class,
+            'Field'     =&gt; 'OtherRelatedObjectID',
+            'Title'     =&gt; 'RelationTwo'
         ]
     ];
 </code></pre>
