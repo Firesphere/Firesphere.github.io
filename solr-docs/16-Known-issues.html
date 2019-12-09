@@ -514,6 +514,9 @@ And the other way around, add apache to solr.</p>
 <p>Change the permissions on <code>YourCoreName/conf</code> to be <code>777</code>.</p>
 <p>This should, in theory, resolve your permission errors.</p>
 <p>These errors are <em>not</em> related to this module, but on how Vagrant is set up on Linux.</p>
+<h2 id="solr-and-vagrant-issues%2C-pt.-2">Solr and Vagrant issues, pt. 2 <a class="heading-anchor-permalink" href="#solr-and-vagrant-issues%2C-pt.-2">#</a></h2>
+<p>It’s also known that Solr won’t properly reload cores on Vagrant VM’s. This is outside
+of control for this module, it is advised to restart Solr before and after a config change.</p>
 
     </article>
 </div>
