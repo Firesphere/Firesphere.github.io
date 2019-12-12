@@ -510,8 +510,9 @@ as an array. To get this data, execute the following after you have done your se
 <p>The Index also has a method to get the Query Factory and read data from there.
 You can find the output of the factory by getting</p>
 <ul>
-<li><code>$index-&gt;getQueryFactory</code>. See the <a href="https://firesphere.github.io/solr-api">API documentation</a> on how to address each part of the factory.</li>
+<li><code>$index-&gt;getQueryFactory()</code>. See the <a href="https://firesphere.github.io/solr-api/classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">API documentation</a> on how to address each part of the factory.</li>
 </ul>
+<p>Through the use of an <code>Extension</code> on <code>BaseIndex</code> you can get the Factory through the method <code>onBeforeSearch</code></p>
 <p>These two methods supply more information about the executed query.</p>
 <p>For a more thorough debugging, have a look at the <a href="https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/">Solarium docs</a> for getting the debugging information.</p>
 <h1 id="logging">Logging <a class="heading-anchor-permalink" href="#logging">#</a></h1>
