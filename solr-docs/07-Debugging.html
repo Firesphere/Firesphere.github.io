@@ -502,14 +502,18 @@
     </nav>
     <article id="main" class="content">
         <h1 id="debugging">Debugging <a class="heading-anchor-permalink" href="#debugging">#</a></h1>
-<p>To debug the executed query, the <code>BaseIndex</code> has a method available to show you all the components of the executed query as an array. To get this data, execute the following after you have done your search:</p>
+<p>To debug the executed query, the <code>BaseIndex</code> has a method available to show you all the components of the executed query
+as an array. To get this data, execute the following after you have done your search:</p>
 <ul>
 <li><code>$index-&gt;getQueryTerms()</code> To get the query terms</li>
-<li></li>
+</ul>
+<p>The Index also has a method to get the Query Factory and read data from there.
+You can find the output of the factory by getting</p>
+<ul>
+<li><code>$index-&gt;getQueryFactory</code>. See the <a href="https://firesphere.github.io/solr-api">API documentation</a> on how to address each part of the factory.</li>
 </ul>
 <p>These two methods supply more information about the executed query.</p>
-<p>For a more thorough debugging, have a look at the Solarium docs for getting the debugging information:
-<a href="https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/">https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/</a></p>
+<p>For a more thorough debugging, have a look at the <a href="https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/">Solarium docs</a> for getting the debugging information.</p>
 <h1 id="logging">Logging <a class="heading-anchor-permalink" href="#logging">#</a></h1>
 <p>Every error triggers the SolrLogger, to retrieve the errors from Solr and store them in the database.</p>
 <p>These error logs are deletable only in dev mode or by administrators.</p>
