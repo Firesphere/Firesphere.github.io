@@ -199,10 +199,6 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
             <span class="description">Get the fulltext fields</span><pre>getFulltextFields</pre>
         </a>
     </li>    <li class="methodpublic inherited">
-        <a href="#method_getHistory" title="getHistory ::Get the search history for the current user on this index">
-            <span class="description">Get the search history for the current user on this index</span><pre>getHistory</pre>
-        </a>
-    </li>    <li class="methodpublic inherited">
         <a href="#method_getIndexName" title="getIndexName ::Name of this index.">
             <span class="description">Name of this index.</span><pre>getIndexName</pre>
         </a>
@@ -263,10 +259,6 @@ This is to add the current index to e.g. an index or select</span><pre>getConfig
             <span class="description">Set the fulltext fields</span><pre>setFulltextFields</pre>
         </a>
     </li>    <li class="methodpublic inherited">
-        <a href="#method_setHistory" title="setHistory ::Set the search history for the current user on this index">
-            <span class="description">Set the search history for the current user on this index</span><pre>setHistory</pre>
-        </a>
-    </li>    <li class="methodpublic inherited">
         <a href="#method_setSortFields" title="setSortFields ::Set/override the sortable fields">
             <span class="description">Set/override the sortable fields</span><pre>setSortFields</pre>
         </a>
@@ -322,11 +314,7 @@ There is a spellcheck output</span><pre>doRetry</pre>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
-            <ul>                <li class="constant">
-                    <a href="#constant_SEARCH_HISTORY_KEY" title="SEARCH_HISTORY_KEY ::Session key for the query history">
-                        <span class="description">Session key for the query history</span><pre>SEARCH_HISTORY_KEY</pre>
-                    </a>
-                </li>            </ul>
+            <ul>            </ul>
         </li>
     </ul>
         </div>
@@ -915,23 +903,6 @@ This is to add the current index to e.g. an index or select</h2>
                                         <code>array</code><p></p>                                </div>
                             </div>
 
-                        </div>                        <a id="method_getHistory"></a>
-                        <div class="element clickable methodpublic method_getHistory inherited" data-toggle="collapse" data-target=".method_getHistory .collapse">
-                            <h2>Get the search history for the current user on this index</h2>
-                            <pre>getHistory(): array</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>array</code><p></p>                                </div>
-                            </div>
-
                         </div>                        <a id="method_getIndexName"></a>
                         <div class="element clickable methodpublic method_getIndexName inherited" data-toggle="collapse" data-target=".method_getIndexName .collapse">
                             <h2>Name of this index.</h2>
@@ -1205,22 +1176,6 @@ memory intensive, as updating the config for each item is not efficient</p></div
                                         <code>$this</code><p></p>                                </div>
                             </div>
 
-                        </div>                        <a id="method_setHistory"></a>
-                        <div class="element clickable methodpublic method_setHistory inherited" data-toggle="collapse" data-target=".method_setHistory .collapse">
-                            <h2>Set the search history for the current user on this index</h2>
-                            <pre>setHistory(array $history): self</pre>
-                            <div class="labels"><span class="label">inherited</span>                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$history</h4>
-                                                <code>array</code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>self</code><p></p>                                </div>
-                            </div>
-
                         </div>                        <a id="method_setSortFields"></a>
                         <div class="element clickable methodpublic method_setSortFields inherited" data-toggle="collapse" data-target=".method_setSortFields .collapse">
                             <h2>Set/override the sortable fields</h2>
@@ -1299,22 +1254,7 @@ memory intensive, as updating the config for each item is not efficient</p></div
                                             </div>                                </div>
                             </div>
 
-                        </div>                        <h3><i class="icon-custom icon-constant"></i> Constants</h3>                            <a id="constant_SEARCH_HISTORY_KEY"> </a>
-                            <div class="element clickable constant constant_SEARCH_HISTORY_KEY inherited" data-toggle="collapse" data-target=".constant_SEARCH_HISTORY_KEY .collapse">
-                                <h2>Session key for the query history</h2>
-                                <pre>SEARCH_HISTORY_KEY</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-                                        <table class="table">                                                <tr>
-                                                    <th>
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>
-                                    </div>
-                                </div>
-                            </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_fieldTypes"> </a>
+                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_fieldTypes"> </a>
                             <div class="element clickable propertyprivate property_fieldTypes inherited" data-toggle="collapse" data-target=".property_fieldTypes .collapse">
                                 <h2>Field types that can be added
 Used in init to call build methods from configuration yml</h2>
@@ -1595,22 +1535,6 @@ This is to prevent a notice if there is no yml.</h2>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>boolean</code>                                    </div>
                                 </div>
-                            </div>                            <a id="property_history"> </a>
-                            <div class="element clickable propertyprotected property_history inherited" data-toggle="collapse" data-target=".property_history .collapse">
-                                <h2>Search history for the current user</h2>
-                                <pre>history :array</pre>
-                                <div class="labels"><span class="label">inherited</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td><p>Search history for the current user</p>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>array</code>                                    </div>
-                                </div>
                             </div>                </div>
             </div>
             <a id="\SilverStripe\FullTextSearch\Solr\SolrIndex"></a>
@@ -1624,6 +1548,6 @@ This is to prevent a notice if there is no yml.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onThu, 12 Dec 2019 03:57:22 +0000.<br/>
+            generated onThu, 12 Dec 2019 04:36:43 +0000.<br/>
     </footer></body>
 </html>

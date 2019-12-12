@@ -502,9 +502,11 @@
     </nav>
     <article id="main" class="content">
         <h1 id="debugging">Debugging <a class="heading-anchor-permalink" href="#debugging">#</a></h1>
-<p>To debug the executed query, the <code>BaseIndex</code> has a method available to show you all the components of the executed query as an array. To get this data, execute the following after you have done your search:
-<code>$index-&gt;getRawQuery()-&gt;getData()</code>
-<code>$index-&gt;getQueryTerms()</code></p>
+<p>To debug the executed query, the <code>BaseIndex</code> has a method available to show you all the components of the executed query as an array. To get this data, execute the following after you have done your search:</p>
+<ul>
+<li><code>$index-&gt;getQueryTerms()</code> To get the query terms</li>
+<li></li>
+</ul>
 <p>These two methods supply more information about the executed query.</p>
 <p>For a more thorough debugging, have a look at the Solarium docs for getting the debugging information:
 <a href="https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/">https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/</a></p>

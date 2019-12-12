@@ -505,11 +505,11 @@
 <h2 id="database-errors">Database errors <a class="heading-anchor-permalink" href="#database-errors">#</a></h2>
 <p>Did you do a build?</p>
 <p><code>https://yourdomain.com/dev/build?flush=all</code></p>
-<p>It is known that the final index might throw a MySQL error.
+<p>It is known that the final index might throw a MySQL Exception.
 This is expected at the moment, and sadly, unavoidable so far.
 If you have a solution, we would love to hear from you!</p>
 <h2 id="linux-hosts-with-vagrant">Linux hosts with Vagrant <a class="heading-anchor-permalink" href="#linux-hosts-with-vagrant">#</a></h2>
-<p>There is a known issue between Linux hosts using Vagrant. Solr does not have
+<p>There is a known issue with Linux hosts using Vagrant. Solr does not have
 the correct write permissions, and Apache does not have the correct write permissions either.</p>
 <p>This can be resolved by setting the folder of your Solr Core to <code>/var/solr/data</code>.</p>
 <p>Then, create the following subfolders in the data folder:</p>
