@@ -497,6 +497,8 @@
 <li><a class="" href="14-About.html">About</a></li>
 <li><a class="" href="15-FAQ.html">FAQ</a></li>
 <li><a class="" href="16-Known-issues.html">Known issues</a></li>
+<li><a class="" href="17-code-stats.html">code stats</a></li>
+<li><a class="" href="17-codebase-stats.html">codebase stats</a></li>
 </ul>
         <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
     </nav>
@@ -660,6 +662,8 @@ at least one core free for handling page visits, while you’re running an index
 to create in the first step of this document.</p>
 <h4 id="moving-from-init-to-yml">Moving from init to YML <a class="heading-anchor-permalink" href="#moving-from-init-to-yml">#</a></h4>
 <p>The <a href="06-Fulltext-Search-Compatibility.html">compatibility module</a> has an optional extension method that allows you to build your index and then generate the YML content for you. See the compatibility module for more details.</p>
+<h2 id="grouped-indexing">Grouped indexing <a class="heading-anchor-permalink" href="#grouped-indexing">#</a></h2>
+<p>Note, grouped indexing is <code>0</code> based. Thus, if there are 150 groups to index, the final group to index will be 149 instead of 150.</p>
 <h2 id="another-way-to-set-the-config-in-php">Another way to set the config in PHP <a class="heading-anchor-permalink" href="#another-way-to-set-the-config-in-php">#</a></h2>
 <p>You could also use PHP, just like it was, to set the config. For readability however, it’s better to use variables for Facets:</p>
 <pre><code class="language-php">    protected $facetFields = [

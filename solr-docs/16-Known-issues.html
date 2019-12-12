@@ -497,6 +497,8 @@
 <li><a class="" href="14-About.html">About</a></li>
 <li><a class="" href="15-FAQ.html">FAQ</a></li>
 <li><a class="active" href="16-Known-issues.html">Known issues</a></li>
+<li><a class="" href="17-code-stats.html">code stats</a></li>
+<li><a class="" href="17-codebase-stats.html">codebase stats</a></li>
 </ul>
         <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
     </nav>
@@ -519,13 +521,17 @@ the correct write permissions, and Apache does not have the correct write permis
 </ul>
 <p>Then, add the <code>solr</code> user to the <code>apache</code> group (or <code>www-data</code>)
 And the other way around, add apache to solr.</p>
-<p>Change the ownership of the whole <code>YourCoreName</code> folder to <code>solr:solr</code>.</p>
+<p>Change the ownership of the whole <code>YourCoreName</code> folder to <code>solr:apache</code>.</p>
 <p>Change the permissions on <code>YourCoreName/conf</code> to be <code>777</code>.</p>
 <p>This should, in theory, resolve your permission errors.</p>
 <p>These errors are <em>not</em> related to this module, but on how Vagrant is set up on Linux.</p>
+<p><strong>NOTE</strong></p>
+<p>The name of your apache user could be different, so make sure you get it right.
+After updating the group permissions, be sure to log out and back in again.</p>
 <h2 id="solr-and-vagrant-issues%2C-pt.-2">Solr and Vagrant issues, pt. 2 <a class="heading-anchor-permalink" href="#solr-and-vagrant-issues%2C-pt.-2">#</a></h2>
 <p>It’s also known that Solr won’t properly reload cores on Vagrant VM’s. This is outside
 of control for this module, it is advised to restart Solr before and after a config change.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <h2 id="solr-is-running-as-the-wrong-user">Solr is running as the wrong user <a class="heading-anchor-permalink" href="#solr-is-running-as-the-wrong-user">#</a></h2>
 <p>For yet unknown reasons, even after following the Solr installation guide, it may happen
 that Solr runs as the wrong user.</p>
@@ -533,6 +539,15 @@ that Solr runs as the wrong user.</p>
 <code>cd /opt/solr-8.3.1 &amp;&amp; sudo -u solr ./bin/solr start</code></p>
 <p>Where <code>8.3.1</code> should reflect your current Solr version. Or, if you’ve allowed Solr to create
 symlinks, the path could be <code>/opt/solr</code>.</p>
+<h2 id="facets-do-not-show-anymore-since-the-latest-version">Facets do not show anymore since the latest version <a class="heading-anchor-permalink" href="#facets-do-not-show-anymore-since-the-latest-version">#</a></h2>
+<p>Yep, the <code>XML</code> switch to non-deprecated options, which causes facets and filters to not work properly anymore.
+Please re-index your Solr Core <code>vendor/bin/sake dev/tasks/SolrConfigureTask flush=all</code> followed
+by <code>vendor/bin/sake dev/tasks/SolrIndexTask</code> from terminal is the most efficient way.</p>
+<p>This is caused by a deprecated change in the Integer field on Solr level and can not be fixed in any
+other way.</p>
+<h2 id="localhost%3F">Localhost? <a class="heading-anchor-permalink" href="#localhost%3F">#</a></h2>
+<p>Yes, for now, the config requires the host’s name to be <code>localhost</code>. This is not exactly by choice,
+but due to how Solarium works. Stay tuned for updates.</p>
 <h2 id="my-config-is-written-to-the-wrong-folder-(.solr)">My config is written to the wrong folder (<code>.solr</code>) <a class="heading-anchor-permalink" href="#my-config-is-written-to-the-wrong-folder-(.solr)">#</a></h2>
 <p>This is probably due to an older version of this module, that had this bug. Please upgrade.</p>
 <h2 id="i-can%E2%80%99t-get-it-to-work-on-live-or-uat">I can’t get it to work on Live or UAT <a class="heading-anchor-permalink" href="#i-can%E2%80%99t-get-it-to-work-on-live-or-uat">#</a></h2>
