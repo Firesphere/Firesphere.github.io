@@ -108,7 +108,11 @@
         },
         {
           "type": "file",
-          "value": "Submodules/04-Elemental.md"
+          "value": "Submodules/04-Member-based-permissions.md"
+        },
+        {
+          "type": "file",
+          "value": "Submodules/05-Elemental.md"
         }
       ]
     }
@@ -117,8 +121,8 @@
     {
       "path": "index.md",
       "url": "index.html",
-      "content": "# Solr Search\n01. [Installation](01-Installation.md)\n02. [Solr](02-Solr.md)\n03. [Usage](03-Usage.md)\n04. [Customisation](04-Customisation.md)\n05. [CMS Usage](05-CMS-Usage.md)\n06. [Debugging](06-Debugging.md)\n07. [Suggestions](07-Suggestions.md)\n08. [View permissions](08-View-Permissions.md)\n09. Submodules\n    01. [Fulltext Search compatibility](Submodules/01-Fulltext-Search-Compatibility.md)\n    02. [Subsites](Submodules/02-Subsites.md)\n    03. [Fluent](Submodules/03-Fluent.md)\n    04. [Elemental](Submodules/04-Elemental.md)\n10. Contributing\n    01. [Code of Conduct](Contributing/01-code-of-conduct.md)\n    02. [Contributing](Contributing/02-Contributing.md) \n11. Help\n    01. [Changelog](Help/01-Changelog.md)\n    02. [FAQ](Help/02-FAQ.md)\n    03. [Known issues](Help/03-Known-issues.md)\n12. About\n    01. [About](About/01-About.md)\n    02. [Code statistics](About/03-codebase-stats.md)\n",
-      "html": "<h1 id=\"solr-search\">Solr Search <a class=\"heading-anchor-permalink\" href=\"#solr-search\">#</a></h1>\n<ol>\n<li><a href=\"01-Installation.html\">Installation</a></li>\n<li><a href=\"02-Solr.html\">Solr</a></li>\n<li><a href=\"03-Usage.html\">Usage</a></li>\n<li><a href=\"04-Customisation.html\">Customisation</a></li>\n<li><a href=\"05-CMS-Usage.html\">CMS Usage</a></li>\n<li><a href=\"06-Debugging.html\">Debugging</a></li>\n<li><a href=\"07-Suggestions.html\">Suggestions</a></li>\n<li><a href=\"08-View-Permissions.html\">View permissions</a></li>\n<li>Submodules\n<ol>\n<li><a href=\"Submodules/01-Fulltext-Search-Compatibility.html\">Fulltext Search compatibility</a></li>\n<li><a href=\"Submodules/02-Subsites.html\">Subsites</a></li>\n<li><a href=\"Submodules/03-Fluent.html\">Fluent</a></li>\n<li><a href=\"Submodules/04-Elemental.html\">Elemental</a></li>\n</ol>\n</li>\n<li>Contributing\n<ol>\n<li><a href=\"Contributing/01-code-of-conduct.html\">Code of Conduct</a></li>\n<li><a href=\"Contributing/02-Contributing.html\">Contributing</a></li>\n</ol>\n</li>\n<li>Help\n<ol>\n<li><a href=\"Help/01-Changelog.html\">Changelog</a></li>\n<li><a href=\"Help/02-FAQ.html\">FAQ</a></li>\n<li><a href=\"Help/03-Known-issues.html\">Known issues</a></li>\n</ol>\n</li>\n<li>About\n<ol>\n<li><a href=\"About/01-About.html\">About</a></li>\n<li><a href=\"About/03-codebase-stats.html\">Code statistics</a></li>\n</ol>\n</li>\n</ol>\n",
+      "content": "# Solr Search\n01. [Installation](01-Installation.md)\n02. [Solr](02-Solr.md)\n03. [Usage](03-Usage.md)\n04. [Customisation](04-Customisation.md)\n05. [CMS Usage](05-CMS-Usage.md)\n06. [Debugging](06-Debugging.md)\n07. [Suggestions](07-Suggestions.md)\n08. [View permissions](08-View-Permissions.md)\n09. Submodules\n    01. [Fulltext Search compatibility](Submodules/01-Fulltext-Search-Compatibility.md)\n    02. [Subsites](Submodules/02-Subsites.md)\n    03. [Fluent](Submodules/03-Fluent.md)\n    04. [Member based permissions](Submodules/04-Member-based-permissions.md)\n    05. [Elemental](Submodules/05-Elemental.md)\n10. Contributing\n    01. [Code of Conduct](Contributing/01-code-of-conduct.md)\n    02. [Contributing](Contributing/02-Contributing.md) \n11. Help\n    01. [Changelog](Help/01-Changelog.md)\n    02. [FAQ](Help/02-FAQ.md)\n    03. [Known issues](Help/03-Known-issues.md)\n12. About\n    01. [About](About/01-About.md)\n    02. [Code statistics](About/03-codebase-stats.md)\n",
+      "html": "<h1 id=\"solr-search\">Solr Search <a class=\"heading-anchor-permalink\" href=\"#solr-search\">#</a></h1>\n<ol>\n<li><a href=\"01-Installation.html\">Installation</a></li>\n<li><a href=\"02-Solr.html\">Solr</a></li>\n<li><a href=\"03-Usage.html\">Usage</a></li>\n<li><a href=\"04-Customisation.html\">Customisation</a></li>\n<li><a href=\"05-CMS-Usage.html\">CMS Usage</a></li>\n<li><a href=\"06-Debugging.html\">Debugging</a></li>\n<li><a href=\"07-Suggestions.html\">Suggestions</a></li>\n<li><a href=\"08-View-Permissions.html\">View permissions</a></li>\n<li>Submodules\n<ol>\n<li><a href=\"Submodules/01-Fulltext-Search-Compatibility.html\">Fulltext Search compatibility</a></li>\n<li><a href=\"Submodules/02-Subsites.html\">Subsites</a></li>\n<li><a href=\"Submodules/03-Fluent.html\">Fluent</a></li>\n<li><a href=\"Submodules/04-Member-based-permissions.html\">Member based permissions</a></li>\n<li><a href=\"Submodules/05-Elemental.html\">Elemental</a></li>\n</ol>\n</li>\n<li>Contributing\n<ol>\n<li><a href=\"Contributing/01-code-of-conduct.html\">Code of Conduct</a></li>\n<li><a href=\"Contributing/02-Contributing.html\">Contributing</a></li>\n</ol>\n</li>\n<li>Help\n<ol>\n<li><a href=\"Help/01-Changelog.html\">Changelog</a></li>\n<li><a href=\"Help/02-FAQ.html\">FAQ</a></li>\n<li><a href=\"Help/03-Known-issues.html\">Known issues</a></li>\n</ol>\n</li>\n<li>About\n<ol>\n<li><a href=\"About/01-About.html\">About</a></li>\n<li><a href=\"About/03-codebase-stats.html\">Code statistics</a></li>\n</ol>\n</li>\n</ol>\n",
       "id": 0
     },
     {
@@ -262,11 +266,18 @@
       "id": 20
     },
     {
-      "path": "Submodules/04-Elemental.md",
-      "url": "Submodules/04-Elemental.html",
+      "path": "Submodules/04-Member-based-permissions.md",
+      "url": "Submodules/04-Member-based-permissions.html",
+      "content": "# Member based indexing\n\nBy default, indexing of permissions is based on groups. If you want or need member specific, say, for each member\nthe index should check if the permission is correct, you'll need the [Member based submodule]().\n\n## IMPORTANT\n\nThis submodule does not yet exist publicly and is work in progress\n",
+      "html": "<h1 id=\"member-based-indexing\">Member based indexing <a class=\"heading-anchor-permalink\" href=\"#member-based-indexing\">#</a></h1>\n<p>By default, indexing of permissions is based on groups. If you want or need member specific, say, for each member\nthe index should check if the permission is correct, you’ll need the <a href=\"\">Member based submodule</a>.</p>\n<h2 id=\"important\">IMPORTANT <a class=\"heading-anchor-permalink\" href=\"#important\">#</a></h2>\n<p>This submodule does not yet exist publicly and is work in progress</p>\n",
+      "id": 21
+    },
+    {
+      "path": "Submodules/05-Elemental.md",
+      "url": "Submodules/05-Elemental.html",
       "content": "# Elemental indexes\n\nIndexing Elemental is quite tricky, as Elements are part of the content, but can also be standalone.\n\nThere are a few options to index Elements as part of the page:\n\n## Through Elemental provided method\n\n```yaml\nFiresphere\\SolrSearch\\Indexes\\BaseIndex:\n  MyIndexName:\n    Classes:\n      - SilverStripe\\CMS\\Model\\SiteTree\n    FulltextFields:\n      - Title\n      - ElementsForSearch\n```\n\n## Index elements specifically\n\n```yaml\nFiresphere\\SolrSearch\\Indexes\\BaseIndex:\n  MyIndexName:\n    Classes:\n      - DNADesign\\Elemental\\Models\\BaseElement\n    FulltextFields:\n      - Title\n      - forTemplate\n```\n\nThis will index Elements with their title and rendered content. \n",
       "html": "<h1 id=\"elemental-indexes\">Elemental indexes <a class=\"heading-anchor-permalink\" href=\"#elemental-indexes\">#</a></h1>\n<p>Indexing Elemental is quite tricky, as Elements are part of the content, but can also be standalone.</p>\n<p>There are a few options to index Elements as part of the page:</p>\n<h2 id=\"through-elemental-provided-method\">Through Elemental provided method <a class=\"heading-anchor-permalink\" href=\"#through-elemental-provided-method\">#</a></h2>\n<pre><code class=\"language-yaml\">Firesphere\\SolrSearch\\Indexes\\BaseIndex:\n  MyIndexName:\n    Classes:\n      - SilverStripe\\CMS\\Model\\SiteTree\n    FulltextFields:\n      - Title\n      - ElementsForSearch\n</code></pre>\n<h2 id=\"index-elements-specifically\">Index elements specifically <a class=\"heading-anchor-permalink\" href=\"#index-elements-specifically\">#</a></h2>\n<pre><code class=\"language-yaml\">Firesphere\\SolrSearch\\Indexes\\BaseIndex:\n  MyIndexName:\n    Classes:\n      - DNADesign\\Elemental\\Models\\BaseElement\n    FulltextFields:\n      - Title\n      - forTemplate\n</code></pre>\n<p>This will index Elements with their title and rendered content.</p>\n",
-      "id": 21
+      "id": 22
     }
   ]
 }
