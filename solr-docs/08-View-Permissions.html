@@ -488,99 +488,48 @@
 <li><a class="" href="03-Usage.html">Usage</a></li>
 <li><a class="" href="04-Customisation.html">Customisation</a></li>
 <li><a class="" href="05-CMS-Usage.html">CMS Usage</a></li>
-<li><a class="" href="06-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
-<li><a class="" href="07-Debugging.html">Debugging</a></li>
-<li><a class="active" href="08-Suggestions.html">Suggestions</a></li>
-<li><a class="" href="09-Elemental.html">Elemental</a></li>
-<li><a class="" href="10-View-Permissions.html">View Permissions</a></li>
-<li><a class="" href="13-Changelog.html">Changelog</a></li>
-<li><a class="" href="14-About.html">About</a></li>
-<li><a class="" href="15-FAQ.html">FAQ</a></li>
-<li><a class="" href="16-Known-issues.html">Known issues</a></li>
-<li><a class="" href="17-codebase-stats.html">codebase stats</a></li>
+<li><a class="" href="06-Debugging.html">Debugging</a></li>
+<li><a class="" href="07-Suggestions.html">Suggestions</a></li>
+<li><a class="active" href="08-View-Permissions.html">View Permissions</a></li>
+<li class="heading"><span>About</span></li>
+<ul>
+<li><a class="" href="About/01-About.html">About</a></li>
+<li><a class="" href="About/02-Coverage.html">Coverage</a></li>
+<li><a class="" href="About/03-codebase-stats.html">codebase stats</a></li>
+<li><a class="" href="About/3-codebase-stats.html">codebase stats</a></li>
+</ul>
+<li class="heading"><span>Contributing</span></li>
+<ul>
+<li><a class="" href="Contributing/01-code-of-conduct.html">code of conduct</a></li>
+<li><a class="" href="Contributing/02-Contributing.html">Contributing</a></li>
+</ul>
+<li class="heading"><span>Help</span></li>
+<ul>
+<li><a class="" href="Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="Help/03-Known-issues.html">Known issues</a></li>
+</ul>
+<li class="heading"><span>Submodules</span></li>
+<ul>
+<li><a class="" href="Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="Submodules/04-Elemental.html">Elemental</a></li>
+</ul>
 </ul>
         <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="solr-suggest">Solr Suggest <a class="heading-anchor-permalink" href="#solr-suggest">#</a></h1>
-<p>If you are using Solr5 or above, you can use the Solr Suggest option. This is enabled by default.</p>
-<p>To set this up, have a look at <a href="https://github.com/Firesphere/silverstripe-solr-search/blob/master/client/proxy/autosuggest.php">autosuggest proxy</a></p>
-<p>Copy this file to a convenient location, e.g. your <code>docroot/public</code> folder and edit the contents of your copy, to match your Solr core and location of the Solr instance.</p>
-<p>Note that the proxy can not read from the Silverstripe config, thus it needs to be edited manually.</p>
-<p>Once that’s in place, you can use javascript to get Solr’s suggestions, by querying the autosuggest.php file directly.</p>
-<p>You need to query the file directly, to prevent a full execution of the whole Silverstripe stack, which is too slow for proper auto suggesting.
-Also, make sure the file is accessible.</p>
-<p>The output of the file is a JSON object, looking something like this:</p>
-<pre><code class="language-json">{
-
-    &quot;responseHeader&quot;: {
-        &quot;status&quot;: 0,
-        &quot;QTime&quot;: 0
-    },
-    &quot;suggest&quot;: {
-        &quot;Suggester&quot;: {
-            &quot;home&quot;: {
-                &quot;numFound&quot;: 10,
-                &quot;suggestions&quot;: [
-                    {
-                        &quot;term&quot;: &quot;home&quot;,
-                        &quot;weight&quot;: 376,
-                        &quot;payload&quot;: &quot;&quot;
-                    },
-                    {
-                        &quot;term&quot;: &quot;homeajaxaction&quot;,
-                        &quot;weight&quot;: 1,
-                        &quot;payload&quot;: &quot;&quot;
-                    },
-                    {
-                        &quot;term&quot;: &quot;homebartonvillevpsbartonvilletccommysitecodememberextensionphp&quot;,
-                        &quot;weight&quot;: 1,
-                        &quot;payload&quot;: &quot;&quot;
-                    },
-                    {
-                        &quot;term&quot;: &quot;homeblauwboomdomainsmyserverpublichtmlcompframeworksrci&quot;,
-                        &quot;weight&quot;: 1,
-                        &quot;payload&quot;: &quot;&quot;
-                    },
-                    {
-                        &quot;term&quot;: &quot;homebrew&quot;,
-                        &quot;weight&quot;: 26,
-                        &quot;payload&quot;: &quot;&quot;
-                    },
-                    {
-                        &quot;term&quot;: &quot;homebrewcurlother&quot;,
-                        &quot;weight&quot;: 1,
-                        &quot;payload&quot;: &quot;&quot;
-                    },
-                    {
-                        &quot;term&quot;: &quot;homebrewhttpsbrewsh&quot;,
-                        &quot;weight&quot;: 1,
-                        &quot;payload&quot;: &quot;&quot;
-                    },
-                    {
-                        &quot;term&quot;: &quot;homebrewing&quot;,
-                        &quot;weight&quot;: 1,
-                        &quot;payload&quot;: &quot;&quot;
-                    },
-                    {
-                        &quot;term&quot;: &quot;homebridgewillstaginpublichtmlsilvershopcodecartordertotalcalculatorphp&quot;,
-                        &quot;weight&quot;: 1,
-                        &quot;payload&quot;: &quot;&quot;
-                    },
-                    {
-                        &quot;term&quot;: &quot;homecategorycategory&quot;,
-                        &quot;weight&quot;: 1,
-                        &quot;payload&quot;: &quot;&quot;
-                    }
-                ]
-            }
-        }
-    }
-}
-</code></pre>
-<p>Which you can then use in your javascript to populate a dropdown.</p>
-<h2 id="security-note">Security note <a class="heading-anchor-permalink" href="#security-note">#</a></h2>
-<p>As the query is passed straight in to Solr, there is no option of database SQL injection.</p>
+        <h1 id="viewing-permissions">Viewing permissions <a class="heading-anchor-permalink" href="#viewing-permissions">#</a></h1>
+<p>View permissions are indexed group based and setting based.</p>
+<p>On page level, this means if it’s public, the view will be indexed as <code>'null'</code>, meaning anyone can see.
+Inheritance is calculated, and if it is logged in only, then only logged in members will be able to see it.</p>
+<p>If it’s specific groups, then these groups are indexed.</p>
+<h2 id="more-granular-approaches">More granular approaches <a class="heading-anchor-permalink" href="#more-granular-approaches">#</a></h2>
+<p>In case you have custom <code>canView()</code> implementations, we strongly suggest using <code>InheritedPermissionsExtension</code> and proper
+permission implementations instead.</p>
+<p>The reason for not using custom <code>Member</code> based permission checks, is because when a site has a lot of members, indexing
+and the granular approach would become incredibly complex and long. Possibly causing errors during indexing.</p>
 
         <p>
         <a href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>

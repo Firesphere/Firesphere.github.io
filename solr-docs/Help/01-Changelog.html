@@ -482,40 +482,90 @@
     </a>
     <nav id="menu">
         <ul>
-<li><a class="" href="index.html">index</a></li>
-<li><a class="" href="01-Installation.html">Installation</a></li>
-<li><a class="" href="02-Solr.html">Solr</a></li>
-<li><a class="" href="03-Usage.html">Usage</a></li>
-<li><a class="" href="04-Customisation.html">Customisation</a></li>
-<li><a class="" href="05-CMS-Usage.html">CMS Usage</a></li>
-<li><a class="active" href="06-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
-<li><a class="" href="07-Debugging.html">Debugging</a></li>
-<li><a class="" href="08-Suggestions.html">Suggestions</a></li>
-<li><a class="" href="09-Elemental.html">Elemental</a></li>
-<li><a class="" href="10-View-Permissions.html">View Permissions</a></li>
-<li><a class="" href="13-Changelog.html">Changelog</a></li>
-<li><a class="" href="14-About.html">About</a></li>
-<li><a class="" href="15-FAQ.html">FAQ</a></li>
-<li><a class="" href="16-Known-issues.html">Known issues</a></li>
-<li><a class="" href="17-codebase-stats.html">codebase stats</a></li>
+<li><a class="" href="../index.html">index</a></li>
+<li><a class="" href="../01-Installation.html">Installation</a></li>
+<li><a class="" href="../02-Solr.html">Solr</a></li>
+<li><a class="" href="../03-Usage.html">Usage</a></li>
+<li><a class="" href="../04-Customisation.html">Customisation</a></li>
+<li><a class="" href="../05-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="../06-Debugging.html">Debugging</a></li>
+<li><a class="" href="../07-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="../08-View-Permissions.html">View Permissions</a></li>
+<li class="heading"><span>About</span></li>
+<ul>
+<li><a class="" href="../About/01-About.html">About</a></li>
+<li><a class="" href="../About/02-Coverage.html">Coverage</a></li>
+<li><a class="" href="../About/03-codebase-stats.html">codebase stats</a></li>
+<li><a class="" href="../About/3-codebase-stats.html">codebase stats</a></li>
+</ul>
+<li class="heading"><span>Contributing</span></li>
+<ul>
+<li><a class="" href="../Contributing/01-code-of-conduct.html">code of conduct</a></li>
+<li><a class="" href="../Contributing/02-Contributing.html">Contributing</a></li>
+</ul>
+<li class="heading"><span>Help</span></li>
+<ul>
+<li><a class="active" href="01-Changelog.html">Changelog</a></li>
+<li><a class="" href="02-FAQ.html">FAQ</a></li>
+<li><a class="" href="03-Known-issues.html">Known issues</a></li>
+</ul>
+<li class="heading"><span>Submodules</span></li>
+<ul>
+<li><a class="" href="../Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="../Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="../Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="../Submodules/04-Elemental.html">Elemental</a></li>
+</ul>
 </ul>
         <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="fulltext-search*-compatibility">Fulltext Search* Compatibility <a class="heading-anchor-permalink" href="#fulltext-search*-compatibility">#</a></h1>
-<p>To minimise the impact of migrating, there is a compatibility module available.
-<a href="https://github.com/Firesphere/silverstripe-solr-compatibility">This module</a> will remove the need to completely update all your indexes.
-A few small changes to your Search Controller and Results template may be needed however.</p>
-<p>The primary difference between FTS and this module is the way it’s configured. Therefore some stubs are available in the compatibility module.
-You can find this compatibility module here: <a href="https://github.com/Firesphere/silverstripe-solr-compatibility">https://github.com/Firesphere/silverstripe-solr-compatibility</a></p>
-<h2 id="init-to-yml">Init to YML <a class="heading-anchor-permalink" href="#init-to-yml">#</a></h2>
-<p>To get the <code>init()</code> method to a YML, the module provides a helper function. This requires the <a href="https://www.php.net/manual/en/book.yaml.php">PHP module <code>php_yaml</code></a> to be installed.</p>
-<p>Easiest to get the YML is to do in your <code>PageController::init()</code></p>
-<pre><code class="language-php">$index = new MyIndexClass();
-$index-&gt;initToYml();
-</code></pre>
-<hr>
-<p>* From here on called “FTS”</p>
+        <h1 id="changelog">Changelog <a class="heading-anchor-permalink" href="#changelog">#</a></h1>
+<h2 id="1.0-beta">1.0 beta <a class="heading-anchor-permalink" href="#1.0-beta">#</a></h2>
+<ul>
+<li>Fixes to the CMS Index Job.</li>
+<li>Fix issue #140 User not reset correctly.</li>
+<li>Fix issue #143 Not showing in search wasn’t cleaned out correctly.</li>
+<li>Improved documentation.</li>
+<li>Fix stemming issues not properly stemming.</li>
+<li>Fix test errors.</li>
+<li>Fix <code>schema.xml</code> construction.</li>
+<li><a href="../08-View-Permissions.html">Change of Permission indexing from User based to Group based</a></li>
+<li>Improved documentation</li>
+<li>Removed history, moving to a later phase to include in a sub-module</li>
+</ul>
+<h2 id="0.9.x">0.9.x <a class="heading-anchor-permalink" href="#0.9.x">#</a></h2>
+<ul>
+<li>Documentation updates.</li>
+<li>Bump the version to leave bugs behind.</li>
+</ul>
+<h2 id="0.8.x">0.8.x <a class="heading-anchor-permalink" href="#0.8.x">#</a></h2>
+<ul>
+<li>Use multi-threaded indexing.</li>
+<li>Fix error with buffer adding.</li>
+<li>Initial Synonym support.</li>
+</ul>
+<h2 id="0.7.5-notable-updates">0.7.5 Notable updates <a class="heading-anchor-permalink" href="#0.7.5-notable-updates">#</a></h2>
+<ul>
+<li>Added <code>Add[X]Fields()</code>.</li>
+<li>Fix spellcheck retry.</li>
+<li>Increased test coverage.</li>
+<li>Support for basic Fluent (select your language for each indexing run).</li>
+<li>Documentation.</li>
+<li>Extracted compatibility to separate module.</li>
+</ul>
+<h2 id="0.5-first-release">0.5 First release <a class="heading-anchor-permalink" href="#0.5-first-release">#</a></h2>
+<ul>
+<li>Use Solarium.</li>
+<li>Support Facets.</li>
+<li>Support terms.</li>
+<li>Support boosting.</li>
+<li>Support filtering/excluding.</li>
+<li>Support highlighting.</li>
+<li>Support elevation.</li>
+<li>Simplified API.</li>
+<li>Fulltext Search compatibility.</li>
+</ul>
 
         <p>
         <a href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
