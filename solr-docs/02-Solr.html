@@ -528,15 +528,7 @@
 <h3 id="java">Java <a class="heading-anchor-permalink" href="#java">#</a></h3>
 <h4 id="debian-based-distributions">Debian based distributions <a class="heading-anchor-permalink" href="#debian-based-distributions">#</a></h4>
 <p><code>sudo apt install default-jre</code></p>
-<h2 id="installation">Installation <a class="heading-anchor-permalink" href="#installation">#</a></h2>
-<p>Taken from <a href="https://lucene.apache.org/solr/guide/7_7/taking-solr-to-production.html">https://lucene.apache.org/solr/guide/7_7/taking-solr-to-production.html</a></p>
-<p>Update to match the required version. You can find the latest version here: <a href="https://www-us.apache.org/dist/lucene/solr/">https://www-us.apache.org/dist/lucene/solr/</a></p>
-<pre><code class="language-bash">wget http://www.apache.org/dyn/closer.lua/lucene/solr/8.1.0/solr-8.1.0.tgz # find your local URL manually
-tar xvf solr-8.1.0.tgz solr-8.1.0/bin/install_solr_service.sh --strip-components=2
-sudo bash ./install_solr_service.sh solr-8.1.0.tgz
-</code></pre>
-<p>This will install Solr 8.x as a service on your (virtual) machine</p>
-<h2 id="debian-jessie">Debian Jessie <a class="heading-anchor-permalink" href="#debian-jessie">#</a></h2>
+<h4 id="debian-jessie">Debian Jessie <a class="heading-anchor-permalink" href="#debian-jessie">#</a></h4>
 <p>Debian Jessie needs backports to get Java 8 working:</p>
 <pre><code class="language-bash">echo &quot;deb [check-valid-until=no] http://archive.debian.org/debian jessie-backports main&quot; &gt; /etc/apt/sources.list.d/jessie-backports.list
 apt-get update
@@ -546,6 +538,14 @@ apt-get install -t jessie-backports openjdk-8-jre
 <ul>
 <li><code>Acquire::Check-Valid-Until &quot;false&quot;;</code></li>
 </ul>
+<h2 id="installation">Installation <a class="heading-anchor-permalink" href="#installation">#</a></h2>
+<p>Taken from <a href="https://lucene.apache.org/solr/guide/7_7/taking-solr-to-production.html">https://lucene.apache.org/solr/guide/7_7/taking-solr-to-production.html</a></p>
+<p>Update to match the required version. You can find the latest version here: <a href="https://www-us.apache.org/dist/lucene/solr/">https://www-us.apache.org/dist/lucene/solr/</a></p>
+<pre><code class="language-bash">wget http://www.apache.org/dyn/closer.lua/lucene/solr/8.3.0/solr-8.3.0.tgz # find your local URL manually
+tar xvf solr-8.3.0.tgz solr-8.3.0/bin/install_solr_service.sh --strip-components=2
+sudo bash ./install_solr_service.sh solr-8.3.0.tgz
+</code></pre>
+<p>This will install Solr 8.x as a service on your (virtual) machine</p>
 <h2 id="vagrant-machines">Vagrant machines <a class="heading-anchor-permalink" href="#vagrant-machines">#</a></h2>
 <p>See <a href="Help/03-Known-issues.html">Known issues</a> for known issues with Vagrant</p>
 
