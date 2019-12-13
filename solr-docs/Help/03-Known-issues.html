@@ -462,11 +462,11 @@
             opacity: 0.5;
         }
         .sticky-bottom {
-            position: absolute;
+            position: sticky;
             bottom: 10px;
             width: 100%;
             margin: 0;
-            padding: 0 0 0 10px;
+            padding: 10px 0 10px 10px;
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -549,7 +549,6 @@ After updating the group permissions, be sure to log out and back in again.</p>
 <h2 id="solr-and-vagrant-issues%2C-pt.-2">Solr and Vagrant issues, pt. 2 <a class="heading-anchor-permalink" href="#solr-and-vagrant-issues%2C-pt.-2">#</a></h2>
 <p>It’s also known that Solr won’t properly reload cores on Vagrant VM’s. This is outside
 of control for this module, it is advised to restart Solr before and after a config change.</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <h2 id="solr-is-running-as-the-wrong-user">Solr is running as the wrong user <a class="heading-anchor-permalink" href="#solr-is-running-as-the-wrong-user">#</a></h2>
 <p>For yet unknown reasons, even after following the Solr installation guide, it may happen
 that Solr runs as the wrong user.</p>
