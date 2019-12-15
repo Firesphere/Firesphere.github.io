@@ -537,7 +537,7 @@ either PHP or Java will stop and throw an error</p>
 <h3 id="my-core.properties-won%E2%80%99t-persist%2C-what-gives%3F">My core.properties won’t persist, what gives? <a class="heading-anchor-permalink" href="#my-core.properties-won%E2%80%99t-persist%2C-what-gives%3F">#</a></h3>
 <p>Most likely, you’re running a vagrant or docker machine? And even more likely
 running it on Linux.</p>
-<p>The solution is to create a symlink in <code>/var/solr/data/{your-policy-name/</code> to <code>/var/www/{yoursite}/.solr/.conf</code>, so the
+<p>The solution is to create a symlink in <code>/var/solr/data/{your-policy-name/</code> to <code>/var/www/{yoursite}/.solr/conf</code>, so the
 <code>conf</code> folder points to your locally writable folder for Vagrant.</p>
 <p>In your search.yml, add the following as the location of your FileStore config:</p>
 <pre><code class="language-yaml">Firesphere\SolrSearch\Services\SolrCoreService:

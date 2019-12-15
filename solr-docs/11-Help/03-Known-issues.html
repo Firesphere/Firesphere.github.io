@@ -584,6 +584,10 @@ can not make a public issue, you can contact us at</p>
 <p><code>solr[@]casa-laguna[.]net</code></p>
 <p>Please note that we may charge you for investigating and helping solve your issues. This module is FOSS, but
 our time is not unlimited and we may feel an issue is not worth the effort unless we get paid for our time.</p>
+<h2 id="some-groups-give-an-error-about-p-or-g">Some groups give an error about <code>P</code> or <code>G</code> <a class="heading-anchor-permalink" href="#some-groups-give-an-error-about-p-or-g">#</a></h2>
+<p>Yes, a headscratcher! Re-run that specific group <code>SolrIndexTask group={Group Number}</code> and all should be fine.</p>
+<p>Sometimes, for unknown reason, the <code>POST</code> or <code>GET</code> part of the request string is included in the XML that is
+sent to Solr. We’ve not yet found a reason for how/why this is happening.</p>
 
         <hr />
             <h2>Support our work</h2>

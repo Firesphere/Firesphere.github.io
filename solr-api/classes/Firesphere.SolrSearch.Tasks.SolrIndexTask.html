@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -107,6 +107,18 @@
             <span class="description">Clear the given index if a full re-index is needed</span><pre>clearIndex</pre>
         </a>
     </li>    <li class="methodpublic inherited">
+        <a href="#method_getBatchLength" title="getBatchLength ::">
+            <span class="description"></span><pre>getBatchLength</pre>
+        </a>
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_getCores" title="getCores ::">
+            <span class="description"></span><pre>getCores</pre>
+        </a>
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_getIndex" title="getIndex ::">
+            <span class="description"></span><pre>getIndex</pre>
+        </a>
+    </li>    <li class="methodpublic inherited">
         <a href="#method_getLogger" title="getLogger ::Get the logger">
             <span class="description">Get the logger</span><pre>getLogger</pre>
         </a>
@@ -116,15 +128,27 @@ execute via the TaskRunner">
             <span class="description">Implement this method in the task subclass to
 execute via the TaskRunner</span><pre>run</pre>
         </a>
-    </li>    <li class="methodpublic">
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_setBatchLength" title="setBatchLength ::">
+            <span class="description"></span><pre>setBatchLength</pre>
+        </a>
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_setCores" title="setCores ::">
+            <span class="description"></span><pre>setCores</pre>
+        </a>
+    </li>    <li class="methodpublic inherited">
         <a href="#method_setDebug" title="setDebug ::Set the debug mode">
             <span class="description">Set the debug mode</span><pre>setDebug</pre>
+        </a>
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_setIndex" title="setIndex ::">
+            <span class="description"></span><pre>setIndex</pre>
         </a>
     </li>    <li class="methodpublic inherited">
         <a href="#method_setLogger" title="setLogger ::Set the logger if needed">
             <span class="description">Set the logger if needed</span><pre>setLogger</pre>
         </a>
-    </li>    <li class="methodpublic">
+    </li>    <li class="methodpublic inherited">
         <a href="#method_setService" title="setService ::Set the {@link SolrCoreService}">
             <span class="description">Set the {@link SolrCoreService}</span><pre>setService</pre>
         </a>
@@ -151,6 +175,14 @@ execute via the TaskRunner</span><pre>run</pre>
                                 <span class="description">Reindex the given group, for each state</span><pre>doReindex</pre>
                             </a>
                         </li>                        <li class="methodprivate">
+                            <a href="#method_getGroupSettings" title="getGroupSettings ::Check the amount of groups and the total against the isGroup check.">
+                                <span class="description">Check the amount of groups and the total against the isGroup check.</span><pre>getGroupSettings</pre>
+                            </a>
+                        </li>                        <li class="methodprivate">
+                            <a href="#method_hasPCNTL" title="hasPCNTL ::">
+                                <span class="description"></span><pre>hasPCNTL</pre>
+                            </a>
+                        </li>                        <li class="methodprivate">
                             <a href="#method_indexClass" title="indexClass ::Index a single class for a given index. {@link static::indexClassForIndex()}">
                                 <span class="description">Index a single class for a given index. {@link static::indexClassForIndex()}</span><pre>indexClass</pre>
                             </a>
@@ -159,6 +191,14 @@ execute via the TaskRunner</span><pre>run</pre>
 to identify problems and fix them.">
                                 <span class="description">Log an exception if it happens. Most are catched, these logs are for the developers
 to identify problems and fix them.</span><pre>logException</pre>
+                            </a>
+                        </li>                        <li class="methodprivate">
+                            <a href="#method_runChild" title="runChild ::Ren a single child index operation">
+                                <span class="description">Ren a single child index operation</span><pre>runChild</pre>
+                            </a>
+                        </li>                        <li class="methodprivate">
+                            <a href="#method_runForkedChild" title="runForkedChild ::Create a fork and run the child">
+                                <span class="description">Create a fork and run the child</span><pre>runForkedChild</pre>
                             </a>
                         </li>                        <li class="methodprivate">
                             <a href="#method_spawnChildren" title="spawnChildren ::For each core, spawn a child process that will handle a separate group.">
@@ -228,7 +268,7 @@ to identify problems and fix them.</span><pre>logException</pre>
                         </div>                        <a id="method_clearIndex"></a>
                         <div class="element clickable methodpublic method_clearIndex" data-toggle="collapse" data-target=".method_clearIndex .collapse">
                             <h2>Clear the given index if a full re-index is needed</h2>
-                            <pre>clearIndex( $vars,\Firesphere\SolrSearch\Indexes\BaseIndex $index)</pre>
+                            <pre>clearIndex(array $vars)</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -246,17 +286,14 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$vars</h4>
-                                                <code></code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$index</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                                <code>array</code><p><p>URL GET Parameters</p></p>
                                             </div>                                </div>
                             </div>
 
                         </div>                        <a id="method_doReindex"></a>
                         <div class="element clickable methodprivate method_doReindex" data-toggle="collapse" data-target=".method_doReindex .collapse">
                             <h2>Reindex the given group, for each state</h2>
-                            <pre>doReindex(integer $group,string $class,\Firesphere\SolrSearch\Indexes\BaseIndex $index,boolean $pcntl = false)</pre>
+                            <pre>doReindex(integer $group,string $class,boolean|integer $pcntl = false)</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -274,23 +311,37 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code>integer</code><p></p>
+                                                <code>integer</code><p><p>Group to index</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code>string</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$index</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                                <code>string</code><p><p>Class to index</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$pcntl</h4>
-                                                <code>boolean</code><p></p>
+                                                <code>boolean|integer</code><p><p>Are we a child process or not</p></p>
                                             </div>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getBatchLength"></a>
+                        <div class="element clickable methodpublic method_getBatchLength inherited" data-toggle="collapse" data-target=".method_getBatchLength .collapse">
+                            <h2>getBatchLength</h2>
+                            <pre>getBatchLength(): integer</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>integer</code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_getClasses"></a>
                         <div class="element clickable methodprotected method_getClasses" data-toggle="collapse" data-target=".method_getClasses .collapse">
                             <h2>get the classes to run for this task execution</h2>
-                            <pre>getClasses( $vars,array $classes): boolean|array</pre>
+                            <pre>getClasses(array $vars,array $classes): boolean|array</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -298,12 +349,68 @@ to identify problems and fix them.</span><pre>logException</pre>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$vars</h4>
-                                                <code></code><p></p>
+                                                <code>array</code><p><p>URL GET Parameters</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$classes</h4>
-                                                <code>array</code><p></p>
+                                                <code>array</code><p><p>Classes to index</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>boolean|array</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getCores"></a>
+                        <div class="element clickable methodpublic method_getCores inherited" data-toggle="collapse" data-target=".method_getCores .collapse">
+                            <h2>getCores</h2>
+                            <pre>getCores(): integer</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>integer</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getGroupSettings"></a>
+                        <div class="element clickable methodprivate method_getGroupSettings" data-toggle="collapse" data-target=".method_getGroupSettings .collapse">
+                            <h2>Check the amount of groups and the total against the isGroup check.</h2>
+                            <pre>getGroupSettings(boolean $isGroup,string $class,integer $group): array</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$isGroup</h4>
+                                                <code>boolean</code><p><p>Is it a specific group</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code>string</code><p><p>Class to check</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$group</h4>
+                                                <code>integer</code><p><p>Current group to index</p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getIndex"></a>
+                        <div class="element clickable methodpublic method_getIndex inherited" data-toggle="collapse" data-target=".method_getIndex .collapse">
+                            <h2>getIndex</h2>
+                            <pre>getIndex(): \Firesphere\SolrSearch\Indexes\BaseIndex</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_getLogger"></a>
@@ -323,10 +430,30 @@ to identify problems and fix them.</span><pre>logException</pre>
                                         <code>\Psr\Log\LoggerInterface</code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_hasPCNTL"></a>
+                        <div class="element clickable methodprivate method_hasPCNTL" data-toggle="collapse" data-target=".method_hasPCNTL .collapse">
+                            <h2>hasPCNTL</h2>
+                            <pre>hasPCNTL()</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                </div>
+                            </div>
+
                         </div>                        <a id="method_indexClass"></a>
                         <div class="element clickable methodprivate method_indexClass" data-toggle="collapse" data-target=".method_indexClass .collapse">
                             <h2>Index a single class for a given index. {@link static::indexClassForIndex()}</h2>
-                            <pre>indexClass(boolean $isGroup,string $class,\Firesphere\SolrSearch\Indexes\BaseIndex $index,integer $group): integer</pre>
+                            <pre>indexClass(boolean $isGroup,string $class,integer $group): integer</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -341,16 +468,13 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$isGroup</h4>
-                                                <code>boolean</code><p></p>
+                                                <code>boolean</code><p><p>Is a specific group indexed</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code>string</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$index</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                                <code>string</code><p><p>Class to index</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code>integer</code><p></p>
+                                                <code>integer</code><p><p>Group to index</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>integer</code><p></p>                                </div>
                             </div>
@@ -358,7 +482,7 @@ to identify problems and fix them.</span><pre>logException</pre>
                         </div>                        <a id="method_indexClassForIndex"></a>
                         <div class="element clickable methodprotected method_indexClassForIndex" data-toggle="collapse" data-target=".method_indexClassForIndex .collapse">
                             <h2>Index the classes for a specific index</h2>
-                            <pre>indexClassForIndex( $classes, $isGroup,\Firesphere\SolrSearch\Indexes\BaseIndex $index, $group): integer</pre>
+                            <pre>indexClassForIndex(array $classes,boolean $isGroup,integer $group): integer</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -373,16 +497,13 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$classes</h4>
-                                                <code></code><p></p>
+                                                <code>array</code><p><p>Classes that need indexing</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$isGroup</h4>
-                                                <code></code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$index</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                                <code>boolean</code><p><p>Indexing a specific group?</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code></code><p></p>
+                                                <code>integer</code><p><p>Group to index</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>integer</code><p></p>                                </div>
                             </div>
@@ -410,13 +531,13 @@ to identify problems and fix them.</h2>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$index</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>Index that is currently running</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code>integer</code><p></p>
+                                                <code>integer</code><p><p>Group currently attempted to index</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$exception</h4>
-                                                <code>\Exception</code><p></p>
+                                                <code>\Exception</code><p><p>Exception that's been thrown</p></p>
                                             </div>                                </div>
                             </div>
 
@@ -439,16 +560,118 @@ execute via the TaskRunner</h2>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$request</h4>
-                                                <code>\SilverStripe\Control\HTTPRequest</code><p></p>
+                                                <code>\SilverStripe\Control\HTTPRequest</code><p><p>Current request</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>integer|boolean</code><p></p>                                </div>
                             </div>
 
-                        </div>                        <a id="method_setDebug"></a>
-                        <div class="element clickable methodpublic method_setDebug" data-toggle="collapse" data-target=".method_setDebug .collapse">
-                            <h2>Set the debug mode</h2>
-                            <pre>setDebug(boolean $debug): \Firesphere\SolrSearch\Tasks\SolrIndexTask</pre>
+                        </div>                        <a id="method_runChild"></a>
+                        <div class="element clickable methodprivate method_runChild" data-toggle="collapse" data-target=".method_runChild .collapse">
+                            <h2>Ren a single child index operation</h2>
+                            <pre>runChild(string $class,integer $pid,integer $start)</pre>
                             <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                        <dt>\Exception</dt>
+                                                        <dd></dd>                                                    </dl>
+                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code>string</code><p><p>Class to index</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$pid</h4>
+                                                <code>integer</code><p><p>PID of the child</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$start</h4>
+                                                <code>integer</code><p><p>Position to start</p></p>
+                                            </div>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_runForkedChild"></a>
+                        <div class="element clickable methodprivate method_runForkedChild" data-toggle="collapse" data-target=".method_runForkedChild .collapse">
+                            <h2>Create a fork and run the child</h2>
+                            <pre>runForkedChild(string $class,array &$pids,integer $coreNumber,integer $start): void</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                                                        <dd></dd>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                    </dl>
+                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code>string</code><p><p>Class to index</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$pids</h4>
+                                                <code>array</code><p><p>Array of all the child Process IDs</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$coreNumber</h4>
+                                                <code>integer</code><p><p>Core number</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$start</h4>
+                                                <code>integer</code><p><p>Start point for the objects</p></p>
+                                            </div>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_setBatchLength"></a>
+                        <div class="element clickable methodpublic method_setBatchLength inherited" data-toggle="collapse" data-target=".method_setBatchLength .collapse">
+                            <h2>setBatchLength</h2>
+                            <pre>setBatchLength(integer $batchLength)</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$batchLength</h4>
+                                                <code>integer</code><p></p>
+                                            </div>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_setCores"></a>
+                        <div class="element clickable methodpublic method_setCores inherited" data-toggle="collapse" data-target=".method_setCores .collapse">
+                            <h2>setCores</h2>
+                            <pre>setCores(integer $cores)</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$cores</h4>
+                                                <code>integer</code><p></p>
+                                            </div>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_setDebug"></a>
+                        <div class="element clickable methodpublic method_setDebug inherited" data-toggle="collapse" data-target=".method_setDebug .collapse">
+                            <h2>Set the debug mode</h2>
+                            <pre>setDebug(boolean $debug): self</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -457,7 +680,26 @@ execute via the TaskRunner</h2>
                                                 <h4>$debug</h4>
                                                 <code>boolean</code><p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html">\Firesphere\SolrSearch\Tasks\SolrIndexTask</a></code><p></p>                                </div>
+                                        <code>self</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_setIndex"></a>
+                        <div class="element clickable methodpublic method_setIndex inherited" data-toggle="collapse" data-target=".method_setIndex .collapse">
+                            <h2>setIndex</h2>
+                            <pre>setIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $index)</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$index</h4>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                            </div>                                </div>
                             </div>
 
                         </div>                        <a id="method_setLogger"></a>
@@ -480,10 +722,10 @@ execute via the TaskRunner</h2>
                             </div>
 
                         </div>                        <a id="method_setService"></a>
-                        <div class="element clickable methodpublic method_setService" data-toggle="collapse" data-target=".method_setService .collapse">
+                        <div class="element clickable methodpublic method_setService inherited" data-toggle="collapse" data-target=".method_setService .collapse">
                             <h2>Set the {@link SolrCoreService}</h2>
-                            <pre>setService(\Firesphere\SolrSearch\Services\SolrCoreService $service): \Firesphere\SolrSearch\Tasks\SolrIndexTask</pre>
-                            <div class="labels">                            </div>
+                            <pre>setService(\Firesphere\SolrSearch\Services\SolrCoreService $service): self</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -492,13 +734,13 @@ execute via the TaskRunner</h2>
                                                 <h4>$service</h4>
                                                 <code><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">\Firesphere\SolrSearch\Services\SolrCoreService</a></code><p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Tasks.SolrIndexTask.html">\Firesphere\SolrSearch\Tasks\SolrIndexTask</a></code><p></p>                                </div>
+                                        <code>self</code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_spawnChildren"></a>
                         <div class="element clickable methodprivate method_spawnChildren" data-toggle="collapse" data-target=".method_spawnChildren .collapse">
                             <h2>For each core, spawn a child process that will handle a separate group.</h2>
-                            <pre>spawnChildren(string $class,\Firesphere\SolrSearch\Indexes\BaseIndex $index,integer $group,integer $cores,integer $groups): integer</pre>
+                            <pre>spawnChildren(string $class,integer $group,integer $groups): integer</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -513,27 +755,21 @@ execute via the TaskRunner</h2>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code>string</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$index</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                                <code>string</code><p><p>Class to index</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code>integer</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$cores</h4>
-                                                <code>integer</code><p></p>
+                                                <code>integer</code><p><p>Group to index</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$groups</h4>
-                                                <code>integer</code><p></p>
+                                                <code>integer</code><p><p>Total amount of groups</p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code>integer</code><p></p>                                </div>
+                                        <code>integer</code><p><p>Last group indexed</p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_stateReindex"></a>
                         <div class="element clickable methodprivate method_stateReindex" data-toggle="collapse" data-target=".method_stateReindex .collapse">
                             <h2>Index a group of a class for a specific state and index</h2>
-                            <pre>stateReindex( $group, $class,\Firesphere\SolrSearch\Indexes\BaseIndex $index)</pre>
+                            <pre>stateReindex(string $group,string $class)</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -551,13 +787,10 @@ execute via the TaskRunner</h2>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$group</h4>
-                                                <code></code><p></p>
+                                                <code>string</code><p><p>Group to index</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code></code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$index</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                                <code>string</code><p><p>Class to index</p></p>
                                             </div>                                </div>
                             </div>
 
@@ -572,7 +805,7 @@ execute via the TaskRunner</h2>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$request</h4>
-                                                <code>\SilverStripe\Control\HTTPRequest</code><p></p>
+                                                <code>\SilverStripe\Control\HTTPRequest</code><p><p>Current request</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>array</code><p></p>                                </div>
                             </div>
@@ -580,7 +813,7 @@ execute via the TaskRunner</h2>
                         </div>                        <a id="method_updateIndex"></a>
                         <div class="element clickable methodprivate method_updateIndex" data-toggle="collapse" data-target=".method_updateIndex .collapse">
                             <h2>Execute the update on the client</h2>
-                            <pre>updateIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $index, $items)</pre>
+                            <pre>updateIndex(\SilverStripe\ORM\SS_List $items)</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -597,11 +830,8 @@ execute via the TaskRunner</h2>
                                                         <dd></dd>                                                    </dl>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$index</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
-                                            </div>                                            <div class="subelement argument">
                                                 <h4>$items</h4>
-                                                <code></code><p></p>
+                                                <code>\SilverStripe\ORM\SS_List</code><p><p>Items to index</p></p>
                                             </div>                                </div>
                             </div>
 
@@ -669,54 +899,6 @@ execute via the TaskRunner</h2>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>string</code>                                    </div>
                                 </div>
-                            </div>                            <a id="property_debug"> </a>
-                            <div class="element clickable propertyprotected property_debug" data-toggle="collapse" data-target=".property_debug .collapse">
-                                <h2>Debug mode enabled, default false</h2>
-                                <pre>debug :boolean</pre>
-                                <div class="labels">                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>boolean</code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_service"> </a>
-                            <div class="element clickable propertyprotected property_service" data-toggle="collapse" data-target=".property_service .collapse">
-                                <h2>Singleton of {@link SolrCoreService}</h2>
-                                <pre>service :\Firesphere\SolrSearch\Services\SolrCoreService</pre>
-                                <div class="labels">                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">\Firesphere\SolrSearch\Services\SolrCoreService</a></code>                                    </div>
-                                </div>
-                            </div>                            <a id="property_batchLength"> </a>
-                            <div class="element clickable propertyprotected property_batchLength" data-toggle="collapse" data-target=".property_batchLength .collapse">
-                                <h2>Default batch length</h2>
-                                <pre>batchLength :integer</pre>
-                                <div class="labels">                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>integer</code>                                    </div>
-                                </div>
                             </div>                            <a id="property_logger"> </a>
                             <div class="element clickable propertyprotected property_logger inherited" data-toggle="collapse" data-target=".property_logger .collapse">
                                 <h2>The logger to use</h2>
@@ -733,6 +915,86 @@ execute via the TaskRunner</h2>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>\Psr\Log\LoggerInterface</code>                                    </div>
                                 </div>
+                            </div>                            <a id="property_debug"> </a>
+                            <div class="element clickable propertyprotected property_debug inherited" data-toggle="collapse" data-target=".property_debug .collapse">
+                                <h2>Debug mode enabled, default false</h2>
+                                <pre>debug :boolean</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>boolean</code>                                    </div>
+                                </div>
+                            </div>                            <a id="property_service"> </a>
+                            <div class="element clickable propertyprotected property_service inherited" data-toggle="collapse" data-target=".property_service .collapse">
+                                <h2>Singleton of {@link SolrCoreService}</h2>
+                                <pre>service :\Firesphere\SolrSearch\Services\SolrCoreService</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">\Firesphere\SolrSearch\Services\SolrCoreService</a></code>                                    </div>
+                                </div>
+                            </div>                            <a id="property_index"> </a>
+                            <div class="element clickable propertyprotected property_index inherited" data-toggle="collapse" data-target=".property_index .collapse">
+                                <h2>Current core being indexed</h2>
+                                <pre>index :\Firesphere\SolrSearch\Indexes\BaseIndex</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td><p>Current core being indexed</p>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code>                                    </div>
+                                </div>
+                            </div>                            <a id="property_cores"> </a>
+                            <div class="element clickable propertyprotected property_cores inherited" data-toggle="collapse" data-target=".property_cores .collapse">
+                                <h2>Number of CPU cores available</h2>
+                                <pre>cores :integer</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td><p>Number of CPU cores available</p>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>integer</code>                                    </div>
+                                </div>
+                            </div>                            <a id="property_batchLength"> </a>
+                            <div class="element clickable propertyprotected property_batchLength inherited" data-toggle="collapse" data-target=".property_batchLength .collapse">
+                                <h2>Default batch length</h2>
+                                <pre>batchLength :integer</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>integer</code>                                    </div>
+                                </div>
                             </div>                </div>
             </div>
             <a id="\Firesphere\SolrSearch\Tasks\SolrIndexTask"></a>
@@ -746,6 +1008,6 @@ execute via the TaskRunner</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSat, 14 Dec 2019 01:38:59 +0000.<br/>
+            generated onSun, 15 Dec 2019 02:16:58 +0000.<br/>
     </footer></body>
 </html>
