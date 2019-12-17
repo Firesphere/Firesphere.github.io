@@ -485,44 +485,63 @@
 <li><a class="" href="../01-Installation.html">Installation</a></li>
 <li><a class="" href="../02-Solr.html">Solr</a></li>
 <li><a class="" href="../03-Usage.html">Usage</a></li>
-<li><a class="" href="../04-Customisation.html">Customisation</a></li>
-<li><a class="" href="../05-CMS-Usage.html">CMS Usage</a></li>
-<li><a class="" href="../06-Debugging.html">Debugging</a></li>
-<li><a class="" href="../07-Suggestions.html">Suggestions</a></li>
-<li><a class="" href="../08-View-Permissions.html">View Permissions</a></li>
+<li class="heading"><span>Advanced Options</span></li>
+<ul>
+<li><a class="" href="01-Faceting.html">Faceting</a></li>
+<li><a class="active" href="02-Boosting.html">Boosting</a></li>
+<li><a class="" href="03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="" href="04-Elevation.html">Elevation</a></li>
+</ul>
+<li><a class="" href="../05-Customisation.html">Customisation</a></li>
+<li><a class="" href="../06-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="../07-Debugging.html">Debugging</a></li>
+<li><a class="" href="../08-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="../09-View-Permissions.html">View Permissions</a></li>
 <li class="heading"><span>Submodules</span></li>
 <ul>
-<li><a class="" href="01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
-<li><a class="active" href="02-Subsites.html">Subsites</a></li>
-<li><a class="" href="03-Fluent.html">Fluent</a></li>
-<li><a class="" href="04-Member-based-permissions.html">Member based permissions</a></li>
-<li><a class="" href="05-Elemental.html">Elemental</a></li>
+<li><a class="" href="../10-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="../10-Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="../10-Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="../10-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
+<li><a class="" href="../10-Submodules/05-Elemental.html">Elemental</a></li>
 </ul>
 <li class="heading"><span>Contributing</span></li>
 <ul>
-<li><a class="" href="../10-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
-<li><a class="" href="../10-Contributing/02-Contributing.html">Contributing</a></li>
+<li><a class="" href="../11-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="" href="../11-Contributing/02-Contributing.html">Contributing</a></li>
 </ul>
 <li class="heading"><span>Help</span></li>
 <ul>
-<li><a class="" href="../11-Help/01-Changelog.html">Changelog</a></li>
-<li><a class="" href="../11-Help/02-FAQ.html">FAQ</a></li>
-<li><a class="" href="../11-Help/03-Known-issues.html">Known issues</a></li>
+<li><a class="" href="../12-Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="../12-Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="../12-Help/03-Known-issues.html">Known issues</a></li>
 </ul>
 <li class="heading"><span>About</span></li>
 <ul>
-<li><a class="" href="../12-About/01-About.html">About</a></li>
-<li><a class="" href="../12-About/02-Coverage.html">Coverage</a></li>
-<li><a class="" href="../12-About/03-Codebase-stats.html">Codebase stats</a></li>
-<li><a class="" href="../12-About/04-Plans.html">Plans</a></li>
+<li><a class="" href="../13-About/01-About.html">About</a></li>
+<li><a class="" href="../13-About/02-Coverage.html">Coverage</a></li>
+<li><a class="" href="../13-About/03-Codebase-stats.html">Codebase stats</a></li>
+<li><a class="" href="../13-About/04-Plans.html">Plans</a></li>
 </ul>
 </ul>
         <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="subsites-submodule">Subsites submodule <a class="heading-anchor-permalink" href="#subsites-submodule">#</a></h1>
-<p>With the <a href="https://github.com/Firesphere/silverstripe-subsite-solr">Subsites submodule</a>, searching split between Subsites is automatically handled.</p>
-<p>Indexing by SubsiteID etc. is also automatically added to the appropriate parts of the indexing.</p>
+        <h1 id="boost-queries">Boost queries <a class="heading-anchor-permalink" href="#boost-queries">#</a></h1>
+<p>Boosting can be done at both Index time if the configuration supports it, or at Query time.</p>
+<p>To boost a certain query at Query time (easiest), use the following syntax:</p>
+<pre><code class="language-php">    $query-&gt;addBoostedField('Field_Name', $value);
+</code></pre>
+<p>Where value is the boosting value.</p>
+<h2 id="boosting-a-single-term-out-of-a-set">Boosting a single term out of a set <a class="heading-anchor-permalink" href="#boosting-a-single-term-out-of-a-set">#</a></h2>
+<p>To boost a single term specifically, or on a specific field, you can use the following:</p>
+<pre><code class="language-php">$query-&gt;addTerm('My search terms', ['Fields', 'To', 'Boost', 'On'], 2);
+</code></pre>
+<p>Where the array of fields should not be empty. The number <code>2</code> is the amount of boosting that should be applied
+to the fields in the array.</p>
+<p>This executes a global search for the term, followed by a boosting for each field in the
+field array with a boost status of 2.</p>
+<p>Note that the boosted fields do need to be added as a boosted field at Configure time.</p>
 
         <hr />
             <h2>Support our work</h2>

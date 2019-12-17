@@ -485,72 +485,58 @@
 <li><a class="" href="01-Installation.html">Installation</a></li>
 <li><a class="" href="02-Solr.html">Solr</a></li>
 <li><a class="" href="03-Usage.html">Usage</a></li>
-<li><a class="" href="04-Customisation.html">Customisation</a></li>
-<li><a class="" href="05-CMS-Usage.html">CMS Usage</a></li>
-<li><a class="active" href="06-Debugging.html">Debugging</a></li>
-<li><a class="" href="07-Suggestions.html">Suggestions</a></li>
-<li><a class="" href="08-View-Permissions.html">View Permissions</a></li>
+<li class="heading"><span>Advanced Options</span></li>
+<ul>
+<li><a class="" href="04-Advanced-Options/01-Faceting.html">Faceting</a></li>
+<li><a class="" href="04-Advanced-Options/02-Boosting.html">Boosting</a></li>
+<li><a class="" href="04-Advanced-Options/03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="" href="04-Advanced-Options/04-Elevation.html">Elevation</a></li>
+</ul>
+<li><a class="" href="05-Customisation.html">Customisation</a></li>
+<li><a class="" href="06-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="07-Debugging.html">Debugging</a></li>
+<li><a class="" href="08-Suggestions.html">Suggestions</a></li>
+<li><a class="active" href="09-View-Permissions.html">View Permissions</a></li>
 <li class="heading"><span>Submodules</span></li>
 <ul>
-<li><a class="" href="09-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
-<li><a class="" href="09-Submodules/02-Subsites.html">Subsites</a></li>
-<li><a class="" href="09-Submodules/03-Fluent.html">Fluent</a></li>
-<li><a class="" href="09-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
-<li><a class="" href="09-Submodules/05-Elemental.html">Elemental</a></li>
+<li><a class="" href="10-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="10-Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="10-Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="10-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
+<li><a class="" href="10-Submodules/05-Elemental.html">Elemental</a></li>
 </ul>
 <li class="heading"><span>Contributing</span></li>
 <ul>
-<li><a class="" href="10-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
-<li><a class="" href="10-Contributing/02-Contributing.html">Contributing</a></li>
+<li><a class="" href="11-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="" href="11-Contributing/02-Contributing.html">Contributing</a></li>
 </ul>
 <li class="heading"><span>Help</span></li>
 <ul>
-<li><a class="" href="11-Help/01-Changelog.html">Changelog</a></li>
-<li><a class="" href="11-Help/02-FAQ.html">FAQ</a></li>
-<li><a class="" href="11-Help/03-Known-issues.html">Known issues</a></li>
+<li><a class="" href="12-Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="12-Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="12-Help/03-Known-issues.html">Known issues</a></li>
 </ul>
 <li class="heading"><span>About</span></li>
 <ul>
-<li><a class="" href="12-About/01-About.html">About</a></li>
-<li><a class="" href="12-About/02-Coverage.html">Coverage</a></li>
-<li><a class="" href="12-About/03-Codebase-stats.html">Codebase stats</a></li>
-<li><a class="" href="12-About/04-Plans.html">Plans</a></li>
+<li><a class="" href="13-About/01-About.html">About</a></li>
+<li><a class="" href="13-About/02-Coverage.html">Coverage</a></li>
+<li><a class="" href="13-About/03-Codebase-stats.html">Codebase stats</a></li>
+<li><a class="" href="13-About/04-Plans.html">Plans</a></li>
 </ul>
 </ul>
         <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="debugging">Debugging <a class="heading-anchor-permalink" href="#debugging">#</a></h1>
-<p>To debug the executed query, the <code>BaseIndex</code> has a method available to show you all the components of the executed query
-as an array. To get this data, execute the following after you have done your search:</p>
-<ul>
-<li><code>$index-&gt;getQueryTerms()</code> To get the query terms</li>
-</ul>
-<p>The Index also has a method to get the Query Factory and read data from there.
-You can find the output of the factory by getting</p>
-<ul>
-<li><code>$index-&gt;getQueryFactory()</code>. See the <a href="https://firesphere.github.io/solr-api/classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">API documentation</a> on how to address each part of the factory.</li>
-</ul>
-<p>Through the use of an <code>Extension</code> on <code>BaseIndex</code> you can get the Factory through the method <code>onBeforeSearch</code></p>
-<p>These two methods supply more information about the executed query.</p>
-<p>For a more thorough debugging, have a look at the <a href="https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/">Solarium docs</a> for getting the debugging information.</p>
-<h1 id="logging">Logging <a class="heading-anchor-permalink" href="#logging">#</a></h1>
-<p>Every error triggers the SolrLogger, to retrieve the errors from Solr and store them in the database.</p>
-<p>These error logs are deletable only in dev mode or by administrators.</p>
-<p>The logs can be found at <code>admin/searchadmin/Firesphere-SolrSearch-Models-SolrLog</code> for checking what is wrong.</p>
-<h2 id="clearing-out-the-logs">Clearing out the logs <a class="heading-anchor-permalink" href="#clearing-out-the-logs">#</a></h2>
-<p>As an admin, you should have access to <code>dev/tasks</code>, where an option to truncate the log database is available at
-<code>dev/tasks/SolrClearErrorsTask</code>. Use this with caution though, as it will truncate the errors logged and no data remains
-at all.</p>
-<p>It is strongly advised to only clear out the logs if they have all been reviewed and you are sure nothing serious is wrong.</p>
-<h2 id="x%3Aunknown-indexes">x:Unknown indexes <a class="heading-anchor-permalink" href="#x%3Aunknown-indexes">#</a></h2>
-<p>Because Solr 5 and lower don’t return the actual core that threw the error, logging will say <code>x:Unknown</code>. This does not mean
-the log is not there, it simply means the core that threw the error isn’t known by the server.</p>
-<h2 id="sorting">Sorting <a class="heading-anchor-permalink" href="#sorting">#</a></h2>
-<p>By default, SilverStripe sorts by ID, causing the oldest errors to show first. Advised is to sort by Timestamp before looking at the actual error.</p>
-<h2 id="colour-codes">Colour codes <a class="heading-anchor-permalink" href="#colour-codes">#</a></h2>
-<p>The gridfield is colour coded for the type of error. This can be disabled by overriding the GridFieldExtension class and removing
-any classes that are unwished for.</p>
+        <h1 id="viewing-permissions">Viewing permissions <a class="heading-anchor-permalink" href="#viewing-permissions">#</a></h1>
+<p>View permissions are indexed group based and setting based.</p>
+<p>On page level, this means if it’s public, the view will be indexed as <code>'null'</code>, meaning anyone can see.
+Inheritance is calculated, and if it is logged in only, then only logged in members will be able to see it.</p>
+<p>If it’s specific groups, then these groups are indexed.</p>
+<h2 id="more-granular-approaches">More granular approaches <a class="heading-anchor-permalink" href="#more-granular-approaches">#</a></h2>
+<p>In case you have custom <code>canView()</code> implementations, we strongly suggest using <code>InheritedPermissionsExtension</code> and proper
+permission implementations instead.</p>
+<p>The reason for not using custom <code>Member</code> based permission checks, is because when a site has a lot of members, indexing
+and the granular approach would become incredibly complex and long. Possibly causing errors during indexing.</p>
 
         <hr />
             <h2>Support our work</h2>

@@ -485,36 +485,43 @@
 <li><a class="" href="01-Installation.html">Installation</a></li>
 <li><a class="" href="02-Solr.html">Solr</a></li>
 <li><a class="active" href="03-Usage.html">Usage</a></li>
-<li><a class="" href="04-Customisation.html">Customisation</a></li>
-<li><a class="" href="05-CMS-Usage.html">CMS Usage</a></li>
-<li><a class="" href="06-Debugging.html">Debugging</a></li>
-<li><a class="" href="07-Suggestions.html">Suggestions</a></li>
-<li><a class="" href="08-View-Permissions.html">View Permissions</a></li>
+<li class="heading"><span>Advanced Options</span></li>
+<ul>
+<li><a class="" href="04-Advanced-Options/01-Faceting.html">Faceting</a></li>
+<li><a class="" href="04-Advanced-Options/02-Boosting.html">Boosting</a></li>
+<li><a class="" href="04-Advanced-Options/03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="" href="04-Advanced-Options/04-Elevation.html">Elevation</a></li>
+</ul>
+<li><a class="" href="05-Customisation.html">Customisation</a></li>
+<li><a class="" href="06-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="07-Debugging.html">Debugging</a></li>
+<li><a class="" href="08-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="09-View-Permissions.html">View Permissions</a></li>
 <li class="heading"><span>Submodules</span></li>
 <ul>
-<li><a class="" href="09-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
-<li><a class="" href="09-Submodules/02-Subsites.html">Subsites</a></li>
-<li><a class="" href="09-Submodules/03-Fluent.html">Fluent</a></li>
-<li><a class="" href="09-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
-<li><a class="" href="09-Submodules/05-Elemental.html">Elemental</a></li>
+<li><a class="" href="10-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="10-Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="10-Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="10-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
+<li><a class="" href="10-Submodules/05-Elemental.html">Elemental</a></li>
 </ul>
 <li class="heading"><span>Contributing</span></li>
 <ul>
-<li><a class="" href="10-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
-<li><a class="" href="10-Contributing/02-Contributing.html">Contributing</a></li>
+<li><a class="" href="11-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="" href="11-Contributing/02-Contributing.html">Contributing</a></li>
 </ul>
 <li class="heading"><span>Help</span></li>
 <ul>
-<li><a class="" href="11-Help/01-Changelog.html">Changelog</a></li>
-<li><a class="" href="11-Help/02-FAQ.html">FAQ</a></li>
-<li><a class="" href="11-Help/03-Known-issues.html">Known issues</a></li>
+<li><a class="" href="12-Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="12-Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="12-Help/03-Known-issues.html">Known issues</a></li>
 </ul>
 <li class="heading"><span>About</span></li>
 <ul>
-<li><a class="" href="12-About/01-About.html">About</a></li>
-<li><a class="" href="12-About/02-Coverage.html">Coverage</a></li>
-<li><a class="" href="12-About/03-Codebase-stats.html">Codebase stats</a></li>
-<li><a class="" href="12-About/04-Plans.html">Plans</a></li>
+<li><a class="" href="13-About/01-About.html">About</a></li>
+<li><a class="" href="13-About/02-Coverage.html">Coverage</a></li>
+<li><a class="" href="13-About/03-Codebase-stats.html">Codebase stats</a></li>
+<li><a class="" href="13-About/04-Plans.html">Plans</a></li>
 </ul>
 </ul>
         <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
@@ -678,7 +685,7 @@ at least one core free for handling page visits, while you’re running an index
 <p>This name should match the name you provided in your Index extending the <code>BaseIndex</code> you are instructed
 to create in the first step of this document.</p>
 <h4 id="moving-from-init-to-yml">Moving from init to YML <a class="heading-anchor-permalink" href="#moving-from-init-to-yml">#</a></h4>
-<p>The <a href="09-Submodules/01-Fulltext-Search-Compatibility.html">compatibility module</a> has an optional extension method that allows you to build your index and then generate the YML content for you. See the compatibility module for more details.</p>
+<p>The <a href="10-Submodules/01-Fulltext-Search-Compatibility.html">compatibility module</a> has an optional extension method that allows you to build your index and then generate the YML content for you. See the compatibility module for more details.</p>
 <h2 id="grouped-indexing">Grouped indexing <a class="heading-anchor-permalink" href="#grouped-indexing">#</a></h2>
 <p>Note, grouped indexing is <code>0</code> based. Thus, if there are 150 groups to index, the final group to index will be 149 instead of 150.</p>
 <h2 id="another-way-to-set-the-config-in-php">Another way to set the config in PHP <a class="heading-anchor-permalink" href="#another-way-to-set-the-config-in-php">#</a></h2>
@@ -717,6 +724,69 @@ path to the facet. e.g. if you want to have facets on <code>RelationObject-&gt;R
     - Firesphere\SolrSearch\Tests\TestIndexThree
 </code></pre>
 <p>Looking at the <code>tests</code> folder, there is a <code>TestIndexFour</code>. This index is not loaded unless explicitly asked.</p>
+<h1 id="executing-a-search">Executing a search <a class="heading-anchor-permalink" href="#executing-a-search">#</a></h1>
+<p>To search, here’s an example using all the features, and set the resulting outcome from the search
+on the current <code>Controller</code> to be useable in the templates.</p>
+<pre><code class="language-php">class SearchController extends PageController
+{
+    /**
+     * @param array $data Data from the submission
+     * @param SearchForm $form Submitted search form
+     * @return $this
+     */
+    public function searchMyContent($data, $form)
+    {
+        $searchVars = $this-&gt;getRequest()-&gt;getVars();
+        if (!empty($searchVars)) {
+            $this-&gt;setQuery($searchVars);
+            /** @var BaseIndex $index */
+            $index = Injector::inst()-&gt;get(MyIndex::class);
+    
+            // Start building the query, by adding the query term
+            $query = new BaseQuery();
+            $query-&gt;addTerm($searchVars['Query']);
+    
+            // Set the facets
+            $query-&gt;setFacetsMinCount(1);
+            $facetedFields = $index-&gt;getFacetFields();
+            foreach ($facetedFields as $className =&gt; $field) {
+                if (!empty($data[$field['Title']])) {
+                    $query-&gt;addFacetFilter($field['Title'], $data[$field['Title']]);
+                }
+            }
+    
+            // Set the startpoint of the results
+            $offset = $this-&gt;getRequest()-&gt;getVar('start') ?: 0;
+            $query-&gt;setStart($offset);
+    
+            // Assuming &quot;Order&quot; is your query parameter that defines the sort order
+            $sort = isset($data['Order']) ? strtolower($data['Order']) : 'asc';
+    
+            // Set the sorting. This can be an array of multiple sorts
+            $params['sort'] = MySortableClass::class . '_Created ' . $sort;
+            $query-&gt;setSort($params);
+    
+            // Execute the search
+            $result = $index-&gt;doSearch($query);
+    
+            // Set the query, possibly to be used to display it back to the user
+            $this-&gt;setQuery($searchVars);
+            // Set the total items found
+            $this-&gt;setTotal($result-&gt;Matches-&gt;totalItems);
+            // Set the results on the Controller
+            $this-&gt;setResults($result-&gt;Matches);
+            // If there is some spellchecking, set it to be used in the template
+            $this-&gt;setSpellcheck($result-&gt;Spellcheck);
+            // Set the list of facets
+            $this-&gt;setFacets($result-&gt;Facets);
+        }
+    
+        return $this;
+    }
+}
+</code></pre>
+<p><strong>NOTE</strong></p>
+<p>This is so called “pseudo code”, it may not exactly work, but serves as example.</p>
 <hr>
 <p><sup>1</sup> Although not required, it’s highly recomended</p>
 <p><sup>2</sup> The second option of an array can be omitted and directly given the boost value</p>

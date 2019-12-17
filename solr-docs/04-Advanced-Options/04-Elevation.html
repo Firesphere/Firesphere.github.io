@@ -485,87 +485,59 @@
 <li><a class="" href="../01-Installation.html">Installation</a></li>
 <li><a class="" href="../02-Solr.html">Solr</a></li>
 <li><a class="" href="../03-Usage.html">Usage</a></li>
-<li><a class="" href="../04-Customisation.html">Customisation</a></li>
-<li><a class="" href="../05-CMS-Usage.html">CMS Usage</a></li>
-<li><a class="" href="../06-Debugging.html">Debugging</a></li>
-<li><a class="" href="../07-Suggestions.html">Suggestions</a></li>
-<li><a class="" href="../08-View-Permissions.html">View Permissions</a></li>
+<li class="heading"><span>Advanced Options</span></li>
+<ul>
+<li><a class="" href="01-Faceting.html">Faceting</a></li>
+<li><a class="" href="02-Boosting.html">Boosting</a></li>
+<li><a class="" href="03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="active" href="04-Elevation.html">Elevation</a></li>
+</ul>
+<li><a class="" href="../05-Customisation.html">Customisation</a></li>
+<li><a class="" href="../06-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="../07-Debugging.html">Debugging</a></li>
+<li><a class="" href="../08-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="../09-View-Permissions.html">View Permissions</a></li>
 <li class="heading"><span>Submodules</span></li>
 <ul>
-<li><a class="" href="../09-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
-<li><a class="" href="../09-Submodules/02-Subsites.html">Subsites</a></li>
-<li><a class="" href="../09-Submodules/03-Fluent.html">Fluent</a></li>
-<li><a class="" href="../09-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
-<li><a class="" href="../09-Submodules/05-Elemental.html">Elemental</a></li>
+<li><a class="" href="../10-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="../10-Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="../10-Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="../10-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
+<li><a class="" href="../10-Submodules/05-Elemental.html">Elemental</a></li>
 </ul>
 <li class="heading"><span>Contributing</span></li>
 <ul>
-<li><a class="" href="../10-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
-<li><a class="" href="../10-Contributing/02-Contributing.html">Contributing</a></li>
+<li><a class="" href="../11-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="" href="../11-Contributing/02-Contributing.html">Contributing</a></li>
 </ul>
 <li class="heading"><span>Help</span></li>
 <ul>
-<li><a class="active" href="01-Changelog.html">Changelog</a></li>
-<li><a class="" href="02-FAQ.html">FAQ</a></li>
-<li><a class="" href="03-Known-issues.html">Known issues</a></li>
+<li><a class="" href="../12-Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="../12-Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="../12-Help/03-Known-issues.html">Known issues</a></li>
 </ul>
 <li class="heading"><span>About</span></li>
 <ul>
-<li><a class="" href="../12-About/01-About.html">About</a></li>
-<li><a class="" href="../12-About/02-Coverage.html">Coverage</a></li>
-<li><a class="" href="../12-About/03-Codebase-stats.html">Codebase stats</a></li>
-<li><a class="" href="../12-About/04-Plans.html">Plans</a></li>
+<li><a class="" href="../13-About/01-About.html">About</a></li>
+<li><a class="" href="../13-About/02-Coverage.html">Coverage</a></li>
+<li><a class="" href="../13-About/03-Codebase-stats.html">Codebase stats</a></li>
+<li><a class="" href="../13-About/04-Plans.html">Plans</a></li>
 </ul>
 </ul>
         <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="changelog">Changelog <a class="heading-anchor-permalink" href="#changelog">#</a></h1>
-<h2 id="1.0-beta">1.0 beta <a class="heading-anchor-permalink" href="#1.0-beta">#</a></h2>
-<ul>
-<li>Fixes to the CMS Index Job.</li>
-<li>Fix issue #140 User not reset correctly.</li>
-<li>Fix issue #143 Not showing in search wasn’t cleaned out correctly.</li>
-<li>Improved documentation.</li>
-<li>Fix stemming issues not properly stemming.</li>
-<li>Fix test errors.</li>
-<li>Fix <code>schema.xml</code> construction.</li>
-<li><a href="../08-View-Permissions.html">Change of Permission indexing from User based to Group based</a>.</li>
-<li>Improved documentation.</li>
-<li>Removed history, moving to a later phase to include in a sub-module.</li>
-</ul>
-<h2 id="0.9.x">0.9.x <a class="heading-anchor-permalink" href="#0.9.x">#</a></h2>
-<ul>
-<li>Documentation updates.</li>
-<li>Bump the version to leave bugs behind.</li>
-</ul>
-<h2 id="0.8.x">0.8.x <a class="heading-anchor-permalink" href="#0.8.x">#</a></h2>
-<ul>
-<li>Use multi-threaded indexing.</li>
-<li>Fix error with buffer adding.</li>
-<li>Initial Synonym support.</li>
-</ul>
-<h2 id="0.7.5-notable-updates">0.7.5 Notable updates <a class="heading-anchor-permalink" href="#0.7.5-notable-updates">#</a></h2>
-<ul>
-<li>Added <code>Add[X]Fields()</code>.</li>
-<li>Fix spellcheck retry.</li>
-<li>Increased test coverage.</li>
-<li>Support for basic Fluent (select your language for each indexing run).</li>
-<li>Documentation.</li>
-<li>Extracted compatibility to separate module.</li>
-</ul>
-<h2 id="0.5-first-release">0.5 First release <a class="heading-anchor-permalink" href="#0.5-first-release">#</a></h2>
-<ul>
-<li>Use Solarium.</li>
-<li>Support Facets.</li>
-<li>Support terms.</li>
-<li>Support boosting.</li>
-<li>Support filtering/excluding.</li>
-<li>Support highlighting.</li>
-<li>Support elevation.</li>
-<li>Simplified API.</li>
-<li>Fulltext Search compatibility.</li>
-</ul>
+        <h1 id="elevation">Elevation <a class="heading-anchor-permalink" href="#elevation">#</a></h1>
+<p>To promote certain results over others, Elevation is a work in progress.</p>
+<h2 id="why-use-elevation">Why use elevation <a class="heading-anchor-permalink" href="#why-use-elevation">#</a></h2>
+<p>If you need to put a certain page above another for certain search queries, you should use
+elevation.</p>
+<p>An example of this is a webshop. As a shop, you want the results for the products to appear
+above the results for a Warranty page for said product. To improve sales.</p>
+<p>Elevation is just what you need for that.</p>
+<h3 id="note">NOTE <a class="heading-anchor-permalink" href="#note">#</a></h3>
+<p>Elevation is currently a work in progress and not yet available for the general public.
+Have a look at <a href="https://github.com/Firesphere/silverstripe-solr-search/pull/56">Elevation WIP</a> for more details.</p>
 
         <hr />
             <h2>Support our work</h2>
