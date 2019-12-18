@@ -571,6 +571,11 @@ for creating your own Index extending either of the Base Indexes, it is a compli
   path: '/my_post_endpoint'
   uri: 'https://mydomain.com'
 </code></pre>
+<h5 id="showinsearch">ShowInSearch <a class="heading-anchor-permalink" href="#showinsearch">#</a></h5>
+<p><code>ShowInSearch</code> is handled within the module. When it is set to false, the object is <em>removed</em> from the Solr core.</p>
+<p>Custom addition of <code>ShowInSearch</code> as a filterable or indexable field will therefore cause unexpected behaviour.</p>
+<p>The reason for removing <code>ShowInSearch = false|0</code> from the indexing process, is to streamline the amount of items in Solr.
+There is no effective need for items to be in the search, if they’re not supposed to show up.</p>
 <h4 id="defining-the-number-of-cpu-cores">Defining the number of CPU cores <a class="heading-anchor-permalink" href="#defining-the-number-of-cpu-cores">#</a></h4>
 <p>If your server has multiple CPU cores available, you can define the number of cores in the config.
 During indexing, this means that each core gets to do an indexing of a group.
