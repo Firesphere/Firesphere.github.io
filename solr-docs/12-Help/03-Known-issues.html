@@ -534,8 +534,8 @@
 <p>It is known that the final index might throw a MySQL Exception.
 This is expected at the moment, and sadly, unavoidable so far.
 If you have a solution, we would love to hear from you!</p>
-<h2 id="linux-hosts-with-vagrant">Linux hosts with Vagrant <a class="heading-anchor-permalink" href="#linux-hosts-with-vagrant">#</a></h2>
-<p>There is a known issue with Linux hosts using Vagrant. Solr does not have
+<h2 id="linux-hosts">Linux hosts <a class="heading-anchor-permalink" href="#linux-hosts">#</a></h2>
+<p>There is a known issue with Linux hosts. Solr does not have
 the correct write permissions, and Apache does not have the correct write permissions either.</p>
 <p>This can be resolved by setting the folder of your Solr Core to <code>/var/solr/data</code>.</p>
 <p>Then, create the following subfolders in the data folder:</p>
@@ -552,7 +552,7 @@ And the other way around, add apache to solr.</p>
 <p><strong>NOTE</strong></p>
 <p>The name of your apache user could be different, so make sure you get it right.
 After updating the group permissions, be sure to log out and back in again.</p>
-<h2 id="solr-and-vagrant-issues%2C-pt.-2">Solr and Vagrant issues, pt. 2 <a class="heading-anchor-permalink" href="#solr-and-vagrant-issues%2C-pt.-2">#</a></h2>
+<h2 id="solr-and-vagrant-issues">Solr and Vagrant issues <a class="heading-anchor-permalink" href="#solr-and-vagrant-issues">#</a></h2>
 <p>It’s also known that Solr won’t properly reload cores on Vagrant VM’s. This is outside
 of control for this module, it is advised to restart Solr before and after a config change.</p>
 <h2 id="solr-is-running-as-the-wrong-user">Solr is running as the wrong user <a class="heading-anchor-permalink" href="#solr-is-running-as-the-wrong-user">#</a></h2>
