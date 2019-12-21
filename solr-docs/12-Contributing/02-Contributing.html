@@ -497,84 +497,137 @@
 <li><a class="" href="../07-Debugging.html">Debugging</a></li>
 <li><a class="" href="../08-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="../09-View-Permissions.html">View Permissions</a></li>
+<li><a class="" href="../10-Dirty-classes.html">Dirty classes</a></li>
 <li class="heading"><span>Submodules</span></li>
 <ul>
-<li><a class="" href="../10-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
-<li><a class="" href="../10-Submodules/02-Subsites.html">Subsites</a></li>
-<li><a class="" href="../10-Submodules/03-Fluent.html">Fluent</a></li>
-<li><a class="" href="../10-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
-<li><a class="" href="../10-Submodules/05-Elemental.html">Elemental</a></li>
+<li><a class="" href="../11-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="../11-Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="../11-Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="../11-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
+<li><a class="" href="../11-Submodules/05-Elemental.html">Elemental</a></li>
 </ul>
 <li class="heading"><span>Contributing</span></li>
 <ul>
-<li><a class="" href="../11-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
-<li><a class="" href="../11-Contributing/02-Contributing.html">Contributing</a></li>
+<li><a class="" href="01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="active" href="02-Contributing.html">Contributing</a></li>
 </ul>
 <li class="heading"><span>Help</span></li>
 <ul>
-<li><a class="active" href="01-Changelog.html">Changelog</a></li>
-<li><a class="" href="02-FAQ.html">FAQ</a></li>
-<li><a class="" href="03-Known-issues.html">Known issues</a></li>
+<li><a class="" href="../13-Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="../13-Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="../13-Help/03-Known-issues.html">Known issues</a></li>
 </ul>
 <li class="heading"><span>About</span></li>
 <ul>
-<li><a class="" href="../13-About/01-About.html">About</a></li>
-<li><a class="" href="../13-About/02-Coverage.html">Coverage</a></li>
-<li><a class="" href="../13-About/03-Codebase-stats.html">Codebase stats</a></li>
-<li><a class="" href="../13-About/04-Plans.html">Plans</a></li>
+<li><a class="" href="../14-About/01-About.html">About</a></li>
+<li><a class="" href="../14-About/02-Coverage.html">Coverage</a></li>
+<li><a class="" href="../14-About/03-Codebase-stats.html">Codebase stats</a></li>
+<li><a class="" href="../14-About/04-Plans.html">Plans</a></li>
 </ul>
 </ul>
         <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img alt="Support our work on GitStore" src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" /></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="changelog">Changelog <a class="heading-anchor-permalink" href="#changelog">#</a></h1>
-<h2 id="1.0-beta">1.0 beta <a class="heading-anchor-permalink" href="#1.0-beta">#</a></h2>
+        <h1 id="contributing">Contributing <a class="heading-anchor-permalink" href="#contributing">#</a></h1>
+<p>Any open source product is only as good as the community behind it. You can participate by sharing code, ideas, or simply helping others. No matter what your skill level is, every contribution counts.</p>
 <ul>
-<li>Fixes to the CMS Index Job.</li>
-<li>Fix issue #140 User not reset correctly.</li>
-<li>Fix issue #143 Not showing in search wasn’t cleaned out correctly.</li>
-<li>Improved documentation.</li>
-<li>Fix stemming issues not properly stemming.</li>
-<li>Fix test errors.</li>
-<li>Fix <code>schema.xml</code> construction.</li>
-<li><a href="../09-View-Permissions.html">Change of Permission indexing from User based to Group based</a>.</li>
-<li>Improved documentation.</li>
-<li>Removed history, moving to a later phase to include in a sub-module.</li>
-<li>Fix issues encountered for Dirty classes and Indexing</li>
-<li>Improved <code>PCNTL</code> detection for the CMS run of the Indexing job</li>
+<li><a href="http://docs.silverstripe.org/en/4/contributing/issues_and_bugs/">Sharing your opinion and raising issues</a></li>
+<li><a href="https://docs.silverstripe.org/en/4/contributing/code/">Providing code, whether it’s creating a feature or fixing a bug</a></li>
 </ul>
-<h2 id="0.9.x">0.9.x <a class="heading-anchor-permalink" href="#0.9.x">#</a></h2>
+<h2 id="signing-commits">Signing commits <a class="heading-anchor-permalink" href="#signing-commits">#</a></h2>
+<p>It is highly recommended to sign commits with your PGP key to ensure integrity.</p>
+<h1 id="further-notes">Further notes <a class="heading-anchor-permalink" href="#further-notes">#</a></h1>
+<p>Parts of this contributing guidelines are taken from <a href="https://github.com/bitfield/script/blob/master/CONTRIBUTING.md#Documentation">Bitfield Script</a></p>
+<h2 id="documentation">Documentation <a class="heading-anchor-permalink" href="#documentation">#</a></h2>
+<p>It doesn’t matter if you write the greatest piece of code in the history of the world, if no one knows it exists, or how to use it.
+Write doc comments</p>
+<p>Any functions or methods you write should have useful documentation comments in the standard PHP Docblock format. Specifically, they should say what inputs the function takes, what it does (in detail), and what outputs it returns. If it returns an error value, explain under what circumstances this happens.</p>
+<p>For example:</p>
+<pre><code class="language-php">/**
+ * Method to enable predictive search
+ * Gives the user a prediction on what it is trying to search for
+ * @param string $searchTerm
+ * @return ArrayList
+ */
+</code></pre>
+<p>This is the whole user manual for your code. It will be included in the autogenerated documentation for the whole package. Remember that readers will often see it without the accompanying code, so it needs to make sense on its own.</p>
+<h2 id="write-a-use-case">Write a use case <a class="heading-anchor-permalink" href="#write-a-use-case">#</a></h2>
+<p>This is probably the most important thing to bear in mind. A great design principle for software libraries is
+to start with a real-world use case, and try to implement it using the feature you have in mind.
+No issues or PRs will be accepted into script without an accompanying use case (See the project board).
+And I hold myself to that rule just as much as anybody else.</p>
+<p>What do I mean by “use case”? I mean a real problem that you or someone else actually has, that could be solved using the feature.
+For example, you might think it’s a very cool idea to add a Frobnicate() method to this module.
+Maybe it is, but what’s it for? Where would this be used in the real world? Can you give an example of a
+problem that could be solved by a program using Frobnicate()? If so, what would the program look like?</p>
+<p>The reason for insisting on this up front is that it’s much easier to design a feature the right way if you start
+with its usage in mind. It’s all too easy to design something in the abstract, and then find later that when you
+try to use it in a program, the API is completely unsuitable.</p>
+<p>Another reason for having a use case is that it gives us a useful example program,
+which can be included with the library to show how the feature is used.</p>
+<p>The final reason is that it’s tempting to over-elaborate a design and add all sorts of bells and whistles
+that nobody actually wants. Simple APIs are best. If you think of an enhancement,
+but it’s not needed for your use case, leave it out. Things can always be enhanced later if necessary.</p>
+<h2 id="update-the-docs">Update the docs <a class="heading-anchor-permalink" href="#update-the-docs">#</a></h2>
+<p>Any change to the API should also be accompanied by an update to the docs.
+If you add a new method, add it in the appropriate place (sources, filters, etc.),
+in its correct order alphabetically, and with a suitable (brief) example of its use.</p>
+<h1 id="before-submitting-your-pull-request">Before submitting your pull request <a class="heading-anchor-permalink" href="#before-submitting-your-pull-request">#</a></h1>
+<p>Here’s a handy checklist for making sure your PR will be accepted as quickly as possible.</p>
 <ul>
-<li>Documentation updates.</li>
-<li>Bump the version to leave bugs behind.</li>
+<li>[ ] Have you opened an issue to discuss the feature and agree its general design?</li>
+<li>[ ] Do you have a use case and, ideally, an example program using the feature?</li>
+<li>[ ] Do you have tests covering 90%+ of the feature code (and, of course passing)</li>
+<li>[ ] Have you written complete and accurate doc comments?</li>
+<li>[ ] Have you updated the README, Documentation and its table of contents?</li>
+<li>[ ] You rock. Thanks a lot.</li>
 </ul>
-<h2 id="0.8.x">0.8.x <a class="heading-anchor-permalink" href="#0.8.x">#</a></h2>
-<ul>
-<li>Use multi-threaded indexing.</li>
-<li>Fix error with buffer adding.</li>
-<li>Initial Synonym support.</li>
-</ul>
-<h2 id="0.7.5-notable-updates">0.7.5 Notable updates <a class="heading-anchor-permalink" href="#0.7.5-notable-updates">#</a></h2>
-<ul>
-<li>Added <code>Add[X]Fields()</code>.</li>
-<li>Fix spellcheck retry.</li>
-<li>Increased test coverage.</li>
-<li>Support for basic Fluent (select your language for each indexing run).</li>
-<li>Documentation.</li>
-<li>Extracted compatibility to separate module.</li>
-</ul>
-<h2 id="0.5-first-release">0.5 First release <a class="heading-anchor-permalink" href="#0.5-first-release">#</a></h2>
-<ul>
-<li>Use Solarium.</li>
-<li>Support Facets.</li>
-<li>Support terms.</li>
-<li>Support boosting.</li>
-<li>Support filtering/excluding.</li>
-<li>Support highlighting.</li>
-<li>Support elevation.</li>
-<li>Simplified API.</li>
-<li>Fulltext Search compatibility.</li>
-</ul>
+<h1 id="after-submitting-your-pr">After submitting your PR <a class="heading-anchor-permalink" href="#after-submitting-your-pr">#</a></h1>
+<p>Here’s a nice tip for PR-driven development in general. After you’ve submitted the PR, do a ‘pre-code-review’.
+Go through the diffs, line by line, and be your own code reviewer. Does something look weird?
+Is something not quite straightforward? It’s quite likely that you’ll spot errors at this stage which you missed before,
+simply because you’re looking at the code with a reviewer’s mindset.</p>
+<p>If so, fix them! But if you can foresee a question from a code reviewer, comment on the code to answer it in advance.
+(Even better, improve the code so that the question doesn’t arise.)</p>
+<h1 id="the-code-review-process">The code review process <a class="heading-anchor-permalink" href="#the-code-review-process">#</a></h1>
+<p>If you’ve completed all these steps, I <em>will</em> invest significant time and energy in giving your PR a detailed code review.
+This is a powerful and beneficial process which can not only improve the code, but can also help you learn to be a better
+engineer and a better Go programmer—and the same goes for me!</p>
+<h2 id="expect-to-be-taken-seriously">Expect to be taken seriously <a class="heading-anchor-permalink" href="#expect-to-be-taken-seriously">#</a></h2>
+<p>Don’t think of code review as a “you got this wrong, fix it” kind of conversation (this isn’t a helpful review comment).
+Instead, think of it as a discussion where both sides can ask questions, make suggestions, clarify problems and misunderstandings,
+catch mistakes, and add improvements.</p>
+<p>You shouldn’t be disappointed if you don’t get a simple ‘LGTM’ and an instant merge.
+If this is what you’re used to, then your team isn’t really doing code review to its full potential.
+Instead, the more comments you get, the more seriously it means I’m taking your work. Where appropriate,
+I’ll say what I liked as well as what I’d like to see improved.</p>
+<h2 id="dealing-with-comments">Dealing with comments <a class="heading-anchor-permalink" href="#dealing-with-comments">#</a></h2>
+<p>Now comes the tricky bit. You may not agree with some of the code review comments.
+Reviewing code is a delicate business in the first place, requiring diplomacy as well as discretion,
+but responding to code reviews is also a skilled task.</p>
+<p>If you find yourself reacting emotionally, take a break. Go walk in the woods for a while,
+or play with a laughing child. When you come back to the code, approach it as though it were someone else’s,
+not your own, and ask yourself seriously whether or not the reviewer <em>has a point</em>.</p>
+<p>If you genuinely think the reviewer has just misunderstood something, or made a mistake,
+try to clarify the issue. Ask questions, don’t make accusations. Remember that every project has a certain way of doing things,
+which may not be your way. It’s polite to go along with these practices and conventions.</p>
+<p>You may feel as though you’re doing the project maintainer a favour by contributing, as indeed you are,
+but an open source project is like somebody’s home. They’re used to living there, they probably like it the way it is,
+and they don’t always respond well to strangers marching in and rearranging the furniture.</p>
+<p>Be considerate, and be willing to listen and make changes.</p>
+<h2 id="this-may-take-a-while">This may take a while <a class="heading-anchor-permalink" href="#this-may-take-a-while">#</a></h2>
+<p>Don’t be impatient. We’ve all had the experience of sending in our beautifully-crafted PR and then waiting, waiting, waiting.
+Why won’t those idiots just merge it? How come other issues and PRs are getting dealt with ahead of mine? Am I invisible?</p>
+<p>In fact, doing a <em>proper</em> and serious code review is a time-consuming business. It’s not just a case of skim-reading the diffs.
+The reviewer will need to check out your branch, run the tests, think carefully about what you’ve done,
+make suggestions, test alternatives. It’s almost as much work as writing the PR in the first place.</p>
+<p>Open source maintainers are just regular folk with jobs, kids, and zero free time or energy.
+They may not be able to drop everything and put in several hours on your PR.
+The task may have to wait a week or two until they can get sufficient time and peace and quiet to work on it.
+Don’t pester them. It’s fine to add a comment on the PR if you haven’t heard anything for a while,
+asking if the reviewer’s been able to look at it and whether there’s anything you can do to help speed things up.
+Comments like ‘Y U NO MERGE’ are unlikely to elicit a positive response.</p>
+<p>Thanks again for helping out!</p>
 
         <hr />
             <h2>Support our work</h2>
