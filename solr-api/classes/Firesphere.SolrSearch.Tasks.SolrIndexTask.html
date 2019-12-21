@@ -179,8 +179,8 @@ execute via the TaskRunner</span><pre>run</pre>
                                 <span class="description">Check the amount of groups and the total against the isGroup check.</span><pre>getGroupSettings</pre>
                             </a>
                         </li>                        <li class="methodprivate">
-                            <a href="#method_hasPCNTL" title="hasPCNTL ::">
-                                <span class="description"></span><pre>hasPCNTL</pre>
+                            <a href="#method_hasPCNTL" title="hasPCNTL ::Check if PCNTL is available and/or useable.">
+                                <span class="description">Check if PCNTL is available and/or useable.</span><pre>hasPCNTL</pre>
                             </a>
                         </li>                        <li class="methodprivate">
                             <a href="#method_indexClass" title="indexClass ::Index a single class for a given index. {@link static::indexClassForIndex()}">
@@ -432,22 +432,20 @@ to identify problems and fix them.</span><pre>logException</pre>
 
                         </div>                        <a id="method_hasPCNTL"></a>
                         <div class="element clickable methodprivate method_hasPCNTL" data-toggle="collapse" data-target=".method_hasPCNTL .collapse">
-                            <h2>hasPCNTL</h2>
-                            <pre>hasPCNTL()</pre>
+                            <h2>Check if PCNTL is available and/or useable.</h2>
+                            <pre>hasPCNTL(): boolean</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"></div>
+                                    <div class="long_description"><p>The unittest param is from phpunit.xml.dist, meant to bypass the exit(0) call
+The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL (yet)</p></div>
 
                                     <table class="table">                                            <tr>
                                                 <th>
                                                 </th>
                                                 <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                </div>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>boolean</code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_indexClass"></a>
@@ -1008,6 +1006,6 @@ execute via the TaskRunner</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSat, 21 Dec 2019 23:43:10 +0000.<br/>
+            generated onSat, 21 Dec 2019 23:57:01 +0000.<br/>
     </footer></body>
 </html>
