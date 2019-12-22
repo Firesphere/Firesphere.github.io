@@ -210,8 +210,8 @@
     {
       "path": "06-CMS-Usage.md",
       "url": "06-CMS-Usage.html",
-      "content": "# CMS Usage\n\nSee the Search admin in the CMS\n\n## Features\n- See if there are any applicable dirty objects to re-index\n- See the latest Solr logs\n- Add, remove or edit Synonyms\n",
-      "html": "<h1 id=\"cms-usage\">CMS Usage <a class=\"heading-anchor-permalink\" href=\"#cms-usage\">#</a></h1>\n<p>See the Search admin in the CMS</p>\n<h2 id=\"features\">Features <a class=\"heading-anchor-permalink\" href=\"#features\">#</a></h2>\n<ul>\n<li>See if there are any applicable dirty objects to re-index</li>\n<li>See the latest Solr logs</li>\n<li>Add, remove or edit Synonyms</li>\n</ul>\n",
+      "content": "# CMS Usage\n\nSee the Search admin in the CMS\n\n## Features\n- See if there are any applicable dirty objects to re-index\n- See the latest Solr logs\n- Add, remove or edit Synonyms\n    - Note that YML based synonyms can not be edited from the CMS\n",
+      "html": "<h1 id=\"cms-usage\">CMS Usage <a class=\"heading-anchor-permalink\" href=\"#cms-usage\">#</a></h1>\n<p>See the Search admin in the CMS</p>\n<h2 id=\"features\">Features <a class=\"heading-anchor-permalink\" href=\"#features\">#</a></h2>\n<ul>\n<li>See if there are any applicable dirty objects to re-index</li>\n<li>See the latest Solr logs</li>\n<li>Add, remove or edit Synonyms\n<ul>\n<li>Note that YML based synonyms can not be edited from the CMS</li>\n</ul>\n</li>\n</ul>\n",
       "id": 9
     },
     {
