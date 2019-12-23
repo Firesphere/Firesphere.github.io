@@ -349,7 +349,7 @@ $options is not used anymore, added for backward compatibility</h2>
                         </div>                        <a id="method_addExclude"></a>
                         <div class="element clickable methodpublic method_addExclude inherited" data-toggle="collapse" data-target=".method_addExclude .collapse">
                             <h2>Exclude fields from the search action</h2>
-                            <pre>addExclude( $field, $value): $this</pre>
+                            <pre>addExclude(string $field,string|array $value): $this</pre>
                             <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -357,10 +357,10 @@ $options is not used anymore, added for backward compatibility</h2>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$field</h4>
-                                                <code></code><p></p>
+                                                <code>string</code><p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$value</h4>
-                                                <code></code><p></p>
+                                                <code>string|array</code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>$this</code><p></p>                                </div>
                             </div>
@@ -368,7 +368,7 @@ $options is not used anymore, added for backward compatibility</h2>
                         </div>                        <a id="method_addFacetFilter"></a>
                         <div class="element clickable methodpublic method_addFacetFilter inherited" data-toggle="collapse" data-target=".method_addFacetFilter .collapse">
                             <h2>Add faceting</h2>
-                            <pre>addFacetFilter(string $field,string $value): $this</pre>
+                            <pre>addFacetFilter(string $field,string|array $value): $this</pre>
                             <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -379,7 +379,7 @@ $options is not used anymore, added for backward compatibility</h2>
                                                 <code>string</code><p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$value</h4>
-                                                <code>string</code><p></p>
+                                                <code>string|array</code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>$this</code><p></p>                                </div>
                             </div>
@@ -403,7 +403,7 @@ $options is not used anymore, added for backward compatibility</h2>
                         </div>                        <a id="method_addFilter"></a>
                         <div class="element clickable methodpublic method_addFilter inherited" data-toggle="collapse" data-target=".method_addFilter .collapse">
                             <h2>Adds filters to filter on by value</h2>
-                            <pre>addFilter(string $field,string $value): $this</pre>
+                            <pre>addFilter(string $field,string|array $value): $this</pre>
                             <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -414,7 +414,7 @@ $options is not used anymore, added for backward compatibility</h2>
                                                 <code>string</code><p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$value</h4>
-                                                <code>string</code><p></p>
+                                                <code>string|array</code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>$this</code><p></p>                                </div>
                             </div>
@@ -1309,6 +1309,6 @@ SiteTree::class   =&gt; [
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSun, 22 Dec 2019 07:12:20 +0000.<br/>
+            generated onMon, 23 Dec 2019 23:18:16 +0000.<br/>
     </footer></body>
 </html>
