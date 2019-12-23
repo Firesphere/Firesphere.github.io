@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>SilverStripe Solr search &raquo;\Firesphere\SolrSearch\Helpers\Statics</title>
+    <title>SilverStripe Solr search &raquo;\Firesphere\SolrPermissions\Extensions\BaseIndexExtension</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>        <link href="../css/template.css" rel="stylesheet" media="all"/>        <!--[if lt IE 9]>
         <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
@@ -99,8 +99,12 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>    <li class="methodpublic">
-        <a href="#method_getTypeMap" title="getTypeMap ::Get the typemap">
-            <span class="description">Get the typemap</span><pre>getTypeMap</pre>
+        <a href="#method_onAfterInit" title="onAfterInit ::">
+            <span class="description"></span><pre>onAfterInit</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_onBeforeSearch" title="onBeforeSearch ::">
+            <span class="description"></span><pre>onBeforeSearch</pre>
         </a>
     </li>            </ul>
         </li>
@@ -119,24 +123,23 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>Statics</h1>
-                <small style="display: block; text-align: right">                </small>
-                <p class="short_description">Class Statics
-Typemap static helper</p>
+                <h1>BaseIndexExtension</h1>
+                <small style="display: block; text-align: right">                        Extends\SilverStripe\Core\Extension                </small>
+                <p class="short_description">Class \Firesphere\SolrPermissions\Extensions\BaseIndexExtension</p>
                 <div class="details">
                     <div class="long_description">
                     </div>
                     <table class="table table-bordered">                                <tr>
                                     <th>package                                    </th>
-                                    <td><p>Firesphere\SolrSearch\Helpers</p>
+                                    <td><p>Default</p>
                                     </td>
                                 </tr>                    </table>
 
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_getTypeMap"></a>
-                        <div class="element clickable methodpublic method_getTypeMap" data-toggle="collapse" data-target=".method_getTypeMap .collapse">
-                            <h2>Get the typemap</h2>
-                            <pre>getTypeMap(): array</pre>
-                            <div class="labels"><span class="label">static</span>                            </div>
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_onAfterInit"></a>
+                        <div class="element clickable methodpublic method_onAfterInit" data-toggle="collapse" data-target=".method_onAfterInit .collapse">
+                            <h2>onAfterInit</h2>
+                            <pre>onAfterInit()</pre>
+                            <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -145,39 +148,64 @@ Typemap static helper</p>
                                                 <th>
                                                 </th>
                                                 <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>array</code><p></p>                                </div>
+                                            </tr>                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                </div>
                             </div>
 
-                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_typemap"> </a>
-                            <div class="element clickable propertyprotected property_typemap" data-toggle="collapse" data-target=".property_typemap .collapse">
-                                <h2>The actual typemap should be read from config</h2>
-                                <pre>typemap :array</pre>
-                                <div class="labels"><span class="label">static</span>                                </div>
+                        </div>                        <a id="method_onBeforeSearch"></a>
+                        <div class="element clickable methodpublic method_onBeforeSearch" data-toggle="collapse" data-target=".method_onBeforeSearch .collapse">
+                            <h2>onBeforeSearch</h2>
+                            <pre>onBeforeSearch(\Firesphere\SolrSearch\Queries\BaseQuery $query,\Solarium\QueryType\Select\Query\Query $clientQuery)</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$query</h4>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$clientQuery</h4>
+                                                <code>\Solarium\QueryType\Select\Query\Query</code><p></p>
+                                            </div>                                </div>
+                            </div>
+
+                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_owner"> </a>
+                            <div class="element clickable propertypublic property_owner" data-toggle="collapse" data-target=".property_owner .collapse">
+                                <h2>owner</h2>
+                                <pre>owner :\Firesphere\SolrSearch\Indexes\BaseIndex|\Firesphere\SolrPermissions\Extensions\BaseIndexExtension</pre>
+                                <div class="labels">                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
 
                                         <table class="table">                                                <tr>
-                                                    <th>var
+                                                    <th>
                                                     </th>
-                                                    <td><p>map SilverStripe DB types to Solr types</p>                                                    </td>
+                                                    <td>                                                    </td>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>array</code>                                    </div>
+                                            <code>\Firesphere\SolrSearch\Indexes\BaseIndex|\Firesphere\SolrPermissions\Extensions\BaseIndexExtension</code>                                    </div>
                                 </div>
                             </div>                </div>
             </div>
-            <a id="\Firesphere\SolrSearch\Helpers\Statics"></a>
+            <a id="\Firesphere\SolrPermissions\Extensions\BaseIndexExtension"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
-    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Helpers.html">Helpers</a></li>
-                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Helpers.Statics.html">Statics</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrPermissions.Extensions.html">Extensions</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrPermissions.Extensions.BaseIndexExtension.html">BaseIndexExtension</a></li>
             </ul>
         </div>
     </div>    </div>    <footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onMon, 23 Dec 2019 23:41:17 +0000.<br/>
+            generated onMon, 23 Dec 2019 23:41:18 +0000.<br/>
     </footer></body>
 </html>
