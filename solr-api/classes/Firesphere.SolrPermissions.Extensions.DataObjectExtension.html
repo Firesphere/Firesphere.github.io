@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -125,7 +125,7 @@ This is additional to the GroupView permissions</span><pre>getMemberView</pre>
                 <small style="display: block; text-align: right">                        Extends\SilverStripe\ORM\DataExtension                </small>
                 <p class="short_description">Class \Firesphere\SolrPermissions\Extensions\DataObjectExtension</p>
                 <div class="details">
-                    <div class="long_description">
+                    <div class="long_description"><p>Add the ability to get the Member View statusses for Solr.</p>
                     </div>
                     <table class="table table-bordered">                                <tr>
                                     <th>package                                    </th>
@@ -151,7 +151,23 @@ This is additional to the GroupView permissions</h2>
                                         <code>array</code><p></p>                                </div>
                             </div>
 
-                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_owner"> </a>
+                        </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_memberList"> </a>
+                            <div class="element clickable propertyprotected property_memberList" data-toggle="collapse" data-target=".property_memberList .collapse">
+                                <h2>Cached list of the members to reduce looping impact</h2>
+                                <pre>memberList :\SilverStripe\ORM\ArrayList</pre>
+                                <div class="labels"><span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td><p>Cached list of the members to reduce looping impact</p>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>\SilverStripe\ORM\ArrayList</code>                                    </div>
+                                </div>
+                            </div>                            <a id="property_owner"> </a>
                             <div class="element clickable propertypublic property_owner" data-toggle="collapse" data-target=".property_owner .collapse">
                                 <h2>owner</h2>
                                 <pre>owner :\SilverStripe\ORM\DataObject|\Firesphere\SolrPermissions\Extensions\DataObjectExtension</pre>
@@ -180,6 +196,6 @@ This is additional to the GroupView permissions</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onWed, 25 Dec 2019 05:29:56 +0000.<br/>
+            generated onWed, 25 Dec 2019 05:35:18 +0000.<br/>
     </footer></body>
 </html>
