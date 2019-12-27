@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -99,6 +99,10 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>    <li class="methodpublic">
+        <a href="#method_addFulltextFields" title="addFulltextFields ::Add a Fulltext Field">
+            <span class="description">Add a Fulltext Field</span><pre>addFulltextFields</pre>
+        </a>
+    </li>    <li class="methodpublic">
         <a href="#method_initToYml" title="initToYml ::Generate a yml version of the init method indexes">
             <span class="description">Generate a yml version of the init method indexes</span><pre>initToYml</pre>
         </a>
@@ -144,7 +148,36 @@ Backward compatibility stubs for the Full text search module</p>
                                     </td>
                                 </tr>                    </table>
 
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_getCollatedNice"></a>
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_addFulltextFields"></a>
+                        <div class="element clickable methodpublicdeprecated method_addFulltextFields" data-toggle="collapse" data-target=".method_addFulltextFields .collapse">
+                            <h2>Add a Fulltext Field</h2>
+                            <pre>addFulltextFields(boolean $includeSubclasses = true)</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>deprecated
+                                                </th>
+                                                <td><p>Please use addAllFulltextFields(). IncludeSubClasses is not used anymore</p>                                                </td>
+                                            </tr>                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>                                                        <dt>\ReflectionException</dt>
+                                                        <dd></dd>                                                    </dl>
+                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$includeSubclasses</h4>
+                                                <code>boolean</code><p><p>Compatibility mode, not actually used</p></p>
+                                            </div>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getCollatedNice"></a>
                         <div class="element clickable methodprotected method_getCollatedNice" data-toggle="collapse" data-target=".method_getCollatedNice .collapse">
                             <h2>Create a spellcheck string that&#039;s not the literal collation with Solr query parts</h2>
                             <pre>getCollatedNice(string $spellcheck): string</pre>
@@ -268,6 +301,6 @@ Backward compatibility stubs for the Full text search module</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onFri, 27 Dec 2019 22:36:54 +0000.<br/>
+            generated onFri, 27 Dec 2019 22:43:16 +0000.<br/>
     </footer></body>
 </html>
