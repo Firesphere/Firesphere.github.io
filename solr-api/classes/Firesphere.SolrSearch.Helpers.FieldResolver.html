@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -122,6 +122,10 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>                        <li class="methodprotected">
+                            <a href="#method_findOrigin" title="findOrigin ::">
+                                <span class="description"></span><pre>findOrigin</pre>
+                            </a>
+                        </li>                        <li class="methodprotected">
                             <a href="#method_getBuildSources" title="getBuildSources ::Get the sources to build in to a Solr field">
                                 <span class="description">Get the sources to build in to a Solr field</span><pre>getBuildSources</pre>
                             </a>
@@ -136,6 +140,10 @@
                         </li>                        <li class="methodprotected">
                             <a href="#method_getNext" title="getNext ::Get the next lookup item from the buildSources">
                                 <span class="description">Get the next lookup item from the buildSources</span><pre>getNext</pre>
+                            </a>
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_getOriginForType" title="getOriginForType ::">
+                                <span class="description"></span><pre>getOriginForType</pre>
                             </a>
                         </li>                        <li class="methodprotected">
                             <a href="#method_getRelationData" title="getRelationData ::Relational data">
@@ -208,6 +216,40 @@ Some additional introspection tools that are used often by the fulltext search c
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$classes</h4>
                                                 <code>array</code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_findOrigin"></a>
+                        <div class="element clickable methodprotected method_findOrigin" data-toggle="collapse" data-target=".method_findOrigin .collapse">
+                            <h2>findOrigin</h2>
+                            <pre>findOrigin( $field, $fullfield,array $found, $class, $fieldOptions): array</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>                                                        <dt>\ReflectionException</dt>
+                                                        <dd></dd>                                                    </dl>
+                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code></code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$fullfield</h4>
+                                                <code></code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$found</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code></code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$fieldOptions</h4>
+                                                <code></code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>array</code><p></p>                                </div>
                             </div>
@@ -294,7 +336,7 @@ Some additional introspection tools that are used often by the fulltext search c
                         </div>                        <a id="method_getHierarchy"></a>
                         <div class="element clickable methodpublic method_getHierarchy" data-toggle="collapse" data-target=".method_getHierarchy .collapse">
                             <h2>Get all the classes involved in a DataObject hierarchy - both super and optionally subclasses</h2>
-                            <pre>getHierarchy(string $class,boolean $includeSubclasses = true,boolean $dataOnly = false): array</pre>
+                            <pre>getHierarchy(string $class,boolean $dataOnly = false): array</pre>
                             <div class="labels"><span class="label">static</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -316,11 +358,6 @@ Some additional introspection tools that are used often by the fulltext search c
 <li>The class to query</li>
 </ul></p>
                                             </div>                                            <div class="subelement argument">
-                                                <h4>$includeSubclasses</h4>
-                                                <code>boolean</code><p><ul>
-<li>True to return subclasses as well as super classes</li>
-</ul></p>
-                                            </div>                                            <div class="subelement argument">
                                                 <h4>$dataOnly</h4>
                                                 <code>boolean</code><p><ul>
 <li>True to only return classes that have tables</li>
@@ -334,7 +371,7 @@ Some additional introspection tools that are used often by the fulltext search c
                         </div>                        <a id="method_getHierarchyClasses"></a>
                         <div class="element clickable methodprotected method_getHierarchyClasses" data-toggle="collapse" data-target=".method_getHierarchyClasses .collapse">
                             <h2>Get the hierarchy for a class</h2>
-                            <pre>getHierarchyClasses( $class, $includeSubclasses): array</pre>
+                            <pre>getHierarchyClasses( $class): array</pre>
                             <div class="labels"><span class="label">static</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -352,9 +389,6 @@ Some additional introspection tools that are used often by the fulltext search c
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code></code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$includeSubclasses</h4>
                                                 <code></code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>array</code><p></p>                                </div>
@@ -398,6 +432,37 @@ Some additional introspection tools that are used often by the fulltext search c
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$lookup</h4>
                                                 <code></code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getOriginForType"></a>
+                        <div class="element clickable methodprotected method_getOriginForType" data-toggle="collapse" data-target=".method_getOriginForType .collapse">
+                            <h2>getOriginForType</h2>
+                            <pre>getOriginForType( $field, $fullfield,array $found, $fieldOptions, $dataclass,string $type): array</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code></code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$fullfield</h4>
+                                                <code></code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$found</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$fieldOptions</h4>
+                                                <code></code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$dataclass</h4>
+                                                <code></code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>array</code><p></p>                                </div>
                             </div>
@@ -454,7 +519,7 @@ suffixes are needed to support multiple relations with the same name on differen
                         <div class="element clickable methodprivate method_getSubClasses" data-toggle="collapse" data-target=".method_getSubClasses .collapse">
                             <h2>Get the subclasses for the given class
 Should be replaced with PHP native methods</h2>
-                            <pre>getSubClasses( $class, $includeSubclasses,array $classes): array</pre>
+                            <pre>getSubClasses( $class,array $classes): array</pre>
                             <div class="labels"><span class="label">static</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -468,9 +533,6 @@ Should be replaced with PHP native methods</h2>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code></code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$includeSubclasses</h4>
                                                 <code></code><p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$classes</h4>
@@ -655,6 +717,6 @@ Should be replaced with PHP native methods</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSun, 29 Dec 2019 05:17:31 +0000.<br/>
+            generated onMon, 30 Dec 2019 22:36:08 +0000.<br/>
     </footer></body>
 </html>
