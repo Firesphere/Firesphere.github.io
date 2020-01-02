@@ -287,6 +287,13 @@ path to the facet. e.g. if you want to have facets on <code>RelationObject-&gt;R
 on the current <code>Controller</code> to be useable in the templates.</p>
 <pre><code class="language-php">class SearchController extends PageController
 {
+    protected $ResultSet;
+    
+    public function setResultSet($set)
+    {
+        $this-&gt;ResultSet = $set;    
+    }
+
     /**
      * @param array $data Data from the submission
      * @param SearchForm $form Submitted search form
@@ -296,6 +303,7 @@ on the current <code>Controller</code> to be useable in the templates.</p>
     {
         $searchVars = $this-&gt;getRequest()-&gt;getVars();
         if (!empty($searchVars)) {
+            // Set the query, possibly to be used to display it back to the user
             $this-&gt;setQuery($searchVars);
             /** @var BaseIndex $index */
             $index = Injector::inst()-&gt;get(MyIndex::class);
@@ -327,24 +335,80 @@ on the current <code>Controller</code> to be useable in the templates.</p>
             // Execute the search
             $result = $index-&gt;doSearch($query);
     
-            // Set the query, possibly to be used to display it back to the user
-            $this-&gt;setQuery($searchVars);
-            // Set the total items found
-            $this-&gt;setTotal($result-&gt;Matches-&gt;totalItems);
-            // Set the results on the Controller
-            $this-&gt;setResults($result-&gt;Matches);
-            // If there is some spellchecking, set it to be used in the template
-            $this-&gt;setSpellcheck($result-&gt;Spellcheck);
-            // Set the list of facets
-            $this-&gt;setFacets($result-&gt;Facets);
+            // Assuming the controller has this method and variable
+            $this-&gt;setResultSet($result);
         }
     
         return $this;
     }
 }
 </code></pre>
+<p>Now, in your template, you could do something like this, to display the results, based on Bootstrap:</p>
+<pre><code class="language-html">&lt;% with $ResultSet %&gt;
+    &lt;% if $TotalItems %&gt;
+        &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-xs-12&quot;&gt;&lt;br/&gt;
+            &lt;span class=&quot;pull-right&quot;&gt;
+                Results: &lt;span class=&quot;js-total-results&quot;&gt;$TotalItems&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;% else %&gt;
+        &lt;h6 class=&quot;col-xs-12 col-md-6&quot;&gt;No results found for your query &quot;&lt;i&gt;$Up.Query.XML&lt;/i&gt;&quot;&lt;/h6&gt;
+        &lt;span class=&quot;hidden js-total-results&quot;&gt;0&lt;/span&gt;
+    &lt;% end_if %&gt;
+    &lt;% if $Spellcheck.Count %&gt;
+        &lt;h6 class=&quot;col-xs-12 col-md-6&quot;&gt;You might have a spelling error, try
+            &lt;a href=&quot;{$Top.Link}search/?Query={$SpellcheckLink}&quot;&gt;$SpellcheckTitle&lt;/a&gt; instead?
+        &lt;/h6&gt;
+    &lt;% end_if %&gt;
+    &lt;div class=&quot;col-xs-12&quot;&gt;
+        &lt;% if $TotalItems %&gt;
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+            &lt;% loop $PaginatedMatches %&gt;
+                &lt;% include Match %&gt;
+            &lt;% end_loop %&gt;
+        &lt;% end_if %&gt;
+        &lt;% include Pagination %&gt;
+        &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;nav id=&quot;pageNav&quot; role=&quot;navigation&quot; class=&quot;page-sidebar-widget page-sidebar-nav&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;% with $Facets %&gt;
+                &lt;!-- You can repeat the following for each of your Facet Titles --&gt;
+                &lt;div class=&quot;col-xs-6 col-md-12&quot;&gt;
+                    &lt;h3 class=&quot;h4 page-sidebar-header&quot;&gt;YourFacetName&lt;/h3&gt;
+                    &lt;ul class=&quot;list-unstyled&quot;&gt;
+                        &lt;% loop $YourFacetName %&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;$SearchLink&quot; title=&quot;$Name $Topic.XML&quot;&gt;
+                                    $Name ($FacetCount)
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;% end_loop %&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;% end_with %&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+&lt;% end_with %&gt;
+</code></pre>
+<p>Example of a <code>$SearchLink</code> method, that’ll return a link to the Faceted set:</p>
+<pre><code class="language-php">class FacetedObject
+{
+    public function getSearchLink()
+    {
+        $controller = Controller::curr();
+
+        $vars = $controller-&gt;getRequest()-&gt;getVars();
+
+        $vars['MyFacetObject[]'] = $this-&gt;ID;
+
+        return $controller-&gt;Link('search?' . http_build_query($vars));
+    }
+}
+</code></pre>
 <p><strong>NOTE</strong></p>
-<p>This is so called “pseudo code”, it may not exactly work, but serves as example.</p>
+<p>The code in this documentation is called “pseudo code”, it may not exactly work, but serves as example.</p>
 <hr>
 <p><sup>1</sup> Although not required, it’s highly recomended</p>
 <p><sup>2</sup> The second option of an array can be omitted and directly given the boost value</p>
