@@ -70,6 +70,7 @@
     </nav>
     <article id="main" class="content">
         <h1 id="customisation">Customisation <a class="heading-anchor-permalink" href="#customisation">#</a></h1>
+<h2 id="extension-points">Extension points <a class="heading-anchor-permalink" href="#extension-points">#</a></h2>
 <p>All steps of the process, from index to searching, have extension points.</p>
 <p>These extension points can be used to alter or update the respective steps</p>
 <p>Available extension points:</p>
@@ -129,6 +130,51 @@
 </tr>
 </tbody>
 </table>
+<h2 id="updating-the-typemap">Updating the typemap <a class="heading-anchor-permalink" href="#updating-the-typemap">#</a></h2>
+<p>The type mapping is defined in <a href="https://github.com/Firesphere/silverstripe-solr-search/blob/master/_config/typemap.yml"><code>typemap.yml</code></a>.</p>
+<p>To override parts of the typemap to use a different mapping, you can set the following in your application
+yml:</p>
+<pre><code class="language-yaml">---
+Name: MyTypemap
+After:
+  - '#SolrTypemap'
+---
+Firesphere\SolrSearch\Helpers\Statics:
+  typemap:
+    Varchar: htmltext
+    &quot;SilverStripe\\ORM\\FieldType\\DBVarchar&quot;: htmltext
+    &quot;DBVarchar&quot;: htmltext
+</code></pre>
+<h2 id="custom-types.ss-and-schema.ss">Custom <code>types.ss</code> and <code>schema.ss</code> <a class="heading-anchor-permalink" href="#custom-types.ss-and-schema.ss">#</a></h2>
+<p>You need to place your custom <code>.ss</code> types/schema files in your custom application folder in the following path:</p>
+<ul>
+<li>for template files: <code>app/Solr/{SolrVersion}/templates</code></li>
+<li>for extras files: <code>app/Solr/{SolrVersion}/extras</code></li>
+</ul>
+<h2 id="set-the-custom-paths-to-your-templates-and-extras">Set the custom paths to your templates and extras <a class="heading-anchor-permalink" href="#set-the-custom-paths-to-your-templates-and-extras">#</a></h2>
+<p>Set the path to your custom template like so:</p>
+<pre><code class="language-yaml">Firesphere\SolrSearch\Services\SolrCoreService:
+  paths:
+    base_path: '%s/app'
+</code></pre>
+<p>When a base path is set, the template will automatically be selected based on your Solr Version.</p>
+<p>Where you should select the correct <code>SolrVersion</code> from versions 4, 5 or 7, depending on the Solr version
+you are using</p>
+<ul>
+<li>4: Only Solr 4</li>
+<li>5: Solr version &gt;5.0 and &lt;7.0</li>
+<li>7: Solr7 or higher</li>
+</ul>
+<h3 id="usage-of-%25s">Usage of %s <a class="heading-anchor-permalink" href="#usage-of-%25s">#</a></h3>
+<p>Because all paths are determined based on the <code>Director::baseFolder()</code> method, the <code>%s</code> is needed
+so the actual full path to the templates etc. is resolved correctly to the base folder.</p>
+<p>This is to avoid complexity around installation location, as hardcoding <code>/var/www/mywebsite</code> may not always
+be the case.</p>
+<h3 id="important">IMPORTANT <a class="heading-anchor-permalink" href="#important">#</a></h3>
+<p>If you have a custom path, all files from the Solr version you choose, <em>need</em> to exist in this folder!</p>
+<p>This includes the <code>extras</code> folder, in it’s entirety.</p>
+<p>It is suggested to copy the entire <code>Solr</code> folder to your own application and alter what you need in there, leaving
+everything else untouched. This will save you the hassle of making sure everything is in place.</p>
 
         <hr />
             <h2>Support our work</h2>

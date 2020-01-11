@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>SilverStripe Solr search &raquo;\Firesphere\SolrSearch\Services\SchemaService</title>
+    <title>SilverStripe Solr search &raquo;\Firesphere\SolrSearch\Factories\SchemaFactory</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>        <link href="../css/template.css" rel="stylesheet" media="all"/>        <!--[if lt IE 9]>
         <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -99,12 +99,16 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>    <li class="methodpublic">
-        <a href="#method___construct" title="__construct ::SchemaService constructor.">
-            <span class="description">SchemaService constructor.</span><pre>__construct</pre>
+        <a href="#method___construct" title="__construct ::SchemaFactory constructor.">
+            <span class="description">SchemaFactory constructor.</span><pre>__construct</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_generateSchema" title="generateSchema ::Generate the Schema xml">
             <span class="description">Generate the Schema xml</span><pre>generateSchema</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_getBaseTemplatePath" title="getBaseTemplatePath ::">
+            <span class="description"></span><pre>getBaseTemplatePath</pre>
         </a>
     </li>    <li class="methodpublic inherited">
         <a href="#method_getClassID" title="getClassID ::Get the Identifier Field for Solr">
@@ -123,8 +127,8 @@
             <span class="description">Get the default field to generate df components for</span><pre>getDefaultField</pre>
         </a>
     </li>    <li class="methodpublic">
-        <a href="#method_getExtrasPath" title="getExtrasPath ::Get any extras that need loading in to Solr">
-            <span class="description">Get any extras that need loading in to Solr</span><pre>getExtrasPath</pre>
+        <a href="#method_getExtrasPath" title="getExtrasPath ::Get any the template path for anything that needs loading in to Solr">
+            <span class="description">Get any the template path for anything that needs loading in to Solr</span><pre>getExtrasPath</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_getFilterFieldDefinitions" title="getFilterFieldDefinitions ::Get the definitions of a filter field to load in to Solr.">
@@ -151,12 +155,22 @@
             <span class="description">Get the base template for the schema xml</span><pre>getTemplate</pre>
         </a>
     </li>    <li class="methodpublic">
+        <a href="#method_getTemplatePathFor" title="getTemplatePathFor ::Get the base path of the template given, e.g. the &quot;schema&quot; templates
+or the &quot;extra&quot; templates.">
+            <span class="description">Get the base path of the template given, e.g. the &quot;schema&quot; templates
+or the &quot;extra&quot; templates.</span><pre>getTemplatePathFor</pre>
+        </a>
+    </li>    <li class="methodpublic">
         <a href="#method_getTypes" title="getTypes ::Get the types template in a rendered state">
             <span class="description">Get the types template in a rendered state</span><pre>getTypes</pre>
         </a>
     </li>    <li class="methodpublic inherited">
         <a href="#method_getTypesTemplate" title="getTypesTemplate ::Get the types template if defined">
             <span class="description">Get the types template if defined</span><pre>getTypesTemplate</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_setBaseTemplatePath" title="setBaseTemplatePath ::">
+            <span class="description"></span><pre>setBaseTemplatePath</pre>
         </a>
     </li>    <li class="methodpublic inherited">
         <a href="#method_setIndex" title="setIndex ::Set the index that&#039;s being used and add the introspection for it">
@@ -199,9 +213,9 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>SchemaService</h1>
+                <h1>SchemaFactory</h1>
                 <small style="display: block; text-align: right">                        Extends\SilverStripe\View\ViewableData                </small>
-                <p class="short_description">Class SchemaService</p>
+                <p class="short_description">Class SchemaFactory</p>
                 <div class="details">
                     <div class="long_description">
                     </div>
@@ -213,7 +227,7 @@
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method___construct"></a>
                         <div class="element clickable methodpublic method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
-                            <h2>SchemaService constructor.</h2>
+                            <h2>SchemaFactory constructor.</h2>
                             <pre>__construct()</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
@@ -246,6 +260,22 @@
                                                 <td>                                                </td>
                                             </tr>                                    </table>                                        <h3>Response</h3>
                                         <code>\SilverStripe\ORM\FieldType\DBHTMLText</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getBaseTemplatePath"></a>
+                        <div class="element clickable methodpublic method_getBaseTemplatePath" data-toggle="collapse" data-target=".method_getBaseTemplatePath .collapse">
+                            <h2>getBaseTemplatePath</h2>
+                            <pre>getBaseTemplatePath( $type): string|boolean</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code></code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>string|boolean</code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_getClassID"></a>
@@ -324,7 +354,7 @@
 
                         </div>                        <a id="method_getExtrasPath"></a>
                         <div class="element clickable methodpublic method_getExtrasPath" data-toggle="collapse" data-target=".method_getExtrasPath .collapse">
-                            <h2>Get any extras that need loading in to Solr</h2>
+                            <h2>Get any the template path for anything that needs loading in to Solr</h2>
                             <pre>getExtrasPath(): string</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
@@ -501,6 +531,23 @@
                                         <code>string</code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_getTemplatePathFor"></a>
+                        <div class="element clickable methodpublic method_getTemplatePathFor" data-toggle="collapse" data-target=".method_getTemplatePathFor .collapse">
+                            <h2>Get the base path of the template given, e.g. the &quot;schema&quot; templates
+or the &quot;extra&quot; templates.</h2>
+                            <pre>getTemplatePathFor(string $type): string</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p><p>What type of templates do we need to get</p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>string</code><p></p>                                </div>
+                            </div>
+
                         </div>                        <a id="method_getTypes"></a>
                         <div class="element clickable methodpublic method_getTypes" data-toggle="collapse" data-target=".method_getTypes .collapse">
                             <h2>Get the types template in a rendered state</h2>
@@ -535,10 +582,29 @@
                                         <code>string</code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_setBaseTemplatePath"></a>
+                        <div class="element clickable methodpublic method_setBaseTemplatePath" data-toggle="collapse" data-target=".method_setBaseTemplatePath .collapse">
+                            <h2>setBaseTemplatePath</h2>
+                            <pre>setBaseTemplatePath(string $baseTemplatePath,string $type): \Firesphere\SolrSearch\Factories\SchemaFactory</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$baseTemplatePath</h4>
+                                                <code>string</code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.SchemaFactory.html">\Firesphere\SolrSearch\Factories\SchemaFactory</a></code><p></p>                                </div>
+                            </div>
+
                         </div>                        <a id="method_setIndex"></a>
                         <div class="element clickable methodpublic method_setIndex inherited" data-toggle="collapse" data-target=".method_setIndex .collapse">
                             <h2>Set the index that&#039;s being used and add the introspection for it</h2>
-                            <pre>setIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $index): \Firesphere\SolrSearch\Services\SchemaService</pre>
+                            <pre>setIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $index): \Firesphere\SolrSearch\Factories\SchemaFactory</pre>
                             <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -548,7 +614,7 @@
                                                 <h4>$index</h4>
                                                 <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>                                </div>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.SchemaFactory.html">\Firesphere\SolrSearch\Factories\SchemaFactory</a></code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_setStore"></a>
@@ -573,7 +639,7 @@
                         </div>                        <a id="method_setTemplate"></a>
                         <div class="element clickable methodpublic method_setTemplate inherited" data-toggle="collapse" data-target=".method_setTemplate .collapse">
                             <h2>Set a custom template for schema xml</h2>
-                            <pre>setTemplate(string $template): \Firesphere\SolrSearch\Services\SchemaService</pre>
+                            <pre>setTemplate(string $template): \Firesphere\SolrSearch\Factories\SchemaFactory</pre>
                             <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -583,13 +649,13 @@
                                                 <h4>$template</h4>
                                                 <code>string</code><p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>                                </div>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.SchemaFactory.html">\Firesphere\SolrSearch\Factories\SchemaFactory</a></code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_setTypesTemplate"></a>
                         <div class="element clickable methodpublic method_setTypesTemplate inherited" data-toggle="collapse" data-target=".method_setTypesTemplate .collapse">
                             <h2>Set custom types template</h2>
-                            <pre>setTypesTemplate(string $typesTemplate): \Firesphere\SolrSearch\Services\SchemaService</pre>
+                            <pre>setTypesTemplate(string $typesTemplate): \Firesphere\SolrSearch\Factories\SchemaFactory</pre>
                             <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -599,7 +665,7 @@
                                                 <h4>$typesTemplate</h4>
                                                 <code>string</code><p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>                                </div>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.SchemaFactory.html">\Firesphere\SolrSearch\Factories\SchemaFactory</a></code><p></p>                                </div>
                             </div>
 
                         </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_fieldResolver"> </a>
@@ -633,6 +699,22 @@
                                                     <td>                                                    </td>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code><a href="../classes/Firesphere.SolrSearch.Services.SolrCoreService.html">\Firesphere\SolrSearch\Services\SolrCoreService</a></code>                                    </div>
+                                </div>
+                            </div>                            <a id="property_baseTemplatePath"> </a>
+                            <div class="element clickable propertyprotected property_baseTemplatePath" data-toggle="collapse" data-target=".property_baseTemplatePath .collapse">
+                                <h2>Base paths to the template</h2>
+                                <pre>baseTemplatePath :array</pre>
+                                <div class="labels">                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td><p>Base paths to the template</p>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>array</code>                                    </div>
                                 </div>
                             </div>                            <a id="property_template"> </a>
                             <div class="element clickable propertyprotected property_template inherited" data-toggle="collapse" data-target=".property_template .collapse">
@@ -700,17 +782,17 @@
                                 </div>
                             </div>                </div>
             </div>
-            <a id="\Firesphere\SolrSearch\Services\SchemaService"></a>
+            <a id="\Firesphere\SolrSearch\Factories\SchemaFactory"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
-    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Services.html">Services</a></li>
-                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">SchemaService</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Factories.html">Factories</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Factories.SchemaFactory.html">SchemaFactory</a></li>
             </ul>
         </div>
     </div>    </div>    <footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onFri, 10 Jan 2020 05:03:00 +0000.<br/>
+            generated onSat, 11 Jan 2020 22:51:53 +0000.<br/>
     </footer></body>
 </html>

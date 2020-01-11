@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>SilverStripe Solr search &raquo;\Firesphere\SolrSearch\Traits\GetSetSchemaServiceTrait</title>
+    <title>SilverStripe Solr search &raquo;\Firesphere\SolrSearch\Traits\GetSetSchemaFactoryTrait</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>        <link href="../css/template.css" rel="stylesheet" media="all"/>        <!--[if lt IE 9]>
         <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -159,9 +159,9 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>GetSetSchemaServiceTrait</h1>
+                <h1>GetSetSchemaFactoryTrait</h1>
                 <small style="display: block; text-align: right">                </small>
-                <p class="short_description">Trait GetSetSchemaServiceTrait</p>
+                <p class="short_description">Trait GetSetSchemaFactoryTrait</p>
                 <div class="details">
                     <div class="long_description">
                     </div>
@@ -293,7 +293,7 @@
                         </div>                        <a id="method_setIndex"></a>
                         <div class="element clickable methodpublic method_setIndex" data-toggle="collapse" data-target=".method_setIndex .collapse">
                             <h2>Set the index that&#039;s being used and add the introspection for it</h2>
-                            <pre>setIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $index): \Firesphere\SolrSearch\Services\SchemaService</pre>
+                            <pre>setIndex(\Firesphere\SolrSearch\Indexes\BaseIndex $index): \Firesphere\SolrSearch\Factories\SchemaFactory</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -303,7 +303,7 @@
                                                 <h4>$index</h4>
                                                 <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>                                </div>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.SchemaFactory.html">\Firesphere\SolrSearch\Factories\SchemaFactory</a></code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_setStore"></a>
@@ -328,7 +328,7 @@
                         </div>                        <a id="method_setTemplate"></a>
                         <div class="element clickable methodpublic method_setTemplate" data-toggle="collapse" data-target=".method_setTemplate .collapse">
                             <h2>Set a custom template for schema xml</h2>
-                            <pre>setTemplate(string $template): \Firesphere\SolrSearch\Services\SchemaService</pre>
+                            <pre>setTemplate(string $template): \Firesphere\SolrSearch\Factories\SchemaFactory</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -338,13 +338,13 @@
                                                 <h4>$template</h4>
                                                 <code>string</code><p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>                                </div>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.SchemaFactory.html">\Firesphere\SolrSearch\Factories\SchemaFactory</a></code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_setTypesTemplate"></a>
                         <div class="element clickable methodpublic method_setTypesTemplate" data-toggle="collapse" data-target=".method_setTypesTemplate .collapse">
                             <h2>Set custom types template</h2>
-                            <pre>setTypesTemplate(string $typesTemplate): \Firesphere\SolrSearch\Services\SchemaService</pre>
+                            <pre>setTypesTemplate(string $typesTemplate): \Firesphere\SolrSearch\Factories\SchemaFactory</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -354,7 +354,7 @@
                                                 <h4>$typesTemplate</h4>
                                                 <code>string</code><p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code><a href="../classes/Firesphere.SolrSearch.Services.SchemaService.html">\Firesphere\SolrSearch\Services\SchemaService</a></code><p></p>                                </div>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Factories.SchemaFactory.html">\Firesphere\SolrSearch\Factories\SchemaFactory</a></code><p></p>                                </div>
                             </div>
 
                         </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_template"> </a>
@@ -423,17 +423,17 @@
                                 </div>
                             </div>                </div>
             </div>
-            <a id="\Firesphere\SolrSearch\Traits\GetSetSchemaServiceTrait"></a>
+            <a id="\Firesphere\SolrSearch\Traits\GetSetSchemaFactoryTrait"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
     <li><span class="divider">\</span><a href="../namespaces/Firesphere.SolrSearch.Traits.html">Traits</a></li>
-                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSchemaServiceTrait.html">GetSetSchemaServiceTrait</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Firesphere.SolrSearch.Traits.GetSetSchemaFactoryTrait.html">GetSetSchemaFactoryTrait</a></li>
             </ul>
         </div>
     </div>    </div>    <footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onFri, 10 Jan 2020 05:03:00 +0000.<br/>
+            generated onSat, 11 Jan 2020 22:51:53 +0000.<br/>
     </footer></body>
 </html>
