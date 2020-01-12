@@ -102,7 +102,7 @@ for creating your own Index extending either of the Base Indexes, it is a compli
     mode: 'file'
     path: '.solr'
   cpucores: 2
-
+  debug: false
 </code></pre>
 <p>Note, if you are using defaults (localhost), it is not necessary to add this to your configuration.</p>
 <p>The config is used to connect to Solr. This will tell the module where the Solr instance for this index lives and how to connect.</p>
@@ -113,6 +113,9 @@ for creating your own Index extending either of the Base Indexes, it is a compli
   path: '/my_post_endpoint'
   uri: 'https://mydomain.com'
 </code></pre>
+<h3 id="debug">Debug <a class="heading-anchor-permalink" href="#debug">#</a></h3>
+<p>You can force the debugging to false, by setting the debug flag. If you omit this tag, CLI and Dev mode
+will have debugging enabled.</p>
 <h4 id="showinsearch">ShowInSearch <a class="heading-anchor-permalink" href="#showinsearch">#</a></h4>
 <p><code>ShowInSearch</code> is handled by the module itself, so there is no need to configure it within your YML/PHP index definition.
 When a content author sets this field to 0 via the CMS, then the related Page or File object is actually <em>removed</em> from the applicable Solr

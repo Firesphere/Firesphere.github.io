@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -175,6 +175,10 @@ So make sure you properly loop and set $class</span><pre>buildItems</pre>
                             <a href="#method_getValuesForField" title="getValuesForField ::Use the DataResolver to find the value(s) for a field.">
                                 <span class="description">Use the DataResolver to find the value(s) for a field.</span><pre>getValuesForField</pre>
                             </a>
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_indexGroupMessage" title="indexGroupMessage ::Show the message about what is being indexed">
+                                <span class="description">Show the message about what is being indexed</span><pre>indexGroupMessage</pre>
+                            </a>
                         </li>            </ul>
         </li>
         <li class="nav-header private">» Private
@@ -237,10 +241,10 @@ Factory to create documents to be pushed to Solr</p>
                                                 <td>                                                </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$doc</h4>
-                                                <code>\Solarium\QueryType\Update\Query\Document</code><p></p>
+                                                <code>\Solarium\QueryType\Update\Query\Document</code><p><p>Solr Document</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$item</h4>
-                                                <code>\SilverStripe\ORM\DataObject|<a href="../classes/Firesphere.SolrSearch.Extensions.DataObjectExtension.html">\Firesphere\SolrSearch\Extensions\DataObjectExtension</a></code><p></p>
+                                                <code>\SilverStripe\ORM\DataObject|<a href="../classes/Firesphere.SolrSearch.Extensions.DataObjectExtension.html">\Firesphere\SolrSearch\Extensions\DataObjectExtension</a></code><p><p>Item to get the data from</p></p>
                                             </div>                                </div>
                             </div>
 
@@ -259,13 +263,13 @@ Factory to create documents to be pushed to Solr</p>
                                                 <td>                                                </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$doc</h4>
-                                                <code>\Solarium\QueryType\Update\Query\Document</code><p></p>
+                                                <code>\Solarium\QueryType\Update\Query\Document</code><p><p>Solr Document</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$object</h4>
-                                                <code>\SilverStripe\ORM\DataObject</code><p></p>
+                                                <code>\SilverStripe\ORM\DataObject</code><p><p>Object whose field is to be added</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$options</h4>
-                                                <code>array</code><p></p>
+                                                <code>array</code><p><p>Additional options</p></p>
                                             </div>                                </div>
                             </div>
 
@@ -284,23 +288,23 @@ Factory to create documents to be pushed to Solr</p>
                                                 <td>                                                </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$doc</h4>
-                                                <code>\Solarium\QueryType\Update\Query\Document</code><p></p>
+                                                <code>\Solarium\QueryType\Update\Query\Document</code><p><p>Solr document</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$options</h4>
-                                                <code>array</code><p></p>
+                                                <code>array</code><p><p>Custom options</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$type</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>Type of Solr field</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$value</h4>
-                                                <code>\SilverStripe\ORM\FieldType\DBField|string</code><p></p>
+                                                <code>\SilverStripe\ORM\FieldType\DBField|string</code><p><p>Value(s) of the field</p></p>
                                             </div>                                </div>
                             </div>
 
                         </div>                        <a id="method_buildFields"></a>
                         <div class="element clickable methodprotected method_buildFields" data-toggle="collapse" data-target=".method_buildFields .collapse">
                             <h2>Create the required record for a field</h2>
-                            <pre>buildFields( $fields,\Solarium\QueryType\Update\Query\Document $doc,\SilverStripe\ORM\DataObject $item,array $boostFields)</pre>
+                            <pre>buildFields(array $fields,\Solarium\QueryType\Update\Query\Document $doc,\SilverStripe\ORM\DataObject $item,array $boostFields)</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -318,16 +322,16 @@ Factory to create documents to be pushed to Solr</p>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$fields</h4>
-                                                <code></code><p></p>
+                                                <code>array</code><p><p>Fields to build a record for</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$doc</h4>
-                                                <code>\Solarium\QueryType\Update\Query\Document</code><p></p>
+                                                <code>\Solarium\QueryType\Update\Query\Document</code><p><p>Document for Solr</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$item</h4>
-                                                <code>\SilverStripe\ORM\DataObject</code><p></p>
+                                                <code>\SilverStripe\ORM\DataObject</code><p><p>Object to get the data for</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$boostFields</h4>
-                                                <code>array</code><p></p>
+                                                <code>array</code><p><p>Custom set of index-time-boosted fields</p></p>
                                             </div>                                </div>
                             </div>
 
@@ -349,15 +353,15 @@ So make sure you properly loop and set $class</h2>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$fields</h4>
-                                                <code>array</code><p></p>
+                                                <code>array</code><p><p>Fields to index</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$index</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p><p>Index to push the documents to</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$update</h4>
-                                                <code>\Solarium\QueryType\Update\Query\Query</code><p></p>
+                                                <code>\Solarium\QueryType\Update\Query\Query</code><p><p>Update Query object</p></p>
                                             </div>                                        <h3>Response</h3>
-                                        <code>array</code><p></p>                                </div>
+                                        <code>array</code><p><p>Documents to be pushed</p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_classEquals"></a>
@@ -371,10 +375,10 @@ So make sure you properly loop and set $class</h2>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code>string|\SilverStripe\ORM\DataObject</code><p></p>
+                                                <code>string|\SilverStripe\ORM\DataObject</code><p><p>Class to compare</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$base</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>Base class</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>boolean</code><p></p>                                </div>
                             </div>
@@ -394,7 +398,7 @@ So make sure you properly loop and set $class</h2>
                                                 <td><p>remove in favour of the inheritance check from PHP</p>                                                </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code>string|\SilverStripe\ORM\DataObject</code><p></p>
+                                                <code>string|\SilverStripe\ORM\DataObject</code><p><p>Class to compare</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$base</h4>
                                                 <code>array|string</code><p><p>Class or list of base classes</p></p>
@@ -473,7 +477,7 @@ So make sure you properly loop and set $class</h2>
                         </div>                        <a id="method_getValuesForField"></a>
                         <div class="element clickable methodprotected method_getValuesForField" data-toggle="collapse" data-target=".method_getValuesForField .collapse">
                             <h2>Use the DataResolver to find the value(s) for a field.</h2>
-                            <pre>getValuesForField( $object, $options): array</pre>
+                            <pre>getValuesForField(\SilverStripe\ORM\DataObject $object,array $options): array</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -481,12 +485,31 @@ So make sure you properly loop and set $class</h2>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$object</h4>
-                                                <code></code><p></p>
+                                                <code>\SilverStripe\ORM\DataObject</code><p><p>Object to resolve</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$options</h4>
-                                                <code></code><p></p>
+                                                <code>array</code><p><p>Customised options</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>array</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_indexGroupMessage"></a>
+                        <div class="element clickable methodprotected method_indexGroupMessage" data-toggle="collapse" data-target=".method_indexGroupMessage .collapse">
+                            <h2>Show the message about what is being indexed</h2>
+                            <pre>indexGroupMessage(\Firesphere\SolrSearch\Indexes\BaseIndex $index)</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$index</h4>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>
+                                            </div>                                </div>
                             </div>
 
                         </div>                        <a id="method_isDebug"></a>
@@ -682,6 +705,6 @@ So make sure you properly loop and set $class</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSun, 12 Jan 2020 03:12:31 +0000.<br/>
+            generated onSun, 12 Jan 2020 04:41:12 +0000.<br/>
     </footer></body>
 </html>

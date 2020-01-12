@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -109,6 +109,10 @@
     </li>    <li class="methodpublic">
         <a href="#method_getIndex" title="getIndex ::Get the Index class.">
             <span class="description">Get the Index class.</span><pre>getIndex</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_isDebug" title="isDebug ::Is this Index in debug mode">
+            <span class="description">Is this Index in debug mode</span><pre>isDebug</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_setBatchLength" title="setBatchLength ::Set the length of a single batch">
@@ -211,6 +215,23 @@ Getters and Setters for the SolrIndexTask</p>
                                         <code><a href="../classes/Firesphere.SolrSearch.Indexes.BaseIndex.html">\Firesphere\SolrSearch\Indexes\BaseIndex</a></code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_isDebug"></a>
+                        <div class="element clickable methodpublic method_isDebug" data-toggle="collapse" data-target=".method_isDebug .collapse">
+                            <h2>Is this Index in debug mode</h2>
+                            <pre>isDebug(): boolean</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>boolean</code><p></p>                                </div>
+                            </div>
+
                         </div>                        <a id="method_setBatchLength"></a>
                         <div class="element clickable methodpublic method_setBatchLength" data-toggle="collapse" data-target=".method_setBatchLength .collapse">
                             <h2>Set the length of a single batch</h2>
@@ -252,7 +273,7 @@ Getters and Setters for the SolrIndexTask</p>
                         </div>                        <a id="method_setDebug"></a>
                         <div class="element clickable methodpublic method_setDebug" data-toggle="collapse" data-target=".method_setDebug .collapse">
                             <h2>Set the debug mode</h2>
-                            <pre>setDebug(boolean $debug): self</pre>
+                            <pre>setDebug(boolean $debug,boolean $force = false): self</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -260,7 +281,10 @@ Getters and Setters for the SolrIndexTask</p>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$debug</h4>
-                                                <code>boolean</code><p></p>
+                                                <code>boolean</code><p><p>Set the task in debug mode</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$force</h4>
+                                                <code>boolean</code><p><p>Force a task in debug mode, despite e.g. being Live and not CLI</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>self</code><p></p>                                </div>
                             </div>
@@ -393,6 +417,6 @@ Getters and Setters for the SolrIndexTask</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSun, 12 Jan 2020 03:12:31 +0000.<br/>
+            generated onSun, 12 Jan 2020 04:41:12 +0000.<br/>
     </footer></body>
 </html>
