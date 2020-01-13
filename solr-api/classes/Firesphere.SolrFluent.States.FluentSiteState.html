@@ -234,7 +234,7 @@
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$state</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>Activate the given state</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>mixed</code><p></p>                                </div>
                             </div>
@@ -313,7 +313,7 @@
                         </div>                        <a id="method_appliesTo"></a>
                         <div class="element clickable methodpublic method_appliesTo" data-toggle="collapse" data-target=".method_appliesTo .collapse">
                             <h2>Does the state apply to this class</h2>
-                            <pre>appliesTo( $class): boolean</pre>
+                            <pre>appliesTo(string $class): boolean</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -327,7 +327,7 @@
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$class</h4>
-                                                <code></code><p></p>
+                                                <code>string</code><p><p>Class to check</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>boolean</code><p></p>                                </div>
                             </div>
@@ -514,7 +514,7 @@
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$state</h4>
-                                                <code>string|null</code><p></p>
+                                                <code>string|null</code><p><p>Reset to default state</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>mixed</code><p></p>                                </div>
                             </div>
@@ -591,7 +591,7 @@
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$state</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>State to validate</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>boolean</code><p></p>                                </div>
                             </div>
@@ -599,7 +599,7 @@
                         </div>                        <a id="method_updatePart"></a>
                         <div class="element clickable methodprotected method_updatePart" data-toggle="collapse" data-target=".method_updatePart .collapse">
                             <h2>Update a part of the query for the get and set methods.</h2>
-                            <pre>updatePart( &$query,string $locale,string $method)</pre>
+                            <pre>updatePart(\Firesphere\SolrSearch\Queries\BaseQuery &$query,string $locale,string $method)</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -611,13 +611,13 @@
                                                 <td>                                                </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$query</h4>
-                                                <code></code><p></p>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p><p>Query that needs updating for the given method</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$locale</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>Localisation to use</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$method</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>Get method to call</p></p>
                                             </div>                                </div>
                             </div>
 
@@ -636,7 +636,7 @@
                                                 <td>                                                </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$query</h4>
-                                                <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p><p>Query to update</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>mixed</code><p></p>                                </div>
                             </div>
@@ -644,7 +644,7 @@
                         </div>                        <a id="method_updateTerms"></a>
                         <div class="element clickable methodprivate method_updateTerms" data-toggle="collapse" data-target=".method_updateTerms .collapse">
                             <h2>Update the field filters to localised filters</h2>
-                            <pre>updateTerms( $term,string $locale,array $localisedTerms): array</pre>
+                            <pre>updateTerms(string|array $term,string $locale,array $localisedTerms): array</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -652,13 +652,13 @@
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$term</h4>
-                                                <code></code><p></p>
+                                                <code>string|array</code><p><p>Array of terms</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$locale</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>Localisation to use</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$localisedTerms</h4>
-                                                <code>array</code><p></p>
+                                                <code>array</code><p><p>Currently localised terms</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>array</code><p></p>                                </div>
                             </div>
@@ -731,7 +731,23 @@
                                                 </tr>                                        </table>
                                     </div>
                                 </div>
-                            </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_states"> </a>
+                            </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_methods"> </a>
+                            <div class="element clickable propertyprivate property_methods" data-toggle="collapse" data-target=".property_methods .collapse">
+                                <h2>get/set methods that needs to be called to update the query</h2>
+                                <pre>methods :array</pre>
+                                <div class="labels"><span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td><p>get/set methods that needs to be called to update the query</p>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>array</code>                                    </div>
+                                </div>
+                            </div>                            <a id="property_states"> </a>
                             <div class="element clickable propertypublic property_states inherited" data-toggle="collapse" data-target=".property_states .collapse">
                                 <h2>States that can be applied</h2>
                                 <pre>states :array</pre>
@@ -824,6 +840,6 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSun, 12 Jan 2020 04:41:12 +0000.<br/>
+            generated onMon, 13 Jan 2020 06:04:22 +0000.<br/>
     </footer></body>
 </html>
