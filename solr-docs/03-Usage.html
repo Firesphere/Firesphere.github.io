@@ -283,10 +283,16 @@ to create in the first step of this document.</p>
 <p>The Title is used to group all facets by their Title, in the template, this is accessible by looping <code>$Result.FacetSet.TitleOfTheFacet</code></p>
 <h3 id="important-notice">Important notice <a class="heading-anchor-permalink" href="#important-notice">#</a></h3>
 <p>Note, that Facets are relational. For faceting on a relation, omit the origin class (e.g. <code>SiteTree</code>), but supply the full relational
-path to the facet. e.g. if you want to have facets on <code>RelationObject-&gt;RelationThing()-&gt;Relation()-&gt;ID</code>, the Facet declaration should be
-<code>RelationObject.RelationThing.RelationID</code>. It should always end with an ID that is a <code>has_one</code> relation.</p>
-<p>Although it can be a <code>has_many</code> just as well, and it would be <code>Relation.ID</code>, it is not advised, as it creates a lot of overhead.</p>
-<p>It would and should work though. If you want to do it that way, there’s no stopping you, it’s just not advised.</p>
+path to the facet. e.g. if you want to have facets on <code>RelationObject-&gt;ManyRelation()-&gt;OneRelation()-&gt;ID</code>, the Facet declaration should be
+<code>ManyRelationObject.OneRelationID</code>, assuming it’s a <code>has_one</code> relation.</p>
+<p>If you have many relations, through either <code>many_many</code> or <code>has_many</code>, your definition should
+use <code>ManyRelationObjectName.Relation.ID</code> instead of <code>RelationID</code>. It works and resolves the same.</p>
+<p>It is strongly advised, to use relations for faceting, as Solr tends to think of textual relations in a different way.
+For example, a relation on <code>MyObject.TextField</code>, might come up with the following relations:</p>
+<h4 id="example">Example <a class="heading-anchor-permalink" href="#example">#</a></h4>
+<p>Assuming your text field on the object, might contain “Content Name One” and “Content Name Two”. Faceting would be
+done in such a way, that “Content”, “Name” and “One” are three different facet results, despite you would
+like it to be “Content Name One”.</p>
 <h2 id="accessing-solr">Accessing Solr <a class="heading-anchor-permalink" href="#accessing-solr">#</a></h2>
 <p>If available, you can access your Solr instance at <code>http://mydomain.com:8983</code></p>
 <h2 id="excluding-unwanted-indexes">Excluding unwanted indexes <a class="heading-anchor-permalink" href="#excluding-unwanted-indexes">#</a></h2>
