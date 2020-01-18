@@ -249,6 +249,20 @@ to create in the first step of this document.</p>
 <p>The <a href="11-Submodules/01-Fulltext-Search-Compatibility.html">compatibility module</a> has an optional extension method that allows you to build your index and then generate the YML content for you. See the compatibility module for more details.</p>
 <h2 id="grouped-indexing">Grouped indexing <a class="heading-anchor-permalink" href="#grouped-indexing">#</a></h2>
 <p>Note, grouped indexing is <code>0</code> based. Thus, if there are 150 groups to index, the final group to index will be 149 instead of 150.</p>
+<h2 id="method-output-casting">Method output casting <a class="heading-anchor-permalink" href="#method-output-casting">#</a></h2>
+<p>To get the correct Solr field type in the Solr Configuration, each method you want to add, e.g.</p>
+<pre><code class="language-php">public function getContent()
+{
+    return $renderedContent;
+}
+</code></pre>
+<p>You will need to add a casting, so the field type is correct in Solr, like so:</p>
+<pre><code class="language-php">private static $casting = [
+    'getContent' =&gt; 'HTMLText',
+    'Content'    =&gt; 'HTMLText'
+];
+</code></pre>
+<p>Depending on your field definition, you either need to have the full method name, or the short method name.</p>
 <h2 id="another-way-to-set-the-config-in-php">Another way to set the config in PHP <a class="heading-anchor-permalink" href="#another-way-to-set-the-config-in-php">#</a></h2>
 <p>You could also use PHP, just like it was, to set the config. For readability however, it’s better to use variables for Facets:</p>
 <pre><code class="language-php">    protected $facetFields = [

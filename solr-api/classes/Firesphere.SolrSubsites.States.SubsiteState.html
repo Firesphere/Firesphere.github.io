@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -229,21 +229,16 @@ In case of subsites, only apply if there actually are subsites</span><pre>stateI
                         <div class="element clickable methodpublic method_activateState" data-toggle="collapse" data-target=".method_activateState .collapse">
                             <h2>Activate a given state. This should only be done if the state is applicable
 States don&#039;t need to be activated, as we index all pages anyway, so set it to disabled</h2>
-                            <pre>activateState(string $state): mixed</pre>
+                            <pre>activateState(string $state): void</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">                                            <tr>
-                                                <th>todo
-                                                </th>
-                                                <td><p>This needs to properly set the state</p>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$state</h4>
                                                 <code>string</code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>mixed</code><p></p>                                </div>
+                                            </div>                                </div>
                             </div>
 
                         </div>                        <a id="method_addState"></a>
@@ -610,7 +605,7 @@ In case of subsites, only apply if there actually are subsites</h2>
                         </div>                        <a id="method_updateQuery"></a>
                         <div class="element clickable methodpublic method_updateQuery" data-toggle="collapse" data-target=".method_updateQuery .collapse">
                             <h2>Method to alter the query. Can be no-op.</h2>
-                            <pre>updateQuery(\Firesphere\SolrSearch\Queries\BaseQuery &$query): mixed</pre>
+                            <pre>updateQuery(\Firesphere\SolrSearch\Queries\BaseQuery &$query): void</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -619,8 +614,7 @@ In case of subsites, only apply if there actually are subsites</h2>
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$query</h4>
                                                 <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>
-                                            </div>                                        <h3>Response</h3>
-                                        <code>mixed</code><p></p>                                </div>
+                                            </div>                                </div>
                             </div>
 
                         </div>                        <a id="method_variants"></a>
@@ -784,6 +778,6 @@ In case of subsites, only apply if there actually are subsites</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSat, 18 Jan 2020 01:17:23 +0000.<br/>
+            generated onSat, 18 Jan 2020 23:34:27 +0000.<br/>
     </footer></body>
 </html>
