@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -191,6 +191,10 @@ execute via the TaskRunner</span><pre>run</pre>
                                 <span class="description">Index a single class for a given index. {@link static::indexClassForIndex()}</span><pre>indexClass</pre>
                             </a>
                         </li>                        <li class="methodprivate">
+                            <a href="#method_indexStateClass" title="indexStateClass ::Index a group of a class for a specific state and index">
+                                <span class="description">Index a group of a class for a specific state and index</span><pre>indexStateClass</pre>
+                            </a>
+                        </li>                        <li class="methodprivate">
                             <a href="#method_logException" title="logException ::Log an exception if it happens. Most are catched, these logs are for the developers
 to identify problems and fix them.">
                                 <span class="description">Log an exception if it happens. Most are catched, these logs are for the developers
@@ -207,10 +211,6 @@ to identify problems and fix them.</span><pre>logException</pre>
                         </li>                        <li class="methodprivate">
                             <a href="#method_spawnChildren" title="spawnChildren ::For each core, spawn a child process that will handle a separate group.">
                                 <span class="description">For each core, spawn a child process that will handle a separate group.</span><pre>spawnChildren</pre>
-                            </a>
-                        </li>                        <li class="methodprivate">
-                            <a href="#method_stateReindex" title="stateReindex ::Index a group of a class for a specific state and index">
-                                <span class="description">Index a group of a class for a specific state and index</span><pre>stateReindex</pre>
                             </a>
                         </li>                        <li class="methodprivate">
                             <a href="#method_updateIndex" title="updateIndex ::Execute the update on the client">
@@ -510,6 +510,34 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
                                         <code>integer</code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_indexStateClass"></a>
+                        <div class="element clickable methodprivate method_indexStateClass" data-toggle="collapse" data-target=".method_indexStateClass .collapse">
+                            <h2>Index a group of a class for a specific state and index</h2>
+                            <pre>indexStateClass(string $group,string $class)</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>                                                        <dt>\Exception</dt>
+                                                        <dd></dd>                                                    </dl>
+                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$group</h4>
+                                                <code>string</code><p><p>Group to index</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code>string</code><p><p>Class to index</p></p>
+                                            </div>                                </div>
+                            </div>
+
                         </div>                        <a id="method_isDebug"></a>
                         <div class="element clickable methodpublic method_isDebug inherited" data-toggle="collapse" data-target=".method_isDebug .collapse">
                             <h2>Is this Index in debug mode</h2>
@@ -801,34 +829,6 @@ execute via the TaskRunner</h2>
                                         <code>integer</code><p><p>Last group indexed</p></p>                                </div>
                             </div>
 
-                        </div>                        <a id="method_stateReindex"></a>
-                        <div class="element clickable methodprivate method_stateReindex" data-toggle="collapse" data-target=".method_stateReindex .collapse">
-                            <h2>Index a group of a class for a specific state and index</h2>
-                            <pre>stateReindex(string $group,string $class)</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>                                                        <dt>\Exception</dt>
-                                                        <dd></dd>                                                    </dl>
-                                                </td>
-                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$group</h4>
-                                                <code>string</code><p><p>Group to index</p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$class</h4>
-                                                <code>string</code><p><p>Class to index</p></p>
-                                            </div>                                </div>
-                            </div>
-
                         </div>                        <a id="method_taskSetup"></a>
                         <div class="element clickable methodprotected method_taskSetup" data-toggle="collapse" data-target=".method_taskSetup .collapse">
                             <h2>Set up the requirements for this task</h2>
@@ -1043,6 +1043,6 @@ execute via the TaskRunner</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onMon, 20 Jan 2020 06:15:52 +0000.<br/>
+            generated onMon, 20 Jan 2020 06:22:16 +0000.<br/>
     </footer></body>
 </html>
