@@ -183,12 +183,12 @@ execute via the TaskRunner</span><pre>run</pre>
                                 <span class="description">Check the amount of groups and the total against the isGroup check.</span><pre>getGroupSettings</pre>
                             </a>
                         </li>                        <li class="methodprivate">
-                            <a href="#method_indexClass" title="indexClass ::Index a single class for a given index. {@link static::indexClassForIndex()}">
-                                <span class="description">Index a single class for a given index. {@link static::indexClassForIndex()}</span><pre>indexClass</pre>
+                            <a href="#method_hasPCNTL" title="hasPCNTL ::Check if PCNTL is available and/or useable.">
+                                <span class="description">Check if PCNTL is available and/or useable.</span><pre>hasPCNTL</pre>
                             </a>
                         </li>                        <li class="methodprivate">
-                            <a href="#method_indexItems" title="indexItems ::Index a group of a class for a specific state and index">
-                                <span class="description">Index a group of a class for a specific state and index</span><pre>indexItems</pre>
+                            <a href="#method_indexClass" title="indexClass ::Index a single class for a given index. {@link static::indexClassForIndex()}">
+                                <span class="description">Index a single class for a given index. {@link static::indexClassForIndex()}</span><pre>indexClass</pre>
                             </a>
                         </li>                        <li class="methodprivate">
                             <a href="#method_logException" title="logException ::Log an exception if it happens. Most are catched, these logs are for the developers
@@ -209,12 +209,12 @@ to identify problems and fix them.</span><pre>logException</pre>
                                 <span class="description">For each core, spawn a child process that will handle a separate group.</span><pre>spawnChildren</pre>
                             </a>
                         </li>                        <li class="methodprivate">
-                            <a href="#method_updateIndex" title="updateIndex ::Execute the update on the client">
-                                <span class="description">Execute the update on the client</span><pre>updateIndex</pre>
+                            <a href="#method_stateReindex" title="stateReindex ::Index a group of a class for a specific state and index">
+                                <span class="description">Index a group of a class for a specific state and index</span><pre>stateReindex</pre>
                             </a>
                         </li>                        <li class="methodprivate">
-                            <a href="#method_usePCNTL" title="usePCNTL ::Check if PCNTL is available and/or useable.">
-                                <span class="description">Check if PCNTL is available and/or useable.</span><pre>usePCNTL</pre>
+                            <a href="#method_updateIndex" title="updateIndex ::Execute the update on the client">
+                                <span class="description">Execute the update on the client</span><pre>updateIndex</pre>
                             </a>
                         </li>            </ul>
         </li>
@@ -387,11 +387,7 @@ to identify problems and fix them.</span><pre>logException</pre>
                                 <div class="detail-description">
                                     <div class="long_description"></div>
 
-                                    <table class="table">                                            <tr>
-                                                <th>todo
-                                                </th>
-                                                <td><p>clean up this method, it shouldn't be needed</p>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$isGroup</h4>
                                                 <code>boolean</code><p><p>Is it a specific group</p></p>
                                             </div>                                            <div class="subelement argument">
@@ -436,6 +432,24 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                 <td>                                                </td>
                                             </tr>                                    </table>                                        <h3>Response</h3>
                                         <code>\Psr\Log\LoggerInterface</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_hasPCNTL"></a>
+                        <div class="element clickable methodprivate method_hasPCNTL" data-toggle="collapse" data-target=".method_hasPCNTL .collapse">
+                            <h2>Check if PCNTL is available and/or useable.</h2>
+                            <pre>hasPCNTL(): boolean</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The unittest param is from phpunit.xml.dist, meant to bypass the exit(0) call
+The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL (yet)</p></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>boolean</code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_indexClass"></a>
@@ -494,34 +508,6 @@ to identify problems and fix them.</span><pre>logException</pre>
                                                 <code>integer</code><p><p>Group to index</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>integer</code><p></p>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_indexItems"></a>
-                        <div class="element clickable methodprivate method_indexItems" data-toggle="collapse" data-target=".method_indexItems .collapse">
-                            <h2>Index a group of a class for a specific state and index</h2>
-                            <pre>indexItems(string $group,string $class)</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                            <tr>
-                                                <th>Throws</th>
-                                                <td>
-                                                    <dl>                                                        <dt>\Exception</dt>
-                                                        <dd></dd>                                                    </dl>
-                                                </td>
-                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
-                                                <h4>$group</h4>
-                                                <code>string</code><p><p>Group to index</p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$class</h4>
-                                                <code>string</code><p><p>Class to index</p></p>
-                                            </div>                                </div>
                             </div>
 
                         </div>                        <a id="method_isDebug"></a>
@@ -605,7 +591,7 @@ execute via the TaskRunner</h2>
                         </div>                        <a id="method_runChild"></a>
                         <div class="element clickable methodprivate method_runChild" data-toggle="collapse" data-target=".method_runChild .collapse">
                             <h2>Ren a single child index operation</h2>
-                            <pre>runChild(string $class,integer|boolean $pid,integer $start)</pre>
+                            <pre>runChild(string $class,integer $pid,integer $start)</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -632,7 +618,7 @@ execute via the TaskRunner</h2>
                                                 <code>string</code><p><p>Class to index</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$pid</h4>
-                                                <code>integer|boolean</code><p><p>PID of the child</p></p>
+                                                <code>integer</code><p><p>PID of the child</p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$start</h4>
                                                 <code>integer</code><p><p>Position to start</p></p>
@@ -815,6 +801,34 @@ execute via the TaskRunner</h2>
                                         <code>integer</code><p><p>Last group indexed</p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_stateReindex"></a>
+                        <div class="element clickable methodprivate method_stateReindex" data-toggle="collapse" data-target=".method_stateReindex .collapse">
+                            <h2>Index a group of a class for a specific state and index</h2>
+                            <pre>stateReindex(string $group,string $class)</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>                                                        <dt>\Exception</dt>
+                                                        <dd></dd>                                                    </dl>
+                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$group</h4>
+                                                <code>string</code><p><p>Group to index</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$class</h4>
+                                                <code>string</code><p><p>Class to index</p></p>
+                                            </div>                                </div>
+                            </div>
+
                         </div>                        <a id="method_taskSetup"></a>
                         <div class="element clickable methodprotected method_taskSetup" data-toggle="collapse" data-target=".method_taskSetup .collapse">
                             <h2>Set up the requirements for this task</h2>
@@ -854,23 +868,6 @@ execute via the TaskRunner</h2>
                                                 <h4>$items</h4>
                                                 <code>\SilverStripe\ORM\SS_List</code><p><p>Items to index</p></p>
                                             </div>                                </div>
-                            </div>
-
-                        </div>                        <a id="method_usePCNTL"></a>
-                        <div class="element clickable methodprivate method_usePCNTL" data-toggle="collapse" data-target=".method_usePCNTL .collapse">
-                            <h2>Check if PCNTL is available and/or useable.</h2>
-                            <pre>usePCNTL(): boolean</pre>
-                            <div class="labels">                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">                                            <tr>
-                                                <th>
-                                                </th>
-                                                <td>                                                </td>
-                                            </tr>                                    </table>                                        <h3>Response</h3>
-                                        <code>boolean</code><p></p>                                </div>
                             </div>
 
                         </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_segment"> </a>
@@ -1046,6 +1043,6 @@ execute via the TaskRunner</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onMon, 20 Jan 2020 06:11:42 +0000.<br/>
+            generated onMon, 20 Jan 2020 06:15:52 +0000.<br/>
     </footer></body>
 </html>
