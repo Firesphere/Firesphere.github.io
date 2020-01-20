@@ -15,7 +15,11 @@
         <template name="responsive-twig" />
     </transformations>
     <files>
-        <directory>compat/src</directory>
-        <directory>search/src</directory>
+        <directory>Compatibility</directory>
+        <directory>Core</directory>
+        <directory>Fluent</directory>
+        <directory>Subsites</directory>
+        <directory>Member-Permissions</directory>
+        <ignore>test/*</ignore>
     </files>
 </phpdoc>
