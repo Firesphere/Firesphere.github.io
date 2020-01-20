@@ -20,6 +20,6 @@
         <directory>Fluent</directory>
         <directory>Subsites</directory>
         <directory>Member-Permissions</directory>
-        <ignore>test/*</ignore>
+        <ignore>*test*</ignore>
     </files>
 </phpdoc>
