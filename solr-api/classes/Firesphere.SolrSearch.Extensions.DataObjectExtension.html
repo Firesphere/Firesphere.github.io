@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -100,9 +100,13 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>    <li class="methodpublic">
         <a href="#method_doReindex" title="doReindex ::Reindex this owner object in Solr
-This is a simple stub for the push method, for semantic reasons">
+This is a simple stub for the push method, for semantic reasons
+It should never be called on Objects that are not a valid class for any Index
+It does not check if the class is valid to be pushed to Solr">
             <span class="description">Reindex this owner object in Solr
-This is a simple stub for the push method, for semantic reasons</span><pre>doReindex</pre>
+This is a simple stub for the push method, for semantic reasons
+It should never be called on Objects that are not a valid class for any Index
+It does not check if the class is valid to be pushed to Solr</span><pre>doReindex</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_getViewStatus" title="getViewStatus ::Get the view status for each member in this object">
@@ -209,7 +213,9 @@ Update the index after write.</span><pre>onAfterWrite</pre>
                         </div>                        <a id="method_doReindex"></a>
                         <div class="element clickable methodpublic method_doReindex" data-toggle="collapse" data-target=".method_doReindex .collapse">
                             <h2>Reindex this owner object in Solr
-This is a simple stub for the push method, for semantic reasons</h2>
+This is a simple stub for the push method, for semantic reasons
+It should never be called on Objects that are not a valid class for any Index
+It does not check if the class is valid to be pushed to Solr</h2>
                             <pre>doReindex()</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
@@ -230,6 +236,7 @@ This is a simple stub for the push method, for semantic reasons</h2>
                                                     <dl>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
                                                         <dd></dd>                                                        <dt>\ReflectionException</dt>
                                                         <dd></dd>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
+                                                        <dd></dd>                                                        <dt>\Psr\SimpleCache\InvalidArgumentException</dt>
                                                         <dd></dd>                                                    </dl>
                                                 </td>
                                             </tr>                                    </table>                                </div>
@@ -340,6 +347,7 @@ This is a simple stub for the push method, for semantic reasons</h2>
                                                     <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
                                                         <dd></dd>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
                                                         <dd></dd>                                                        <dt>\ReflectionException</dt>
+                                                        <dd></dd>                                                        <dt>\Psr\SimpleCache\InvalidArgumentException</dt>
                                                         <dd></dd>                                                    </dl>
                                                 </td>
                                             </tr>                                    </table>                                </div>
@@ -369,6 +377,7 @@ Update the index after write.</h2>
                                                     <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
                                                         <dd></dd>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
                                                         <dd></dd>                                                        <dt>\ReflectionException</dt>
+                                                        <dd></dd>                                                        <dt>\Psr\SimpleCache\InvalidArgumentException</dt>
                                                         <dd></dd>                                                    </dl>
                                                 </td>
                                             </tr>                                    </table>                                </div>
@@ -393,6 +402,7 @@ Update the index after write.</h2>
                                                     <dl>                                                        <dt>\SilverStripe\ORM\ValidationException</dt>
                                                         <dd></dd>                                                        <dt>\GuzzleHttp\Exception\GuzzleException</dt>
                                                         <dd></dd>                                                        <dt>\ReflectionException</dt>
+                                                        <dd></dd>                                                        <dt>\Psr\SimpleCache\InvalidArgumentException</dt>
                                                         <dd></dd>                                                    </dl>
                                                 </td>
                                             </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
@@ -486,22 +496,6 @@ Update the index after write.</h2>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>\SilverStripe\SiteConfig\SiteConfig</code>                                    </div>
                                 </div>
-                            </div>                            <a id="property_memberList"> </a>
-                            <div class="element clickable propertyprotected property_memberList" data-toggle="collapse" data-target=".property_memberList .collapse">
-                                <h2>List of all the members in the system</h2>
-                                <pre>memberList :\SilverStripe\ORM\ArrayList|array&lt;mixed,\SilverStripe\Security\Member&gt;</pre>
-                                <div class="labels"><span class="label">static</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">                                                <tr>
-                                                    <th>var
-                                                    </th>
-                                                    <td><p>List of all the members in the system</p>                                                    </td>
-                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
-                                            <code>\SilverStripe\ORM\ArrayList|array&lt;mixed,\SilverStripe\Security\Member&gt;</code>                                    </div>
-                                </div>
                             </div>                            <a id="property_owner"> </a>
                             <div class="element clickable propertypublic property_owner" data-toggle="collapse" data-target=".property_owner .collapse">
                                 <h2>owner</h2>
@@ -531,6 +525,6 @@ Update the index after write.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onMon, 10 Feb 2020 04:15:55 +0000.<br/>
+            generated onSun, 16 Feb 2020 00:48:41 +0000.<br/>
     </footer></body>
 </html>
