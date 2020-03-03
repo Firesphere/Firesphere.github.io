@@ -72,15 +72,16 @@
     </nav>
     <article id="main" class="content">
         <h1 id="viewing-permissions">Viewing permissions <a class="heading-anchor-permalink" href="#viewing-permissions">#</a></h1>
-<p>View permissions are indexed group based and setting based.</p>
-<p>On page level, this means if it’s public, the view will be indexed as <code>'null'</code>, meaning anyone can see.
-Inheritance is calculated, and if it is logged in only, then only logged in members will be able to see it.</p>
-<p>If it’s specific groups, then these groups are indexed.</p>
+<p>View permissions are indexed group-based and settings-based.</p>
+<p>At page-level, this means if it’s a public page, the view will be indexed as <code>'null'</code>, meaning anyone can see it.
+Inheritance is then calculated, and if it is logged-in only, then only logged-in members will be able to see it.</p>
+<p>If it’s specific groups, then these groups are indexed accordingly.</p>
 <h2 id="more-granular-approaches">More granular approaches <a class="heading-anchor-permalink" href="#more-granular-approaches">#</a></h2>
-<p>In case you have custom <code>canView()</code> implementations, we strongly suggest using <code>InheritedPermissionsExtension</code> and proper
-permission implementations instead.</p>
-<p>The reason for not using custom <code>Member</code> based permission checks, is because when a site has a lot of members, indexing
-and the granular approach would become incredibly complex and long. Possibly causing errors during indexing.</p>
+<p>If you have custom <code>canView()</code> implementations, we strongly suggest using <code>InheritedPermissionsExtension</code> and
+proper permission implementations instead.</p>
+<p>The reason for not using custom <code>Member</code>-based permission checks is that when a site has a lot of members, indexing
+and the more granular approach would become incredibly complex and slow - increasing the possibility of
+errors during indexing.</p>
 
         <hr/>
         <h2>Support our work</h2>

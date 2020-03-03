@@ -76,7 +76,15 @@
 <p>To use fuzzyness, here’s an example:</p>
 <pre><code class="language-php">$query-&gt;addTerm('SearchTerm', [], [], 5);
 </code></pre>
-<p>This example would add a fuzzyness of 5 to the query.</p>
+<p>This example would add a fuzzyness of 5 to the query. “Fuzzyness” refers to the number of edits
+required to get from one search term to the next. As an example, ‘SearchTerm’ with fuzzyness 5 will
+return the following:</p>
+<ul>
+<li>Search (four deletes)</li>
+<li>Starch (four deletes, one substitution)</li>
+<li>archers (four deletes, one insert)</li>
+</ul>
+<p>And other combinations of five actions (insert, delete, substitute)</p>
 
         <hr/>
         <h2>Support our work</h2>

@@ -71,15 +71,16 @@
             src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="fulltext-search*-compatibility"><a href="https://github.com/Firesphere/silverstripe-solr-compatibility">Fulltext Search* Compatibility</a> <a class="heading-anchor-permalink" href="#fulltext-search*-compatibility">#</a></h1>
-<p>To minimise the impact of migrating, there is a compatibility module available.
-<a href="https://github.com/Firesphere/silverstripe-solr-compatibility">This module</a> will remove the need to completely update all your indexes.
-A few small changes to your Search Controller and Results template may be needed however.</p>
-<p>The primary difference between FTS and this module is the way it’s configured. Therefore some stubs are available in the compatibility module.
-You can find this compatibility module here: <a href="https://github.com/Firesphere/silverstripe-solr-compatibility">https://github.com/Firesphere/silverstripe-solr-compatibility</a></p>
+        <h1 id="fulltext-search-(fts)-compatibility"><a href="https://github.com/Firesphere/silverstripe-solr-compatibility">Fulltext Search (FTS) Compatibility</a> <a class="heading-anchor-permalink" href="#fulltext-search-(fts)-compatibility">#</a></h1>
+<p>To minimise the impact of migrating, there is an
+<a href="https://github.com/Firesphere/silverstripe-solr-compatibility">FTS compatibility module</a> available.
+This module will remove the need to completely update all your indexes. A few small changes to your
+Search Controller and Results templates are all that may be required.</p>
+<p>The primary difference between FTS and this module is the way it’s configured, and so the compatibility
+module contains some stubs to bridge the two.</p>
 <h2 id="init-to-yml">Init to YML <a class="heading-anchor-permalink" href="#init-to-yml">#</a></h2>
-<p>To get the <code>init()</code> method to a YML, the module provides a helper function. This requires the <a href="https://www.php.net/manual/en/book.yaml.php">PHP module <code>php_yaml</code></a> to be installed.</p>
-<p>Easiest to get the YML is to do in your <code>PageController::init()</code></p>
+<p>To translate the <code>init()</code> method to a YML, the module provides a helper function. This requires the <a href="https://www.php.net/manual/en/book.yaml.php">PHP module <code>php_yaml</code></a> to be installed.</p>
+<p>The easiest way to get the YML is to do the following in your <code>PageController::init()</code></p>
 <pre><code class="language-php">$index = new MyIndexClass();
 $index-&gt;initToYml();
 </code></pre>
@@ -121,7 +122,7 @@ $index-&gt;initToYml();
 <tr>
 <td><code>SearchQuery::getLimit()</code></td>
 <td><code>getRows()</code></td>
-<td><code>BaseQuery::setRows()</code></td>
+<td><code>BaseQuery::getRows()</code></td>
 <td>Help prevent errors moving from <code>Limit</code> to <code>Rows</code></td>
 </tr>
 <tr>
@@ -139,9 +140,7 @@ $index-&gt;initToYml();
 </tbody>
 </table>
 <h4 id="note">Note <a class="heading-anchor-permalink" href="#note">#</a></h4>
-<p>When upgrading your Solr instance from Solr4 to Solr5+, a full index will be needed regardless.</p>
-<hr>
-<p>* From here on called “FTS”</p>
+<p>When upgrading your Solr instance from Solr4 to Solr5+, a full reindex will be needed regardless.</p>
 
         <hr/>
         <h2>Support our work</h2>

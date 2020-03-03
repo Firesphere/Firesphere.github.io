@@ -73,15 +73,17 @@
     <article id="main" class="content">
         <h1 id="usage">Usage <a class="heading-anchor-permalink" href="#usage">#</a></h1>
 <h2 id="getting-started">Getting started <a class="heading-anchor-permalink" href="#getting-started">#</a></h2>
-<p>You first <em>need</em> to create an index extending the <code>Firesphere\SolrSearch\Indexes\BaseIndex</code> class, or if you are using the compatibility
+<p>In order to return search results, Solr requires an Index that holds the searchable data.
+So the first thing you <em>need</em> to do is to create an index extending the
+<code>Firesphere\SolrSearch\Indexes\BaseIndex</code> class, or if you are using the compatibility
 module, the <code>SilverStripe\FullTextSearch\Solr\SolrIndex</code> class.</p>
 <p>If you are extending the base Index, it will require a <code>getIndexName</code> method
 which is used to determine the name of the index to query Solr.</p>
 <p>Although the compatibility module provides a core naming scheme, it is still highly recommended
 to implement your own method.</p>
 <p><strong>IMPORTANT</strong></p>
-<p>The usage of <code>YML</code> as a replacement for the core configuration, it  is not a replacement
-for creating your own Index extending either of the Base Indexes, it is a compliment to it.</p>
+<p>The usage of <code>YML</code> for the core configuration is <em>not</em> a replacement for creating your own Index
+extending either of the Base Indexes; it is a complement to it.</p>
 <p><code>YML</code> is purely used for the configuration of the index Classes.</p>
 <h2 id="configuration">Configuration <a class="heading-anchor-permalink" href="#configuration">#</a></h2>
 <p>Configuring Solr is done via YML:</p>
@@ -106,10 +108,11 @@ for creating your own Index extending either of the Base Indexes, it is a compli
   cpucores: 2
   debug: false
 </code></pre>
-<p>Note, if you are using defaults (localhost), it is not necessary to add this to your configuration.</p>
+<h4 id="note">Note <a class="heading-anchor-permalink" href="#note">#</a></h4>
+<p>If you are using defaults (localhost), it is not necessary to add this to your configuration.</p>
 <p>The config is used to connect to Solr. This will tell the module where the Solr instance for this index lives and how to connect.</p>
 <p>The store is to select the way to configure the solr configuration storage. Options are <code>file</code> and a required path, or <code>post</code> and a required endpoint to post to.</p>
-<p>Post config:</p>
+<p>Example POST config:</p>
 <pre><code class="language-yml">store:
   mode: 'post'
   path: '/my_post_endpoint'
@@ -120,9 +123,9 @@ for creating your own Index extending either of the Base Indexes, it is a compli
 will have debugging enabled.</p>
 <h4 id="showinsearch">ShowInSearch <a class="heading-anchor-permalink" href="#showinsearch">#</a></h4>
 <p><code>ShowInSearch</code> is handled by the module itself, so there is no need to configure it within your YML/PHP index definition.
-When a content author sets this field to 0 via the CMS, then the related Page or File object is actually <em>removed</em> from the applicable Solr
+When a content author sets this field to <code>0</code> via the CMS, then the related Page or File object is actually <em>removed</em> from the applicable Solr
 core immediately through the <code>onAfterPublish</code> or <code>onAfterWrite</code> method, or during the next run of the <code>SolrIndexJob</code>.</p>
-<p>Therefore, custom addition of <code>ShowInSearch</code> as a filterable or indexable field in YML for example,
+<p>Therefore, custom addition of <code>ShowInSearch</code> as a filterable or indexable field in YML
 is likely to cause unexpected behaviour.</p>
 <p>The reason for removing <code>ShowInSearch = false|0</code> from the indexing process,
 is to streamline the number of items stored in Solr’s indexes.
@@ -131,22 +134,21 @@ be displayed.</p>
 <h4 id="dirty-classes">Dirty classes <a class="heading-anchor-permalink" href="#dirty-classes">#</a></h4>
 <p>If a change fails to update, a <code>DirtyClass</code> is created, recording the need for updating
 said object. It is recommended to automatically run the <code>ClearDirtyClasses</code> task every few hours
-depending on the expected amount of changes daily and the importance of changes.</p>
-<p>Given the expected time of the dirty classes to be cleaned out is quite low, it’s suggested to run
-this task every 5 or 10 minutes.</p>
+depending on the expected amount of changes daily and the importance of those changes.</p>
+<p>The expected time to run the task is quite low, so we recommend running this task reasonably
+often (every 5 or 10 minutes).</p>
 <h4 id="defining-the-amount-of-cpu-cores">Defining the amount of CPU cores <a class="heading-anchor-permalink" href="#defining-the-amount-of-cpu-cores">#</a></h4>
 <p>If your server has multiple CPU cores available, you can define the amount of cores in the config.
-During indexing, this means that each core gets to do an indexing of a group.
-The advantage is that it takes all cores available, speeding up the indexing process by the amount of cores available.</p>
-<p>Because the amount of cores can not be determined programmatically, due to access control, you will have to define
-the amount of cores available manually.</p>
+During indexing, this means that each core is allocated an indexing of a group.
+The advantage is that it utilises all the cores available, speeding up the indexing process.</p>
+<p>The amount of cores can not be determined programmatically (due to access control), so
+you will have to define the amount of cores available manually.</p>
 <p><strong>NOTE</strong></p>
 <p>Given the current situation in server-land, the default amount of cores is 2. This should work fine for
 most situations, even if you only have one core available. If you have more cores, you can make this
-amount larger, of course.</p>
-<p><strong>NOTE</strong></p>
-<p>Using all cores your system has, will make your website pretty slow during indexing! It is adviced to keep
-at least one core free for handling page visits, while you’re running an index.</p>
+amount larger, of course.
+Using all of the cores your system has will make your website pretty slow during indexing!
+It is advised to keep at least one core free for handling page visits while you’re running an index.</p>
 <h3 id="using-init()">Using init() <a class="heading-anchor-permalink" href="#using-init()">#</a></h3>
 <p>Similar to the FulltextSearch module, using init supports all basic methods to add fulltext or filter fields.</p>
 <p>Available methods are:</p>
@@ -250,15 +252,17 @@ to create in the first step of this document.</p>
 <h4 id="moving-from-init-to-yml">Moving from init to YML <a class="heading-anchor-permalink" href="#moving-from-init-to-yml">#</a></h4>
 <p>The <a href="11-Submodules/01-Fulltext-Search-Compatibility.html">compatibility module</a> has an optional extension method that allows you to build your index and then generate the YML content for you. See the compatibility module for more details.</p>
 <h2 id="grouped-indexing">Grouped indexing <a class="heading-anchor-permalink" href="#grouped-indexing">#</a></h2>
-<p>Note, grouped indexing is <code>0</code> based. Thus, if there are 150 groups to index, the final group to index will be 149 instead of 150.</p>
+<p>Be aware that Grouped indexing is <code>0</code>-based. Thus, if there are 150 groups to index,
+the final group to index will be 149 instead of 150.</p>
 <h2 id="method-output-casting">Method output casting <a class="heading-anchor-permalink" href="#method-output-casting">#</a></h2>
-<p>To get the correct Solr field type in the Solr Configuration, each method you want to add, e.g.</p>
+<p>To get the correct Solr field type in the Solr Configuration, you will need to add a
+casting for each method you want to add. So for the <code>Content</code> field, the method below:</p>
 <pre><code class="language-php">public function getContent()
 {
     return $renderedContent;
 }
 </code></pre>
-<p>You will need to add a casting, so the field type is correct in Solr, like so:</p>
+<p>Could have a casting like the below to ensure it renders as HTML:</p>
 <pre><code class="language-php">private static $casting = [
     'getContent' =&gt; 'HTMLText',
     'Content'    =&gt; 'HTMLText'
@@ -266,7 +270,7 @@ to create in the first step of this document.</p>
 </code></pre>
 <p>Depending on your field definition, you either need to have the full method name, or the short method name.</p>
 <h2 id="another-way-to-set-the-config-in-php">Another way to set the config in PHP <a class="heading-anchor-permalink" href="#another-way-to-set-the-config-in-php">#</a></h2>
-<p>You could also use PHP, just like it was, to set the config. For readability however, it’s better to use variables for Facets:</p>
+<p>You could also use PHP to set the config. For readability however, it’s better to use variables for Facets:</p>
 <pre><code class="language-php">    protected $facetFields = [
         RelatedObject::class   =&gt; [
             'BaseClass' =&gt; SiteTree::class,
@@ -284,17 +288,16 @@ to create in the first step of this document.</p>
 <p>The relation would look like <code>SiteTree_RelatedObjectID</code>, where <code>RelatedObject</code> the name of the relation reflects.</p>
 <p>The Title is used to group all facets by their Title, in the template, this is accessible by looping <code>$Result.FacetSet.TitleOfTheFacet</code></p>
 <h3 id="important-notice">Important notice <a class="heading-anchor-permalink" href="#important-notice">#</a></h3>
-<p>Note, that Facets are relational. For faceting on a relation, omit the origin class (e.g. <code>SiteTree</code>), but supply the full relational
+<p>Facets are relational. For faceting on a relation, omit the origin class (e.g. <code>SiteTree</code>), but supply the full relational
 path to the facet. e.g. if you want to have facets on <code>RelationObject-&gt;ManyRelation()-&gt;OneRelation()-&gt;ID</code>, the Facet declaration should be
 <code>ManyRelationObject.OneRelationID</code>, assuming it’s a <code>has_one</code> relation.</p>
 <p>If you have many relations, through either <code>many_many</code> or <code>has_many</code>, your definition should
 use <code>ManyRelationObjectName.Relation.ID</code> instead of <code>RelationID</code>. It works and resolves the same.</p>
-<p>It is strongly advised, to use relations for faceting, as Solr tends to think of textual relations in a different way.
-For example, a relation on <code>MyObject.TextField</code>, might come up with the following relations:</p>
+<p>It is strongly advised to use relations for faceting, as Solr tends to think of textual relations in a different way.</p>
 <h4 id="example">Example <a class="heading-anchor-permalink" href="#example">#</a></h4>
-<p>Assuming your text field on the object, might contain “Content Name One” and “Content Name Two”. Faceting would be
-done in such a way, that “Content”, “Name” and “One” are three different facet results, despite you would
-like it to be “Content Name One”.</p>
+<p>If you set relations on <code>MyObject.TextField</code>, and the text field contains “Content Name
+One” and “Content Name Two”, faceting would be done in such a way that “Content”, “Name”
+and “One” would be three different facet results, rather than “Content Name One”.</p>
 <h2 id="accessing-solr">Accessing Solr <a class="heading-anchor-permalink" href="#accessing-solr">#</a></h2>
 <p>If available, you can access your Solr instance at <code>http://mydomain.com:8983</code></p>
 <h2 id="excluding-unwanted-indexes">Excluding unwanted indexes <a class="heading-anchor-permalink" href="#excluding-unwanted-indexes">#</a></h2>
@@ -308,8 +311,8 @@ like it to be “Content Name One”.</p>
 </code></pre>
 <p>Looking at the <code>tests</code> folder, there is a <code>TestIndexFour</code>. This index is not loaded unless explicitly asked.</p>
 <h1 id="executing-a-search">Executing a search <a class="heading-anchor-permalink" href="#executing-a-search">#</a></h1>
-<p>To search, here’s an example using all the features, and set the resulting outcome from the search
-on the current <code>Controller</code> to be useable in the templates.</p>
+<p>To search, here’s an example using all the features, and setting the resulting outcome from the search
+onto the current <code>Controller</code> to be useable in templates.</p>
 <pre><code class="language-php">class SearchController extends PageController
 {
     protected $ResultSet;
@@ -433,9 +436,9 @@ on the current <code>Controller</code> to be useable in the templates.</p>
 }
 </code></pre>
 <p><strong>NOTE</strong></p>
-<p>The code in this documentation is called “pseudo code”, it may not exactly work, but serves as example.</p>
+<p>The code in this documentation is “pseudo-code”; it may not exactly work, but serves as example.</p>
 <hr>
-<p><sup>1</sup> Although not required, it’s highly recomended</p>
+<p><sup>1</sup> Although not required, it’s highly recommended</p>
 <p><sup>2</sup> The second option of an array can be omitted and directly given the boost value</p>
 
         <hr/>

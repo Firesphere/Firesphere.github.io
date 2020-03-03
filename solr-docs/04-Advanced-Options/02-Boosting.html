@@ -72,19 +72,20 @@
     </nav>
     <article id="main" class="content">
         <h1 id="boost-queries">Boost queries <a class="heading-anchor-permalink" href="#boost-queries">#</a></h1>
-<p>Boosting can be done at both Index time if the configuration supports it, or at Query time.</p>
+<p>Boosting can be done at both Index time, if the configuration supports it, or at Query time.</p>
 <p>To boost a certain query at Query time (easiest), use the following syntax:</p>
 <pre><code class="language-php">    $query-&gt;addBoostedField('Field_Name', $value);
 </code></pre>
-<p>Where value is the boosting value.</p>
+<p>Where <code>$value</code> is the boosting value. The default value is <code>1.0</code>, anything below that will decrease the
+relevance, anything above increases it.</p>
 <h2 id="boosting-a-single-term-out-of-a-set">Boosting a single term out of a set <a class="heading-anchor-permalink" href="#boosting-a-single-term-out-of-a-set">#</a></h2>
 <p>To boost a single term specifically, or on a specific field, you can use the following:</p>
-<pre><code class="language-php">$query-&gt;addTerm('My search terms', ['Fields', 'To', 'Boost', 'On'], 2);
+<pre><code class="language-php">$query-&gt;addTerm('My search terms', ['Fields', 'To', 'Boost', 'On'], $value);
 </code></pre>
-<p>Where the array of fields should not be empty. The number <code>2</code> is the amount of boosting that should be applied
-to the fields in the array.</p>
+<p>Where the array of fields should not be empty. <code>$value</code> is the amount of boosting that should be applied
+to the fields in the array, for example <code>$value = 2</code> will mean that results are treated as twice as relevant.</p>
 <p>This executes a global search for the term, followed by a boosting for each field in the
-field array with a boost status of 2.</p>
+field array with a boost status of <code>$value</code>.</p>
 <p>Note that the boosted fields do need to be added as a boosted field at Configure time.</p>
 
         <hr/>

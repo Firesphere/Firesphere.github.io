@@ -73,14 +73,14 @@
     <article id="main" class="content">
         <h1 id="faq">FAQ <a class="heading-anchor-permalink" href="#faq">#</a></h1>
 <h3 id="what-do-you-mean-not-fast-enough%3F">What do you mean not fast enough? <a class="heading-anchor-permalink" href="#what-do-you-mean-not-fast-enough%3F">#</a></h3>
-<p>All indexing, as well as the search, require disk space. If the disk can not respond fast enough to a write,
+<p>All indexing, as well as the search, requires disk space. If the disk can not respond fast enough to a write,
 either PHP or Java will stop and throw an error</p>
-<h3 id="do-you-support-synonyms">Do you support synonyms <a class="heading-anchor-permalink" href="#do-you-support-synonyms">#</a></h3>
+<h3 id="do-you-support-synonyms%3F">Do you support synonyms? <a class="heading-anchor-permalink" href="#do-you-support-synonyms%3F">#</a></h3>
 <p>Yes! Including US to UK spelling synonyms by default!</p>
 <h3 id="fast%3F">Fast? <a class="heading-anchor-permalink" href="#fast%3F">#</a></h3>
 <p>Yes, very fast</p>
 <h3 id="compatible-with-the-fulltext-search-module%3F">Compatible with the Fulltext Search Module? <a class="heading-anchor-permalink" href="#compatible-with-the-fulltext-search-module%3F">#</a></h3>
-<p>99% and counting, does that work for you? Have a look at the compatibility module</p>
+<p>99% and counting! Have a look at the compatibility module</p>
 <h3 id="why-do-i-need-to-name-my-index%3F">Why do I need to name my index? <a class="heading-anchor-permalink" href="#why-do-i-need-to-name-my-index%3F">#</a></h3>
 <p>You have a name yourself, don’t you? It makes sense to name the index too.</p>
 <h3 id="only-file-storage%3F">Only File storage? <a class="heading-anchor-permalink" href="#only-file-storage%3F">#</a></h3>
@@ -88,36 +88,37 @@ either PHP or Java will stop and throw an error</p>
 <h3 id="my-core.properties-won%E2%80%99t-persist%2C-what-gives%3F">My core.properties won’t persist, what gives? <a class="heading-anchor-permalink" href="#my-core.properties-won%E2%80%99t-persist%2C-what-gives%3F">#</a></h3>
 <p>Most likely, you’re running a vagrant or docker machine? And even more likely
 running it on Linux.</p>
-<p>The solution is to create a symlink in <code>/var/solr/data/{your-policy-name/</code> to <code>/var/www/{yoursite}/.solr/conf</code>, so the
-<code>conf</code> folder points to your locally writable folder for Vagrant.</p>
+<p>The solution is to create a symlink in <code>/var/solr/data/{your-policy-name}/</code> to <code>/var/www/{yoursite}/.solr/conf</code>, so the
+<code>conf</code> folder points to your locally-writable folder for Vagrant.</p>
 <p>In your search.yml, add the following as the location of your FileStore config:</p>
 <pre><code class="language-yaml">Firesphere\SolrSearch\Services\SolrCoreService:
   store:
     mode: 'file'
     path: '/var/solr/data'
 </code></pre>
-<p>That way, Solr will write it’s own files to the correct core folder where it can write, but your config can still live
+<p>That way, Solr will write its own files to the correct core folder where it can write, but your config can still live
 inside your project.</p>
 <h3 id="i-would-like-a-feature-to-be-added!">I would like a feature to be added! <a class="heading-anchor-permalink" href="#i-would-like-a-feature-to-be-added!">#</a></h3>
 <p>I would like an issue to be created</p>
 <h3 id="dealing-with-errors">Dealing with errors <a class="heading-anchor-permalink" href="#dealing-with-errors">#</a></h3>
 <p>Especially when using facets, you should not redeclare fields to be filterable as well. If you run in to an error
-saying you have duplicate fields, check your configuration that e.g. FilterFields does not have an overlap with FacetFields, etc.</p>
+saying you have duplicate fields, check your configuration for overlaps
+e.g. FilterFields does not have an overlap with FacetFields</p>
 <h3 id="%40package-tag">@package tag <a class="heading-anchor-permalink" href="#%40package-tag">#</a></h3>
 <p>The package tag is to help the API documentation to stay up to date.</p>
-<p>We are aware it’s a bit overkill and redundant, but it does not have any impact on the actual code.</p>
+<p>We are aware it’s a bit of overkill and redundant, but it does not have any impact on the actual code.</p>
 <h1 id="gitstore">GitStore <a class="heading-anchor-permalink" href="#gitstore">#</a></h1>
-<p>As you may know, Open Source Software is written by volunteers. We volunteer our time, to work
-on software a lot.</p>
-<p>But, by doing such, we do not have time for other things to relax. Which causes friction.</p>
+<p>As you may know, Open Source Software is written by volunteers. We volunteer a lot of
+our free time to work on this (and other) software.</p>
 <p>If you can afford it, we would appreciate it a lot if you would sponsor us through GitStore.</p>
-<h2 id="but-your-software-is-free-and-open">But your software is free and open <a class="heading-anchor-permalink" href="#but-your-software-is-free-and-open">#</a></h2>
-<p>Yes, but that does not mean it doesn’t cost us time to respond to issues, look at pull requests
-or even support you with problems outside of the module. (A common one is Solr and Linux permission failures).</p>
-<p>We do not mind helping you. But we have put a lot of time and effort in to writing software
-that is useful to you, the community. We ask you, could you give something back? It is not mandatory,
-of course.</p>
-<p>We will add you to the list of sponsors, if you decide to pay for this work.</p>
+<h2 id="but-your-software-is-free-and-open%2C-isn%E2%80%99t-it%3F">But your software is free and open, isn’t it? <a class="heading-anchor-permalink" href="#but-your-software-is-free-and-open%2C-isn%E2%80%99t-it%3F">#</a></h2>
+<p>Yes, but it still costs us time to respond to issues, look at pull requests
+or even support you with problems outside of the module.</p>
+<p>We are happy to help you, but we have put a lot of time and effort in to writing software
+that is useful to you, the community. We ask you, would you give something back?
+It is not mandatory, of course.</p>
+<p>We will add you to the list of sponsors, if you decide to thank the maintainers for this
+work.</p>
 
         <hr/>
         <h2>Support our work</h2>

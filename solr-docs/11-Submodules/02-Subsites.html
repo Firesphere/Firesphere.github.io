@@ -73,9 +73,10 @@
     <article id="main" class="content">
         <h1 id="subsites-submodule"><a href="https://github.com/Firesphere/silverstripe-subsite-solr">Subsites submodule</a> <a class="heading-anchor-permalink" href="#subsites-submodule">#</a></h1>
 <p>With the <a href="https://github.com/Firesphere/silverstripe-subsite-solr">Subsites submodule</a>, searching split between Subsites is automatically handled.</p>
-<p>Indexing by SubsiteID etc. is also automatically added to the appropriate parts of the indexing.</p>
-<p>When adding the Subsites module, you will need to do a full reindex of your Solr cores.
-Otherwise, changes won’t be applied and Solr might return unexpected results.</p>
+<p><code>SubsiteID</code> is automatically added to the appropriate parts of the indexing, so
+that results from each subsite are kept separated when searching.</p>
+<p>When adding the Subsites module, you will need to do a full reindex of your Solr
+cores. Otherwise, changes won’t be applied and Solr might return unexpected results.</p>
 
         <hr/>
         <h2>Support our work</h2>

@@ -72,36 +72,33 @@
     </nav>
     <article id="main" class="content">
         <h1 id="debugging">Debugging <a class="heading-anchor-permalink" href="#debugging">#</a></h1>
-<p>To debug the executed query, the <code>BaseIndex</code> has a method available to show you all the components of the executed query
-as an array. To get this data, execute the following after you have done your search:</p>
+<p>To debug the executed query, the <code>BaseIndex</code> class has a method available to show you all the components of the
+executed query as an array. To get this data, execute the following after you have done your search:</p>
 <ul>
-<li><code>$index-&gt;getQueryTerms()</code> To get the query terms</li>
+<li><code>$index-&gt;getQueryTerms()</code></li>
 </ul>
 <p>The Index also has a method to get the Query Factory and read data from there.
 You can find the output of the factory by getting</p>
 <ul>
 <li><code>$index-&gt;getQueryFactory()</code>. See the <a href="https://firesphere.github.io/solr-api/classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">API documentation</a> on how to address each part of the factory.</li>
 </ul>
-<p>Through the use of an <code>Extension</code> on <code>BaseIndex</code> you can get the Factory through the method <code>onBeforeSearch</code></p>
+<p>Through the use of an <code>Extension</code> on <code>BaseIndex</code>, you can get the Factory through the method <code>onBeforeSearch</code></p>
 <p>These two methods supply more information about the executed query.</p>
-<p>For a more thorough debugging, have a look at the <a href="https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/">Solarium docs</a> for getting the debugging information.</p>
+<p>For more thorough debugging, have a look at the <a href="https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/">Solarium docs</a>.</p>
 <h1 id="logging">Logging <a class="heading-anchor-permalink" href="#logging">#</a></h1>
-<p>Every error triggers the SolrLogger, to retrieve the errors from Solr and store them in the database.</p>
-<p>These error logs are deletable only in dev mode or by administrators.</p>
-<p>The logs can be found at <code>admin/searchadmin/Firesphere-SolrSearch-Models-SolrLog</code> for checking what is wrong.</p>
+<p>Every error triggers the <code>SolrLogger</code>, which retrieves the errors from Solr and stores them in the database.</p>
+<p>These error logs can only be deleted in dev mode or by administrators.</p>
+<p>The logs can be found at the URL <code>/admin/searchadmin/Firesphere-SolrSearch-Models-SolrLog</code></p>
 <h2 id="clearing-out-the-logs">Clearing out the logs <a class="heading-anchor-permalink" href="#clearing-out-the-logs">#</a></h2>
-<p>As an admin, you should have access to <code>dev/tasks</code>, where an option to truncate the log database is available at
-<code>dev/tasks/SolrClearErrorsTask</code>. Use this with caution though, as it will truncate the errors logged and no data remains
-at all.</p>
+<p>As an admin, you can truncate the log database via the dev task <code>dev/tasks/SolrClearErrorsTask</code>.</p>
+<p>Use this with caution though, as it will completely wipe the errors logged and no data will remain at all.</p>
 <p>It is strongly advised to only clear out the logs if they have all been reviewed and you are sure nothing serious is wrong.</p>
 <h2 id="x%3Aunknown-indexes">x:Unknown indexes <a class="heading-anchor-permalink" href="#x%3Aunknown-indexes">#</a></h2>
-<p>Because Solr 5 and lower don’t return the actual core that threw the error, logging will say <code>x:Unknown</code>. This does not mean
-the log is not there, it means the core that threw the error isn’t known by the server.</p>
-<h2 id="sorting">Sorting <a class="heading-anchor-permalink" href="#sorting">#</a></h2>
-<p>By default, SilverStripe sorts by ID, causing the oldest errors to show first. Advised is to sort by Timestamp before looking at the actual error.</p>
+<p>Up until Solr 5, the information about which core threw the error wasn’t passed back to the webserver.
+Log messages will contain <code>x:Unknown</code> in this circumstance. This means the log <em>is</em> there, just that the core that
+threw the error isn’t known by the server.</p>
 <h2 id="colour-codes">Colour codes <a class="heading-anchor-permalink" href="#colour-codes">#</a></h2>
-<p>The gridfield is colour coded for the type of error. This can be disabled by overriding the GridFieldExtension class and removing
-any classes that are unwished for.</p>
+<p>The Gridfield is colour-coded by type of error. This can be disabled by overriding the <code>GridFieldExtension</code> class.</p>
 
         <hr/>
         <h2>Support our work</h2>
