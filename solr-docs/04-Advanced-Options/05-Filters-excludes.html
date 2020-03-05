@@ -24,9 +24,9 @@
 <ul>
 <li><a class="" href="01-Faceting.html">Faceting</a></li>
 <li><a class="" href="02-Boosting.html">Boosting</a></li>
-<li><a class="active" href="03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="" href="03-Fuzzy-search.html">Fuzzy search</a></li>
 <li><a class="" href="04-Elevation.html">Elevation</a></li>
-<li><a class="" href="05-Filters-excludes.html">Filters excludes</a></li>
+<li><a class="active" href="05-Filters-excludes.html">Filters excludes</a></li>
 </ul>
 <li><a class="" href="../05-Customisation.html">Customisation</a></li>
 <li><a class="" href="../06-CMS-Usage.html">CMS Usage</a></li>
@@ -72,20 +72,41 @@
             src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="fuzzyness">Fuzzyness <a class="heading-anchor-permalink" href="#fuzzyness">#</a></h1>
-<p>Fuzzyness can be set at query time, to search a range of similar query terms.</p>
-<p>To use fuzzyness, here’s an example:</p>
-<pre><code class="language-php">$query-&gt;addTerm('SearchTerm', [], [], 5);
-</code></pre>
-<p>This example would add a fuzzyness of 5 to the query. “Fuzzyness” refers to the number of edits
-required to get from one search term to the next. As an example, ‘SearchTerm’ with fuzzyness 5 will
-return the following:</p>
+        <h1 id="advanced-filters-%26-excludes">Advanced filters &amp; excludes <a class="heading-anchor-permalink" href="#advanced-filters-%26-excludes">#</a></h1>
+<p>When performing a search, in addition to simple single-value and array-of-value filters, it’s possible
+to build more complex filter/exclude criteria. Some examples of this include:</p>
 <ul>
-<li>Search (four deletes)</li>
-<li>Starch (four deletes, one substitution)</li>
-<li>archers (four deletes, one insert)</li>
+<li>Range filters (greater than/less than)</li>
+<li>Geospatial search</li>
+<li>Partial match filters (starts with/ends with)</li>
 </ul>
-<p>And other combinations of five actions (insert, delete, substitute)</p>
+<h2 id="usage">Usage <a class="heading-anchor-permalink" href="#usage">#</a></h2>
+<p>Advanced search/exclude filters are constructed from <code>Criteria</code> objects, from the <a href="https://github.com/minimalcode-org/search">MinimalCode Solr
+Search Criteria</a> package. More information and usage
+examples are available <a href="https://github.com/minimalcode-org/minimalcode-parent/wiki/4.1-Solr-Search-%28Php%29">here</a>.</p>
+<p>When passing a <code>Criteria</code> object to <code>addFilter</code> or <code>addExclude</code>, the first argument (usually the
+field name) can be set to any string value.</p>
+<pre><code class="language-php">$query = new BaseQuery();
+
+// Simple date filter - exclude any pages which have an embargo date in the future
+$criteria = Criteria::where('SiteTree_Embargo')
+    -&gt;greaterThanEqual('NOW');
+$query-&gt;addExclude('embargo', $criteria);
+
+// Starts with/ends with filter
+$criteria = Criteria::where('SiteTree_Title')
+    -&gt;startsWith('prefix')
+    -&gt;endsWith('suffix');
+$query-&gt;addFilter('title-partial-match', $criteria);
+
+// Nested criteria
+$topLevel = Criteria::where('SiteTree_ParentID')
+    -&gt;is(0);
+$criteria = Criteria::where('SiteTree_Title')
+    -&gt;startsWith('test')
+    -&gt;andWhere($topLevel);
+$query-&gt;addFilter('top-level-test-pages', $criteria);
+</code></pre>
 
         <hr/>
         <h2>Support our work</h2>
