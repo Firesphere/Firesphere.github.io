@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -127,6 +127,10 @@ $options is not used anymore, added for backward compatibility</span><pre>addCla
     </li>    <li class="methodpublic">
         <a href="#method_addHighlight" title="addHighlight ::Add a highlight parameter">
             <span class="description">Add a highlight parameter</span><pre>addHighlight</pre>
+        </a>
+    </li>    <li class="methodpublic inherited">
+        <a href="#method_addSort" title="addSort ::Add a field to sort on">
+            <span class="description">Add a field to sort on</span><pre>addSort</pre>
         </a>
     </li>    <li class="methodpublic inherited">
         <a href="#method_addTerm" title="addTerm ::Each boosted query needs a separate addition!
@@ -414,6 +418,25 @@ $options is not used anymore, added for backward compatibility</h2>
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$field</h4>
                                                 <code></code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>$this</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_addSort"></a>
+                        <div class="element clickable methodpublic method_addSort inherited" data-toggle="collapse" data-target=".method_addSort .collapse">
+                            <h2>Add a field to sort on</h2>
+                            <pre>addSort(string $field,string $direction): $this</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$direction</h4>
+                                                <code>string</code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>$this</code><p></p>                                </div>
                             </div>
@@ -992,10 +1015,10 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
                                             <code>array</code>                                    </div>
                                 </div>
                             </div>                            <a id="property_sort"> </a>
-                            <div class="element clickable propertyprotected property_sort" data-toggle="collapse" data-target=".property_sort .collapse">
-                                <h2>Sorting settings</h2>
+                            <div class="element clickable propertyprotected property_sort inherited" data-toggle="collapse" data-target=".property_sort .collapse">
+                                <h2>Sorting order</h2>
                                 <pre>sort :array</pre>
-                                <div class="labels">                                </div>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"></div>
@@ -1003,7 +1026,7 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
                                         <table class="table">                                                <tr>
                                                     <th>var
                                                     </th>
-                                                    <td><p>Sorting settings</p>                                                    </td>
+                                                    <td><p>Sorting order</p>                                                    </td>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>array</code>                                    </div>
                                 </div>
@@ -1207,6 +1230,6 @@ SiteTree::class   =&gt; [
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onTue, 17 Mar 2020 04:42:26 +0000.<br/>
+            generated onTue, 31 Mar 2020 06:16:51 +0000.<br/>
     </footer></body>
 </html>

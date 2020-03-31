@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -163,6 +163,10 @@ $options is not used anymore, added for backward compatibility</span><pre>addCla
     </li>    <li class="methodpublic inherited">
         <a href="#method_getClient" title="getClient ::Get the client">
             <span class="description">Get the client</span><pre>getClient</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_getClientQuery" title="getClientQuery ::">
+            <span class="description"></span><pre>getClientQuery</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_getConfig" title="getConfig ::Build a full config for all given endpoints
@@ -751,6 +755,23 @@ There is a spellcheck output</h2>
                                         <code>\Solarium\Core\Client\Client</code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_getClientQuery"></a>
+                        <div class="element clickable methodpublic method_getClientQuery" data-toggle="collapse" data-target=".method_getClientQuery .collapse">
+                            <h2>getClientQuery</h2>
+                            <pre>getClientQuery(): \Solarium\QueryType\Select\Query\Query</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>\Solarium\QueryType\Select\Query\Query</code><p></p>                                </div>
+                            </div>
+
                         </div>                        <a id="method_getConfig"></a>
                         <div class="element clickable methodpublic method_getConfig" data-toggle="collapse" data-target=".method_getConfig .collapse">
                             <h2>Build a full config for all given endpoints
@@ -1290,6 +1311,22 @@ Used in init to call build methods from configuration yml</h2>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>array</code>                                    </div>
                                 </div>
+                            </div>                            <a id="property_clientQuery"> </a>
+                            <div class="element clickable propertyprotected property_clientQuery" data-toggle="collapse" data-target=".property_clientQuery .collapse">
+                                <h2>Query that will hit the client</h2>
+                                <pre>clientQuery :\Solarium\QueryType\Select\Query\Query</pre>
+                                <div class="labels">                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td><p>Query that will hit the client</p>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>\Solarium\QueryType\Select\Query\Query</code>                                    </div>
+                                </div>
                             </div>                            <a id="property_retry"> </a>
                             <div class="element clickable propertyprivate property_retry" data-toggle="collapse" data-target=".property_retry .collapse">
                                 <h2>Signify if a retry should occur if nothing was found and there are suggestions to follow</h2>
@@ -1499,6 +1536,6 @@ This is to prevent a notice if there is no yml.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onTue, 17 Mar 2020 04:42:26 +0000.<br/>
+            generated onTue, 31 Mar 2020 06:16:51 +0000.<br/>
     </footer></body>
 </html>

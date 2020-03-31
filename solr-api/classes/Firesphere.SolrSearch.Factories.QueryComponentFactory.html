@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -202,6 +202,10 @@ We only need the class itself, since the hierarchy will take care of the rest</s
                         </li>                        <li class="methodprotected inherited">
                             <a href="#method_buildViewFilter" title="buildViewFilter ::Add filtering on canView">
                                 <span class="description">Add filtering on canView</span><pre>buildViewFilter</pre>
+                            </a>
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_getBuildTerm" title="getBuildTerm ::Get the escaped search string, or, if empty, a global search">
+                                <span class="description">Get the escaped search string, or, if empty, a global search</span><pre>getBuildTerm</pre>
                             </a>
                         </li>                        <li class="methodprotected">
                             <a href="#method_isFuzzy" title="isFuzzy ::If the search is fuzzy, add fuzzyness">
@@ -503,6 +507,22 @@ We only need the class itself, since the hierarchy will take care of the rest</h
                                                 <td>                                                </td>
                                             </tr>                                    </table>                                        <h3>Response</h3>
                                         <code>array</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getBuildTerm"></a>
+                        <div class="element clickable methodprotected method_getBuildTerm" data-toggle="collapse" data-target=".method_getBuildTerm .collapse">
+                            <h2>Get the escaped search string, or, if empty, a global search</h2>
+                            <pre>getBuildTerm(array $search): string</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$search</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>string</code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_getClientQuery"></a>
@@ -842,6 +862,6 @@ We only need the class itself, since the hierarchy will take care of the rest</h
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onTue, 17 Mar 2020 04:42:26 +0000.<br/>
+            generated onTue, 31 Mar 2020 06:16:50 +0000.<br/>
     </footer></body>
 </html>
