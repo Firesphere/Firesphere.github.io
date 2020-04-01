@@ -102,12 +102,20 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>                        <li class="methodprotected">
-                            <a href="#method_buildFacetQuery" title="buildFacetQuery ::Add facet filters based on the current request">
-                                <span class="description">Add facet filters based on the current request</span><pre>buildFacetQuery</pre>
+                            <a href="#method_buildAndFacetQuery" title="buildAndFacetQuery ::Add AND facet filters based on the current request">
+                                <span class="description">Add AND facet filters based on the current request</span><pre>buildAndFacetQuery</pre>
                             </a>
                         </li>                        <li class="methodprotected">
                             <a href="#method_buildFacets" title="buildFacets ::Add facets from the index">
                                 <span class="description">Add facets from the index</span><pre>buildFacets</pre>
+                            </a>
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_createFacetCriteria" title="createFacetCriteria ::Combine all facets as AND facet filters for the results">
+                                <span class="description">Combine all facets as AND facet filters for the results</span><pre>createFacetCriteria</pre>
+                            </a>
+                        </li>                        <li class="methodprotected">
+                            <a href="#method_getFieldFacets" title="getFieldFacets ::Get the field and it&#039;s respected values to filter on to generate Criteria from">
+                                <span class="description">Get the field and it&#039;s respected values to filter on to generate Criteria from</span><pre>getFieldFacets</pre>
                             </a>
                         </li>            </ul>
         </li>
@@ -135,10 +143,10 @@
                                     </td>
                                 </tr>                    </table>
 
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_buildFacetQuery"></a>
-                        <div class="element clickable methodprotected method_buildFacetQuery" data-toggle="collapse" data-target=".method_buildFacetQuery .collapse">
-                            <h2>Add facet filters based on the current request</h2>
-                            <pre>buildFacetQuery()</pre>
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_buildAndFacetQuery"></a>
+                        <div class="element clickable methodprotected method_buildAndFacetQuery" data-toggle="collapse" data-target=".method_buildAndFacetQuery .collapse">
+                            <h2>Add AND facet filters based on the current request</h2>
+                            <pre>buildAndFacetQuery()</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -173,6 +181,50 @@
                                                 </th>
                                                 <td>                                                </td>
                                             </tr>                                    </table>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_createFacetCriteria"></a>
+                        <div class="element clickable methodprotected method_createFacetCriteria" data-toggle="collapse" data-target=".method_createFacetCriteria .collapse">
+                            <h2>Combine all facets as AND facet filters for the results</h2>
+                            <pre>createFacetCriteria(null|\Minimalcode\Search\Criteria &$criteria,string $field,array $filter)</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$criteria</h4>
+                                                <code>null|\Minimalcode\Search\Criteria</code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$filter</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getFieldFacets"></a>
+                        <div class="element clickable methodprotected method_getFieldFacets" data-toggle="collapse" data-target=".method_getFieldFacets .collapse">
+                            <h2>Get the field and it&#039;s respected values to filter on to generate Criteria from</h2>
+                            <pre>getFieldFacets(array $filterFacets,array $config): array</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$filterFacets</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$config</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
                             </div>
 
                         </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_index"> </a>
@@ -236,6 +288,6 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onTue, 31 Mar 2020 07:52:56 +0000.<br/>
+            generated onWed, 01 Apr 2020 09:50:00 +0000.<br/>
     </footer></body>
 </html>

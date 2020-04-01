@@ -113,16 +113,16 @@
     </li>            </ul>
         </li>
         <li class="nav-header protected">» Protected
-            <ul>                        <li class="methodprotected">
+            <ul>            </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>                        <li class="methodprivate">
                             <a href="#method_createDeleteList" title="createDeleteList ::Create an ArrayList of the dirty items to be deleted from Solr
 Uses the given class name to generate stub objects">
                                 <span class="description">Create an ArrayList of the dirty items to be deleted from Solr
 Uses the given class name to generate stub objects</span><pre>createDeleteList</pre>
                             </a>
-                        </li>            </ul>
-        </li>
-        <li class="nav-header private">» Private
-            <ul>                        <li class="methodprivate">
+                        </li>                        <li class="methodprivate">
                             <a href="#method_getDirtyClasses" title="getDirtyClasses ::Get the objects that need to be deleted or updated as a list">
                                 <span class="description">Get the objects that need to be deleted or updated as a list</span><pre>getDirtyClasses</pre>
                             </a>
@@ -151,7 +151,7 @@ This task takes care of doing this. It can be run directly via /dev/tasks, or vi
                                 </tr>                    </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_createDeleteList"></a>
-                        <div class="element clickable methodprotected method_createDeleteList" data-toggle="collapse" data-target=".method_createDeleteList .collapse">
+                        <div class="element clickable methodprivate method_createDeleteList" data-toggle="collapse" data-target=".method_createDeleteList .collapse">
                             <h2>Create an ArrayList of the dirty items to be deleted from Solr
 Uses the given class name to generate stub objects</h2>
                             <pre>createDeleteList(array $items,string $dirtyClass,\SilverStripe\ORM\ArrayList &$dirtyClasses)</pre>
@@ -179,7 +179,7 @@ Uses the given class name to generate stub objects</h2>
                         </div>                        <a id="method_getDirtyClasses"></a>
                         <div class="element clickable methodprivate method_getDirtyClasses" data-toggle="collapse" data-target=".method_getDirtyClasses .collapse">
                             <h2>Get the objects that need to be deleted or updated as a list</h2>
-                            <pre>getDirtyClasses(\SilverStripe\ORM\DataObject $dirtyObject): \SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</pre>
+                            <pre>getDirtyClasses(\Firesphere\SolrSearch\Models\DirtyClass $dirtyObject): \SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -187,7 +187,7 @@ Uses the given class name to generate stub objects</h2>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$dirtyObject</h4>
-                                                <code>\SilverStripe\ORM\DataObject</code><p></p>
+                                                <code><a href="../classes/Firesphere.SolrSearch.Models.DirtyClass.html">\Firesphere\SolrSearch\Models\DirtyClass</a></code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>\SilverStripe\ORM\ArrayList|\SilverStripe\ORM\DataList</code><p></p>                                </div>
                             </div>
@@ -329,6 +329,6 @@ Dirty classes happen when changes to classes are not successfully updated in Sol
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onTue, 31 Mar 2020 07:52:56 +0000.<br/>
+            generated onWed, 01 Apr 2020 09:50:00 +0000.<br/>
     </footer></body>
 </html>
