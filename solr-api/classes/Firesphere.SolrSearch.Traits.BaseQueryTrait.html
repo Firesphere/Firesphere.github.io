@@ -99,12 +99,16 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>    <li class="methodpublic">
+        <a href="#method_addAndFacetFilter" title="addAndFacetFilter ::Stub for addFacetFilter to add an AND filter">
+            <span class="description">Stub for addFacetFilter to add an AND filter</span><pre>addAndFacetFilter</pre>
+        </a>
+    </li>    <li class="methodpublic">
         <a href="#method_addExclude" title="addExclude ::Exclude fields from the search action">
             <span class="description">Exclude fields from the search action</span><pre>addExclude</pre>
         </a>
     </li>    <li class="methodpublic">
-        <a href="#method_addFacetFilter" title="addFacetFilter ::Add faceting">
-            <span class="description">Add faceting</span><pre>addFacetFilter</pre>
+        <a href="#method_addFacetFilter" title="addFacetFilter ::Add faceting fields that need to be faceted in an AND format">
+            <span class="description">Add faceting fields that need to be faceted in an AND format</span><pre>addFacetFilter</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_addField" title="addField ::Add a field to be returned">
@@ -113,6 +117,10 @@
     </li>    <li class="methodpublic">
         <a href="#method_addFilter" title="addFilter ::Adds filters to filter on by value">
             <span class="description">Adds filters to filter on by value</span><pre>addFilter</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_addOrFacetFilter" title="addOrFacetFilter ::Add faceting that need to be faceted in an OR formats">
+            <span class="description">Add faceting that need to be faceted in an OR formats</span><pre>addOrFacetFilter</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_addSort" title="addSort ::Add a field to sort on">
@@ -157,7 +165,26 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
                                     </td>
                                 </tr>                    </table>
 
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_addExclude"></a>
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_addAndFacetFilter"></a>
+                        <div class="element clickable methodpublic method_addAndFacetFilter" data-toggle="collapse" data-target=".method_addAndFacetFilter .collapse">
+                            <h2>Stub for addFacetFilter to add an AND filter</h2>
+                            <pre>addAndFacetFilter(string $field,string|array $value): $this</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>string|array</code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>$this</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_addExclude"></a>
                         <div class="element clickable methodpublic method_addExclude" data-toggle="collapse" data-target=".method_addExclude .collapse">
                             <h2>Exclude fields from the search action</h2>
                             <pre>addExclude(string $field,string|array|\Minimalcode\Search\Criteria $value): $this</pre>
@@ -178,7 +205,7 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
 
                         </div>                        <a id="method_addFacetFilter"></a>
                         <div class="element clickable methodpublic method_addFacetFilter" data-toggle="collapse" data-target=".method_addFacetFilter .collapse">
-                            <h2>Add faceting</h2>
+                            <h2>Add faceting fields that need to be faceted in an AND format</h2>
                             <pre>addFacetFilter(string $field,string|array $value): $this</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
@@ -226,6 +253,25 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$value</h4>
                                                 <code>string|array|\Minimalcode\Search\Criteria</code><p><p>Value for this field</p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>$this</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_addOrFacetFilter"></a>
+                        <div class="element clickable methodpublic method_addOrFacetFilter" data-toggle="collapse" data-target=".method_addOrFacetFilter .collapse">
+                            <h2>Add faceting that need to be faceted in an OR formats</h2>
+                            <pre>addOrFacetFilter(string $field,string|array $value): $this</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p><p>Field to facet</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>string|array</code><p><p>Value to facet</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>$this</code><p></p>                                </div>
                             </div>
@@ -327,13 +373,34 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>array</code>                                    </div>
                                 </div>
-                            </div>                            <a id="property_facetFilter"> </a>
-                            <div class="element clickable propertyprotected property_facetFilter" data-toggle="collapse" data-target=".property_facetFilter .collapse">
-                                <h2>Key =&gt; value pairs of facets to apply
+                            </div>                            <a id="property_andFacetFilter"> </a>
+                            <div class="element clickable propertyprotected property_andFacetFilter" data-toggle="collapse" data-target=".property_andFacetFilter .collapse">
+                                <h2>Key =&gt; value pairs of facets to apply in AND fashion
 [
-    &#039;FacetTitle&#039; =&gt; [1, 2, 3]
+    &#039;FacetTitle&#039; =&gt; [1, 2, 3],
+    &#039;FacetTitle2&#039; =&gt; [1, 2, 3]
 ]</h2>
-                                <pre>facetFilter :array</pre>
+                                <pre>andFacetFilter :array</pre>
+                                <div class="labels">                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>array</code>                                    </div>
+                                </div>
+                            </div>                            <a id="property_orFacetFilter"> </a>
+                            <div class="element clickable propertyprotected property_orFacetFilter" data-toggle="collapse" data-target=".property_orFacetFilter .collapse">
+                                <h2>Key =&gt; value pairs of facets to apply in OR fashion
+[
+    &#039;FacetTitle&#039; =&gt; [1, 2, 3],
+    &#039;FacetTitle2&#039; =&gt; [1, 2, 3]
+]</h2>
+                                <pre>orFacetFilter :array</pre>
                                 <div class="labels">                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
@@ -391,6 +458,6 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSat, 04 Apr 2020 04:20:38 +0000.<br/>
+            generated onSun, 05 Apr 2020 04:08:38 +0000.<br/>
     </footer></body>
 </html>

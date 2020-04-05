@@ -168,7 +168,8 @@ $options is not used anymore, added for backward compatibility</span><pre>addCla
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"></div>
+                                    <div class="long_description"><p>This method is out of place in a way, but it's a shared method
+between Index and Query, thus needs to be here.</p></div>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$field</h4>
@@ -344,12 +345,19 @@ SiteTree::class   =&gt; [
      &#039;BaseClass&#039; =&gt; SiteTree::class,
      &#039;Field&#039; =&gt; &#039;ChannelID&#039;,
      &#039;Title&#039; =&gt; &#039;Channel&#039;
+],
+Object::class   =&gt; [
+     &#039;BaseClass&#039; =&gt; Object::class,
+     &#039;Field&#039; =&gt; &#039;Relation.ID&#039;,
+     &#039;Title&#039; =&gt; &#039;Relation&#039;
 ],</h2>
                                 <pre>facetFields :array</pre>
                                 <div class="labels">                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
-                                        <div class="long_description"></div>
+                                        <div class="long_description"><p>The facets will be applied as a single &quot;AND&quot; query.
+e.g. SiteTree_ChannelID:1 with Object_Relation_ID:5 will not be found,
+if the facet filter requires the SiteTree_ChannelID to be 1 AND Object_Relation_ID to be 3 or 6</p></div>
 
                                         <table class="table">                                                <tr>
                                                     <th>var
@@ -371,6 +379,6 @@ SiteTree::class   =&gt; [
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSat, 04 Apr 2020 04:20:38 +0000.<br/>
+            generated onSun, 05 Apr 2020 04:08:38 +0000.<br/>
     </footer></body>
 </html>

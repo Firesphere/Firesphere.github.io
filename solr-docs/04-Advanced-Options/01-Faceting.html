@@ -84,11 +84,25 @@ category, you can show a list like so:</p>
 <li>Recipes (12)</li>
 </ul>
 <p>This helps your visitors to narrow their search by filtering for a specific category.</p>
-<p>Facets are applied as a combined <code>AND</code> query. For example, facet filtering by UserID 1,2 plus Parent 5
-will result in <code>UserID:1 AND UserID:2 AND Parent:5</code></p>
+<h3 id="and-facets">AND facets <a class="heading-anchor-permalink" href="#and-facets">#</a></h3>
+<p>Facets are by default applied as a combined <code>AND</code> query. For example, facet filtering by UserID 1,2 plus Parent 5
+will result in:</p>
+<p><code>UserID:1 AND UserID:2 AND Parent:5</code></p>
+<h3 id="or-facets">OR facets <a class="heading-anchor-permalink" href="#or-facets">#</a></h3>
+<p>Using OR facets, each facet is treated as a separate part of the query. In the above example,
+it would lead to the following query:</p>
+<p><code>UserID:1 AND UserID:2 OR Parent:5</code></p>
+<h2 id="difference-between-facetfields-and-facetfilters">Difference between FacetFields and FacetFilters <a class="heading-anchor-permalink" href="#difference-between-facetfields-and-facetfilters">#</a></h2>
+<ul>
+<li>Facet <em>fields</em>, are the fields that are expected to be returned by Solr and need to be configured.</li>
+<li>Facet <em>filters</em>, are the actual filters, that are applied at query time, to narrow down the results by the selected Facets.</li>
+</ul>
 <h2 id="applying-facets">Applying facets <a class="heading-anchor-permalink" href="#applying-facets">#</a></h2>
 <p>To configure Facets, have a look at the <a href="../03-Usage.html">usage</a> documentation.</p>
-<p>To use them, this example should get you started:</p>
+<p>Make sure your Facet Fields are set correctly, as per the documentation.</p>
+<p>Any variable from your request that is <em>not</em> a valid Facet will be ignored.</p>
+<h3 id="and-facets-2">AND facets <a class="heading-anchor-permalink" href="#and-facets-2">#</a></h3>
+<p>To use AND facets, this example should get you started:</p>
 <pre><code class="language-php">    $data = Controller::curr()-&gt;getRequest()-&gt;getVars();
     $index = Injector::inst()-&gt;get(MyIndex::class);
     $query = Injector::inst()-&gt;get(BaseQuery::class);
@@ -101,9 +115,22 @@ will result in <code>UserID:1 AND UserID:2 AND Parent:5</code></p>
         }
     }
 </code></pre>
-<p>This will add filters so that only applicable categories are searched through.</p>
-<p>Make sure your Facet Fields are set correctly, as per the documentation.</p>
-<p>Any variable from your request that is <em>not</em> a valid Facet will be ignored.</p>
+<p><em>Note</em>, <code>addFacetFilter</code> and <code>addAndFacetFilter</code> are interchangeable.</p>
+<h3 id="or-facets-2">OR facets <a class="heading-anchor-permalink" href="#or-facets-2">#</a></h3>
+<p>To use OR facets, this example should get you started:</p>
+<pre><code class="language-php">    $data = Controller::curr()-&gt;getRequest()-&gt;getVars();
+    $index = Injector::inst()-&gt;get(MyIndex::class);
+    $query = Injector::inst()-&gt;get(BaseQuery::class);
+    $facetedFields = $index-&gt;getFacetFields();
+    foreach ($facetedFields as $className =&gt; $field) {
+        // Title of your field, as defined in the FacetFields
+        if (!empty($data[$field['Title']])) {
+            // Add a facet filter with its title and the value from the request data
+            $query-&gt;addOrFacetFilter($field['Title'], $data[$field['Title']]);
+        }
+    }
+</code></pre>
+<p>Notice the subtle difference in <code>$query-&gt;addOrFacetFilter()</code> versus <code>$query-&gt;addFacetFilter()</code></p>
 
         <hr/>
         <h2>Support our work</h2>
@@ -113,10 +140,10 @@ will result in <code>UserID:1 AND UserID:2 AND Parent:5</code></p>
                 src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
         </p>
         <p>
-            <a href='https://ko-fi.com/B0B11GKLY' target='_blank'><img height='36' style='border:0px;height:36px;'
-                                                                       src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2'
-                                                                       border='0'
-                                                                       alt='Buy Me a Coffee at ko-fi.com'/></a>
+            <a href='https://ko-fi.com/B0B11GKLY' target='_blank'>
+                <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2'
+                     border='0' alt='Buy Me a Coffee at ko-fi.com'/>
+            </a>
         </p>
     </article>
 </div>

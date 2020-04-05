@@ -99,6 +99,10 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>    <li class="methodpublic inherited">
+        <a href="#method_addAndFacetFilter" title="addAndFacetFilter ::Stub for addFacetFilter to add an AND filter">
+            <span class="description">Stub for addFacetFilter to add an AND filter</span><pre>addAndFacetFilter</pre>
+        </a>
+    </li>    <li class="methodpublic inherited">
         <a href="#method_addBoostedField" title="addBoostedField ::Add a boosted field to be boosted at query time">
             <span class="description">Add a boosted field to be boosted at query time</span><pre>addBoostedField</pre>
         </a>
@@ -113,8 +117,8 @@ $options is not used anymore, added for backward compatibility</span><pre>addCla
             <span class="description">Exclude fields from the search action</span><pre>addExclude</pre>
         </a>
     </li>    <li class="methodpublic inherited">
-        <a href="#method_addFacetFilter" title="addFacetFilter ::Add faceting">
-            <span class="description">Add faceting</span><pre>addFacetFilter</pre>
+        <a href="#method_addFacetFilter" title="addFacetFilter ::Add faceting fields that need to be faceted in an AND format">
+            <span class="description">Add faceting fields that need to be faceted in an AND format</span><pre>addFacetFilter</pre>
         </a>
     </li>    <li class="methodpublic inherited">
         <a href="#method_addField" title="addField ::Add a field to be returned">
@@ -129,6 +133,10 @@ $options is not used anymore, added for backward compatibility</span><pre>addCla
             <span class="description">Add a highlight parameter</span><pre>addHighlight</pre>
         </a>
     </li>    <li class="methodpublic inherited">
+        <a href="#method_addOrFacetFilter" title="addOrFacetFilter ::Add faceting that need to be faceted in an OR formats">
+            <span class="description">Add faceting that need to be faceted in an OR formats</span><pre>addOrFacetFilter</pre>
+        </a>
+    </li>    <li class="methodpublic inherited">
         <a href="#method_addSort" title="addSort ::Add a field to sort on">
             <span class="description">Add a field to sort on</span><pre>addSort</pre>
         </a>
@@ -141,6 +149,10 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);">
 e.g. $this-&gt;addTerm(&#039;test&#039;, [&#039;MyField&#039;, &#039;MyOtherField&#039;], 3)
 followed by
 $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>addTerm</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_getAndFacetFilter" title="getAndFacetFilter ::Stub for AND facets to be get">
+            <span class="description">Stub for AND facets to be get</span><pre>getAndFacetFilter</pre>
         </a>
     </li>    <li class="methodpublic inherited">
         <a href="#method_getBoostedFields" title="getBoostedFields ::Get the boosted fields">
@@ -159,8 +171,8 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
             <span class="description">Get the facet fields</span><pre>getFacetFields</pre>
         </a>
     </li>    <li class="methodpublic">
-        <a href="#method_getFacetFilter" title="getFacetFilter ::Get the facet filtering">
-            <span class="description">Get the facet filtering</span><pre>getFacetFilter</pre>
+        <a href="#method_getFacetFilter" title="getFacetFilter ::Get the AND facet filtering">
+            <span class="description">Get the AND facet filtering</span><pre>getFacetFilter</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_getFacetsMinCount" title="getFacetsMinCount ::Get the facet count minimum to use">
@@ -177,6 +189,10 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
     </li>    <li class="methodpublic">
         <a href="#method_getHighlight" title="getHighlight ::Get the highlight parameters">
             <span class="description">Get the highlight parameters</span><pre>getHighlight</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_getOrFacetFilter" title="getOrFacetFilter ::Get the OR based facet filtering">
+            <span class="description">Get the OR based facet filtering</span><pre>getOrFacetFilter</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_getRows" title="getRows ::Get the rows to return">
@@ -198,6 +214,10 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
         <a href="#method_hasSpellcheck" title="hasSpellcheck ::Do we have spellchecking">
             <span class="description">Do we have spellchecking</span><pre>hasSpellcheck</pre>
         </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_setAndFacetFilter" title="setAndFacetFilter ::Stub for AND facets to be set">
+            <span class="description">Stub for AND facets to be set</span><pre>setAndFacetFilter</pre>
+        </a>
     </li>    <li class="methodpublic inherited">
         <a href="#method_setBoostedFields" title="setBoostedFields ::Boosted fields are used at index time, not at query time">
             <span class="description">Boosted fields are used at index time, not at query time</span><pre>setBoostedFields</pre>
@@ -215,8 +235,8 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
             <span class="description">Set the facet fields</span><pre>setFacetFields</pre>
         </a>
     </li>    <li class="methodpublic">
-        <a href="#method_setFacetFilter" title="setFacetFilter ::Set the facet filtering">
-            <span class="description">Set the facet filtering</span><pre>setFacetFilter</pre>
+        <a href="#method_setFacetFilter" title="setFacetFilter ::Set the AND based facet filtering">
+            <span class="description">Set the AND based facet filtering</span><pre>setFacetFilter</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_setFacetsMinCount" title="setFacetsMinCount ::Set the minimum count of facets to be returned">
@@ -237,6 +257,10 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
     </li>    <li class="methodpublic">
         <a href="#method_setHighlight" title="setHighlight ::Set the highlight parameters">
             <span class="description">Set the highlight parameters</span><pre>setHighlight</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_setOrFacetFilter" title="setOrFacetFilter ::Set the OR based facet filtering">
+            <span class="description">Set the OR based facet filtering</span><pre>setOrFacetFilter</pre>
         </a>
     </li>    <li class="methodpublic">
         <a href="#method_setRows" title="setRows ::Set the rows to return">
@@ -291,14 +315,34 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</span><pre>add
                                     </td>
                                 </tr>                    </table>
 
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_addBoostedField"></a>
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>                        <a id="method_addAndFacetFilter"></a>
+                        <div class="element clickable methodpublic method_addAndFacetFilter inherited" data-toggle="collapse" data-target=".method_addAndFacetFilter .collapse">
+                            <h2>Stub for addFacetFilter to add an AND filter</h2>
+                            <pre>addAndFacetFilter(string $field,string|array $value): $this</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>string|array</code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>$this</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_addBoostedField"></a>
                         <div class="element clickable methodpublic method_addBoostedField inherited" data-toggle="collapse" data-target=".method_addBoostedField .collapse">
                             <h2>Add a boosted field to be boosted at query time</h2>
                             <pre>addBoostedField(string $field,array|integer $options = array(),integer|null $boost = null): $this</pre>
                             <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"></div>
+                                    <div class="long_description"><p>This method is out of place in a way, but it's a shared method
+between Index and Query, thus needs to be here.</p></div>
 
                                     <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
                                                 <h4>$field</h4>
@@ -354,7 +398,7 @@ $options is not used anymore, added for backward compatibility</h2>
 
                         </div>                        <a id="method_addFacetFilter"></a>
                         <div class="element clickable methodpublic method_addFacetFilter inherited" data-toggle="collapse" data-target=".method_addFacetFilter .collapse">
-                            <h2>Add faceting</h2>
+                            <h2>Add faceting fields that need to be faceted in an AND format</h2>
                             <pre>addFacetFilter(string $field,string|array $value): $this</pre>
                             <div class="labels"><span class="label">inherited</span>                            </div>
                             <div class="row collapse">
@@ -422,6 +466,25 @@ $options is not used anymore, added for backward compatibility</h2>
                                         <code>$this</code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_addOrFacetFilter"></a>
+                        <div class="element clickable methodpublic method_addOrFacetFilter inherited" data-toggle="collapse" data-target=".method_addOrFacetFilter .collapse">
+                            <h2>Add faceting that need to be faceted in an OR formats</h2>
+                            <pre>addOrFacetFilter(string $field,string|array $value): $this</pre>
+                            <div class="labels"><span class="label">inherited</span>                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$field</h4>
+                                                <code>string</code><p><p>Field to facet</p></p>
+                                            </div>                                            <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>string|array</code><p><p>Value to facet</p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>$this</code><p></p>                                </div>
+                            </div>
+
                         </div>                        <a id="method_addSort"></a>
                         <div class="element clickable methodpublic method_addSort inherited" data-toggle="collapse" data-target=".method_addSort .collapse">
                             <h2>Add a field to sort on</h2>
@@ -469,6 +532,23 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
                                                 <code>boolean|float</code><p><p>True or a value to the maximum amount of iterations</p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>$this</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getAndFacetFilter"></a>
+                        <div class="element clickable methodpublic method_getAndFacetFilter" data-toggle="collapse" data-target=".method_getAndFacetFilter .collapse">
+                            <h2>Stub for AND facets to be get</h2>
+                            <pre>getAndFacetFilter(): array</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_getBoostedFields"></a>
@@ -541,7 +621,7 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
 
                         </div>                        <a id="method_getFacetFilter"></a>
                         <div class="element clickable methodpublic method_getFacetFilter" data-toggle="collapse" data-target=".method_getFacetFilter .collapse">
-                            <h2>Get the facet filtering</h2>
+                            <h2>Get the AND facet filtering</h2>
                             <pre>getFacetFilter(): array</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
@@ -611,6 +691,23 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
                         <div class="element clickable methodpublic method_getHighlight" data-toggle="collapse" data-target=".method_getHighlight .collapse">
                             <h2>Get the highlight parameters</h2>
                             <pre>getHighlight(): array</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getOrFacetFilter"></a>
+                        <div class="element clickable methodpublic method_getOrFacetFilter" data-toggle="collapse" data-target=".method_getOrFacetFilter .collapse">
+                            <h2>Get the OR based facet filtering</h2>
+                            <pre>getOrFacetFilter(): array</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -709,6 +806,22 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
                                         <code>boolean</code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_setAndFacetFilter"></a>
+                        <div class="element clickable methodpublic method_setAndFacetFilter" data-toggle="collapse" data-target=".method_setAndFacetFilter .collapse">
+                            <h2>Stub for AND facets to be set</h2>
+                            <pre>setAndFacetFilter(array $facetFilter): \Firesphere\SolrSearch\Queries\BaseQuery</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$facetFilter</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>                                </div>
+                            </div>
+
                         </div>                        <a id="method_setBoostedFields"></a>
                         <div class="element clickable methodpublic method_setBoostedFields inherited" data-toggle="collapse" data-target=".method_setBoostedFields .collapse">
                             <h2>Boosted fields are used at index time, not at query time</h2>
@@ -775,7 +888,7 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
 
                         </div>                        <a id="method_setFacetFilter"></a>
                         <div class="element clickable methodpublic method_setFacetFilter" data-toggle="collapse" data-target=".method_setFacetFilter .collapse">
-                            <h2>Set the facet filtering</h2>
+                            <h2>Set the AND based facet filtering</h2>
                             <pre>setFacetFilter(array $facetFilter): \Firesphere\SolrSearch\Queries\BaseQuery</pre>
                             <div class="labels">                            </div>
                             <div class="row collapse">
@@ -867,6 +980,22 @@ $this-&gt;addTerm(&#039;otherTest&#039;, [&#039;Title&#039;], 5);</h2>
                                                 <code>array</code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code>$this</code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_setOrFacetFilter"></a>
+                        <div class="element clickable methodpublic method_setOrFacetFilter" data-toggle="collapse" data-target=".method_setOrFacetFilter .collapse">
+                            <h2>Set the OR based facet filtering</h2>
+                            <pre>setOrFacetFilter(array $facetFilter): \Firesphere\SolrSearch\Queries\BaseQuery</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$facetFilter</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code><a href="../classes/Firesphere.SolrSearch.Queries.BaseQuery.html">\Firesphere\SolrSearch\Queries\BaseQuery</a></code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_setRows"></a>
@@ -1152,12 +1281,19 @@ SiteTree::class   =&gt; [
      &#039;BaseClass&#039; =&gt; SiteTree::class,
      &#039;Field&#039; =&gt; &#039;ChannelID&#039;,
      &#039;Title&#039; =&gt; &#039;Channel&#039;
+],
+Object::class   =&gt; [
+     &#039;BaseClass&#039; =&gt; Object::class,
+     &#039;Field&#039; =&gt; &#039;Relation.ID&#039;,
+     &#039;Title&#039; =&gt; &#039;Relation&#039;
 ],</h2>
                                 <pre>facetFields :array</pre>
                                 <div class="labels"><span class="label">inherited</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
-                                        <div class="long_description"></div>
+                                        <div class="long_description"><p>The facets will be applied as a single &quot;AND&quot; query.
+e.g. SiteTree_ChannelID:1 with Object_Relation_ID:5 will not be found,
+if the facet filter requires the SiteTree_ChannelID to be 1 AND Object_Relation_ID to be 3 or 6</p></div>
 
                                         <table class="table">                                                <tr>
                                                     <th>var
@@ -1182,13 +1318,34 @@ SiteTree::class   =&gt; [
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>array</code>                                    </div>
                                 </div>
-                            </div>                            <a id="property_facetFilter"> </a>
-                            <div class="element clickable propertyprotected property_facetFilter inherited" data-toggle="collapse" data-target=".property_facetFilter .collapse">
-                                <h2>Key =&gt; value pairs of facets to apply
+                            </div>                            <a id="property_andFacetFilter"> </a>
+                            <div class="element clickable propertyprotected property_andFacetFilter inherited" data-toggle="collapse" data-target=".property_andFacetFilter .collapse">
+                                <h2>Key =&gt; value pairs of facets to apply in AND fashion
 [
-    &#039;FacetTitle&#039; =&gt; [1, 2, 3]
+    &#039;FacetTitle&#039; =&gt; [1, 2, 3],
+    &#039;FacetTitle2&#039; =&gt; [1, 2, 3]
 ]</h2>
-                                <pre>facetFilter :array</pre>
+                                <pre>andFacetFilter :array</pre>
+                                <div class="labels"><span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>array</code>                                    </div>
+                                </div>
+                            </div>                            <a id="property_orFacetFilter"> </a>
+                            <div class="element clickable propertyprotected property_orFacetFilter inherited" data-toggle="collapse" data-target=".property_orFacetFilter .collapse">
+                                <h2>Key =&gt; value pairs of facets to apply in OR fashion
+[
+    &#039;FacetTitle&#039; =&gt; [1, 2, 3],
+    &#039;FacetTitle2&#039; =&gt; [1, 2, 3]
+]</h2>
+                                <pre>orFacetFilter :array</pre>
                                 <div class="labels"><span class="label">inherited</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
@@ -1230,6 +1387,6 @@ SiteTree::class   =&gt; [
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onSat, 04 Apr 2020 04:20:38 +0000.<br/>
+            generated onSun, 05 Apr 2020 04:08:37 +0000.<br/>
     </footer></body>
 </html>
