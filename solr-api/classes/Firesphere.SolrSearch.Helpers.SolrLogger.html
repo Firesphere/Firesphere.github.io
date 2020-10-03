@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -107,6 +107,10 @@
             <span class="description">Return the Guzzle Client</span><pre>getClient</pre>
         </a>
     </li>    <li class="methodpublic">
+        <a href="#method_getOptions" title="getOptions ::Get the options for Guzzle">
+            <span class="description">Get the options for Guzzle</span><pre>getOptions</pre>
+        </a>
+    </li>    <li class="methodpublic">
         <a href="#method_logMessage" title="logMessage ::Log the given message and dump it out.">
             <span class="description">Log the given message and dump it out.</span><pre>logMessage</pre>
         </a>
@@ -117,6 +121,10 @@
     </li>    <li class="methodpublic">
         <a href="#method_setClient" title="setClient ::Set the Guzzle client">
             <span class="description">Set the Guzzle client</span><pre>setClient</pre>
+        </a>
+    </li>    <li class="methodpublic">
+        <a href="#method_setOptions" title="setOptions ::Set custom options for Guzzle">
+            <span class="description">Set custom options for Guzzle</span><pre>setOptions</pre>
         </a>
     </li>            </ul>
         </li>
@@ -218,10 +226,27 @@
                                         <code>\GuzzleHttp\Client</code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_getOptions"></a>
+                        <div class="element clickable methodpublic method_getOptions" data-toggle="collapse" data-target=".method_getOptions .collapse">
+                            <h2>Get the options for Guzzle</h2>
+                            <pre>getOptions(): array</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Response</h3>
+                                        <code>array</code><p></p>                                </div>
+                            </div>
+
                         </div>                        <a id="method_logMessage"></a>
                         <div class="element clickable methodpublic method_logMessage" data-toggle="collapse" data-target=".method_logMessage .collapse">
                             <h2>Log the given message and dump it out.</h2>
-                            <pre>logMessage(string $type,string $message,string $index)</pre>
+                            <pre>logMessage(string $type,string $message)</pre>
                             <div class="labels"><span class="label">static</span>                            </div>
                             <div class="row collapse">
                                 <div class="detail-description">
@@ -243,9 +268,6 @@
                                                 <code>string</code><p></p>
                                             </div>                                            <div class="subelement argument">
                                                 <h4>$message</h4>
-                                                <code>string</code><p></p>
-                                            </div>                                            <div class="subelement argument">
-                                                <h4>$index</h4>
                                                 <code>string</code><p></p>
                                             </div>                                </div>
                             </div>
@@ -292,6 +314,25 @@
                                         <code><a href="../classes/Firesphere.SolrSearch.Helpers.SolrLogger.html">\Firesphere\SolrSearch\Helpers\SolrLogger</a></code><p></p>                                </div>
                             </div>
 
+                        </div>                        <a id="method_setOptions"></a>
+                        <div class="element clickable methodpublic method_setOptions" data-toggle="collapse" data-target=".method_setOptions .collapse">
+                            <h2>Set custom options for Guzzle</h2>
+                            <pre>setOptions(array $options)</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">                                            <tr>
+                                                <th>
+                                                </th>
+                                                <td>                                                </td>
+                                            </tr>                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$options</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                </div>
+                            </div>
+
                         </div>                        <h3><i class="icon-custom icon-property"></i> Properties</h3>                            <a id="property_client"> </a>
                             <div class="element clickable propertyprotected property_client" data-toggle="collapse" data-target=".property_client .collapse">
                                 <h2>Guzzle base client to communicate with Solr</h2>
@@ -308,6 +349,22 @@
                                                 </tr>                                        </table>                                            <h3>Type(s)</h3>
                                             <code>\GuzzleHttp\Client</code>                                    </div>
                                 </div>
+                            </div>                            <a id="property_options"> </a>
+                            <div class="element clickable propertyprotected property_options" data-toggle="collapse" data-target=".property_options .collapse">
+                                <h2>options</h2>
+                                <pre>options :array</pre>
+                                <div class="labels">                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">                                                <tr>
+                                                    <th>var
+                                                    </th>
+                                                    <td>                                                    </td>
+                                                </tr>                                        </table>                                            <h3>Type(s)</h3>
+                                            <code>array</code>                                    </div>
+                                </div>
                             </div>                </div>
             </div>
             <a id="\Firesphere\SolrSearch\Helpers\SolrLogger"></a>
@@ -321,6 +378,6 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onFri, 18 Sep 2020 23:27:24 +0000.<br/>
+            generated onSat, 03 Oct 2020 22:46:32 +0000.<br/>
     </footer></body>
 </html>

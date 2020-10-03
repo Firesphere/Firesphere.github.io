@@ -31,7 +31,7 @@
                             <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                 API Documentation <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
+                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                            </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
                             <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
@@ -200,7 +200,11 @@ or are allowed from config</span><pre>filterIndexes</pre>
                         </li>            </ul>
         </li>
         <li class="nav-header private">» Private
-            <ul>            </ul>
+            <ul>                        <li class="methodprivate">
+                            <a href="#method_getSolrAuthentication" title="getSolrAuthentication ::This will add the authentication headers to the request.">
+                                <span class="description">This will add the authentication headers to the request.</span><pre>getSolrAuthentication</pre>
+                            </a>
+                        </li>            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -502,6 +506,22 @@ or are allowed from config</h2>
                                                 <code>\SilverStripe\ORM\SS_List</code><p></p>
                                             </div>                                        <h3>Response</h3>
                                         <code><a href="../classes/Firesphere.SolrSearch.Factories.DocumentFactory.html">\Firesphere\SolrSearch\Factories\DocumentFactory</a></code><p></p>                                </div>
+                            </div>
+
+                        </div>                        <a id="method_getSolrAuthentication"></a>
+                        <div class="element clickable methodprivate method_getSolrAuthentication" data-toggle="collapse" data-target=".method_getSolrAuthentication .collapse">
+                            <h2>This will add the authentication headers to the request.</h2>
+                            <pre>getSolrAuthentication(array $firstEndpoint): array|array&lt;mixed,array&gt;</pre>
+                            <div class="labels">                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>It's intended to become a helper in the end.</p></div>
+
+                                    <table class="table">                                    </table>                                        <h3>Arguments</h3>                                            <div class="subelement argument">
+                                                <h4>$firstEndpoint</h4>
+                                                <code>array</code><p></p>
+                                            </div>                                        <h3>Response</h3>
+                                        <code>array|array&lt;mixed,array&gt;</code><p></p>                                </div>
                             </div>
 
                         </div>                        <a id="method_getSolrVersion"></a>
@@ -944,6 +964,6 @@ Does not discriminate against the indexes. All indexes are worth the same</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onFri, 18 Sep 2020 23:27:23 +0000.<br/>
+            generated onSat, 03 Oct 2020 22:46:32 +0000.<br/>
     </footer></body>
 </html>

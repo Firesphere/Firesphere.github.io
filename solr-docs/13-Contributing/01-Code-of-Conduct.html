@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firesphere Solr Search user/dev documentation</title>
+    <link rel="stylesheet" href="/solr-docs/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+    <nav id="menu">
+        <ul>
+<li><a class="" href="../index.html">index</a></li>
+<li><a class="" href="../01-Installation.html">Installation</a></li>
+<li><a class="" href="../02-Solr.html">Solr</a></li>
+<li><a class="" href="../03-Set-up-and-Configuration.html">Set up and Configuration</a></li>
+<li><a class="" href="../04-Searching.html">Searching</a></li>
+<li class="heading"><span>Advanced Options</span></li>
+<ul>
+<li><a class="" href="../05-Advanced-Options/01-Faceting.html">Faceting</a></li>
+<li><a class="" href="../05-Advanced-Options/02-Boosting.html">Boosting</a></li>
+<li><a class="" href="../05-Advanced-Options/03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="" href="../05-Advanced-Options/04-Elevation.html">Elevation</a></li>
+<li><a class="" href="../05-Advanced-Options/05-Filters-excludes.html">Filters excludes</a></li>
+</ul>
+<li><a class="" href="../06-Customisation.html">Customisation</a></li>
+<li><a class="" href="../07-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="../08-Debugging.html">Debugging</a></li>
+<li><a class="" href="../09-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="../10-View-Permissions.html">View Permissions</a></li>
+<li><a class="" href="../11-Dirty-classes.html">Dirty classes</a></li>
+<li class="heading"><span>Submodules</span></li>
+<ul>
+<li><a class="" href="../12-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="../12-Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="../12-Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="../12-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
+<li><a class="" href="../12-Submodules/05-Elemental.html">Elemental</a></li>
+</ul>
+<li class="heading"><span>Contributing</span></li>
+<ul>
+<li><a class="active" href="01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="" href="02-Contributing.html">Contributing</a></li>
+</ul>
+<li class="heading"><span>Help</span></li>
+<ul>
+<li><a class="" href="../14-Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="../14-Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="../14-Help/03-Known-issues.html">Known issues</a></li>
+</ul>
+<li class="heading"><span>About</span></li>
+<ul>
+<li><a class="" href="../15-About/01-About.html">About</a></li>
+<li><a class="" href="../15-About/02-Plans.html">Plans</a></li>
+<li class="heading"><span>Codebase</span></li>
+<ul>
+<li><a class="" href="../15-About/03-Codebase/01-Main-stats.html">Main stats</a></li>
+<li><a class="" href="../15-About/03-Codebase/02-Compatibility-stats.html">Compatibility stats</a></li>
+<li><a class="" href="../15-About/03-Codebase/03-Member-permission-stats.html">Member permission stats</a></li>
+<li><a class="" href="../15-About/03-Codebase/04-Fluent-stats.html">Fluent stats</a></li>
+<li><a class="" href="../15-About/03-Codebase/05-Subsites-stats.html">Subsites stats</a></li>
+</ul>
+</ul>
+</ul>
+        <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img
+            alt="Support our work on GitStore"
+            src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
+    </nav>
+    <article id="main" class="content">
+        <h1 id="contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct <a class="heading-anchor-permalink" href="#contributor-covenant-code-of-conduct">#</a></h1>
+<h2 id="our-pledge">Our Pledge <a class="heading-anchor-permalink" href="#our-pledge">#</a></h2>
+<p>We as members, contributors, and leaders pledge to make participation in our community a
+harassment-free experience for everyone, regardless of age, body size, visible or invisible disability,
+ethnicity, sex characteristics, gender identity and expression, level of experience, education,
+socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.</p>
+<p>We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive,
+and healthy community.</p>
+<h2 id="our-standards">Our Standards <a class="heading-anchor-permalink" href="#our-standards">#</a></h2>
+<p>Examples of behavior that contributes to a positive environment for our community include:</p>
+<ul>
+<li>Demonstrating empathy and kindness toward other people</li>
+<li>Being respectful of differing opinions, viewpoints, and experiences</li>
+<li>Giving and gracefully accepting constructive feedback</li>
+<li>Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience</li>
+<li>Focusing on what is best not just for us as individuals, but for the overall community</li>
+</ul>
+<p>Examples of unacceptable behavior include:</p>
+<ul>
+<li>The use of sexualized language or imagery, and sexual attention or
+advances of any kind</li>
+<li>Trolling, insulting or derogatory comments, and personal or political attacks</li>
+<li>Public or private harassment</li>
+<li>Publishing others’ private information, such as a physical or email
+address, without their explicit permission</li>
+<li>Other conduct which could reasonably be considered inappropriate in a
+professional setting</li>
+</ul>
+<h2 id="enforcement-responsibilities">Enforcement Responsibilities <a class="heading-anchor-permalink" href="#enforcement-responsibilities">#</a></h2>
+<p>Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and
+will take appropriate and fair corrective action in response to any behavior that they deem inappropriate,
+threatening, offensive, or harmful.</p>
+<p>Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code,
+wiki edits, issues, and other contributions that are not aligned to this Code of Conduct,
+and will communicate reasons for moderation decisions when appropriate.</p>
+<h2 id="scope">Scope <a class="heading-anchor-permalink" href="#scope">#</a></h2>
+<p>This Code of Conduct applies within all community spaces, and also applies when an individual is
+officially representing the community in public spaces. Examples of representing our community include
+using an official e-mail address, posting via an official social media account, or acting as an
+appointed representative at an online or offline event.</p>
+<h2 id="enforcement">Enforcement <a class="heading-anchor-permalink" href="#enforcement">#</a></h2>
+<p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders
+responsible for enforcement at <a href="mailto:github@casa-laguna.net">github@casa-laguna.net</a>.
+All complaints will be reviewed and investigated promptly and fairly.</p>
+<p>All community leaders are obligated to respect the privacy and security of the reporter of any incident.</p>
+<h2 id="enforcement-guidelines">Enforcement Guidelines <a class="heading-anchor-permalink" href="#enforcement-guidelines">#</a></h2>
+<p>Community leaders will follow these Community Impact Guidelines in determining the consequences for
+any action they deem in violation of this Code of Conduct:</p>
+<h3 id="1.-correction">1. Correction <a class="heading-anchor-permalink" href="#1.-correction">#</a></h3>
+<p><strong>Community Impact</strong>: Use of inappropriate language or other behavior deemed unprofessional or
+unwelcome in the community.</p>
+<p><strong>Consequence</strong>: A private, written warning from community leaders, providing clarity around
+the nature of the violation and an explanation of why the behavior was inappropriate.
+A public apology may be requested.</p>
+<h3 id="2.-warning">2. Warning <a class="heading-anchor-permalink" href="#2.-warning">#</a></h3>
+<p><strong>Community Impact</strong>: A violation through a single incident or series of actions.</p>
+<p><strong>Consequence</strong>: A warning with consequences for continued behavior.
+No interaction with the people involved, including unsolicited interaction with those enforcing the
+Code of Conduct, for a specified period of time. This includes avoiding interactions in
+community spaces as well as external channels like social media.
+Violating these terms may lead to a temporary or permanent ban.</p>
+<h3 id="3.-temporary-ban">3. Temporary Ban <a class="heading-anchor-permalink" href="#3.-temporary-ban">#</a></h3>
+<p><strong>Community Impact</strong>: A serious violation of community standards, including sustained inappropriate behavior.</p>
+<p><strong>Consequence</strong>: A temporary ban from any sort of interaction or public communication with
+the community for a specified period of time. No public or private interaction with the people involved,
+including unsolicited interaction with those enforcing the Code of Conduct,
+is allowed during this period. Violating these terms may lead to a permanent ban.</p>
+<h3 id="4.-permanent-ban">4. Permanent Ban <a class="heading-anchor-permalink" href="#4.-permanent-ban">#</a></h3>
+<p><strong>Community Impact</strong>: Demonstrating a pattern of violation of community standards,
+including sustained inappropriate behavior,  harassment of an individual, or aggression toward or
+disparagement of classes of individuals.</p>
+<p><strong>Consequence</strong>: A permanent ban from any sort of public interaction within the project community.</p>
+<h2 id="attribution">Attribution <a class="heading-anchor-permalink" href="#attribution">#</a></h2>
+<p>This Code of Conduct is adapted from the [Contributor Covenant][<a href="https://www.contributor-covenant.org/">https://www.contributor-covenant.org/</a>], version 2.0,
+available at <a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct.html">https://www.contributor-covenant.org/version/2/0/code_of_conduct.html</a>.</p>
+<p>Community Impact Guidelines were inspired by <a href="https://github.com/mozilla/diversity">Mozilla’s code of conduct enforcement ladder</a>.</p>
+<p>For answers to common questions about this code of conduct, see the FAQ at
+<a href="https://www.contributor-covenant.org/faq">https://www.contributor-covenant.org/faq</a>. Translations are available at <a href="https://www.contributor-covenant.org/translations">https://www.contributor-covenant.org/translations</a>.</p>
+
+        <hr/>
+        <h2>Support our work</h2>
+        <p>
+            <a href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img
+                alt="Support our work on GitStore"
+                src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
+        </p>
+        <p>
+            <a href='https://ko-fi.com/B0B11GKLY' target='_blank'>
+                <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2'
+                     border='0' alt='Buy Me a Coffee at ko-fi.com'/>
+            </a>
+        </p>
+    </article>
+</div>
+<noscript><p><img src="https://piwik.casa-laguna.net/matomo.php?idsite=13&amp;rec=1" style="border:0;" alt=""/></p>
+</noscript>
+<script src="/solr-docs/main.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>

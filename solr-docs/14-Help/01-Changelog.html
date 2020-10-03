@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firesphere Solr Search user/dev documentation</title>
+    <link rel="stylesheet" href="/solr-docs/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+    <nav id="menu">
+        <ul>
+<li><a class="" href="../index.html">index</a></li>
+<li><a class="" href="../01-Installation.html">Installation</a></li>
+<li><a class="" href="../02-Solr.html">Solr</a></li>
+<li><a class="" href="../03-Set-up-and-Configuration.html">Set up and Configuration</a></li>
+<li><a class="" href="../04-Searching.html">Searching</a></li>
+<li class="heading"><span>Advanced Options</span></li>
+<ul>
+<li><a class="" href="../05-Advanced-Options/01-Faceting.html">Faceting</a></li>
+<li><a class="" href="../05-Advanced-Options/02-Boosting.html">Boosting</a></li>
+<li><a class="" href="../05-Advanced-Options/03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="" href="../05-Advanced-Options/04-Elevation.html">Elevation</a></li>
+<li><a class="" href="../05-Advanced-Options/05-Filters-excludes.html">Filters excludes</a></li>
+</ul>
+<li><a class="" href="../06-Customisation.html">Customisation</a></li>
+<li><a class="" href="../07-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="../08-Debugging.html">Debugging</a></li>
+<li><a class="" href="../09-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="../10-View-Permissions.html">View Permissions</a></li>
+<li><a class="" href="../11-Dirty-classes.html">Dirty classes</a></li>
+<li class="heading"><span>Submodules</span></li>
+<ul>
+<li><a class="" href="../12-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="../12-Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="../12-Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="../12-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
+<li><a class="" href="../12-Submodules/05-Elemental.html">Elemental</a></li>
+</ul>
+<li class="heading"><span>Contributing</span></li>
+<ul>
+<li><a class="" href="../13-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="" href="../13-Contributing/02-Contributing.html">Contributing</a></li>
+</ul>
+<li class="heading"><span>Help</span></li>
+<ul>
+<li><a class="active" href="01-Changelog.html">Changelog</a></li>
+<li><a class="" href="02-FAQ.html">FAQ</a></li>
+<li><a class="" href="03-Known-issues.html">Known issues</a></li>
+</ul>
+<li class="heading"><span>About</span></li>
+<ul>
+<li><a class="" href="../15-About/01-About.html">About</a></li>
+<li><a class="" href="../15-About/02-Plans.html">Plans</a></li>
+<li class="heading"><span>Codebase</span></li>
+<ul>
+<li><a class="" href="../15-About/03-Codebase/01-Main-stats.html">Main stats</a></li>
+<li><a class="" href="../15-About/03-Codebase/02-Compatibility-stats.html">Compatibility stats</a></li>
+<li><a class="" href="../15-About/03-Codebase/03-Member-permission-stats.html">Member permission stats</a></li>
+<li><a class="" href="../15-About/03-Codebase/04-Fluent-stats.html">Fluent stats</a></li>
+<li><a class="" href="../15-About/03-Codebase/05-Subsites-stats.html">Subsites stats</a></li>
+</ul>
+</ul>
+</ul>
+        <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img
+            alt="Support our work on GitStore"
+            src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
+    </nav>
+    <article id="main" class="content">
+        <h1 id="changelog">Changelog <a class="heading-anchor-permalink" href="#changelog">#</a></h1>
+<h2 id="1.0-release-candidate">1.0 Release Candidate <a class="heading-anchor-permalink" href="#1.0-release-candidate">#</a></h2>
+<p>Bugfixes:</p>
+<ul>
+<li>Fix case sensitivity</li>
+<li>Fix Fluent submodule bugs</li>
+<li>Fix Subsite submodule bugs</li>
+<li>Make types and schema more easily overridable</li>
+<li>Prefix tables to prevent database clashes</li>
+<li>Updated documentation further</li>
+<li>Add config option to force debugging to be off</li>
+<li>Extracted logging</li>
+<li>Added docblock for <code>_config.php</code></li>
+</ul>
+<h2 id="1.0-beta">1.0 beta <a class="heading-anchor-permalink" href="#1.0-beta">#</a></h2>
+<p>During the beta period, the following issues have been resolved and needed features fixed.
+During the Release Candidate period, no new features will be accepted in to the main branch, only bugfixes.</p>
+<ul>
+<li>Fixes to the CMS Index Job.</li>
+<li>Fix issue #140 User not reset correctly.</li>
+<li>Fix issue #143 Not showing in search wasn’t cleaned out correctly.</li>
+<li>Improved documentation.</li>
+<li>Fix stemming issues not properly stemming.</li>
+<li>Fix test errors.</li>
+<li>Fix <code>schema.xml</code> construction.</li>
+<li><a href="../10-View-Permissions.html">Change of Permission indexing from User based to Group based</a>.</li>
+<li>Improved documentation.</li>
+<li>Removed history, moving to a later phase to include in a sub-module.</li>
+<li>Fix issues encountered for Dirty classes and Indexing</li>
+<li>Improved <code>PCNTL</code> detection for the CMS run of the Indexing job</li>
+<li>Added member-level module for per-member permission checks</li>
+<li>Fixed up multiple issues around the indexing on <code>ShowInSearch</code></li>
+<li>Update to the docs to clarify the use of <code>ShowInSearch</code></li>
+<li>Updated submodule documentation</li>
+<li>Improved debugging documentation</li>
+<li>Improved Linux based hosts Solr/Apache permission documentation</li>
+<li>Throw correct error when Solr has an issue #183</li>
+<li>Created submodule for member specific indexing</li>
+</ul>
+<p><strong>Thanks</strong></p>
+<p><a href="https://github.com/rvxd">Remy</a></p>
+<p><a href="https://github.com/elliot-sawyer">Elliot</a></p>
+<p><a href="https://github.com/phptek">Russ</a></p>
+<h2 id="0.9.x">0.9.x <a class="heading-anchor-permalink" href="#0.9.x">#</a></h2>
+<ul>
+<li>Documentation updates.</li>
+<li>Bump the version to leave bugs behind.</li>
+</ul>
+<h2 id="0.8.x">0.8.x <a class="heading-anchor-permalink" href="#0.8.x">#</a></h2>
+<ul>
+<li>Use multi-threaded indexing.</li>
+<li>Fix error with buffer adding.</li>
+<li>Initial Synonym support.</li>
+</ul>
+<h2 id="0.7.5-notable-updates">0.7.5 Notable updates <a class="heading-anchor-permalink" href="#0.7.5-notable-updates">#</a></h2>
+<ul>
+<li>Added <code>Add[X]Fields()</code>.</li>
+<li>Fix spellcheck retry.</li>
+<li>Increased test coverage.</li>
+<li>Support for basic Fluent (select your language for each indexing run).</li>
+<li>Documentation.</li>
+<li>Extracted compatibility to separate module.</li>
+</ul>
+<h2 id="0.5-first-release">0.5 First release <a class="heading-anchor-permalink" href="#0.5-first-release">#</a></h2>
+<ul>
+<li>Use Solarium.</li>
+<li>Support Facets.</li>
+<li>Support terms.</li>
+<li>Support boosting.</li>
+<li>Support filtering/excluding.</li>
+<li>Support highlighting.</li>
+<li>Support elevation.</li>
+<li>Simplified API.</li>
+<li>Fulltext Search compatibility.</li>
+</ul>
+
+        <hr/>
+        <h2>Support our work</h2>
+        <p>
+            <a href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img
+                alt="Support our work on GitStore"
+                src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
+        </p>
+        <p>
+            <a href='https://ko-fi.com/B0B11GKLY' target='_blank'>
+                <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2'
+                     border='0' alt='Buy Me a Coffee at ko-fi.com'/>
+            </a>
+        </p>
+    </article>
+</div>
+<noscript><p><img src="https://piwik.casa-laguna.net/matomo.php?idsite=13&amp;rec=1" style="border:0;" alt=""/></p>
+</noscript>
+<script src="/solr-docs/main.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>
