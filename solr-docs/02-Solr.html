@@ -74,7 +74,7 @@
     </nav>
     <article id="main" class="content">
         <h1 id="installing-solr">Installing Solr <a class="heading-anchor-permalink" href="#installing-solr">#</a></h1>
-<p>It is advised to use the latest Solr version. At the time of writing, this is version 8.3.0.</p>
+<p>It is advised to use the <a href="https://downloads.apache.org/lucene/solr/">latest Solr version</a>. At the time of writing, this is version 8.3.0.</p>
 <p>In this guide, it’s assumed you are running on a Linux-based host.</p>
 <h2 id="requirements">Requirements <a class="heading-anchor-permalink" href="#requirements">#</a></h2>
 <h3 id="java">Java <a class="heading-anchor-permalink" href="#java">#</a></h3>
@@ -92,12 +92,13 @@ apt-get install -t jessie-backports openjdk-8-jre
 </ul>
 <h2 id="installation">Installation <a class="heading-anchor-permalink" href="#installation">#</a></h2>
 <p>Taken from <a href="https://lucene.apache.org/solr/guide/7_7/taking-solr-to-production.html">https://lucene.apache.org/solr/guide/7_7/taking-solr-to-production.html</a></p>
-<p>Update to match the required version. You can find the latest version here: <a href="https://www-us.apache.org/dist/lucene/solr/">https://www-us.apache.org/dist/lucene/solr/</a></p>
+<p>Update to match the required version. <a href="https://www-us.apache.org/dist/lucene/solr/">You can find the latest version here</a></p>
 <pre><code class="language-bash">wget http://www.apache.org/dyn/closer.lua/lucene/solr/8.3.1/solr-8.3.1.tgz # find your local URL manually
 tar xvf solr-8.3.1.tgz solr-8.3.1/bin/install_solr_service.sh --strip-components=2
 sudo bash ./install_solr_service.sh solr-8.3.1.tgz
 </code></pre>
-<p>This will install Solr 8.x as a service on your (virtual) machine</p>
+<p>Be sure to download the tgz, not the src.tgz file.</p>
+<p>This will install Solr 8.x as a service on your host machine</p>
 <h2 id="vagrant-machines">Vagrant machines <a class="heading-anchor-permalink" href="#vagrant-machines">#</a></h2>
 <p>See <a href="14-Help/03-Known-issues.html">Known issues</a> for known issues with permissions</p>
 
