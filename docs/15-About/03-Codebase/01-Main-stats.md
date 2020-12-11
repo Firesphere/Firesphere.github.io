@@ -1,16 +1,16 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/55c8967ef25e37182e3d/maintainability)](https://codeclimate.com/github/Firesphere/silverstripe-solr-search/maintainability)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/?branch=master)
-[![CircleCI](https://circleci.com/gh/Firesphere/silverstripe-solr-search/tree/master.svg?style=svg)](https://circleci.com/gh/Firesphere/silverstripe-solr-search/tree/master)
-[![codecov](https://codecov.io/gh/Firesphere/silverstripe-solr-search/branch/master/graph/badge.svg)](https://codecov.io/gh/Firesphere/silverstripe-solr-search)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/badges/quality-score.png?b=primary)](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/?branch=primary)
+[![Code Coverage](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/badges/coverage.png?b=primary)](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/?branch=primary)
+[![CircleCI](https://circleci.com/gh/Firesphere/silverstripe-solr-search/tree/primary.svg?style=svg)](https://circleci.com/gh/Firesphere/silverstripe-solr-search/tree/primary)
+[![codecov](https://codecov.io/gh/Firesphere/silverstripe-solr-search/branch/primary/graph/badge.svg?token=BACi0PeDRD)](https://codecov.io/gh/Firesphere/silverstripe-solr-search)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/55c8967ef25e37182e3d/test_coverage)](https://codeclimate.com/github/Firesphere/silverstripe-solr-search/test_coverage)
-[![Build Status](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/build-status/master)
+[![Build Status](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/badges/build.png?b=primary)](https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/build-status/primary)
 [![Support us](https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg)](https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search)
 
 # Codebase statistics from PHP Lines of Code
 
 ```
-phploc 5.0.0 by Sebastian Bergmann.
+phploc 7.0.2 by Sebastian Bergmann.
 
 Directories                                         24
 Files                                               47
@@ -19,20 +19,23 @@ Size
   Lines of Code (LOC)                             8393
   Comment Lines of Code (CLOC)                    3770 (44.92%)
   Non-Comment Lines of Code (NCLOC)               4623 (55.08%)
-  Logical Lines of Code (LLOC)                    1752 (20.87%)
-    Classes                                       1358 (77.51%)
+  Logical Lines of Code (LLOC)                    1326 (15.80%)
+    Classes                                       1326 (100.00%)
       Average Class Length                          28
         Minimum Class Length                         1
-        Maximum Class Length                       104
+        Maximum Class Length                       102
       Average Method Length                          3
         Minimum Method Length                        1
         Maximum Method Length                       16
+      Average Methods Per Class                      7
+        Minimum Methods Per Class                    1
+        Maximum Methods Per Class                   29
     Functions                                        0 (0.00%)
       Average Function Length                        0
-    Not in classes or functions                    394 (22.49%)
+    Not in classes or functions                      0 (0.00%)
 
 Cyclomatic Complexity
-  Average Complexity per LLOC                     0.17
+  Average Complexity per LLOC                     0.23
   Average Complexity per Class                    7.45
     Minimum Class Complexity                      1.00
     Maximum Class Complexity                     28.00
@@ -59,17 +62,22 @@ Structure
   Classes                                           29
     Abstract Classes                                 2 (6.90%)
     Concrete Classes                                27 (93.10%)
+      Final Classes                                  0 (0.00%)
+      Non-Final Classes                             27 (100.00%)
   Methods                                          362
     Scope
       Non-Static Methods                           340 (93.92%)
       Static Methods                                22 (6.08%)
     Visibility
       Public Methods                               265 (73.20%)
-      Non-Public Methods                            97 (26.80%)
+      Protected Methods                             78 (21.55%)
+      Private Methods                               19 (5.25%)
   Functions                                          2
     Named Functions                                  0 (0.00%)
     Anonymous Functions                              2 (100.00%)
   Constants                                          9
     Global Constants                                 0 (0.00%)
     Class Constants                                  9 (100.00%)
+      Public Constants                               9 (100.00%)
+      Non-Public Constants                           0 (0.00%)
 ```

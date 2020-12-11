@@ -9,7 +9,7 @@
 
 # Codebase statistics from PHP Lines of Code
 ```
-phploc 5.0.0 by Sebastian Bergmann.
+phploc 7.0.2 by Sebastian Bergmann.
 
 Directories                                          1
 Files                                                6
@@ -18,20 +18,23 @@ Size
   Lines of Code (LOC)                              370
   Comment Lines of Code (CLOC)                     175 (47.30%)
   Non-Comment Lines of Code (NCLOC)                195 (52.70%)
-  Logical Lines of Code (LLOC)                      58 (15.68%)
-    Classes                                         33 (56.90%)
+  Logical Lines of Code (LLOC)                      33 (8.92%)
+    Classes                                         33 (100.00%)
       Average Class Length                           5
         Minimum Class Length                         1
         Maximum Class Length                        16
       Average Method Length                          2
         Minimum Method Length                        1
         Maximum Method Length                        6
+      Average Methods Per Class                      2
+        Minimum Methods Per Class                    1
+        Maximum Methods Per Class                    5
     Functions                                        0 (0.00%)
       Average Function Length                        0
-    Not in classes or functions                     25 (43.10%)
+    Not in classes or functions                      0 (0.00%)
 
 Cyclomatic Complexity
-  Average Complexity per LLOC                     0.12
+  Average Complexity per LLOC                     0.21
   Average Complexity per Class                    2.17
     Minimum Class Complexity                      1.00
     Maximum Class Complexity                      7.00
@@ -58,17 +61,22 @@ Structure
   Classes                                            6
     Abstract Classes                                 1 (16.67%)
     Concrete Classes                                 5 (83.33%)
+      Final Classes                                  0 (0.00%)
+      Non-Final Classes                              5 (100.00%)
   Methods                                           13
     Scope
       Non-Static Methods                            12 (92.31%)
       Static Methods                                 1 (7.69%)
     Visibility
       Public Methods                                12 (92.31%)
-      Non-Public Methods                             1 (7.69%)
+      Protected Methods                              1 (7.69%)
+      Private Methods                                0 (0.00%)
   Functions                                          0
     Named Functions                                  0 (0.00%)
     Anonymous Functions                              0 (0.00%)
   Constants                                          0
     Global Constants                                 0 (0.00%)
     Class Constants                                  0 (0.00%)
+      Public Constants                               0 (0.00%)
+      Non-Public Constants                           0 (0.00%)
 ```
