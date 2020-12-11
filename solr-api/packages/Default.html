@@ -1,131 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <meta charset="utf-8"/>
-    <title> &raquo;\Default</title>
-    <meta name="author" content=""/>
-    <meta name="description" content=""/>        <link href="../css/template.css" rel="stylesheet" media="all"/>        <!--[if lt IE 9]>
-        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-        <![endif]-->
-        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
-        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
-        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
-        <script src="../js/template.js" type="text/javascript"></script>
-        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>        <link rel="shortcut icon" href="../img/favicon.ico"/>
-        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
-        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/></head>
-<body>    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> </a>
-                <a class="brand" href="../index.html">SilverStripe Solr search</a>
+    <meta charset="utf-8">
+    <title>SilverStripe Solr search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+            <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/template.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+                <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+        <script src="js/search.js"></script>
+        <script defer src="js/searchIndex.js"></script>
+    </head>
+<body id="top">
+    <header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr search</a></h1>
+    <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section data-search-form class="phpdocumentor-search">
+    <label>
+        <span class="visually-hidden">Search for</span>
+        <svg class="phpdocumentor-search__icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12.4892" y1="12.2727" x2="19.1559" y2="18.9393" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+    </label>
+</section>
 
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
-                                API Documentation <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">                                    <li><a>Namespaces</a></li>                                    <li><a href="../namespaces/SilverStripe.html">SilverStripe</a></li>                                    <li><a href="../namespaces/Firesphere.html">Firesphere</a></li>                            </ul>
-                        </li>
-                        <li class="dropdown" id="charts-menu">
-                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
-                                Charts <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../graph_class.html">
-                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                    </a>
-                                </li>
+    <nav class="phpdocumentor-topnav">
+    <ul class="phpdocumentor-topnav__menu">
+        </ul>
+</nav>
+</header>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <input class="phpdocumentor-sidebar__menu-button" type="checkbox" id="sidebar-button" name="sidebar-button" />
+<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+    Menu
+</label>
+<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="namespaces/firesphere-solrcompatibility.html"><abbr title="\Firesphere\SolrCompatibility">SolrCompatibility</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-solrsearch.html"><abbr title="\Firesphere\SolrSearch">SolrSearch</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-partialuserforms.html"><abbr title="\Firesphere\PartialUserforms">PartialUserforms</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-solrfluent.html"><abbr title="\Firesphere\SolrFluent">SolrFluent</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-solrpermissions.html"><abbr title="\Firesphere\SolrPermissions">SolrPermissions</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-solrsubsites.html"><abbr title="\Firesphere\SolrSubsites">SolrSubsites</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/silverstripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="namespaces/silverstripe-fulltextsearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/tests.html"><abbr title="\tests">tests</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="namespaces/tests-mocks.html"><abbr title="\tests\mocks">mocks</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Firesphere-SolrCompatibility.html"><abbr title="\Firesphere\SolrCompatibility">SolrCompatibility</abbr></a></li>
+                                    <li><a href="packages/Firesphere-SolrSearch.html"><abbr title="\Firesphere\SolrSearch">SolrSearch</abbr></a></li>
+                                    <li><a href="packages/Firesphere-SolrFluent.html"><abbr title="\Firesphere\SolrFluent">SolrFluent</abbr></a></li>
+                                    <li><a href="packages/Firesphere-SolrPermissions.html"><abbr title="\Firesphere\SolrPermissions">SolrPermissions</abbr></a></li>
+                                    <li><a href="packages/Firesphere-SolrSubsites.html"><abbr title="\Firesphere\SolrSubsites">SolrSubsites</abbr></a></li>
                             </ul>
-                        </li>
-                        <li class="dropdown" id="reports-menu">
-                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                Reports <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../errors.html">
-                                        <i class="icon-list-alt"></i>&#160;Errors
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../markers.html">
-                                        <i class="icon-list-alt"></i>&#160;Markers
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../deprecated.html">
-                                        <i class="icon-list-alt"></i>&#160;Deprecated
-                                    </a>
-                                </li>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/SilverStripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/SilverStripe-FullTextSearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
                             </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="go_to_top">
-            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
-        </div>
-    </div>
-    <div id="___" class="container">
-        <noscript>
-            <div class="alert alert-warning">
-                Javascript is disabled; several features are only available if Javascript is enabled.
-            </div>
-        </noscript>
-    <div class="row">
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+    </section>
 
-        <div class="span4">
-            <div class="btn-group view pull-right" data-toggle="buttons-radio">
-                <button class="btn details" title="Show descriptions and method names">
-                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
-                    <i class="icon-align-justify"></i>
-                </button>
-            </div>
-            <ul class="side-nav nav nav-list">
-                <li class="nav-header">
-                    <i class="icon-map-marker"></i> Packages
-                </li>
-                <a href="../packages/Default.html" title="Default">
-                    <i class="icon-th"></i>Default
-                </a>
-                <ul class="nav nav-list nav-packages">
-                </ul>
-            </ul>
-        </div>
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+    </section>
+</aside>
 
-        <div class="span8 package-contents">
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-    <li>
-        <span class="divider">\</span><a href="../packages/Default.html">Default</a>
-    </li>
-    </ul>            <div class="package-indent">
-                <h3><i class="icon-custom icon-function"></i> Functions</h3>    <div id="getShortFieldName" class="element ajax clickablefunction">
-        <h1>getShortFieldName<a href="../namespaces/default.html#function_getShortFieldName">¶</a></h1>
-        <p class="short_description">Global method, to make it easier to address and less convoluted.</p>
-        <div class="details collapse">Get the short name of a field, e.g. App\Project\Page_Title will become Page_Title
-Used to remove unwanted backslashes from Solr cores.</div>
-        <a href="../namespaces/default.html#function_getShortFieldName" class="more">« More »</a>
-    </div>    <div id="getSuggestion" class="element ajax clickablefunction">
-        <h1>getSuggestion<a href="../namespaces/default.html#function_getSuggestion">¶</a></h1>
-        <p class="short_description">Get a suggestion from Solr</p>
-        <div class="details collapse"></div>
-        <a href="../namespaces/default.html#function_getSuggestion" class="more">« More »</a>
-    </div>            </div>
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -package">
+        <h2 class="phpdocumentor-content__title">Default</h2>
+
+        
+
+<h3 id="interfaces_class_traits">
+    Interfaces, Classes and Traits
+    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+    
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-CanViewObject.html"><abbr title="\Firesphere\SolrSearch\Tests\CanViewObject">CanViewObject</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-MockState.html"><abbr title="\Firesphere\SolrSearch\Tests\MockState">MockState</abbr></a></dt>
+        <dd>Class SiteState</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-MockStateTwo.html"><abbr title="\Firesphere\SolrSearch\Tests\MockStateTwo">MockStateTwo</abbr></a></dt>
+        <dd>Class SiteState</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestIndex.html"><abbr title="\Firesphere\SolrSearch\Tests\TestIndex">TestIndex</abbr></a></dt>
+        <dd>Base for creating a new Solr core.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/tests-mocks-TestIndexFour.html"><abbr title="\tests\mocks\TestIndexFour">TestIndexFour</abbr></a></dt>
+        <dd>Base for creating a new Solr core.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestIndexThree.html"><abbr title="\Firesphere\SolrSearch\Tests\TestIndexThree">TestIndexThree</abbr></a></dt>
+        <dd>Base for creating a new Solr core.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestIndexTwo.html"><abbr title="\Firesphere\SolrSearch\Tests\TestIndexTwo">TestIndexTwo</abbr></a></dt>
+        <dd>Base for creating a new Solr core.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestObject.html"><abbr title="\Firesphere\SolrSearch\Tests\TestObject">TestObject</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestRelationObject.html"><abbr title="\Firesphere\SolrSearch\Tests\TestRelationObject">TestRelationObject</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrCompatibility-Tests-FulltextSearchExtensionTest.html"><abbr title="\Firesphere\SolrCompatibility\Tests\FulltextSearchExtensionTest">FulltextSearchExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrCompatibility-Tests-SearchQueryTest.html"><abbr title="\Firesphere\SolrCompatibility\Tests\SearchQueryTest">SearchQueryTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrCompatibility-Tests-SolrCoreServiceExtensionTest.html"><abbr title="\Firesphere\SolrCompatibility\Tests\SolrCoreServiceExtensionTest">SolrCoreServiceExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrCompatibility-Tests-SolrIndexTest.html"><abbr title="\Firesphere\SolrCompatibility\Tests\SolrIndexTest">SolrIndexTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrCompatibility-Tests-SolrTest.html"><abbr title="\Firesphere\SolrCompatibility\Tests\SolrTest">SolrTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-PartialUserforms-Tests-TestHelper.html"><abbr title="\Firesphere\PartialUserforms\Tests\TestHelper">TestHelper</abbr></a></dt>
+        <dd>A simple helper class for test calls to private and protected methods</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-CanViewObject.html"><abbr title="\Firesphere\SolrSearch\Tests\CanViewObject">CanViewObject</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-MockState.html"><abbr title="\Firesphere\SolrSearch\Tests\MockState">MockState</abbr></a></dt>
+        <dd>Class SiteState</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-MockStateTwo.html"><abbr title="\Firesphere\SolrSearch\Tests\MockStateTwo">MockStateTwo</abbr></a></dt>
+        <dd>Class SiteState</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestIndex.html"><abbr title="\Firesphere\SolrSearch\Tests\TestIndex">TestIndex</abbr></a></dt>
+        <dd>Base for creating a new Solr core.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/tests-mocks-TestIndexFour.html"><abbr title="\tests\mocks\TestIndexFour">TestIndexFour</abbr></a></dt>
+        <dd>Base for creating a new Solr core.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestIndexThree.html"><abbr title="\Firesphere\SolrSearch\Tests\TestIndexThree">TestIndexThree</abbr></a></dt>
+        <dd>Base for creating a new Solr core.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestIndexTwo.html"><abbr title="\Firesphere\SolrSearch\Tests\TestIndexTwo">TestIndexTwo</abbr></a></dt>
+        <dd>Base for creating a new Solr core.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestObject.html"><abbr title="\Firesphere\SolrSearch\Tests\TestObject">TestObject</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-TestRelationObject.html"><abbr title="\Firesphere\SolrSearch\Tests\TestRelationObject">TestRelationObject</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-BaseIndexTest.html"><abbr title="\Firesphere\SolrSearch\Tests\BaseIndexTest">BaseIndexTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-BaseQueryTest.html"><abbr title="\Firesphere\SolrSearch\Tests\BaseQueryTest">BaseQueryTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-ClearDirtyClassesJobTest.html"><abbr title="\Firesphere\SolrSearch\Tests\ClearDirtyClassesJobTest">ClearDirtyClassesJobTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-ClearDirtyClassesTest.html"><abbr title="\Firesphere\SolrSearch\Tests\ClearDirtyClassesTest">ClearDirtyClassesTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-ConfigStoreTest.html"><abbr title="\Firesphere\SolrSearch\Tests\ConfigStoreTest">ConfigStoreTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-DataObjectExtensionTest.html"><abbr title="\Firesphere\SolrSearch\Tests\DataObjectExtensionTest">DataObjectExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-DataResolverTest.html"><abbr title="\Firesphere\SolrSearch\Tests\DataResolverTest">DataResolverTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-DirtyClassTest.html"><abbr title="\Firesphere\SolrSearch\Tests\DirtyClassTest">DirtyClassTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html"><abbr title="\Firesphere\SolrSearch\Tests\DocumentFactoryTest">DocumentFactoryTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-FieldResolverTest.html"><abbr title="\Firesphere\SolrSearch\Tests\FieldResolverTest">FieldResolverTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-QueryComponentFactoryTest.html"><abbr title="\Firesphere\SolrSearch\Tests\QueryComponentFactoryTest">QueryComponentFactoryTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SchemaFactoryTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SchemaFactoryTest">SchemaFactoryTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SearchAdminTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SearchAdminTest">SearchAdminTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SearchFormTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SearchFormTest">SearchFormTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SearchSynonymTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SearchSynonymTest">SearchSynonymTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SiteStateTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SiteStateTest">SiteStateTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SolrConfigureJobTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SolrConfigureJobTest">SolrConfigureJobTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SolrConfigureTaskTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SolrConfigureTaskTest">SolrConfigureTaskTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SolrCoreServiceTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SolrCoreServiceTest">SolrCoreServiceTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SolrIndexJobTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SolrIndexJobTest">SolrIndexJobTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SolrIndexTaskTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SolrIndexTaskTest">SolrIndexTaskTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SolrLoggerTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SolrLoggerTest">SolrLoggerTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SolrLogTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SolrLogTest">SolrLogTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-StaticsTest.html"><abbr title="\Firesphere\SolrSearch\Tests\StaticsTest">StaticsTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSearch-Tests-SynonymsTest.html"><abbr title="\Firesphere\SolrSearch\Tests\SynonymsTest">SynonymsTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrFluent-Tests-FluentDocumentExtensionTest.html"><abbr title="\Firesphere\SolrFluent\Tests\FluentDocumentExtensionTest">FluentDocumentExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrFluent-Tests-FluentIndexExtensionTest.html"><abbr title="\Firesphere\SolrFluent\Tests\FluentIndexExtensionTest">FluentIndexExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrFluent-Tests-FluentSchemaExtensionTest.html"><abbr title="\Firesphere\SolrFluent\Tests\FluentSchemaExtensionTest">FluentSchemaExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrFluent-Tests-FluentSiteStateTest.html"><abbr title="\Firesphere\SolrFluent\Tests\FluentSiteStateTest">FluentSiteStateTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrPermissions-Tests-BaseIndexExtensionTest.html"><abbr title="\Firesphere\SolrPermissions\Tests\BaseIndexExtensionTest">BaseIndexExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrPermissions-Tests-DataObjectExtensionTest.html"><abbr title="\Firesphere\SolrPermissions\Tests\DataObjectExtensionTest">DataObjectExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrPermissions-Tests-DocumentFactoryExtensionTest.html"><abbr title="\Firesphere\SolrPermissions\Tests\DocumentFactoryExtensionTest">DocumentFactoryExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrPermissions-Tests-SchemaFactoryExtensionTest.html"><abbr title="\Firesphere\SolrPermissions\Tests\SchemaFactoryExtensionTest">SchemaFactoryExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSubsites-Tests-TestIndex.html"><abbr title="\Firesphere\SolrSubsites\Tests\TestIndex">TestIndex</abbr></a></dt>
+        <dd>Base for creating a new Solr core.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSubsites-Tests-SubsiteExtensionTest.html"><abbr title="\Firesphere\SolrSubsites\Tests\SubsiteExtensionTest">SubsiteExtensionTest</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Firesphere-SolrSubsites-Tests-SubsiteStateTest.html"><abbr title="\Firesphere\SolrSubsites\Tests\SubsiteStateTest">SubsiteStateTest</abbr></a></dt>
+        <dd></dd>
+    
+    </dl>
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+                        <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/default.html#function_getShortFieldName">getShortFieldName()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Global method, to make it easier to address and less convoluted.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/default.html#function_getSuggestion">getSuggestion()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Get a suggestion from Solr</dd>
+
+    </dl>
+
+        
+
+            <section class="phpdocumentor-functions">
+        <h3 class="phpdocumentor-elements__header" id="functions">
+            Functions
+            <a href="packages/Default.html#functions" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_getShortFieldName">
+        getShortFieldName()
+        <a href="namespaces/default.html#function_getShortFieldName" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/_config.php"><a href="files/core-config.html"><abbr title="Core/_config.php">_config.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Global method, to make it easier to address and less convoluted.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">getShortFieldName</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"><p>Get the short name of a field, e.g. App\Project\Page_Title will become Page_Title
+Used to remove unwanted backslashes from Solr cores.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Name to be shortened</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_getSuggestion">
+        getSuggestion()
+        <a href="namespaces/default.html#function_getSuggestion" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/client/proxy/autosuggest.php"><a href="files/core-client-proxy-autosuggest.html"><abbr title="Core/client/proxy/autosuggest.php">autosuggest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">18</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get a suggestion from Solr</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">getSuggestion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+    
+</article>
+            </section>
+
+    </article>
+                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+    <section class="phpdocumentor-search-results__dialog">
+        <header class="phpdocumentor-search-results__header">
+            <h2 class="phpdocumentor-search-results__title">Search results</h2>
+            <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+        </header>
+        <section class="phpdocumentor-search-results__body">
+            <ul class="phpdocumentor-search-results__entries"></ul>
+        </section>
+    </section>
+</section>
+            </div>
         </div>
-    </div>    </div>    <footer class="span12">
-            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
-            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor</a> and<br/>
-            generated onFri, 11 Dec 2020 20:17:37 +0000.<br/>
-    </footer></body>
+        <a href="packages/Default.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <script>
+        cssVars({});
+    </script>
+</body>
 </html>

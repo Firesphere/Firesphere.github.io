@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SilverStripe Solr search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+            <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/template.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+                <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+        <script src="js/search.js"></script>
+        <script defer src="js/searchIndex.js"></script>
+    </head>
+<body id="top">
+    <header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr search</a></h1>
+    <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section data-search-form class="phpdocumentor-search">
+    <label>
+        <span class="visually-hidden">Search for</span>
+        <svg class="phpdocumentor-search__icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12.4892" y1="12.2727" x2="19.1559" y2="18.9393" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+    </label>
+</section>
+
+    <nav class="phpdocumentor-topnav">
+    <ul class="phpdocumentor-topnav__menu">
+        </ul>
+</nav>
+</header>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <input class="phpdocumentor-sidebar__menu-button" type="checkbox" id="sidebar-button" name="sidebar-button" />
+<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+    Menu
+</label>
+<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="namespaces/firesphere-solrcompatibility.html"><abbr title="\Firesphere\SolrCompatibility">SolrCompatibility</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-solrsearch.html"><abbr title="\Firesphere\SolrSearch">SolrSearch</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-partialuserforms.html"><abbr title="\Firesphere\PartialUserforms">PartialUserforms</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-solrfluent.html"><abbr title="\Firesphere\SolrFluent">SolrFluent</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-solrpermissions.html"><abbr title="\Firesphere\SolrPermissions">SolrPermissions</abbr></a></li>
+                                            <li><a href="namespaces/firesphere-solrsubsites.html"><abbr title="\Firesphere\SolrSubsites">SolrSubsites</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/silverstripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="namespaces/silverstripe-fulltextsearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/tests.html"><abbr title="\tests">tests</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="namespaces/tests-mocks.html"><abbr title="\tests\mocks">mocks</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Firesphere-SolrCompatibility.html"><abbr title="\Firesphere\SolrCompatibility">SolrCompatibility</abbr></a></li>
+                                    <li><a href="packages/Firesphere-SolrSearch.html"><abbr title="\Firesphere\SolrSearch">SolrSearch</abbr></a></li>
+                                    <li><a href="packages/Firesphere-SolrFluent.html"><abbr title="\Firesphere\SolrFluent">SolrFluent</abbr></a></li>
+                                    <li><a href="packages/Firesphere-SolrPermissions.html"><abbr title="\Firesphere\SolrPermissions">SolrPermissions</abbr></a></li>
+                                    <li><a href="packages/Firesphere-SolrSubsites.html"><abbr title="\Firesphere\SolrSubsites">SolrSubsites</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/SilverStripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/SilverStripe-FullTextSearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere.html">Firesphere</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch.html">SolrSearch</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch-tests.html">Tests</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    DocumentFactoryTest
+
+        <span class="phpdocumentor-element__extends">
+        extends <abbr title="\SilverStripe\Dev\SapphireTest">SapphireTest</abbr>
+    </span>
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Default.html">Default</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">20</span>
+</aside>
+
+        
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+                <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#property_expected_docs">$expected_docs</a>
+    <span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd>We can&#039;t use the constant here for unknown reasons
+If you change the constant, please replace id here with the appropriate value</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#property_extra_dataobjects">$extra_dataobjects</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#property_fixture_file">$fixture_file</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#property_required_extensions">$required_extensions</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd></dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_setUp">setUp()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testBuildItems">testBuildItems()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testConstruct">testConstruct()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testDebug">testDebug()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testGetLogger">testGetLogger()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testSanitiseField">testSanitiseField()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testUnsetValues">testUnsetValues()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_compareExpectedDocs">compareExpectedDocs()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+        </dl>
+
+
+
+        
+
+        
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_expected_docs">
+        $expected_docs
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#property_expected_docs" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+</aside>
+
+        <p class="phpdocumentor-summary">We can&#039;t use the constant here for unknown reasons
+If you change the constant, please replace id here with the appropriate value</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$expected_docs</span>
+     = <span class="phpdocumentor-signature__default-value">[[&#039;id&#039; =&gt; &#039;Page-1&#039;, &#039;ObjectID&#039; =&gt; 1, &#039;ClassName&#039; =&gt; &#039;Page&#039;, &#039;ClassHierarchy&#039; =&gt; [&#039;silverstripe\view\viewabledata&#039; =&gt; SilverStripeViewViewableData::class, &#039;silverstripe\orm\dataobject&#039; =&gt; SilverStripeORMDataObject::class, &#039;silverstripe\cms\model\sitetree&#039; =&gt; SilverStripeCMSModelSiteTree::class, &#039;page&#039; =&gt; &#039;Page&#039;], &#039;ViewStatus&#039; =&gt; [0 =&gt; &#039;1-null&#039;], &#039;SiteTree_Title&#039; =&gt; &#039;Home&#039;, &#039;SiteTree_Content&#039; =&gt; &#039;&lt;p&gt;Welcome to SilverStripe! This is the default homepage. &#039; . &#039;You can edit this page by opening &lt;a href=&quot;admin/&quot;&gt;the CMS&lt;/a&gt;.&lt;/p&gt;&#039; . &#039;&lt;p&gt;You can now access the &lt;a href=&quot;http://docs.silverstripe.org&quot;&gt;developer documentation&lt;/a&gt;,&#039; . &#039; or begin the &lt;a href=&quot;http://www.silverstripe.org/learn/lessons&quot;&gt;SilverStripe lessons&lt;/a&gt;.&lt;/p&gt;&#039;, &#039;SiteTree_ParentID&#039; =&gt; 0], [&#039;id&#039; =&gt; &#039;Page-6&#039;, &#039;ObjectID&#039; =&gt; 6, &#039;ClassName&#039; =&gt; &#039;Page&#039;, &#039;ClassHierarchy&#039; =&gt; [&#039;silverstripe\view\viewabledata&#039; =&gt; SilverStripeViewViewableData::class, &#039;silverstripe\orm\dataobject&#039; =&gt; SilverStripeORMDataObject::class, &#039;silverstripe\cms\model\sitetree&#039; =&gt; SilverStripeCMSModelSiteTree::class, &#039;page&#039; =&gt; &#039;Page&#039;], &#039;ViewStatus&#039; =&gt; [0 =&gt; &#039;1-null&#039;], &#039;SiteTree_Title&#039; =&gt; &#039;Test 1&#039;, &#039;SiteTree_ParentID&#039; =&gt; 1], [&#039;id&#039; =&gt; &#039;Page-2&#039;, &#039;ObjectID&#039; =&gt; 2, &#039;ClassName&#039; =&gt; &#039;Page&#039;, &#039;ClassHierarchy&#039; =&gt; [&#039;silverstripe\view\viewabledata&#039; =&gt; SilverStripeViewViewableData::class, &#039;silverstripe\orm\dataobject&#039; =&gt; SilverStripeORMDataObject::class, &#039;silverstripe\cms\model\sitetree&#039; =&gt; SilverStripeCMSModelSiteTree::class, &#039;page&#039; =&gt; &#039;Page&#039;], &#039;ViewStatus&#039; =&gt; [0 =&gt; &#039;1-null&#039;], &#039;SiteTree_Title&#039; =&gt; &#039;About Us&#039;, &#039;SiteTree_Content&#039; =&gt; &#039;&lt;p&gt;You can fill this page out with your own content, &#039; . &#039;or delete it and create your own pages.&lt;/p&gt;&#039;, &#039;SiteTree_ParentID&#039; =&gt; 0, &#039;SiteTree_ViewStatus&#039; =&gt; &#039;1-null&#039;], [&#039;id&#039; =&gt; &#039;Page-7&#039;, &#039;ObjectID&#039; =&gt; 7, &#039;ClassName&#039; =&gt; &#039;Page&#039;, &#039;ClassHierarchy&#039; =&gt; [&#039;silverstripe\view\viewabledata&#039; =&gt; SilverStripeViewViewableData::class, &#039;silverstripe\orm\dataobject&#039; =&gt; SilverStripeORMDataObject::class, &#039;silverstripe\cms\model\sitetree&#039; =&gt; SilverStripeCMSModelSiteTree::class, &#039;page&#039; =&gt; &#039;Page&#039;], &#039;ViewStatus&#039; =&gt; [0 =&gt; &#039;1-null&#039;], &#039;SiteTree_Title&#039; =&gt; &#039;Test 2&#039;, &#039;SiteTree_ParentID&#039; =&gt; 1], [&#039;id&#039; =&gt; &#039;Page-3&#039;, &#039;ObjectID&#039; =&gt; 3, &#039;ClassName&#039; =&gt; &#039;Page&#039;, &#039;ClassHierarchy&#039; =&gt; [&#039;silverstripe\view\viewabledata&#039; =&gt; SilverStripeViewViewableData::class, &#039;silverstripe\orm\dataobject&#039; =&gt; SilverStripeORMDataObject::class, &#039;silverstripe\cms\model\sitetree&#039; =&gt; SilverStripeCMSModelSiteTree::class, &#039;page&#039; =&gt; &#039;Page&#039;], &#039;ViewStatus&#039; =&gt; [0 =&gt; &#039;1-null&#039;], &#039;SiteTree_Title&#039; =&gt; &#039;Contact Us&#039;, &#039;SiteTree_Content&#039; =&gt; &#039;&lt;p&gt;You can fill this page out with your own content, &#039; . &#039;or delete it and create your own pages.&lt;/p&gt;&#039;, &#039;SiteTree_ParentID&#039; =&gt; 0]]</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_extra_dataobjects">
+        $extra_dataobjects
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#property_extra_dataobjects" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">23</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$extra_dataobjects</span>
+     = <span class="phpdocumentor-signature__default-value">[FiresphereSolrSearchTestsTestObject::class, FiresphereSolrSearchTestsTestPage::class, FiresphereSolrSearchTestsTestRelationObject::class]</span></code>
+
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_fixture_file">
+        $fixture_file
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#property_fixture_file" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">22</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$fixture_file</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;../fixtures/DataResolver.yml&#039;</span></code>
+
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_required_extensions">
+        $required_extensions
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#property_required_extensions" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">29</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$required_extensions</span>
+     = <span class="phpdocumentor-signature__default-value">[SilverStripeORMDataObject::class =&gt; [FiresphereSolrSearchExtensionsDataObjectExtension::class]]</span></code>
+
+    
+    
+
+</article>
+            </section>
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setUp">
+        setUp()
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_setUp" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">140</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setUp</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testBuildItems">
+        testBuildItems()
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testBuildItems" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">155</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">testBuildItems</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testConstruct">
+        testConstruct()
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testConstruct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">149</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">testConstruct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testDebug">
+        testDebug()
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testDebug" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">213</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">testDebug</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testGetLogger">
+        testGetLogger()
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testGetLogger" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">208</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">testGetLogger</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testSanitiseField">
+        testSanitiseField()
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testSanitiseField" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">203</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">testSanitiseField</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testUnsetValues">
+        testUnsetValues()
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_testUnsetValues" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">220</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">testUnsetValues</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_compareExpectedDocs">
+        compareExpectedDocs()
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#method_compareExpectedDocs" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/tests/unit/DocumentFactoryTest.php"><a href="files/core-tests-unit-documentfactorytest.html"><abbr title="Core/tests/unit/DocumentFactoryTest.php">DocumentFactoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">183</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">compareExpectedDocs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$docs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$docs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+            </section>
+
+    </article>
+                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+    <section class="phpdocumentor-search-results__dialog">
+        <header class="phpdocumentor-search-results__header">
+            <h2 class="phpdocumentor-search-results__title">Search results</h2>
+            <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+        </header>
+        <section class="phpdocumentor-search-results__body">
+            <ul class="phpdocumentor-search-results__entries"></ul>
+        </section>
+    </section>
+</section>
+            </div>
+        </div>
+        <a href="classes/Firesphere-SolrSearch-Tests-DocumentFactoryTest.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <script>
+        cssVars({});
+    </script>
+</body>
+</html>
