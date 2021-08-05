@@ -17,7 +17,7 @@
     <nav id="menu">
         <ul>
 <li><a class="" href="index.html">index</a></li>
-<li><a class="active" href="01-Installation.html">Installation</a></li>
+<li><a class="" href="01-Installation.html">Installation</a></li>
 <li><a class="" href="02-Solr.html">Solr</a></li>
 <li><a class="" href="03-Set-up-and-Configuration.html">Set up and Configuration</a></li>
 <li><a class="" href="04-Searching.html">Searching</a></li>
@@ -32,7 +32,7 @@
 <li><a class="" href="06-Advanced-Options/06-Stores.html">Stores</a></li>
 </ul>
 <li><a class="" href="07-Customisation.html">Customisation</a></li>
-<li><a class="" href="08-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="active" href="08-CMS-Usage.html">CMS Usage</a></li>
 <li><a class="" href="09-Debugging.html">Debugging</a></li>
 <li><a class="" href="10-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="11-View-Permissions.html">View Permissions</a></li>
@@ -75,43 +75,18 @@
             src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="installing-the-module">Installing the module <a class="heading-anchor-permalink" href="#installing-the-module">#</a></h1>
-<p>Best practice is to use composer:
-<code>composer require firesphere/solr-search</code></p>
-<h2 id="manual-setup">Manual setup <a class="heading-anchor-permalink" href="#manual-setup">#</a></h2>
+        <h1 id="cms-usage">CMS Usage <a class="heading-anchor-permalink" href="#cms-usage">#</a></h1>
+<p>See the Search admin in the CMS</p>
+<h2 id="features">Features <a class="heading-anchor-permalink" href="#features">#</a></h2>
 <ul>
-<li>Create a clean installation of SilverStripe 4 (<code>composer create-project</code>)</li>
-<li>Clone this repo in to the folder of your liking</li>
-<li>Check which modules you need to add to your base <code>composer.json</code></li>
-<li>Run a composer update</li>
-<li>Create a base index:</li>
-</ul>
-<pre><code class="language-php">class MyIndex extends BaseIndex
-{
-    /**
-     * Called during construction, this is the method that builds the structure.
-     * Used instead of overriding __construct as we have specific execution order - code that has
-     * to be run before _and/or_ after this.
-     * @throws Exception
-     */
-    public function init()
-    {
-        $this-&gt;addClass(SiteTree::class);
-
-        $this-&gt;addFulltextField('Title');
-    }
-    
-    public function getIndexName()
-    {
-        return 'this-is-my-index';
-    }
-}
-</code></pre>
+<li>See if there are any applicable dirty objects to re-index</li>
+<li>See the latest Solr logs</li>
+<li>Add, remove or edit synonyms
 <ul>
-<li>Run <code>vendor/bin/sake dev/tasks/SolrConfigureTask</code> to configure the core</li>
-<li>Run <code>vendor/bin/sake dev/tasks/SolrIndexTask</code> to add documents to your index</li>
+<li>Note that YML-based synonyms can not be edited from the CMS</li>
 </ul>
-<p>Once these tasks have completed - happy searching!</p>
+</li>
+</ul>
 
         <hr/>
         <h2>Support our work</h2>

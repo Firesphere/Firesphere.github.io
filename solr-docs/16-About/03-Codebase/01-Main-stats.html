@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firesphere Solr Search user/dev documentation</title>
+    <link rel="stylesheet" href="/solr-docs/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+    <nav id="menu">
+        <ul>
+<li><a class="" href="../../index.html">index</a></li>
+<li><a class="" href="../../01-Installation.html">Installation</a></li>
+<li><a class="" href="../../02-Solr.html">Solr</a></li>
+<li><a class="" href="../../03-Set-up-and-Configuration.html">Set up and Configuration</a></li>
+<li><a class="" href="../../04-Searching.html">Searching</a></li>
+<li><a class="" href="../../05-Spellcheck.html">Spellcheck</a></li>
+<li class="heading"><span>Advanced Options</span></li>
+<ul>
+<li><a class="" href="../../06-Advanced-Options/01-Faceting.html">Faceting</a></li>
+<li><a class="" href="../../06-Advanced-Options/02-Boosting.html">Boosting</a></li>
+<li><a class="" href="../../06-Advanced-Options/03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="" href="../../06-Advanced-Options/04-Elevation.html">Elevation</a></li>
+<li><a class="" href="../../06-Advanced-Options/05-Filters-excludes.html">Filters excludes</a></li>
+<li><a class="" href="../../06-Advanced-Options/06-Stores.html">Stores</a></li>
+</ul>
+<li><a class="" href="../../07-Customisation.html">Customisation</a></li>
+<li><a class="" href="../../08-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="../../09-Debugging.html">Debugging</a></li>
+<li><a class="" href="../../10-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="../../11-View-Permissions.html">View Permissions</a></li>
+<li><a class="" href="../../12-Dirty-classes.html">Dirty classes</a></li>
+<li class="heading"><span>Submodules</span></li>
+<ul>
+<li><a class="" href="../../13-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="../../13-Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="../../13-Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="../../13-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
+<li><a class="" href="../../13-Submodules/05-Elemental.html">Elemental</a></li>
+</ul>
+<li class="heading"><span>Contributing</span></li>
+<ul>
+<li><a class="" href="../../14-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="" href="../../14-Contributing/02-Contributing.html">Contributing</a></li>
+</ul>
+<li class="heading"><span>Help</span></li>
+<ul>
+<li><a class="" href="../../15-Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="../../15-Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="../../15-Help/03-Known-issues.html">Known issues</a></li>
+</ul>
+<li class="heading"><span>About</span></li>
+<ul>
+<li><a class="" href="../01-About.html">About</a></li>
+<li><a class="" href="../02-Plans.html">Plans</a></li>
+<li class="heading"><span>Codebase</span></li>
+<ul>
+<li><a class="active" href="01-Main-stats.html">Main stats</a></li>
+<li><a class="" href="02-Compatibility-stats.html">Compatibility stats</a></li>
+<li><a class="" href="03-Member-permission-stats.html">Member permission stats</a></li>
+<li><a class="" href="04-Fluent-stats.html">Fluent stats</a></li>
+<li><a class="" href="05-Subsites-stats.html">Subsites stats</a></li>
+</ul>
+</ul>
+</ul>
+        <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img
+            alt="Support our work on GitStore"
+            src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
+    </nav>
+    <article id="main" class="content">
+        <p><a href="https://codeclimate.com/github/Firesphere/silverstripe-solr-search/maintainability"><img src="https://api.codeclimate.com/v1/badges/55c8967ef25e37182e3d/maintainability" alt="Maintainability"></a>
+<a href="https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/?branch=primary"><img src="https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/badges/quality-score.png?b=primary" alt="Scrutinizer Code Quality"></a>
+<a href="https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/?branch=primary"><img src="https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/badges/coverage.png?b=primary" alt="Code Coverage"></a>
+<a href="https://circleci.com/gh/Firesphere/silverstripe-solr-search/tree/primary"><img src="https://circleci.com/gh/Firesphere/silverstripe-solr-search/tree/primary.svg?style=svg" alt="CircleCI"></a>
+<a href="https://codecov.io/gh/Firesphere/silverstripe-solr-search"><img src="https://codecov.io/gh/Firesphere/silverstripe-solr-search/branch/primary/graph/badge.svg?token=BACi0PeDRD" alt="codecov"></a>
+<a href="https://codeclimate.com/github/Firesphere/silverstripe-solr-search/test_coverage"><img src="https://api.codeclimate.com/v1/badges/55c8967ef25e37182e3d/test_coverage" alt="Test Coverage"></a>
+<a href="https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/build-status/primary"><img src="https://scrutinizer-ci.com/g/Firesphere/silverstripe-solr-search/badges/build.png?b=primary" alt="Build Status"></a>
+<a href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg" alt="Support us"></a></p>
+<h1 id="codebase-statistics-from-php-lines-of-code">Codebase statistics from PHP Lines of Code <a class="heading-anchor-permalink" href="#codebase-statistics-from-php-lines-of-code">#</a></h1>
+<pre><code>phploc 7.0.2 by Sebastian Bergmann.
+
+Directories                                         24
+Files                                               47
+
+Size
+  Lines of Code (LOC)                             8406
+  Comment Lines of Code (CLOC)                    3773 (44.88%)
+  Non-Comment Lines of Code (NCLOC)               4633 (55.12%)
+  Logical Lines of Code (LLOC)                    1332 (15.85%)
+    Classes                                       1332 (100.00%)
+      Average Class Length                          28
+        Minimum Class Length                         1
+        Maximum Class Length                       101
+      Average Method Length                          3
+        Minimum Method Length                        1
+        Maximum Method Length                       16
+      Average Methods Per Class                      7
+        Minimum Methods Per Class                    1
+        Maximum Methods Per Class                   29
+    Functions                                        0 (0.00%)
+      Average Function Length                        0
+    Not in classes or functions                      0 (0.00%)
+
+Cyclomatic Complexity
+  Average Complexity per LLOC                     0.23
+  Average Complexity per Class                    7.47
+    Minimum Class Complexity                      1.00
+    Maximum Class Complexity                     27.00
+  Average Complexity per Method                   1.86
+    Minimum Method Complexity                     1.00
+    Maximum Method Complexity                     6.00
+
+Dependencies
+  Global Accesses                                    0
+    Global Constants                                 0 (0.00%)
+    Global Variables                                 0 (0.00%)
+    Super-Global Variables                           0 (0.00%)
+  Attribute Accesses                               461
+    Non-Static                                     426 (92.41%)
+    Static                                          35 (7.59%)
+  Method Calls                                     809
+    Non-Static                                     629 (77.75%)
+    Static                                         180 (22.25%)
+
+Structure
+  Namespaces                                        16
+  Interfaces                                         2
+  Traits                                            16
+  Classes                                           29
+    Abstract Classes                                 2 (6.90%)
+    Concrete Classes                                27 (93.10%)
+      Final Classes                                  0 (0.00%)
+      Non-Final Classes                             27 (100.00%)
+  Methods                                          363
+    Scope
+      Non-Static Methods                           341 (93.94%)
+      Static Methods                                22 (6.06%)
+    Visibility
+      Public Methods                               266 (73.28%)
+      Protected Methods                             78 (21.49%)
+      Private Methods                               19 (5.23%)
+  Functions                                          2
+    Named Functions                                  0 (0.00%)
+    Anonymous Functions                              2 (100.00%)
+  Constants                                          9
+    Global Constants                                 0 (0.00%)
+    Class Constants                                  9 (100.00%)
+      Public Constants                               9 (100.00%)
+      Non-Public Constants                           0 (0.00%)
+</code></pre>
+
+        <hr/>
+        <h2>Support our work</h2>
+        <p>
+            <a href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img
+                alt="Support our work on GitStore"
+                src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
+        </p>
+        <p>
+            <a href='https://ko-fi.com/B0B11GKLY' target='_blank'>
+                <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2'
+                     border='0' alt='Buy Me a Coffee at ko-fi.com'/>
+            </a>
+        </p>
+    </article>
+</div>
+<noscript><p><img src="https://piwik.casa-laguna.net/matomo.php?idsite=13&amp;rec=1" style="border:0;" alt=""/></p>
+</noscript>
+<script src="/solr-docs/main.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>

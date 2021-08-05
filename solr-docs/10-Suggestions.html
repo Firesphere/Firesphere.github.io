@@ -17,7 +17,7 @@
     <nav id="menu">
         <ul>
 <li><a class="" href="index.html">index</a></li>
-<li><a class="active" href="01-Installation.html">Installation</a></li>
+<li><a class="" href="01-Installation.html">Installation</a></li>
 <li><a class="" href="02-Solr.html">Solr</a></li>
 <li><a class="" href="03-Set-up-and-Configuration.html">Set up and Configuration</a></li>
 <li><a class="" href="04-Searching.html">Searching</a></li>
@@ -34,7 +34,7 @@
 <li><a class="" href="07-Customisation.html">Customisation</a></li>
 <li><a class="" href="08-CMS-Usage.html">CMS Usage</a></li>
 <li><a class="" href="09-Debugging.html">Debugging</a></li>
-<li><a class="" href="10-Suggestions.html">Suggestions</a></li>
+<li><a class="active" href="10-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="11-View-Permissions.html">View Permissions</a></li>
 <li><a class="" href="12-Dirty-classes.html">Dirty classes</a></li>
 <li class="heading"><span>Submodules</span></li>
@@ -75,43 +75,86 @@
             src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="installing-the-module">Installing the module <a class="heading-anchor-permalink" href="#installing-the-module">#</a></h1>
-<p>Best practice is to use composer:
-<code>composer require firesphere/solr-search</code></p>
-<h2 id="manual-setup">Manual setup <a class="heading-anchor-permalink" href="#manual-setup">#</a></h2>
-<ul>
-<li>Create a clean installation of SilverStripe 4 (<code>composer create-project</code>)</li>
-<li>Clone this repo in to the folder of your liking</li>
-<li>Check which modules you need to add to your base <code>composer.json</code></li>
-<li>Run a composer update</li>
-<li>Create a base index:</li>
-</ul>
-<pre><code class="language-php">class MyIndex extends BaseIndex
-{
-    /**
-     * Called during construction, this is the method that builds the structure.
-     * Used instead of overriding __construct as we have specific execution order - code that has
-     * to be run before _and/or_ after this.
-     * @throws Exception
-     */
-    public function init()
-    {
-        $this-&gt;addClass(SiteTree::class);
+        <h1 id="solr-suggest">Solr Suggest <a class="heading-anchor-permalink" href="#solr-suggest">#</a></h1>
+<p>If you are using Solr 5 or above, you can use the Solr Suggest option. This is enabled by default.</p>
+<p>To set this up, have a look at <a href="https://github.com/Firesphere/silverstripe-solr-search/blob/master/client/proxy/autosuggest.php">autosuggest proxy</a></p>
+<p>Copy this file to a convenient location, e.g. your <code>docroot/public</code> folder and edit the contents of your copy, to match your Solr core and location of the Solr instance.</p>
+<p>Note that the proxy can not read from the Silverstripe config, which is why we need to edit it manually.</p>
+<p>Once that’s in place, you can use Javascript to get Solr’s suggestions by querying the <code>autosuggest.php</code> file directly.
+Doing so will prevent a full execution of the whole Silverstripe application stack,
+which is too slow for real-time auto-suggesting.
+Also, make sure the file is accessible by the web user.</p>
+<p>The output of the file is a JSON object, looking something like this:</p>
+<pre><code class="language-json">{
 
-        $this-&gt;addFulltextField('Title');
-    }
-    
-    public function getIndexName()
-    {
-        return 'this-is-my-index';
+    &quot;responseHeader&quot;: {
+        &quot;status&quot;: 0,
+        &quot;QTime&quot;: 0
+    },
+    &quot;suggest&quot;: {
+        &quot;Suggester&quot;: {
+            &quot;home&quot;: {
+                &quot;numFound&quot;: 10,
+                &quot;suggestions&quot;: [
+                    {
+                        &quot;term&quot;: &quot;home&quot;,
+                        &quot;weight&quot;: 376,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homeajaxaction&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebartonvillevpsbartonvilletccommysitecodememberextensionphp&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homeblauwboomdomainsmyserverpublichtmlcompframeworksrci&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrew&quot;,
+                        &quot;weight&quot;: 26,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrewcurlother&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrewhttpsbrewsh&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebrewing&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homebridgewillstaginpublichtmlsilvershopcodecartordertotalcalculatorphp&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    },
+                    {
+                        &quot;term&quot;: &quot;homecategorycategory&quot;,
+                        &quot;weight&quot;: 1,
+                        &quot;payload&quot;: &quot;&quot;
+                    }
+                ]
+            }
+        }
     }
 }
 </code></pre>
-<ul>
-<li>Run <code>vendor/bin/sake dev/tasks/SolrConfigureTask</code> to configure the core</li>
-<li>Run <code>vendor/bin/sake dev/tasks/SolrIndexTask</code> to add documents to your index</li>
-</ul>
-<p>Once these tasks have completed - happy searching!</p>
+<p>You can then use this data in your Javascript to populate a dropdown.</p>
+<h2 id="security-note">Security note <a class="heading-anchor-permalink" href="#security-note">#</a></h2>
+<p>As the query is passed straight in to Solr, there is no possibility of database SQL injection.</p>
 
         <hr/>
         <h2>Support our work</h2>

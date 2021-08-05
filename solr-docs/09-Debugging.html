@@ -17,7 +17,7 @@
     <nav id="menu">
         <ul>
 <li><a class="" href="index.html">index</a></li>
-<li><a class="active" href="01-Installation.html">Installation</a></li>
+<li><a class="" href="01-Installation.html">Installation</a></li>
 <li><a class="" href="02-Solr.html">Solr</a></li>
 <li><a class="" href="03-Set-up-and-Configuration.html">Set up and Configuration</a></li>
 <li><a class="" href="04-Searching.html">Searching</a></li>
@@ -33,7 +33,7 @@
 </ul>
 <li><a class="" href="07-Customisation.html">Customisation</a></li>
 <li><a class="" href="08-CMS-Usage.html">CMS Usage</a></li>
-<li><a class="" href="09-Debugging.html">Debugging</a></li>
+<li><a class="active" href="09-Debugging.html">Debugging</a></li>
 <li><a class="" href="10-Suggestions.html">Suggestions</a></li>
 <li><a class="" href="11-View-Permissions.html">View Permissions</a></li>
 <li><a class="" href="12-Dirty-classes.html">Dirty classes</a></li>
@@ -75,43 +75,34 @@
             src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="installing-the-module">Installing the module <a class="heading-anchor-permalink" href="#installing-the-module">#</a></h1>
-<p>Best practice is to use composer:
-<code>composer require firesphere/solr-search</code></p>
-<h2 id="manual-setup">Manual setup <a class="heading-anchor-permalink" href="#manual-setup">#</a></h2>
+        <h1 id="debugging">Debugging <a class="heading-anchor-permalink" href="#debugging">#</a></h1>
+<p>To debug the executed query, the <code>BaseIndex</code> class has a method available to show you all the components of the
+executed query as an array. To get this data, execute the following after you have done your search:</p>
 <ul>
-<li>Create a clean installation of SilverStripe 4 (<code>composer create-project</code>)</li>
-<li>Clone this repo in to the folder of your liking</li>
-<li>Check which modules you need to add to your base <code>composer.json</code></li>
-<li>Run a composer update</li>
-<li>Create a base index:</li>
+<li><code>$index-&gt;getQueryTerms()</code></li>
 </ul>
-<pre><code class="language-php">class MyIndex extends BaseIndex
-{
-    /**
-     * Called during construction, this is the method that builds the structure.
-     * Used instead of overriding __construct as we have specific execution order - code that has
-     * to be run before _and/or_ after this.
-     * @throws Exception
-     */
-    public function init()
-    {
-        $this-&gt;addClass(SiteTree::class);
-
-        $this-&gt;addFulltextField('Title');
-    }
-    
-    public function getIndexName()
-    {
-        return 'this-is-my-index';
-    }
-}
-</code></pre>
+<p>The Index also has a method to get the Query Factory and read data from there.
+You can find the output of the factory by getting</p>
 <ul>
-<li>Run <code>vendor/bin/sake dev/tasks/SolrConfigureTask</code> to configure the core</li>
-<li>Run <code>vendor/bin/sake dev/tasks/SolrIndexTask</code> to add documents to your index</li>
+<li><code>$index-&gt;getQueryFactory()</code>. See the <a href="https://firesphere.github.io/solr-api/classes/Firesphere.SolrSearch.Factories.QueryComponentFactory.html">API documentation</a> on how to address each part of the factory.</li>
 </ul>
-<p>Once these tasks have completed - happy searching!</p>
+<p>Through the use of an <code>Extension</code> on <code>BaseIndex</code>, you can get the Factory through the method <code>onBeforeSearch</code></p>
+<p>These two methods supply more information about the executed query.</p>
+<p>For more thorough debugging, have a look at the <a href="https://solarium.readthedocs.io/en/stable/queries/select-query/building-a-select-query/components/debug-component/">Solarium docs</a>.</p>
+<h1 id="logging">Logging <a class="heading-anchor-permalink" href="#logging">#</a></h1>
+<p>Every error triggers the <code>SolrLogger</code>, which retrieves the errors from Solr and stores them in the database.</p>
+<p>These error logs can only be deleted in dev mode or by administrators.</p>
+<p>The logs can be found at the URL <code>/admin/searchadmin/Firesphere-SolrSearch-Models-SolrLog</code></p>
+<h2 id="clearing-out-the-logs">Clearing out the logs <a class="heading-anchor-permalink" href="#clearing-out-the-logs">#</a></h2>
+<p>As an admin, you can truncate the log database via the dev task <code>dev/tasks/SolrClearErrorsTask</code>.</p>
+<p>Use this with caution though, as it will completely wipe the errors logged and no data will remain at all.</p>
+<p>It is strongly advised to only clear out the logs if they have all been reviewed and you are sure nothing serious is wrong.</p>
+<h2 id="x%3Aunknown-indexes">x:Unknown indexes <a class="heading-anchor-permalink" href="#x%3Aunknown-indexes">#</a></h2>
+<p>Up until Solr 5, the information about which core threw the error wasn’t passed back to the webserver.
+Log messages will contain <code>x:Unknown</code> in this circumstance. This means the log <em>is</em> there, just that the core that
+threw the error isn’t known by the server.</p>
+<h2 id="colour-codes">Colour codes <a class="heading-anchor-permalink" href="#colour-codes">#</a></h2>
+<p>The Gridfield is colour-coded by type of error. This can be disabled by overriding the <code>GridFieldExtension</code> class.</p>
 
         <hr/>
         <h2>Support our work</h2>

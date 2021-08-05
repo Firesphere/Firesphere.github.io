@@ -17,11 +17,11 @@
     <nav id="menu">
         <ul>
 <li><a class="" href="index.html">index</a></li>
-<li><a class="active" href="01-Installation.html">Installation</a></li>
+<li><a class="" href="01-Installation.html">Installation</a></li>
 <li><a class="" href="02-Solr.html">Solr</a></li>
 <li><a class="" href="03-Set-up-and-Configuration.html">Set up and Configuration</a></li>
 <li><a class="" href="04-Searching.html">Searching</a></li>
-<li><a class="" href="05-Spellcheck.html">Spellcheck</a></li>
+<li><a class="active" href="05-Spellcheck.html">Spellcheck</a></li>
 <li class="heading"><span>Advanced Options</span></li>
 <ul>
 <li><a class="" href="06-Advanced-Options/01-Faceting.html">Faceting</a></li>
@@ -75,43 +75,39 @@
             src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
     </nav>
     <article id="main" class="content">
-        <h1 id="installing-the-module">Installing the module <a class="heading-anchor-permalink" href="#installing-the-module">#</a></h1>
-<p>Best practice is to use composer:
-<code>composer require firesphere/solr-search</code></p>
-<h2 id="manual-setup">Manual setup <a class="heading-anchor-permalink" href="#manual-setup">#</a></h2>
+        <h1 id="spellcheck">Spellcheck <a class="heading-anchor-permalink" href="#spellcheck">#</a></h1>
+<blockquote>
+<p>I cand spel gud</p>
+</blockquote>
+<p>Spellchecking is enabled by default, and can be disabled
+on query time, by setting <code>$query-&gt;setSpellcheck(false);</code></p>
+<p>Spellchecking is carried over to the search result returned.</p>
+<p>To access the spellchecks, the following methods can be used:</p>
+<h2 id="word-based-only-spellchecking">Word-based only spellchecking <a class="heading-anchor-permalink" href="#word-based-only-spellchecking">#</a></h2>
+<p>Word based spellcheck returns only misspelled words. For example,
+if the query is “hesp me”, the word based spellcheck will return a list
+of words that are possible alternatives for “hesp”.</p>
+<p>e.g.</p>
 <ul>
-<li>Create a clean installation of SilverStripe 4 (<code>composer create-project</code>)</li>
-<li>Clone this repo in to the folder of your liking</li>
-<li>Check which modules you need to add to your base <code>composer.json</code></li>
-<li>Run a composer update</li>
-<li>Create a base index:</li>
+<li>help</li>
+<li>helm</li>
+<li>hero</li>
 </ul>
-<pre><code class="language-php">class MyIndex extends BaseIndex
-{
-    /**
-     * Called during construction, this is the method that builds the structure.
-     * Used instead of overriding __construct as we have specific execution order - code that has
-     * to be run before _and/or_ after this.
-     * @throws Exception
-     */
-    public function init()
-    {
-        $this-&gt;addClass(SiteTree::class);
-
-        $this-&gt;addFulltextField('Title');
-    }
-    
-    public function getIndexName()
-    {
-        return 'this-is-my-index';
-    }
-}
+<p>The resulting list can be accessed as an ArrayList, as the example below:</p>
+<pre><code class="language-html">&lt;% if $Results.Spellcheck.Count %&gt;
+    &lt;% loop $Results.Spellcheck %&gt;
+        $word
+    &lt;% end_loop %&gt;
+&lt;% end_if %&gt;
 </code></pre>
-<ul>
-<li>Run <code>vendor/bin/sake dev/tasks/SolrConfigureTask</code> to configure the core</li>
-<li>Run <code>vendor/bin/sake dev/tasks/SolrIndexTask</code> to add documents to your index</li>
-</ul>
-<p>Once these tasks have completed - happy searching!</p>
+<h2 id="collated-spellchecking">Collated spellchecking <a class="heading-anchor-permalink" href="#collated-spellchecking">#</a></h2>
+<p>Collated spellcheck, is the full term, but spell checked.</p>
+<p>For example searching for “hesp me”, the collation would be “help me”</p>
+<p>The collated spellcheck results can be displayed like so:</p>
+<pre><code class="language-html">&lt;% with $Results %&gt;
+    &lt;% if $getCollatedSpellcheck %&gt;$CollatedSpellcheck&lt;% end_if %&gt;
+&lt;% end_with %&gt;
+</code></pre>
 
         <hr/>
         <h2>Support our work</h2>

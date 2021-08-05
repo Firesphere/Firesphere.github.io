@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firesphere Solr Search user/dev documentation</title>
+    <link rel="stylesheet" href="/solr-docs/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+    <nav id="menu">
+        <ul>
+<li><a class="" href="index.html">index</a></li>
+<li><a class="" href="01-Installation.html">Installation</a></li>
+<li><a class="" href="02-Solr.html">Solr</a></li>
+<li><a class="" href="03-Set-up-and-Configuration.html">Set up and Configuration</a></li>
+<li><a class="" href="04-Searching.html">Searching</a></li>
+<li><a class="" href="05-Spellcheck.html">Spellcheck</a></li>
+<li class="heading"><span>Advanced Options</span></li>
+<ul>
+<li><a class="" href="06-Advanced-Options/01-Faceting.html">Faceting</a></li>
+<li><a class="" href="06-Advanced-Options/02-Boosting.html">Boosting</a></li>
+<li><a class="" href="06-Advanced-Options/03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="" href="06-Advanced-Options/04-Elevation.html">Elevation</a></li>
+<li><a class="" href="06-Advanced-Options/05-Filters-excludes.html">Filters excludes</a></li>
+<li><a class="" href="06-Advanced-Options/06-Stores.html">Stores</a></li>
+</ul>
+<li><a class="active" href="07-Customisation.html">Customisation</a></li>
+<li><a class="" href="08-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="09-Debugging.html">Debugging</a></li>
+<li><a class="" href="10-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="11-View-Permissions.html">View Permissions</a></li>
+<li><a class="" href="12-Dirty-classes.html">Dirty classes</a></li>
+<li class="heading"><span>Submodules</span></li>
+<ul>
+<li><a class="" href="13-Submodules/01-Fulltext-Search-Compatibility.html">Fulltext Search Compatibility</a></li>
+<li><a class="" href="13-Submodules/02-Subsites.html">Subsites</a></li>
+<li><a class="" href="13-Submodules/03-Fluent.html">Fluent</a></li>
+<li><a class="" href="13-Submodules/04-Member-based-permissions.html">Member based permissions</a></li>
+<li><a class="" href="13-Submodules/05-Elemental.html">Elemental</a></li>
+</ul>
+<li class="heading"><span>Contributing</span></li>
+<ul>
+<li><a class="" href="14-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="" href="14-Contributing/02-Contributing.html">Contributing</a></li>
+</ul>
+<li class="heading"><span>Help</span></li>
+<ul>
+<li><a class="" href="15-Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="15-Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="15-Help/03-Known-issues.html">Known issues</a></li>
+</ul>
+<li class="heading"><span>About</span></li>
+<ul>
+<li><a class="" href="16-About/01-About.html">About</a></li>
+<li><a class="" href="16-About/02-Plans.html">Plans</a></li>
+<li class="heading"><span>Codebase</span></li>
+<ul>
+<li><a class="" href="16-About/03-Codebase/01-Main-stats.html">Main stats</a></li>
+<li><a class="" href="16-About/03-Codebase/02-Compatibility-stats.html">Compatibility stats</a></li>
+<li><a class="" href="16-About/03-Codebase/03-Member-permission-stats.html">Member permission stats</a></li>
+<li><a class="" href="16-About/03-Codebase/04-Fluent-stats.html">Fluent stats</a></li>
+<li><a class="" href="16-About/03-Codebase/05-Subsites-stats.html">Subsites stats</a></li>
+</ul>
+</ul>
+</ul>
+        <a class="sticky-bottom" href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img
+            alt="Support our work on GitStore"
+            src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
+    </nav>
+    <article id="main" class="content">
+        <h1 id="customisation">Customisation <a class="heading-anchor-permalink" href="#customisation">#</a></h1>
+<h2 id="extension-points">Extension points <a class="heading-anchor-permalink" href="#extension-points">#</a></h2>
+<p>All steps of the process, from index to searching, have extension points.</p>
+<p>These extension points can be used to alter or update the respective steps.</p>
+<p>Available extension points:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Used for</th>
+<th>Available on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onBeforeSolrConfigureTask</code></td>
+<td>Alter the Configuration before running the configure task</td>
+<td><code>SolrConfigureTask</code></td>
+</tr>
+<tr>
+<td><code>onConfigureIndex</code></td>
+<td>Operates after an index is added</td>
+<td><code>SolrConfigureTask</code></td>
+</tr>
+<tr>
+<td><code>onAfterSolrConfigureTask</code></td>
+<td>Executes after Solr is configured via task. Can be used to check if the configuration is added for example</td>
+<td><code>SolrConfigureTask</code></td>
+</tr>
+<tr>
+<td><code>onBeforeConfig</code></td>
+<td>Operates before a configuration is uploaded</td>
+<td><code>SolrConfigureTask</code></td>
+</tr>
+<tr>
+<td><code>onBeforeInit</code></td>
+<td>Update initialisation features</td>
+<td><code>BaseIndex</code></td>
+</tr>
+<tr>
+<td><code>onAfterInit</code></td>
+<td>Update initialisation features</td>
+<td><code>BaseIndex</code></td>
+</tr>
+<tr>
+<td><code>onBeforeSearch</code></td>
+<td>Before executing the search, update the query</td>
+<td><code>BaseIndex</code></td>
+</tr>
+<tr>
+<td><code>onAfterSearch</code></td>
+<td>Manipulate the results</td>
+<td><code>BaseIndex</code></td>
+</tr>
+<tr>
+<td><code>updateSearchResults</code></td>
+<td>Manipulate the returned result object</td>
+<td><code>BaseIndex</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="updating-the-typemap">Updating the typemap <a class="heading-anchor-permalink" href="#updating-the-typemap">#</a></h2>
+<p>The type mapping is defined in <a href="https://github.com/Firesphere/silverstripe-solr-search/blob/master/_config/typemap.yml"><code>typemap.yml</code></a>.</p>
+<p>To override parts of the typemap to use a different mapping, you can set the following in your application
+yml:</p>
+<pre><code class="language-yaml">---
+Name: MyTypemap
+After:
+  - '#SolrTypemap'
+---
+Firesphere\SolrSearch\Helpers\Statics:
+  typemap:
+    Varchar: htmltext
+    &quot;SilverStripe\\ORM\\FieldType\\DBVarchar&quot;: htmltext
+    &quot;DBVarchar&quot;: htmltext
+</code></pre>
+<p>Note that you need to set all three options, because of the classmapping that SilverStripe does.</p>
+<h2 id="custom-types.ss-and-schema.ss">Custom <code>types.ss</code> and <code>schema.ss</code> <a class="heading-anchor-permalink" href="#custom-types.ss-and-schema.ss">#</a></h2>
+<p>You need to place your custom <code>.ss</code> types/schema files in your custom application folder in the following path:</p>
+<ul>
+<li>for template files: <code>app/Solr/{SolrVersion}/templates</code></li>
+<li>for extras files: <code>app/Solr/{SolrVersion}/extras</code></li>
+</ul>
+<h3 id="set-the-custom-paths-to-your-templates-and-extras">Set the custom paths to your templates and extras <a class="heading-anchor-permalink" href="#set-the-custom-paths-to-your-templates-and-extras">#</a></h3>
+<p>Set the path to your custom template like so:</p>
+<pre><code class="language-yaml">Firesphere\SolrSearch\Services\SolrCoreService:
+  paths:
+    base_path: '%s/app'
+</code></pre>
+<p>When a base path is set, the template will automatically be selected based on your Solr Version.</p>
+<p>Where you should select the correct <code>SolrVersion</code> from versions 4, 5 or 7, depending on the Solr version
+you are using</p>
+<ul>
+<li>4: Only Solr 4</li>
+<li>5: Solr version &gt;=5.0 and &lt;7.0</li>
+<li>7: Solr7 and up</li>
+</ul>
+<h4 id="available-field-maps-for-yml">Available field maps for YML <a class="heading-anchor-permalink" href="#available-field-maps-for-yml">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>FieldType</th>
+<th>Indexed</th>
+<th>Returnable</th>
+<th>Case-sensitive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>tint</td>
+<td>Yes</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>htmltext</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>text</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Yes</td>
+<td>Configurable</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>tdate</td>
+<td>Yes</td>
+<td>Configurable</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>tfloat</td>
+<td>Yes</td>
+<td>Configurable</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>tdouble</td>
+<td>Yes</td>
+<td>Configurable</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-of-%25s">Usage of %s <a class="heading-anchor-permalink" href="#usage-of-%25s">#</a></h4>
+<p>All paths are determined based on the <code>Director::baseFolder()</code> method. We use <code>%s</code>
+so that the actual full path to the templates is resolved correctly to the base folder.</p>
+<p>This is to avoid complexity around installation location, as hard-coding <code>/var/www/mywebsite</code> may not always
+be correct.</p>
+<h3 id="important">IMPORTANT <a class="heading-anchor-permalink" href="#important">#</a></h3>
+<p>If you have a custom path, all files from the Solr version you choose, <em>need</em> to exist in this folder!</p>
+<p>This includes the <code>extras</code> folder in its entirety.</p>
+<p>It is easiest to copy the entire <code>Solr</code> folder to your own application and alter what you need in there, leaving
+everything else untouched. This will ensure that everything is in place.</p>
+
+        <hr/>
+        <h2>Support our work</h2>
+        <p>
+            <a href="https://enjoy.gitstore.app/repositories/Firesphere/silverstripe-solr-search"><img
+                alt="Support our work on GitStore"
+                src="https://enjoy.gitstore.app/repositories/badge-Firesphere/silverstripe-solr-search.svg"/></a>
+        </p>
+        <p>
+            <a href='https://ko-fi.com/B0B11GKLY' target='_blank'>
+                <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2'
+                     border='0' alt='Buy Me a Coffee at ko-fi.com'/>
+            </a>
+        </p>
+    </article>
+</div>
+<noscript><p><img src="https://piwik.casa-laguna.net/matomo.php?idsite=13&amp;rec=1" style="border:0;" alt=""/></p>
+</noscript>
+<script src="/solr-docs/main.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>

@@ -339,7 +339,7 @@ execute via the TaskRunner</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClassForIndex">indexClassForIndex()</a>
     <span>
-                        &nbsp;: int    </span>
+                        &nbsp;: int|bool    </span>
 </dt>
 <dd>Index the classes for a specific index</dd>
 
@@ -374,7 +374,7 @@ execute via the TaskRunner</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClass">indexClass()</a>
     <span>
-                        &nbsp;: int    </span>
+                        &nbsp;: int|bool    </span>
 </dt>
 <dd>Index a single class for a given index. {@link static::indexClassForIndex()}</dd>
 
@@ -1464,7 +1464,7 @@ execute via the TaskRunner</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">indexClassForIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$classes</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                <span class="phpdocumentor-signature__name">indexClassForIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$classes</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|bool</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1526,7 +1526,7 @@ execute via the TaskRunner</p>
                         </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
+    <span class="phpdocumentor-signature__response_type">int|bool</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -1591,7 +1591,7 @@ execute via the TaskRunner</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">370</span>
+    <span class="phpdocumentor-element-found-in__line">367</span>
 </aside>
 
         <p class="phpdocumentor-summary">Reindex the given group, for each state</p>
@@ -1777,7 +1777,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">indexClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                <span class="phpdocumentor-signature__name">indexClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|bool</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1839,7 +1839,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
                         </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
+    <span class="phpdocumentor-signature__response_type">int|bool</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -1858,7 +1858,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">398</span>
+    <span class="phpdocumentor-element-found-in__line">396</span>
 </aside>
 
         <p class="phpdocumentor-summary">Index a group of a class for a specific state and index</p>
@@ -1928,7 +1928,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">438</span>
+    <span class="phpdocumentor-element-found-in__line">436</span>
 </aside>
 
         <p class="phpdocumentor-summary">Log an exception if it happens. Most are catched, these logs are for the developers
@@ -2328,7 +2328,7 @@ to identify problems and fix them.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">417</span>
+    <span class="phpdocumentor-element-found-in__line">415</span>
 </aside>
 
         <p class="phpdocumentor-summary">Execute the update on the client</p>

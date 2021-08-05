@@ -487,6 +487,13 @@ This is to add the current index to e.g. an index or select</dd>
 <dd>Add the SiteTree class by default</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html#method_isRetry">isRetry()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetterSetterTrait.html#method_setBoostedFields">setBoostedFields()</a>
     <span>
                         &nbsp;: $this    </span>
@@ -1761,7 +1768,7 @@ $options is not used anymore, added for backward compatibility</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">243</span>
+    <span class="phpdocumentor-element-found-in__line">248</span>
 </aside>
 
         <p class="phpdocumentor-summary">From the given BaseQuery, generate a Solarium ClientQuery object</p>
@@ -1995,7 +2002,7 @@ $options is not used anymore, added for backward compatibility</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">432</span>
+    <span class="phpdocumentor-element-found-in__line">437</span>
 </aside>
 
         <p class="phpdocumentor-summary">Retrieve the Solarium client Query object for this index operation</p>
@@ -2177,7 +2184,7 @@ This is to add the current index to e.g. an index or select</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">327</span>
+    <span class="phpdocumentor-element-found-in__line">332</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get all fields that are required for indexing in a unique way</p>
@@ -2313,7 +2320,7 @@ This is to add the current index to e.g. an index or select</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">422</span>
+    <span class="phpdocumentor-element-found-in__line">427</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the QueryComponentFactory. {@link QueryComponentFactory}</p>
@@ -2347,7 +2354,7 @@ This is to add the current index to e.g. an index or select</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">412</span>
+    <span class="phpdocumentor-element-found-in__line">417</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the final, generated terms</p>
@@ -2449,7 +2456,7 @@ This is to add the current index to e.g. an index or select</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">386</span>
+    <span class="phpdocumentor-element-found-in__line">391</span>
 </aside>
 
         <p class="phpdocumentor-summary">Add synonyms. Public to be extendable</p>
@@ -2520,6 +2527,39 @@ This is to add the current index to e.g. an index or select</p>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_isRetry">
+        isRetry()
+        <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html#method_isRetry" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">445</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">isRetry</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -2988,7 +3028,7 @@ This is to add the current index to e.g. an index or select</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">357</span>
+    <span class="phpdocumentor-element-found-in__line">362</span>
 </aside>
 
         <p class="phpdocumentor-summary">Upload config for this index to the given store</p>
@@ -3166,7 +3206,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">264</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Build a factory to use in the SolrQuery building. {@link static::buildSolrQuery()}</p>
@@ -3219,7 +3259,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">291</span>
+    <span class="phpdocumentor-element-found-in__line">296</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if the query should be retried with spellchecking
@@ -3330,7 +3370,7 @@ There is a spellcheck output</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Indexes/BaseIndex.php"><a href="files/core-src-indexes-baseindex.html"><abbr title="Core/src/Indexes/BaseIndex.php">BaseIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">309</span>
+    <span class="phpdocumentor-element-found-in__line">314</span>
 </aside>
 
         <p class="phpdocumentor-summary">Retry the query with the first collated spellcheck found.</p>

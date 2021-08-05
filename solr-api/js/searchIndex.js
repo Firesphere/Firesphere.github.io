@@ -811,6 +811,11 @@ Search.appendIndex(
             "summary": "Retrieve\u0020the\u0020Solarium\u0020client\u0020Query\u0020object\u0020for\u0020this\u0020index\u0020operation",
             "url": "classes/Firesphere-SolrSearch-Indexes-BaseIndex.html#method_getClientQuery"
         },                {
+            "fqsen": "\\Firesphere\\SolrSearch\\Indexes\\BaseIndex\u003A\u003AisRetry\u0028\u0029",
+            "name": "isRetry",
+            "summary": "",
+            "url": "classes/Firesphere-SolrSearch-Indexes-BaseIndex.html#method_isRetry"
+        },                {
             "fqsen": "\\Firesphere\\SolrSearch\\Indexes\\BaseIndex\u003A\u003A\u0024fieldTypes",
             "name": "fieldTypes",
             "summary": "Field\u0020types\u0020that\u0020can\u0020be\u0020added\nUsed\u0020in\u0020init\u0020to\u0020call\u0020build\u0020methods\u0020from\u0020configuration\u0020yml",
@@ -1668,7 +1673,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\SolrSearch\\Stores\\FileConfigStore\u003A\u003AgetTargetDir\u0028\u0029",
             "name": "getTargetDir",
-            "summary": "Get\u0020the\u0020target\u0020dir\u0020for\u0020the\u0020file\u0020saving",
+            "summary": "Get\u0020the\u0020target\u0020dir\u0020for\u0020the\u0020file\u0020saving,\u0020create\u0020if\u0020it\u0020doesn\u0027t\u0020exist.",
             "url": "classes/Firesphere-SolrSearch-Stores-FileConfigStore.html#method_getTargetDir"
         },                {
             "fqsen": "\\Firesphere\\SolrSearch\\Stores\\FileConfigStore\u003A\u003AgetPath\u0028\u0029",
