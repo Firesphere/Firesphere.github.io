@@ -93,7 +93,7 @@ field name) can be set to any string value.</p>
 
 // Simple date filter - exclude any pages which have an embargo date in the future
 $criteria = Criteria::where('SiteTree_Embargo')
-    -&gt;greaterThanEqual('NOW');
+    -&gt;greaterThanEqual(new \DateTime('NOW'));
 $query-&gt;addExclude('embargo', $criteria);
 
 // Starts with/ends with filter
