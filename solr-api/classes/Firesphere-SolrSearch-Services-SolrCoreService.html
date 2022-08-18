@@ -222,6 +222,13 @@ Default constants are available to support any set up.</p>
 <dd>Add debugging information</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html#property_solr_versions">$solr_versions</a>
+    <span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html#property_validIndexes">$validIndexes</a>
     <span>
                 &nbsp;: array&lt;string|int, mixed&gt;            </span>
@@ -289,7 +296,13 @@ Default constants are available to support any set up.</p>
     <span>
                         &nbsp;: int    </span>
 </dt>
-<dd>Check the Solr version to use</dd>
+<dd>Check the Solr version to use
+In version compare, we have the following results:
+      1 means &quot;result version is higher&quot;
+      0 means &quot;result version is equal&quot;
+     -1 means &quot;result version is lower&quot;
+We want to use the version &quot;higher or equal to&quot;, because the
+configs are for version X-and-up.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-CoreServiceTrait.html#method_getValidClasses">getValidClasses()</a>
@@ -735,6 +748,37 @@ or are allowed from config</dd>
             phpdocumentor-element
             -property
             -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_solr_versions">
+        $solr_versions
+        <a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html#property_solr_versions" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">91</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$solr_versions</span>
+     = <span class="phpdocumentor-signature__default-value">[&quot;9.0.0&quot;, &quot;7.0.0&quot;, &quot;5.0.0&quot;, &quot;4.0.0&quot;]</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="property_validIndexes">
@@ -781,7 +825,7 @@ or are allowed from config</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">94</span>
+    <span class="phpdocumentor-element-found-in__line">103</span>
 </aside>
 
         <p class="phpdocumentor-summary">SolrCoreService constructor.</p>
@@ -1045,7 +1089,7 @@ or are allowed from config</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">205</span>
+    <span class="phpdocumentor-element-found-in__line">214</span>
 </aside>
 
         <p class="phpdocumentor-summary">Execute the manipulation of solr documents</p>
@@ -1189,16 +1233,25 @@ or are allowed from config</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">295</span>
+    <span class="phpdocumentor-element-found-in__line">315</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Check the Solr version to use</p>
+        <p class="phpdocumentor-summary">Check the Solr version to use
+In version compare, we have the following results:
+      1 means &quot;result version is higher&quot;
+      0 means &quot;result version is equal&quot;
+     -1 means &quot;result version is lower&quot;
+We want to use the version &quot;higher or equal to&quot;, because the
+configs are for version X-and-up.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                 <span class="phpdocumentor-signature__name">getSolrVersion</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\GuzzleHttp\HandlerStack">HandlerStack</abbr>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$handler</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>We loop through the versions available from high to low
+therefore, if the version is lower, we want to check the next config version</p>
+<p>If no valid version is found, throw an error</p>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1214,6 +1267,21 @@ or are allowed from config</dd>
             </dl>
 
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\LogicException">LogicException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"></section>
+
+                                    </dd>
+                        </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">int</span>
@@ -1296,7 +1364,7 @@ when any change from a relation is published.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">182</span>
+    <span class="phpdocumentor-element-found-in__line">191</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get valid indexes for the project</p>
@@ -1580,7 +1648,7 @@ Does not discriminate against the indexes. All indexes are worth the same</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">263</span>
+    <span class="phpdocumentor-element-found-in__line">272</span>
 </aside>
 
         <p class="phpdocumentor-summary">Create the documents and add to the update</p>
@@ -1656,7 +1724,7 @@ Does not discriminate against the indexes. All indexes are worth the same</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">159</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update items in the list to Solr</p>
@@ -1741,7 +1809,7 @@ Does not discriminate against the indexes. All indexes are worth the same</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">133</span>
+    <span class="phpdocumentor-element-found-in__line">142</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if the class is instantiable</p>
@@ -1801,7 +1869,7 @@ Does not discriminate against the indexes. All indexes are worth the same</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">119</span>
 </aside>
 
         <p class="phpdocumentor-summary">Filter enabled indexes down to valid indexes that can be instantiated
@@ -1921,7 +1989,7 @@ or are allowed from config</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">279</span>
+    <span class="phpdocumentor-element-found-in__line">288</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the document factory prepared</p>
@@ -1966,7 +2034,7 @@ or are allowed from config</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">226</span>
+    <span class="phpdocumentor-element-found-in__line">235</span>
 </aside>
 
         <p class="phpdocumentor-summary">get the update object ready</p>
@@ -2050,7 +2118,7 @@ or are allowed from config</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Services/SolrCoreService.php"><a href="files/core-src-services-solrcoreservice.html"><abbr title="Core/src/Services/SolrCoreService.php">SolrCoreService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">334</span>
+    <span class="phpdocumentor-element-found-in__line">352</span>
 </aside>
 
         <p class="phpdocumentor-summary">This will add the authentication headers to the request.</p>

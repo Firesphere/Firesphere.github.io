@@ -1498,7 +1498,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\SolrSearch\\Services\\SolrCoreService\u003A\u003AgetSolrVersion\u0028\u0029",
             "name": "getSolrVersion",
-            "summary": "Check\u0020the\u0020Solr\u0020version\u0020to\u0020use",
+            "summary": "Check\u0020the\u0020Solr\u0020version\u0020to\u0020use\nIn\u0020version\u0020compare,\u0020we\u0020have\u0020the\u0020following\u0020results\u003A\n\u0020\u0020\u0020\u0020\u0020\u00201\u0020means\u0020\u0022result\u0020version\u0020is\u0020higher\u0022\n\u0020\u0020\u0020\u0020\u0020\u00200\u0020means\u0020\u0022result\u0020version\u0020is\u0020equal\u0022\n\u0020\u0020\u0020\u0020\u0020\u002D1\u0020means\u0020\u0022result\u0020version\u0020is\u0020lower\u0022\nWe\u0020want\u0020to\u0020use\u0020the\u0020version\u0020\u0022higher\u0020or\u0020equal\u0020to\u0022,\u0020because\u0020the\nconfigs\u0020are\u0020for\u0020version\u0020X\u002Dand\u002Dup.",
             "url": "classes/Firesphere-SolrSearch-Services-SolrCoreService.html#method_getSolrVersion"
         },                {
             "fqsen": "\\Firesphere\\SolrSearch\\Services\\SolrCoreService\u003A\u003AgetSolrAuthentication\u0028\u0029",
@@ -1550,6 +1550,11 @@ Search.appendIndex(
             "name": "validIndexes",
             "summary": "",
             "url": "classes/Firesphere-SolrSearch-Services-SolrCoreService.html#property_validIndexes"
+        },                {
+            "fqsen": "\\Firesphere\\SolrSearch\\Services\\SolrCoreService\u003A\u003A\u0024solr_versions",
+            "name": "solr_versions",
+            "summary": "",
+            "url": "classes/Firesphere-SolrSearch-Services-SolrCoreService.html#property_solr_versions"
         },                {
             "fqsen": "\\Firesphere\\SolrSearch\\States\\SiteState",
             "name": "SiteState",
