@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdoc>
-    <title>SilverStripe Solr search</title>
+    <title>SilverStripe Elastic search</title>
     <parser>
-        <target>solr</target>
+        <target>elastic-api</target>
         <encoding>utf8</encoding>
         <extensions>
             <extension>php</extension>
         </extensions>
     </parser>
     <transformer>
-        <target>solr</target>
+        <target>elastic-api</target>
     </transformer>
     <transformations>
         <template name="responsive-twig" />
     </transformations>
     <files>
-        <directory>Compatibility</directory>
-        <directory>Core</directory>
-        <directory>Fluent</directory>
-        <directory>Subsites</directory>
-        <directory>Member-Permissions</directory>
+        <directory>elastic</directory>
         <ignore>*test*</ignore>
     </files>
 </phpdoc>

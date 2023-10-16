@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firesphere Solr Search user/dev documentation</title>
+    <link rel="stylesheet" href="/elastic-docs/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+    <nav id="menu">
+        <ul>
+<li><a class="" href="../index.html">index</a></li>
+<li><a class="" href="../01-Installation.html">Installation</a></li>
+<li><a class="" href="../02-Elastic.html">Elastic</a></li>
+<li><a class="" href="../03-Set-up-and-Configuration.html">Set up and Configuration</a></li>
+<li><a class="" href="../04-Searching.html">Searching</a></li>
+<li><a class="" href="../05-Spellcheck.html">Spellcheck</a></li>
+<li class="heading"><span>Advanced Options</span></li>
+<ul>
+<li><a class="" href="01-Faceting.html">Faceting</a></li>
+<li><a class="" href="02-Boosting.html">Boosting</a></li>
+<li><a class="active" href="03-Fuzzy-search.html">Fuzzy search</a></li>
+<li><a class="" href="04-Elevation.html">Elevation</a></li>
+<li><a class="" href="05-Filters-excludes.html">Filters excludes</a></li>
+</ul>
+<li><a class="" href="../07-Customisation.html">Customisation</a></li>
+<li><a class="" href="../08-CMS-Usage.html">CMS Usage</a></li>
+<li><a class="" href="../09-Debugging.html">Debugging</a></li>
+<li><a class="" href="../10-Suggestions.html">Suggestions</a></li>
+<li><a class="" href="../11-View-Permissions.html">View Permissions</a></li>
+<li><a class="" href="../12-Dirty-classes.html">Dirty classes</a></li>
+<li class="heading"><span>Contributing</span></li>
+<ul>
+<li><a class="" href="../14-Contributing/01-Code-of-Conduct.html">Code of Conduct</a></li>
+<li><a class="" href="../14-Contributing/02-Contributing.html">Contributing</a></li>
+</ul>
+<li class="heading"><span>Help</span></li>
+<ul>
+<li><a class="" href="../15-Help/01-Changelog.html">Changelog</a></li>
+<li><a class="" href="../15-Help/02-FAQ.html">FAQ</a></li>
+<li><a class="" href="../15-Help/03-Known-issues.html">Known issues</a></li>
+</ul>
+<li class="heading"><span>About</span></li>
+<ul>
+<li><a class="" href="../16-About/01-About.html">About</a></li>
+<li><a class="" href="../16-About/02-Plans.html">Plans</a></li>
+<li class="heading"><span>Codebase</span></li>
+<ul>
+<li><a class="" href="../16-About/03-Codebase/01-Main-stats.html">Main stats</a></li>
+</ul>
+</ul>
+</ul>
+    </nav>
+    <article id="main" class="content">
+        <h1 id="fuzzyness">Fuzzyness <a class="heading-anchor-permalink" href="#fuzzyness">#</a></h1>
+<p><strong>To do</strong></p>
+<p>Fuzzyness can be set at query time, to search a range of similar query terms.</p>
+<p>To use fuzzyness, here’s an example:</p>
+<pre><code class="language-php">$query-&gt;addTerm('SearchTerm', [], [], 5);
+</code></pre>
+<p>This example would add a fuzzyness of 5 to the query. “Fuzzyness” refers to the number of edits
+required to get from one search term to the next. As an example, ‘SearchTerm’ with fuzzyness 5 will
+return the following:</p>
+<ul>
+<li>Search (four deletes)</li>
+<li>Starch (four deletes, one substitution)</li>
+<li>archers (four deletes, one insert)</li>
+</ul>
+<p>And other combinations of five actions (insert, delete, substitute)</p>
+
+        <hr/>
+        <h2>Support our work</h2>
+        <p>
+            <a href='https://ko-fi.com/B0B11GKLY' target='_blank'>
+                <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2'
+                     border='0' alt='Buy Me a Coffee at ko-fi.com'/>
+            </a>
+        </p>
+    </article>
+</div>
+<noscript><p><img src="https://piwik.casa-laguna.net/matomo.php?idsite=13&amp;rec=1" style="border:0;" alt=""/></p>
+</noscript>
+<script src="/elastic-docs/main.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>
