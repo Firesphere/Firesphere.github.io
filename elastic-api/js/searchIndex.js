@@ -1,16 +1,6 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\xhprof_completion\u0028\u0029",
-            "name": "xhprof_completion",
-            "summary": "",
-            "url": "namespaces/default.html#function_xhprof_completion"
-        },                {
-            "fqsen": "\\append_profile_link\u0028\u0029",
-            "name": "append_profile_link",
-            "summary": "",
-            "url": "namespaces/default.html#function_append_profile_link"
-        },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension",
             "name": "DataObjectElasticExtension",
             "summary": "Class\u0020\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension",
@@ -96,19 +86,19 @@ Search.appendIndex(
             "summary": "Add\u0020fields\u0020that\u0020should\u0020always\u0020be\u0020included",
             "url": "classes/Firesphere-ElasticSearch-Factories-DocumentFactory.html#method_addDefaultFields"
         },                {
-            "fqsen": "\\Firesphere\\Elasticsearch\\Helpers\\ElasticLogger",
+            "fqsen": "\\Firesphere\\ElasticSearch\\Helpers\\ElasticLogger",
             "name": "ElasticLogger",
             "summary": "Class\u0020SearchLogger",
-            "url": "classes/Firesphere-Elasticsearch-Helpers-ElasticLogger.html"
+            "url": "classes/Firesphere-ElasticSearch-Helpers-ElasticLogger.html"
         },                {
-            "fqsen": "\\Firesphere\\Elasticsearch\\Helpers\\ElasticLogger\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\Firesphere\\ElasticSearch\\Helpers\\ElasticLogger\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
-            "url": "classes/Firesphere-Elasticsearch-Helpers-ElasticLogger.html#method___construct"
+            "url": "classes/Firesphere-ElasticSearch-Helpers-ElasticLogger.html#method___construct"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex",
             "name": "ElasticIndex",
-            "summary": "Base\u0020for\u0020managing\u0020an\u0020Elastic\u0020search\u0020core.",
+            "summary": "Base\u0020for\u0020managing\u0020a\u0020Elastic\u0020core.",
             "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003A__construct\u0028\u0029",
@@ -193,7 +183,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery",
             "name": "ElasticQuery",
-            "summary": "Class\u0020ElasticQuery\u0020is\u0020the\u0020base\u0020of\u0020every\u0020query\u0020executed.",
+            "summary": "Class\u0020BaseQuery\u0020is\u0020the\u0020base\u0020of\u0020every\u0020query\u0020executed.",
             "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AgetSort\u0028\u0029",
@@ -393,7 +383,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult",
             "name": "SearchResult",
-            "summary": "Class\u0020SearchResult\u0020is\u0020the\u0020combined\u0020result\u0020in\u0020a\u0020SilverStripe\u0020readable\u0020way",
+            "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003A__construct\u0028\u0029",
@@ -473,7 +463,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService",
             "name": "ElasticCoreService",
-            "summary": "Class\u0020ElasticCoreService\u0020provides\u0020the\u0020base\u0020connection\u0020to\u0020Elastic.",
+            "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003A__construct\u0028\u0029",
@@ -593,7 +583,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask",
             "name": "ElasticIndexTask",
-            "summary": "Class\u0020ElasticIndexTask",
+            "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A__construct\u0028\u0029",
@@ -976,15 +966,10 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/firesphere-elasticsearch-factories.html"
         },                {
-            "fqsen": "\\Firesphere\\Elasticsearch\\Helpers",
+            "fqsen": "\\Firesphere\\ElasticSearch\\Helpers",
             "name": "Helpers",
             "summary": "",
             "url": "namespaces/firesphere-elasticsearch-helpers.html"
-        },                {
-            "fqsen": "\\Firesphere\\Elasticsearch",
-            "name": "Elasticsearch",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Indexes",
             "name": "Indexes",
