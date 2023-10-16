@@ -308,7 +308,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder",
             "name": "QueryBuilder",
-            "summary": "",
+            "summary": "Class\u0020QueryBuilder",
             "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AbuildQuery\u0028\u0029",
@@ -383,7 +383,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult",
             "name": "SearchResult",
-            "summary": "",
+            "summary": "Class\u0020SearchResult\u0020is\u0020the\u0020combined\u0020result\u0020in\u0020a\u0020SilverStripe\u0020readable\u0020way",
             "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003A__construct\u0028\u0029",
@@ -463,7 +463,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService",
             "name": "ElasticCoreService",
-            "summary": "",
+            "summary": "Class\u0020ElasticCoreService\u0020provides\u0020the\u0020base\u0020connection\u0020to\u0020Elastic.",
             "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003A__construct\u0028\u0029",
@@ -523,7 +523,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\BulkDeleteTask",
             "name": "BulkDeleteTask",
-            "summary": "",
+            "summary": "Example\u0020task\u0020to\u0020empty\u0020an\u0020Elastic\u0020index",
             "url": "classes/Firesphere-ElasticSearch-Tasks-BulkDeleteTask.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\BulkDeleteTask\u003A\u003Arun\u0028\u0029",
@@ -553,7 +553,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureSynonymsTask",
             "name": "ElasticConfigureSynonymsTask",
-            "summary": "",
+            "summary": "Class\u0020ElasticConfigureSynonymsTask",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureSynonymsTask.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureSynonymsTask\u003A\u003Arun\u0028\u0029",
@@ -583,12 +583,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask",
             "name": "ElasticIndexTask",
-            "summary": "",
+            "summary": "Class\u0020ElasticIndexTask",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "SolrIndexTask\u0020constructor.\u0020Sets\u0020up\u0020the\u0020document\u0020factory",
+            "summary": "ElasticIndexTask\u0020constructor.\u0020Sets\u0020up\u0020the\u0020document\u0020factory",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method___construct"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003Arun\u0028\u0029",
@@ -703,7 +703,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait",
             "name": "BaseIndexTrait",
-            "summary": "",
+            "summary": "Trait\u0020ElasticIndexTrait\nGetters\u0020and\u0020Setters\u0020for\u0020the\u0020ElasticIndex",
             "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddSortField\u0028\u0029",
