@@ -4966,15 +4966,15 @@ Search.appendIndex(
             "summary": "ABSOLUTE\u0020Path\u0020to\u0020types.ss\u0020template",
             "url": "classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_typesTemplate"
         },                {
-            "fqsen": "\\Firesphere\\PartialUserforms\\Tests\\TestHelper",
+            "fqsen": "\\Firesphere\\SolrSearch\\Tests\\TestHelper",
             "name": "TestHelper",
             "summary": "A\u0020simple\u0020helper\u0020class\u0020for\u0020test\u0020calls\u0020to\u0020private\u0020and\u0020protected\u0020methods",
-            "url": "classes/Firesphere-PartialUserforms-Tests-TestHelper.html"
+            "url": "classes/Firesphere-SolrSearch-Tests-TestHelper.html"
         },                {
-            "fqsen": "\\Firesphere\\PartialUserforms\\Tests\\TestHelper\u003A\u003AinvokeMethod\u0028\u0029",
+            "fqsen": "\\Firesphere\\SolrSearch\\Tests\\TestHelper\u003A\u003AinvokeMethod\u0028\u0029",
             "name": "invokeMethod",
             "summary": "Call\u0020protected\/private\u0020method\u0020of\u0020a\u0020class",
-            "url": "classes/Firesphere-PartialUserforms-Tests-TestHelper.html#method_invokeMethod"
+            "url": "classes/Firesphere-SolrSearch-Tests-TestHelper.html#method_invokeMethod"
         },                {
             "fqsen": "\\Firesphere\\SolrSearch\\Tests\\CanViewObject",
             "name": "CanViewObject",
@@ -6425,16 +6425,6 @@ Search.appendIndex(
             "name": "Traits",
             "summary": "",
             "url": "namespaces/firesphere-solrsearch-traits.html"
-        },                {
-            "fqsen": "\\Firesphere\\PartialUserforms\\Tests",
-            "name": "Tests",
-            "summary": "",
-            "url": "namespaces/firesphere-partialuserforms-tests.html"
-        },                {
-            "fqsen": "\\Firesphere\\PartialUserforms",
-            "name": "PartialUserforms",
-            "summary": "",
-            "url": "namespaces/firesphere-partialuserforms.html"
         },                {
             "fqsen": "\\Firesphere\\SolrSearch\\Tests",
             "name": "Tests",
