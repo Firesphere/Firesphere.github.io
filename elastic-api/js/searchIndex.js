@@ -206,125 +206,10 @@ Search.appendIndex(
             "summary": "Class\u0020BaseQuery\u0020is\u0020the\u0020base\u0020of\u0020every\u0020query\u0020executed.",
             "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AgetSort\u0028\u0029",
-            "name": "getSort",
-            "summary": "Get\u0020the\u0020sort\u0020fields",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_getSort"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AsetSort\u0028\u0029",
-            "name": "setSort",
-            "summary": "Set\u0020the\u0020sort\u0020fields",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_setSort"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AgetTerms\u0028\u0029",
-            "name": "getTerms",
-            "summary": "Get\u0020the\u0020search\u0020terms",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_getTerms"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AsetTerms\u0028\u0029",
-            "name": "setTerms",
-            "summary": "Set\u0020the\u0020search\u0020tearms",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_setTerms"
-        },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AaddTerm\u0028\u0029",
             "name": "addTerm",
-            "summary": "Each\u0020boosted\u0020query\u0020needs\u0020a\u0020separate\u0020addition\u0021\ne.g.\u0020\u0024this\u002D\u003EaddTerm\u0028\u0027test\u0027,\u0020\u005B\u0027MyField\u0027,\u0020\u0027MyOtherField\u0027\u005D,\u00203\u0029\nfollowed\u0020by\n\u0024this\u002D\u003EaddTerm\u0028\u0027otherTest\u0027,\u0020\u005B\u0027Title\u0027\u005D,\u00205\u0029\u003B",
+            "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_addTerm"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AaddFilter\u0028\u0029",
-            "name": "addFilter",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_addFilter"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AgetFilters\u0028\u0029",
-            "name": "getFilters",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_getFilters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AsetFilters\u0028\u0029",
-            "name": "setFilters",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_setFilters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AgetOrFilters\u0028\u0029",
-            "name": "getOrFilters",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_getOrFilters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AsetOrFilters\u0028\u0029",
-            "name": "setOrFilters",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_setOrFilters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AaddOrFilters\u0028\u0029",
-            "name": "addOrFilters",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_addOrFilters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AgetBoostedFields\u0028\u0029",
-            "name": "getBoostedFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_getBoostedFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AsetBoostedFields\u0028\u0029",
-            "name": "setBoostedFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_setBoostedFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AaddBoostedField\u0028\u0029",
-            "name": "addBoostedField",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_addBoostedField"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AisHighlight\u0028\u0029",
-            "name": "isHighlight",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_isHighlight"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AsetHighlight\u0028\u0029",
-            "name": "setHighlight",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_setHighlight"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003A\u0024sort",
-            "name": "sort",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#property_sort"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003A\u0024spellcheck",
-            "name": "spellcheck",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#property_spellcheck"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003A\u0024filters",
-            "name": "filters",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#property_filters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003A\u0024orFilters",
-            "name": "orFilters",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#property_orFilters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003A\u0024facetsMinCount",
-            "name": "facetsMinCount",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#property_facetsMinCount"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003A\u0024terms",
-            "name": "terms",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#property_terms"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003A\u0024boostedFields",
-            "name": "boostedFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#property_boostedFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003A\u0024highlight",
-            "name": "highlight",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#property_highlight"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder",
             "name": "QueryBuilder",
@@ -791,14 +676,24 @@ Search.appendIndex(
             "summary": "Add\u0020all\u0020date\u002Dtype\u0020fields\u0020to\u0020the\u0020given\u0020index",
             "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addAllDateFields"
         },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AsetFacetFields\u0028\u0029",
+            "name": "setFacetFields",
+            "summary": "Set\u0020the\u0020fields\u0020to\u0020use\u0020for\u0020faceting",
+            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFacetFields"
+        },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddFacetField\u0028\u0029",
             "name": "addFacetField",
             "summary": "Add\u0020a\u0020facet\u0020field",
             "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFacetField"
         },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetFacetFields\u0028\u0029",
+            "name": "getFacetFields",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFacetFields"
+        },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddFilterField\u0028\u0029",
             "name": "addFilterField",
-            "summary": "Add\u0020a\u0020filterable\u0020field",
+            "summary": "Add\u0020a\u0020filterable\u0020field\nCompatibility\u0020stub\u0020for\u0020Solr",
             "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFilterField"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetClient\u0028\u0029",
@@ -810,6 +705,16 @@ Search.appendIndex(
             "name": "setClient",
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setClient"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetStoredFields\u0028\u0029",
+            "name": "getStoredFields",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getStoredFields"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AsetStoredFields\u0028\u0029",
+            "name": "setStoredFields",
+            "summary": "Stub\u0020to\u0020be\u0020compatible\u0020with\u0020Solr.\u0020Elastic\u0020stores\u0020everything\u0020anyway",
+            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setStoredFields"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003A\u0024client",
             "name": "client",
@@ -886,6 +791,46 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html#property_usesDatabase"
         },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest",
+            "name": "ElasticIndexTest",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_setUp"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AtestConstruct\u0028\u0029",
+            "name": "testConstruct",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_testConstruct"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AtestInit\u0028\u0029",
+            "name": "testInit",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_testInit"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AtestAddSetGet\u0028\u0029",
+            "name": "testAddSetGet",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_testAddSetGet"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AtestAddAllFields\u0028\u0029",
+            "name": "testAddAllFields",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_testAddAllFields"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003A\u0024index",
+            "name": "index",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#property_index"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003A\u0024indexConfig",
+            "name": "indexConfig",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#property_indexConfig"
+        },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\SynonymSetTest",
             "name": "SynonymSetTest",
             "summary": "",
@@ -900,6 +845,16 @@ Search.appendIndex(
             "name": "usesDatabase",
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Tests-SynonymSetTest.html#property_usesDatabase"
+        },                {
+            "fqsen": "\\Firesphere\\Elasticsearch\\Tests\\ElasticQueryTest",
+            "name": "ElasticQueryTest",
+            "summary": "",
+            "url": "classes/Firesphere-Elasticsearch-Tests-ElasticQueryTest.html"
+        },                {
+            "fqsen": "\\Firesphere\\Elasticsearch\\Tests\\ElasticQueryTest\u003A\u003AtestTerms\u0028\u0029",
+            "name": "testTerms",
+            "summary": "",
+            "url": "classes/Firesphere-Elasticsearch-Tests-ElasticQueryTest.html#method_testTerms"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\QueryBuilderTest",
             "name": "QueryBuilderTest",
@@ -1050,5 +1005,15 @@ Search.appendIndex(
             "name": "Tests",
             "summary": "",
             "url": "namespaces/firesphere-elasticsearch-tests.html"
+        },                {
+            "fqsen": "\\Firesphere\\Elasticsearch\\Tests",
+            "name": "Tests",
+            "summary": "",
+            "url": "namespaces/firesphere-elasticsearch-tests.html"
+        },                {
+            "fqsen": "\\Firesphere\\Elasticsearch",
+            "name": "Elasticsearch",
+            "summary": "",
+            "url": "namespaces/firesphere-elasticsearch.html"
         }            ]
 );

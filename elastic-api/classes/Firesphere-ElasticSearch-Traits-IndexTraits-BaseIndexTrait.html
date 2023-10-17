@@ -61,7 +61,7 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
-                <a href="namespaces/firesphere-elasticsearch.html" class="">ElasticSearch</a>
+                <a href="namespaces/firesphere-elasticsearch.html" class="">Elasticsearch</a>
                 
             </li>
             </ul>
@@ -115,7 +115,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -225,7 +225,8 @@ This is to prevent a notice if there is no yml.</dd>
     <span>
                                 &nbsp;: $this    </span>
 </dt>
-<dd>Add a filterable field</dd>
+<dd>Add a filterable field
+Compatibility stub for Solr</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFulltextField">addFulltextField()</a>
@@ -255,6 +256,12 @@ This is to prevent a notice if there is no yml.</dd>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFacetFields">getFacetFields()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFilterFields">getFilterFields()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
@@ -276,10 +283,23 @@ This is to prevent a notice if there is no yml.</dd>
 <dd>Get the sortable fields</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getStoredFields">getStoredFields()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setClient">setClient()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFacetFields">setFacetFields()</a>
+    <span>
+                                &nbsp;: $this    </span>
+</dt>
+<dd>Set the fields to use for faceting</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFilterFields">setFilterFields()</a>
@@ -301,6 +321,13 @@ This is to prevent a notice if there is no yml.</dd>
                                 &nbsp;: $this    </span>
 </dt>
 <dd>Set/override the sortable fields</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setStoredFields">setStoredFields()</a>
+    <span>
+                                &nbsp;: $this    </span>
+</dt>
+<dd>Stub to be compatible with Solr. Elastic stores everything anyway</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addAllFieldsByType">addAllFieldsByType()</a>
@@ -347,7 +374,7 @@ This is to prevent a notice if there is no yml.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
@@ -382,7 +409,7 @@ This is to prevent a notice if there is no yml.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 
     </aside>
 
@@ -417,7 +444,7 @@ This is to prevent a notice if there is no yml.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 
     </aside>
 
@@ -452,7 +479,7 @@ This is to prevent a notice if there is no yml.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">42</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
@@ -487,7 +514,7 @@ This is to prevent a notice if there is no yml.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
@@ -522,7 +549,7 @@ This is to prevent a notice if there is no yml.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 
     </aside>
 
@@ -557,7 +584,7 @@ This is to prevent a notice if there is no yml.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">63</span>
 
     </aside>
 
@@ -597,7 +624,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">254</span>
+    <span class="phpdocumentor-element-found-in__line">238</span>
 
     </aside>
 
@@ -644,7 +671,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">193</span>
+    <span class="phpdocumentor-element-found-in__line">177</span>
 
     </aside>
 
@@ -691,7 +718,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">266</span>
+    <span class="phpdocumentor-element-found-in__line">264</span>
 
     </aside>
 
@@ -744,11 +771,12 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">283</span>
+    <span class="phpdocumentor-element-found-in__line">290</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Add a filterable field</p>
+        <p class="phpdocumentor-summary">Add a filterable field
+Compatibility stub for Solr</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -790,7 +818,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">142</span>
+    <span class="phpdocumentor-element-found-in__line">139</span>
 
     </aside>
 
@@ -798,7 +826,7 @@ This is to prevent a notice if there is no yml.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">addFulltextField</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fulltextField</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$forceType</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+                    <span class="phpdocumentor-signature__name">addFulltextField</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fulltextField</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -809,13 +837,6 @@ This is to prevent a notice if there is no yml.</p>
                 <span class="phpdocumentor-signature__argument__name">$fulltextField</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$forceType</span>
-                : <span class="phpdocumentor-signature__argument__return-type">null|string</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
@@ -850,7 +871,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 
     </aside>
 
@@ -896,7 +917,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">225</span>
+    <span class="phpdocumentor-element-found-in__line">209</span>
 
     </aside>
 
@@ -932,7 +953,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">293</span>
+    <span class="phpdocumentor-element-found-in__line">301</span>
 
     </aside>
 
@@ -959,6 +980,41 @@ This is to prevent a notice if there is no yml.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getFacetFields">
+        getFacetFields()
+        <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFacetFields" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">278</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getFacetFields</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getFilterFields">
         getFilterFields()
         <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFilterFields" class="headerlink"><i class="fas fa-link"></i></a>
@@ -967,7 +1023,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">116</span>
+    <span class="phpdocumentor-element-found-in__line">111</span>
 
     </aside>
 
@@ -1003,7 +1059,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">89</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
@@ -1039,7 +1095,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">170</span>
+    <span class="phpdocumentor-element-found-in__line">151</span>
 
     </aside>
 
@@ -1067,6 +1123,41 @@ This is to prevent a notice if there is no yml.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getStoredFields">
+        getStoredFields()
+        <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getStoredFields" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">314</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getStoredFields</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setClient">
         setClient()
         <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setClient" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1075,7 +1166,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">298</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 
     </aside>
 
@@ -1108,6 +1199,52 @@ This is to prevent a notice if there is no yml.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setFacetFields">
+        setFacetFields()
+        <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFacetFields" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">248</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Set the fields to use for faceting</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setFacetFields</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fields</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$fields</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">$this</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setFilterFields">
         setFilterFields()
         <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFilterFields" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1116,7 +1253,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">127</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 
     </aside>
 
@@ -1162,7 +1299,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">104</span>
+    <span class="phpdocumentor-element-found-in__line">99</span>
 
     </aside>
 
@@ -1208,7 +1345,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">181</span>
+    <span class="phpdocumentor-element-found-in__line">162</span>
 
     </aside>
 
@@ -1243,6 +1380,52 @@ This is to prevent a notice if there is no yml.</p>
                     <article
         class="phpdocumentor-element
             -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setStoredFields">
+        setStoredFields()
+        <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setStoredFields" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">324</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Stub to be compatible with Solr. Elastic stores everything anyway</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setStoredFields</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$storedFields</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$storedFields</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">$this</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
             -protected
                                                         "
 >
@@ -1254,7 +1437,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">209</span>
+    <span class="phpdocumentor-element-found-in__line">193</span>
 
     </aside>
 
@@ -1315,7 +1498,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php"><a href="files/elastic-src-traits-indextraits-baseindextrait.html"><abbr title="elastic/src/Traits/IndexTraits/BaseIndexTrait.php">BaseIndexTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">234</span>
+    <span class="phpdocumentor-element-found-in__line">218</span>
 
     </aside>
 
@@ -1501,13 +1684,17 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addSortField">addSortField()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getClasses">getClasses()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getClient">getClient()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFacetFields">getFacetFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFilterFields">getFilterFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFulltextFields">getFulltextFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getSortFields">getSortFields()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getStoredFields">getStoredFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setClient">setClient()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFacetFields">setFacetFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFilterFields">setFilterFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFulltextFields">setFulltextFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setSortFields">setSortFields()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setStoredFields">setStoredFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addAllFieldsByType">addAllFieldsByType()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFulltextFieldsForClass">addFulltextFieldsForClass()</a></li>
                                     </ul>
