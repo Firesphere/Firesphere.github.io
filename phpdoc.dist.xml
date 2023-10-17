@@ -2,20 +2,22 @@
 <phpdoc>
     <title>SilverStripe Elastic search</title>
     <parser>
-        <target>elastic-api</target>
+        <target>search-api</target>
         <encoding>utf8</encoding>
         <extensions>
             <extension>php</extension>
         </extensions>
     </parser>
     <transformer>
-        <target>elastic-api</target>
+        <target>search-api</target>
     </transformer>
     <transformations>
         <template name="responsive-twig" />
     </transformations>
     <files>
         <directory>elastic</directory>
+        <directory>search</directory>
+        <directory>solr</directory>
         <ignore>*test*</ignore>
     </files>
 </phpdoc>
