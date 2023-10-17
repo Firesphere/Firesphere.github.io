@@ -11,6 +11,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_onAfterDelete"
         },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AdeleteFromElastic\u0028\u0029",
+            "name": "deleteFromElastic",
+            "summary": "Can\u0020be\u0020called\u0020directly,\u0020if\u0020a\u0020DataObject\u0020needs\u0020to\u0020be\u0020removed\nimmediately.",
+            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_deleteFromElastic"
+        },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AgetDeleteQuery\u0028\u0029",
             "name": "getDeleteQuery",
             "summary": "",
@@ -26,10 +31,25 @@ Search.appendIndex(
             "summary": "Reindex\u0020after\u0020write,\u0020if\u0020it\u0027s\u0020an\u0020indexed\u0020new\/updated\u0020object",
             "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_onAfterWrite"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AdoIndex\u0028\u0029",
-            "name": "doIndex",
+            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003ApushToElastic\u0028\u0029",
+            "name": "pushToElastic",
+            "summary": "This\u0020is\u0020a\u0020separate\u0020method\u0020from\u0020the\u0020delete\u0020action,\u0020as\u0020it\u0027s\u0020a\u0020different\u0020route\nand\u0020query\u0020components.",
+            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_pushToElastic"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AisDeletedFromElastic\u0028\u0029",
+            "name": "isDeletedFromElastic",
+            "summary": "Add\u0020ability\u0020to\u0020see\u0020what\u0020the\u0020response\nfrom\u0020Elasticsearch\u0020was\u0020after\u0020a\u0020delete\u0020action.",
+            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_isDeletedFromElastic"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AshouldPush\u0028\u0029",
+            "name": "shouldPush",
+            "summary": "Check\u0020if\u003A\n\u002D\u0020Owner\u0020has\u0020Versioned\n\u002D\u0020The\u0020versioned\u0020object\u0020is\u0020published\n\u002D\u0020The\u0020owner\u0020has\u0020the\u0020\u0022ShowInSearch\u0022\u0020Field\n\u002D\u0020And\u0020if\u0020so,\u0020is\u0020it\u0020set.",
+            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_shouldPush"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003A\u0024deletedFromElastic",
+            "name": "deletedFromElastic",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_doIndex"
+            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#property_deletedFromElastic"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\ElasticSynonymExtension",
             "name": "ElasticSynonymExtension",
@@ -850,6 +870,16 @@ Search.appendIndex(
             "name": "testOnAfterDelete",
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html#method_testOnAfterDelete"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtensionTest\u003A\u003AtestAddRemoveFromElastic\u0028\u0029",
+            "name": "testAddRemoveFromElastic",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html#method_testAddRemoveFromElastic"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtensionTest\u003A\u003AtestShouldPush\u0028\u0029",
+            "name": "testShouldPush",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html#method_testShouldPush"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtensionTest\u003A\u003A\u0024usesDatabase",
             "name": "usesDatabase",

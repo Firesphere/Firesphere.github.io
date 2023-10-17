@@ -134,7 +134,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
@@ -171,6 +171,12 @@
                         &nbsp;: <abbr title="\SilverStripe\ORM\DataObject">DataObject</abbr>|<a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html"><abbr title="\Firesphere\ElasticSearch\Extensions\DataObjectElasticExtension">DataObjectElasticExtension</abbr></a>            </span>
 </dt>
 
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#property_deletedFromElastic">$deletedFromElastic</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
     </dl>
 
 <h4 id="toc-methods">
@@ -180,10 +186,20 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_getDeleteQuery">getDeleteQuery()</a>
+    <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_deleteFromElastic">deleteFromElastic()</a>
     <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: bool|<abbr title="\Elastic\Elasticsearch\Response\Elasticsearch">Elasticsearch</abbr>|<abbr title="\Http\Promise\Promise">Promise</abbr>    </span>
 </dt>
+<dd>Can be called directly, if a DataObject needs to be removed
+immediately.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_isDeletedFromElastic">isDeletedFromElastic()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Add ability to see what the response
+from Elasticsearch was after a delete action.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_onAfterDelete">onAfterDelete()</a>
@@ -198,16 +214,35 @@
 </dt>
 <dd>Reindex after write, if it&#039;s an indexed new/updated object</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_pushToElastic">pushToElastic()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>This is a separate method from the delete action, as it&#039;s a different route
+and query components.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_shouldPush">shouldPush()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+<dd>Check if:
+- Owner has Versioned
+- The versioned object is published
+- The owner has the &quot;ShowInSearch&quot; Field
+- And if so, is it set.</dd>
+
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_executeQuery">executeQuery()</a>
     <span>
-                                &nbsp;: void    </span>
+                                &nbsp;: <abbr title="\Elastic\Elasticsearch\Response\Elasticsearch">Elasticsearch</abbr>|<abbr title="\Http\Promise\Promise">Promise</abbr>|bool    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_doIndex">doIndex()</a>
+    <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_getDeleteQuery">getDeleteQuery()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 
     </dl>
@@ -257,6 +292,39 @@
     
 
 </article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_deletedFromElastic">
+        $deletedFromElastic
+        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#property_deletedFromElastic" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$deletedFromElastic</span>
+    </code>
+
+    
+    
+    
+
+</article>
             </section>
 
             <section class="phpdocumentor-methods">
@@ -271,44 +339,84 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getDeleteQuery">
-        getDeleteQuery()
-        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_getDeleteQuery" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_deleteFromElastic">
+        deleteFromElastic()
+        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_deleteFromElastic" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">58</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Can be called directly, if a DataObject needs to be removed
+immediately.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getDeleteQuery</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">deleteFromElastic</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|<abbr title="\Elastic\Elasticsearch\Response\Elasticsearch">Elasticsearch</abbr>|<abbr title="\Http\Promise\Promise">Promise</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$index</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
     
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_deleteFromElastic#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Psr\Container\NotFoundExceptionInterface">NotFoundExceptionInterface</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                                            </dl>
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+        <span class="phpdocumentor-signature__response_type">bool|<abbr title="\Elastic\Elasticsearch\Response\Elasticsearch">Elasticsearch</abbr>|<abbr title="\Http\Promise\Promise">Promise</abbr></span>
             </section>
 
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_isDeletedFromElastic">
+        isDeletedFromElastic()
+        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_isDeletedFromElastic" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">174</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Add ability to see what the response
+from Elasticsearch was after a delete action.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">isDeletedFromElastic</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -324,7 +432,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
@@ -352,14 +460,6 @@
                                                             
                                              
                                     </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\SilverStripe\ORM\ValidationException">ValidationException</abbr></span>
-                                                            
-                                             
-                                    </dd>
                                             </dl>
 
     
@@ -378,7 +478,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">97</span>
+    <span class="phpdocumentor-element-found-in__line">123</span>
 
     </aside>
 
@@ -393,8 +493,156 @@
     
     
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_onAfterWrite#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ClientResponseException">ClientResponseException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Psr\Container\NotFoundExceptionInterface">NotFoundExceptionInterface</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ServerResponseException">ServerResponseException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                                            </dl>
 
     
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_pushToElastic">
+        pushToElastic()
+        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_pushToElastic" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">149</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">This is a separate method from the delete action, as it&#039;s a different route
+and query components.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">pushToElastic</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p>It can be called to add an object to the index immediately, without
+requiring a write.</p>
+</section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_pushToElastic#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ClientResponseException">ClientResponseException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Psr\Container\NotFoundExceptionInterface">NotFoundExceptionInterface</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ServerResponseException">ServerResponseException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                                            </dl>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_shouldPush">
+        shouldPush()
+        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_shouldPush" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">188</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Check if:
+- Owner has Versioned
+- The versioned object is published
+- The owner has the &quot;ShowInSearch&quot; Field
+- And if so, is it set.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">shouldPush</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\CMS\Model\SiteTree">SiteTree</abbr>|<abbr title="\Firesphere\SearchBackend\Extensions\DataObjectSearchExtension">DataObjectSearchExtension</abbr>|<a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html"><abbr title="\Firesphere\ElasticSearch\Extensions\DataObjectElasticExtension">DataObjectElasticExtension</abbr></a>|<abbr title="\SilverStripe\Versioned\Versioned">Versioned</abbr>|<abbr title="\SilverStripe\ORM\DataObject">DataObject</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$owner</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$owner</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\CMS\Model\SiteTree">SiteTree</abbr>|<abbr title="\Firesphere\SearchBackend\Extensions\DataObjectSearchExtension">DataObjectSearchExtension</abbr>|<a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html"><abbr title="\Firesphere\ElasticSearch\Extensions\DataObjectElasticExtension">DataObjectElasticExtension</abbr></a>|<abbr title="\SilverStripe\Versioned\Versioned">Versioned</abbr>|<abbr title="\SilverStripe\ORM\DataObject">DataObject</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -410,14 +658,14 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">78</span>
+    <span class="phpdocumentor-element-found-in__line">96</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                    <span class="phpdocumentor-signature__name">executeQuery</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html"><abbr title="\Firesphere\ElasticSearch\Services\ElasticCoreService">ElasticCoreService</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$service</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deleteQuery</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">executeQuery</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html"><abbr title="\Firesphere\ElasticSearch\Services\ElasticCoreService">ElasticCoreService</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$service</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deleteQuery</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Elastic\Elasticsearch\Response\Elasticsearch">Elasticsearch</abbr>|<abbr title="\Http\Promise\Promise">Promise</abbr>|bool</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -457,7 +705,11 @@
                                     </dd>
                                             </dl>
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Elastic\Elasticsearch\Response\Elasticsearch">Elasticsearch</abbr>|<abbr title="\Http\Promise\Promise">Promise</abbr>|bool</span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -465,61 +717,44 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_doIndex">
-        doIndex()
-        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_doIndex" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getDeleteQuery">
+        getDeleteQuery()
+        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_getDeleteQuery" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Extensions/DataObjectElasticExtension.php"><a href="files/elastic-src-extensions-dataobjectelasticextension.html"><abbr title="elastic/src/Extensions/DataObjectElasticExtension.php">DataObjectElasticExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">113</span>
+    <span class="phpdocumentor-element-found-in__line">76</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                    <span class="phpdocumentor-signature__name">doIndex</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getDeleteQuery</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-    
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_doIndex#tags" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Psr\Container\NotFoundExceptionInterface">NotFoundExceptionInterface</abbr></span>
-                                                            
-                                             
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ClientResponseException">ClientResponseException</abbr></span>
-                                                            
-                                             
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ServerResponseException">ServerResponseException</abbr></span>
-                                                            
-                                             
-                                    </dd>
-                                            </dl>
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$index</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
+
 </article>
             </section>
 
@@ -635,17 +870,21 @@
                 <li>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#property_owner">$owner<a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html"></li>
+                                                    <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#property_deletedFromElastic">$deletedFromElastic<a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_getDeleteQuery">getDeleteQuery()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_deleteFromElastic">deleteFromElastic()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_isDeletedFromElastic">isDeletedFromElastic()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_onAfterDelete">onAfterDelete()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_onAfterWrite">onAfterWrite()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_pushToElastic">pushToElastic()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_shouldPush">shouldPush()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_executeQuery">executeQuery()</a></li>
-                                            <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_doIndex">doIndex()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_getDeleteQuery">getDeleteQuery()</a></li>
                                     </ul>
             </li>
                     </ul>
