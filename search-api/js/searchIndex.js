@@ -846,15 +846,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Tests-SynonymSetTest.html#property_usesDatabase"
         },                {
-            "fqsen": "\\Firesphere\\Elasticsearch\\Tests\\ElasticQueryTest",
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticQueryTest",
             "name": "ElasticQueryTest",
             "summary": "",
-            "url": "classes/Firesphere-Elasticsearch-Tests-ElasticQueryTest.html"
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticQueryTest.html"
         },                {
-            "fqsen": "\\Firesphere\\Elasticsearch\\Tests\\ElasticQueryTest\u003A\u003AtestTerms\u0028\u0029",
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticQueryTest\u003A\u003AtestTerms\u0028\u0029",
             "name": "testTerms",
             "summary": "",
-            "url": "classes/Firesphere-Elasticsearch-Tests-ElasticQueryTest.html#method_testTerms"
+            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticQueryTest.html#method_testTerms"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\QueryBuilderTest",
             "name": "QueryBuilderTest",
@@ -6255,16 +6255,6 @@ Search.appendIndex(
             "name": "Tests",
             "summary": "",
             "url": "namespaces/firesphere-elasticsearch-tests.html"
-        },                {
-            "fqsen": "\\Firesphere\\Elasticsearch\\Tests",
-            "name": "Tests",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-tests.html"
-        },                {
-            "fqsen": "\\Firesphere\\Elasticsearch",
-            "name": "Elasticsearch",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch.html"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Admins",
             "name": "Admins",
