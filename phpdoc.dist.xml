@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdoc>
-    <title>SilverStripe Elastic search</title>
+    <title>SilverStripe Search</title>
     <parser>
         <target>search-api</target>
         <encoding>utf8</encoding>
@@ -18,6 +18,7 @@
         <directory>elastic</directory>
         <directory>search</directory>
         <directory>solr</directory>
-        <ignore>*test*</ignore>
+        <ignore>**/tests/**/*</ignore>
+        <ignore>solr/**/tests/**/*</ignore>
     </files>
 </phpdoc>
