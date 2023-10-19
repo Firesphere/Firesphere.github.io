@@ -69,33 +69,7 @@
                 
             </li>
                     <li>
-                <a href="namespaces/firesphere-solrcompatibility.html" class="">SolrCompatibility</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/firesphere-solrsearch.html" class="">SolrSearch</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/firesphere-solrfluent.html" class="">SolrFluent</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/firesphere-solrpermissions.html" class="">SolrPermissions</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/firesphere-solrsubsites.html" class="">SolrSubsites</a>
-                
-            </li>
-            </ul>
-
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="namespaces/silverstripe.html" class="">SilverStripe</a>
-</h4>
-    <ul class="phpdocumentor-list">
-                    <li>
-                <a href="namespaces/silverstripe-fulltextsearch.html" class="">FullTextSearch</a>
                 
             </li>
             </ul>
@@ -128,16 +102,6 @@
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Default.html" class="">Default</a>
 </h4>
-
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/SilverStripe.html" class="">SilverStripe</a>
-</h4>
-    <ul class="phpdocumentor-list">
-                    <li>
-                <a href="packages/SilverStripe-FullTextSearch.html" class="">FullTextSearch</a>
-                
-            </li>
-            </ul>
 
                         </section>
             
@@ -173,7 +137,9 @@
             <div class="phpdocumentor-element__package">
             in package
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Firesphere.html">Firesphere</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Firesphere-Elastic.html">Elastic</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Firesphere-Elastic-Search.html">Search</a></li>
                             </ul>
         </div>
     
@@ -191,11 +157,15 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class ElasticConfigureTask</p>
+
+    <section class="phpdocumentor-description"><p>Used to create field-specific mappings in Elastic. Not explicitly needed for a basic search
+functionality, but does add filter/sort/aggregate features without the performance drawback</p>
+</section>
 
 
 
@@ -251,6 +221,14 @@
     <span>
                         &nbsp;: string            </span>
 </dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_unSsortables">$unSsortables</a>
+    <span>
+                        &nbsp;: array&lt;string|int, string&gt;            </span>
+</dt>
+<dd>DBHTML and DBText etc. should never be made sortable
+It doesn&#039;t make sense for large text objects</dd>
 
     </dl>
 
@@ -352,7 +330,7 @@ ready to be converted to JSON for Elastic.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 
     </aside>
 
@@ -421,7 +399,7 @@ ready to be converted to JSON for Elastic.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 
     </aside>
 
@@ -454,7 +432,7 @@ ready to be converted to JSON for Elastic.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">46</span>
 
     </aside>
 
@@ -489,7 +467,7 @@ ready to be converted to JSON for Elastic.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
@@ -504,6 +482,41 @@ ready to be converted to JSON for Elastic.</dd>
         <section class="phpdocumentor-description"><p>URLSegment</p>
 </section>
 
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_unSsortables">
+        $unSsortables
+        <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_unSsortables" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">61</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">DBHTML and DBText etc. should never be made sortable
+It doesn&#039;t make sense for large text objects</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array&lt;string|int, string&gt;</span>
+    <span class="phpdocumentor-signature__name">$unSsortables</span>
+     = <span class="phpdocumentor-signature__default-value">[&#039;HTML&#039;, &#039;Text&#039;]</span></code>
+
+    
+    
     
 
 </article>
@@ -529,7 +542,7 @@ ready to be converted to JSON for Elastic.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">69</span>
 
     </aside>
 
@@ -626,7 +639,7 @@ ready to be converted to JSON for Elastic.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">205</span>
+    <span class="phpdocumentor-element-found-in__line">235</span>
 
     </aside>
 
@@ -661,7 +674,7 @@ ready to be converted to JSON for Elastic.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">59</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 
     </aside>
 
@@ -764,7 +777,7 @@ ready to be converted to JSON for Elastic.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">107</span>
+    <span class="phpdocumentor-element-found-in__line">130</span>
 
     </aside>
 
@@ -849,7 +862,7 @@ ready to be converted to JSON for Elastic.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">163</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 
     </aside>
 
@@ -896,7 +909,7 @@ ready to be converted to JSON for Elastic.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">141</span>
+    <span class="phpdocumentor-element-found-in__line">164</span>
 
     </aside>
 
@@ -956,7 +969,7 @@ ready to be converted to JSON for Elastic.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticConfigureTask.php"><a href="files/elastic-src-tasks-elasticconfiguretask.html"><abbr title="elastic/src/Tasks/ElasticConfigureTask.php">ElasticConfigureTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">191</span>
+    <span class="phpdocumentor-element-found-in__line">221</span>
 
     </aside>
 
@@ -1140,6 +1153,7 @@ of mappings on-the-fly, it will commonly require a delete-and-recreate!</p>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_service">$service<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_title">$title<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_segment">$segment<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html"></li>
+                                                    <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_unSsortables">$unSsortables<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html"></li>
                                             </ul>
                 </li>
             

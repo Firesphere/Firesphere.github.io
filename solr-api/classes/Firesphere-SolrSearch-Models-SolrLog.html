@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SilverStripe Solr search</title>
+            <title>SilverStripe Solr Search</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="icon" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
-            <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/template.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
                 <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
         <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+        <script src="js/template.js"></script>
         <script src="js/search.js"></script>
         <script defer src="js/searchIndex.js"></script>
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr search</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr Search</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -47,38 +53,42 @@
 <label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
     Menu
 </label>
-<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
-    
-    <section class="phpdocumentor-sidebar__category">
-        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
-                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/firesphere-solrcompatibility.html"><abbr title="\Firesphere\SolrCompatibility">SolrCompatibility</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrsearch.html"><abbr title="\Firesphere\SolrSearch">SolrSearch</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrfluent.html"><abbr title="\Firesphere\SolrFluent">SolrFluent</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrpermissions.html"><abbr title="\Firesphere\SolrPermissions">SolrPermissions</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrsubsites.html"><abbr title="\Firesphere\SolrSubsites">SolrSubsites</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/silverstripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/silverstripe-fulltextsearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
-                                    </ul>
-                        </section>
+<aside class="phpdocumentor-column -three phpdocumentor-sidebar">
+                    <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="namespaces/firesphere.html" class="">Firesphere</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/firesphere-solrsearch.html" class="">SolrSearch</a>
+                
+            </li>
+            </ul>
 
-        <section class="phpdocumentor-sidebar__category">
-        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
-                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h3>
-                        <ul class="phpdocumentor-list">
-                                    <li><a href="packages/Firesphere-Solr.html"><abbr title="\Firesphere\Solr">Solr</abbr></a></li>
-                            </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/SilverStripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h3>
-                        <ul class="phpdocumentor-list">
-                                    <li><a href="packages/SilverStripe-FullTextSearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
-                            </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
                         </section>
-    
+                <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Application.html" class="">Application</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Default.html" class="">Default</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Firesphere.html" class="">Firesphere</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/Firesphere-Solr.html" class="">Solr</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+            
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
                 <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
@@ -92,8 +102,9 @@
     </section>
 </aside>
 
-            <div class="phpdocumentor-column -eight phpdocumentor-content">
-                    <ul class="phpdocumentor-breadcrumbs">
+            <div class="phpdocumentor-column -nine phpdocumentor-content">
+                                <section>
+                                        <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere.html">Firesphere</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch.html">SolrSearch</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch-models.html">Models</a></li>
@@ -122,181 +133,190 @@
     
     </h2>
 
+<div class="phpdocumentor-label-line">
+
+
+</div>
+
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">28</span>
-</aside>
+
+    </aside>
 
             <p class="phpdocumentor-summary">Class \Firesphere\SolrSearch\Models\SolrError</p>
 
-    <section class="phpdocumentor-description"></section>
 
 
 
-
-
-
-<h3 id="interfaces_class_traits">
-    Interfaces, Classes and Traits
-    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
-</h3>
-
-<dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -interface"><abbr title="\SilverStripe\Security\PermissionProvider">PermissionProvider</abbr></dt>
-        <dd></dd>
-    
-    
-    </dl>
 
 
 <h3 id="toc">
     Table of Contents
-    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+
 </h3>
 
+
+
+    <h4 id="toc-interfaces">
+        Interfaces
+        <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -interface"><abbr title="\SilverStripe\Security\PermissionProvider">PermissionProvider</abbr></dt>    </dl>
+
+
+
+
+
+
+<h4 id="toc-properties">
+    Properties
+    <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
 <dl class="phpdocumentor-table-of-contents">
-                <dt class="phpdocumentor-table-of-contents__entry -property -public">
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Index">$Index</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Level">$Level</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Message">$Message</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Timestamp">$Timestamp</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Type">$Type</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_row_color">$row_color</a>
     <span>
-                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_db">$db</a>
     <span>
-                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_default_sort">$default_sort</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_indexes">$indexes</a>
     <span>
-                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_searchable_fields">$searchable_fields</a>
     <span>
-                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_summary_fields">$summary_fields</a>
     <span>
-                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_table_name">$table_name</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
-<dd></dd>
 
-                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    </dl>
+
+<h4 id="toc-methods">
+    Methods
+    <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canCreate">canCreate()</a>
     <span>
-                        &nbsp;: bool|mixed    </span>
+                                &nbsp;: bool|mixed    </span>
 </dt>
 <dd>Not creatable by users</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canDelete">canDelete()</a>
     <span>
-                        &nbsp;: bool|mixed    </span>
+                                &nbsp;: bool|mixed    </span>
 </dt>
 <dd>Only deleteable by admins or when in dev mode to clean up</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canEdit">canEdit()</a>
     <span>
-                        &nbsp;: bool|mixed    </span>
+                                &nbsp;: bool|mixed    </span>
 </dt>
 <dd>Not editable by users</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canView">canView()</a>
     <span>
-                        &nbsp;: bool|mixed    </span>
+                                &nbsp;: bool|mixed    </span>
 </dt>
 <dd>Member has view access?</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_getExtraClass">getExtraClass()</a>
     <span>
-                        &nbsp;: mixed|string    </span>
+                                &nbsp;: mixed|string    </span>
 </dt>
 <dd>Get the extra classes to colour the gridfield rows</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_getLastErrorLine">getLastErrorLine()</a>
     <span>
-                        &nbsp;: string    </span>
+                                &nbsp;: string    </span>
 </dt>
 <dd>Return the first line of this log item error</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_onBeforeWrite">onBeforeWrite()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                                &nbsp;: mixed    </span>
 </dt>
 <dd>Convert the Timestamp to a DBDatetime for compatibility</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_providePermissions">providePermissions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Return a map of permission codes to add to the dropdown shown in the Security section of the CMS.</dd>
 
-        </dl>
+    </dl>
+
 
 
 
@@ -307,6 +327,7 @@
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
             <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="
@@ -318,14 +339,16 @@
     <h4 class="phpdocumentor-element__name" id="property_Index">
         $Index
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Index" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">0</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -334,8 +357,8 @@
     <span class="phpdocumentor-signature__name">$Index</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -349,14 +372,16 @@
     <h4 class="phpdocumentor-element__name" id="property_Level">
         $Level
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Level" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">0</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -365,8 +390,8 @@
     <span class="phpdocumentor-signature__name">$Level</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -380,14 +405,16 @@
     <h4 class="phpdocumentor-element__name" id="property_Message">
         $Message
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Message" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">0</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -396,8 +423,8 @@
     <span class="phpdocumentor-signature__name">$Message</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -411,14 +438,16 @@
     <h4 class="phpdocumentor-element__name" id="property_Timestamp">
         $Timestamp
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Timestamp" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">0</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -427,8 +456,8 @@
     <span class="phpdocumentor-signature__name">$Timestamp</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -442,14 +471,16 @@
     <h4 class="phpdocumentor-element__name" id="property_Type">
         $Type
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Type" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">0</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -458,8 +489,8 @@
     <span class="phpdocumentor-signature__name">$Type</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -473,14 +504,16 @@
     <h4 class="phpdocumentor-element__name" id="property_row_color">
         $row_color
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_row_color" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">33</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -489,7 +522,9 @@
     <span class="phpdocumentor-signature__name">$row_color</span>
      = <span class="phpdocumentor-signature__default-value">[&#039;ERROR&#039; =&gt; &#039;alert alert-danger&#039;, &#039;WARN&#039; =&gt; &#039;alert alert-warning&#039;, &#039;INFO&#039; =&gt; &#039;alert alert-info&#039;]</span></code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Used to give the Gridfield rows a corresponding colour</p>
+</section>
 
     
 
@@ -504,14 +539,16 @@
     <h4 class="phpdocumentor-element__name" id="property_db">
         $db
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_db" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">45</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -520,7 +557,9 @@
     <span class="phpdocumentor-signature__name">$db</span>
      = <span class="phpdocumentor-signature__default-value">[&#039;Timestamp&#039; =&gt; &#039;Datetime&#039;, &#039;Index&#039; =&gt; &#039;Varchar(255)&#039;, &#039;Type&#039; =&gt; &#039;Enum(&quot;Config,Index,Query&quot;)&#039;, &#039;Level&#039; =&gt; &#039;Varchar(10)&#039;, &#039;Message&#039; =&gt; &#039;Text&#039;]</span></code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Database columns</p>
+</section>
 
     
 
@@ -535,14 +574,16 @@
     <h4 class="phpdocumentor-element__name" id="property_default_sort">
         $default_sort
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_default_sort" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">80</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -551,7 +592,9 @@
     <span class="phpdocumentor-signature__name">$default_sort</span>
      = <span class="phpdocumentor-signature__default-value">&#039;Timestamp DESC&#039;</span></code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Default sort</p>
+</section>
 
     
 
@@ -566,14 +609,16 @@
     <h4 class="phpdocumentor-element__name" id="property_indexes">
         $indexes
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_indexes" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">74</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -582,7 +627,9 @@
     <span class="phpdocumentor-signature__name">$indexes</span>
      = <span class="phpdocumentor-signature__default-value">[&#039;Timestamp&#039; =&gt; true]</span></code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Timestamp is indexed</p>
+</section>
 
     
 
@@ -597,14 +644,16 @@
     <h4 class="phpdocumentor-element__name" id="property_searchable_fields">
         $searchable_fields
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_searchable_fields" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">64</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -613,7 +662,9 @@
     <span class="phpdocumentor-signature__name">$searchable_fields</span>
      = <span class="phpdocumentor-signature__default-value">[&#039;Created&#039;, &#039;Timestamp&#039;, &#039;Index&#039;, &#039;Type&#039;, &#039;Level&#039;]</span></code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Searchable fields</p>
+</section>
 
     
 
@@ -628,14 +679,16 @@
     <h4 class="phpdocumentor-element__name" id="property_summary_fields">
         $summary_fields
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_summary_fields" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">55</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -644,7 +697,9 @@
     <span class="phpdocumentor-signature__name">$summary_fields</span>
      = <span class="phpdocumentor-signature__default-value">[&#039;Timestamp&#039;, &#039;Index&#039;, &#039;Type&#039;, &#039;Level&#039;]</span></code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Summary fields</p>
+</section>
 
     
 
@@ -659,14 +714,16 @@
     <h4 class="phpdocumentor-element__name" id="property_table_name">
         $table_name
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_table_name" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">41</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -675,7 +732,9 @@
     <span class="phpdocumentor-signature__name">$table_name</span>
      = <span class="phpdocumentor-signature__default-value">&#039;Solr_SolrLog&#039;</span></code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Database table name</p>
+</section>
 
     
 
@@ -686,6 +745,7 @@
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
             <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="phpdocumentor-element
@@ -696,21 +756,24 @@
     <h4 class="phpdocumentor-element__name" id="method_canCreate">
         canCreate()
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canCreate" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">111</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Not creatable by users</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">canCreate</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$member</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$context</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|mixed</span></code>
+                    <span class="phpdocumentor-signature__name">canCreate</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$member</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$context</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -718,27 +781,24 @@
                 : <span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr></span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$context</span>
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                  = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool|mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">bool|mixed</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -749,21 +809,24 @@
     <h4 class="phpdocumentor-element__name" id="method_canDelete">
         canDelete()
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canDelete" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">144</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Only deleteable by admins or when in dev mode to clean up</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">canDelete</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$member</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|mixed</span></code>
+                    <span class="phpdocumentor-signature__name">canDelete</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$member</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -771,19 +834,17 @@
                 : <span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr></span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool|mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">bool|mixed</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -794,21 +855,24 @@
     <h4 class="phpdocumentor-element__name" id="method_canEdit">
         canEdit()
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canEdit" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">122</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Not editable by users</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">canEdit</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$member</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|mixed</span></code>
+                    <span class="phpdocumentor-signature__name">canEdit</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$member</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -816,19 +880,17 @@
                 : <span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr></span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool|mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">bool|mixed</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -839,21 +901,24 @@
     <h4 class="phpdocumentor-element__name" id="method_canView">
         canView()
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canView" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">133</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Member has view access?</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">canView</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$member</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|mixed</span></code>
+                    <span class="phpdocumentor-signature__name">canView</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$member</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -861,19 +926,17 @@
                 : <span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\SilverStripe\Security\Member">Member</abbr></span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool|mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">bool|mixed</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -884,30 +947,32 @@
     <h4 class="phpdocumentor-element__name" id="method_getExtraClass">
         getExtraClass()
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_getExtraClass" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">158</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the extra classes to colour the gridfield rows</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExtraClass</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed|string</span></code>
+                    <span class="phpdocumentor-signature__name">getExtraClass</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed|string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed|string</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">mixed|string</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -918,30 +983,32 @@
     <h4 class="phpdocumentor-element__name" id="method_getLastErrorLine">
         getLastErrorLine()
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_getLastErrorLine" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">97</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Return the first line of this log item error</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getLastErrorLine</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getLastErrorLine</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -952,28 +1019,26 @@
     <h4 class="phpdocumentor-element__name" id="method_onBeforeWrite">
         onBeforeWrite()
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_onBeforeWrite" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">85</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Convert the Timestamp to a DBDatetime for compatibility</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">onBeforeWrite</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">onBeforeWrite</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+    
 
     
 </article>
@@ -986,19 +1051,23 @@
     <h4 class="phpdocumentor-element__name" id="method_providePermissions">
         providePermissions()
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_providePermissions" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Models/SolrLog.php"><a href="files/core-src-models-solrlog.html"><abbr title="Core/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Models/SolrLog.php"><a href="files/solr-src-models-solrlog.html"><abbr title="solr/src/Models/SolrLog.php">SolrLog.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">174</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Return a map of permission codes to add to the dropdown shown in the Security section of the CMS.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">providePermissions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">providePermissions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
         <section class="phpdocumentor-description"><p>array(
 'VIEW_SITE' =&gt; 'View the site',
 );</p>
@@ -1007,17 +1076,159 @@
     
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
 
-    
 </article>
             </section>
 
+        <div class="phpdocumentor-modal" id="source-view">
+    <div class="phpdocumentor-modal-bg" data-exit-button></div>
+    <div class="phpdocumentor-modal-container">
+        <div class="phpdocumentor-modal-content">
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/solr/src/Models/SolrLog.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+        </div>
+        <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        (function () {
+            function loadExternalCodeSnippet(el, url, line) {
+                Array.prototype.slice.call(el.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                    const src = url || pre.getAttribute('data-src').replace(/\\/g, '/');
+                    const language = 'php';
+
+                    const code = document.createElement('code');
+                    code.className = 'language-' + language;
+                    pre.textContent = '';
+                    pre.setAttribute('data-line', line)
+                    code.textContent = 'Loading…';
+                    pre.appendChild(code);
+
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open('GET', src, true);
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState !== 4) {
+                            return;
+                        }
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+                            Prism.highlightElement(code);
+                            return;
+                        }
+
+                        if (xhr.status === 404) {
+                            code.textContent = '✖ Error: File could not be found';
+                            return;
+                        }
+
+                        if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                            return;
+                        }
+
+                        code.textContent = '✖ Error: An unknown error occurred';
+                    };
+
+                    xhr.send(null);
+                });
+            }
+
+            const modalButtons = document.querySelectorAll("[data-modal]");
+            const openedAsLocalFile = window.location.protocol === 'file:';
+            if (modalButtons.length > 0 && openedAsLocalFile) {
+                console.warn(
+                    'Viewing the source code is unavailable because you are opening this page from the file:// scheme; ' +
+                    'browsers block XHR requests when a page is opened this way'
+                );
+            }
+
+            modalButtons.forEach(function (trigger) {
+                if (openedAsLocalFile) {
+                    trigger.setAttribute("hidden", "hidden");
+                }
+
+                trigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const modal = document.getElementById(trigger.dataset.modal);
+                    if (!modal) {
+                        console.error(`Modal with id "${trigger.dataset.modal}" could not be found`);
+                        return;
+                    }
+                    modal.classList.add("phpdocumentor-modal__open");
+
+                    loadExternalCodeSnippet(modal, trigger.dataset.src || null, trigger.dataset.line)
+                    const exits = modal.querySelectorAll("[data-exit-button]");
+                    exits.forEach(function (exit) {
+                        exit.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            modal.classList.remove("phpdocumentor-modal__open");
+                        });
+                    });
+                });
+            });
+        })();
+    </script>
+
     </article>
-                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+                                </section>
+                <section class="phpdocumentor-on-this-page__sidebar">
+                                
+    <section class="phpdocumentor-on-this-page__content">
+        <strong class="phpdocumentor-on-this-page__title">On this page</strong>
+
+        <ul class="phpdocumentor-list -clean">
+            <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#toc-methods">Methods</a></li>
+                                    </ul>
+            </li>
+            
+                            <li class="phpdocumentor-on-this-page-section__title">Properties</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Index">$Index<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Level">$Level<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Message">$Message<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Timestamp">$Timestamp<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_Type">$Type<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_row_color">$row_color<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_db">$db<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_default_sort">$default_sort<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_indexes">$indexes<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_searchable_fields">$searchable_fields<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_summary_fields">$summary_fields<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#property_table_name">$table_name<a href="classes/Firesphere-SolrSearch-Models-SolrLog.html"></li>
+                                            </ul>
+                </li>
+            
+                        <li class="phpdocumentor-on-this-page-section__title">Methods</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canCreate">canCreate()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canDelete">canDelete()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canEdit">canEdit()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_canView">canView()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_getExtraClass">getExtraClass()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_getLastErrorLine">getLastErrorLine()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_onBeforeWrite">onBeforeWrite()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#method_providePermissions">providePermissions()</a></li>
+                                    </ul>
+            </li>
+                    </ul>
+    </section>
+
+                </section>
+                            </div>
+            <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
     <section class="phpdocumentor-search-results__dialog">
         <header class="phpdocumentor-search-results__header">
             <h2 class="phpdocumentor-search-results__title">Search results</h2>
@@ -1028,7 +1239,6 @@
         </section>
     </section>
 </section>
-            </div>
         </div>
         <a href="classes/Firesphere-SolrSearch-Models-SolrLog.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
@@ -1037,5 +1247,9 @@
     <script>
         cssVars({});
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
 </body>
 </html>

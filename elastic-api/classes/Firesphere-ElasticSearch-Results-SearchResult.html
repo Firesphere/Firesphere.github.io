@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title>SilverStripe Elastic search</title>
+            <title>SilverStripe Elastic Search</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
@@ -25,7 +25,7 @@
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Elastic search</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Elastic Search</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -61,7 +61,7 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
-                <a href="namespaces/firesphere-elasticsearch.html" class="">Elasticsearch</a>
+                <a href="namespaces/firesphere-elasticsearch.html" class="">ElasticSearch</a>
                 
             </li>
             </ul>
@@ -223,7 +223,7 @@ In the controller, each required item can be accessed through the resulting meth
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_createFacet">createFacet()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>{@inheritDoc}</dd>
 
@@ -285,12 +285,18 @@ And, if so, return the found DO.</dd>
 </dt>
 <dd>Set the matches from Solarium as an ArrayList</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_setSpellcheck">setSpellcheck()</a>
     <span>
                                 &nbsp;: <a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html"><abbr title="\Firesphere\ElasticSearch\Results\SearchResult">SearchResult</abbr></a>    </span>
 </dt>
 <dd>Set the spellcheck list as an ArrayList</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_getClassFacet">getClassFacet()</a>
+    <span>
+                                &nbsp;: <abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>    </span>
+</dt>
 
     </dl>
 
@@ -522,7 +528,7 @@ And, if so, return the found DO.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">256</span>
+    <span class="phpdocumentor-element-found-in__line">259</span>
 
     </aside>
 
@@ -530,7 +536,7 @@ And, if so, return the found DO.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">createFacet</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$facets</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$facetArray</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">createFacet</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$facets</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$facetArray</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -569,7 +575,11 @@ And, if so, return the found DO.</dd>
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -585,7 +595,7 @@ And, if so, return the found DO.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">227</span>
+    <span class="phpdocumentor-element-found-in__line">230</span>
 
     </aside>
 
@@ -631,7 +641,7 @@ And, if so, return the found DO.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">139</span>
+    <span class="phpdocumentor-element-found-in__line">142</span>
 
     </aside>
 
@@ -669,7 +679,7 @@ And, if so, return the found DO.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">114</span>
+    <span class="phpdocumentor-element-found-in__line">117</span>
 
     </aside>
 
@@ -705,7 +715,7 @@ And, if so, return the found DO.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">246</span>
+    <span class="phpdocumentor-element-found-in__line">249</span>
 
     </aside>
 
@@ -747,7 +757,7 @@ And, if so, return the found DO.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">269</span>
+    <span class="phpdocumentor-element-found-in__line">303</span>
 
     </aside>
 
@@ -805,7 +815,7 @@ single bulk</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">188</span>
+    <span class="phpdocumentor-element-found-in__line">191</span>
 
     </aside>
 
@@ -859,7 +869,7 @@ And, if so, return the found DO.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">209</span>
+    <span class="phpdocumentor-element-found-in__line">212</span>
 
     </aside>
 
@@ -915,7 +925,7 @@ And, if so, return the found DO.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">164</span>
+    <span class="phpdocumentor-element-found-in__line">167</span>
 
     </aside>
 
@@ -950,7 +960,7 @@ And, if so, return the found DO.</p>
                     <article
         class="phpdocumentor-element
             -method
-            -private
+            -protected
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_setSpellcheck">
@@ -961,14 +971,14 @@ And, if so, return the found DO.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">87</span>
+    <span class="phpdocumentor-element-found-in__line">90</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Set the spellcheck list as an ArrayList</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
+    <span class="phpdocumentor-signature__visibility">protected</span>
                     <span class="phpdocumentor-signature__name">setSpellcheck</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$spellcheck</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html"><abbr title="\Firesphere\ElasticSearch\Results\SearchResult">SearchResult</abbr></a></span></code>
 
     <div class="phpdocumentor-label-line">
@@ -990,6 +1000,65 @@ And, if so, return the found DO.</p>
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html"><abbr title="\Firesphere\ElasticSearch\Results\SearchResult">SearchResult</abbr></a></span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getClassFacet">
+        getClassFacet()
+        <a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_getClassFacet" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Results/SearchResult.php"><a href="files/elastic-src-results-searchresult.html"><abbr title="elastic/src/Results/SearchResult.php">SearchResult.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">280</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">getClassFacet</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$field</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\stdClass">stdClass</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$buckets</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$field</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$buckets</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\stdClass">stdClass</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$class</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
             </section>
 
 </article>
@@ -1127,6 +1196,7 @@ And, if so, return the found DO.</p>
                                             <li><a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_createExcerpt">createExcerpt()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_setMatches">setMatches()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_setSpellcheck">setSpellcheck()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_getClassFacet">getClassFacet()</a></li>
                                     </ul>
             </li>
                     </ul>

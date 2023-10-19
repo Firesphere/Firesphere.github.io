@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SilverStripe Solr search</title>
+            <title>SilverStripe Solr Search</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="icon" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
-            <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/template.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
                 <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
         <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+        <script src="js/template.js"></script>
         <script src="js/search.js"></script>
         <script defer src="js/searchIndex.js"></script>
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr search</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr Search</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -47,38 +53,42 @@
 <label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
     Menu
 </label>
-<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
-    
-    <section class="phpdocumentor-sidebar__category">
-        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
-                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/firesphere-solrcompatibility.html"><abbr title="\Firesphere\SolrCompatibility">SolrCompatibility</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrsearch.html"><abbr title="\Firesphere\SolrSearch">SolrSearch</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrfluent.html"><abbr title="\Firesphere\SolrFluent">SolrFluent</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrpermissions.html"><abbr title="\Firesphere\SolrPermissions">SolrPermissions</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrsubsites.html"><abbr title="\Firesphere\SolrSubsites">SolrSubsites</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/silverstripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/silverstripe-fulltextsearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
-                                    </ul>
-                        </section>
+<aside class="phpdocumentor-column -three phpdocumentor-sidebar">
+                    <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="namespaces/firesphere.html" class="">Firesphere</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/firesphere-solrsearch.html" class="">SolrSearch</a>
+                
+            </li>
+            </ul>
 
-        <section class="phpdocumentor-sidebar__category">
-        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
-                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h3>
-                        <ul class="phpdocumentor-list">
-                                    <li><a href="packages/Firesphere-Solr.html"><abbr title="\Firesphere\Solr">Solr</abbr></a></li>
-                            </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/SilverStripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h3>
-                        <ul class="phpdocumentor-list">
-                                    <li><a href="packages/SilverStripe-FullTextSearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
-                            </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
                         </section>
-    
+                <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Application.html" class="">Application</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Default.html" class="">Default</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Firesphere.html" class="">Firesphere</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/Firesphere-Solr.html" class="">Solr</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+            
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
                 <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
@@ -92,8 +102,9 @@
     </section>
 </aside>
 
-            <div class="phpdocumentor-column -eight phpdocumentor-content">
-                    <ul class="phpdocumentor-breadcrumbs">
+            <div class="phpdocumentor-column -nine phpdocumentor-content">
+                                <section>
+                                        <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere.html">Firesphere</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch.html">SolrSearch</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch-traits.html">Traits</a></li>
@@ -105,10 +116,11 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/core-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/solr-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">26</span>
-</aside>
+
+    </aside>
 
             <p class="phpdocumentor-summary">Trait QueryComponentFacetTrait deals with the facets.</p>
 
@@ -119,54 +131,70 @@
 
 
 
-
-
-
 <h3 id="toc">
     Table of Contents
-    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+
 </h3>
 
+
+
+
+
+
+
+
+
+<h4 id="toc-properties">
+    Properties
+    <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
 <dl class="phpdocumentor-table-of-contents">
-                <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#property_clientQuery">$clientQuery</a>
     <span>
-                &nbsp;: <abbr title="\Solarium\QueryType\Select\Query\Query">Query</abbr>            </span>
+                        &nbsp;: <abbr title="\Solarium\QueryType\Select\Query\Query">Query</abbr>            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#property_index">$index</a>
     <span>
-                &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>            </span>
+                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#property_query">$query</a>
     <span>
-                &nbsp;: <a href="classes/Firesphere-SolrSearch-Queries-BaseQuery.html"><abbr title="\Firesphere\SolrSearch\Queries\BaseQuery">BaseQuery</abbr></a>            </span>
+                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Queries-BaseQuery.html"><abbr title="\Firesphere\SolrSearch\Queries\BaseQuery">BaseQuery</abbr></a>            </span>
 </dt>
-<dd></dd>
 
-                <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    </dl>
+
+<h4 id="toc-methods">
+    Methods
+    <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_buildAndFacetFilterQuery">buildAndFacetFilterQuery()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                                &nbsp;: mixed    </span>
 </dt>
 <dd>Add AND facet filters based on the current request</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_buildOrFacetFilterQuery">buildOrFacetFilterQuery()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                                &nbsp;: mixed    </span>
 </dt>
 <dd>Add OR facet filters based on the current request</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_buildQueryFacets">buildQueryFacets()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Add facets from the index, to make sure Solr returns
 the expected facets and their respective count on the
@@ -175,26 +203,30 @@ correct fields</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_createFacetCriteria">createFacetCriteria()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                                &nbsp;: mixed    </span>
 </dt>
 <dd>Combine all facets as AND facet filters for the results</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_getFieldFacets">getFieldFacets()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Get the field and it&#039;s respected values to filter on to generate Criteria from</dd>
 
-        </dl>
+    </dl>
 
 
+
+
+        
 
         
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
             <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="
@@ -206,14 +238,16 @@ correct fields</dd>
     <h4 class="phpdocumentor-element__name" id="property_clientQuery">
         $clientQuery
         <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#property_clientQuery" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/core-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/solr-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">39</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -222,7 +256,9 @@ correct fields</dd>
     <span class="phpdocumentor-signature__name">$clientQuery</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Solarium query</p>
+</section>
 
     
 
@@ -237,14 +273,16 @@ correct fields</dd>
     <h4 class="phpdocumentor-element__name" id="property_index">
         $index
         <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#property_index" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/core-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/solr-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">31</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -253,7 +291,9 @@ correct fields</dd>
     <span class="phpdocumentor-signature__name">$index</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Index to query</p>
+</section>
 
     
 
@@ -268,14 +308,16 @@ correct fields</dd>
     <h4 class="phpdocumentor-element__name" id="property_query">
         $query
         <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#property_query" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/core-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/solr-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">35</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -284,7 +326,9 @@ correct fields</dd>
     <span class="phpdocumentor-signature__name">$query</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Query to use</p>
+</section>
 
     
 
@@ -295,6 +339,7 @@ correct fields</dd>
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
             <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="phpdocumentor-element
@@ -305,28 +350,26 @@ correct fields</dd>
     <h4 class="phpdocumentor-element__name" id="method_buildAndFacetFilterQuery">
         buildAndFacetFilterQuery()
         <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_buildAndFacetFilterQuery" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/core-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/solr-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">65</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Add AND facet filters based on the current request</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">buildAndFacetFilterQuery</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">buildAndFacetFilterQuery</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+    
 
     
 </article>
@@ -339,28 +382,26 @@ correct fields</dd>
     <h4 class="phpdocumentor-element__name" id="method_buildOrFacetFilterQuery">
         buildOrFacetFilterQuery()
         <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_buildOrFacetFilterQuery" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/core-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/solr-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">124</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Add OR facet filters based on the current request</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">buildOrFacetFilterQuery</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">buildOrFacetFilterQuery</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+    
 
     
 </article>
@@ -373,12 +414,14 @@ correct fields</dd>
     <h4 class="phpdocumentor-element__name" id="method_buildQueryFacets">
         buildQueryFacets()
         <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_buildQueryFacets" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/core-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/solr-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">46</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Add facets from the index, to make sure Solr returns
 the expected facets and their respective count on the
@@ -386,17 +429,13 @@ correct fields</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">buildQueryFacets</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">buildQueryFacets</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+    
 
     
 </article>
@@ -409,21 +448,24 @@ correct fields</p>
     <h4 class="phpdocumentor-element__name" id="method_createFacetCriteria">
         createFacetCriteria()
         <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_createFacetCriteria" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/core-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/solr-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">109</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Combine all facets as AND facet filters for the results</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">createFacetCriteria</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\Minimalcode\Search\Criteria">Criteria</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$criteria</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$field</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">createFacetCriteria</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\Minimalcode\Search\Criteria">Criteria</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$criteria</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$field</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -431,33 +473,25 @@ correct fields</p>
                 : <span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\Minimalcode\Search\Criteria">Criteria</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$field</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$filter</span>
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
 
     
 </article>
@@ -470,21 +504,24 @@ correct fields</p>
     <h4 class="phpdocumentor-element__name" id="method_getFieldFacets">
         getFieldFacets()
         <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_getFieldFacets" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/core-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="Core/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php"><a href="files/solr-src-traits-querycomponenttraits-querycomponentfacettrait.html"><abbr title="solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php">QueryComponentFacetTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">90</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the field and it&#039;s respected values to filter on to generate Criteria from</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">getFieldFacets</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filterFacets</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$config</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">getFieldFacets</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filterFacets</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$config</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -492,32 +529,158 @@ correct fields</p>
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$config</span>
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
 
-    
 </article>
             </section>
 
+        <div class="phpdocumentor-modal" id="source-view">
+    <div class="phpdocumentor-modal-bg" data-exit-button></div>
+    <div class="phpdocumentor-modal-container">
+        <div class="phpdocumentor-modal-content">
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/solr/src/Traits/QueryComponentTraits/QueryComponentFacetTrait.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+        </div>
+        <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        (function () {
+            function loadExternalCodeSnippet(el, url, line) {
+                Array.prototype.slice.call(el.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                    const src = url || pre.getAttribute('data-src').replace(/\\/g, '/');
+                    const language = 'php';
+
+                    const code = document.createElement('code');
+                    code.className = 'language-' + language;
+                    pre.textContent = '';
+                    pre.setAttribute('data-line', line)
+                    code.textContent = 'Loading…';
+                    pre.appendChild(code);
+
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open('GET', src, true);
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState !== 4) {
+                            return;
+                        }
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+                            Prism.highlightElement(code);
+                            return;
+                        }
+
+                        if (xhr.status === 404) {
+                            code.textContent = '✖ Error: File could not be found';
+                            return;
+                        }
+
+                        if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                            return;
+                        }
+
+                        code.textContent = '✖ Error: An unknown error occurred';
+                    };
+
+                    xhr.send(null);
+                });
+            }
+
+            const modalButtons = document.querySelectorAll("[data-modal]");
+            const openedAsLocalFile = window.location.protocol === 'file:';
+            if (modalButtons.length > 0 && openedAsLocalFile) {
+                console.warn(
+                    'Viewing the source code is unavailable because you are opening this page from the file:// scheme; ' +
+                    'browsers block XHR requests when a page is opened this way'
+                );
+            }
+
+            modalButtons.forEach(function (trigger) {
+                if (openedAsLocalFile) {
+                    trigger.setAttribute("hidden", "hidden");
+                }
+
+                trigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const modal = document.getElementById(trigger.dataset.modal);
+                    if (!modal) {
+                        console.error(`Modal with id "${trigger.dataset.modal}" could not be found`);
+                        return;
+                    }
+                    modal.classList.add("phpdocumentor-modal__open");
+
+                    loadExternalCodeSnippet(modal, trigger.dataset.src || null, trigger.dataset.line)
+                    const exits = modal.querySelectorAll("[data-exit-button]");
+                    exits.forEach(function (exit) {
+                        exit.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            modal.classList.remove("phpdocumentor-modal__open");
+                        });
+                    });
+                });
+            });
+        })();
+    </script>
+
     </article>
-                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+                                </section>
+                <section class="phpdocumentor-on-this-page__sidebar">
+                                
+    <section class="phpdocumentor-on-this-page__content">
+        <strong class="phpdocumentor-on-this-page__title">On this page</strong>
+
+        <ul class="phpdocumentor-list -clean">
+            <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#toc-methods">Methods</a></li>
+                                    </ul>
+            </li>
+                                    <li class="phpdocumentor-on-this-page-section__title">Properties</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#property_clientQuery">$clientQuery</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#property_index">$index</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#property_query">$query</a></li>
+                                    </ul>
+            </li>
+                                    <li class="phpdocumentor-on-this-page-section__title">Methods</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_buildAndFacetFilterQuery">buildAndFacetFilterQuery()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_buildOrFacetFilterQuery">buildOrFacetFilterQuery()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_buildQueryFacets">buildQueryFacets()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_createFacetCriteria">createFacetCriteria()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#method_getFieldFacets">getFieldFacets()</a></li>
+                                    </ul>
+            </li>
+                    </ul>
+    </section>
+
+                </section>
+                            </div>
+            <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
     <section class="phpdocumentor-search-results__dialog">
         <header class="phpdocumentor-search-results__header">
             <h2 class="phpdocumentor-search-results__title">Search results</h2>
@@ -528,7 +691,6 @@ correct fields</p>
         </section>
     </section>
 </section>
-            </div>
         </div>
         <a href="classes/Firesphere-SolrSearch-Traits-QueryComponentFacetTrait.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
@@ -537,5 +699,9 @@ correct fields</p>
     <script>
         cssVars({});
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
 </body>
 </html>

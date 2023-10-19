@@ -69,33 +69,7 @@
                 
             </li>
                     <li>
-                <a href="namespaces/firesphere-solrcompatibility.html" class="">SolrCompatibility</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/firesphere-solrsearch.html" class="">SolrSearch</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/firesphere-solrfluent.html" class="">SolrFluent</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/firesphere-solrpermissions.html" class="">SolrPermissions</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/firesphere-solrsubsites.html" class="">SolrSubsites</a>
-                
-            </li>
-            </ul>
-
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="namespaces/silverstripe.html" class="">SilverStripe</a>
-</h4>
-    <ul class="phpdocumentor-list">
-                    <li>
-                <a href="namespaces/silverstripe-fulltextsearch.html" class="">FullTextSearch</a>
                 
             </li>
             </ul>
@@ -128,16 +102,6 @@
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Default.html" class="">Default</a>
 </h4>
-
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/SilverStripe.html" class="">SilverStripe</a>
-</h4>
-    <ul class="phpdocumentor-list">
-                    <li>
-                <a href="packages/SilverStripe-FullTextSearch.html" class="">FullTextSearch</a>
-                
-            </li>
-            </ul>
 
                         </section>
             
@@ -258,12 +222,6 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAggregates">getAggregates()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_setIndex">setIndex()</a>
     <span>
                                 &nbsp;: void    </span>
@@ -286,6 +244,13 @@
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAggregates">getAggregates()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Build the query part for aggregation/faceting</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAndFilters">getAndFilters()</a>
@@ -319,6 +284,12 @@
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Create the &quot;should&quot; filter, that is OR instead of AND</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSort">getSort()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSuggestTermList">getSuggestTermList()</a>
@@ -479,37 +450,6 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getAggregates">
-        getAggregates()
-        <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAggregates" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">276</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getAggregates</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_setIndex">
         setIndex()
         <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_setIndex" class="headerlink"><i class="fas fa-link"></i></a>
@@ -518,7 +458,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">97</span>
 
     </aside>
 
@@ -559,7 +499,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">101</span>
+    <span class="phpdocumentor-element-found-in__line">105</span>
 
     </aside>
 
@@ -600,7 +540,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">81</span>
+    <span class="phpdocumentor-element-found-in__line">85</span>
 
     </aside>
 
@@ -652,7 +592,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">226</span>
+    <span class="phpdocumentor-element-found-in__line">230</span>
 
     </aside>
 
@@ -710,6 +650,42 @@
             -private
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getAggregates">
+        getAggregates()
+        <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAggregates" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">285</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Build the query part for aggregation/faceting</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">getAggregates</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getAndFilters">
         getAndFilters()
         <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAndFilters" class="headerlink"><i class="fas fa-link"></i></a>
@@ -718,7 +694,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">130</span>
+    <span class="phpdocumentor-element-found-in__line">134</span>
 
     </aside>
 
@@ -771,7 +747,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">200</span>
+    <span class="phpdocumentor-element-found-in__line">204</span>
 
     </aside>
 
@@ -830,7 +806,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">112</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 
     </aside>
 
@@ -883,7 +859,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">240</span>
+    <span class="phpdocumentor-element-found-in__line">244</span>
 
     </aside>
 
@@ -918,7 +894,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">155</span>
+    <span class="phpdocumentor-element-found-in__line">159</span>
 
     </aside>
 
@@ -956,6 +932,37 @@
             -private
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getSort">
+        getSort()
+        <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSort" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">305</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">getSort</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getSuggestTermList">
         getSuggestTermList()
         <a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSuggestTermList" class="headerlink"><i class="fas fa-link"></i></a>
@@ -964,7 +971,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">254</span>
+    <span class="phpdocumentor-element-found-in__line">258</span>
 
     </aside>
 
@@ -995,7 +1002,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Queries/QueryBuilder.php"><a href="files/elastic-src-queries-querybuilder.html"><abbr title="elastic/src/Queries/QueryBuilder.php">QueryBuilder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">173</span>
+    <span class="phpdocumentor-element-found-in__line">177</span>
 
     </aside>
 
@@ -1149,16 +1156,17 @@
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_buildQuery">buildQuery()</a></li>
-                                            <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAggregates">getAggregates()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_setIndex">setIndex()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_setQuery">setQuery()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_init">init()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_addShould">addShould()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAggregates">getAggregates()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAndFilters">getAndFilters()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getFieldBoosting">getFieldBoosting()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getFilters">getFilters()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getHighlighter">getHighlighter()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getOrFilters">getOrFilters()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSort">getSort()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSuggestTermList">getSuggestTermList()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getUserQuery">getUserQuery()</a></li>
                                     </ul>

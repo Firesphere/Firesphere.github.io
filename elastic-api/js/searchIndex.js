@@ -116,6 +116,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Helpers-ElasticLogger.html#method___construct"
         },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Helpers\\Statics",
+            "name": "Statics",
+            "summary": "Class\u0020Statics",
+            "url": "classes/Firesphere-ElasticSearch-Helpers-Statics.html"
+        },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex",
             "name": "ElasticIndex",
             "summary": "Base\u0020for\u0020managing\u0020a\u0020Elastic\u0020core.",
@@ -130,6 +135,11 @@ Search.appendIndex(
             "name": "init",
             "summary": "Required\u0020to\u0020initialise\u0020the\u0020fields.",
             "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_init"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AindexExists\u0028\u0029",
+            "name": "indexExists",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_indexExists"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AgetIndexName\u0028\u0029",
             "name": "getIndexName",
@@ -271,10 +281,20 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getHighlighter"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AsuggestList\u0028\u0029",
-            "name": "suggestList",
+            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetSuggestTermList\u0028\u0029",
+            "name": "getSuggestTermList",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_suggestList"
+            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSuggestTermList"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetAggregates\u0028\u0029",
+            "name": "getAggregates",
+            "summary": "Build\u0020the\u0020query\u0020part\u0020for\u0020aggregation\/faceting",
+            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAggregates"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetSort\u0028\u0029",
+            "name": "getSort",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSort"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003A\u0024query",
             "name": "query",
@@ -340,6 +360,11 @@ Search.appendIndex(
             "name": "createFacet",
             "summary": "\u007B\u0040inheritDoc\u007D",
             "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_createFacet"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AgetClassFacet\u0028\u0029",
+            "name": "getClassFacet",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_getClassFacet"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AaddHighlight\u0028\u0029",
             "name": "addHighlight",
@@ -485,6 +510,71 @@ Search.appendIndex(
             "name": "description",
             "summary": "What\u0020do\u0020I\u0020do\u003F",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureSynonymsTask.html#property_description"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask",
+            "name": "ElasticConfigureTask",
+            "summary": "Class\u0020ElasticConfigureTask",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method___construct"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Run\u0020the\u0020config",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_run"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AconfigureIndex\u0028\u0029",
+            "name": "configureIndex",
+            "summary": "Update\/create\u0020a\u0020store",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_configureIndex"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AcreateConfigForIndex\u0028\u0029",
+            "name": "createConfigForIndex",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_createConfigForIndex"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AconvertForJSON\u0028\u0029",
+            "name": "convertForJSON",
+            "summary": "Take\u0020the\u0020config\u0020from\u0020the\u0020resolver\u0020and\u0020build\u0020an\u0020array\u0020that\u0027s\nready\u0020to\u0020be\u0020converted\u0020to\u0020JSON\u0020for\u0020Elastic.",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_convertForJSON"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AgetMethod\u0028\u0029",
+            "name": "getMethod",
+            "summary": "Get\u0020the\u0020method\u0020to\u0020use.\u0020Create\u0020or\u0020Update",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_getMethod"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AgetService\u0028\u0029",
+            "name": "getService",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_getService"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024segment",
+            "name": "segment",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_segment"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024title",
+            "name": "title",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_title"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024description",
+            "name": "description",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_description"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024service",
+            "name": "service",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_service"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024unSsortables",
+            "name": "unSsortables",
+            "summary": "DBHTML\u0020and\u0020DBText\u0020etc.\u0020should\u0020never\u0020be\u0020made\u0020sortable\nIt\u0020doesn\u0027t\u0020make\u0020sense\u0020for\u0020large\u0020text\u0020objects",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_unSsortables"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask",
             "name": "ElasticIndexTask",
@@ -751,181 +841,6 @@ Search.appendIndex(
             "summary": "usedAllFields\u0020is\u0020used\u0020to\u0020determine\u0020if\u0020the\u0020addAllFields\u0020method\u0020has\u0020been\u0020called\nThis\u0020is\u0020to\u0020prevent\u0020a\u0020notice\u0020if\u0020there\u0020is\u0020no\u0020yml.",
             "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_usedAllFields"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\EndToEndTest",
-            "name": "EndToEndTest",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-EndToEndTest.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\EndToEndTest\u003A\u003AtestSearching\u0028\u0029",
-            "name": "testSearching",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-EndToEndTest.html#method_testSearching"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtensionTest",
-            "name": "DataObjectElasticExtensionTest",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtensionTest\u003A\u003AtestCreatingObject\u0028\u0029",
-            "name": "testCreatingObject",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html#method_testCreatingObject"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtensionTest\u003A\u003AtestOnAfterDelete\u0028\u0029",
-            "name": "testOnAfterDelete",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html#method_testOnAfterDelete"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtensionTest\u003A\u003AtestAddRemoveFromElastic\u0028\u0029",
-            "name": "testAddRemoveFromElastic",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html#method_testAddRemoveFromElastic"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtensionTest\u003A\u003AtestShouldPush\u0028\u0029",
-            "name": "testShouldPush",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html#method_testShouldPush"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtensionTest\u003A\u003A\u0024usesDatabase",
-            "name": "usesDatabase",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtensionTest.html#property_usesDatabase"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest",
-            "name": "ElasticIndexTest",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AsetUp\u0028\u0029",
-            "name": "setUp",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_setUp"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AtestConstruct\u0028\u0029",
-            "name": "testConstruct",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_testConstruct"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AtestInit\u0028\u0029",
-            "name": "testInit",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_testInit"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AtestAddSetGet\u0028\u0029",
-            "name": "testAddSetGet",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_testAddSetGet"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003AtestAddAllFields\u0028\u0029",
-            "name": "testAddAllFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#method_testAddAllFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003A\u0024index",
-            "name": "index",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#property_index"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticIndexTest\u003A\u003A\u0024indexConfig",
-            "name": "indexConfig",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticIndexTest.html#property_indexConfig"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\SynonymSetTest",
-            "name": "SynonymSetTest",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-SynonymSetTest.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\SynonymSetTest\u003A\u003AtestRequireDefaultRecords\u0028\u0029",
-            "name": "testRequireDefaultRecords",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-SynonymSetTest.html#method_testRequireDefaultRecords"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\SynonymSetTest\u003A\u003A\u0024usesDatabase",
-            "name": "usesDatabase",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-SynonymSetTest.html#property_usesDatabase"
-        },                {
-            "fqsen": "\\Firesphere\\Elasticsearch\\Tests\\ElasticQueryTest",
-            "name": "ElasticQueryTest",
-            "summary": "",
-            "url": "classes/Firesphere-Elasticsearch-Tests-ElasticQueryTest.html"
-        },                {
-            "fqsen": "\\Firesphere\\Elasticsearch\\Tests\\ElasticQueryTest\u003A\u003AtestTerms\u0028\u0029",
-            "name": "testTerms",
-            "summary": "",
-            "url": "classes/Firesphere-Elasticsearch-Tests-ElasticQueryTest.html#method_testTerms"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\QueryBuilderTest",
-            "name": "QueryBuilderTest",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-QueryBuilderTest.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\QueryBuilderTest\u003A\u003AtestBuildQuery\u0028\u0029",
-            "name": "testBuildQuery",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-QueryBuilderTest.html#method_testBuildQuery"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\QueryBuilderTest\u003A\u003A\u0024expected_query",
-            "name": "expected_query",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-QueryBuilderTest.html#property_expected_query"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticCoreServiceTest",
-            "name": "ElasticCoreServiceTest",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticCoreServiceTest.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticCoreServiceTest\u003A\u003AtestConstruct\u0028\u0029",
-            "name": "testConstruct",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticCoreServiceTest.html#method_testConstruct"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticCoreServiceTest\u003A\u003AtestUpdateIndex\u0028\u0029",
-            "name": "testUpdateIndex",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticCoreServiceTest.html#method_testUpdateIndex"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests\\ElasticCoreServiceTest\u003A\u003A\u0024usesDatabase",
-            "name": "usesDatabase",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tests-ElasticCoreServiceTest.html#property_usesDatabase"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ConfigureSynonymsTaskTest",
-            "name": "ConfigureSynonymsTaskTest",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ConfigureSynonymsTaskTest.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ConfigureSynonymsTaskTest\u003A\u003AtestRun\u0028\u0029",
-            "name": "testRun",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ConfigureSynonymsTaskTest.html#method_testRun"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ConfigureSynonymsTaskTest\u003A\u003A\u0024usesDatabase",
-            "name": "usesDatabase",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ConfigureSynonymsTaskTest.html#property_usesDatabase"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTaskTest",
-            "name": "ElasticIndexTaskTest",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTaskTest.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTaskTest\u003A\u003AtestConstruct\u0028\u0029",
-            "name": "testConstruct",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTaskTest.html#method_testConstruct"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTaskTest\u003A\u003AtestRun\u0028\u0029",
-            "name": "testRun",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTaskTest.html#method_testRun"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTaskTest\u003A\u003A\u0024usesDatabase",
-            "name": "usesDatabase",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTaskTest.html#property_usesDatabase"
-        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -1000,20 +915,5 @@ Search.appendIndex(
             "name": "Traits",
             "summary": "",
             "url": "namespaces/firesphere-elasticsearch-traits.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tests",
-            "name": "Tests",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-tests.html"
-        },                {
-            "fqsen": "\\Firesphere\\Elasticsearch\\Tests",
-            "name": "Tests",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-tests.html"
-        },                {
-            "fqsen": "\\Firesphere\\Elasticsearch",
-            "name": "Elasticsearch",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch.html"
         }            ]
 );

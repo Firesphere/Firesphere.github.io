@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SilverStripe Solr search</title>
+            <title>SilverStripe Solr Search</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="icon" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
-            <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/template.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
                 <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
         <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+        <script src="js/template.js"></script>
         <script src="js/search.js"></script>
         <script defer src="js/searchIndex.js"></script>
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr search</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr Search</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -47,38 +53,42 @@
 <label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
     Menu
 </label>
-<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
-    
-    <section class="phpdocumentor-sidebar__category">
-        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
-                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/firesphere-solrcompatibility.html"><abbr title="\Firesphere\SolrCompatibility">SolrCompatibility</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrsearch.html"><abbr title="\Firesphere\SolrSearch">SolrSearch</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrfluent.html"><abbr title="\Firesphere\SolrFluent">SolrFluent</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrpermissions.html"><abbr title="\Firesphere\SolrPermissions">SolrPermissions</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrsubsites.html"><abbr title="\Firesphere\SolrSubsites">SolrSubsites</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/silverstripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/silverstripe-fulltextsearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
-                                    </ul>
-                        </section>
+<aside class="phpdocumentor-column -three phpdocumentor-sidebar">
+                    <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="namespaces/firesphere.html" class="">Firesphere</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/firesphere-solrsearch.html" class="">SolrSearch</a>
+                
+            </li>
+            </ul>
 
-        <section class="phpdocumentor-sidebar__category">
-        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
-                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h3>
-                        <ul class="phpdocumentor-list">
-                                    <li><a href="packages/Firesphere-Solr.html"><abbr title="\Firesphere\Solr">Solr</abbr></a></li>
-                            </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/SilverStripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h3>
-                        <ul class="phpdocumentor-list">
-                                    <li><a href="packages/SilverStripe-FullTextSearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
-                            </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
                         </section>
-    
+                <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Application.html" class="">Application</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Default.html" class="">Default</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Firesphere.html" class="">Firesphere</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/Firesphere-Solr.html" class="">Solr</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+            
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
                 <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
@@ -92,8 +102,9 @@
     </section>
 </aside>
 
-            <div class="phpdocumentor-column -eight phpdocumentor-content">
-                    <ul class="phpdocumentor-breadcrumbs">
+            <div class="phpdocumentor-column -nine phpdocumentor-content">
+                                <section>
+                                        <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere.html">Firesphere</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch.html">SolrSearch</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch-tasks.html">Tasks</a></li>
@@ -122,20 +133,26 @@
                             <a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html"><abbr title="\Firesphere\SolrSearch\Traits\LoggerTrait">LoggerTrait</abbr></a>,                             <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html"><abbr title="\Firesphere\SolrSearch\Traits\SolrIndexTrait">SolrIndexTrait</abbr></a>                    </span>
     </h2>
 
+<div class="phpdocumentor-label-line">
+
+
+</div>
+
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">42</span>
-</aside>
+
+    </aside>
 
             <p class="phpdocumentor-summary">Class SolrIndexTask</p>
 
-    <section class="phpdocumentor-description"></section>
 
 
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -147,142 +164,159 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-
-
+                                            </dl>
 
 
 
 <h3 id="toc">
     Table of Contents
-    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+
 </h3>
 
+
+
+
+
+
+
+
+
+<h4 id="toc-properties">
+    Properties
+    <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
 <dl class="phpdocumentor-table-of-contents">
-                <dt class="phpdocumentor-table-of-contents__entry -property -public">
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_currentStates">$currentStates</a>
     <span>
-                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd>Store the current states for all instances of SiteState</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_batchLength">$batchLength</a>
     <span>
-                &nbsp;: int            </span>
+                        &nbsp;: int            </span>
 </dt>
 <dd>Default batch length</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_cores">$cores</a>
     <span>
-                &nbsp;: int            </span>
+                        &nbsp;: int            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_debug">$debug</a>
     <span>
-                &nbsp;: bool            </span>
+                        &nbsp;: bool            </span>
 </dt>
 <dd>Debug mode enabled, default false</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_description">$description</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
 <dd>What do I do?</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_index">$index</a>
     <span>
-                &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>            </span>
+                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html#property_logger">$logger</a>
     <span>
-                &nbsp;: <abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>            </span>
+                        &nbsp;: <abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>            </span>
 </dt>
 <dd>The logger to use</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_service">$service</a>
     <span>
-                &nbsp;: <a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html"><abbr title="\Firesphere\SolrSearch\Services\SolrCoreService">SolrCoreService</abbr></a>            </span>
+                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html"><abbr title="\Firesphere\SolrSearch\Services\SolrCoreService">SolrCoreService</abbr></a>            </span>
 </dt>
 <dd>Singleton of {@link SolrCoreService}</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_title">$title</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
 <dd>My name</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_segment">$segment</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
 <dd>URLSegment of this task</dd>
 
-                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    </dl>
+
+<h4 id="toc-methods">
+    Methods
+    <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method___construct">__construct()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                                &nbsp;: mixed    </span>
 </dt>
 <dd>SolrIndexTask constructor. Sets up the document factory</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_clearIndex">clearIndex()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                                &nbsp;: mixed    </span>
 </dt>
 <dd>Clear the given index if a full re-index is needed</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_getBatchLength">getBatchLength()</a>
     <span>
-                        &nbsp;: int    </span>
+                                &nbsp;: int    </span>
 </dt>
 <dd>Get the length of a single batch</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_getCores">getCores()</a>
     <span>
-                        &nbsp;: int    </span>
+                                &nbsp;: int    </span>
 </dt>
 <dd>Get the amount of CPU Cores configured</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_getIndex">getIndex()</a>
     <span>
-                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>    </span>
+                                &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>    </span>
 </dt>
 <dd>Get the Index class.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html#method_getLogger">getLogger()</a>
     <span>
-                        &nbsp;: <abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>    </span>
+                                &nbsp;: <abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>    </span>
 </dt>
 <dd>Get the logger</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_isDebug">isDebug()</a>
     <span>
-                        &nbsp;: bool    </span>
+                                &nbsp;: bool    </span>
 </dt>
 <dd>Is this Index in debug mode</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_run">run()</a>
     <span>
-                        &nbsp;: int|bool    </span>
+                                &nbsp;: int|bool    </span>
 </dt>
 <dd>Implement this method in the task subclass to
 execute via the TaskRunner</dd>
@@ -290,105 +324,105 @@ execute via the TaskRunner</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setBatchLength">setBatchLength()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Set the length of a single batch</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setCores">setCores()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Set the amount of CPU Cores to use</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setDebug">setDebug()</a>
     <span>
-                        &nbsp;: self    </span>
+                                &nbsp;: self    </span>
 </dt>
 <dd>Set the debug mode</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setIndex">setIndex()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Set the index class</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html#method_setLogger">setLogger()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Set the logger if needed</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setService">setService()</a>
     <span>
-                        &nbsp;: self    </span>
+                                &nbsp;: self    </span>
 </dt>
 <dd>Set the {@link SolrCoreService}</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_getClasses">getClasses()</a>
     <span>
-                        &nbsp;: bool|array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: bool|array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>get the classes to run for this task execution</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClassForIndex">indexClassForIndex()</a>
     <span>
-                        &nbsp;: int|bool    </span>
+                                &nbsp;: int|bool    </span>
 </dt>
 <dd>Index the classes for a specific index</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_taskSetup">taskSetup()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Set up the requirements for this task</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_doReindex">doReindex()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                                &nbsp;: mixed    </span>
 </dt>
 <dd>Reindex the given group, for each state</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_getGroupSettings">getGroupSettings()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Check the amount of groups and the total against the isGroup check.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_hasPCNTL">hasPCNTL()</a>
     <span>
-                        &nbsp;: bool    </span>
+                                &nbsp;: bool    </span>
 </dt>
 <dd>Check if PCNTL is available and/or useable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClass">indexClass()</a>
     <span>
-                        &nbsp;: int|bool    </span>
+                                &nbsp;: int|bool    </span>
 </dt>
 <dd>Index a single class for a given index. {@link static::indexClassForIndex()}</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexStateClass">indexStateClass()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Index a group of a class for a specific state and index</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_logException">logException()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Log an exception if it happens. Most are catched, these logs are for the developers
 to identify problems and fix them.</dd>
@@ -396,32 +430,33 @@ to identify problems and fix them.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_runChild">runChild()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Ren a single child index operation</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_runForkedChild">runForkedChild()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Create a fork and run the child</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_spawnChildren">spawnChildren()</a>
     <span>
-                        &nbsp;: int    </span>
+                                &nbsp;: int    </span>
 </dt>
 <dd>For each core, spawn a child process that will handle a separate group.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_updateIndex">updateIndex()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Execute the update on the client</dd>
 
-        </dl>
+    </dl>
+
 
 
 
@@ -432,6 +467,7 @@ to identify problems and fix them.</dd>
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
             <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="
@@ -443,14 +479,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_currentStates">
         $currentStates
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_currentStates" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">58</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Store the current states for all instances of SiteState</p>
 
@@ -460,8 +498,8 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$currentStates</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -475,14 +513,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_batchLength">
         $batchLength
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_batchLength" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">49</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Default batch length</p>
 
@@ -492,8 +532,8 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$batchLength</span>
      = <span class="phpdocumentor-signature__default-value">500</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -507,14 +547,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_cores">
         $cores
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_cores" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">43</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -523,7 +565,9 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$cores</span>
      = <span class="phpdocumentor-signature__default-value">1</span></code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Number of CPU cores available</p>
+</section>
 
     
 
@@ -538,14 +582,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_debug">
         $debug
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_debug" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">29</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Debug mode enabled, default false</p>
 
@@ -555,8 +601,8 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$debug</span>
      = <span class="phpdocumentor-signature__default-value">false</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -570,14 +616,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_description">
         $description
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_description" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">70</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">What do I do?</p>
 
@@ -587,8 +635,8 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$description</span>
      = <span class="phpdocumentor-signature__default-value">&#039;Add or update documents to an existing Solr core.&#039;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -602,14 +650,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_index">
         $index
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_index" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">39</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -618,7 +668,9 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$index</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Current core being indexed</p>
+</section>
 
     
 
@@ -633,14 +685,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_logger">
         $logger
         <a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html#property_logger" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/LoggerTrait.php"><a href="files/core-src-traits-loggertrait.html"><abbr title="Core/src/Traits/LoggerTrait.php">LoggerTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/LoggerTrait.php"><a href="files/solr-src-traits-loggertrait.html"><abbr title="solr/src/Traits/LoggerTrait.php">LoggerTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">29</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">The logger to use</p>
 
@@ -650,8 +704,8 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$logger</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -665,14 +719,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_service">
         $service
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_service" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">35</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Singleton of {@link SolrCoreService}</p>
 
@@ -682,8 +738,8 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$service</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -697,14 +753,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_title">
         $title
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_title" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">64</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">My name</p>
 
@@ -714,8 +772,8 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$title</span>
      = <span class="phpdocumentor-signature__default-value">&#039;Solr Index update&#039;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -729,14 +787,16 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="property_segment">
         $segment
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_segment" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">52</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">URLSegment of this task</p>
 
@@ -746,8 +806,8 @@ to identify problems and fix them.</dd>
     <span class="phpdocumentor-signature__name">$segment</span>
      = <span class="phpdocumentor-signature__default-value">&#039;SolrIndexTask&#039;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -757,6 +817,7 @@ to identify problems and fix them.</dd>
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
             <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="phpdocumentor-element
@@ -767,26 +828,30 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">77</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">SolrIndexTask constructor. Sets up the document factory</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method___construct#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -795,15 +860,9 @@ to identify problems and fix them.</dd>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\ReflectionException">ReflectionException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+                                            </dl>
 
     
 </article>
@@ -816,21 +875,24 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="method_clearIndex">
         clearIndex()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_clearIndex" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">176</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Clear the given index if a full re-index is needed</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">clearIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$vars</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">clearIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$vars</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -847,7 +909,8 @@ to identify problems and fix them.</dd>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_clearIndex#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -856,15 +919,9 @@ to identify problems and fix them.</dd>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+                                            </dl>
 
     
 </article>
@@ -877,30 +934,32 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getBatchLength">
         getBatchLength()
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_getBatchLength" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">138</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the length of a single batch</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getBatchLength</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                    <span class="phpdocumentor-signature__name">getBatchLength</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">int</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -911,30 +970,32 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getCores">
         getCores()
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_getCores" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">118</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the amount of CPU Cores configured</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCores</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                    <span class="phpdocumentor-signature__name">getCores</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">int</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -945,30 +1006,32 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getIndex">
         getIndex()
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_getIndex" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">98</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the Index class.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getIndex</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">getIndex</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -979,30 +1042,32 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getLogger">
         getLogger()
         <a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html#method_getLogger" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/LoggerTrait.php"><a href="files/core-src-traits-loggertrait.html"><abbr title="Core/src/Traits/LoggerTrait.php">LoggerTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/LoggerTrait.php"><a href="files/solr-src-traits-loggertrait.html"><abbr title="solr/src/Traits/LoggerTrait.php">LoggerTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">36</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the logger</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getLogger</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">getLogger</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1013,30 +1078,32 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="method_isDebug">
         isDebug()
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_isDebug" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">69</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Is this Index in debug mode</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">isDebug</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">isDebug</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1047,22 +1114,25 @@ to identify problems and fix them.</dd>
     <h4 class="phpdocumentor-element__name" id="method_run">
         run()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_run" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">103</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Implement this method in the task subclass to
 execute via the TaskRunner</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">run</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|bool</span></code>
+                    <span class="phpdocumentor-signature__name">run</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|bool</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1079,7 +1149,8 @@ execute via the TaskRunner</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_run#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1088,8 +1159,7 @@ execute via the TaskRunner</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
                             <dt class="phpdocumentor-tag-list__entry">
                     <span class="phpdocumentor-tag__name">throws</span>
@@ -1097,17 +1167,15 @@ execute via the TaskRunner</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Firesphere\SolrSearch\Tasks\HTTPException">HTTPException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int|bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">int|bool</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1118,21 +1186,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_setBatchLength">
         setBatchLength()
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setBatchLength" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">148</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set the length of a single batch</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setBatchLength</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$batchLength</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">setBatchLength</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$batchLength</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1140,17 +1211,11 @@ execute via the TaskRunner</p>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
 
     
 </article>
@@ -1163,21 +1228,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_setCores">
         setCores()
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setCores" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">128</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set the amount of CPU Cores to use</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setCores</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$cores</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">setCores</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$cores</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1185,17 +1253,11 @@ execute via the TaskRunner</p>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
 
     
 </article>
@@ -1208,21 +1270,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_setDebug">
         setDebug()
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setDebug" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">81</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set the debug mode</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDebug</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$debug</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$force</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+                    <span class="phpdocumentor-signature__name">setDebug</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$debug</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$force</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1247,12 +1312,11 @@ execute via the TaskRunner</p>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">self</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1263,21 +1327,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_setIndex">
         setIndex()
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setIndex" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">108</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set the index class</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">setIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1285,17 +1352,11 @@ execute via the TaskRunner</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
 
     
 </article>
@@ -1308,21 +1369,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_setLogger">
         setLogger()
         <a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html#method_setLogger" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/LoggerTrait.php"><a href="files/core-src-traits-loggertrait.html"><abbr title="Core/src/Traits/LoggerTrait.php">LoggerTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/LoggerTrait.php"><a href="files/solr-src-traits-loggertrait.html"><abbr title="solr/src/Traits/LoggerTrait.php">LoggerTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">50</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set the logger if needed</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setLogger</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$logger</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">setLogger</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$logger</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1330,17 +1394,11 @@ execute via the TaskRunner</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
 
     
 </article>
@@ -1353,21 +1411,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_setService">
         setService()
         <a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setService" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/core-src-traits-indextraits-solrindextrait.html"><abbr title="Core/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/IndexTraits/SolrIndexTrait.php"><a href="files/solr-src-traits-indextraits-solrindextrait.html"><abbr title="solr/src/Traits/IndexTraits/SolrIndexTrait.php">SolrIndexTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">57</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set the {@link SolrCoreService}</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setService</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html"><abbr title="\Firesphere\SolrSearch\Services\SolrCoreService">SolrCoreService</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$service</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+                    <span class="phpdocumentor-signature__name">setService</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html"><abbr title="\Firesphere\SolrSearch\Services\SolrCoreService">SolrCoreService</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$service</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1375,19 +1436,17 @@ execute via the TaskRunner</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html"><abbr title="\Firesphere\SolrSearch\Services\SolrCoreService">SolrCoreService</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">self</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1398,21 +1457,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_getClasses">
         getClasses()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_getClasses" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">161</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">get the classes to run for this task execution</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">getClasses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$vars</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$classes</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">getClasses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$vars</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$classes</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1437,12 +1499,11 @@ execute via the TaskRunner</p>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool|array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">bool|array&lt;string|int, mixed&gt;</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1453,21 +1514,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_indexClassForIndex">
         indexClassForIndex()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClassForIndex" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">194</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Index the classes for a specific index</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">indexClassForIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$classes</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|bool</span></code>
+                    <span class="phpdocumentor-signature__name">indexClassForIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$classes</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|bool</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1502,7 +1566,8 @@ execute via the TaskRunner</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClassForIndex#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1511,8 +1576,7 @@ execute via the TaskRunner</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
                             <dt class="phpdocumentor-tag-list__entry">
                     <span class="phpdocumentor-tag__name">throws</span>
@@ -1520,17 +1584,15 @@ execute via the TaskRunner</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Firesphere\SolrSearch\Tasks\HTTPException">HTTPException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int|bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">int|bool</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1541,21 +1603,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_taskSetup">
         taskSetup()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_taskSetup" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">140</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set up the requirements for this task</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">taskSetup</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">taskSetup</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1571,12 +1636,11 @@ execute via the TaskRunner</p>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1587,21 +1651,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_doReindex">
         doReindex()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_doReindex" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">367</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Reindex the given group, for each state</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">doReindex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$pid</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">doReindex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$pid</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1636,7 +1703,8 @@ execute via the TaskRunner</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_doReindex#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1645,15 +1713,9 @@ execute via the TaskRunner</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+                                            </dl>
 
     
 </article>
@@ -1666,21 +1728,24 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_getGroupSettings">
         getGroupSettings()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_getGroupSettings" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">248</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Check the amount of groups and the total against the isGroup check.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">getGroupSettings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">getGroupSettings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1714,12 +1779,11 @@ execute via the TaskRunner</p>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1730,19 +1794,23 @@ execute via the TaskRunner</p>
     <h4 class="phpdocumentor-element__name" id="method_hasPCNTL">
         hasPCNTL()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_hasPCNTL" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">263</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Check if PCNTL is available and/or useable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">hasPCNTL</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">hasPCNTL</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
         <section class="phpdocumentor-description"><p>The unittest param is from phpunit.xml.dist, meant to bypass the exit(0) call
 The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL (yet)</p>
 </section>
@@ -1750,12 +1818,11 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1766,21 +1833,24 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     <h4 class="phpdocumentor-element__name" id="method_indexClass">
         indexClass()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClass" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">214</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Index a single class for a given index. {@link static::indexClassForIndex()}</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">indexClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|bool</span></code>
+                    <span class="phpdocumentor-signature__name">indexClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isGroup</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|bool</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1815,7 +1885,8 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClass#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1824,8 +1895,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Firesphere\SolrSearch\Tasks\HTTPException">HTTPException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
                             <dt class="phpdocumentor-tag-list__entry">
                     <span class="phpdocumentor-tag__name">throws</span>
@@ -1833,17 +1903,15 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\SilverStripe\ORM\ValidationException">ValidationException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int|bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">int|bool</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1854,21 +1922,24 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     <h4 class="phpdocumentor-element__name" id="method_indexStateClass">
         indexStateClass()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexStateClass" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">396</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Index a group of a class for a specific state and index</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">indexStateClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">indexStateClass</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1894,7 +1965,8 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexStateClass#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1903,15 +1975,9 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+                                            </dl>
 
     
 </article>
@@ -1924,22 +1990,25 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     <h4 class="phpdocumentor-element__name" id="method_logException">
         logException()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_logException" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">436</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Log an exception if it happens. Most are catched, these logs are for the developers
 to identify problems and fix them.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">logException</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Exception">Exception</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$exception</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">logException</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Exception">Exception</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$exception</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1974,7 +2043,8 @@ to identify problems and fix them.</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_logException#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1992,8 +2062,7 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Firesphere\SolrSearch\Tasks\HTTPException">HTTPException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
                             <dt class="phpdocumentor-tag-list__entry">
                     <span class="phpdocumentor-tag__name">throws</span>
@@ -2001,15 +2070,9 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\SilverStripe\ORM\ValidationException">ValidationException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+                                            </dl>
 
     
 </article>
@@ -2022,21 +2085,24 @@ to identify problems and fix them.</p>
     <h4 class="phpdocumentor-element__name" id="method_runChild">
         runChild()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_runChild" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">341</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Ren a single child index operation</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">runChild</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$pid</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$start</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">runChild</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$pid</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$start</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2071,7 +2137,8 @@ to identify problems and fix them.</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_runChild#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -2089,8 +2156,7 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Firesphere\SolrSearch\Tasks\HTTPException">HTTPException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
                             <dt class="phpdocumentor-tag-list__entry">
                     <span class="phpdocumentor-tag__name">throws</span>
@@ -2098,8 +2164,7 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\SilverStripe\ORM\ValidationException">ValidationException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
                             <dt class="phpdocumentor-tag-list__entry">
                     <span class="phpdocumentor-tag__name">throws</span>
@@ -2107,15 +2172,9 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+                                            </dl>
 
     
 </article>
@@ -2128,21 +2187,24 @@ to identify problems and fix them.</p>
     <h4 class="phpdocumentor-element__name" id="method_runForkedChild">
         runForkedChild()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_runForkedChild" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">320</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Create a fork and run the child</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">runForkedChild</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$pids</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$start</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">runForkedChild</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$pids</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$start</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2177,7 +2239,8 @@ to identify problems and fix them.</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_runForkedChild#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -2195,8 +2258,7 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Firesphere\SolrSearch\Tasks\HTTPException">HTTPException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
                             <dt class="phpdocumentor-tag-list__entry">
                     <span class="phpdocumentor-tag__name">throws</span>
@@ -2204,15 +2266,9 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\SilverStripe\ORM\ValidationException">ValidationException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+                                            </dl>
 
     
 </article>
@@ -2225,19 +2281,23 @@ to identify problems and fix them.</p>
     <h4 class="phpdocumentor-element__name" id="method_spawnChildren">
         spawnChildren()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_spawnChildren" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">283</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">For each core, spawn a child process that will handle a separate group.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">spawnChildren</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$groups</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                    <span class="phpdocumentor-signature__name">spawnChildren</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$group</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$groups</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
         <section class="phpdocumentor-description"><p>This speeds up indexing through CLI massively.</p>
 </section>
 
@@ -2275,7 +2335,8 @@ to identify problems and fix them.</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_spawnChildren#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -2293,8 +2354,7 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
                             <dt class="phpdocumentor-tag-list__entry">
                     <span class="phpdocumentor-tag__name">throws</span>
@@ -2302,18 +2362,19 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Firesphere\SolrSearch\Tasks\HTTPException">HTTPException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Last group indexed</p>
+        <span class="phpdocumentor-signature__response_type">int</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Last group indexed</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -2324,21 +2385,24 @@ to identify problems and fix them.</p>
     <h4 class="phpdocumentor-element__name" id="method_updateIndex">
         updateIndex()
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_updateIndex" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Tasks/SolrIndexTask.php"><a href="files/core-src-tasks-solrindextask.html"><abbr title="Core/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Tasks/SolrIndexTask.php"><a href="files/solr-src-tasks-solrindextask.html"><abbr title="solr/src/Tasks/SolrIndexTask.php">SolrIndexTask.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">415</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Execute the update on the client</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">updateIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\ORM\SS_List">SS_List</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$items</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">updateIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\ORM\SS_List">SS_List</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$items</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2355,7 +2419,8 @@ to identify problems and fix them.</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_updateIndex#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -2364,22 +2429,176 @@ to identify problems and fix them.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+                                            </dl>
 
     
 </article>
             </section>
 
+        <div class="phpdocumentor-modal" id="source-view">
+    <div class="phpdocumentor-modal-bg" data-exit-button></div>
+    <div class="phpdocumentor-modal-container">
+        <div class="phpdocumentor-modal-content">
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/solr/src/Tasks/SolrIndexTask.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+        </div>
+        <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        (function () {
+            function loadExternalCodeSnippet(el, url, line) {
+                Array.prototype.slice.call(el.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                    const src = url || pre.getAttribute('data-src').replace(/\\/g, '/');
+                    const language = 'php';
+
+                    const code = document.createElement('code');
+                    code.className = 'language-' + language;
+                    pre.textContent = '';
+                    pre.setAttribute('data-line', line)
+                    code.textContent = 'Loading…';
+                    pre.appendChild(code);
+
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open('GET', src, true);
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState !== 4) {
+                            return;
+                        }
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+                            Prism.highlightElement(code);
+                            return;
+                        }
+
+                        if (xhr.status === 404) {
+                            code.textContent = '✖ Error: File could not be found';
+                            return;
+                        }
+
+                        if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                            return;
+                        }
+
+                        code.textContent = '✖ Error: An unknown error occurred';
+                    };
+
+                    xhr.send(null);
+                });
+            }
+
+            const modalButtons = document.querySelectorAll("[data-modal]");
+            const openedAsLocalFile = window.location.protocol === 'file:';
+            if (modalButtons.length > 0 && openedAsLocalFile) {
+                console.warn(
+                    'Viewing the source code is unavailable because you are opening this page from the file:// scheme; ' +
+                    'browsers block XHR requests when a page is opened this way'
+                );
+            }
+
+            modalButtons.forEach(function (trigger) {
+                if (openedAsLocalFile) {
+                    trigger.setAttribute("hidden", "hidden");
+                }
+
+                trigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const modal = document.getElementById(trigger.dataset.modal);
+                    if (!modal) {
+                        console.error(`Modal with id "${trigger.dataset.modal}" could not be found`);
+                        return;
+                    }
+                    modal.classList.add("phpdocumentor-modal__open");
+
+                    loadExternalCodeSnippet(modal, trigger.dataset.src || null, trigger.dataset.line)
+                    const exits = modal.querySelectorAll("[data-exit-button]");
+                    exits.forEach(function (exit) {
+                        exit.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            modal.classList.remove("phpdocumentor-modal__open");
+                        });
+                    });
+                });
+            });
+        })();
+    </script>
+
     </article>
-                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+                                </section>
+                <section class="phpdocumentor-on-this-page__sidebar">
+                                
+    <section class="phpdocumentor-on-this-page__content">
+        <strong class="phpdocumentor-on-this-page__title">On this page</strong>
+
+        <ul class="phpdocumentor-list -clean">
+            <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#toc-methods">Methods</a></li>
+                                    </ul>
+            </li>
+            
+                            <li class="phpdocumentor-on-this-page-section__title">Properties</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_currentStates">$currentStates<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_batchLength">$batchLength<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_cores">$cores<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_debug">$debug<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_description">$description<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_index">$index<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html#property_logger">$logger<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#property_service">$service<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_title">$title<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#property_segment">$segment<a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html"></li>
+                                            </ul>
+                </li>
+            
+                        <li class="phpdocumentor-on-this-page-section__title">Methods</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_clearIndex">clearIndex()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_getBatchLength">getBatchLength()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_getCores">getCores()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_getIndex">getIndex()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html#method_getLogger">getLogger()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_isDebug">isDebug()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_run">run()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setBatchLength">setBatchLength()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setCores">setCores()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setDebug">setDebug()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setIndex">setIndex()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-LoggerTrait.html#method_setLogger">setLogger()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-SolrIndexTrait.html#method_setService">setService()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_getClasses">getClasses()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClassForIndex">indexClassForIndex()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_taskSetup">taskSetup()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_doReindex">doReindex()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_getGroupSettings">getGroupSettings()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_hasPCNTL">hasPCNTL()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexClass">indexClass()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_indexStateClass">indexStateClass()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_logException">logException()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_runChild">runChild()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_runForkedChild">runForkedChild()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_spawnChildren">spawnChildren()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#method_updateIndex">updateIndex()</a></li>
+                                    </ul>
+            </li>
+                    </ul>
+    </section>
+
+                </section>
+                            </div>
+            <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
     <section class="phpdocumentor-search-results__dialog">
         <header class="phpdocumentor-search-results__header">
             <h2 class="phpdocumentor-search-results__title">Search results</h2>
@@ -2390,7 +2609,6 @@ to identify problems and fix them.</p>
         </section>
     </section>
 </section>
-            </div>
         </div>
         <a href="classes/Firesphere-SolrSearch-Tasks-SolrIndexTask.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
@@ -2399,5 +2617,9 @@ to identify problems and fix them.</p>
     <script>
         cssVars({});
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
 </body>
 </html>

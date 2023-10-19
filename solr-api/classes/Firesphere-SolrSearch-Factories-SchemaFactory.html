@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SilverStripe Solr search</title>
+            <title>SilverStripe Solr Search</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="icon" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
-            <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/template.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
                 <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
         <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+        <script src="js/template.js"></script>
         <script src="js/search.js"></script>
         <script defer src="js/searchIndex.js"></script>
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr search</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr Search</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -47,38 +53,42 @@
 <label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
     Menu
 </label>
-<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
-    
-    <section class="phpdocumentor-sidebar__category">
-        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
-                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/firesphere-solrcompatibility.html"><abbr title="\Firesphere\SolrCompatibility">SolrCompatibility</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrsearch.html"><abbr title="\Firesphere\SolrSearch">SolrSearch</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrfluent.html"><abbr title="\Firesphere\SolrFluent">SolrFluent</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrpermissions.html"><abbr title="\Firesphere\SolrPermissions">SolrPermissions</abbr></a></li>
-                                            <li><a href="namespaces/firesphere-solrsubsites.html"><abbr title="\Firesphere\SolrSubsites">SolrSubsites</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/silverstripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/silverstripe-fulltextsearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
-                                    </ul>
-                        </section>
+<aside class="phpdocumentor-column -three phpdocumentor-sidebar">
+                    <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="namespaces/firesphere.html" class="">Firesphere</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/firesphere-solrsearch.html" class="">SolrSearch</a>
+                
+            </li>
+            </ul>
 
-        <section class="phpdocumentor-sidebar__category">
-        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
-                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Firesphere.html"><abbr title="\Firesphere">Firesphere</abbr></a></h3>
-                        <ul class="phpdocumentor-list">
-                                    <li><a href="packages/Firesphere-Solr.html"><abbr title="\Firesphere\Solr">Solr</abbr></a></li>
-                            </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/SilverStripe.html"><abbr title="\SilverStripe">SilverStripe</abbr></a></h3>
-                        <ul class="phpdocumentor-list">
-                                    <li><a href="packages/SilverStripe-FullTextSearch.html"><abbr title="\SilverStripe\FullTextSearch">FullTextSearch</abbr></a></li>
-                            </ul>
-                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
                         </section>
-    
+                <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Application.html" class="">Application</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Default.html" class="">Default</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Firesphere.html" class="">Firesphere</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/Firesphere-Solr.html" class="">Solr</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+            
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
                 <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
@@ -92,8 +102,9 @@
     </section>
 </aside>
 
-            <div class="phpdocumentor-column -eight phpdocumentor-content">
-                    <ul class="phpdocumentor-breadcrumbs">
+            <div class="phpdocumentor-column -nine phpdocumentor-content">
+                                <section>
+                                        <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere.html">Firesphere</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch.html">SolrSearch</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/firesphere-solrsearch-factories.html">Factories</a></li>
@@ -122,17 +133,19 @@
                             <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html"><abbr title="\Firesphere\SolrSearch\Traits\GetSetSchemaFactoryTrait">GetSetSchemaFactoryTrait</abbr></a>                    </span>
     </h2>
 
+<div class="phpdocumentor-label-line">
+
+
+</div>
+
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">29</span>
-</aside>
+
+    </aside>
 
             <p class="phpdocumentor-summary">Class SchemaFactory</p>
-
-    <section class="phpdocumentor-description"></section>
-
-
 
 
 
@@ -141,168 +154,186 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+
 </h3>
 
+
+
+
+
+
+
+
+
+<h4 id="toc-properties">
+    Properties
+    <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
 <dl class="phpdocumentor-table-of-contents">
-                <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_baseTemplatePath">$baseTemplatePath</a>
     <span>
-                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_coreService">$coreService</a>
     <span>
-                &nbsp;: <a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html"><abbr title="\Firesphere\SolrSearch\Services\SolrCoreService">SolrCoreService</abbr></a>            </span>
+                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Services-SolrCoreService.html"><abbr title="\Firesphere\SolrSearch\Services\SolrCoreService">SolrCoreService</abbr></a>            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_fieldResolver">$fieldResolver</a>
     <span>
-                &nbsp;: <a href="classes/Firesphere-SolrSearch-Helpers-FieldResolver.html"><abbr title="\Firesphere\SolrSearch\Helpers\FieldResolver">FieldResolver</abbr></a>            </span>
+                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Helpers-FieldResolver.html"><abbr title="\Firesphere\SolrSearch\Helpers\FieldResolver">FieldResolver</abbr></a>            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_index">$index</a>
     <span>
-                &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>            </span>
+                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>            </span>
 </dt>
 <dd>Index to generate the schema for</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_store">$store</a>
     <span>
-                &nbsp;: bool            </span>
+                        &nbsp;: bool            </span>
 </dt>
 <dd>Store the value in Solr</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_storeFields">$storeFields</a>
     <span>
-                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_template">$template</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
 <dd>ABSOLUTE Path to template</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_typesTemplate">$typesTemplate</a>
     <span>
-                &nbsp;: string            </span>
+                        &nbsp;: string            </span>
 </dt>
 <dd>ABSOLUTE Path to types.ss template</dd>
 
-                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    </dl>
+
+<h4 id="toc-methods">
+    Methods
+    <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method___construct">__construct()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                                &nbsp;: mixed    </span>
 </dt>
 <dd>SchemaFactory constructor.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_generateSchema">generateSchema()</a>
     <span>
-                        &nbsp;: <abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr>    </span>
+                                &nbsp;: <abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr>    </span>
 </dt>
 <dd>Generate the Schema xml</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getBaseTemplatePath">getBaseTemplatePath()</a>
     <span>
-                        &nbsp;: string|bool    </span>
+                                &nbsp;: string|bool    </span>
 </dt>
 <dd>Retrieve the base template path for a type (extra or schema)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getClassID">getClassID()</a>
     <span>
-                        &nbsp;: string    </span>
+                                &nbsp;: string    </span>
 </dt>
 <dd>Get the Identifier Field for Solr</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getCopyFieldDefinitions">getCopyFieldDefinitions()</a>
     <span>
-                        &nbsp;: <abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>    </span>
+                                &nbsp;: <abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>    </span>
 </dt>
 <dd>Get the definition of a copy field for determining what to load in to Solr</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getCopyFields">getCopyFields()</a>
     <span>
-                        &nbsp;: <abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>    </span>
+                                &nbsp;: <abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>    </span>
 </dt>
 <dd>Get the fields that should be copied</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getDefaultField">getDefaultField()</a>
     <span>
-                        &nbsp;: string|array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: string|array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Get the default field to generate df components for</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getExtrasPath">getExtrasPath()</a>
     <span>
-                        &nbsp;: string    </span>
+                                &nbsp;: string    </span>
 </dt>
 <dd>Get any the template path for anything that needs loading in to Solr</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFilterFieldDefinitions">getFilterFieldDefinitions()</a>
     <span>
-                        &nbsp;: <abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>    </span>
+                                &nbsp;: <abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>    </span>
 </dt>
 <dd>Get the definitions of a filter field to load in to Solr.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFulltextFieldDefinitions">getFulltextFieldDefinitions()</a>
     <span>
-                        &nbsp;: <abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>    </span>
+                                &nbsp;: <abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>    </span>
 </dt>
 <dd>Get all fulltext field definitions that are loaded</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getIDField">getIDField()</a>
     <span>
-                        &nbsp;: string    </span>
+                                &nbsp;: string    </span>
 </dt>
 <dd>Get the Identifier Field for Solr</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getIndex">getIndex()</a>
     <span>
-                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>    </span>
+                                &nbsp;: <a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>    </span>
 </dt>
 <dd>Get the Index that&#039;s being used</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getIndexName">getIndexName()</a>
     <span>
-                        &nbsp;: string    </span>
+                                &nbsp;: string    </span>
 </dt>
 <dd>Get the name of the index being used</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getTemplate">getTemplate()</a>
     <span>
-                        &nbsp;: string    </span>
+                                &nbsp;: string    </span>
 </dt>
 <dd>Get the base template for the schema xml</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getTemplatePathFor">getTemplatePathFor()</a>
     <span>
-                        &nbsp;: string    </span>
+                                &nbsp;: string    </span>
 </dt>
 <dd>Get the base path of the template given, e.g. the &quot;schema&quot; templates
 or the &quot;extra&quot; templates.</dd>
@@ -310,67 +341,68 @@ or the &quot;extra&quot; templates.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getTypes">getTypes()</a>
     <span>
-                        &nbsp;: <abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr>    </span>
+                                &nbsp;: <abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr>    </span>
 </dt>
 <dd>Get the types template in a rendered state</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getTypesTemplate">getTypesTemplate()</a>
     <span>
-                        &nbsp;: string    </span>
+                                &nbsp;: string    </span>
 </dt>
 <dd>Get the types template if defined</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_setBaseTemplatePath">setBaseTemplatePath()</a>
     <span>
-                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a>    </span>
+                                &nbsp;: <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a>    </span>
 </dt>
 <dd>Set the base template path for a type (extra or schema)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setIndex">setIndex()</a>
     <span>
-                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a>    </span>
+                                &nbsp;: <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a>    </span>
 </dt>
 <dd>Set the index that&#039;s being used and add the introspection for it</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setStore">setStore()</a>
     <span>
-                        &nbsp;: void    </span>
+                                &nbsp;: void    </span>
 </dt>
 <dd>Set the store value</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setTemplate">setTemplate()</a>
     <span>
-                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a>    </span>
+                                &nbsp;: <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a>    </span>
 </dt>
 <dd>Set a custom template for schema xml</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setTypesTemplate">setTypesTemplate()</a>
     <span>
-                        &nbsp;: <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a>    </span>
+                                &nbsp;: <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a>    </span>
 </dt>
 <dd>Set custom types template</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFieldDefinition">getFieldDefinition()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                                &nbsp;: mixed    </span>
 </dt>
 <dd>Get the field definition for a single field</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getStoreFields">getStoreFields()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Get the stored fields. This includes boosted and faceted fields</dd>
 
-        </dl>
+    </dl>
+
 
 
 
@@ -381,6 +413,7 @@ or the &quot;extra&quot; templates.</dd>
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
             <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="
@@ -392,14 +425,16 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="property_baseTemplatePath">
         $baseTemplatePath
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_baseTemplatePath" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">48</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -408,7 +443,9 @@ or the &quot;extra&quot; templates.</dd>
     <span class="phpdocumentor-signature__name">$baseTemplatePath</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Base paths to the template</p>
+</section>
 
     
 
@@ -423,14 +460,16 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="property_coreService">
         $coreService
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_coreService" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">44</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -439,7 +478,9 @@ or the &quot;extra&quot; templates.</dd>
     <span class="phpdocumentor-signature__name">$coreService</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>CoreService to use</p>
+</section>
 
     
 
@@ -454,14 +495,16 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="property_fieldResolver">
         $fieldResolver
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_fieldResolver" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">40</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -470,7 +513,9 @@ or the &quot;extra&quot; templates.</dd>
     <span class="phpdocumentor-signature__name">$fieldResolver</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>The field resolver to find a field for a class</p>
+</section>
 
     
 
@@ -485,14 +530,16 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="property_index">
         $index
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_index" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">43</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Index to generate the schema for</p>
 
@@ -502,8 +549,8 @@ or the &quot;extra&quot; templates.</dd>
     <span class="phpdocumentor-signature__name">$index</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -517,14 +564,16 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="property_store">
         $store
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_store" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">37</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Store the value in Solr</p>
 
@@ -534,8 +583,8 @@ or the &quot;extra&quot; templates.</dd>
     <span class="phpdocumentor-signature__name">$store</span>
      = <span class="phpdocumentor-signature__default-value">false</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -549,14 +598,16 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="property_storeFields">
         $storeFields
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_storeFields" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">36</span>
-</aside>
+
+    </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -565,7 +616,9 @@ or the &quot;extra&quot; templates.</dd>
     <span class="phpdocumentor-signature__name">$storeFields</span>
      = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
-        <section class="phpdocumentor-description"></section>
+    
+        <section class="phpdocumentor-description"><p>Fields that always need to be stored, by Index name</p>
+</section>
 
     
 
@@ -580,14 +633,16 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="property_template">
         $template
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_template" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">31</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">ABSOLUTE Path to template</p>
 
@@ -597,8 +652,8 @@ or the &quot;extra&quot; templates.</dd>
     <span class="phpdocumentor-signature__name">$template</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -612,14 +667,16 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="property_typesTemplate">
         $typesTemplate
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_typesTemplate" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">49</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">ABSOLUTE Path to types.ss template</p>
 
@@ -629,8 +686,8 @@ or the &quot;extra&quot; templates.</dd>
     <span class="phpdocumentor-signature__name">$typesTemplate</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -640,6 +697,7 @@ or the &quot;extra&quot; templates.</dd>
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
             <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="phpdocumentor-element
@@ -650,28 +708,26 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">53</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">SchemaFactory constructor.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+    
 
     
 </article>
@@ -684,30 +740,32 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_generateSchema">
         generateSchema()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_generateSchema" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">297</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Generate the Schema xml</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">generateSchema</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">generateSchema</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -718,41 +776,42 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getBaseTemplatePath">
         getBaseTemplatePath()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getBaseTemplatePath" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">273</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Retrieve the base template path for a type (extra or schema)</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getBaseTemplatePath</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|bool</span></code>
+                    <span class="phpdocumentor-signature__name">getBaseTemplatePath</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|bool</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$type</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string|bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string|bool</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -763,30 +822,32 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getClassID">
         getClassID()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getClassID" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">122</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the Identifier Field for Solr</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getClassID</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getClassID</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -797,26 +858,30 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getCopyFieldDefinitions">
         getCopyFieldDefinitions()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getCopyFieldDefinitions" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">175</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the definition of a copy field for determining what to load in to Solr</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCopyFieldDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">getCopyFieldDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getCopyFieldDefinitions#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -825,17 +890,15 @@ or the &quot;extra&quot; templates.</dd>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -846,30 +909,32 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getCopyFields">
         getCopyFields()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getCopyFields" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">151</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the fields that should be copied</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCopyFields</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">getCopyFields</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -880,30 +945,32 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getDefaultField">
         getDefaultField()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getDefaultField" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">102</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the default field to generate df components for</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDefaultField</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">getDefaultField</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -914,30 +981,32 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getExtrasPath">
         getExtrasPath()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getExtrasPath" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">310</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get any the template path for anything that needs loading in to Solr</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExtrasPath</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getExtrasPath</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -948,26 +1017,30 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getFilterFieldDefinitions">
         getFilterFieldDefinitions()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFilterFieldDefinitions" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">201</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the definitions of a filter field to load in to Solr.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFilterFieldDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">getFilterFieldDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFilterFieldDefinitions#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -976,17 +1049,15 @@ or the &quot;extra&quot; templates.</dd>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -997,26 +1068,30 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getFulltextFieldDefinitions">
         getFulltextFieldDefinitions()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFulltextFieldDefinitions" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">66</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get all fulltext field definitions that are loaded</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFulltextFieldDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">getFulltextFieldDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFulltextFieldDefinitions#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1025,17 +1100,15 @@ or the &quot;extra&quot; templates.</dd>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
+                                            </dl>
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1046,30 +1119,32 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getIDField">
         getIDField()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getIDField" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">112</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the Identifier Field for Solr</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getIDField</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getIDField</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1080,30 +1155,32 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getIndex">
         getIndex()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getIndex" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">66</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the Index that&#039;s being used</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getIndex</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">getIndex</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1114,30 +1191,32 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getIndexName">
         getIndexName()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getIndexName" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">92</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the name of the index being used</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getIndexName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getIndexName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1148,30 +1227,32 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getTemplate">
         getTemplate()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getTemplate" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">155</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the base template for the schema xml</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTemplate</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getTemplate</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1182,22 +1263,25 @@ or the &quot;extra&quot; templates.</dd>
     <h4 class="phpdocumentor-element__name" id="method_getTemplatePathFor">
         getTemplatePathFor()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getTemplatePathFor" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">242</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the base path of the template given, e.g. the &quot;schema&quot; templates
 or the &quot;extra&quot; templates.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTemplatePathFor</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getTemplatePathFor</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1213,12 +1297,11 @@ or the &quot;extra&quot; templates.</p>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1229,30 +1312,32 @@ or the &quot;extra&quot; templates.</p>
     <h4 class="phpdocumentor-element__name" id="method_getTypes">
         getTypes()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getTypes" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">227</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the types template in a rendered state</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTypes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">getTypes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\SilverStripe\ORM\FieldType\DBHTMLText">DBHTMLText</abbr></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1263,30 +1348,32 @@ or the &quot;extra&quot; templates.</p>
     <h4 class="phpdocumentor-element__name" id="method_getTypesTemplate">
         getTypesTemplate()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getTypesTemplate" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">132</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the types template if defined</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTypesTemplate</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getTypesTemplate</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1297,21 +1384,24 @@ or the &quot;extra&quot; templates.</p>
     <h4 class="phpdocumentor-element__name" id="method_setBaseTemplatePath">
         setBaseTemplatePath()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_setBaseTemplatePath" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">285</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set the base template path for a type (extra or schema)</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setBaseTemplatePath</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$baseTemplatePath</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">setBaseTemplatePath</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$baseTemplatePath</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1319,27 +1409,24 @@ or the &quot;extra&quot; templates.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$type</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1350,21 +1437,24 @@ or the &quot;extra&quot; templates.</p>
     <h4 class="phpdocumentor-element__name" id="method_setIndex">
         setIndex()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setIndex" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">77</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set the index that&#039;s being used and add the introspection for it</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">setIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1372,19 +1462,17 @@ or the &quot;extra&quot; templates.</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1395,21 +1483,24 @@ or the &quot;extra&quot; templates.</p>
     <h4 class="phpdocumentor-element__name" id="method_setStore">
         setStore()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setStore" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">56</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set the store value</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setStore</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$store</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">setStore</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$store</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1417,17 +1508,11 @@ or the &quot;extra&quot; templates.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">bool</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
 
     
 </article>
@@ -1440,21 +1525,24 @@ or the &quot;extra&quot; templates.</p>
     <h4 class="phpdocumentor-element__name" id="method_setTemplate">
         setTemplate()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setTemplate" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">166</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set a custom template for schema xml</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTemplate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$template</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">setTemplate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$template</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1462,19 +1550,17 @@ or the &quot;extra&quot; templates.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1485,21 +1571,24 @@ or the &quot;extra&quot; templates.</p>
     <h4 class="phpdocumentor-element__name" id="method_setTypesTemplate">
         setTypesTemplate()
         <a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setTypesTemplate" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/core-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="Core/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php"><a href="files/solr-src-traits-schemaservicetraits-getsetschemafactorytrait.html"><abbr title="solr/src/Traits/SchemaServiceTraits/GetSetSchemaFactoryTrait.php">GetSetSchemaFactoryTrait.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">143</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Set custom types template</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTypesTemplate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$typesTemplate</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">setTypesTemplate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$typesTemplate</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1507,19 +1596,17 @@ or the &quot;extra&quot; templates.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"><abbr title="\Firesphere\SolrSearch\Factories\SchemaFactory">SchemaFactory</abbr></a></span>
+            </section>
 
-    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1530,53 +1617,54 @@ or the &quot;extra&quot; templates.</p>
     <h4 class="phpdocumentor-element__name" id="method_getFieldDefinition">
         getFieldDefinition()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFieldDefinition" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">90</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the field definition for a single field</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">getFieldDefinition</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fieldName</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$return</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$copyField</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getFieldDefinition</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fieldName</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$return</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$copyField</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$fieldName</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$return</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\ORM\ArrayList">ArrayList</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$copyField</span>
                 : <span class="phpdocumentor-signature__argument__return-type">null|string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFieldDefinition#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1585,15 +1673,9 @@ or the &quot;extra&quot; templates.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"></section>
-
+                                             
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+                                            </dl>
 
     
 </article>
@@ -1606,35 +1688,192 @@ or the &quot;extra&quot; templates.</p>
     <h4 class="phpdocumentor-element__name" id="method_getStoreFields">
         getStoreFields()
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getStoreFields" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Core/src/Factories/SchemaFactory.php"><a href="files/core-src-factories-schemafactory.html"><abbr title="Core/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="solr/src/Factories/SchemaFactory.php"><a href="files/solr-src-factories-schemafactory.html"><abbr title="solr/src/Factories/SchemaFactory.php">SchemaFactory.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">120</span>
-</aside>
+
+    </aside>
 
         <p class="phpdocumentor-summary">Get the stored fields. This includes boosted and faceted fields</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">getStoreFields</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">getStoreFields</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    <div class="phpdocumentor-label-line">
+        </div>
     
     
+    
 
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            </section>
 
-    
 </article>
             </section>
 
+        <div class="phpdocumentor-modal" id="source-view">
+    <div class="phpdocumentor-modal-bg" data-exit-button></div>
+    <div class="phpdocumentor-modal-container">
+        <div class="phpdocumentor-modal-content">
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/solr/src/Factories/SchemaFactory.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+        </div>
+        <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        (function () {
+            function loadExternalCodeSnippet(el, url, line) {
+                Array.prototype.slice.call(el.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                    const src = url || pre.getAttribute('data-src').replace(/\\/g, '/');
+                    const language = 'php';
+
+                    const code = document.createElement('code');
+                    code.className = 'language-' + language;
+                    pre.textContent = '';
+                    pre.setAttribute('data-line', line)
+                    code.textContent = 'Loading…';
+                    pre.appendChild(code);
+
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open('GET', src, true);
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState !== 4) {
+                            return;
+                        }
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+                            Prism.highlightElement(code);
+                            return;
+                        }
+
+                        if (xhr.status === 404) {
+                            code.textContent = '✖ Error: File could not be found';
+                            return;
+                        }
+
+                        if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                            return;
+                        }
+
+                        code.textContent = '✖ Error: An unknown error occurred';
+                    };
+
+                    xhr.send(null);
+                });
+            }
+
+            const modalButtons = document.querySelectorAll("[data-modal]");
+            const openedAsLocalFile = window.location.protocol === 'file:';
+            if (modalButtons.length > 0 && openedAsLocalFile) {
+                console.warn(
+                    'Viewing the source code is unavailable because you are opening this page from the file:// scheme; ' +
+                    'browsers block XHR requests when a page is opened this way'
+                );
+            }
+
+            modalButtons.forEach(function (trigger) {
+                if (openedAsLocalFile) {
+                    trigger.setAttribute("hidden", "hidden");
+                }
+
+                trigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const modal = document.getElementById(trigger.dataset.modal);
+                    if (!modal) {
+                        console.error(`Modal with id "${trigger.dataset.modal}" could not be found`);
+                        return;
+                    }
+                    modal.classList.add("phpdocumentor-modal__open");
+
+                    loadExternalCodeSnippet(modal, trigger.dataset.src || null, trigger.dataset.line)
+                    const exits = modal.querySelectorAll("[data-exit-button]");
+                    exits.forEach(function (exit) {
+                        exit.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            modal.classList.remove("phpdocumentor-modal__open");
+                        });
+                    });
+                });
+            });
+        })();
+    </script>
+
     </article>
-                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+                                </section>
+                <section class="phpdocumentor-on-this-page__sidebar">
+                                
+    <section class="phpdocumentor-on-this-page__content">
+        <strong class="phpdocumentor-on-this-page__title">On this page</strong>
+
+        <ul class="phpdocumentor-list -clean">
+            <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#toc-methods">Methods</a></li>
+                                    </ul>
+            </li>
+            
+                            <li class="phpdocumentor-on-this-page-section__title">Properties</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_baseTemplatePath">$baseTemplatePath<a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_coreService">$coreService<a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_fieldResolver">$fieldResolver<a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_index">$index<a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_store">$store<a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#property_storeFields">$storeFields<a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_template">$template<a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"></li>
+                                                    <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_typesTemplate">$typesTemplate<a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html"></li>
+                                            </ul>
+                </li>
+            
+                        <li class="phpdocumentor-on-this-page-section__title">Methods</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_generateSchema">generateSchema()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getBaseTemplatePath">getBaseTemplatePath()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getClassID">getClassID()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getCopyFieldDefinitions">getCopyFieldDefinitions()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getCopyFields">getCopyFields()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getDefaultField">getDefaultField()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getExtrasPath">getExtrasPath()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFilterFieldDefinitions">getFilterFieldDefinitions()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFulltextFieldDefinitions">getFulltextFieldDefinitions()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getIDField">getIDField()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getIndex">getIndex()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getIndexName">getIndexName()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getTemplate">getTemplate()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getTemplatePathFor">getTemplatePathFor()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getTypes">getTypes()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_getTypesTemplate">getTypesTemplate()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_setBaseTemplatePath">setBaseTemplatePath()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setIndex">setIndex()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setStore">setStore()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setTemplate">setTemplate()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#method_setTypesTemplate">setTypesTemplate()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getFieldDefinition">getFieldDefinition()</a></li>
+                                            <li><a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#method_getStoreFields">getStoreFields()</a></li>
+                                    </ul>
+            </li>
+                    </ul>
+    </section>
+
+                </section>
+                            </div>
+            <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
     <section class="phpdocumentor-search-results__dialog">
         <header class="phpdocumentor-search-results__header">
             <h2 class="phpdocumentor-search-results__title">Search results</h2>
@@ -1645,7 +1884,6 @@ or the &quot;extra&quot; templates.</p>
         </section>
     </section>
 </section>
-            </div>
         </div>
         <a href="classes/Firesphere-SolrSearch-Factories-SchemaFactory.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
@@ -1654,5 +1892,9 @@ or the &quot;extra&quot; templates.</p>
     <script>
         cssVars({});
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
 </body>
 </html>

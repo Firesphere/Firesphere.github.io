@@ -118,7 +118,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Helpers\\Statics",
             "name": "Statics",
-            "summary": "Class\u0020Statics\nTypemap\u0020static\u0020helper",
+            "summary": "Class\u0020Statics",
             "url": "classes/Firesphere-ElasticSearch-Helpers-Statics.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex",
@@ -288,8 +288,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetAggregates\u0028\u0029",
             "name": "getAggregates",
-            "summary": "",
+            "summary": "Build\u0020the\u0020query\u0020part\u0020for\u0020aggregation\/faceting",
             "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAggregates"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetSort\u0028\u0029",
+            "name": "getSort",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSort"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003A\u0024query",
             "name": "query",
@@ -508,7 +513,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask",
             "name": "ElasticConfigureTask",
-            "summary": "",
+            "summary": "Class\u0020ElasticConfigureTask",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A__construct\u0028\u0029",
@@ -565,6 +570,11 @@ Search.appendIndex(
             "name": "service",
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_service"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024unSsortables",
+            "name": "unSsortables",
+            "summary": "DBHTML\u0020and\u0020DBText\u0020etc.\u0020should\u0020never\u0020be\u0020made\u0020sortable\nIt\u0020doesn\u0027t\u0020make\u0020sense\u0020for\u0020large\u0020text\u0020objects",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_unSsortables"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask",
             "name": "ElasticIndexTask",
@@ -1596,6 +1606,11 @@ Search.appendIndex(
             "summary": "Set\u0020the\u0020sort\u0020fields",
             "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_setSort"
         },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AaddSort\u0028\u0029",
+            "name": "addSort",
+            "summary": "Add\u0020a\u0020sort\u0020field\u0020and\u0020direction",
+            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_addSort"
+        },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AgetBoostedFields\u0028\u0029",
             "name": "getBoostedFields",
             "summary": "",
@@ -2055,106 +2070,6 @@ Search.appendIndex(
             "name": "highlight",
             "summary": "",
             "url": "classes/Firesphere-SearchBackend-Traits-SearchResultSetTrait.html#property_highlight"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\DataObjectExtension",
-            "name": "DataObjectExtension",
-            "summary": "Class\u0020\\Firesphere\\SolrCompatibility\\Extensions\\DataObjectExtension",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-DataObjectExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\DataObjectExtension\u003A\u003AtriggerReindex\u0028\u0029",
-            "name": "triggerReindex",
-            "summary": "Stub\u0020for\u0020triggering\u0020a\u0020reindex\u0020of\u0020the\u0020owner",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-DataObjectExtension.html#method_triggerReindex"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\FulltextSearchExtension",
-            "name": "FulltextSearchExtension",
-            "summary": "Class\u0020\\Firesphere\\SolrCompatibility\\Extensions\\FulltextSearchExtension\nBackward\u0020compatibility\u0020stubs\u0020for\u0020the\u0020Full\u0020text\u0020search\u0020module",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-FulltextSearchExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\FulltextSearchExtension\u003A\u003AinitToYml\u0028\u0029",
-            "name": "initToYml",
-            "summary": "Generate\u0020a\u0020yml\u0020version\u0020of\u0020the\u0020init\u0020method\u0020indexes",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-FulltextSearchExtension.html#method_initToYml"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\FulltextSearchExtension\u003A\u003AupdateSearchResults\u0028\u0029",
-            "name": "updateSearchResults",
-            "summary": "Convert\u0020the\u0020SearchResult\u0020class\u0020to\u0020a\u0020Full\u0020text\u0020search\u0020compatible\u0020ArrayData",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-FulltextSearchExtension.html#method_updateSearchResults"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\FulltextSearchExtension\u003A\u003AgetCollatedNice\u0028\u0029",
-            "name": "getCollatedNice",
-            "summary": "Create\u0020a\u0020spellcheck\u0020string\u0020that\u0027s\u0020not\u0020the\u0020literal\u0020collation\u0020with\u0020Solr\u0020query\u0020parts",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-FulltextSearchExtension.html#method_getCollatedNice"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\FulltextSearchExtension\u003A\u003Asearch\u0028\u0029",
-            "name": "search",
-            "summary": "Convert\u0020the\u0020old\u0020search\u0020method\u0020to\u0020the\u0020new\u0020BaseIndex\u0020doSearch\u0020methods",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-FulltextSearchExtension.html#method_search"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\FulltextSearchExtension\u003A\u003AaddFulltextFields\u0028\u0029",
-            "name": "addFulltextFields",
-            "summary": "Add\u0020a\u0020Fulltext\u0020Field",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-FulltextSearchExtension.html#method_addFulltextFields"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\SolrCoreServiceExtension",
-            "name": "SolrCoreServiceExtension",
-            "summary": "Class\u0020\\Firesphere\\SolrCompatibility\\Extensions\\SolrCoreServiceExtension",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-SolrCoreServiceExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions\\SolrCoreServiceExtension\u003A\u003AcoreIsActive\u0028\u0029",
-            "name": "coreIsActive",
-            "summary": "Check\u0020the\u0020status\u0020of\u0020a\u0020core",
-            "url": "classes/Firesphere-SolrCompatibility-Extensions-SolrCoreServiceExtension.html#method_coreIsActive"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery",
-            "name": "SearchQuery",
-            "summary": "Class\u0020SearchQuery\nCover\u0020any\u0020changes\u0020between\u0020the\u0020SilverStripe\u0020FulltextSearch\u0020module\u0020and\u0020the\u0020upgraded\u0020module",
-            "url": "classes/SilverStripe-FullTextSearch-Search-Queries-SearchQuery.html"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery\u003A\u003AaddSearchTerm\u0028\u0029",
-            "name": "addSearchTerm",
-            "summary": "A\u0020simple\u0020stub\u0020to\u0020cover\u0020changes\u0020between\u0020Solr\u0020Search\u0020modules",
-            "url": "classes/SilverStripe-FullTextSearch-Search-Queries-SearchQuery.html#method_addSearchTerm"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery\u003A\u003AsetLimit\u0028\u0029",
-            "name": "setLimit",
-            "summary": "Set\u0020the\u0020rows\u0020that\u0020are\u0020to\u0020be\u0020returned\nCompatibility\u0020stub",
-            "url": "classes/SilverStripe-FullTextSearch-Search-Queries-SearchQuery.html#method_setLimit"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery\u003A\u003AgetLimit\u0028\u0029",
-            "name": "getLimit",
-            "summary": "Get\u0020the\u0020rows\u0020that\u0020are\u0020to\u0020be\u0020returned\nCompatibility\u0020stub",
-            "url": "classes/SilverStripe-FullTextSearch-Search-Queries-SearchQuery.html#method_getLimit"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Search\\Queries\\SearchQuery\u003A\u003A\u0024default_page_size",
-            "name": "default_page_size",
-            "summary": "",
-            "url": "classes/SilverStripe-FullTextSearch-Search-Queries-SearchQuery.html#property_default_page_size"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Solr\\Solr",
-            "name": "Solr",
-            "summary": "Class\u0020Solr\u0020Stub\u0020to\u0020convert\u0020old\u0020Solr\u0020configuration\u0020to\u0020config",
-            "url": "classes/SilverStripe-FullTextSearch-Solr-Solr.html"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Solr\\Solr\u003A\u003Aconfigure_server\u0028\u0029",
-            "name": "configure_server",
-            "summary": "Compatibility\u0020with\u0020Fulltext\u0020Search\u0020module\u0020for\u0020configurations",
-            "url": "classes/SilverStripe-FullTextSearch-Solr-Solr.html#method_configure_server"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Solr\\SolrIndex",
-            "name": "SolrIndex",
-            "summary": "Class\u0020SolrIndex\nThis\u0020class\u0020serves\u0020as\u0020a\u0020stub\u0020to\u0020make\u0020migration\u0020from\u0020Fulltext\u0020Search\u0020easier",
-            "url": "classes/SilverStripe-FullTextSearch-Solr-SolrIndex.html"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Solr\\SolrIndex\u003A\u003Ainit\u0028\u0029",
-            "name": "init",
-            "summary": "Add\u0020the\u0020SiteTree\u0020class\u0020by\u0020default",
-            "url": "classes/SilverStripe-FullTextSearch-Solr-SolrIndex.html#method_init"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Solr\\SolrIndex\u003A\u003AgetIndexName\u0028\u0029",
-            "name": "getIndexName",
-            "summary": "Return\u0020the\u0020classname\u0020by\u0020default\u0020\u0028Not\u0020advised\u0029",
-            "url": "classes/SilverStripe-FullTextSearch-Solr-SolrIndex.html#method_getIndexName"
         },                {
             "fqsen": "\\getShortFieldName\u0028\u0029",
             "name": "getShortFieldName",
@@ -4971,196 +4886,6 @@ Search.appendIndex(
             "summary": "ABSOLUTE\u0020Path\u0020to\u0020types.ss\u0020template",
             "url": "classes/Firesphere-SolrSearch-Traits-GetSetSchemaFactoryTrait.html#property_typesTemplate"
         },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\Extensions\\FluentDocumentExtension",
-            "name": "FluentDocumentExtension",
-            "summary": "Class\u0020Firesphere\\SolrFluent\\Extensions\\FluentDocumentExtension",
-            "url": "classes/Firesphere-SolrFluent-Extensions-FluentDocumentExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\Extensions\\FluentDocumentExtension\u003A\u003AonBeforeAddDoc\u0028\u0029",
-            "name": "onBeforeAddDoc",
-            "summary": "Update\u0020the\u0020Solr\u0020field\u0020for\u0020the\u0020value\u0020to\u0020use\u0020the\u0020locale\u0020name",
-            "url": "classes/Firesphere-SolrFluent-Extensions-FluentDocumentExtension.html#method_onBeforeAddDoc"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\Extensions\\FluentIndexExtension",
-            "name": "FluentIndexExtension",
-            "summary": "Support\u0020for\u0020Fluent\u0020translations\u0020in\u0020the\u0020index.",
-            "url": "classes/Firesphere-SolrFluent-Extensions-FluentIndexExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\Extensions\\FluentIndexExtension\u003A\u003AonBeforeInit\u0028\u0029",
-            "name": "onBeforeInit",
-            "summary": "Add\u0020the\u0020fluent\u0020states",
-            "url": "classes/Firesphere-SolrFluent-Extensions-FluentIndexExtension.html#method_onBeforeInit"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\Extensions\\FluentIndexExtension\u003A\u003AonAfterInit\u0028\u0029",
-            "name": "onAfterInit",
-            "summary": "Add\u0020the\u0020needed\u0020language\u0020copy\u0020fields\u0020to\u0020Solr",
-            "url": "classes/Firesphere-SolrFluent-Extensions-FluentIndexExtension.html#method_onAfterInit"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\Extensions\\FluentIndexExtension\u003A\u003AonBeforeSearch\u0028\u0029",
-            "name": "onBeforeSearch",
-            "summary": "Set\u0020to\u0020the\u0020correct\u0020language\u0020to\u0020search\u0020if\u0020needed",
-            "url": "classes/Firesphere-SolrFluent-Extensions-FluentIndexExtension.html#method_onBeforeSearch"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\Extensions\\FluentSchemaExtension",
-            "name": "FluentSchemaExtension",
-            "summary": "Class\u0020\\Firesphere\\SolrFluent\\Extensions\\FluentSchemaExtension",
-            "url": "classes/Firesphere-SolrFluent-Extensions-FluentSchemaExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\Extensions\\FluentSchemaExtension\u003A\u003AonAfterFieldDefinition\u0028\u0029",
-            "name": "onAfterFieldDefinition",
-            "summary": "Add\u0020the\u0020locale\u0020fields",
-            "url": "classes/Firesphere-SolrFluent-Extensions-FluentSchemaExtension.html#method_onAfterFieldDefinition"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState",
-            "name": "FluentSiteState",
-            "summary": "Class\u0020\\Firesphere\\SolrFluent\\States\\FluentSiteState",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState\u003A\u003AappliesTo\u0028\u0029",
-            "name": "appliesTo",
-            "summary": "Does\u0020the\u0020state\u0020apply\u0020to\u0020this\u0020class",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html#method_appliesTo"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState\u003A\u003AstateIsApplicable\u0028\u0029",
-            "name": "stateIsApplicable",
-            "summary": "Is\u0020this\u0020state\u0020applicable\u0020to\u0020this\u0020extension",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html#method_stateIsApplicable"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState\u003A\u003AsetDefaultState\u0028\u0029",
-            "name": "setDefaultState",
-            "summary": "Reset\u0020the\u0020SiteState\u0020to\u0020it\u0027s\u0020default\u0020state\nStub\u0020method\u0020for\u0020readability",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html#method_setDefaultState"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState\u003A\u003AcurrentState\u0028\u0029",
-            "name": "currentState",
-            "summary": "Return\u0020the\u0020current\u0020state\u0020of\u0020the\u0020site",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html#method_currentState"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState\u003A\u003AactivateState\u0028\u0029",
-            "name": "activateState",
-            "summary": "Activate\u0020a\u0020given\u0020state.\u0020This\u0020should\u0020only\u0020be\u0020done\u0020if\u0020the\u0020state\u0020is\u0020applicable",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html#method_activateState"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState\u003A\u003AupdateQuery\u0028\u0029",
-            "name": "updateQuery",
-            "summary": "Update\u0020the\u0020Solr\u0020query\u0020to\u0020match\u0020the\u0020current\u0020State",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html#method_updateQuery"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState\u003A\u003AupdatePart\u0028\u0029",
-            "name": "updatePart",
-            "summary": "Update\u0020a\u0020part\u0020of\u0020the\u0020query\u0020for\u0020the\u0020get\u0020and\u0020set\u0020methods.",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html#method_updatePart"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState\u003A\u003AupdateTerms\u0028\u0029",
-            "name": "updateTerms",
-            "summary": "Update\u0020the\u0020field\u0020filters\u0020to\u0020localised\u0020filters",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html#method_updateTerms"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States\\FluentSiteState\u003A\u003A\u0024methods",
-            "name": "methods",
-            "summary": "",
-            "url": "classes/Firesphere-SolrFluent-States-FluentSiteState.html#property_methods"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\BaseIndexExtension",
-            "name": "BaseIndexExtension",
-            "summary": "Class\u0020\\Firesphere\\SolrPermissions\\Extensions\\BaseIndexExtension",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-BaseIndexExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\BaseIndexExtension\u003A\u003AonBeforeSearch\u0028\u0029",
-            "name": "onBeforeSearch",
-            "summary": "Before\u0020search,\u0020add\u0020the\u0020member\u0020view\u0020filtering",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-BaseIndexExtension.html#method_onBeforeSearch"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\DataObjectExtension",
-            "name": "DataObjectExtension",
-            "summary": "Class\u0020\\Firesphere\\SolrPermissions\\Extensions\\DataObjectExtension",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-DataObjectExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\DataObjectExtension\u003A\u003AgetMemberView\u0028\u0029",
-            "name": "getMemberView",
-            "summary": "Get\u0020the\u0020member\u0020permissions\u0020for\u0020each\u0020unique\u0020user\u0020in\u0020the\u0020system\nThis\u0020is\u0020additional\u0020to\u0020the\u0020GroupView\u0020permissions",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-DataObjectExtension.html#method_getMemberView"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\DataObjectExtension\u003A\u003AgetViewList\u0028\u0029",
-            "name": "getViewList",
-            "summary": "Get\u0020the\u0020list\u0020of\u0020members\u0020who\u0020can\u0020view\u0020this\u0020owner",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-DataObjectExtension.html#method_getViewList"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\DataObjectExtension\u003A\u003A\u0024memberList",
-            "name": "memberList",
-            "summary": "",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-DataObjectExtension.html#property_memberList"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\DocumentFactoryExtension",
-            "name": "DocumentFactoryExtension",
-            "summary": "Class\u0020\\Firesphere\\SolrPermissions\\Extensions\\DocumentFactoryExtension",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-DocumentFactoryExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\DocumentFactoryExtension\u003A\u003AupdateDefaultFields\u0028\u0029",
-            "name": "updateDefaultFields",
-            "summary": "Add\u0020the\u0020MemberView\u0020status\u0020to\u0020the\u0020default\u0020fields",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-DocumentFactoryExtension.html#method_updateDefaultFields"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\SchemaFactoryExtension",
-            "name": "SchemaFactoryExtension",
-            "summary": "Class\u0020\\Firesphere\\SolrPermissions\\Extensions\\SchemaFactoryExtension",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-SchemaFactoryExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions\\SchemaFactoryExtension\u003A\u003AonBeforeFilterFields\u0028\u0029",
-            "name": "onBeforeFilterFields",
-            "summary": "Add\u0020the\u0020MemberView\u0020field\u0020to\u0020Solr\u0020for\u0020filtering\u0020on\u0020members",
-            "url": "classes/Firesphere-SolrPermissions-Extensions-SchemaFactoryExtension.html#method_onBeforeFilterFields"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\Extensions\\SubsitesExtension",
-            "name": "SubsitesExtension",
-            "summary": "Class\u0020\\Firesphere\\SolrSubsites\\Extensions\\SubsitesExtension",
-            "url": "classes/Firesphere-SolrSubsites-Extensions-SubsitesExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\Extensions\\SubsitesExtension\u003A\u003AonBeforeInit\u0028\u0029",
-            "name": "onBeforeInit",
-            "summary": "Add\u0020default\u0020unfiltered\u0020state",
-            "url": "classes/Firesphere-SolrSubsites-Extensions-SubsitesExtension.html#method_onBeforeInit"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\Extensions\\SubsitesExtension\u003A\u003AonAfterInit\u0028\u0029",
-            "name": "onAfterInit",
-            "summary": "Add\u0020the\u0020subsite\u0020ID\u0020for\u0020each\u0020page,\u0020if\u0020subsites\u0020is\u0020enabled.",
-            "url": "classes/Firesphere-SolrSubsites-Extensions-SubsitesExtension.html#method_onAfterInit"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\States\\SubsiteState",
-            "name": "SubsiteState",
-            "summary": "Class\u0020\\Firesphere\\SolrSubsites\\States\\SubsiteState",
-            "url": "classes/Firesphere-SolrSubsites-States-SubsiteState.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\States\\SubsiteState\u003A\u003AstateIsApplicable\u0028\u0029",
-            "name": "stateIsApplicable",
-            "summary": "Is\u0020this\u0020state\u0020applicable\u0020to\u0020this\u0020extension\nIn\u0020case\u0020of\u0020subsites,\u0020only\u0020apply\u0020if\u0020there\u0020actually\u0020are\u0020subsites",
-            "url": "classes/Firesphere-SolrSubsites-States-SubsiteState.html#method_stateIsApplicable"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\States\\SubsiteState\u003A\u003AsetDefaultState\u0028\u0029",
-            "name": "setDefaultState",
-            "summary": "Reset\u0020the\u0020SiteState\u0020to\u0020it\u0027s\u0020default\u0020state\nIn\u0020case\u0020of\u0020subsites,\u0020we\u0020don\u0027t\u0020care\u0020about\u0020it,\u0020as\u0020it\u0027s\u0020handled\u0020at\u0020query\u0020time",
-            "url": "classes/Firesphere-SolrSubsites-States-SubsiteState.html#method_setDefaultState"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\States\\SubsiteState\u003A\u003AcurrentState\u0028\u0029",
-            "name": "currentState",
-            "summary": "Return\u0020the\u0020current\u0020state\u0020of\u0020the\u0020site\nThe\u0020current\u0020state\u0020does\u0020not\u0020need\u0020to\u0020be\u0020reset\u0020in\u0020any\u0020way\u0020for\u0020pages",
-            "url": "classes/Firesphere-SolrSubsites-States-SubsiteState.html#method_currentState"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\States\\SubsiteState\u003A\u003AactivateState\u0028\u0029",
-            "name": "activateState",
-            "summary": "Activate\u0020a\u0020given\u0020state.\u0020This\u0020should\u0020only\u0020be\u0020done\u0020if\u0020the\u0020state\u0020is\u0020applicable\nIn\u0020the\u0020case\u0020of\u0020Subsites,\u0020we\u0020just\u0020want\u0020to\u0020disable\u0020the\u0020filter",
-            "url": "classes/Firesphere-SolrSubsites-States-SubsiteState.html#method_activateState"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\States\\SubsiteState\u003A\u003AupdateQuery\u0028\u0029",
-            "name": "updateQuery",
-            "summary": "Method\u0020to\u0020alter\u0020the\u0020query.\u0020Can\u0020be\u0020no\u002Dop.",
-            "url": "classes/Firesphere-SolrSubsites-States-SubsiteState.html#method_updateQuery"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\States\\SubsiteState\u003A\u003AaddSubsiteFilter\u0028\u0029",
-            "name": "addSubsiteFilter",
-            "summary": "Add\u0020the\u0020Subsite\u0020specific\u0020filter\u0020if\u0020the\u0020class\u0020has\u0020the\u0020extension\u0020applied",
-            "url": "classes/Firesphere-SolrSubsites-States-SubsiteState.html#method_addSubsiteFilter"
-        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -5311,41 +5036,6 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/firesphere-searchbackend-traits-querytraits.html"
         },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility\\Extensions",
-            "name": "Extensions",
-            "summary": "",
-            "url": "namespaces/firesphere-solrcompatibility-extensions.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrCompatibility",
-            "name": "SolrCompatibility",
-            "summary": "",
-            "url": "namespaces/firesphere-solrcompatibility.html"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Search\\Queries",
-            "name": "Queries",
-            "summary": "",
-            "url": "namespaces/silverstripe-fulltextsearch-search-queries.html"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Search",
-            "name": "Search",
-            "summary": "",
-            "url": "namespaces/silverstripe-fulltextsearch-search.html"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch",
-            "name": "FullTextSearch",
-            "summary": "",
-            "url": "namespaces/silverstripe-fulltextsearch.html"
-        },                {
-            "fqsen": "\\SilverStripe",
-            "name": "SilverStripe",
-            "summary": "",
-            "url": "namespaces/silverstripe.html"
-        },                {
-            "fqsen": "\\SilverStripe\\FullTextSearch\\Solr",
-            "name": "Solr",
-            "summary": "",
-            "url": "namespaces/silverstripe-fulltextsearch-solr.html"
-        },                {
             "fqsen": "\\Firesphere\\SolrSearch\\Admins",
             "name": "Admins",
             "summary": "",
@@ -5430,45 +5120,5 @@ Search.appendIndex(
             "name": "Traits",
             "summary": "",
             "url": "namespaces/firesphere-solrsearch-traits.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\Extensions",
-            "name": "Extensions",
-            "summary": "",
-            "url": "namespaces/firesphere-solrfluent-extensions.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent",
-            "name": "SolrFluent",
-            "summary": "",
-            "url": "namespaces/firesphere-solrfluent.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrFluent\\States",
-            "name": "States",
-            "summary": "",
-            "url": "namespaces/firesphere-solrfluent-states.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions\\Extensions",
-            "name": "Extensions",
-            "summary": "",
-            "url": "namespaces/firesphere-solrpermissions-extensions.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrPermissions",
-            "name": "SolrPermissions",
-            "summary": "",
-            "url": "namespaces/firesphere-solrpermissions.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\Extensions",
-            "name": "Extensions",
-            "summary": "",
-            "url": "namespaces/firesphere-solrsubsites-extensions.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites",
-            "name": "SolrSubsites",
-            "summary": "",
-            "url": "namespaces/firesphere-solrsubsites.html"
-        },                {
-            "fqsen": "\\Firesphere\\SolrSubsites\\States",
-            "name": "States",
-            "summary": "",
-            "url": "namespaces/firesphere-solrsubsites-states.html"
         }            ]
 );
