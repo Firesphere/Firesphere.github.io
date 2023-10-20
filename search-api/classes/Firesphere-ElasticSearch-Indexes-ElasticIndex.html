@@ -69,7 +69,33 @@
                 
             </li>
                     <li>
+                <a href="namespaces/firesphere-solrcompatibility.html" class="">SolrCompatibility</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/firesphere-solrsearch.html" class="">SolrSearch</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/firesphere-solrfluent.html" class="">SolrFluent</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/firesphere-solrpermissions.html" class="">SolrPermissions</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/firesphere-solrsubsites.html" class="">SolrSubsites</a>
+                
+            </li>
+            </ul>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="namespaces/silverstripe.html" class="">SilverStripe</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/silverstripe-fulltextsearch.html" class="">FullTextSearch</a>
                 
             </li>
             </ul>
@@ -102,6 +128,16 @@
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Default.html" class="">Default</a>
 </h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/SilverStripe.html" class="">SilverStripe</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/SilverStripe-FullTextSearch.html" class="">FullTextSearch</a>
+                
+            </li>
+            </ul>
 
                         </section>
             
@@ -146,7 +182,7 @@
     
             <span class="phpdocumentor-element__extends">
             Uses
-                            <abbr title="\SilverStripe\Core\Extensible">Extensible</abbr>,                             <abbr title="\SilverStripe\Core\Config\Configurable">Configurable</abbr>,                             <abbr title="\SilverStripe\Core\Injector\Injectable">Injectable</abbr>,                             <a href="classes/Firesphere-SearchBackend-Traits-QueryTraits-QueryFilterTrait.html"><abbr title="\Firesphere\SearchBackend\Traits\QueryTraits\QueryFilterTrait">QueryFilterTrait</abbr></a>,                             <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html"><abbr title="\Firesphere\ElasticSearch\Traits\IndexTraits\BaseIndexTrait">BaseIndexTrait</abbr></a>                    </span>
+                            <abbr title="\SilverStripe\Core\Extensible">Extensible</abbr>,                             <abbr title="\SilverStripe\Core\Config\Configurable">Configurable</abbr>,                             <abbr title="\SilverStripe\Core\Injector\Injectable">Injectable</abbr>,                             <a href="classes/Firesphere-SearchBackend-Traits-QueryTraits-QueryFilterTrait.html"><abbr title="\Firesphere\SearchBackend\Traits\QueryTraits\QueryFilterTrait">QueryFilterTrait</abbr></a>,                             <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html"><abbr title="\Firesphere\ElasticSearch\Traits\IndexTraits\BaseIndexTrait">BaseIndexTrait</abbr></a>,                             <a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html"><abbr title="\Firesphere\SearchBackend\Traits\LoggerTrait">LoggerTrait</abbr></a>                    </span>
     </h2>
 
 <div class="phpdocumentor-label-line">
@@ -159,7 +195,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
     </aside>
 
@@ -236,6 +272,13 @@ Used in init to call build methods from configuration yml</dd>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#property_logger">$logger</a>
+    <span>
+                        &nbsp;: <abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>            </span>
+</dt>
+<dd>The logger to use</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_sortFields">$sortFields</a>
@@ -323,6 +366,12 @@ Compatibility stub for Solr</dd>
 <dd>Add a field to sort on</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_deleteIndex">deleteIndex()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_doSearch">doSearch()</a>
     <span>
                                 &nbsp;: <a href="classes/Firesphere-ElasticSearch-Results-SearchResult.html"><abbr title="\Firesphere\ElasticSearch\Results\SearchResult">SearchResult</abbr></a>    </span>
@@ -379,6 +428,13 @@ Compatibility stub for Solr</dd>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#method_getLogger">getLogger()</a>
+    <span>
+                                &nbsp;: <abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>    </span>
+</dt>
+<dd>Get the logger</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getSortFields">getSortFields()</a>
@@ -454,6 +510,13 @@ Compatibility stub for Solr</dd>
 <dd>Set the fulltext fields</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#method_setLogger">setLogger()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Set the logger if needed</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setSortFields">setSortFields()</a>
     <span>
                                 &nbsp;: $this    </span>
@@ -488,6 +551,12 @@ Compatibility stub for Solr</dd>
 </dt>
 <dd>Generate the config from yml if possible</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_shouldClear">shouldClear()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+
     </dl>
 
 
@@ -519,7 +588,7 @@ Compatibility stub for Solr</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">53</span>
+    <span class="phpdocumentor-element-found-in__line">57</span>
 
     </aside>
 
@@ -589,7 +658,7 @@ Compatibility stub for Solr</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">52</span>
 
     </aside>
 
@@ -766,6 +835,40 @@ Used in init to call build methods from configuration yml</p>
             -protected
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="property_logger">
+        $logger
+        <a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#property_logger" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="search/src/Traits/LoggerTrait.php"><a href="files/search-src-traits-loggertrait.html"><abbr title="search/src/Traits/LoggerTrait.php">LoggerTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">30</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The logger to use</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span>
+    <span class="phpdocumentor-signature__name">$logger</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="property_sortFields">
         $sortFields
         <a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_sortFields" class="headerlink"><i class="fas fa-link"></i></a>
@@ -886,7 +989,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">55</span>
+    <span class="phpdocumentor-element-found-in__line">59</span>
 
     </aside>
 
@@ -1011,7 +1114,7 @@ This is to prevent a notice if there is no yml.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">177</span>
+    <span class="phpdocumentor-element-found-in__line">216</span>
 
     </aside>
 
@@ -1258,6 +1361,90 @@ Compatibility stub for Solr</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_deleteIndex">
+        deleteIndex()
+        <a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_deleteIndex" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">102</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">deleteIndex</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$request</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr>|null</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_deleteIndex#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ClientResponseException">ClientResponseException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\MissingParameterException">MissingParameterException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Psr\Container\NotFoundExceptionInterface">NotFoundExceptionInterface</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ServerResponseException">ServerResponseException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                                            </dl>
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_doSearch">
         doSearch()
         <a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_doSearch" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1266,7 +1453,7 @@ Compatibility stub for Solr</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">158</span>
+    <span class="phpdocumentor-element-found-in__line">197</span>
 
     </aside>
 
@@ -1334,7 +1521,7 @@ Compatibility stub for Solr</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">149</span>
 
     </aside>
 
@@ -1405,7 +1592,7 @@ Compatibility stub for Solr</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">184</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 
     </aside>
 
@@ -1583,7 +1770,7 @@ Compatibility stub for Solr</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">103</span>
+    <span class="phpdocumentor-element-found-in__line">142</span>
 
     </aside>
 
@@ -1599,6 +1786,57 @@ Compatibility stub for Solr</p>
     
 
     
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getLogger">
+        getLogger()
+        <a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#method_getLogger" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="search/src/Traits/LoggerTrait.php"><a href="files/search-src-traits-loggertrait.html"><abbr title="search/src/Traits/LoggerTrait.php">LoggerTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get the logger</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getLogger</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#method_getLogger#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Psr\Container\NotFoundExceptionInterface">NotFoundExceptionInterface</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                                            </dl>
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1721,7 +1959,7 @@ Compatibility stub for Solr</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">95</span>
+    <span class="phpdocumentor-element-found-in__line">134</span>
 
     </aside>
 
@@ -1787,7 +2025,7 @@ Compatibility stub for Solr</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">71</span>
+    <span class="phpdocumentor-element-found-in__line">75</span>
 
     </aside>
 
@@ -1823,7 +2061,7 @@ memory intensive, as updating the config for each item is not efficient</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">145</span>
+    <span class="phpdocumentor-element-found-in__line">184</span>
 
     </aside>
 
@@ -1910,7 +2148,7 @@ memory intensive, as updating the config for each item is not efficient</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">189</span>
+    <span class="phpdocumentor-element-found-in__line">228</span>
 
     </aside>
 
@@ -2074,6 +2312,48 @@ memory intensive, as updating the config for each item is not efficient</p>
         <span class="phpdocumentor-signature__response_type">$this</span>
             </section>
 
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setLogger">
+        setLogger()
+        <a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#method_setLogger" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="search/src/Traits/LoggerTrait.php"><a href="files/search-src-traits-loggertrait.html"><abbr title="search/src/Traits/LoggerTrait.php">LoggerTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">52</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Set the logger if needed</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setLogger</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$logger</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$logger</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Psr\Log\LoggerInterface">LoggerInterface</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -2310,7 +2590,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">119</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 
     </aside>
 
@@ -2337,6 +2617,51 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
     
 
     
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_shouldClear">
+        shouldClear()
+        <a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_shouldClear" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Indexes/ElasticIndex.php"><a href="files/elastic-src-indexes-elasticindex.html"><abbr title="elastic/src/Indexes/ElasticIndex.php">ElasticIndex.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">120</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">shouldClear</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$request</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            </section>
+
 </article>
             </section>
 
@@ -2458,6 +2783,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                                                     <li><a href="classes/Firesphere-SearchBackend-Indexes-CoreIndex.html#property_fieldTypes">$fieldTypes<a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_filterFields">$filterFields<a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_fulltextFields">$fulltextFields<a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"></li>
+                                                    <li><a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#property_logger">$logger<a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_sortFields">$sortFields<a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_storedFields">$storedFields<a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_usedAllFields">$usedAllFields<a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"></li>
@@ -2475,6 +2801,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFilterField">addFilterField()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFulltextField">addFulltextField()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addSortField">addSortField()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_deleteIndex">deleteIndex()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_doSearch">doSearch()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_getClasses">getClasses()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getClient">getClient()</a></li>
@@ -2484,6 +2811,7 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFilterFields">getFilterFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFulltextFields">getFulltextFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_getIndexName">getIndexName()</a></li>
+                                            <li><a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#method_getLogger">getLogger()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getSortFields">getSortFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getStoredFields">getStoredFields()</a></li>
                                             <li><a href="classes/Firesphere-SearchBackend-Traits-QueryTraits-QueryFilterTrait.html#method_getViewStatusFilter">getViewStatusFilter()</a></li>
@@ -2495,11 +2823,13 @@ fields (Varchar, Text, HTMLText, etc) and adds them all as fulltext searchable f
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFacetFields">setFacetFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFilterFields">setFilterFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFulltextFields">setFulltextFields()</a></li>
+                                            <li><a href="classes/Firesphere-SearchBackend-Traits-LoggerTrait.html#method_setLogger">setLogger()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setSortFields">setSortFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setStoredFields">setStoredFields()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addAllFieldsByType">addAllFieldsByType()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFulltextFieldsForClass">addFulltextFieldsForClass()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_initFromConfig">initFromConfig()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_shouldClear">shouldClear()</a></li>
                                     </ul>
             </li>
                     </ul>

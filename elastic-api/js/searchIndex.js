@@ -56,11 +56,6 @@ Search.appendIndex(
             "summary": "Class\u0020\\Firesphere\\ElasticSearch\\Extensions\\ElasticSynonymExtension",
             "url": "classes/Firesphere-ElasticSearch-Extensions-ElasticSynonymExtension.html"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\ElasticSynonymExtension\u003A\u003AupdateCMSFields\u0028\u0029",
-            "name": "updateCMSFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-ElasticSynonymExtension.html#method_updateCMSFields"
-        },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\ElasticSynonymExtension\u003A\u003AonAfterWrite\u0028\u0029",
             "name": "onAfterWrite",
             "summary": "Add\u0020or\u0020update\u0020this\u0020synonym\u0020in\u0020Elastic",
@@ -135,6 +130,16 @@ Search.appendIndex(
             "name": "init",
             "summary": "Required\u0020to\u0020initialise\u0020the\u0020fields.",
             "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_init"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AdeleteIndex\u0028\u0029",
+            "name": "deleteIndex",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_deleteIndex"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AshouldClear\u0028\u0029",
+            "name": "shouldClear",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_shouldClear"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AindexExists\u0028\u0029",
             "name": "indexExists",
@@ -528,7 +533,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AconfigureIndex\u0028\u0029",
             "name": "configureIndex",
-            "summary": "Update\/create\u0020a\u0020store",
+            "summary": "Update\/create\u0020a\u0020single\u0020index.",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_configureIndex"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AcreateConfigForIndex\u0028\u0029",
@@ -556,6 +561,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_segment"
         },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024unSsortables",
+            "name": "unSsortables",
+            "summary": "DBHTML\u0020and\u0020DBText\u0020etc.\u0020should\u0020never\u0020be\u0020made\u0020sortable\nIt\u0020doesn\u0027t\u0020make\u0020sense\u0020for\u0020large\u0020text\u0020objects",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_unSsortables"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024result",
+            "name": "result",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_result"
+        },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024title",
             "name": "title",
             "summary": "",
@@ -570,11 +585,6 @@ Search.appendIndex(
             "name": "service",
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_service"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024unSsortables",
-            "name": "unSsortables",
-            "summary": "DBHTML\u0020and\u0020DBText\u0020etc.\u0020should\u0020never\u0020be\u0020made\u0020sortable\nIt\u0020doesn\u0027t\u0020make\u0020sense\u0020for\u0020large\u0020text\u0020objects",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_unSsortables"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask",
             "name": "ElasticIndexTask",
@@ -625,6 +635,11 @@ Search.appendIndex(
             "name": "setDebug",
             "summary": "Set\u0020the\u0020debug\u0020mode",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_setDebug"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AgetGroups\u0028\u0029",
+            "name": "getGroups",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getGroups"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AindexClass\u0028\u0029",
             "name": "indexClass",
@@ -695,6 +710,11 @@ Search.appendIndex(
             "name": "index",
             "summary": "",
             "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_index"
+        },                {
+            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024groups",
+            "name": "groups",
+            "summary": "",
+            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_groups"
         },                {
             "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait",
             "name": "BaseIndexTrait",

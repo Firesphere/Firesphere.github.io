@@ -69,7 +69,33 @@
                 
             </li>
                     <li>
+                <a href="namespaces/firesphere-solrcompatibility.html" class="">SolrCompatibility</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/firesphere-solrsearch.html" class="">SolrSearch</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/firesphere-solrfluent.html" class="">SolrFluent</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/firesphere-solrpermissions.html" class="">SolrPermissions</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/firesphere-solrsubsites.html" class="">SolrSubsites</a>
+                
+            </li>
+            </ul>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="namespaces/silverstripe.html" class="">SilverStripe</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/silverstripe-fulltextsearch.html" class="">FullTextSearch</a>
                 
             </li>
             </ul>
@@ -102,6 +128,16 @@
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Default.html" class="">Default</a>
 </h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/SilverStripe.html" class="">SilverStripe</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/SilverStripe-FullTextSearch.html" class="">FullTextSearch</a>
+                
+            </li>
+            </ul>
 
                         </section>
             
@@ -157,7 +193,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
@@ -225,6 +261,12 @@
 <dd>What do I do?</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_groups">$groups</a>
+    <span>
+                        &nbsp;: int            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_index">$index</a>
     <span>
                         &nbsp;: <a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr></a>            </span>
@@ -272,6 +314,12 @@
 <dd>ElasticIndexTask constructor. Sets up the document factory</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getGroups">getGroups()</a>
+    <span>
+                                &nbsp;: int    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getIndex">getIndex()</a>
     <span>
                                 &nbsp;: <a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr></a>    </span>
@@ -298,7 +346,7 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_run">run()</a>
     <span>
-                                &nbsp;: int|void    </span>
+                                &nbsp;: bool|int    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -427,7 +475,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">57</span>
 
     </aside>
 
@@ -461,7 +509,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">81</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
@@ -494,7 +542,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">69</span>
 
     </aside>
 
@@ -518,6 +566,39 @@
             -protected
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="property_groups">
+        $groups
+        <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_groups" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">94</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">int</span>
+    <span class="phpdocumentor-signature__name">$groups</span>
+     = <span class="phpdocumentor-signature__default-value">0</span></code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="property_index">
         $index
         <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_index" class="headerlink"><i class="fas fa-link"></i></a>
@@ -528,7 +609,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">86</span>
+    <span class="phpdocumentor-element-found-in__line">89</span>
 
     </aside>
 
@@ -561,7 +642,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">76</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
@@ -594,7 +675,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">71</span>
+    <span class="phpdocumentor-element-found-in__line">74</span>
 
     </aside>
 
@@ -627,7 +708,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">60</span>
+    <span class="phpdocumentor-element-found-in__line">63</span>
 
     </aside>
 
@@ -661,7 +742,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
@@ -700,7 +781,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">101</span>
 
     </aside>
 
@@ -739,6 +820,41 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getGroups">
+        getGroups()
+        <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getGroups" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">225</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getGroups</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getIndex">
         getIndex()
         <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getIndex" class="headerlink"><i class="fas fa-link"></i></a>
@@ -747,7 +863,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">249</span>
+    <span class="phpdocumentor-element-found-in__line">267</span>
 
     </aside>
 
@@ -782,7 +898,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">141</span>
+    <span class="phpdocumentor-element-found-in__line">156</span>
 
     </aside>
 
@@ -813,7 +929,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">173</span>
+    <span class="phpdocumentor-element-found-in__line">188</span>
 
     </aside>
 
@@ -844,7 +960,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">186</span>
+    <span class="phpdocumentor-element-found-in__line">201</span>
 
     </aside>
 
@@ -879,14 +995,14 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">run</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|void</span></code>
+                    <span class="phpdocumentor-signature__name">run</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SilverStripe\Control\HTTPRequest">HTTPRequest</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -913,6 +1029,14 @@
                     <span class="phpdocumentor-tag__name">throws</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\HttpClientException">HttpClientException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\HttpException">HttpException</abbr></span>
                                                             
                                              
@@ -929,7 +1053,23 @@
                     <span class="phpdocumentor-tag__name">throws</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\HttpClientException">HttpClientException</abbr></span>
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ClientResponseException">ClientResponseException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\MissingParameterException">MissingParameterException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Elastic\Elasticsearch\Exception\ServerResponseException">ServerResponseException</abbr></span>
                                                             
                                              
                                     </dd>
@@ -937,7 +1077,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">int|void</span>
+        <span class="phpdocumentor-signature__response_type">bool|int</span>
             </section>
 
 </article>
@@ -955,7 +1095,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">198</span>
+    <span class="phpdocumentor-element-found-in__line">213</span>
 
     </aside>
 
@@ -1012,7 +1152,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">257</span>
+    <span class="phpdocumentor-element-found-in__line">275</span>
 
     </aside>
 
@@ -1053,7 +1193,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">164</span>
 
     </aside>
 
@@ -1094,7 +1234,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">181</span>
+    <span class="phpdocumentor-element-found-in__line">196</span>
 
     </aside>
 
@@ -1135,7 +1275,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">176</span>
 
     </aside>
 
@@ -1329,7 +1469,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">270</span>
+    <span class="phpdocumentor-element-found-in__line">288</span>
 
     </aside>
 
@@ -1445,7 +1585,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">220</span>
+    <span class="phpdocumentor-element-found-in__line">238</span>
 
     </aside>
 
@@ -1490,29 +1630,6 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
             </dl>
 
     
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_indexClass#tags" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Firesphere\ElasticSearch\Tasks\HTTPException">HTTPException</abbr></span>
-                                                            
-                                             
-                                    </dd>
-                            <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\SilverStripe\ORM\ValidationException">ValidationException</abbr></span>
-                                                            
-                                             
-                                    </dd>
-                                            </dl>
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
@@ -1534,7 +1651,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">299</span>
+    <span class="phpdocumentor-element-found-in__line">317</span>
 
     </aside>
 
@@ -1800,7 +1917,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="elastic/src/Tasks/ElasticIndexTask.php"><a href="files/elastic-src-tasks-elasticindextask.html"><abbr title="elastic/src/Tasks/ElasticIndexTask.php">ElasticIndexTask.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">329</span>
+    <span class="phpdocumentor-element-found-in__line">347</span>
 
     </aside>
 
@@ -1969,6 +2086,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
                                                     <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_currentStates">$currentStates<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_debug">$debug<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_description">$description<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"></li>
+                                                    <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_groups">$groups<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_index">$index<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_logger">$logger<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"></li>
                                                     <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_service">$service<a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"></li>
@@ -1981,6 +2099,7 @@ The pcntl parameter check is for unit tests, but PHPUnit does not support PCNTL 
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getGroups">getGroups()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getIndex">getIndex()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getLogger">getLogger()</a></li>
                                             <li><a href="classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getService">getService()</a></li>

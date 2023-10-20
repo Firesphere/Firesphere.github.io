@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title>    SilverStripe Solr Search &raquo; Deprecated elements
+            <title>    SilverStripe solr Search &raquo; Deprecated elements
 </title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe Solr Search</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">SilverStripe solr Search</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -62,7 +62,33 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
+                <a href="namespaces/firesphere-solrcompatibility.html" class="">SolrCompatibility</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/firesphere-solrsearch.html" class="">SolrSearch</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/firesphere-solrfluent.html" class="">SolrFluent</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/firesphere-solrpermissions.html" class="">SolrPermissions</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/firesphere-solrsubsites.html" class="">SolrSubsites</a>
+                
+            </li>
+            </ul>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="namespaces/silverstripe.html" class="">SilverStripe</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/silverstripe-fulltextsearch.html" class="">FullTextSearch</a>
                 
             </li>
             </ul>
@@ -70,14 +96,6 @@
                         </section>
                 <section class="phpdocumentor-sidebar__category">
             <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/Application.html" class="">Application</a>
-</h4>
-
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/Default.html" class="">Default</a>
-</h4>
-
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Firesphere.html" class="">Firesphere</a>
 </h4>
@@ -87,6 +105,24 @@
                 
             </li>
             </ul>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/SilverStripe.html" class="">SilverStripe</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/SilverStripe-FullTextSearch.html" class="">FullTextSearch</a>
+                
+            </li>
+            </ul>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Application.html" class="">Application</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Default.html" class="">Default</a>
+</h4>
 
                         </section>
             
@@ -112,10 +148,82 @@
         <div class="phpdocumentor-row">
             <h2 class="phpdocumentor-content__title">Deprecated</h2>
 
+                        <h3>Table of Contents</h3>
+            <table class="phpdocumentor-table_of_contents">
+                                    <tr>
+                        <td class="phpdocumentor-cell"><a href="reports/deprecated.html#solr/compatibility/src/Extensions/FulltextSearchExtension.php">solr/compatibility/src/Extensions/FulltextSearchExtension.php</a></td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell"><a href="reports/deprecated.html#solr/compatibility/src/Extensions/SolrCoreServiceExtension.php">solr/compatibility/src/Extensions/SolrCoreServiceExtension.php</a></td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell"><a href="reports/deprecated.html#solr/compatibility/src/SearchQuery.php">solr/compatibility/src/SearchQuery.php</a></td>
+                    </tr>
+                            </table>
             
-                            <div class="phpdocumentor-admonition phpdocumentor-admonition--success">
-                    No deprecated elements have been found in this project.
-                </div>
+                            <a id="solr/compatibility/src/Extensions/FulltextSearchExtension.php"></a>
+                <h3><abbr title="solr/compatibility/src/Extensions/FulltextSearchExtension.php">FulltextSearchExtension.php</abbr></h3>
+                <table>
+                    <tr>
+                        <th class="phpdocumentor-heading">Line</th>
+                        <th class="phpdocumentor-heading">Element</th>
+                        <th class="phpdocumentor-heading">Reason</th>
+                    </tr>
+                                                                        <tr>
+                                <td class="phpdocumentor-cell">114</td>
+                                <td class="phpdocumentor-cell"><a href="classes/Firesphere-SolrCompatibility-Extensions-FulltextSearchExtension.html#method_search"><abbr title="\Firesphere\SolrCompatibility\Extensions\FulltextSearchExtension::search()">FulltextSearchExtension::search()</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>This is used as an Fulltext Search compatibility method. Call doSearch instead with the correct Query</p>
+</td>
+                            </tr>
+                                                                                                <tr>
+                                <td class="phpdocumentor-cell">136</td>
+                                <td class="phpdocumentor-cell"><a href="classes/Firesphere-SolrCompatibility-Extensions-FulltextSearchExtension.html#method_addFulltextFields"><abbr title="\Firesphere\SolrCompatibility\Extensions\FulltextSearchExtension::addFulltextFields()">FulltextSearchExtension::addFulltextFields()</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>Please use addAllFulltextFields(). IncludeSubClasses is not used anymore</p>
+</td>
+                            </tr>
+                                                            </table>
+                            <a id="solr/compatibility/src/Extensions/SolrCoreServiceExtension.php"></a>
+                <h3><abbr title="solr/compatibility/src/Extensions/SolrCoreServiceExtension.php">SolrCoreServiceExtension.php</abbr></h3>
+                <table>
+                    <tr>
+                        <th class="phpdocumentor-heading">Line</th>
+                        <th class="phpdocumentor-heading">Element</th>
+                        <th class="phpdocumentor-heading">Reason</th>
+                    </tr>
+                                                                        <tr>
+                                <td class="phpdocumentor-cell">33</td>
+                                <td class="phpdocumentor-cell"><a href="classes/Firesphere-SolrCompatibility-Extensions-SolrCoreServiceExtension.html#method_coreIsActive"><abbr title="\Firesphere\SolrCompatibility\Extensions\SolrCoreServiceExtension::coreIsActive()">SolrCoreServiceExtension::coreIsActive()</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>backward compatibility stub</p>
+</td>
+                            </tr>
+                                                            </table>
+                            <a id="solr/compatibility/src/SearchQuery.php"></a>
+                <h3><abbr title="solr/compatibility/src/SearchQuery.php">SearchQuery.php</abbr></h3>
+                <table>
+                    <tr>
+                        <th class="phpdocumentor-heading">Line</th>
+                        <th class="phpdocumentor-heading">Element</th>
+                        <th class="phpdocumentor-heading">Reason</th>
+                    </tr>
+                                                                        <tr>
+                                <td class="phpdocumentor-cell">37</td>
+                                <td class="phpdocumentor-cell"><a href="classes/SilverStripe-FullTextSearch-Search-Queries-SearchQuery.html#method_addSearchTerm"><abbr title="\SilverStripe\FullTextSearch\Search\Queries\SearchQuery::addSearchTerm()">SearchQuery::addSearchTerm()</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>please use <a href="self::addTerm()"></a></p>
+</td>
+                            </tr>
+                                                                                                <tr>
+                                <td class="phpdocumentor-cell">53</td>
+                                <td class="phpdocumentor-cell"><a href="classes/SilverStripe-FullTextSearch-Search-Queries-SearchQuery.html#method_setLimit"><abbr title="\SilverStripe\FullTextSearch\Search\Queries\SearchQuery::setLimit()">SearchQuery::setLimit()</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>please use <a href="self::setRows()"></a></p>
+</td>
+                            </tr>
+                                                                                                <tr>
+                                <td class="phpdocumentor-cell">67</td>
+                                <td class="phpdocumentor-cell"><a href="classes/SilverStripe-FullTextSearch-Search-Queries-SearchQuery.html#method_getLimit"><abbr title="\SilverStripe\FullTextSearch\Search\Queries\SearchQuery::getLimit()">SearchQuery::getLimit()</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>please use <a href="self::getRows()"></a></p>
+</td>
+                            </tr>
+                                                            </table>
                     </div>
     </section>
                             </div>

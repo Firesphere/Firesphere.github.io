@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>SilverStripe CSP headers</title>
+    <parser>
+        <target>csp-api</target>
+        <encoding>utf8</encoding>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+    </parser>
+    <transformer>
+        <target>csp-api</target>
+    </transformer>
+    <transformations>
+        <template name="responsive-twig" />
+    </transformations>
+    <files>
+        <directory>cspheaders</directory>
+        <ignore>**/tests/**/*</ignore>
+    </files>
+</phpdoc>
