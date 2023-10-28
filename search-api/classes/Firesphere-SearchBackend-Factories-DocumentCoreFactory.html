@@ -57,13 +57,19 @@
                     <section class="phpdocumentor-sidebar__category">
             <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="namespaces/firesphere.html" class="">Firesphere</a>
+    <a href="namespaces/silverleague.html" class="">SilverLeague</a>
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
-                <a href="namespaces/firesphere-elasticsearch.html" class="">ElasticSearch</a>
+                <a href="namespaces/silverleague-ideannotator.html" class="">IDEAnnotator</a>
                 
             </li>
+            </ul>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="namespaces/firesphere.html" class="">Firesphere</a>
+</h4>
+    <ul class="phpdocumentor-list">
                     <li>
                 <a href="namespaces/firesphere-searchbackend.html" class="">SearchBackend</a>
                 
@@ -104,15 +110,43 @@
                 <section class="phpdocumentor-sidebar__category">
             <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Application.html" class="">Application</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/IDEAnnotatorCore.html" class="">IDEAnnotatorCore</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/IDEAnnotatorExtensions.html" class="">IDEAnnotatorExtensions</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/IDEAnnotatorGenerators.html" class="">IDEAnnotatorGenerators</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/IDEAnnotatorHelpers.html" class="">IDEAnnotatorHelpers</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/IDEAnnotatorTasks.html" class="">IDEAnnotatorTasks</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/Default.html" class="">Default</a>
+</h4>
+
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Firesphere.html" class="">Firesphere</a>
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
-                <a href="packages/Firesphere-Elastic.html" class="">Elastic</a>
+                <a href="packages/Firesphere-Search.html" class="">Search</a>
                 
             </li>
                     <li>
-                <a href="packages/Firesphere-Search.html" class="">Search</a>
+                <a href="packages/Firesphere-Elastic.html" class="">Elastic</a>
                 
             </li>
                     <li>
@@ -120,14 +154,6 @@
                 
             </li>
             </ul>
-
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/Application.html" class="">Application</a>
-</h4>
-
-                                    <h4 class="phpdocumentor-sidebar__root-namespace">
-    <a href="packages/Default.html" class="">Default</a>
-</h4>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/SilverStripe.html" class="">SilverStripe</a>
@@ -288,7 +314,7 @@ So make sure you properly loop and set $class</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Firesphere-SearchBackend-Factories-DocumentCoreFactory.html#method_getClass">getClass()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -685,7 +711,7 @@ So make sure you properly loop and set $class</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__abstract">abstract</span>                <span class="phpdocumentor-signature__name">buildItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fields</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr></a>|<a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$update</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+    <span class="phpdocumentor-signature__abstract">abstract</span>                <span class="phpdocumentor-signature__name">buildItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fields</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr>|<a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$update</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -703,7 +729,7 @@ So make sure you properly loop and set $class</p>
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$index</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr></a>|<a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr>|<a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>Index to push the documents to</p>
@@ -760,14 +786,14 @@ So make sure you properly loop and set $class</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="search/src/Factories/DocumentCoreFactory.php"><a href="files/search-src-factories-documentcorefactory.html"><abbr title="search/src/Factories/DocumentCoreFactory.php">DocumentCoreFactory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">139</span>
+    <span class="phpdocumentor-element-found-in__line">140</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getClass</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getClass</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -775,7 +801,11 @@ So make sure you properly loop and set $class</p>
     
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -826,7 +856,7 @@ So make sure you properly loop and set $class</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="search/src/Factories/DocumentCoreFactory.php"><a href="files/search-src-factories-documentcorefactory.html"><abbr title="search/src/Factories/DocumentCoreFactory.php">DocumentCoreFactory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">155</span>
+    <span class="phpdocumentor-element-found-in__line">156</span>
 
     </aside>
 
@@ -944,7 +974,7 @@ So make sure you properly loop and set $class</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="search/src/Factories/DocumentCoreFactory.php"><a href="files/search-src-factories-documentcorefactory.html"><abbr title="search/src/Factories/DocumentCoreFactory.php">DocumentCoreFactory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">147</span>
+    <span class="phpdocumentor-element-found-in__line">148</span>
 
     </aside>
 
@@ -1072,7 +1102,7 @@ So make sure you properly loop and set $class</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="search/src/Factories/DocumentCoreFactory.php"><a href="files/search-src-factories-documentcorefactory.html"><abbr title="search/src/Factories/DocumentCoreFactory.php">DocumentCoreFactory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">163</span>
+    <span class="phpdocumentor-element-found-in__line">164</span>
 
     </aside>
 
@@ -1203,7 +1233,7 @@ So make sure you properly loop and set $class</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="search/src/Factories/DocumentCoreFactory.php"><a href="files/search-src-factories-documentcorefactory.html"><abbr title="search/src/Factories/DocumentCoreFactory.php">DocumentCoreFactory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">195</span>
+    <span class="phpdocumentor-element-found-in__line">196</span>
 
     </aside>
 
@@ -1260,7 +1290,7 @@ So make sure you properly loop and set $class</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="search/src/Factories/DocumentCoreFactory.php"><a href="files/search-src-factories-documentcorefactory.html"><abbr title="search/src/Factories/DocumentCoreFactory.php">DocumentCoreFactory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">175</span>
+    <span class="phpdocumentor-element-found-in__line">176</span>
 
     </aside>
 
@@ -1317,7 +1347,7 @@ So make sure you properly loop and set $class</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="search/src/Factories/DocumentCoreFactory.php"><a href="files/search-src-factories-documentcorefactory.html"><abbr title="search/src/Factories/DocumentCoreFactory.php">DocumentCoreFactory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">221</span>
+    <span class="phpdocumentor-element-found-in__line">222</span>
 
     </aside>
 
@@ -1358,7 +1388,7 @@ So make sure you properly loop and set $class</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="search/src/Factories/DocumentCoreFactory.php"><a href="files/search-src-factories-documentcorefactory.html"><abbr title="search/src/Factories/DocumentCoreFactory.php">DocumentCoreFactory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">208</span>
+    <span class="phpdocumentor-element-found-in__line">209</span>
 
     </aside>
 
@@ -1417,7 +1447,7 @@ So make sure you properly loop and set $class</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="search/src/Factories/DocumentCoreFactory.php"><a href="files/search-src-factories-documentcorefactory.html"><abbr title="search/src/Factories/DocumentCoreFactory.php">DocumentCoreFactory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">124</span>
+    <span class="phpdocumentor-element-found-in__line">125</span>
 
     </aside>
 
@@ -1425,7 +1455,7 @@ So make sure you properly loop and set $class</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                    <span class="phpdocumentor-signature__name">indexGroupMessage</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr></a>|<a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">indexGroupMessage</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr>|<a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$index</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1434,7 +1464,7 @@ So make sure you properly loop and set $class</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$index</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr></a>|<a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Firesphere\ElasticSearch\Indexes\ElasticIndex">ElasticIndex</abbr>|<a href="classes/Firesphere-SolrSearch-Indexes-BaseIndex.html"><abbr title="\Firesphere\SolrSearch\Indexes\BaseIndex">BaseIndex</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -1442,6 +1472,21 @@ So make sure you properly loop and set $class</p>
             </dl>
 
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Firesphere-SearchBackend-Factories-DocumentCoreFactory.html#method_indexGroupMessage#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Psr\Container\NotFoundExceptionInterface">NotFoundExceptionInterface</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                                            </dl>
 
     
 </article>

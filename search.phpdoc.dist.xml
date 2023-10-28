@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>SilverStripe Search</title>
+    <parser>
+        <target>search-api</target>
+        <encoding>utf8</encoding>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+    </parser>
+    <transformer>
+        <target>search-api</target>
+    </transformer>
+    <transformations>
+        <template name="responsive-twig" />
+    </transformations>
+    <files>
+<!--        <directory>elastic</directory>-->
+        <directory>search</directory>
+        <directory>solr</directory>
+        <directory>ideannotator</directory>
+        <ignore>**/tests/**/*</ignore>
+        <ignore>solr/**/tests/**/*</ignore>
+    </files>
+</phpdoc>

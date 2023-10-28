@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>SilverStripe JWT</title>
+    <parser>
+        <target>jwt-api</target>
+        <encoding>utf8</encoding>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+    </parser>
+    <transformer>
+        <target>jwt-api</target>
+    </transformer>
+    <transformations>
+        <template name="responsive-twig" />
+    </transformations>
+    <files>
+        <directory>graphql-jwt</directory>
+        <ignore>**/tests/**/*</ignore>
+        <ignore>solr/**/tests/**/*</ignore>
+    </files>
+</phpdoc>

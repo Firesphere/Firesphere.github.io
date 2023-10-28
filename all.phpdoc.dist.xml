@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdoc>
-    <title>SilverStripe Search</title>
+    <title>SilverStripe Modules by Firesphere</title>
     <parser>
-        <target>search-api</target>
+        <target>all-api</target>
         <encoding>utf8</encoding>
         <extensions>
             <extension>php</extension>
         </extensions>
     </parser>
     <transformer>
-        <target>search-api</target>
+        <target>all-api</target>
     </transformer>
     <transformations>
         <template name="responsive-twig" />
     </transformations>
     <files>
-        <directory>elastic</directory>
+<!--        <directory>elastic</directory>-->
         <directory>search</directory>
         <directory>solr</directory>
+        <directory>graphql-jwt</directory>
+        <directory>cspheaders</directory>
         <ignore>**/tests/**/*</ignore>
         <ignore>solr/**/tests/**/*</ignore>
     </files>

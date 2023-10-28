@@ -1,865 +1,510 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension",
-            "name": "DataObjectElasticExtension",
-            "summary": "Class\u0020\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html"
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator",
+            "name": "DataObjectAnnotator",
+            "summary": "Class\u0020DataObjectAnnotator\nGenerates\u0020phpdoc\u0020annotations\u0020for\u0020database\u0020fields\u0020and\u0020orm\u0020relations\nso\u0020IDE\u0027s\u0020with\u0020autocompletion\u0020and\u0020property\u0020inspection\u0020will\u0020recognize\u0020properties\nand\u0020relation\u0020methods.",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AonAfterDelete\u0028\u0029",
-            "name": "onAfterDelete",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_onAfterDelete"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AdeleteFromElastic\u0028\u0029",
-            "name": "deleteFromElastic",
-            "summary": "Can\u0020be\u0020called\u0020directly,\u0020if\u0020a\u0020DataObject\u0020needs\u0020to\u0020be\u0020removed\nimmediately.",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_deleteFromElastic"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AgetDeleteQuery\u0028\u0029",
-            "name": "getDeleteQuery",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_getDeleteQuery"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AexecuteQuery\u0028\u0029",
-            "name": "executeQuery",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_executeQuery"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AonAfterWrite\u0028\u0029",
-            "name": "onAfterWrite",
-            "summary": "Reindex\u0020after\u0020write,\u0020if\u0020it\u0027s\u0020an\u0020indexed\u0020new\/updated\u0020object",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_onAfterWrite"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003ApushToElastic\u0028\u0029",
-            "name": "pushToElastic",
-            "summary": "This\u0020is\u0020a\u0020separate\u0020method\u0020from\u0020the\u0020delete\u0020action,\u0020as\u0020it\u0027s\u0020a\u0020different\u0020route\nand\u0020query\u0020components.",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_pushToElastic"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AisDeletedFromElastic\u0028\u0029",
-            "name": "isDeletedFromElastic",
-            "summary": "Add\u0020ability\u0020to\u0020see\u0020what\u0020the\u0020response\nfrom\u0020Elasticsearch\u0020was\u0020after\u0020a\u0020delete\u0020action.",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_isDeletedFromElastic"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003AshouldPush\u0028\u0029",
-            "name": "shouldPush",
-            "summary": "Check\u0020if\u003A\n\u002D\u0020Owner\u0020has\u0020Versioned\n\u002D\u0020The\u0020versioned\u0020object\u0020is\u0020published\n\u002D\u0020The\u0020owner\u0020has\u0020the\u0020\u0022ShowInSearch\u0022\u0020Field\n\u002D\u0020And\u0020if\u0020so,\u0020is\u0020it\u0020set.",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#method_shouldPush"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\DataObjectElasticExtension\u003A\u003A\u0024deletedFromElastic",
-            "name": "deletedFromElastic",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-DataObjectElasticExtension.html#property_deletedFromElastic"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\ElasticSynonymExtension",
-            "name": "ElasticSynonymExtension",
-            "summary": "Class\u0020\\Firesphere\\ElasticSearch\\Extensions\\ElasticSynonymExtension",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-ElasticSynonymExtension.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\ElasticSynonymExtension\u003A\u003AonAfterWrite\u0028\u0029",
-            "name": "onAfterWrite",
-            "summary": "Add\u0020or\u0020update\u0020this\u0020synonym\u0020in\u0020Elastic",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-ElasticSynonymExtension.html#method_onAfterWrite"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions\\ElasticSynonymExtension\u003A\u003AonAfterDelete\u0028\u0029",
-            "name": "onAfterDelete",
-            "summary": "When\u0020deleting\u0020a\u0020synonym\u0020from\u0020the\u0020CMS,\u0020delete\u0020it\u0020as\u0020a\u0020rule",
-            "url": "classes/Firesphere-ElasticSearch-Extensions-ElasticSynonymExtension.html#method_onAfterDelete"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Factories\\DocumentFactory",
-            "name": "DocumentFactory",
-            "summary": "Class\u0020DocumentFactory\nFactory\u0020to\u0020create\u0020documents\u0020to\u0020be\u0020pushed\u0020to\u0020Elastic",
-            "url": "classes/Firesphere-ElasticSearch-Factories-DocumentFactory.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Factories\\DocumentFactory\u003A\u003AbuildItems\u0028\u0029",
-            "name": "buildItems",
-            "summary": "Note,\u0020it\u0020can\u0020only\u0020take\u0020one\u0020type\u0020of\u0020class\u0020at\u0020a\u0020time\u0021\nSo\u0020make\u0020sure\u0020you\u0020properly\u0020loop\u0020and\u0020set\u0020\u0024class",
-            "url": "classes/Firesphere-ElasticSearch-Factories-DocumentFactory.html#method_buildItems"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Factories\\DocumentFactory\u003A\u003AbuildFields\u0028\u0029",
-            "name": "buildFields",
-            "summary": "Create\u0020the\u0020required\u0020record\u0020for\u0020a\u0020field",
-            "url": "classes/Firesphere-ElasticSearch-Factories-DocumentFactory.html#method_buildFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Factories\\DocumentFactory\u003A\u003AaddField\u0028\u0029",
-            "name": "addField",
-            "summary": "Add\u0020a\u0020single\u0020field\u0020to\u0020the\u0020Elastic\u0020index",
-            "url": "classes/Firesphere-ElasticSearch-Factories-DocumentFactory.html#method_addField"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Factories\\DocumentFactory\u003A\u003AaddToDoc\u0028\u0029",
-            "name": "addToDoc",
-            "summary": "Push\u0020field\u0020to\u0020a\u0020document",
-            "url": "classes/Firesphere-ElasticSearch-Factories-DocumentFactory.html#method_addToDoc"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Factories\\DocumentFactory\u003A\u003ArecursiveImplode\u0028\u0029",
-            "name": "recursiveImplode",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Factories-DocumentFactory.html#method_recursiveImplode"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Factories\\DocumentFactory\u003A\u003AaddDefaultFields\u0028\u0029",
-            "name": "addDefaultFields",
-            "summary": "Add\u0020fields\u0020that\u0020should\u0020always\u0020be\u0020included",
-            "url": "classes/Firesphere-ElasticSearch-Factories-DocumentFactory.html#method_addDefaultFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Helpers\\ElasticLogger",
-            "name": "ElasticLogger",
-            "summary": "Class\u0020SearchLogger",
-            "url": "classes/Firesphere-ElasticSearch-Helpers-ElasticLogger.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Helpers\\ElasticLogger\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
+            "summary": "DataObjectAnnotator\u0020constructor.",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method___construct"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AsetupExtensionClasses\u0028\u0029",
+            "name": "setupExtensionClasses",
+            "summary": "Named\u0020\u0060setup\u0060\u0020to\u0020not\u0020clash\u0020with\u0020the\u0020actual\u0020setter",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_setupExtensionClasses"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AsetEnabledClasses\u0028\u0029",
+            "name": "setEnabledClasses",
+            "summary": "Get\u0020all\u0020annotatable\u0020classes\u0020from\u0020enabled\u0020modules",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_setEnabledClasses"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AgetExtensionClasses\u0028\u0029",
+            "name": "getExtensionClasses",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Helpers-ElasticLogger.html#method___construct"
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_getExtensionClasses"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Helpers\\Statics",
-            "name": "Statics",
-            "summary": "Class\u0020Statics",
-            "url": "classes/Firesphere-ElasticSearch-Helpers-Statics.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex",
-            "name": "ElasticIndex",
-            "summary": "Base\u0020for\u0020managing\u0020a\u0020Elastic\u0020core.",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AsetExtensionClasses\u0028\u0029",
+            "name": "setExtensionClasses",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method___construct"
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_setExtensionClasses"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003Ainit\u0028\u0029",
-            "name": "init",
-            "summary": "Required\u0020to\u0020initialise\u0020the\u0020fields.",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_init"
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003ApushExtensionClass\u0028\u0029",
+            "name": "pushExtensionClass",
+            "summary": "Add\u0020another\u0020extension\u0020class\nFalse\u0020checking,\u0020because\u0020what\u0020we\u0020get\u0020might\u0020be\u0020uppercase\u0020and\u0020then\u0020lowercase\nAllowing\u0020for\u0020duplicates\u0020here,\u0020to\u0020clean\u0020up\u0020later",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_pushExtensionClass"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AdeleteIndex\u0028\u0029",
-            "name": "deleteIndex",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AisEnabled\u0028\u0029",
+            "name": "isEnabled",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_deleteIndex"
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_isEnabled"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AshouldClear\u0028\u0029",
-            "name": "shouldClear",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AannotateModule\u0028\u0029",
+            "name": "annotateModule",
+            "summary": "Generate\u0020docblock\u0020for\u0020all\u0020subclasses\u0020of\u0020DataObjects\u0020and\u0020DataExtenions\nwithin\u0020a\u0020module.",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_annotateModule"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AgetClassesForModule\u0028\u0029",
+            "name": "getClassesForModule",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_shouldClear"
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_getClassesForModule"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AindexExists\u0028\u0029",
-            "name": "indexExists",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AannotateObject\u0028\u0029",
+            "name": "annotateObject",
+            "summary": "Generate\u0020docblock\u0020for\u0020a\u0020single\u0020subclass\u0020of\u0020DataObject\u0020or\u0020DataExtenions",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_annotateObject"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AwriteFileContent\u0028\u0029",
+            "name": "writeFileContent",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_indexExists"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AgetIndexName\u0028\u0029",
-            "name": "getIndexName",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_getIndexName"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AgetClasses\u0028\u0029",
-            "name": "getClasses",
-            "summary": "Get\u0020classes",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_getClasses"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AinitFromConfig\u0028\u0029",
-            "name": "initFromConfig",
-            "summary": "Generate\u0020the\u0020config\u0020from\u0020yml\u0020if\u0020possible",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_initFromConfig"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AsetClasses\u0028\u0029",
-            "name": "setClasses",
-            "summary": "Set\u0020the\u0020classes",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_setClasses"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AdoSearch\u0028\u0029",
-            "name": "doSearch",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_doSearch"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AaddClass\u0028\u0029",
-            "name": "addClass",
-            "summary": "Add\u0020a\u0020class\u0020to\u0020index\u0020or\u0020query\n\u0024options\u0020is\u0020not\u0020used\u0020anymore,\u0020added\u0020for\u0020backward\u0020compatibility",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_addClass"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AgetClientQuery\u0028\u0029",
-            "name": "getClientQuery",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_getClientQuery"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003AsetClientQuery\u0028\u0029",
-            "name": "setClientQuery",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#method_setClientQuery"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003A\u0024clientQuery",
-            "name": "clientQuery",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#property_clientQuery"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes\\ElasticIndex\u003A\u003A\u0024class",
-            "name": "class",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Indexes-ElasticIndex.html#property_class"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Models\\SynonymSet",
-            "name": "SynonymSet",
-            "summary": "Class\u0020\\Firesphere\\ElasticSearch\\Models\\SynonymSet",
-            "url": "classes/Firesphere-ElasticSearch-Models-SynonymSet.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Models\\SynonymSet\u003A\u003ArequireDefaultRecords\u0028\u0029",
-            "name": "requireDefaultRecords",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Models-SynonymSet.html#method_requireDefaultRecords"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Models\\SynonymSet\u003A\u003A\u0024table_name",
-            "name": "table_name",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Models-SynonymSet.html#property_table_name"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Models\\SynonymSet\u003A\u003A\u0024db",
-            "name": "db",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Models-SynonymSet.html#property_db"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery",
-            "name": "ElasticQuery",
-            "summary": "Class\u0020BaseQuery\u0020is\u0020the\u0020base\u0020of\u0020every\u0020query\u0020executed.",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\ElasticQuery\u003A\u003AaddTerm\u0028\u0029",
-            "name": "addTerm",
-            "summary": "Each\u0020boosted\u0020query\u0020needs\u0020a\u0020separate\u0020addition\u0021\ne.g.\u0020\u0024this\u002D\u003EaddTerm\u0028\u0027test\u0027,\u0020\u005B\u0027MyField\u0027,\u0020\u0027MyOtherField\u0027\u005D,\u00203\u0029\nfollowed\u0020by\n\u0024this\u002D\u003EaddTerm\u0028\u0027otherTest\u0027,\u0020\u005B\u0027Title\u0027\u005D,\u00205\u0029\u003B",
-            "url": "classes/Firesphere-ElasticSearch-Queries-ElasticQuery.html#method_addTerm"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder",
-            "name": "QueryBuilder",
-            "summary": "Class\u0020QueryBuilder",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AbuildQuery\u0028\u0029",
-            "name": "buildQuery",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_buildQuery"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003Ainit\u0028\u0029",
-            "name": "init",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_init"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AsetIndex\u0028\u0029",
-            "name": "setIndex",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_setIndex"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AsetQuery\u0028\u0029",
-            "name": "setQuery",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_setQuery"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetFilters\u0028\u0029",
-            "name": "getFilters",
-            "summary": "Build\u0020the\u0020\u0060OR\u0060\u0020and\u0020\u0060AND\u0060\u0020filters",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getFilters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetAndFilters\u0028\u0029",
-            "name": "getAndFilters",
-            "summary": "Required\u0020must\u002Dbe\u0020filters\u0020if\u0020they\u0027re\u0020here.",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAndFilters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetOrFilters\u0028\u0029",
-            "name": "getOrFilters",
-            "summary": "Create\u0020the\u0020\u0022should\u0022\u0020filter,\u0020that\u0020is\u0020OR\u0020instead\u0020of\u0020AND",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getOrFilters"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetUserQuery\u0028\u0029",
-            "name": "getUserQuery",
-            "summary": "this\u0020allows\u0020for\u0020multiple\u0020search\u0020terms\u0020to\u0020be\u0020entered",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getUserQuery"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetFieldBoosting\u0028\u0029",
-            "name": "getFieldBoosting",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getFieldBoosting"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AaddShould\u0028\u0029",
-            "name": "addShould",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_addShould"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetHighlighter\u0028\u0029",
-            "name": "getHighlighter",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getHighlighter"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetSuggestTermList\u0028\u0029",
-            "name": "getSuggestTermList",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSuggestTermList"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetAggregates\u0028\u0029",
-            "name": "getAggregates",
-            "summary": "Build\u0020the\u0020query\u0020part\u0020for\u0020aggregation\/faceting",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getAggregates"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003AgetSort\u0028\u0029",
-            "name": "getSort",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#method_getSort"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003A\u0024query",
-            "name": "query",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#property_query"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders\\QueryBuilder\u003A\u003A\u0024index",
-            "name": "index",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Queries-Builders-QueryBuilder.html#property_index"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult",
-            "name": "SearchResult",
-            "summary": "Class\u0020SearchResult\u0020is\u0020the\u0020combined\u0020result\u0020in\u0020a\u0020SilverStripe\u0020readable\u0020way",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "SearchResult\u0020constructor.",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method___construct"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AsetSpellcheck\u0028\u0029",
-            "name": "setSpellcheck",
-            "summary": "Set\u0020the\u0020spellcheck\u0020list\u0020as\u0020an\u0020ArrayList",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_setSpellcheck"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AgetPaginatedMatches\u0028\u0029",
-            "name": "getPaginatedMatches",
-            "summary": "Get\u0020the\u0020matches\u0020as\u0020a\u0020Paginated\u0020List",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_getPaginatedMatches"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AgetMatches\u0028\u0029",
-            "name": "getMatches",
-            "summary": "Get\u0020the\u0020matches\u0020as\u0020an\u0020ArrayList\u0020and\u0020add\u0020an\u0020excerpt\u0020if\u0020possible.",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_getMatches"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AsetMatches\u0028\u0029",
-            "name": "setMatches",
-            "summary": "Set\u0020the\u0020matches\u0020from\u0020Solarium\u0020as\u0020an\u0020ArrayList",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_setMatches"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AasDataobject\u0028\u0029",
-            "name": "asDataobject",
-            "summary": "Check\u0020if\u0020the\u0020match\u0020is\u0020a\u0020DataObject\u0020and\u0020exists\nAnd,\u0020if\u0020so,\u0020return\u0020the\u0020found\u0020DO.",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_asDataobject"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AcreateExcerpt\u0028\u0029",
-            "name": "createExcerpt",
-            "summary": "Generate\u0020an\u0020excerpt\u0020for\u0020a\u0020DataObject",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_createExcerpt"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AgetHighlightByID\u0028\u0029",
-            "name": "getHighlightByID",
-            "summary": "Get\u0020the\u0020highlight\u0020for\u0020a\u0020specific\u0020document",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_getHighlightByID"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AsetCustomisedMatches\u0028\u0029",
-            "name": "setCustomisedMatches",
-            "summary": "Allow\u0020overriding\u0020of\u0020matches\u0020with\u0020a\u0020custom\u0020result.\u0020Accepts\u0020anything\u0020you\u0020like,\u0020mostly",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_setCustomisedMatches"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AcreateFacet\u0028\u0029",
-            "name": "createFacet",
-            "summary": "Create\u0020a\u0020single\u0020facet\u0020array\u0020for\u0020a\u0020faceted\u0020class",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_createFacet"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AgetClassFacet\u0028\u0029",
-            "name": "getClassFacet",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_getClassFacet"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003AaddHighlight\u0028\u0029",
-            "name": "addHighlight",
-            "summary": "Elastic\u0020is\u0020better\u0020off\u0020using\u0020the\u0020add\u0020method,\u0020as\u0020the\u0020highlights\u0020don\u0027t\u0020come\u0020in\u0020a\nsingle\u0020bulk",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#method_addHighlight"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003A\u0024query",
-            "name": "query",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#property_query"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003A\u0024index",
-            "name": "index",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#property_index"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003A\u0024matches",
-            "name": "matches",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#property_matches"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results\\SearchResult\u003A\u003A\u0024elasticResult",
-            "name": "elasticResult",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Results-SearchResult.html#property_elasticResult"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService",
-            "name": "ElasticCoreService",
-            "summary": "Class\u0020ElasticCoreService\u0020provides\u0020the\u0020base\u0020connection\u0020to\u0020Elastic.",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#method___construct"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003AgetEndpointConfig\u0028\u0029",
-            "name": "getEndpointConfig",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#method_getEndpointConfig"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003AgetBuilder\u0028\u0029",
-            "name": "getBuilder",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#method_getBuilder"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003AgetClient\u0028\u0029",
-            "name": "getClient",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#method_getClient"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003AsetClient\u0028\u0029",
-            "name": "setClient",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#method_setClient"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003AupdateIndex\u0028\u0029",
-            "name": "updateIndex",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#method_updateIndex"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003AgetFactory\u0028\u0029",
-            "name": "getFactory",
-            "summary": "Get\u0020the\u0020document\u0020factory\u0020prepared",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#method_getFactory"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003AbuildBody\u0028\u0029",
-            "name": "buildBody",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#method_buildBody"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003AID_KEY",
-            "name": "ID_KEY",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#constant_ID_KEY"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003AENVIRONMENT_VARS",
-            "name": "ENVIRONMENT_VARS",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#constant_ENVIRONMENT_VARS"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services\\ElasticCoreService\u003A\u003A\u0024client",
-            "name": "client",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Services-ElasticCoreService.html#property_client"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\BulkDeleteTask",
-            "name": "BulkDeleteTask",
-            "summary": "Example\u0020task\u0020to\u0020empty\u0020an\u0020Elastic\u0020index",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-BulkDeleteTask.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\BulkDeleteTask\u003A\u003Arun\u0028\u0029",
-            "name": "run",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-BulkDeleteTask.html#method_run"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\BulkDeleteTask\u003A\u003A\u0024segment",
-            "name": "segment",
-            "summary": "URLSegment\u0020of\u0020this\u0020task",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-BulkDeleteTask.html#property_segment"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\BulkDeleteTask\u003A\u003A\u0024title",
-            "name": "title",
-            "summary": "My\u0020name",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-BulkDeleteTask.html#property_title"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\BulkDeleteTask\u003A\u003A\u0024description",
-            "name": "description",
-            "summary": "What\u0020do\u0020I\u0020do\u003F",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-BulkDeleteTask.html#property_description"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\BulkDeleteTask\u003A\u003A\u0024enabled",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_writeFileContent"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003AgetGeneratedFileContent\u0028\u0029",
+            "name": "getGeneratedFileContent",
+            "summary": "Return\u0020the\u0020complete\u0020File\u0020content\u0020with\u0020the\u0020newly\u0020generated\u0020DocBlocks",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#method_getGeneratedFileContent"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003A\u0024extension_classes",
+            "name": "extension_classes",
+            "summary": "All\u0020classes\u0020that\u0020subclass\u0020Object",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#property_extension_classes"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003A\u0024enabled",
             "name": "enabled",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-BulkDeleteTask.html#property_enabled"
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#property_enabled"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureSynonymsTask",
-            "name": "ElasticConfigureSynonymsTask",
-            "summary": "Class\u0020ElasticConfigureSynonymsTask",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureSynonymsTask.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureSynonymsTask\u003A\u003Arun\u0028\u0029",
-            "name": "run",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003A\u0024enabled_modules",
+            "name": "enabled_modules",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureSynonymsTask.html#method_run"
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#property_enabled_modules"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureSynonymsTask\u003A\u003AtransformBaseSynonyms\u0028\u0029",
-            "name": "transformBaseSynonyms",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003A\u0024permissionChecker",
+            "name": "permissionChecker",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureSynonymsTask.html#method_transformBaseSynonyms"
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#property_permissionChecker"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureSynonymsTask\u003A\u003A\u0024segment",
-            "name": "segment",
-            "summary": "URLSegment\u0020of\u0020this\u0020task",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureSynonymsTask.html#property_segment"
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003A\u0024annotatableClasses",
+            "name": "annotatableClasses",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#property_annotatableClasses"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureSynonymsTask\u003A\u003A\u0024title",
-            "name": "title",
-            "summary": "My\u0020name",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureSynonymsTask.html#property_title"
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\DataObjectAnnotator\u003A\u003A\u0024dbfield_tagnames",
+            "name": "dbfield_tagnames",
+            "summary": "Default\u0020tagname\u0020will\u0020be\u0020\u0040string\u0020.",
+            "url": "classes/SilverLeague-IDEAnnotator-DataObjectAnnotator.html#property_dbfield_tagnames"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureSynonymsTask\u003A\u003A\u0024description",
-            "name": "description",
-            "summary": "What\u0020do\u0020I\u0020do\u003F",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureSynonymsTask.html#property_description"
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable",
+            "name": "Annotatable",
+            "summary": "Class\u0020Annotatable",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask",
-            "name": "ElasticConfigureTask",
-            "summary": "Class\u0020ElasticConfigureTask",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html"
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable\u003A\u003AafterCallActionHandler\u0028\u0029",
+            "name": "afterCallActionHandler",
+            "summary": "Annotated\u0020Controllers\u0020and\u0020Extensions",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html#method_afterCallActionHandler"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable\u003A\u003AannotateModules\u0028\u0029",
+            "name": "annotateModules",
+            "summary": "Conditionally\u0020annotate\u0020this\u0020project\u0027s\u0020modules\u0020if\u0020enabled\u0020and\u0020not\u0020skipped",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html#method_annotateModules"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "Annotatable\u0020setup.",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html#method_setUp"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable\u003A\u003AdisplayMessage\u0028\u0029",
+            "name": "displayMessage",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html#method_displayMessage"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable\u003A\u003AgetAnnotator\u0028\u0029",
+            "name": "getAnnotator",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html#method_getAnnotator"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable\u003A\u003AgetPermissionChecker\u0028\u0029",
+            "name": "getPermissionChecker",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html#method_getPermissionChecker"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable\u003A\u003A\u0024annotated_extensions",
+            "name": "annotated_extensions",
+            "summary": "Keep\u0020track\u0020ot\u0020the\u0020annotation\u0020actions\u0020for\u0020extensions\nAn\u0020Extension\u0020can\u0020belong\u0020to\u0020many\u0020DataObjects.",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html#property_annotated_extensions"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable\u003A\u003A\u0024annotator",
+            "name": "annotator",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html#property_annotator"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions\\Annotatable\u003A\u003A\u0024permissionChecker",
+            "name": "permissionChecker",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Extensions-Annotatable.html#property_permissionChecker"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator",
+            "name": "AbstractTagGenerator",
+            "summary": "AbstractTagGenerator",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
+            "summary": "DocBlockTagGenerator\u0020constructor.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method___construct"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgetSupportedTagTypes\u0028\u0029",
+            "name": "getSupportedTagTypes",
+            "summary": "List\u0020of\u0020supported\u0020tags.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_getSupportedTagTypes"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgenerateTags\u0028\u0029",
+            "name": "generateTags",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method___construct"
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_generateTags"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003Arun\u0028\u0029",
-            "name": "run",
-            "summary": "Run\u0020the\u0020config",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_run"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AconfigureIndex\u0028\u0029",
-            "name": "configureIndex",
-            "summary": "Update\/create\u0020a\u0020single\u0020index.",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_configureIndex"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AcreateConfigForIndex\u0028\u0029",
-            "name": "createConfigForIndex",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgetTags\u0028\u0029",
+            "name": "getTags",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_createConfigForIndex"
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_getTags"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AconvertForJSON\u0028\u0029",
-            "name": "convertForJSON",
-            "summary": "Take\u0020the\u0020config\u0020from\u0020the\u0020resolver\u0020and\u0020build\u0020an\u0020array\u0020that\u0027s\nready\u0020to\u0020be\u0020converted\u0020to\u0020JSON\u0020for\u0020Elastic.",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_convertForJSON"
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgenerateExtensionsTags\u0028\u0029",
+            "name": "generateExtensionsTags",
+            "summary": "Generate\u0020the\u0020mixins\u0020for\u0020DataExtensions.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_generateExtensionsTags"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AgetMethod\u0028\u0029",
-            "name": "getMethod",
-            "summary": "Get\u0020the\u0020method\u0020to\u0020use.\u0020Create\u0020or\u0020Update",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_getMethod"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003AgetService\u0028\u0029",
-            "name": "getService",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgetClassConfig\u0028\u0029",
+            "name": "getClassConfig",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#method_getService"
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_getClassConfig"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024segment",
-            "name": "segment",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgetAnnotationClassName\u0028\u0029",
+            "name": "getAnnotationClassName",
+            "summary": "Check\u0020if\u0020we\u0020need\u0020to\u0020use\u0020the\u0020short\u0020name\u0020for\u0020a\u0020class",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_getAnnotationClassName"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003ApushMixinTag\u0028\u0029",
+            "name": "pushMixinTag",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_segment"
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_pushMixinTag"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024unSsortables",
-            "name": "unSsortables",
-            "summary": "DBHTML\u0020and\u0020DBText\u0020etc.\u0020should\u0020never\u0020be\u0020made\u0020sortable\nIt\u0020doesn\u0027t\u0020make\u0020sense\u0020for\u0020large\u0020text\u0020objects",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_unSsortables"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024result",
-            "name": "result",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003ApushTagWithExistingComment\u0028\u0029",
+            "name": "pushTagWithExistingComment",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_result"
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_pushTagWithExistingComment"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024title",
-            "name": "title",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgetExistingTagCommentByTagString\u0028\u0029",
+            "name": "getExistingTagCommentByTagString",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_title"
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_getExistingTagCommentByTagString"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024description",
-            "name": "description",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgetExistingTags\u0028\u0029",
+            "name": "getExistingTags",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_description"
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_getExistingTags"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticConfigureTask\u003A\u003A\u0024service",
-            "name": "service",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgenerateOwnerTags\u0028\u0029",
+            "name": "generateOwnerTags",
+            "summary": "Generate\u0020the\u0020Owner\u002Dproperties\u0020for\u0020extensions.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_generateOwnerTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003AgetOwnerClasses\u0028\u0029",
+            "name": "getOwnerClasses",
+            "summary": "Get\u0020all\u0020owner\u0020classes\u0020of\u0020the\u0020given\u0020extension\u0020class",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_getOwnerClasses"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003ApushPropertyTag\u0028\u0029",
+            "name": "pushPropertyTag",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticConfigureTask.html#property_service"
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_pushPropertyTag"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask",
-            "name": "ElasticIndexTask",
-            "summary": "Class\u0020ElasticIndexTask",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html"
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003ApushMethodTag\u0028\u0029",
+            "name": "pushMethodTag",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#method_pushMethodTag"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003A\u0024className",
+            "name": "className",
+            "summary": "The\u0020current\u0020class\u0020we\u0020are\u0020working\u0020with",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#property_className"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003A\u0024existingTags",
+            "name": "existingTags",
+            "summary": "The\u0020existing\u0020tags\u0020of\u0020the\u0020class\u0020we\u0020are\u0020working\u0020with",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#property_existingTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003A\u0024reflector",
+            "name": "reflector",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#property_reflector"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003A\u0024tags",
+            "name": "tags",
+            "summary": "List\u0020all\u0020the\u0020generated\u0020tags\u0020form\u0020the\u0020various\u0020generateSomeORMProperies\u0020methods",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#property_tags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003A\u0024tagFactory",
+            "name": "tagFactory",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#property_tagFactory"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\AbstractTagGenerator\u003A\u003A\u0024pageClassesCache",
+            "name": "pageClassesCache",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-AbstractTagGenerator.html#property_pageClassesCache"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\ControllerTagGenerator",
+            "name": "ControllerTagGenerator",
+            "summary": "AbstractTagGenerator",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-ControllerTagGenerator.html"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\ControllerTagGenerator\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "ElasticIndexTask\u0020constructor.\u0020Sets\u0020up\u0020the\u0020document\u0020factory",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method___construct"
+            "summary": "ControllerTagGenerator\u0020constructor.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-ControllerTagGenerator.html#method___construct"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003Arun\u0028\u0029",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\ControllerTagGenerator\u003A\u003AgenerateTags\u0028\u0029",
+            "name": "generateTags",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-ControllerTagGenerator.html#method_generateTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\ControllerTagGenerator\u003A\u003AgenerateControllerObjectTags\u0028\u0029",
+            "name": "generateControllerObjectTags",
+            "summary": "Generate\u0020the\u0020controller\u0020tags,\u0020these\u0020differ\u0020slightly\u0020from\u0020the\u0020standard\u0020ORM\u0020tags",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-ControllerTagGenerator.html#method_generateControllerObjectTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\ControllerTagGenerator\u003A\u003AisContentController\u0028\u0029",
+            "name": "isContentController",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-ControllerTagGenerator.html#method_isContentController"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\ControllerTagGenerator\u003A\u003AmapPageTypesToControllerName\u0028\u0029",
+            "name": "mapPageTypesToControllerName",
+            "summary": "Generates\u0020the\u0020cache\u0020of\u0020Page\u0020types\u0020to\u0020Controllers\u0020when\u0020the\u0020controller_name\u0020config\u0020is\u0020used",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-ControllerTagGenerator.html#method_mapPageTypesToControllerName"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator",
+            "name": "DocBlockGenerator",
+            "summary": "Class\u0020DocBlockGenerator",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "DocBlockGenerator\u0020constructor.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#method___construct"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003AgetExistingTags\u0028\u0029",
+            "name": "getExistingTags",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#method_getExistingTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003AgetExistingDocBlock\u0028\u0029",
+            "name": "getExistingDocBlock",
+            "summary": "Not\u0020that\u0020in\u0020case\u0020there\u0020are\u0020multiple\u0020doblocks\u0020for\u0020a\u0020class,\nthe\u0020last\u0020one\u0020will\u0020be\u0020returned",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#method_getExistingDocBlock"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003AgetGeneratedDocBlock\u0028\u0029",
+            "name": "getGeneratedDocBlock",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#method_getGeneratedDocBlock"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003AmergeGeneratedTagsIntoDocBlock\u0028\u0029",
+            "name": "mergeGeneratedTagsIntoDocBlock",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#method_mergeGeneratedTagsIntoDocBlock"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003AremoveExistingSupportedTags\u0028\u0029",
+            "name": "removeExistingSupportedTags",
+            "summary": "Remove\u0020all\u0020existing\u0020tags\u0020that\u0020are\u0020supported\u0020by\u0020this\u0020module.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#method_removeExistingSupportedTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003AgetGeneratedTags\u0028\u0029",
+            "name": "getGeneratedTags",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#method_getGeneratedTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003A\u0024className",
+            "name": "className",
+            "summary": "The\u0020current\u0020class\u0020we\u0020are\u0020working\u0020with",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#property_className"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003A\u0024reflector",
+            "name": "reflector",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#property_reflector"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003A\u0024tagGenerator",
+            "name": "tagGenerator",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#property_tagGenerator"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\DocBlockGenerator\u003A\u003A\u0024docBlockFactory",
+            "name": "docBlockFactory",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-DocBlockGenerator.html#property_docBlockFactory"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator",
+            "name": "OrmTagGenerator",
+            "summary": "OrmTagGenerator\nThis\u0020class\u0020generates\u0020DocBlock\u0020Tags\u0020for\u0020the\u0020ORM\u0020properties\u0020of\u0020a\u0020Dataobject\u0020of\u0020DataExtension\nand\u0020adds\u0020\u0024owner\u0020Tags\u0020for\u0020added\u0020DataExtensions",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AgenerateTags\u0028\u0029",
+            "name": "generateTags",
+            "summary": "Generates\u0020all\u0020ORM\u0020Tags",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_generateTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AgenerateDBTags\u0028\u0029",
+            "name": "generateDBTags",
+            "summary": "Generate\u0020the\u0020\u0024db\u0020property\u0020values.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_generateDBTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AgetTagNameForDBField\u0028\u0029",
+            "name": "getTagNameForDBField",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_getTagNameForDBField"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AgenerateBelongsToTags\u0028\u0029",
+            "name": "generateBelongsToTags",
+            "summary": "Generate\u0020the\u0020\u0024belongs_to\u0020property\u0020values.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_generateBelongsToTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AresolveDotNotation\u0028\u0029",
+            "name": "resolveDotNotation",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_resolveDotNotation"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AgenerateHasOneTags\u0028\u0029",
+            "name": "generateHasOneTags",
+            "summary": "Generate\u0020the\u0020\u0024has_one\u0020property\u0020and\u0020method\u0020values.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_generateHasOneTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AgenerateHasManyTags\u0028\u0029",
+            "name": "generateHasManyTags",
+            "summary": "Generate\u0020the\u0020\u0024has_many\u0020method\u0020values.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_generateHasManyTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AgenerateTagsForDataLists\u0028\u0029",
+            "name": "generateTagsForDataLists",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_generateTagsForDataLists"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AgenerateManyManyTags\u0028\u0029",
+            "name": "generateManyManyTags",
+            "summary": "Generate\u0020the\u0020\u0024many_many\u0020method\u0020values.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_generateManyManyTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003AgenerateBelongsManyManyTags\u0028\u0029",
+            "name": "generateBelongsManyManyTags",
+            "summary": "Generate\u0020the\u0020\u0024belongs_many_many\u0020method\u0020values.",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#method_generateBelongsManyManyTags"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators\\OrmTagGenerator\u003A\u003A\u0024propertyTypes",
+            "name": "propertyTypes",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Generators-OrmTagGenerator.html#property_propertyTypes"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotateClassInfo",
+            "name": "AnnotateClassInfo",
+            "summary": "Class\u0020AnnotateClassInfo\nWe\u0020will\u0020need\u0020this\u0020for\u0020phpDocumentor\u0020as\u0020well.",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotateClassInfo.html"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotateClassInfo\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "AnnotateClassInfo\u0020constructor.",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotateClassInfo.html#method___construct"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotateClassInfo\u003A\u003AgetModuleName\u0028\u0029",
+            "name": "getModuleName",
+            "summary": "Where\u0020module\u0020name\u0020is\u0020a\u0020folder\u0020in\u0020the\u0020webroot.",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotateClassInfo.html#method_getModuleName"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotateClassInfo\u003A\u003AgetClassFilePath\u0028\u0029",
+            "name": "getClassFilePath",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotateClassInfo.html#method_getClassFilePath"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotateClassInfo\u003A\u003A\u0024className",
+            "name": "className",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotateClassInfo.html#property_className"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotateClassInfo\u003A\u003A\u0024reflector",
+            "name": "reflector",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotateClassInfo.html#property_reflector"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotatePermissionChecker",
+            "name": "AnnotatePermissionChecker",
+            "summary": "Class\u0020AnnotatePermissionChecker",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotatePermissionChecker.html"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotatePermissionChecker\u003A\u003AenvironmentIsAllowed\u0028\u0029",
+            "name": "environmentIsAllowed",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotatePermissionChecker.html#method_environmentIsAllowed"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotatePermissionChecker\u003A\u003AisEnabled\u0028\u0029",
+            "name": "isEnabled",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotatePermissionChecker.html#method_isEnabled"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotatePermissionChecker\u003A\u003AgetSupportedParentClasses\u0028\u0029",
+            "name": "getSupportedParentClasses",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotatePermissionChecker.html#method_getSupportedParentClasses"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotatePermissionChecker\u003A\u003AclassNameIsAllowed\u0028\u0029",
+            "name": "classNameIsAllowed",
+            "summary": "Check\u0020if\u0020a\u0020DataObject\u0020or\u0020DataExtension\u0020subclass\u0020is\u0020allowed\u0020by\u0020checking\u0020if\u0020the\u0020file\nis\u0020in\u0020the\u0020\u0024allowed_modules\u0020array\nThe\u0020permission\u0020is\u0020checked\u0020by\u0020matching\u0020the\u0020filePath\u0020and\u0020modulePath",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotatePermissionChecker.html#method_classNameIsAllowed"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotatePermissionChecker\u003A\u003AclassNameIsSupported\u0028\u0029",
+            "name": "classNameIsSupported",
+            "summary": "Check\u0020if\u0020a\u0020\u0028subclass\u0020of\u0020\u0029\u0020class\u0020is\u0020a\u0020supported",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotatePermissionChecker.html#method_classNameIsSupported"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotatePermissionChecker\u003A\u003AmoduleIsAllowed\u0028\u0029",
+            "name": "moduleIsAllowed",
+            "summary": "Check\u0020if\u0020a\u0020module\u0020is\u0020in\u0020the\u0020\u0024allowed_modules\u0020array\nRequired\u0020for\u0020the\u0020buildTask.",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotatePermissionChecker.html#method_moduleIsAllowed"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotatePermissionChecker\u003A\u003AenabledModules\u0028\u0029",
+            "name": "enabledModules",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotatePermissionChecker.html#method_enabledModules"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers\\AnnotatePermissionChecker\u003A\u003A\u0024supportedParentClasses",
+            "name": "supportedParentClasses",
+            "summary": "In\u0020the\u0020future\u0020we\u0020will\u0020support\u0020other\u0020Classes\u0020as\u0020well.",
+            "url": "classes/SilverLeague-IDEAnnotator-Helpers-AnnotatePermissionChecker.html#property_supportedParentClasses"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Reflection\\ShortNameResolver",
+            "name": "ShortNameResolver",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Reflection-ShortNameResolver.html"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Reflection\\ShortNameResolver\u003A\u003Aresolve\u0028\u0029",
+            "name": "resolve",
+            "summary": "",
+            "url": "classes/SilverLeague-IDEAnnotator-Reflection-ShortNameResolver.html#method_resolve"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Tasks\\DataObjectAnnotatorTask",
+            "name": "DataObjectAnnotatorTask",
+            "summary": "Class\u0020DataObjectAnnotatorTask",
+            "url": "classes/SilverLeague-IDEAnnotator-Tasks-DataObjectAnnotatorTask.html"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Tasks\\DataObjectAnnotatorTask\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "DataObjectAnnotatorTask\u0020constructor.",
+            "url": "classes/SilverLeague-IDEAnnotator-Tasks-DataObjectAnnotatorTask.html#method___construct"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Tasks\\DataObjectAnnotatorTask\u003A\u003Arun\u0028\u0029",
             "name": "run",
             "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_run"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AgetLogger\u0028\u0029",
-            "name": "getLogger",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getLogger"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AsetLogger\u0028\u0029",
-            "name": "setLogger",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_setLogger"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AgetClasses\u0028\u0029",
-            "name": "getClasses",
-            "summary": "get\u0020the\u0020classes\u0020to\u0020run\u0020for\u0020this\u0020task\u0020execution",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getClasses"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AgetService\u0028\u0029",
-            "name": "getService",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getService"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AsetService\u0028\u0029",
-            "name": "setService",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_setService"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AisDebug\u0028\u0029",
-            "name": "isDebug",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_isDebug"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AsetDebug\u0028\u0029",
-            "name": "setDebug",
-            "summary": "Set\u0020the\u0020debug\u0020mode",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_setDebug"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AgetGroups\u0028\u0029",
-            "name": "getGroups",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getGroups"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AindexClass\u0028\u0029",
-            "name": "indexClass",
-            "summary": "Index\u0020a\u0020single\u0020class\u0020for\u0020a\u0020given\u0020index.\u0020\u007B\u0040link\u0020static\u003A\u003AindexClassForIndex\u0028\u0029\u007D",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_indexClass"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AgetIndex\u0028\u0029",
-            "name": "getIndex",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_getIndex"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AsetIndex\u0028\u0029",
-            "name": "setIndex",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_setIndex"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AdoReindex\u0028\u0029",
-            "name": "doReindex",
-            "summary": "Reindex\u0020the\u0020given\u0020group,\u0020for\u0020each\u0020state",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_doReindex"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AindexStateClass\u0028\u0029",
-            "name": "indexStateClass",
-            "summary": "Index\u0020a\u0020group\u0020of\u0020a\u0020class\u0020for\u0020a\u0020specific\u0020state\u0020and\u0020index",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_indexStateClass"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003AupdateIndex\u0028\u0029",
-            "name": "updateIndex",
-            "summary": "Execute\u0020the\u0020update\u0020on\u0020the\u0020client",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#method_updateIndex"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024segment",
-            "name": "segment",
-            "summary": "URLSegment\u0020of\u0020this\u0020task",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_segment"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024currentStates",
-            "name": "currentStates",
-            "summary": "Store\u0020the\u0020current\u0020states\u0020for\u0020all\u0020instances\u0020of\u0020SiteState",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_currentStates"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024title",
-            "name": "title",
-            "summary": "My\u0020name",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_title"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024description",
-            "name": "description",
-            "summary": "What\u0020do\u0020I\u0020do\u003F",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_description"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024service",
-            "name": "service",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_service"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024logger",
-            "name": "logger",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_logger"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024debug",
-            "name": "debug",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_debug"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024index",
-            "name": "index",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_index"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks\\ElasticIndexTask\u003A\u003A\u0024groups",
-            "name": "groups",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Tasks-ElasticIndexTask.html#property_groups"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait",
-            "name": "BaseIndexTrait",
-            "summary": "Trait\u0020ElasticIndexTrait\nGetters\u0020and\u0020Setters\u0020for\u0020the\u0020ElasticIndex",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddSortField\u0028\u0029",
-            "name": "addSortField",
-            "summary": "Add\u0020a\u0020field\u0020to\u0020sort\u0020on",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addSortField"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetFulltextFields\u0028\u0029",
-            "name": "getFulltextFields",
-            "summary": "Get\u0020the\u0020fulltext\u0020fields",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFulltextFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AsetFulltextFields\u0028\u0029",
-            "name": "setFulltextFields",
-            "summary": "Set\u0020the\u0020fulltext\u0020fields",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFulltextFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetFilterFields\u0028\u0029",
-            "name": "getFilterFields",
-            "summary": "Get\u0020the\u0020filter\u0020fields",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFilterFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AsetFilterFields\u0028\u0029",
-            "name": "setFilterFields",
-            "summary": "Set\u0020the\u0020filter\u0020fields",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFilterFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddFulltextField\u0028\u0029",
-            "name": "addFulltextField",
-            "summary": "Add\u0020a\u0020single\u0020Fulltext\u0020field",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFulltextField"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetSortFields\u0028\u0029",
-            "name": "getSortFields",
-            "summary": "Get\u0020the\u0020sortable\u0020fields",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getSortFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AsetSortFields\u0028\u0029",
-            "name": "setSortFields",
-            "summary": "Set\/override\u0020the\u0020sortable\u0020fields",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setSortFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddAllFulltextFields\u0028\u0029",
-            "name": "addAllFulltextFields",
-            "summary": "Add\u0020all\u0020text\u002Dtype\u0020fields\u0020to\u0020the\u0020given\u0020index",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addAllFulltextFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddAllFieldsByType\u0028\u0029",
-            "name": "addAllFieldsByType",
-            "summary": "Add\u0020all\u0020database\u002Dbacked\u0020text\u0020fields\u0020as\u0020fulltext\u0020searchable\u0020fields.",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addAllFieldsByType"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetClasses\u0028\u0029",
-            "name": "getClasses",
-            "summary": "This\u0020trait\u0020requires\u0020classes\u0020to\u0020be\u0020set,\u0020so\u0020getClasses\u0020can\u0020be\u0020called.",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getClasses"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddFulltextFieldsForClass\u0028\u0029",
-            "name": "addFulltextFieldsForClass",
-            "summary": "Add\u0020all\u0020fields\u0020of\u0020a\u0020given\u0020type\u0020to\u0020the\u0020index",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFulltextFieldsForClass"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddAllDateFields\u0028\u0029",
-            "name": "addAllDateFields",
-            "summary": "Add\u0020all\u0020date\u002Dtype\u0020fields\u0020to\u0020the\u0020given\u0020index",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addAllDateFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AsetFacetFields\u0028\u0029",
-            "name": "setFacetFields",
-            "summary": "Set\u0020the\u0020fields\u0020to\u0020use\u0020for\u0020faceting",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setFacetFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddFacetField\u0028\u0029",
-            "name": "addFacetField",
-            "summary": "Add\u0020a\u0020facet\u0020field",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFacetField"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetFacetFields\u0028\u0029",
-            "name": "getFacetFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getFacetFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AaddFilterField\u0028\u0029",
-            "name": "addFilterField",
-            "summary": "Add\u0020a\u0020filterable\u0020field\nCompatibility\u0020stub\u0020for\u0020Solr",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_addFilterField"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetClient\u0028\u0029",
-            "name": "getClient",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getClient"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AsetClient\u0028\u0029",
-            "name": "setClient",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setClient"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AgetStoredFields\u0028\u0029",
-            "name": "getStoredFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_getStoredFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003AsetStoredFields\u0028\u0029",
-            "name": "setStoredFields",
-            "summary": "Stub\u0020to\u0020be\u0020compatible\u0020with\u0020Solr.\u0020Elastic\u0020stores\u0020everything\u0020anyway",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#method_setStoredFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003A\u0024client",
-            "name": "client",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_client"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003A\u0024facetFields",
-            "name": "facetFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_facetFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003A\u0024fulltextFields",
-            "name": "fulltextFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_fulltextFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003A\u0024filterFields",
-            "name": "filterFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_filterFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003A\u0024sortFields",
-            "name": "sortFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_sortFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003A\u0024storedFields",
-            "name": "storedFields",
-            "summary": "",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_storedFields"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits\\BaseIndexTrait\u003A\u003A\u0024usedAllFields",
-            "name": "usedAllFields",
-            "summary": "usedAllFields\u0020is\u0020used\u0020to\u0020determine\u0020if\u0020the\u0020addAllFields\u0020method\u0020has\u0020been\u0020called\nThis\u0020is\u0020to\u0020prevent\u0020a\u0020notice\u0020if\u0020there\u0020is\u0020no\u0020yml.",
-            "url": "classes/Firesphere-ElasticSearch-Traits-IndexTraits-BaseIndexTrait.html#property_usedAllFields"
+            "url": "classes/SilverLeague-IDEAnnotator-Tasks-DataObjectAnnotatorTask.html#method_run"
         },                {
             "fqsen": "\\getSuggestion\u0028\u0029",
             "name": "getSuggestion",
@@ -1291,10 +936,30 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Firesphere-SearchBackend-Indexes-CoreIndex.html"
         },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Indexes\\CoreIndex\u003A\u003Ainit\u0028\u0029",
+            "name": "init",
+            "summary": "Required\u0020to\u0020initialise\u0020the\u0020fields.",
+            "url": "classes/Firesphere-SearchBackend-Indexes-CoreIndex.html#method_init"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Indexes\\CoreIndex\u003A\u003AgetIndexName\u0028\u0029",
+            "name": "getIndexName",
+            "summary": "Get\u0020the\u0020name\u0020of\u0020this\u0020index.",
+            "url": "classes/Firesphere-SearchBackend-Indexes-CoreIndex.html#method_getIndexName"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Indexes\\CoreIndex\u003A\u003AinitFromConfig\u0028\u0029",
+            "name": "initFromConfig",
+            "summary": "Generate\u0020the\u0020config\u0020from\u0020yml\u0020if\u0020possible",
+            "url": "classes/Firesphere-SearchBackend-Indexes-CoreIndex.html#method_initFromConfig"
+        },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Indexes\\CoreIndex\u003A\u003AgetFieldsForIndexing\u0028\u0029",
             "name": "getFieldsForIndexing",
             "summary": "Get\u0020all\u0020fields\u0020that\u0020are\u0020required\u0020for\u0020indexing\u0020in\u0020a\u0020unique\u0020way",
             "url": "classes/Firesphere-SearchBackend-Indexes-CoreIndex.html#method_getFieldsForIndexing"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Indexes\\CoreIndex\u003A\u003AdoSearch\u0028\u0029",
+            "name": "doSearch",
+            "summary": "Execute\u0020a\u0020search\u0020of\u0020the\u0020given\u0020query\u0020against\u0020the\ncurrent\u0020index.",
+            "url": "classes/Firesphere-SearchBackend-Indexes-CoreIndex.html#method_doSearch"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Indexes\\CoreIndex\u003A\u003A\u0024fieldTypes",
             "name": "fieldTypes",
@@ -1310,6 +975,56 @@ Search.appendIndex(
             "name": "buildQuery",
             "summary": "",
             "url": "classes/Firesphere-SearchBackend-Interfaces-QueryBuilderInterface.html#method_buildQuery"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface",
+            "name": "QueryInterface",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface\u003A\u003AgetTerms\u0028\u0029",
+            "name": "getTerms",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html#method_getTerms"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface\u003A\u003AsetTerms\u0028\u0029",
+            "name": "setTerms",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html#method_setTerms"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface\u003A\u003AaddTerm\u0028\u0029",
+            "name": "addTerm",
+            "summary": "Add\u0020a\u0020term\u0020to\u0020search\u0020on.",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html#method_addTerm"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface\u003A\u003AgetFilters\u0028\u0029",
+            "name": "getFilters",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html#method_getFilters"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface\u003A\u003AsetFilters\u0028\u0029",
+            "name": "setFilters",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html#method_setFilters"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface\u003A\u003AaddFilter\u0028\u0029",
+            "name": "addFilter",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html#method_addFilter"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface\u003A\u003AgetOrFilters\u0028\u0029",
+            "name": "getOrFilters",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html#method_getOrFilters"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface\u003A\u003AsetOrFilters\u0028\u0029",
+            "name": "setOrFilters",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html#method_setOrFilters"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\QueryInterface\u003A\u003AaddOrFilter\u0028\u0029",
+            "name": "addOrFilter",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Interfaces-QueryInterface.html#method_addOrFilter"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Interfaces\\SearchResultInterface",
             "name": "SearchResultInterface",
@@ -1546,160 +1261,160 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Firesphere-SearchBackend-Models-SearchSynonym.html#property_summary_fields"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery",
-            "name": "BaseQuery",
-            "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html"
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery",
+            "name": "CoreQuery",
+            "summary": "Default\u0020querying\u0020interface,",
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AgetTerms\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AgetTerms\u0028\u0029",
             "name": "getTerms",
             "summary": "Get\u0020the\u0020search\u0020terms",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_getTerms"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_getTerms"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AsetTerms\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AsetTerms\u0028\u0029",
             "name": "setTerms",
             "summary": "Set\u0020the\u0020search\u0020tearms",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_setTerms"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_setTerms"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AaddTerm\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AaddTerm\u0028\u0029",
             "name": "addTerm",
             "summary": "Each\u0020boosted\u0020query\u0020needs\u0020a\u0020separate\u0020addition\u0021\ne.g.\u0020\u0024this\u002D\u003EaddTerm\u0028\u0027test\u0027,\u0020\u005B\u0027MyField\u0027,\u0020\u0027MyOtherField\u0027\u005D,\u00203\u0029\nfollowed\u0020by\n\u0024this\u002D\u003EaddTerm\u0028\u0027otherTest\u0027,\u0020\u005B\u0027Title\u0027\u005D,\u00205\u0029\u003B",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_addTerm"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_addTerm"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AaddFilter\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AaddFilter\u0028\u0029",
             "name": "addFilter",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_addFilter"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_addFilter"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AgetFilters\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AgetFilters\u0028\u0029",
             "name": "getFilters",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_getFilters"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_getFilters"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AsetFilters\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AsetFilters\u0028\u0029",
             "name": "setFilters",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_setFilters"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_setFilters"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AgetOrFilters\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AgetOrFilters\u0028\u0029",
             "name": "getOrFilters",
             "summary": "Get\u0020the\u0020OR\u0020filters\u0020for\u0020this\u0020query",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_getOrFilters"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_getOrFilters"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AsetOrFilters\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AsetOrFilters\u0028\u0029",
             "name": "setOrFilters",
             "summary": "Set\u0020the\u0020or\u0020filters\u0020for\u0020this\u0020query",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_setOrFilters"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_setOrFilters"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AaddOrFilters\u0028\u0029",
-            "name": "addOrFilters",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AaddOrFilter\u0028\u0029",
+            "name": "addOrFilter",
             "summary": "Add\u0020the\u0020or\u0020filters\u0020in\u0020a\u0020key\u002Dvalue\u0020pair",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_addOrFilters"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_addOrFilter"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AgetStart\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AgetStart\u0028\u0029",
             "name": "getStart",
             "summary": "Get\u0020the\u0020offset\u0020to\u0020start",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_getStart"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_getStart"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AsetStart\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AsetStart\u0028\u0029",
             "name": "setStart",
             "summary": "Set\u0020the\u0020offset\u0020to\u0020start",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_setStart"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_setStart"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AgetRows\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AgetRows\u0028\u0029",
             "name": "getRows",
             "summary": "Get\u0020the\u0020rows\u0020to\u0020return",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_getRows"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_getRows"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AsetRows\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AsetRows\u0028\u0029",
             "name": "setRows",
             "summary": "Set\u0020the\u0020rows\u0020to\u0020return",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_setRows"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_setRows"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AgetSort\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AgetSort\u0028\u0029",
             "name": "getSort",
             "summary": "Get\u0020the\u0020sort\u0020fields",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_getSort"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_getSort"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AsetSort\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AsetSort\u0028\u0029",
             "name": "setSort",
             "summary": "Set\u0020the\u0020sort\u0020fields",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_setSort"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_setSort"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AaddSort\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AaddSort\u0028\u0029",
             "name": "addSort",
             "summary": "Add\u0020a\u0020sort\u0020field\u0020and\u0020direction",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_addSort"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_addSort"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AgetBoostedFields\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AgetBoostedFields\u0028\u0029",
             "name": "getBoostedFields",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_getBoostedFields"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_getBoostedFields"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AsetBoostedFields\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AsetBoostedFields\u0028\u0029",
             "name": "setBoostedFields",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_setBoostedFields"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_setBoostedFields"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AaddBoostedField\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AaddBoostedField\u0028\u0029",
             "name": "addBoostedField",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_addBoostedField"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_addBoostedField"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AisHighlight\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AisHighlight\u0028\u0029",
             "name": "isHighlight",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_isHighlight"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_isHighlight"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003AsetHighlight\u0028\u0029",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003AsetHighlight\u0028\u0029",
             "name": "setHighlight",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#method_setHighlight"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#method_setHighlight"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003A\u0024start",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003A\u0024start",
             "name": "start",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#property_start"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#property_start"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003A\u0024rows",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003A\u0024rows",
             "name": "rows",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#property_rows"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#property_rows"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003A\u0024sort",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003A\u0024sort",
             "name": "sort",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#property_sort"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#property_sort"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003A\u0024filters",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003A\u0024filters",
             "name": "filters",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#property_filters"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#property_filters"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003A\u0024orFilters",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003A\u0024orFilters",
             "name": "orFilters",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#property_orFilters"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#property_orFilters"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003A\u0024terms",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003A\u0024terms",
             "name": "terms",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#property_terms"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#property_terms"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003A\u0024boostedFields",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003A\u0024boostedFields",
             "name": "boostedFields",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#property_boostedFields"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#property_boostedFields"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003A\u0024highlight",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003A\u0024highlight",
             "name": "highlight",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#property_highlight"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#property_highlight"
         },                {
-            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\BaseQuery\u003A\u003A\u0024spellcheck",
+            "fqsen": "\\Firesphere\\SearchBackend\\Queries\\CoreQuery\u003A\u003A\u0024spellcheck",
             "name": "spellcheck",
             "summary": "",
-            "url": "classes/Firesphere-SearchBackend-Queries-BaseQuery.html#property_spellcheck"
+            "url": "classes/Firesphere-SearchBackend-Queries-CoreQuery.html#property_spellcheck"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Services\\BaseService",
             "name": "BaseService",
@@ -1860,6 +1575,186 @@ Search.appendIndex(
             "name": "state",
             "summary": "",
             "url": "classes/Firesphere-SearchBackend-States-SiteState.html#property_state"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait",
+            "name": "CoreIndexTrait",
+            "summary": "Trait\u0020CoreIndexTrait\nGetters\u0020and\u0020Setters\u0020for\u0020the\u0020ElasticIndex\u0020and\u0020SolrIndex",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddClass\u0028\u0029",
+            "name": "addClass",
+            "summary": "Add\u0020a\u0020class\u0020to\u0020index\u0020or\u0020query\n\u0024options\u0020is\u0020not\u0020used\u0020anymore,\u0020added\u0020for\u0020backward\u0020compatibility",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addClass"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AsetClasses\u0028\u0029",
+            "name": "setClasses",
+            "summary": "Set\u0020the\u0020classes",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_setClasses"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AgetClient\u0028\u0029",
+            "name": "getClient",
+            "summary": "Get\u0020the\u0020client",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_getClient"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AsetClient\u0028\u0029",
+            "name": "setClient",
+            "summary": "Set\/override\u0020the\u0020client",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_setClient"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddFacetField\u0028\u0029",
+            "name": "addFacetField",
+            "summary": "Add\u0020a\u0020facet\u0020field",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addFacetField"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AgetFilterFields\u0028\u0029",
+            "name": "getFilterFields",
+            "summary": "Get\u0020the\u0020filter\u0020fields",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_getFilterFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AsetFilterFields\u0028\u0029",
+            "name": "setFilterFields",
+            "summary": "Set\u0020the\u0020filter\u0020fields",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_setFilterFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddFilterField\u0028\u0029",
+            "name": "addFilterField",
+            "summary": "Add\u0020a\u0020filterable\u0020field",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addFilterField"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AgetFulltextFields\u0028\u0029",
+            "name": "getFulltextFields",
+            "summary": "Get\u0020the\u0020fulltext\u0020fields",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_getFulltextFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AsetFulltextFields\u0028\u0029",
+            "name": "setFulltextFields",
+            "summary": "Set\u0020the\u0020fulltext\u0020fields",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_setFulltextFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AgetFacetFields\u0028\u0029",
+            "name": "getFacetFields",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_getFacetFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AsetFacetFields\u0028\u0029",
+            "name": "setFacetFields",
+            "summary": "Set\u0020the\u0020fields\u0020to\u0020use\u0020for\u0020faceting",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_setFacetFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddFulltextField\u0028\u0029",
+            "name": "addFulltextField",
+            "summary": "Add\u0020a\u0020single\u0020Fulltext\u0020field",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addFulltextField"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddAllFulltextFields\u0028\u0029",
+            "name": "addAllFulltextFields",
+            "summary": "Add\u0020all\u0020text\u002Dtype\u0020fields\u0020to\u0020the\u0020given\u0020index",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addAllFulltextFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddAllFieldsByType\u0028\u0029",
+            "name": "addAllFieldsByType",
+            "summary": "Add\u0020all\u0020database\u002Dbacked\u0020text\u0020fields\u0020as\u0020fulltext\u0020searchable\u0020fields.",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addAllFieldsByType"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AgetClasses\u0028\u0029",
+            "name": "getClasses",
+            "summary": "Get\u0020classes",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_getClasses"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddFulltextFieldsForClass\u0028\u0029",
+            "name": "addFulltextFieldsForClass",
+            "summary": "Add\u0020all\u0020fields\u0020of\u0020a\u0020given\u0020type\u0020to\u0020the\u0020index",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addFulltextFieldsForClass"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddAllDateFields\u0028\u0029",
+            "name": "addAllDateFields",
+            "summary": "Add\u0020all\u0020date\u002Dtype\u0020fields\u0020to\u0020the\u0020given\u0020index",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addAllDateFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddSortField\u0028\u0029",
+            "name": "addSortField",
+            "summary": "Add\u0020a\u0020field\u0020to\u0020sort\u0020on",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addSortField"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AgetSortFields\u0028\u0029",
+            "name": "getSortFields",
+            "summary": "Get\u0020the\u0020sortable\u0020fields",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_getSortFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AsetSortFields\u0028\u0029",
+            "name": "setSortFields",
+            "summary": "Set\/override\u0020the\u0020sortable\u0020fields",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_setSortFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AgetStoredFields\u0028\u0029",
+            "name": "getStoredFields",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_getStoredFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AsetStoredFields\u0028\u0029",
+            "name": "setStoredFields",
+            "summary": "Stub\u0020to\u0020be\u0020compatible\u0020with\u0020Solr.\u0020Elastic\u0020stores\u0020everything\u0020anyway",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_setStoredFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddCopyField\u0028\u0029",
+            "name": "addCopyField",
+            "summary": "Add\u0020a\u0020copy\u0020field",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_addCopyField"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AgetCopyFields\u0028\u0029",
+            "name": "getCopyFields",
+            "summary": "Return\u0020the\u0020copy\u0020fields",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_getCopyFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AsetCopyFields\u0028\u0029",
+            "name": "setCopyFields",
+            "summary": "Set\u0020the\u0020copy\u0020fields",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_setCopyFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003A\u0024client",
+            "name": "client",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#property_client"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003A\u0024class",
+            "name": "class",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#property_class"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003A\u0024facetFields",
+            "name": "facetFields",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#property_facetFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003A\u0024fulltextFields",
+            "name": "fulltextFields",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#property_fulltextFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003A\u0024filterFields",
+            "name": "filterFields",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#property_filterFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003A\u0024sortFields",
+            "name": "sortFields",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#property_sortFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003A\u0024storedFields",
+            "name": "storedFields",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#property_storedFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003A\u0024copyFields",
+            "name": "copyFields",
+            "summary": "",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#property_copyFields"
+        },                {
+            "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003A\u0024usedAllFields",
+            "name": "usedAllFields",
+            "summary": "usedAllFields\u0020is\u0020used\u0020to\u0020determine\u0020if\u0020the\u0020addAllFields\u0020method\u0020has\u0020been\u0020called\nThis\u0020is\u0020to\u0020prevent\u0020a\u0020notice\u0020if\u0020there\u0020is\u0020no\u0020yml.",
+            "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#property_usedAllFields"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\IndexingTrait",
             "name": "IndexingTrait",
@@ -5201,75 +5096,40 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Extensions",
+            "fqsen": "\\SilverLeague\\IDEAnnotator",
+            "name": "IDEAnnotator",
+            "summary": "",
+            "url": "namespaces/silverleague-ideannotator.html"
+        },                {
+            "fqsen": "\\SilverLeague",
+            "name": "SilverLeague",
+            "summary": "",
+            "url": "namespaces/silverleague.html"
+        },                {
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Extensions",
             "name": "Extensions",
             "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-extensions.html"
+            "url": "namespaces/silverleague-ideannotator-extensions.html"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch",
-            "name": "ElasticSearch",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Generators",
+            "name": "Generators",
             "summary": "",
-            "url": "namespaces/firesphere-elasticsearch.html"
+            "url": "namespaces/silverleague-ideannotator-generators.html"
         },                {
-            "fqsen": "\\Firesphere",
-            "name": "Firesphere",
-            "summary": "",
-            "url": "namespaces/firesphere.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Factories",
-            "name": "Factories",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-factories.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Helpers",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Helpers",
             "name": "Helpers",
             "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-helpers.html"
+            "url": "namespaces/silverleague-ideannotator-helpers.html"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Indexes",
-            "name": "Indexes",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Reflection",
+            "name": "Reflection",
             "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-indexes.html"
+            "url": "namespaces/silverleague-ideannotator-reflection.html"
         },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Models",
-            "name": "Models",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-models.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries",
-            "name": "Queries",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-queries.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Queries\\Builders",
-            "name": "Builders",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-queries-builders.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Results",
-            "name": "Results",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-results.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Services",
-            "name": "Services",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-services.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Tasks",
+            "fqsen": "\\SilverLeague\\IDEAnnotator\\Tasks",
             "name": "Tasks",
             "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-tasks.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits\\IndexTraits",
-            "name": "IndexTraits",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-traits-indextraits.html"
-        },                {
-            "fqsen": "\\Firesphere\\ElasticSearch\\Traits",
-            "name": "Traits",
-            "summary": "",
-            "url": "namespaces/firesphere-elasticsearch-traits.html"
+            "url": "namespaces/silverleague-ideannotator-tasks.html"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Admins",
             "name": "Admins",
@@ -5280,6 +5140,11 @@ Search.appendIndex(
             "name": "SearchBackend",
             "summary": "",
             "url": "namespaces/firesphere-searchbackend.html"
+        },                {
+            "fqsen": "\\Firesphere",
+            "name": "Firesphere",
+            "summary": "",
+            "url": "namespaces/firesphere.html"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Extensions",
             "name": "Extensions",
