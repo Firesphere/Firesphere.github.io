@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>SilverStripe Mailjet</title>
+    <parser>
+        <target>mailjet-api</target>
+        <encoding>utf8</encoding>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+    </parser>
+    <transformer>
+        <target>mailjet-api</target>
+    </transformer>
+    <transformations>
+        <template name="responsive-twig" />
+    </transformations>
+    <files>
+        <directory>mailjet-mailer</directory>
+        <ignore>**/tests/**/*</ignore>
+        <ignore>solr/**/tests/**/*</ignore>
+    </files>
+</phpdoc>

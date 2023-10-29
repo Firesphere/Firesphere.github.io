@@ -17,9 +17,13 @@
     <files>
 <!--        <directory>elastic</directory>-->
         <directory>search</directory>
+        <directory>adblockwarning</directory>
         <directory>solr</directory>
         <directory>graphql-jwt</directory>
         <directory>cspheaders</directory>
+        <directory>mailjet-mailer</directory>
+        <directory>openstreetmaps</directory>
+        <directory>healthcheck-jobs</directory>
         <ignore>**/tests/**/*</ignore>
         <ignore>solr/**/tests/**/*</ignore>
     </files>
