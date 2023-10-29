@@ -1228,12 +1228,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Models\\SearchSynonym\u003A\u003AgetCombinedSynonym\u0028\u0029",
             "name": "getCombinedSynonym",
-            "summary": "Combine\u0020this\u0020synonym\u0020in\u0020to\u0020a\u0020string\u0020for\u0020the\u0020Elastic\u0020synonyms,\u0020or\u0020Solr\u0020synonyms.txt\u0020file",
+            "summary": "Combine\u0020this\u0020synonym\u0020in\u0020to\u0020a\u0020string\u0020for\u0020the\u0020synonyms,\u0020like\u0020Solr\u0020synonyms.txt\u0020file",
             "url": "classes/Firesphere-SearchBackend-Models-SearchSynonym.html#method_getCombinedSynonym"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Models\\SearchSynonym\u003A\u003AgetModifiedID\u0028\u0029",
             "name": "getModifiedID",
-            "summary": "Get\u0020an\u0020ID\u0020for\u0020usage\u0020as\u0020reference,\u0020e.g.\u0020in\u0020Elastic.",
+            "summary": "Get\u0020an\u0020ID\u0020for\u0020usage\u0020as\u0020reference,\u0020e.g.\u0020in\u0020Solr.",
             "url": "classes/Firesphere-SearchBackend-Models-SearchSynonym.html#method_getModifiedID"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Models\\SearchSynonym\u003A\u003A\u0024table_name",
@@ -1578,7 +1578,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait",
             "name": "CoreIndexTrait",
-            "summary": "Trait\u0020CoreIndexTrait\nGetters\u0020and\u0020Setters\u0020for\u0020the\u0020ElasticIndex\u0020and\u0020SolrIndex",
+            "summary": "Trait\u0020CoreIndexTrait\nGetters\u0020and\u0020Setters\u0020for\u0020the\u0020\u0020SolrIndex",
             "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddClass\u0028\u0029",
@@ -1693,7 +1693,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AsetStoredFields\u0028\u0029",
             "name": "setStoredFields",
-            "summary": "Stub\u0020to\u0020be\u0020compatible\u0020with\u0020Solr.\u0020Elastic\u0020stores\u0020everything\u0020anyway",
+            "summary": "Stub\u0020to\u0020be\u0020compatible\u0020with\u0020Solr.",
             "url": "classes/Firesphere-SearchBackend-Traits-IndexingTraits-CoreIndexTrait.html#method_setStoredFields"
         },                {
             "fqsen": "\\Firesphere\\SearchBackend\\Traits\\IndexingTraits\\CoreIndexTrait\u003A\u003AaddCopyField\u0028\u0029",
