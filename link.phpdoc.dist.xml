@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>SilverStripe Link</title>
+    <parser>
+        <target>link-api</target>
+        <encoding>utf8</encoding>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+    </parser>
+    <transformer>
+        <target>link-api</target>
+    </transformer>
+    <transformations>
+        <template name="responsive-twig" />
+    </transformations>
+    <files>
+        <directory>silverstripe-link</directory>
+        <ignore>**/tests/**/*</ignore>
+    </files>
+</phpdoc>
